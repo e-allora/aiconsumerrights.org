@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Palette source: lib/theme.ts. Values are "R G B" triplets. */
+@layer base {
+  :root {
+    --background: 251 247 238; /* #FBF7EE cream */
+    --foreground: 18 35 46; /* #12232E charcoal */
+    --muted: 240 233 218; /* #F0E9DA */
+    --muted-foreground: 74 90 100; /* #4A5A64, 6.7:1 on cream */
+    --primary: 0 122 109; /* #007A6D deep teal */
+    --primary-foreground: 251 247 238;
+    --secondary: 255 107 107; /* #FF6B6B coral */
+    --secondary-foreground: 18 35 46;
+    --border: 18 35 46;
+    --ring: 0 122 109; /* #007A6D, 4.9:1 on cream */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 18 35 46; /* #12232E charcoal */
+    --foreground: 251 247 238; /* #FBF7EE cream */
+    --muted: 28 52 66; /* #1C3442 */
+    --muted-foreground: 240 233 218;
+    --primary: 0 168 150; /* #00A896 brand teal */
+    --primary-foreground: 18 35 46;
+    --secondary: 255 107 107;
+    --secondary-foreground: 18 35 46;
+    --border: 251 247 238;
+    --ring: 0 168 150; /* #00A896, 5.4:1 on charcoal */
+  }
+
+  html {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display font-extrabold tracking-tight;
+  }
+
+  :focus-visible {
+    @apply outline outline-[3px] outline-offset-2 outline-ring;
+  }
+}
