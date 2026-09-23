@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -43,16 +45,20 @@ type CardTitleProps = React.HTMLAttributes<HTMLHeadingElement> & {
   as?: "h2" | "h3" | "h4";
 };
 
-const CardTitle = ({ as: Heading = "h3", className, id, ...props }: CardTitleProps) => {
-  const { titleId } = React.useContext(CardContext);
-  return (
-    <Heading
-      id={id ?? titleId}
-      className={cn("font-display text-display-sm", className)}
-      {...props}
-    />
-  );
-};
+const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
+  ({ as: Heading = "h3", className, id, ...props }, ref) => {
+    const { titleId } = React.useContext(CardContext);
+    return (
+      <Heading
+        ref={ref}
+        id={id ?? titleId}
+        className={cn("font-display text-display-sm", className)}
+        {...props}
+      />
+    );
+  }
+);
+CardTitle.displayName = "CardTitle";
 
 const CardDescription = ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
   <p className={cn("text-base text-muted-foreground", className)} {...props} />

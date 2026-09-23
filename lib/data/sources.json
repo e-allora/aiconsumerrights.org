@@ -1,0 +1,119 @@
+{
+  "about": "Every source this site draws on, with how well each link has been checked. Status 'confirmed': the link was opened on the checked date and the content matched. 'unopened': the link comes from an official index or search, but no one has opened it yet; a person should open it once. 'no-link': listed as background reading, with no public link recorded yet.",
+  "checkedOn": "2026-09-23",
+  "review": {
+    "reviewer": "Robert Sweetman",
+    "status": "pending",
+    "reviewedOn": null
+  },
+  "models": [
+    {
+      "id": "gpt",
+      "name": "GPT",
+      "maker": "OpenAI",
+      "role": "Research drafts, September 2026.",
+      "confirmed": true
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "maker": "Anthropic",
+      "role": "Research drafts, September 2026. Wrote this site's code and page text in Claude Code, September 2026.",
+      "confirmed": true
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "maker": "Google",
+      "role": "Research drafts, September 2026. Summarized the Figma design report used for the visual design.",
+      "confirmed": true
+    },
+    {
+      "id": "openrouter-unrecorded",
+      "name": "Other models through OpenRouter",
+      "maker": "Various",
+      "role": "Research chats, September 2026. The chat exports do not record which model wrote each answer.",
+      "confirmed": true
+    },
+    {
+      "id": "llama",
+      "name": "Llama",
+      "maker": "Meta",
+      "role": "Planned. No Llama output was found in the research records, so it is not shown.",
+      "confirmed": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "governance",
+      "title": "Global governance and civic infrastructure",
+      "sources": [
+        { "id": "unesco-ethics-2021", "title": "Recommendation on the Ethics of Artificial Intelligence", "publisher": "UNESCO", "date": "2021-11", "type": "Global standard", "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics", "status": "confirmed", "primary": true },
+        { "id": "eu-ai-act", "title": "Regulation (EU) 2024/1689, the Artificial Intelligence Act", "publisher": "European Union (EUR-Lex)", "date": "2024-06-13", "type": "Law (EU)", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "status": "unopened", "note": "EUR-Lex blocks automated readers. Opens in a browser.", "primary": true },
+        { "id": "eu-ai-act-art50", "title": "AI Act, Article 50: Transparency obligations", "publisher": "European Commission, AI Act Service Desk", "type": "Law (EU)", "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50", "status": "confirmed", "primary": true },
+        { "id": "eu-digital-omnibus-2026", "title": "Regulation (EU) 2026/1744, the Digital Omnibus on AI", "publisher": "European Union (EUR-Lex)", "date": "2026-07-08", "type": "Law (EU)", "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng", "status": "unopened", "note": "EUR-Lex blocks automated readers. In force 27 July 2026 per several law-firm summaries.", "primary": true },
+        { "id": "gdpr", "title": "Regulation (EU) 2016/679, the General Data Protection Regulation (GDPR), Articles 15 and 22", "publisher": "European Union (EUR-Lex)", "date": "2016-04-27", "type": "Law (EU)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "status": "unopened", "note": "EUR-Lex blocks automated readers. Standard legal citation.", "primary": true },
+        { "id": "ftc-ai-comply-2024", "title": "FTC Announces Crackdown on Deceptive AI Claims and Schemes", "publisher": "Federal Trade Commission (FTC)", "date": "2024-09-25", "type": "Press release", "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes", "status": "confirmed", "primary": true },
+        { "id": "cfpb-reg-b", "title": "Regulation B, 12 CFR 1002.9: Notifications (statement of specific reasons)", "publisher": "Consumer Financial Protection Bureau (CFPB)", "type": "Law (US)", "url": "https://www.consumerfinance.gov/rules-policy/regulations/1002/9/", "status": "confirmed", "primary": true },
+        { "id": "ostp-blueprint-2022", "title": "Blueprint for an AI Bill of Rights (archived)", "publisher": "White House Office of Science and Technology Policy", "date": "2022-10", "type": "Guidance (US, non-binding)", "url": "https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/", "status": "confirmed", "primary": true },
+        { "id": "eo-14365-2025", "title": "Executive Order 14365: Ensuring a National Policy Framework for Artificial Intelligence", "publisher": "Federal Register", "date": "2025-12-11", "type": "Executive order (US)", "url": "https://www.federalregister.gov/documents/2025/12/16/2025-23092/ensuring-a-national-policy-framework-for-artificial-intelligence", "status": "unopened" },
+        { "id": "ncsl-ai-database", "title": "Artificial Intelligence Legislation Database", "publisher": "National Conference of State Legislatures (NCSL)", "type": "Legislation tracker", "url": "https://www.ncsl.org/financial-services/artificial-intelligence-legislation-database", "status": "unopened" },
+        { "id": "ftc-reportfraud", "title": "ReportFraud.ftc.gov", "publisher": "Federal Trade Commission (FTC)", "type": "Complaint portal (US)", "url": "https://reportfraud.ftc.gov/", "status": "unopened" },
+        { "id": "cfpb-complaint", "title": "Submit a complaint", "publisher": "Consumer Financial Protection Bureau (CFPB)", "type": "Complaint portal (US)", "url": "https://www.consumerfinance.gov/complaint/", "status": "unopened" },
+        { "id": "unesco-ai-competency-students", "title": "UNESCO AI Competency Framework for Students", "publisher": "UNESCO", "type": "PDF framework", "status": "no-link" },
+        { "id": "unesco-ai-competency-teachers", "title": "UNESCO AI Competency Framework for Teachers", "publisher": "UNESCO", "type": "PDF framework", "status": "no-link" },
+        { "id": "undp-digital-participation", "title": "UNDP Digital Participation and Governance Report", "author": "Matt Stempeck", "publisher": "UNDP", "type": "PDF framework", "status": "no-link" },
+        { "id": "arxiv-collective-intelligence", "title": "Human/AI Collective Intelligence for Deliberative Democracy", "publisher": "arXiv", "type": "Research paper", "status": "no-link" },
+        { "id": "infrastructures-digital-democracy", "title": "Infrastructures of Digital Democracy", "type": "Web article", "status": "no-link" },
+        { "id": "mozilla-vtaiwan", "title": "Mozilla Democracy x AI Cohort and vTaiwan Proposals", "publisher": "HackMD", "type": "Civic blueprint", "status": "no-link" },
+        { "id": "twente-participation-gaps", "title": "Platform Design and Participation Gaps in Collaborative Governance", "publisher": "University of Twente", "type": "Academic paper", "status": "no-link" },
+        { "id": "sss-gnu-manual", "title": "SSS/GNU System Manual and Documentation", "publisher": "jointhefreeworld.org", "type": "Documentation", "status": "no-link" }
+      ]
+    },
+    {
+      "id": "empirical",
+      "title": "Empirical data and industry benchmarks",
+      "sources": [
+        { "id": "pew-2026", "title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact", "publisher": "Pew Research Center", "date": "2026-06-17", "type": "Survey data", "url": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/", "status": "confirmed", "primary": true },
+        { "id": "stanford-ai-index-2026", "title": "The 2026 AI Index Report", "publisher": "Stanford Institute for Human-Centered AI (HAI)", "date": "2026", "type": "Benchmark report", "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report", "status": "confirmed", "primary": true },
+        { "id": "pew-ai-in-lives", "title": "AI in Americans' Lives: Awareness, Experiences and Attitudes", "publisher": "Pew Research Center", "type": "Survey data", "status": "no-link" },
+        { "id": "coderslab-adoption-stats", "title": "47 AI Adoption Statistics Defining Enterprise Technology in 2026", "publisher": "CodersLab", "type": "Industry statistics", "status": "no-link" },
+        { "id": "nair-economics-ai", "title": "The Economics of Artificial Intelligence", "author": "Bhavani Nair", "publisher": "Critical Debates in Humanities and Science", "type": "Academic article", "status": "no-link" }
+      ]
+    },
+    {
+      "id": "accessibility",
+      "title": "Universal accessibility and WCAG 2.2 standards",
+      "sources": [
+        { "id": "wcag-22", "title": "Web Content Accessibility Guidelines (WCAG) 2.2", "publisher": "W3C", "date": "2024-12-12", "type": "Global standard", "url": "https://www.w3.org/TR/WCAG22/", "status": "confirmed", "primary": true },
+        { "id": "wcag-understanding-2-5-8", "title": "Understanding Success Criterion 2.5.8: Target Size (Minimum)", "publisher": "W3C WAI", "type": "Accessibility standard", "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html", "status": "confirmed" },
+        { "id": "wcag-checklists", "title": "WCAG 2.2 Checklist and AA Compliance Guides", "publisher": "Deque University, GetWCAG, AccessiCart", "type": "Technical guide", "status": "no-link" },
+        { "id": "wcag-new-criteria", "title": "WCAG 2.2 Explained: 9 New Success Criteria", "publisher": "TestPros, Accessibility Checker", "type": "Compliance analysis", "status": "no-link" },
+        { "id": "orbix-accessibility-2026", "title": "Accessibility in UI/UX Design: 2026 Guide", "publisher": "Orbix Studio", "type": "UX design guide", "status": "no-link" },
+        { "id": "arizona-wcag-22", "title": "WCAG 2.2 AA Highlights", "publisher": "University of Arizona", "type": "Institutional standard", "status": "no-link" }
+      ]
+    },
+    {
+      "id": "usability",
+      "title": "Cognitive usability and design systems",
+      "sources": [
+        { "id": "nng-f-pattern", "title": "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (Even on Mobile)", "author": "Kara Pernice", "publisher": "Nielsen Norman Group", "date": "2017-11-12", "type": "Usability study", "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", "status": "confirmed" },
+        { "id": "figma-trends-2026", "title": "Top Web Design Trends for 2026", "publisher": "Figma", "type": "Design benchmark", "url": "https://www.figma.com/resource-library/web-design-trends/", "status": "unopened", "note": "A saved copy was summarized; the live page was not opened." },
+        { "id": "mayer-multimedia", "title": "Mayer's 12 Principles of Multimedia Learning", "publisher": "Digital Learning Institute", "type": "Cognitive science framework", "status": "no-link" },
+        { "id": "dashboard-reading-order", "title": "Dashboard Reading Order and Visual Hierarchy Signals", "publisher": "arXiv", "type": "Research paper", "status": "no-link" },
+        { "id": "figma-ui-kits", "title": "Best Figma UI Kits and Design Systems (Create UI, Glow UI, shadcndesign)", "publisher": "Mockuuups Studio, ADPList, Sigma", "type": "Design system benchmarks", "status": "no-link" },
+        { "id": "nng-mobile-ux", "title": "User Experience for Mobile Applications and Websites", "publisher": "Nielsen Norman Group", "type": "Mobile usability guidelines", "status": "no-link" }
+      ]
+    },
+    {
+      "id": "synthesis",
+      "title": "Multi-model AI synthesis and blueprint standards",
+      "sources": [
+        { "id": "strategic-blueprint", "title": "AI Consumer Rights Strategic Blueprint and Implementation Architecture", "publisher": "aiconsumerrights.org", "type": "Core synthesis blueprint", "status": "no-link" },
+        { "id": "black-box-framework", "title": "Dismantling the AI Black Box Framework", "publisher": "aiconsumerrights.org", "type": "Research synthesis", "status": "no-link" },
+        { "id": "multi-model-records", "title": "Multi-model AI research chats (GPT, Claude, Gemini, and unrecorded OpenRouter models)", "publisher": "OpenRouter workspace", "type": "Provenance record", "status": "no-link", "note": "Kept private." },
+        { "id": "vercel-ai-sdk", "title": "Vercel AI SDK and Chat SDK Streaming Architecture", "publisher": "Vercel", "type": "Technical integration", "status": "no-link" }
+      ]
+    }
+  ]
+}

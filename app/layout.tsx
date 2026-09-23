@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Atkinson_Hyperlegible, Bricolage_Grotesque } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { AttributionFooter } from "@/components/ui/AttributionFooter";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -45,7 +46,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:font-semibold"
+          >
+            Skip to main content
+          </a>
           {children}
+          <AttributionFooter />
         </ThemeProvider>
       </body>
     </html>
