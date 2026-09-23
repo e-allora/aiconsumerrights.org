@@ -10,9 +10,14 @@ export default function HomePage() {
       <p className="text-xl">
         <strong>Plain-language help when AI makes decisions about you.</strong>
       </p>
-      <Button asChild size="lg" className="self-start">
-        <Link href="/guide">Read the guide</Link>
-      </Button>
+      <div className="flex flex-wrap gap-3">
+        <Button asChild size="lg">
+          <Link href="/guide">Read the guide</Link>
+        </Button>
+        <Button asChild size="lg" variant="outline">
+          <Link href="/forum">Join the forum</Link>
+        </Button>
+      </div>
     </main>
   );
 }

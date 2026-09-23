@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { AlgorithmExplorer } from "@/components/guide/AlgorithmExplorer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -208,6 +209,13 @@ export default function GuidePage() {
           <Cite ids={["stanford-ai-index-2026"]} /> In a Pew survey of 5,119 US adults, most said
           AI is moving too fast.
           <Cite ids={["pew-2026"]} /> Honest questions help close gaps like these.
+        </p>
+        <p>
+          <strong>Add your voice.</strong>{" "}
+          <Link href="/forum" className="font-semibold text-primary underline underline-offset-4">
+            Vote on shared ideas in the forum
+          </Link>
+          . No account needed.
         </p>
       </section>
     </main>
