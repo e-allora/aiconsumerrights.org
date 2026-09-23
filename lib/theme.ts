@@ -1,11 +1,11 @@
 // Brand palette from CLAUDE.md. globals.css holds the same values as RGB
-// triplets; the theme test keeps the two in sync.
+// triplets; the theme tests keep the two in sync.
 
 export const palette = {
   cream: "#FBF7EE", // warm neutral canvas (light)
   charcoal: "#12232E", // text (light) / canvas (dark)
   teal: "#00A896", // accent
-  coral: "#FF6B6B", // accent
+  coral: "#FF6B6B", // highlight
   // Brand teal is 2.79:1 on cream, below the 3:1 focus-ring minimum
   // (SC 2.4.13), so light mode uses this deeper teal for rings and buttons.
   tealDeep: "#007A6D",

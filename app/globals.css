@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Palette source: lib/theme.ts. Values are "R G B" triplets. */
+/* Palette source: lib/theme.ts. Color values are "R G B" triplets. */
 @layer base {
   :root {
     --background: 251 247 238; /* #FBF7EE cream */
     --foreground: 18 35 46; /* #12232E charcoal */
+    --card: 255 253 248; /* #FFFDF8, one step lighter than the canvas */
+    --card-foreground: 18 35 46;
     --muted: 240 233 218; /* #F0E9DA */
     --muted-foreground: 74 90 100; /* #4A5A64, 6.7:1 on cream */
     --primary: 0 122 109; /* #007A6D deep teal */
@@ -15,20 +17,32 @@
     --secondary-foreground: 18 35 46;
     --border: 18 35 46;
     --ring: 0 122 109; /* #007A6D, 4.9:1 on cream */
+    --shadow: 18 35 46;
     --radius: 0.75rem;
+
+    /* Depth: a crisp bottom edge plus two soft layers, like a card lifted
+       off paper. Used by .depth-card and shadow-depth-*. */
+    --depth-1: 0 1px 0 rgb(var(--shadow) / 0.1), 0 2px 6px -2px rgb(var(--shadow) / 0.12);
+    --depth-2: 0 2px 0 rgb(var(--shadow) / 0.12), 0 8px 16px -6px rgb(var(--shadow) / 0.16),
+      0 20px 32px -16px rgb(var(--shadow) / 0.14);
+    --depth-3: 0 3px 0 rgb(var(--shadow) / 0.14), 0 14px 24px -8px rgb(var(--shadow) / 0.2),
+      0 32px 48px -20px rgb(var(--shadow) / 0.18);
   }
 
   .dark {
     --background: 18 35 46; /* #12232E charcoal */
     --foreground: 251 247 238; /* #FBF7EE cream */
-    --muted: 28 52 66; /* #1C3442 */
+    --card: 28 52 66; /* #1C3442 */
+    --card-foreground: 251 247 238;
+    --muted: 28 52 66;
     --muted-foreground: 240 233 218;
-    --primary: 0 168 150; /* #00A896 brand teal */
+    --primary: 0 168 150; /* #00A896 brand teal, 5.4:1 on charcoal */
     --primary-foreground: 18 35 46;
     --secondary: 255 107 107;
     --secondary-foreground: 18 35 46;
     --border: 251 247 238;
     --ring: 0 168 150; /* #00A896, 5.4:1 on charcoal */
+    --shadow: 0 0 0;
   }
 
   html {
@@ -39,14 +53,73 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background font-sans text-body text-foreground antialiased;
   }
 
-  h1, h2, h3 {
-    @apply font-display font-extrabold tracking-tight;
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
   }
+  h1 { @apply text-display-xl; }
+  h2 { @apply text-display-lg; }
+  h3 { @apply text-display-md; }
+  h4 { @apply text-display-sm; }
 
+  /* SC 2.4.13: 3px ring, at least 3:1 against the canvas in both themes. */
   :focus-visible {
     @apply outline outline-[3px] outline-offset-2 outline-ring;
+  }
+}
+
+@layer components {
+  /* SC 2.5.8: 24x24px minimum with a mouse, 44x44px on touch screens. */
+  .tap-target {
+    min-width: 24px;
+    min-height: 24px;
+  }
+  @media (pointer: coarse) {
+    .tap-target {
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
+
+  /* Lightweight 3D depth card: CSS only, no WebGL. */
+  .depth-card {
+    @apply rounded-lg border-2 border-border/10 bg-card text-card-foreground shadow-depth-2;
+  }
+  .depth-card-interactive {
+    @apply transition-[transform,box-shadow] duration-base ease-out-soft;
+    transform: perspective(900px) translateZ(0);
+  }
+  .depth-card-interactive:hover,
+  .depth-card-interactive:focus-within {
+    @apply shadow-depth-3;
+    transform: perspective(900px) rotateX(2deg) translateY(-4px);
+  }
+
+  /* Micro-interaction: a small press-in on click. */
+  .press {
+    @apply transition-[transform,background-color,box-shadow] duration-fast ease-out-soft;
+  }
+  .press:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+}
+
+/* Motion is optional. Anyone who asks for less gets none: no transitions,
+   no animations, no 3D tilt. Depth shadows stay, since they don't move. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .depth-card-interactive:hover,
+  .depth-card-interactive:focus-within,
+  .press:active:not(:disabled) {
+    transform: none;
   }
 }
