@@ -97,7 +97,7 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
             ))}
             <a
               href="/sources"
-              className="tap-target self-start font-semibold text-primary underline underline-offset-4"
+              className="tap-target self-start font-semibold text-link underline underline-offset-4"
             >
               Open the full source registry
             </a>

@@ -5,12 +5,13 @@ import { StatementSubmission } from "@/components/forum/StatementSubmission";
 import { VotingEngine } from "@/components/forum/VotingEngine";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { STATEMENTS, TRACKS } from "@/lib/forum/statements";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Forum",
-  description:
-    "Vote on short statements about AI and your rights, or suggest one. No account needed. Common ground is shown first.",
-};
+  description: "Vote on short statements about AI and your rights, or suggest one. No account needed. Common ground is shown first.",
+  path: "/forum",
+});
 
 const PRINCIPLES = [
   { name: "Critique ideas, never people", text: "Disagree with an idea as clearly as you like. Leave the person out of it." },
@@ -37,7 +38,7 @@ export default function ForumPage() {
   return (
     <main id="main" className="mx-auto flex max-w-5xl flex-col gap-20 px-4 py-12 sm:py-16">
       <header className="flex max-w-3xl flex-col gap-5">
-        <p className="font-display text-lg font-bold text-primary">Voice and vision forum</p>
+        <p className="font-display text-lg font-bold text-link">Voice and vision forum</p>
         <h1>Your voice belongs here</h1>
         <p className="text-xl">
           <strong>Technology works best when everyone participates in shaping it.</strong> Vote on
@@ -63,7 +64,7 @@ export default function ForumPage() {
         <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PRINCIPLES.map((p, i) => (
             <li key={p.name} className="depth-card flex flex-col gap-2 p-5">
-              <span aria-hidden="true" className="font-display text-2xl font-extrabold text-primary">
+              <span aria-hidden="true" className="font-display text-2xl font-extrabold text-link">
                 {i + 1}
               </span>
               <strong className="font-display text-lg">{p.name}</strong>

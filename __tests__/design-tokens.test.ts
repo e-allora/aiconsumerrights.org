@@ -49,6 +49,10 @@ describe("color tokens", () => {
     expect(contrastRatio(varHex(scope, "card-foreground"), varHex(scope, "card"))).toBeGreaterThanOrEqual(4.5);
     expect(contrastRatio(varHex(scope, "primary-foreground"), varHex(scope, "primary"))).toBeGreaterThanOrEqual(4.5);
     expect(contrastRatio(varHex(scope, "secondary-foreground"), varHex(scope, "secondary"))).toBeGreaterThanOrEqual(4.5);
+    // Teal text on every surface it sits on
+    for (const surface of ["background", "card", "muted"]) {
+      expect(contrastRatio(varHex(scope, "link"), varHex(scope, surface))).toBeGreaterThanOrEqual(4.5);
+    }
     // SC 2.4.13 focus ring
     expect(contrastRatio(varHex(scope, "ring"), bg)).toBeGreaterThanOrEqual(3);
     expect(contrastRatio(varHex(scope, "ring"), varHex(scope, "card"))).toBeGreaterThanOrEqual(3);

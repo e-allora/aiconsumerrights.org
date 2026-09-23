@@ -22,6 +22,8 @@ const config: Config = {
         primary: { DEFAULT: token("primary"), foreground: token("primary-foreground") },
         // Coral role. Fill only; never coral text on cream (2.6:1).
         secondary: { DEFAULT: token("secondary"), foreground: token("secondary-foreground") },
+        // Teal as text (links, labels). Fills use primary; text uses link.
+        link: token("link"),
         border: token("border"),
         ring: token("ring"),
         // Raw brand colors for decoration that carries no meaning.

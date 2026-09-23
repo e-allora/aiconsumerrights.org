@@ -18,3 +18,17 @@ if (typeof window !== "undefined" && !window.matchMedia) {
     dispatchEvent: () => false,
   });
 }
+
+// next/link prefetches with IntersectionObserver and updates state after the
+// test ends. A plain anchor keeps href, aria and click behavior.
+jest.mock("next/link", () => {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const React = require("react");
+  const Link = React.forwardRef(function Link(
+    { href, prefetch: _prefetch, ...props }: { href: string; prefetch?: boolean },
+    ref: unknown
+  ) {
+    return React.createElement("a", { href, ref, ...props });
+  });
+  return { __esModule: true, default: Link };
+});

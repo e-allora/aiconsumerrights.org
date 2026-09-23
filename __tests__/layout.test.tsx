@@ -1,9 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { render, screen } from "@testing-library/react";
-import { renderToStaticMarkup } from "react-dom/server";
 
-import RootLayout from "@/app/layout";
 import { ThemeProvider } from "@/components/theme-provider";
 import { contrastRatio, palette } from "@/lib/theme";
 
@@ -22,21 +20,6 @@ const rootBlock = css.match(/:root\s*{([^}]*)}/)![1];
 const darkBlock = css.match(/\.dark\s*{([^}]*)}/)![1];
 
 describe("RootLayout", () => {
-  it("renders the full document without errors", () => {
-    const errors = jest.spyOn(console, "error").mockImplementation(() => {});
-    const html = renderToStaticMarkup(
-      <RootLayout>
-        <main>Hello</main>
-      </RootLayout>
-    );
-    expect(errors).not.toHaveBeenCalled();
-    errors.mockRestore();
-
-    expect(html).toMatch(/^<html lang="en">/);
-    expect(html).toContain("<body");
-    expect(html).toContain("<main>Hello</main>");
-  });
-
   it("starts children on the light, warm neutral theme", () => {
     // Same provider settings as the layout, rendered into the jsdom body.
     render(

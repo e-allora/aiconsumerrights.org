@@ -16,7 +16,7 @@ export function Cite({ ids }: { ids: string[] }) {
             <a
               href={`/sources#${id}`}
               aria-label={`Source ${n}: ${source.title}`}
-              className="font-semibold text-primary underline underline-offset-2"
+              className="font-semibold text-link underline underline-offset-2"
             >
               {n}
             </a>

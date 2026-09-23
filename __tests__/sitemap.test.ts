@@ -1,11 +1,10 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { XMLParser, XMLValidator } from "fast-xml-parser";
 // The same serializer Next uses to turn app/sitemap.ts into /sitemap.xml.
-import { resolveSitemap } from "next/dist/build/webpack/loaders/metadata/resolve-route-data";
+import { resolveRobots, resolveSitemap } from "next/dist/build/webpack/loaders/metadata/resolve-route-data";
 
+import robots from "@/app/robots";
 import sitemap from "@/app/sitemap";
-import { PUBLISHED_ROUTES, SITE_URL } from "@/lib/site";
+import { NAV_ITEMS, PUBLISHED_ROUTES, SITE_URL } from "@/lib/site";
 
 describe("sitemap.xml", () => {
   const xml = resolveSitemap(sitemap());
@@ -28,10 +27,23 @@ describe("sitemap.xml", () => {
 });
 
 describe("robots.txt", () => {
-  it("allows crawling and points to the sitemap", () => {
-    const robots = readFileSync(join(__dirname, "../public/robots.txt"), "utf8");
-    expect(robots).toMatch(/^User-agent: \*$/m);
-    expect(robots).toMatch(/^Allow: \/$/m);
-    expect(robots).toContain(`Sitemap: ${SITE_URL}/sitemap.xml`);
+  const txt = resolveRobots(robots());
+
+  it("allows crawling of every page", () => {
+    expect(txt).toMatch(/^User-Agent: \*$/m);
+    expect(txt).toMatch(/^Allow: \/$/m);
+    expect(txt).not.toMatch(/^Disallow: \/$/m);
+  });
+
+  it("points crawlers to the sitemap and names the host", () => {
+    expect(txt).toContain(`Sitemap: ${SITE_URL}/sitemap.xml`);
+    expect(txt).toContain(`Host: ${SITE_URL}`);
+  });
+});
+
+describe("published routes", () => {
+  it("list every page in the navigation", () => {
+    const paths = PUBLISHED_ROUTES.map((r) => r.path);
+    for (const item of NAV_ITEMS) expect(paths).toContain(item.href);
   });
 });

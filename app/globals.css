@@ -17,6 +17,7 @@
     --secondary-foreground: 18 35 46;
     --border: 18 35 46;
     --ring: 0 122 109; /* #007A6D, 4.9:1 on cream */
+    --link: 0 107 95; /* #006B5F, teal text: 5.3:1 or better on every light surface */
     --shadow: 18 35 46;
     --radius: 0.75rem;
 
@@ -42,6 +43,7 @@
     --secondary-foreground: 18 35 46;
     --border: 251 247 238;
     --ring: 0 168 150; /* #00A896, 5.4:1 on charcoal */
+    --link: 79 209 191; /* #4FD1BF, teal text: 6.9:1 or better on every dark surface */
     --shadow: 0 0 0;
   }
 

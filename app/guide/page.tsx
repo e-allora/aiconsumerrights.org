@@ -4,13 +4,17 @@ import Link from "next/link";
 import { AlgorithmExplorer } from "@/components/guide/AlgorithmExplorer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cite } from "@/components/ui/Cite";
+import { JsonLd } from "@/components/ui/JsonLd";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { formatDate, sources } from "@/lib/sources";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "AI you can question",
-  description:
-    "Plain-language help with chatbots, recommendations, and automated screening, with US and EU rules side by side and three calm steps to take.",
-};
+  description: "Plain-language help with chatbots, recommendations, and automated screening, with US and EU rules side by side and three calm steps to take.",
+  path: "/guide",
+  type: "article",
+});
 
 const TOUCHPOINTS = [
   {
@@ -98,8 +102,22 @@ const STAKEHOLDERS = [
 export default function GuidePage() {
   return (
     <main id="main" className="mx-auto flex max-w-5xl flex-col gap-20 px-4 py-12 sm:py-16">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "AI you can question",
+          description:
+            "Plain-language explanations of everyday AI, with US and EU rules compared side by side and three calm steps to take when a decision seems wrong.",
+          url: `${SITE_URL}/guide`,
+          inLanguage: "en",
+          dateModified: sources.checkedOn,
+          publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+          about: ["Consumer rights", "Automated decision-making", "EU AI Act", "Human review"],
+        }}
+      />
       <header className="flex max-w-3xl flex-col gap-5">
-        <p className="font-display text-lg font-bold text-primary">The guide</p>
+        <p className="font-display text-lg font-bold text-link">The guide</p>
         <h1>AI you can question</h1>
         <p className="text-xl">
           <strong>
@@ -212,7 +230,7 @@ export default function GuidePage() {
         </p>
         <p>
           <strong>Add your voice.</strong>{" "}
-          <Link href="/forum" className="font-semibold text-primary underline underline-offset-4">
+          <Link href="/forum" className="font-semibold text-link underline underline-offset-4">
             Vote on shared ideas in the forum
           </Link>
           . No account needed.

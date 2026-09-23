@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 
 import { SourceCategoryList } from "@/components/ui/SourceList";
 import { formatDate, sources } from "@/lib/sources";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Sources",
-  description:
-    "Every source this site draws on, grouped by topic, with how well each link has been checked and when.",
-};
+  description: "Every source this site draws on, grouped by topic, with how well each link has been checked and when.",
+  path: "/sources",
+});
 
 export default function SourcesPage() {
   const total = sources.categories.reduce((n, c) => n + c.sources.length, 0);

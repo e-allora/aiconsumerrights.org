@@ -19,7 +19,7 @@ export function SourceLink({ source, className }: { source: Source; className?: 
       rel="noopener noreferrer"
       aria-label={externalLabel(source)}
       className={cn(
-        "inline-flex items-baseline gap-1 font-semibold text-primary underline underline-offset-4 hover:decoration-2",
+        "tap-target inline-flex items-center gap-1 font-semibold text-link underline underline-offset-4 hover:decoration-2",
         className
       )}
     >
