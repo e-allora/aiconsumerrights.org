@@ -97,7 +97,7 @@
           "question": "¿Me dirán que es una IA?",
           "us": "No hay una regla federal. Algunos estados lo exigen.",
           "eu": "Sí, desde el 2 de agosto de 2026, a menos que sea evidente.",
-          "br": "Todavía no está en las fuentes de este sitio."
+          "br": "Todavía no lo exige una ley nacional de IA. El proyecto de ley PL 2338/2023, aprobado por el Senado en diciembre de 2024, lo exigiría. Sigue siendo un proyecto."
         },
         "reasons": {
           "question": "¿Puedo conocer las razones de una decisión?",
@@ -121,7 +121,7 @@
           "question": "¿Qué está cambiando?",
           "us": "Una orden ejecutiva de diciembre de 2025 pide un solo enfoque nacional y una revisión de las leyes estatales sobre IA.",
           "eu": "Las reglas para la IA de alto riesgo, como en empleo y crédito, ahora empiezan el 2 de diciembre de 2027.",
-          "br": "Todavía no está en las fuentes de este sitio."
+          "br": "El proyecto PL 2338/2023 crearía una ley de IA por niveles de riesgo, con derecho a una explicación, a impugnar decisiones y a una revisión humana. Al 23 de septiembre de 2026, espera un informe en una comisión especial de la Cámara de Diputados."
         }
       }
     },

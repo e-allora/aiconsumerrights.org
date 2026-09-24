@@ -115,14 +115,14 @@ components/forum/     VotingEngine, StatementSubmission, ConsensusCluster
 lib/                  Site config, SEO helpers, source registry, forum statements
 lib/data/sources.json The transparency registry every citation resolves to
 scripts/              Real-browser accessibility audit and screenshot tools
-__tests__/            245 unit, integration, accessibility, i18n, and SEO tests
+__tests__/            249 unit, integration, accessibility, i18n, and SEO tests
 ```
 
 ## ✅ Quality bar
 
 Every phase ships only when all of these pass:
 
-- 🧪 **Jest:** 245 tests, including axe on every page in all four languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
+- 🧪 **Jest:** 249 tests, including axe on every page in all four languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
 - 🔤 **TypeScript and lint:** zero errors, zero warnings.
 - 🏗️ **Production build:** zero warnings.
 - ♿ **Real-browser audit:** zero WCAG A/AA violations across 82 page states in all four languages, with a built-in canary that proves the checks work.

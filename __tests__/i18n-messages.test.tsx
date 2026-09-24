@@ -127,6 +127,19 @@ describe("message files", () => {
   });
 });
 
+describe("Brazil's AI bill (PL 2338/2023)", () => {
+  // A pending bill must never read as a right in force, in any language.
+  const PENDING = { en: /still a bill/, es: /Sigue siendo un proyecto/, "pt-PT": /Continua a ser um projeto/, "pt-BR": /ainda é um projeto/ };
+
+  it.each(Object.entries(PENDING))("is described as pending in %s", (locale, pattern) => {
+    const rows = MESSAGES[locale as keyof typeof MESSAGES].Guide.compare.rows;
+    expect(rows.told.br).toMatch(pattern);
+    expect(rows.told.br).toContain("PL 2338/2023");
+    expect(rows.changing.br).toContain("PL 2338/2023");
+    expect(rows.changing.br).toMatch(/2026/);
+  });
+});
+
 describe("PAUSE Strategy messages", () => {
   const letters = (locale: keyof typeof MESSAGES) =>
     Object.values(MESSAGES[locale].PAUSEStrategy.steps)

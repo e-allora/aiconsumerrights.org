@@ -50,7 +50,7 @@ describe("Guide page", () => {
     expect(within(table).getAllByRole("rowheader")).toHaveLength(5);
   });
 
-  it("cites the LGPD sources in the Brazil column, and says so plainly where none apply", () => {
+  it("cites every Brazil cell: the LGPD for rights in force, PL 2338/2023 for what is pending", () => {
     const table = screen.getByRole("table", { name: /Brazil rules compared/ });
     const brazil = within(table)
       .getAllByRole("row")
@@ -61,14 +61,15 @@ describe("Guide page", () => {
         .queryAllByRole("link")
         .map((a) => a.getAttribute("href")!.replace("/en/sources#", ""));
     expect(brazil.map(cited)).toEqual([
-      [],
+      ["pl2338-senado-2024", "pl2338-camara-status"],
       ["anpd-lgpd-en", "lawsofbrazil-2026"],
       ["anpd-lgpd-en", "iba-mariotto-2024"],
       ["anpd-lgpd-en", "lgpd-article-20"],
-      [],
+      ["pl2338-senado-2024", "pl2338-camara-status"],
     ]);
-    expect(brazil[0]).toHaveTextContent("Not covered by this site's sources yet.");
-    expect(brazil[4]).toHaveTextContent("Not covered by this site's sources yet.");
+    // The AI bill is pending: the cells must say so, and date the status.
+    expect(brazil[0]).toHaveTextContent("It is still a bill.");
+    expect(brazil[4]).toHaveTextContent("As of 23 September 2026");
     expect(brazil[1]).toHaveTextContent("15 days");
     expect(brazil[2]).toHaveTextContent("no longer says a person must do the review");
   });

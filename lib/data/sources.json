@@ -467,6 +467,28 @@
           "jurisdiction": "Global frameworks",
           "status": "no-link",
           "summary": "Project synthesis comparing LGPD review rights with EU (GDPR, AI Act) and US federal and state standards."
+        },
+        {
+          "id": "pl2338-senado-2024",
+          "title": "Senado aprova regulamentação da inteligência artificial; texto vai à Câmara",
+          "publisher": "Agência Senado, Senado Federal (Brazil)",
+          "date": "2024-12-10",
+          "type": "Legislative news (Brazil)",
+          "jurisdiction": "Brazil (bill, not law)",
+          "url": "https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara",
+          "status": "confirmed",
+          "summary": "The Senate passed AI bill PL 2338/2023 on 10 December 2024 and sent it to the Chamber of Deputies. The Senate text includes rights to prior information that you are interacting with AI, to an explanation, to contest decisions, and to human review, and sorts AI systems by risk level."
+        },
+        {
+          "id": "pl2338-camara-status",
+          "title": "PL 2338/2023: ficha de tramitação (legislative record)",
+          "publisher": "Câmara dos Deputados (Brazil)",
+          "type": "Legislative record (Brazil)",
+          "jurisdiction": "Brazil (bill, not law)",
+          "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262",
+          "status": "confirmed",
+          "note": "Status read on 23 September 2026. Check again before relying on it.",
+          "summary": "As of 23 September 2026, PL 2338/2023 is waiting for the rapporteur's report in the Chamber's Special Committee on Artificial Intelligence. The full Chamber has not voted on it."
         }
       ]
     }

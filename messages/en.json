@@ -97,7 +97,7 @@
           "question": "Will I be told it is AI?",
           "us": "No federal rule. Some states require it.",
           "eu": "Yes, since 2 August 2026, unless it is obvious.",
-          "br": "Not covered by this site's sources yet."
+          "br": "Not yet required by a national AI law. Bill PL 2338/2023, passed by the Senate in December 2024, would require it. It is still a bill."
         },
         "reasons": {
           "question": "Can I get the reasons for a decision?",
@@ -121,7 +121,7 @@
           "question": "What is changing?",
           "us": "A December 2025 executive order calls for one national approach and a review of state AI laws.",
           "eu": "Rules for high-risk AI, like hiring and credit, now start on 2 December 2027.",
-          "br": "Not covered by this site's sources yet."
+          "br": "Bill PL 2338/2023 would add a risk-based AI law with rights to an explanation, to contest decisions, and to human review. As of 23 September 2026, it waits for a report in a special committee of the Chamber of Deputies."
         }
       }
     },

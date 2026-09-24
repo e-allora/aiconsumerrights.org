@@ -36,14 +36,19 @@ const TOUCHPOINTS = [
   { id: "screening", cites: [["cfpb-reg-b"], ["gdpr"]] },
 ] as const;
 
-// Brazil cells with no citation say so in words ("not covered by this
-// site's sources yet") instead of guessing.
+// Brazil's AI bill (PL 2338/2023) fills two cells. It is not law, and the
+// text says so; the Chamber status is dated because it will change.
 const COMPARISON = [
-  { id: "told", us: ["ncsl-ai-database"], eu: ["eu-ai-act-art50"], br: [] },
+  { id: "told", us: ["ncsl-ai-database"], eu: ["eu-ai-act-art50"], br: ["pl2338-senado-2024", "pl2338-camara-status"] },
   { id: "reasons", us: ["cfpb-reg-b"], eu: ["gdpr"], br: ["anpd-lgpd-en", "lawsofbrazil-2026"] },
   { id: "review", us: ["ostp-blueprint-2022"], eu: ["gdpr"], br: ["anpd-lgpd-en", "iba-mariotto-2024"] },
   { id: "enforce", us: ["ftc-ai-comply-2024", "cfpb-reg-b"], eu: ["eu-ai-act"], br: ["anpd-lgpd-en", "lgpd-article-20"] },
-  { id: "changing", us: ["eo-14365-2025"], eu: ["eu-digital-omnibus-2026"], br: [] },
+  {
+    id: "changing",
+    us: ["eo-14365-2025"],
+    eu: ["eu-digital-omnibus-2026"],
+    br: ["pl2338-senado-2024", "pl2338-camara-status"],
+  },
 ] as const;
 
 const STAKEHOLDERS = ["people", "educators", "regulators", "builders"] as const;
