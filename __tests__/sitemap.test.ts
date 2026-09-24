@@ -4,7 +4,7 @@ import { resolveRobots, resolveSitemap } from "next/dist/build/webpack/loaders/m
 
 import robots from "@/app/robots";
 import sitemap from "@/app/sitemap";
-import { routing } from "@/lib/i18n/routing";
+import { localizedPath, routing } from "@/lib/i18n/routing";
 import { NAV_ITEMS, PUBLISHED_ROUTES, SITE_URL } from "@/lib/site";
 
 describe("sitemap.xml", () => {
@@ -25,7 +25,7 @@ describe("sitemap.xml", () => {
     expect(urls).toHaveLength(PUBLISHED_ROUTES.length * routing.locales.length);
     for (const { path } of PUBLISHED_ROUTES) {
       for (const locale of routing.locales) {
-        const loc = `${SITE_URL}/${locale}${path === "/" ? "" : path}`;
+        const loc = `${SITE_URL}${localizedPath(locale, path)}`;
         expect(urls.map((u) => u.loc)).toContain(loc);
       }
     }
@@ -35,7 +35,7 @@ describe("sitemap.xml", () => {
   it("links each page to its translations with hreflang, plus x-default", () => {
     for (const u of urls) {
       const langs = u["xhtml:link"].map((l) => l["@_hreflang"]);
-      expect(langs).toEqual(expect.arrayContaining(["en", "es", "pt", "x-default"]));
+      expect(langs).toEqual(expect.arrayContaining(["en", "es", "pt-PT", "pt-BR", "x-default"]));
       for (const l of u["xhtml:link"]) expect(l["@_href"].startsWith(SITE_URL)).toBe(true);
     }
   });

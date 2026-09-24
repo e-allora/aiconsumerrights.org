@@ -36,7 +36,8 @@
     "languageNames": {
       "en": "English",
       "es": "Español",
-      "pt": "Português"
+      "pt-PT": "Português (PT)",
+      "pt-BR": "Português (BR)"
     }
   },
   "Home": {
@@ -223,7 +224,7 @@
       "understand": {
         "letter": "U",
         "title": "Usos e origem dos dados",
-        "body": "Pergunte em que informação a ferramenta se baseia, se foi testada de forma independente e se existem orientações ou interesses comerciais subjacentes."
+        "body": "Pergunte em que informação a ferramenta se baseia, se foi testada de forma independente e se existem enviesamentos ocultos ou interesses comerciais subjacentes."
       },
       "seek": {
         "letter": "S",

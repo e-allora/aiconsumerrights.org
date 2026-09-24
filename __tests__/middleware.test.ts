@@ -19,11 +19,11 @@ describe("locale middleware", () => {
   });
 
   it.each([
-    ["pt-BR,pt;q=0.9,en;q=0.5", "Brazilian"],
-    ["pt-PT,pt;q=0.9", "European"],
-  ])("sends a Portuguese browser (%s, %s) from / to /pt", async (header) => {
+    ["pt-BR,pt;q=0.9,en;q=0.5", "/pt-BR"],
+    ["pt-PT,pt;q=0.9", "/pt"],
+  ])("sends a Portuguese browser (%s) from / to %s", async (header, path) => {
     const res = await visit("/", header);
-    expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/pt");
+    expect(res.headers.get("location")).toBe(`https://aiconsumerrights.org${path}`);
   });
 
   it("sends an English-language browser from / to /en", async () => {
@@ -41,8 +41,23 @@ describe("locale middleware", () => {
     expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/es/forum");
   });
 
+  it("sends a bare Portuguese browser (pt) to Brazilian Portuguese, the most common variant", async () => {
+    const res = await visit("/", "pt");
+    expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/pt-BR");
+  });
+
+  it.each([
+    ["/pt-PT", "/pt"],
+    ["/pt-PT/forum", "/pt/forum"],
+    ["/pt-pt/guide", "/pt/guide"],
+  ])("sends %s, typed by hand, to %s", async (path, target) => {
+    const res = await visit(path, "en");
+    expect(res.status).toBe(308);
+    expect(res.headers.get("location")).toBe(`https://aiconsumerrights.org${target}`);
+  });
+
   it("lets /en and /es pages through without a redirect", async () => {
-    for (const path of ["/en/guide", "/es/forum", "/pt/about"]) {
+    for (const path of ["/en/guide", "/es/forum", "/pt/about", "/pt-BR/guide"]) {
       const res = await visit(path, "es");
       expect(res.headers.get("location")).toBeNull();
     }

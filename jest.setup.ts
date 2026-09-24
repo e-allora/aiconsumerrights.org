@@ -65,6 +65,8 @@ jest.mock("@/lib/i18n/navigation", () => {
   const React = require("react");
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const { useLocale } = require("next-intl");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { localizedPath } = require("@/lib/i18n/routing");
   const state = globalThis as unknown as {
     __mockPathname?: string;
     __mockRouter?: { replace: jest.Mock; push: jest.Mock };
@@ -74,8 +76,7 @@ jest.mock("@/lib/i18n/navigation", () => {
     ref: unknown
   ) {
     const active = useLocale();
-    const path = href === "/" ? "" : href;
-    return React.createElement("a", { href: `/${locale ?? active}${path}`, ref, ...props });
+    return React.createElement("a", { href: localizedPath(locale ?? active, href), ref, ...props });
   });
   return {
     Link,

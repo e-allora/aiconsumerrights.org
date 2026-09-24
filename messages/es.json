@@ -36,7 +36,8 @@
     "languageNames": {
       "en": "English",
       "es": "Español",
-      "pt": "Português"
+      "pt-PT": "Português (PT)",
+      "pt-BR": "Português (BR)"
     }
   },
   "Home": {

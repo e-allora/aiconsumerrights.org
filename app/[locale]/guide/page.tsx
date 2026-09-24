@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cite } from "@/components/ui/Cite";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Link } from "@/lib/i18n/navigation";
-import { LOCALE_TAGS, type Locale } from "@/lib/i18n/routing";
+import { LOCALE_TAGS, localizedPath, type Locale } from "@/lib/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { formatDate, sources } from "@/lib/sources";
@@ -63,7 +63,7 @@ export default function GuidePage({ params: { locale } }: Props) {
           "@type": "Article",
           headline: t("title"),
           description: t("metaDescription"),
-          url: `${SITE_URL}/${activeLocale}/guide`,
+          url: `${SITE_URL}${localizedPath(activeLocale as Locale, "/guide")}`,
           inLanguage: LOCALE_TAGS[activeLocale as Locale].lang,
           dateModified: sources.checkedOn,
           publisher: { "@type": "Organization", name: tc("siteName"), url: SITE_URL },

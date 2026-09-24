@@ -2,7 +2,7 @@
 
 **Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.**
 
-🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English, Español, and Português · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
+🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English, Español, Português (PT), and Português (BR) · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
 
 ![The guide page, "AI you can question", on a warm cream background](docs/screenshots/guide-light.png)
 
@@ -58,11 +58,11 @@ Every page ends with a **"How this site was made"** footer that lists:
 
 The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.app/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
 
-### 🗣️ English, Spanish, and Portuguese
+### 🗣️ English, Spanish, and Portuguese (Portugal and Brazil)
 
-- 🌎 Every page exists at `/en/...`, `/es/...`, and `/pt/...`. A visit to `/` opens the language your browser asks for.
+- 🌎 Every page exists at `/en/...`, `/es/...`, `/pt/...` (Portugal), and `/pt-BR/...` (Brazil). A visit to `/` opens the language your browser asks for.
 - 🔁 The language menu in the header, or in the mobile menu, keeps you on the same page: `/en/forum` becomes `/es/forum`.
-- 📝 Spanish and Portuguese (European) text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
+- 📝 Spanish, European Portuguese, and Brazilian Portuguese text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
 - ⏸️ The PAUSE Strategy spells PAUSE in English and PAUSA in Spanish and Portuguese.
 - 🔎 Search engines get `hreflang` links between the versions, in the page head and in the sitemap.
 
@@ -97,7 +97,7 @@ npm run dev          # http://localhost:3000 (opens /en or /es)
 | `npx tsc --noEmit` | Type-checks the project |
 | `npm run lint` | Runs Next.js lint |
 | `npm run build` | Makes the production build |
-| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all three languages, in light and dark, on desktop and mobile |
+| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all four languages, in light and dark, on desktop and mobile |
 | `npm run screenshots` | Regenerates the images in `docs/screenshots` |
 
 > 💡 `audit:a11y` and `screenshots` need a Chromium browser. Set `CHROME_PATH` if yours is not at Playwright's default location.
@@ -105,9 +105,9 @@ npm run dev          # http://localhost:3000 (opens /en or /es)
 ## 🗂️ Project layout
 
 ```
-app/[locale]/         Pages: /, /guide, /forum, /sources, /about, in /en, /es, and /pt
+app/[locale]/         Pages: /, /guide, /forum, /sources, /about, in /en, /es, /pt, and /pt-BR
 app/                  Sitemap, robots, and the share image
-messages/             en.json, es.json, and pt.json, every string on the site
+messages/             en.json, es.json, pt.json, and pt-BR.json, every string on the site
 i18n.ts, middleware.ts  Loads messages per request; adds the locale and detects the browser language
 components/ui/        Design-system primitives: Button, Card, ThemeToggle, LanguageSwitcher, SiteNav, AttributionFooter
 components/guide/     AlgorithmExplorer
@@ -115,17 +115,17 @@ components/forum/     VotingEngine, StatementSubmission, ConsensusCluster
 lib/                  Site config, SEO helpers, source registry, forum statements
 lib/data/sources.json The transparency registry every citation resolves to
 scripts/              Real-browser accessibility audit and screenshot tools
-__tests__/            214 unit, integration, accessibility, i18n, and SEO tests
+__tests__/            236 unit, integration, accessibility, i18n, and SEO tests
 ```
 
 ## ✅ Quality bar
 
 Every phase ships only when all of these pass:
 
-- 🧪 **Jest:** 214 tests, including axe on every page in all three languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
+- 🧪 **Jest:** 236 tests, including axe on every page in all four languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
 - 🔤 **TypeScript and lint:** zero errors, zero warnings.
 - 🏗️ **Production build:** zero warnings.
-- ♿ **Real-browser audit:** zero WCAG A/AA violations across 62 page states in all three languages, with a built-in canary that proves the checks work.
+- ♿ **Real-browser audit:** zero WCAG A/AA violations across 82 page states in all four languages, with a built-in canary that proves the checks work.
 
 ## 🤖 AI assistance disclosure
 

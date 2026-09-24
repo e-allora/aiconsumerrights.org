@@ -15,7 +15,8 @@ describe("LocaleLayout (server render)", () => {
   it.each([
     ["en", "en"],
     ["es", "es"],
-    ["pt", "pt-PT"],
+    ["pt-PT", "pt-PT"],
+    ["pt-BR", "pt-BR"],
   ])("renders the full %s document without errors (lang=%s)", async (locale, lang) => {
     const errors = jest.spyOn(console, "error").mockImplementation(() => {});
     const html = await renderLayout(locale);

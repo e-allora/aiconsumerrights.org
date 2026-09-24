@@ -7,12 +7,13 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { usePathname, useRouter } from "@/lib/i18n/navigation";
-import { routing, type Locale } from "@/lib/i18n/routing";
+import { LOCALE_TAGS, routing, type Locale } from "@/lib/i18n/routing";
 import { cn } from "@/lib/utils";
 
 /**
  * Language menu. Each option is named in its own language and marked with
- * lang, so a screen reader pronounces "Español" in Spanish. Choosing one
+ * lang, so a screen reader pronounces "Español" in Spanish and each
+ * Portuguese option with its own accent. Choosing one
  * keeps you on the same page: /en/forum becomes /es/forum.
  */
 export function LanguageSwitcher({ className }: { className?: string }) {
@@ -37,7 +38,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           className={cn("px-3", className)}
         >
           <Languages aria-hidden="true" />
-          <span lang={locale}>{current}</span>
+          <span lang={LOCALE_TAGS[locale].lang}>{current}</span>
           <ChevronDown aria-hidden="true" className="!size-4" />
         </Button>
       </DropdownMenu.Trigger>
@@ -55,7 +56,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               <DropdownMenu.RadioItem
                 key={l}
                 value={l}
-                lang={l}
+                lang={LOCALE_TAGS[l].lang}
                 className="tap-target flex min-h-11 cursor-pointer select-none items-center justify-between gap-3 rounded-md px-3 font-semibold outline-none data-[highlighted]:bg-muted data-[highlighted]:ring-[3px] data-[highlighted]:ring-ring"
               >
                 {t(`languageNames.${l}`)}

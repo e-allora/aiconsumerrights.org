@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 
-import { LOCALE_TAGS, routing, type Locale } from "@/lib/i18n/routing";
+import { LOCALE_TAGS, localizedPath, routing, type Locale } from "@/lib/i18n/routing";
 
 /** The share image, described in the page's language. */
 export const ogImage = (alt: string) => ({ url: "/opengraph-image", width: 1200, height: 630, alt });
 
 /** hreflang alternates for a path in every locale, plus x-default. */
 export function languageAlternates(path: `/${string}`) {
-  const suffix = path === "/" ? "" : path;
   const languages: Record<string, string> = {};
-  for (const l of routing.locales) languages[LOCALE_TAGS[l].hreflang] = `/${l}${suffix}`;
-  languages["x-default"] = `/${routing.defaultLocale}${suffix}`;
+  for (const l of routing.locales) languages[LOCALE_TAGS[l].hreflang] = localizedPath(l, path);
+  languages["x-default"] = localizedPath(routing.defaultLocale, path);
   return languages;
 }
 
@@ -33,7 +32,7 @@ export function pageMetadata({
   path: `/${string}`;
   type?: "website" | "article";
 }): Metadata {
-  const url = `/${locale}${path === "/" ? "" : path}`;
+  const url = localizedPath(locale, path);
   const image = ogImage(imageAlt);
   return {
     title,

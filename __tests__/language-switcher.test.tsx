@@ -27,16 +27,29 @@ describe("LanguageSwitcher", () => {
   });
 
   it("describes itself in Portuguese on Portuguese pages", () => {
-    render(<LanguageSwitcher />, { locale: "pt" });
-    expect(trigger()).toHaveAccessibleName("Escolha um idioma. Idioma atual: Português");
+    render(<LanguageSwitcher />, { locale: "pt-PT" });
+    expect(trigger()).toHaveAccessibleName("Escolha um idioma. Idioma atual: Português (PT)");
   });
 
   it("switches /en/forum to /pt/forum, keeping the page", async () => {
     const user = userEvent.setup();
     render(<LanguageSwitcher />);
     await user.click(trigger());
-    await user.click(await screen.findByRole("menuitemradio", { name: "Português" }));
-    expect(state.__mockRouter.replace).toHaveBeenCalledWith("/forum", { locale: "pt" });
+    await user.click(await screen.findByRole("menuitemradio", { name: "Português (PT)" }));
+    expect(state.__mockRouter.replace).toHaveBeenCalledWith("/forum", { locale: "pt-PT" });
+  });
+
+  it("switches /pt/forum to /pt-BR/forum, keeping the page", async () => {
+    const user = userEvent.setup();
+    render(<LanguageSwitcher />, { locale: "pt-PT" });
+    await user.click(trigger());
+    await user.click(await screen.findByRole("menuitemradio", { name: "Português (BR)" }));
+    expect(state.__mockRouter.replace).toHaveBeenCalledWith("/forum", { locale: "pt-BR" });
+  });
+
+  it("describes itself in Brazilian Portuguese on /pt-BR pages", () => {
+    render(<LanguageSwitcher />, { locale: "pt-BR" });
+    expect(trigger()).toHaveAccessibleName("Escolha um idioma. Idioma atual: Português (BR)");
   });
 
   it("describes itself in Spanish on Spanish pages", () => {
@@ -51,9 +64,9 @@ describe("LanguageSwitcher", () => {
     await user.keyboard("{Enter}");
     const menu = await screen.findByRole("menu");
     const items = within(menu).getAllByRole("menuitemradio");
-    expect(items.map((i) => i.textContent)).toEqual(["English", "Español", "Português"]);
-    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es", "pt"]);
-    expect(items.map((i) => i.getAttribute("aria-checked"))).toEqual(["true", "false", "false"]);
+    expect(items.map((i) => i.textContent)).toEqual(["English", "Español", "Português (PT)", "Português (BR)"]);
+    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es", "pt-PT", "pt-BR"]);
+    expect(items.map((i) => i.getAttribute("aria-checked"))).toEqual(["true", "false", "false", "false"]);
   });
 
   it("switches /en/forum to /es/forum, keeping the page", async () => {

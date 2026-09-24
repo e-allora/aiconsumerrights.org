@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { AttributionFooter } from "@/components/ui/AttributionFooter";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { SiteNav } from "@/components/ui/SiteNav";
-import { LOCALE_TAGS, isLocale, routing, type Locale } from "@/lib/i18n/routing";
+import { LOCALE_TAGS, isLocale, localizedPath, routing, type Locale } from "@/lib/i18n/routing";
 import { languageAlternates, ogImage } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
@@ -27,7 +27,7 @@ const display = Bricolage_Grotesque({
 
 type Props = { children: React.ReactNode; params: { locale: string } };
 
-// Prerender /en and /es; any other first segment is a 404.
+// Prerender every locale; any other first segment is a 404.
 export const dynamicParams = false;
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -50,13 +50,13 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
       "plain language",
       "AI transparency",
     ],
-    alternates: { canonical: `/${locale}`, languages: languageAlternates("/") },
+    alternates: { canonical: localizedPath(locale as Locale), languages: languageAlternates("/") },
     openGraph: {
       type: "website",
       siteName: name,
       title: name,
       description,
-      url: `/${locale}`,
+      url: localizedPath(locale as Locale),
       locale: LOCALE_TAGS[locale as Locale].og,
       images: [ogImage(`${name}: ${description}`)],
     },
@@ -83,7 +83,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: t("siteName"),
-    url: `${SITE_URL}/${locale}`,
+    url: `${SITE_URL}${localizedPath(locale)}`,
     description: t("siteDescription"),
     inLanguage: LOCALE_TAGS[locale].lang,
     about: [

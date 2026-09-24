@@ -16,8 +16,9 @@ function flatten(tree: Tree, prefix = ""): Record<string, string> {
 
 const en = flatten(MESSAGES.en as unknown as Tree);
 const es = flatten(MESSAGES.es as unknown as Tree);
-const pt = flatten(MESSAGES.pt as unknown as Tree);
-const TRANSLATIONS = { es, pt };
+const pt = flatten(MESSAGES["pt-PT"] as unknown as Tree);
+const ptBR = flatten(MESSAGES["pt-BR"] as unknown as Tree);
+const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).
 const MAY_BE_EMPTY = /(rule2Label|sourcesLanguageNote)$/;
 const placeholders = (s: string) => Array.from(s.matchAll(/\{(\w+)/g), (m) => m[1]).sort();
@@ -36,7 +37,7 @@ describe("message files", () => {
   });
 
   it("have no empty translations", () => {
-    for (const messages of [en, es, pt]) {
+    for (const messages of [en, es, pt, ptBR]) {
       for (const [k, v] of Object.entries(messages)) {
         if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
       }
@@ -59,7 +60,7 @@ describe("message files", () => {
   });
 
   it("include the required Portuguese wording", () => {
-    const m = MESSAGES.pt;
+    const m = MESSAGES["pt-PT"];
     expect(m.Common.siteName).toBe("Direitos do Consumidor perante a IA");
     expect(m.Home.lead).toBe("Ajuda em linguagem simples quando a IA toma decisões sobre si.");
     expect(m.Forum.eyebrow).toBe("Fórum Voz e Visão");
@@ -78,11 +79,29 @@ describe("message files", () => {
     ]);
     expect(m.PAUSEStrategy.title).toBe("A Estratégia PAUSA");
     expect(m.PAUSEStrategy.subtitle).toBe("O seu hábito diário de 5 passos perante a IA");
+    expect(m.PAUSEStrategy.steps.understand.body).toBe(
+      "Pergunte em que informação a ferramenta se baseia, se foi testada de forma independente e se existem enviesamentos ocultos ou interesses comerciais subjacentes."
+    );
+  });
+
+  it("use Brazilian wording in pt-BR, not European", () => {
+    const text = Object.values(ptBR).join(" ");
+    // The five swaps requested, plus common European forms that read as foreign in Brazil.
+    // "estar a" + verb ("estou a falar") is European; Brazil says "estou falando".
+    expect(text).not.toMatch(/sobre si\b|palavras-passe|\bcontacto|\bfactos?\b|\bequipas?\b/i);
+    expect(text).not.toMatch(/\b(estou|está|estão) a \w+(ar|er|ir)\b|\bseparador\b|\bpartilh|\bregisto\b|\brecolha\b/i);
+    expect(MESSAGES["pt-BR"].Home.lead).toBe("Ajuda em linguagem simples quando a IA toma decisões sobre você.");
+    for (const word of ["senhas", "contato", "fatos", "equipe", "sobre você"]) expect(text).toContain(word);
   });
 
   it("name every language in its own language, in every file", () => {
     for (const locale of routing.locales) {
-      expect(MESSAGES[locale].Navigation.languageNames).toEqual({ en: "English", es: "Español", pt: "Português" });
+      expect(MESSAGES[locale].Navigation.languageNames).toEqual({
+        en: "English",
+        es: "Español",
+        "pt-PT": "Português (PT)",
+        "pt-BR": "Português (BR)",
+      });
     }
   });
 
@@ -102,14 +121,14 @@ describe("message files", () => {
   });
 
   it("keep the blameless tone in Portuguese: no blame words or named companies", () => {
-    const text = Object.values(pt).join(" ");
+    const text = [...Object.values(pt), ...Object.values(ptBR)].join(" ");
     expect(text).not.toMatch(/\b(burla|fraude|culpado|vergonha|ganancios)/i);
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
   });
 });
 
 describe("PAUSE Strategy messages", () => {
-  const letters = (locale: "en" | "es" | "pt") =>
+  const letters = (locale: keyof typeof MESSAGES) =>
     Object.values(MESSAGES[locale].PAUSEStrategy.steps)
       .map((step) => step.letter)
       .join("");
@@ -117,7 +136,8 @@ describe("PAUSE Strategy messages", () => {
   it("spell PAUSE in English and PAUSA in Spanish", () => {
     expect(letters("en")).toBe("PAUSE");
     expect(letters("es")).toBe("PAUSA");
-    expect(letters("pt")).toBe("PAUSA");
+    expect(letters("pt-PT")).toBe("PAUSA");
+    expect(letters("pt-BR")).toBe("PAUSA");
   });
 
   it("start each step title with its letter", () => {
