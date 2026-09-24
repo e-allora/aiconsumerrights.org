@@ -1,13 +1,13 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@/test-utils";
 
-import ForumPage from "@/app/forum/page";
+import ForumPage from "@/app/[locale]/forum/page";
 import { ConsensusCluster, BROAD_AGREEMENT } from "@/components/forum/ConsensusCluster";
 
 beforeEach(() => localStorage.clear());
 
 describe("Forum page", () => {
   it("leads with the psychological safety message", () => {
-    render(<ForumPage />);
+    render(<ForumPage params={{ locale: "en" }} />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Your voice belongs here");
     expect(
       screen.getByText("Technology works best when everyone participates in shaping it.")
@@ -15,12 +15,12 @@ describe("Forum page", () => {
   });
 
   it("says plainly that the forum is a preview and nothing is sent", () => {
-    render(<ForumPage />);
+    render(<ForumPage params={{ locale: "en" }} />);
     expect(screen.getByTestId("preview-notice")).toHaveTextContent("Nothing is sent anywhere");
   });
 
   it("lists the five principles of constructive dialogue in order", () => {
-    render(<ForumPage />);
+    render(<ForumPage params={{ locale: "en" }} />);
     const list = screen.getByRole("region", { name: "Follow five principles of constructive dialogue" });
     const names = within(list).getAllByRole("listitem").map((li) => li.querySelector("strong")!.textContent);
     expect(names).toEqual([
@@ -33,14 +33,14 @@ describe("Forum page", () => {
   });
 
   it("shows the civil discourse notice", () => {
-    render(<ForumPage />);
+    render(<ForumPage params={{ locale: "en" }} />);
     expect(
       screen.getAllByText(/Your input is reviewed for civil discourse standards\. We critique ideas, not people\./).length
     ).toBeGreaterThan(0);
   });
 
   it("shows the feedback loop card without claiming results that do not exist", () => {
-    render(<ForumPage />);
+    render(<ForumPage params={{ locale: "en" }} />);
     const card = screen.getByRole("region", { name: "We asked, you said, we did" });
     expect(within(card).getByText("We asked")).toBeInTheDocument();
     expect(within(card).getByText(/^No results yet/)).toBeInTheDocument();
@@ -49,7 +49,7 @@ describe("Forum page", () => {
   });
 
   it("labels the consensus numbers as example data before any number", () => {
-    render(<ForumPage />);
+    render(<ForumPage params={{ locale: "en" }} />);
     const cluster = screen.getByRole("region", { name: "Where groups agree" });
     const banner = within(cluster).getByTestId("example-banner");
     expect(banner).toHaveTextContent("Example data. No votes have been counted yet.");
@@ -58,7 +58,7 @@ describe("Forum page", () => {
   });
 
   it("has one h1 and action-first section headings", () => {
-    render(<ForumPage />);
+    render(<ForumPage params={{ locale: "en" }} />);
     const h2s = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
     expect(h2s).toEqual([
       "Follow five principles of constructive dialogue",

@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@/test-utils";
 
 import { AttributionFooter } from "@/components/ui/AttributionFooter";
 import registry from "@/lib/data/sources.json";
@@ -86,7 +86,7 @@ describe("AttributionFooter", () => {
     expect(details).not.toHaveAttribute("open");
     expect(within(details).getByRole("link", { name: "Open the full source registry" })).toHaveAttribute(
       "href",
-      "/sources"
+      "/en/sources"
     );
   });
 });

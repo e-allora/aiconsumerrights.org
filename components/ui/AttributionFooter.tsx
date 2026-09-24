@@ -1,6 +1,8 @@
 import { ChevronDown } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 import { SourceCategoryList, SourceLink } from "@/components/ui/SourceList";
+import { Link } from "@/lib/i18n/navigation";
 import { formatDate, sources, type Registry } from "@/lib/sources";
 
 /**
@@ -10,11 +12,17 @@ import { formatDate, sources, type Registry } from "@/lib/sources";
  * record holds.
  */
 export function AttributionFooter({ registry = sources }: { registry?: Registry }) {
+  const t = useTranslations("Attribution");
+  const locale = useLocale();
   // Only models with a record of their work are credited.
   const models = registry.models.filter((m) => m.confirmed);
   const primary = registry.categories.flatMap((c) => c.sources.filter((s) => s.primary));
   const total = registry.categories.reduce((n, c) => n + c.sources.length, 0);
   const { review } = registry;
+  const modelName = (id: string, fallback: string) =>
+    t.has(`modelNames.${id}`) ? t(`modelNames.${id}`) : fallback;
+  const maker = (m: string) => (m === "Various" ? t("variousMakers") : m);
+  const languageNote = t("sourcesLanguageNote");
 
   return (
     <footer
@@ -23,25 +31,22 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
     >
       <div className="mx-auto flex max-w-5xl flex-col gap-10 px-4 py-12">
         <h2 id="provenance-heading" className="text-display-md">
-          How this site was made
+          {t("heading")}
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">
           <section aria-labelledby="provenance-ai">
             <h3 id="provenance-ai" className="text-display-sm">
-              AI helped research and draft
+              {t("aiHeading")}
             </h3>
-            <p className="mt-2 text-base">
-              This site was researched and drafted with help from several AI models. A person
-              decides what is published.
-            </p>
+            <p className="mt-2 text-base">{t("aiLead")}</p>
             <ul className="mt-3 flex flex-col gap-2 text-base">
               {models.map((m) => (
                 <li key={m.id}>
                   <strong>
-                    {m.name} ({m.maker})
+                    {modelName(m.id, m.name)} ({maker(m.maker)})
                   </strong>
-                  . {m.role}
+                  . {t(`models.${m.id}`)}
                 </li>
               ))}
             </ul>
@@ -49,13 +54,17 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
 
           <section aria-labelledby="provenance-primary">
             <h3 id="provenance-primary" className="text-display-sm">
-              Facts rest on primary sources
+              {t("primaryHeading")}
             </h3>
             <ul className="mt-3 flex flex-col gap-2 text-base">
               {primary.map((s) => (
                 <li key={s.id}>
                   <SourceLink source={s} />
-                  {s.publisher && <span className="block text-sm text-muted-foreground">{s.publisher}</span>}
+                  {s.publisher && (
+                    <span lang="en" className="block text-sm text-muted-foreground">
+                      {s.publisher}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -63,20 +72,23 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
 
           <section aria-labelledby="provenance-review">
             <h3 id="provenance-review" className="text-display-sm">
-              A person reviews every page
+              {t("reviewHeading")}
             </h3>
             <dl className="mt-3 flex flex-col gap-2 text-base">
               <div>
-                <dt className="font-bold">Human review</dt>
+                <dt className="font-bold">{t("reviewLabel")}</dt>
                 <dd data-testid="review-status">
                   {review.status === "reviewed" && review.reviewedOn
-                    ? `Reviewed by ${review.reviewer} on ${formatDate(review.reviewedOn)}.`
-                    : `Not yet complete. ${review.reviewer} reviews each page before launch.`}
+                    ? t("reviewDone", {
+                        reviewer: review.reviewer,
+                        date: formatDate(review.reviewedOn, locale),
+                      })
+                    : t("reviewPending", { reviewer: review.reviewer })}
                 </dd>
               </div>
               <div>
-                <dt className="font-bold">Sources checked</dt>
-                <dd>{formatDate(registry.checkedOn)}</dd>
+                <dt className="font-bold">{t("checkedLabel")}</dt>
+                <dd>{formatDate(registry.checkedOn, locale)}</dd>
               </div>
             </dl>
           </section>
@@ -84,23 +96,24 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
 
         <details className="group depth-card p-0">
           <summary className="tap-target flex cursor-pointer list-none items-center justify-between gap-4 rounded-lg px-6 py-4 font-display text-lg font-bold [&::-webkit-details-marker]:hidden">
-            See all {total} sources in {registry.categories.length} groups
+            {t("seeAll", { total, groups: registry.categories.length })}
             <ChevronDown
               aria-hidden="true"
               className="size-5 shrink-0 transition-transform duration-base ease-out-soft group-open:rotate-180"
             />
           </summary>
           <div className="flex flex-col gap-8 px-6 pb-6">
-            <p className="text-base">{registry.about}</p>
+            <p className="text-base">{t("registryAbout")}</p>
+            {languageNote && <p className="text-base">{languageNote}</p>}
             {registry.categories.map((c) => (
               <SourceCategoryList key={c.id} category={c} />
             ))}
-            <a
+            <Link
               href="/sources"
               className="tap-target self-start font-semibold text-link underline underline-offset-4"
             >
-              Open the full source registry
-            </a>
+              {t("openRegistry")}
+            </Link>
           </div>
         </details>
       </div>

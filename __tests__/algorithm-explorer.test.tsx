@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
-import { AlgorithmExplorer, STEPS } from "@/components/guide/AlgorithmExplorer";
+import { AlgorithmExplorer } from "@/components/guide/AlgorithmExplorer";
 
 const tabs = () => screen.getAllByRole("tab");
 const selectedIndex = () => tabs().findIndex((t) => t.getAttribute("aria-selected") === "true");
@@ -36,7 +36,7 @@ describe("AlgorithmExplorer", () => {
     render(<AlgorithmExplorer />);
     await user.click(tabs()[2]);
     expect(selectedIndex()).toBe(2);
-    expect(panelHeading()).toHaveTextContent(STEPS[2].title);
+    expect(panelHeading()).toHaveTextContent("Keep the conversation constructive");
   });
 
   it("moves between steps with arrow keys, Home and End, wrapping at the ends", async () => {

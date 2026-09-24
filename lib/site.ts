@@ -24,13 +24,15 @@ export const PUBLISHED_ROUTES: PublishedRoute[] = [
   { path: "/about", changeFrequency: "monthly", priority: 0.6 },
 ];
 
-export type NavItem = { href: `/${string}`; label: string; hint: string };
+export type NavKey = "home" | "guide" | "forum" | "sources" | "about";
+export type NavItem = { href: `/${string}`; key: NavKey };
 
 // One list drives the header, the drawer, and the mobile bottom bar.
+// Labels and hints live in messages/*.json under Navigation.<key> and <key>Hint.
 export const NAV_ITEMS: NavItem[] = [
-  { href: "/", label: "Home", hint: "Start here" },
-  { href: "/guide", label: "Guide", hint: "Three calm steps when AI decides about you" },
-  { href: "/forum", label: "Forum", hint: "Vote on shared ideas, no account needed" },
-  { href: "/sources", label: "Sources", hint: "Every source, and how it was checked" },
-  { href: "/about", label: "About", hint: "Why this site exists and how it works" },
+  { href: "/", key: "home" },
+  { href: "/guide", key: "guide" },
+  { href: "/forum", key: "forum" },
+  { href: "/sources", key: "sources" },
+  { href: "/about", key: "about" },
 ];

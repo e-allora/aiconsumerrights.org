@@ -1,7 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
-import { PLACEHOLDER, StatementSubmission } from "@/components/forum/StatementSubmission";
+import { StatementSubmission } from "@/components/forum/StatementSubmission";
+import { MESSAGES } from "@/test-utils";
+
+const PLACEHOLDER = MESSAGES.en.Forum.submission.placeholder;
 
 const box = () => screen.getByRole("textbox", { name: "Suggest a statement for others to vote on" });
 

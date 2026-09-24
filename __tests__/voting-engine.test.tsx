@@ -1,8 +1,11 @@
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import { VotingEngine, tally } from "@/components/forum/VotingEngine";
 import { STATEMENTS, TRACKS } from "@/lib/forum/statements";
+import { MESSAGES } from "@/test-utils";
+
+const text = (i: number) => MESSAGES.en.Forum.statements[STATEMENTS[i].id as keyof typeof MESSAGES.en.Forum.statements];
 
 const FOCUS_RING = ["focus-visible:ring-[3px]", "focus-visible:ring-ring", "focus-visible:ring-offset-2"];
 const heading = () => screen.getByRole("heading", { level: 3 });
@@ -11,19 +14,27 @@ const btn = (name: "Agree" | "Disagree" | "Pass") => screen.getByRole("button", 
 beforeEach(() => localStorage.clear());
 
 describe("seed statements", () => {
-  it("has 8 short statements, 2 in each of the 4 tracks", () => {
+  it("has 8 short statements, 2 in each of the 4 tracks, in every language", () => {
     expect(STATEMENTS).toHaveLength(8);
-    expect(TRACKS.map((t) => t.name)).toEqual(["Transparency", "Human agency", "Privacy", "Shared responsibility"]);
-    for (const t of TRACKS) expect(STATEMENTS.filter((s) => s.track === t.id)).toHaveLength(2);
-    for (const s of STATEMENTS) expect(s.text.length).toBeLessThanOrEqual(140);
+    expect(TRACKS.map((t) => MESSAGES.en.Forum.tracks[t])).toEqual([
+      "Transparency",
+      "Human agency",
+      "Privacy",
+      "Shared responsibility",
+    ]);
+    for (const t of TRACKS) expect(STATEMENTS.filter((s) => s.track === t)).toHaveLength(2);
+    for (const locale of ["en", "es"] as const) {
+      const all = MESSAGES[locale].Forum.statements as Record<string, string>;
+      for (const s of STATEMENTS) expect(all[s.id].length).toBeLessThanOrEqual(140);
+    }
   });
 });
 
 describe("VotingEngine voting", () => {
   it("shows the first statement in an isolated card", () => {
     render(<VotingEngine />);
-    expect(heading()).toHaveTextContent(STATEMENTS[0].text);
-    expect(screen.getByRole("region", { name: STATEMENTS[0].text })).toHaveClass("depth-card");
+    expect(heading()).toHaveTextContent(text(0));
+    expect(screen.getByRole("region", { name: text(0) })).toHaveClass("depth-card");
     expect(screen.getByText(/Transparency · Statement 1 of 8/)).toBeInTheDocument();
   });
 
@@ -42,7 +53,7 @@ describe("VotingEngine voting", () => {
     expect(screen.getByTestId("tally")).toHaveTextContent(`Your votes: ${counts}`);
     expect(screen.getByText("1 of 8 answered")).toBeInTheDocument();
     expect(screen.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "1");
-    expect(heading()).toHaveTextContent(STATEMENTS[1].text);
+    expect(heading()).toHaveTextContent(text(1));
     expect(heading()).toHaveFocus();
     expect(screen.getByRole("status")).toHaveTextContent(`Recorded: ${choice}. Statement 2 of 8.`);
   });
@@ -66,7 +77,7 @@ describe("VotingEngine voting", () => {
     });
     expect(onVote).toHaveBeenCalledTimes(1);
     expect(screen.getByTestId("tally")).toHaveTextContent("1 agree, 0 disagree, 0 pass");
-    expect(heading()).toHaveTextContent(STATEMENTS[1].text);
+    expect(heading()).toHaveTextContent(text(1));
   });
 
   it("never lets tallies exceed one per statement", () => {
@@ -78,7 +89,7 @@ describe("VotingEngine voting", () => {
     render(<VotingEngine />);
     const order = ["Agree", "Disagree", "Pass", "Agree", "Agree", "Pass", "Disagree", "Agree"] as const;
     for (let i = 0; i < order.length; i++) {
-      expect(heading()).toHaveTextContent(STATEMENTS[i].text);
+      expect(heading()).toHaveTextContent(text(i));
       await user.click(btn(order[i]));
     }
     expect(heading()).toHaveTextContent("Thank you. You answered every statement.");
@@ -86,7 +97,7 @@ describe("VotingEngine voting", () => {
     expect(screen.queryByRole("button", { name: "Agree" })).not.toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Clear my votes and start over" }));
-    expect(heading()).toHaveTextContent(STATEMENTS[0].text);
+    expect(heading()).toHaveTextContent(text(0));
     expect(screen.getByTestId("tally")).toHaveTextContent("0 agree, 0 disagree, 0 pass");
   });
 
@@ -98,7 +109,7 @@ describe("VotingEngine voting", () => {
 
     render(<VotingEngine />);
     expect(await screen.findByText("1 of 8 answered")).toBeInTheDocument();
-    expect(heading()).toHaveTextContent(STATEMENTS[1].text);
+    expect(heading()).toHaveTextContent(text(1));
   });
 
   it("still works when browser storage is blocked", async () => {
@@ -108,7 +119,7 @@ describe("VotingEngine voting", () => {
     });
     render(<VotingEngine />);
     await user.click(btn("Agree"));
-    expect(heading()).toHaveTextContent(STATEMENTS[1].text);
+    expect(heading()).toHaveTextContent(text(1));
     spy.mockRestore();
   });
 });
@@ -163,7 +174,7 @@ describe("VotingEngine accessibility", () => {
     render(<VotingEngine />);
     await user.tab();
     await user.keyboard("{Enter}");
-    expect(heading()).toHaveTextContent(STATEMENTS[1].text);
+    expect(heading()).toHaveTextContent(text(1));
     expect(heading()).toHaveFocus();
     await user.tab();
     await user.keyboard(" ");

@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "@/test-utils";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { contrastRatio, palette } from "@/lib/theme";

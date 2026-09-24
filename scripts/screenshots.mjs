@@ -12,12 +12,12 @@ const CHROME =
   process.env.CHROME_PATH ?? join(homedir(), ".cache/ms-playwright/chromium-1234/chrome-linux64/chrome");
 
 const SHOTS = [
-  { file: "guide-light.png", path: "/guide", theme: "light", vp: "desktop" },
-  { file: "guide-dark.png", path: "/guide", theme: "dark", vp: "desktop" },
-  { file: "explorer.png", path: "/guide", theme: "light", vp: "desktop", scrollTo: "#steps" },
-  { file: "forum.png", path: "/forum", theme: "light", vp: "desktop", scrollTo: "#vote" },
-  { file: "mobile-guide.png", path: "/guide", theme: "light", vp: "mobile" },
-  { file: "mobile-drawer.png", path: "/forum", theme: "dark", vp: "mobile", drawer: true },
+  { file: "guide-light.png", path: "/en/guide", theme: "light", vp: "desktop" },
+  { file: "guide-dark.png", path: "/en/guide", theme: "dark", vp: "desktop" },
+  { file: "explorer.png", path: "/en/guide", theme: "light", vp: "desktop", scrollTo: "#steps" },
+  { file: "forum.png", path: "/en/forum", theme: "light", vp: "desktop", scrollTo: "#vote" },
+  { file: "mobile-guide.png", path: "/en/guide", theme: "light", vp: "mobile" },
+  { file: "mobile-drawer.png", path: "/es/forum", theme: "dark", vp: "mobile", drawer: true },
 ];
 const VIEWPORTS = {
   desktop: { width: 1280, height: 800, deviceScaleFactor: 1 },
@@ -44,7 +44,7 @@ try {
       }, s.scrollTo);
     }
     if (s.drawer) {
-      await page.click('button[aria-label="Open menu"]');
+      await page.click('header button[aria-haspopup="dialog"]');
       await page.waitForSelector('[role="dialog"]');
     }
     await new Promise((r) => setTimeout(r, 400));

@@ -24,7 +24,8 @@ const require = createRequire(import.meta.url);
 const AXE = require.resolve("axe-core/axe.min.js");
 const PORT = Number(process.env.AUDIT_PORT ?? 3217);
 const BASE = `http://localhost:${PORT}`;
-const ROUTES = ["/", "/guide", "/forum", "/sources", "/about"];
+const PAGES = ["", "/guide", "/forum", "/sources", "/about"];
+const ROUTES = ["en", "es"].flatMap((locale) => PAGES.map((p) => `/${locale}${p}`));
 const CHROME =
   process.env.CHROME_PATH ??
   join(homedir(), ".cache/ms-playwright/chromium-1234/chrome-linux64/chrome");
@@ -178,7 +179,7 @@ async function audit(browser, route, theme, vpName) {
 // detectors flag it. If they don't, the audit itself is broken.
 async function canary(browser) {
   const page = await browser.newPage();
-  await page.goto(BASE + "/", { waitUntil: "networkidle0" });
+  await page.goto(BASE + "/en", { waitUntil: "networkidle0" });
   await page.evaluate(() => {
     const b = document.createElement("button");
     b.id = "canary";
@@ -212,9 +213,13 @@ try {
     const page = await browser.newPage();
     await page.setViewport(VIEWPORTS.mobile);
     await page.evaluateOnNewDocument((t) => localStorage.setItem("theme", t), theme);
-    await page.goto(BASE + "/guide", { waitUntil: "networkidle0" });
-    await page.click('button[aria-label="Open menu"]');
+    await page.goto(BASE + `/${theme === "dark" ? "es" : "en"}/guide`, { waitUntil: "networkidle0" });
+    await page.click('header button[aria-haspopup="dialog"]');
     await page.waitForSelector('[role="dialog"]');
+    // Let the drawer finish sliding in, then open its language menu too.
+    await new Promise((r) => setTimeout(r, 500));
+    await page.click('[role="dialog"] button[aria-haspopup="menu"]');
+    await page.waitForSelector('[role="menu"]');
     await new Promise((r) => setTimeout(r, 500));
     await page.addScriptTag({ path: AXE });
     const v = await page.evaluate(async () =>
@@ -229,7 +234,7 @@ try {
   server.stop();
 }
 
-console.log(`Audited ${runs} page states (${ROUTES.length} routes x 2 themes x 2 viewports, plus the drawer).`);
+console.log(`Audited ${runs} page states (${ROUTES.length} routes in 2 languages x 2 themes x 2 viewports, plus the drawer).`);
 if (failures.length) {
   console.log(`\n${failures.length} problem(s):`);
   for (const f of failures) console.log(`  - ${f}`);

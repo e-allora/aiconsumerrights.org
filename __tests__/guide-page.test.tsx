@@ -1,11 +1,11 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@/test-utils";
 
-import GuidePage from "@/app/guide/page";
+import GuidePage from "@/app/[locale]/guide/page";
 import { Cite } from "@/components/ui/Cite";
 import { getSource } from "@/lib/sources";
 
 describe("Guide page", () => {
-  beforeEach(() => render(<GuidePage />));
+  beforeEach(() => render(<GuidePage params={{ locale: "en" }} />));
 
   it("has one h1 and front-loaded, action-first section headings", () => {
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
@@ -54,7 +54,7 @@ describe("Guide page", () => {
     const cites = screen.getAllByRole("link", { name: /^Source \d+:/ });
     expect(cites.length).toBeGreaterThan(10);
     for (const link of cites) {
-      const id = link.getAttribute("href")!.replace("/sources#", "");
+      const id = link.getAttribute("href")!.replace("/en/sources#", "");
       expect(() => getSource(id)).not.toThrow();
     }
   });

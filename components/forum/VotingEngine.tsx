@@ -2,19 +2,21 @@
 
 import * as React from "react";
 import { ArrowRight, RotateCcw, ThumbsDown, ThumbsUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { STATEMENTS, trackOf, type Statement } from "@/lib/forum/statements";
+import { STATEMENTS, type Statement } from "@/lib/forum/statements";
 import { cn } from "@/lib/utils";
 
 export type Vote = "agree" | "disagree" | "pass";
 export type Votes = Record<string, Vote>;
 
-const CHOICES: { vote: Vote; label: string; tip: string; icon: React.ElementType; variant: "default" | "secondary" | "outline" }[] = [
-  { vote: "agree", label: "Agree", tip: "You support this statement.", icon: ThumbsUp, variant: "default" },
-  { vote: "disagree", label: "Disagree", tip: "You do not support this statement.", icon: ThumbsDown, variant: "secondary" },
-  { vote: "pass", label: "Pass", tip: "Skip it. You are unsure, or it does not apply to you.", icon: ArrowRight, variant: "outline" },
+// Labels and tips live in messages/*.json under Forum.voting.<vote> and <vote>Tip.
+const CHOICES: { vote: Vote; icon: React.ElementType; variant: "default" | "secondary" | "outline" }[] = [
+  { vote: "agree", icon: ThumbsUp, variant: "default" },
+  { vote: "disagree", icon: ThumbsDown, variant: "secondary" },
+  { vote: "pass", icon: ArrowRight, variant: "outline" },
 ];
 
 const STORAGE_KEY = "forum-votes-v1";
@@ -62,6 +64,8 @@ export function VotingEngine({
   statements?: Statement[];
   onVote?: (id: string, vote: Vote) => void;
 }) {
+  const t = useTranslations("Forum.voting");
+  const tf = useTranslations("Forum");
   const [votes, setVotes] = React.useState<Votes>({});
   // Mirrors `votes` synchronously, so two clicks in the same tick can't
   // both pass the one-vote check before React re-renders.
@@ -105,11 +109,11 @@ export function VotingEngine({
     onVote?.(statement.id, vote);
     focusHeading.current = true;
     if (nextIdx >= 0) setCurrent(nextIdx);
-    const label = CHOICES.find((c) => c.vote === vote)!.label;
+    const choice = t(vote);
     setAnnouncement(
       nextIdx >= 0
-        ? `Recorded: ${label}. Statement ${nextIdx + 1} of ${statements.length}.`
-        : `Recorded: ${label}. You have answered all ${statements.length} statements.`
+        ? t("recorded", { choice, next: nextIdx + 1, total: statements.length })
+        : t("recordedAll", { choice, total: statements.length })
     );
   }
 
@@ -119,7 +123,7 @@ export function VotingEngine({
     setVotes({});
     setCurrent(0);
     focusHeading.current = true;
-    setAnnouncement(`Votes cleared. Statement 1 of ${statements.length}.`);
+    setAnnouncement(t("cleared", { total: statements.length }));
   }
 
   // Toolbar pattern: arrow keys move between the three vote buttons.
@@ -142,17 +146,15 @@ export function VotingEngine({
     <div className="flex flex-col gap-5">
       <div className="flex flex-wrap items-center justify-between gap-3 text-base">
         <p>
-          <strong>
-            {answered} of {statements.length} answered
-          </strong>
+          <strong>{t("answered", { answered, total: statements.length })}</strong>
         </p>
         <p data-testid="tally" className="text-muted-foreground">
-          Your votes: {counts.agree} agree, {counts.disagree} disagree, {counts.pass} pass
+          {t("tally", counts)}
         </p>
       </div>
       <div
         role="progressbar"
-        aria-label="Statements answered"
+        aria-label={t("progressLabel")}
         aria-valuemin={0}
         aria-valuemax={statements.length}
         aria-valuenow={answered}
@@ -172,16 +174,20 @@ export function VotingEngine({
         >
           <CardHeader>
             <p className="text-sm font-bold uppercase tracking-wide text-muted-foreground">
-              {trackOf(statement).name} · Statement {current + 1} of {statements.length}
+              {t("cardMeta", {
+                track: tf(`tracks.${statement.track}`),
+                current: current + 1,
+                total: statements.length,
+              })}
             </p>
             <CardTitle ref={headingRef} tabIndex={-1} className="text-display-md focus:outline-none">
-              {statement.text}
+              {tf(`statements.${statement.id}`)}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div
               role="toolbar"
-              aria-label="Your vote"
+              aria-label={t("toolbarLabel")}
               onKeyDown={onToolbarKeyDown}
               className="flex flex-wrap gap-3"
             >
@@ -202,7 +208,7 @@ export function VotingEngine({
                       className="min-w-32"
                     >
                       <Icon aria-hidden="true" />
-                      {c.label}
+                      {t(c.vote)}
                     </Button>
                     <span
                       id={tipId}
@@ -212,7 +218,7 @@ export function VotingEngine({
                         "invisible opacity-0 transition-opacity duration-fast group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
                       )}
                     >
-                      {c.tip}
+                      {t(`${c.vote}Tip`)}
                     </span>
                   </span>
                 );
@@ -224,20 +230,20 @@ export function VotingEngine({
         <Card as="section" className="animate-in fade-in duration-base">
           <CardHeader>
             <CardTitle ref={headingRef} tabIndex={-1} className="text-display-md focus:outline-none">
-              Thank you. You answered every statement.
+              {t("doneTitle")}
             </CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col gap-4 text-base">
             <ul className="flex flex-col gap-2">
               {statements.map((s) => (
                 <li key={s.id}>
-                  <strong>{CHOICES.find((c) => c.vote === votes[s.id])?.label}:</strong> {s.text}
+                  <strong>{votes[s.id] ? t(votes[s.id]) : ""}:</strong> {tf(`statements.${s.id}`)}
                 </li>
               ))}
             </ul>
             <Button variant="outline" className="self-start" onClick={reset}>
               <RotateCcw aria-hidden="true" />
-              Clear my votes and start over
+              {t("clear")}
             </Button>
           </CardContent>
         </Card>

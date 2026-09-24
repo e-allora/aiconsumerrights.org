@@ -2,19 +2,18 @@
 
 import * as React from "react";
 import { Send } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { MAX_STATEMENT_LENGTH } from "@/lib/forum/statements";
 import { cn } from "@/lib/utils";
-
-export const PLACEHOLDER =
-  "e.g., 'Customer service portals should always let you request a human representative with one tap.'";
 
 /**
  * One short statement, no account needed. `onSubmit` sends it for review;
  * without one (no server yet) the box says plainly that nothing was sent.
  */
 export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) => Promise<void> | void }) {
+  const t = useTranslations("Forum.submission");
   const [text, setText] = React.useState("");
   const [error, setError] = React.useState("");
   const [result, setResult] = React.useState<"" | "sent" | "kept">("");
@@ -27,7 +26,7 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
     e.preventDefault();
     const clean = text.trim();
     if (!clean) {
-      setError("Please write a statement first.");
+      setError(t("empty"));
       return;
     }
     setError("");
@@ -43,12 +42,10 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
   return (
     <form onSubmit={submit} noValidate className="flex flex-col gap-4">
       <label htmlFor={ids.input} className="font-display text-lg font-bold">
-        Suggest a statement for others to vote on
+        {t("label")}
       </label>
       <p id={ids.note} className="text-base text-muted-foreground">
-        <strong className="text-foreground">A person reads every statement before it is shown.</strong>{" "}
-        Statements that single out a person, company, or group are not published. Your input is
-        reviewed for civil discourse standards. We critique ideas, not people.
+        {t.rich("disclosure", { b: (c) => <strong className="text-foreground">{c}</strong> })}
       </p>
       <textarea
         id={ids.input}
@@ -56,7 +53,7 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
         rows={3}
         maxLength={MAX_STATEMENT_LENGTH}
         value={text}
-        placeholder={PLACEHOLDER}
+        placeholder={t("placeholder")}
         aria-describedby={`${ids.note} ${ids.count}${error ? ` ${ids.error}` : ""}`}
         aria-invalid={error ? true : undefined}
         onChange={(e) => {
@@ -72,11 +69,11 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
           aria-live={nearLimit ? "polite" : "off"}
           className={cn("text-sm", nearLimit ? "font-bold text-foreground" : "text-muted-foreground")}
         >
-          {remaining} of {MAX_STATEMENT_LENGTH} characters left
+          {t("remaining", { remaining, max: MAX_STATEMENT_LENGTH })}
         </p>
         <Button type="submit">
           <Send aria-hidden="true" />
-          Submit for review
+          {t("submit")}
         </Button>
       </div>
       {error && (
@@ -85,9 +82,8 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
         </p>
       )}
       <p role="status" className="text-base">
-        {result === "sent" && "Thank you. Your statement is waiting for review."}
-        {result === "kept" &&
-          "Thank you. This forum is still in preview, so your statement was not sent anywhere yet."}
+        {result === "sent" && t("sent")}
+        {result === "kept" && t("kept")}
       </p>
     </form>
   );

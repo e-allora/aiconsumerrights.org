@@ -1,15 +1,15 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, within } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteNav } from "@/components/ui/SiteNav";
 import { NAV_ITEMS } from "@/lib/site";
+import { MESSAGES } from "@/test-utils";
 
-let mockPath = "/";
-jest.mock("next/navigation", () => ({ usePathname: () => mockPath }));
+const label = (key: string) => (MESSAGES.en.Navigation as Record<string, unknown>)[key] as string;
 
 function renderNav(path = "/") {
-  mockPath = path;
+  (globalThis as unknown as { __mockPathname: string }).__mockPathname = path;
   return render(
     <ThemeProvider attribute="class" defaultTheme="light">
       <SiteNav />
@@ -24,8 +24,10 @@ describe("SiteNav", () => {
     renderNav();
     const nav = screen.getByRole("navigation", { name });
     const links = within(nav).getAllByRole("link");
-    expect(links.map((a) => a.getAttribute("href"))).toEqual(NAV_ITEMS.map((i) => i.href));
-    expect(links.map((a) => a.textContent)).toEqual(NAV_ITEMS.map((i) => i.label));
+    expect(links.map((a) => a.getAttribute("href"))).toEqual(
+      NAV_ITEMS.map((i) => `/en${i.href === "/" ? "" : i.href}`)
+    );
+    expect(links.map((a) => a.textContent)).toEqual(NAV_ITEMS.map((i) => label(i.key)));
   });
 
   it.each(["/", "/guide", "/forum", "/sources", "/about"])("marks %s as the current page", (path) => {
@@ -33,13 +35,13 @@ describe("SiteNav", () => {
     for (const name of ["Main", "Quick"]) {
       const current = within(screen.getByRole("navigation", { name })).getAllByRole("link", { current: "page" });
       expect(current).toHaveLength(1);
-      expect(current[0]).toHaveAttribute("href", path);
+      expect(current[0]).toHaveAttribute("href", `/en${path === "/" ? "" : path}`);
     }
   });
 
   it("links home from the site name", () => {
     renderNav("/forum");
-    expect(screen.getByRole("link", { name: "AI Consumer Rights" })).toHaveAttribute("href", "/");
+    expect(screen.getByRole("link", { name: "AI Consumer Rights" })).toHaveAttribute("href", "/en");
   });
 
   it("gives every nav link a tap target and a 3px focus ring", () => {
@@ -64,8 +66,8 @@ describe("SiteNav", () => {
     const dialog = screen.getByRole("dialog", { name: "Menu" });
     const links = within(within(dialog).getByRole("navigation", { name: "All pages" })).getAllByRole("link");
     expect(links).toHaveLength(NAV_ITEMS.length);
-    for (const item of NAV_ITEMS) expect(within(dialog).getByText(item.hint)).toBeInTheDocument();
-    expect(within(dialog).getByRole("link", { current: "page" })).toHaveAttribute("href", "/guide");
+    for (const item of NAV_ITEMS) expect(within(dialog).getByText(label(`${item.key}Hint`))).toBeInTheDocument();
+    expect(within(dialog).getByRole("link", { current: "page" })).toHaveAttribute("href", "/en/guide");
   });
 
   it("traps focus in the drawer, closes on Escape, and returns focus to the menu button", async () => {

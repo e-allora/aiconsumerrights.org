@@ -42,3 +42,6 @@ next-env.d.ts
 # private research: model chat logs and drafts. Only the source registry ships.
 /lib/data/*
 !/lib/data/sources.json
+
+# reference PDFs kept locally, never published
+/*.pdf

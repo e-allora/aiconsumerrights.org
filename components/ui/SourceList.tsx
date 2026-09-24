@@ -1,42 +1,54 @@
 import { ExternalLink as ExternalIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-import {
-  STATUS_LABEL,
-  externalLabel,
-  sourceNumber,
-  type Source,
-  type SourceCategory,
-} from "@/lib/sources";
+import { sourceNumber, type Source, type SourceCategory } from "@/lib/sources";
 import { cn } from "@/lib/utils";
+
+// Source titles and details stay in their original language (English), so
+// they carry lang="en" and screen readers pronounce them correctly (SC 3.1.2).
 
 /** An external source link: new tab, no opener access, and a full accessible name. */
 export function SourceLink({ source, className }: { source: Source; className?: string }) {
-  if (!source.url) return <span className={className}>{source.title}</span>;
+  const t = useTranslations("Common");
+  if (!source.url) {
+    return (
+      <span lang="en" className={className}>
+        {source.title}
+      </span>
+    );
+  }
+  const name = source.publisher ? `${source.title}, ${source.publisher}` : source.title;
   return (
     <a
       href={source.url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={externalLabel(source)}
+      hrefLang="en"
+      aria-label={`${name} ${t("opensInNewTab")}`}
       className={cn(
         "tap-target inline-flex items-center gap-1 font-semibold text-link underline underline-offset-4 hover:decoration-2",
         className
       )}
     >
-      {source.title}
+      <span lang="en">{source.title}</span>
       <ExternalIcon aria-hidden="true" className="size-4 shrink-0 self-center" />
     </a>
   );
 }
 
 function SourceMeta({ source }: { source: Source }) {
+  const t = useTranslations("Attribution.status");
   const bits = [source.author, source.publisher, source.date, source.type].filter(Boolean);
   return (
     <p className="text-base text-muted-foreground">
-      {bits.join(" · ")}
+      <span lang="en">{bits.join(" · ")}</span>
       <span className="block text-sm">
-        {STATUS_LABEL[source.status]}
-        {source.note ? `. ${source.note}` : ""}
+        {t(source.status)}
+        {source.note ? (
+          <>
+            . <span lang="en">{source.note}</span>
+          </>
+        ) : null}
       </span>
     </p>
   );
@@ -52,12 +64,13 @@ export function SourceCategoryList({
   headingLevel?: "h2" | "h3";
   anchors?: boolean;
 }) {
+  const t = useTranslations("Attribution.categories");
   const Heading = headingLevel;
   const headingId = `${anchors ? "" : "footer-"}cat-${category.id}`;
   return (
     <section aria-labelledby={headingId}>
       <Heading id={headingId} className="text-display-sm">
-        {category.title}
+        {t(category.id)}
       </Heading>
       <ul className="mt-3 flex flex-col gap-4">
         {category.sources.map((s) => (

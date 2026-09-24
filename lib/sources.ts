@@ -47,25 +47,14 @@ export function getSource(id: string): Source {
   return source;
 }
 
-export const STATUS_LABEL: Record<SourceStatus, string> = {
-  confirmed: "Link opened and matched",
-  unopened: "Link not yet opened by a person",
-  "no-link": "No public link yet",
-};
-
-/** "2026-09-23" -> "23 September 2026" (UTC, so server and client agree). */
-export function formatDate(iso: string): string {
-  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", {
+/** "2026-09-23" -> "23 September 2026" or "23 de septiembre de 2026" (UTC, so server and client agree). */
+export function formatDate(iso: string, locale = "en"): string {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString(locale === "en" ? "en-GB" : locale, {
     day: "numeric",
     month: "long",
     year: "numeric",
     timeZone: "UTC",
   });
-}
-
-/** Accessible name for an external link: title, publisher, and the new-tab warning. */
-export function externalLabel(s: Source): string {
-  return `${s.title}${s.publisher ? `, ${s.publisher}` : ""} (opens in a new tab)`;
 }
 
 const order = sources.categories.flatMap((c) => c.sources.map((s) => s.id));

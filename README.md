@@ -2,7 +2,7 @@
 
 **Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.**
 
-🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
+🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English and Español · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
 
 ![The guide page, "AI you can question", on a warm cream background](docs/screenshots/guide-light.png)
 
@@ -58,6 +58,13 @@ Every page ends with a **"How this site was made"** footer that lists:
 
 The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.app/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
 
+### 🗣️ English and Spanish
+
+- 🌎 Every page exists at `/en/...` and `/es/...`. A visit to `/` opens the language your browser asks for.
+- 🔁 The language menu in the header, or in the mobile menu, keeps you on the same page: `/en/forum` becomes `/es/forum`.
+- 📝 Spanish text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
+- 🔎 Search engines get `hreflang` links between the two versions, in the page head and in the sitemap.
+
 ### 🌗 Light and dark, desktop and mobile
 
 | Dark mode | Mobile | Mobile menu |
@@ -74,13 +81,13 @@ The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.
 
 ## 🧰 Tech stack
 
-Next.js 14 (App Router) · TypeScript · Tailwind CSS · shadcn/ui · Radix UI · next-themes · Jest + React Testing Library · jest-axe · axe-core + Puppeteer
+Next.js 14 (App Router) · next-intl · TypeScript · Tailwind CSS · shadcn/ui · Radix UI · next-themes · Jest + React Testing Library · jest-axe · axe-core + Puppeteer
 
 ## 🚀 Getting started
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000
+npm run dev          # http://localhost:3000 (opens /en or /es)
 ```
 
 | Command | What it does |
@@ -89,7 +96,7 @@ npm run dev          # http://localhost:3000
 | `npx tsc --noEmit` | Type-checks the project |
 | `npm run lint` | Runs Next.js lint |
 | `npm run build` | Makes the production build |
-| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route, in light and dark, on desktop and mobile |
+| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in both languages, in light and dark, on desktop and mobile |
 | `npm run screenshots` | Regenerates the images in `docs/screenshots` |
 
 > 💡 `audit:a11y` and `screenshots` need a Chromium browser. Set `CHROME_PATH` if yours is not at Playwright's default location.
@@ -97,24 +104,27 @@ npm run dev          # http://localhost:3000
 ## 🗂️ Project layout
 
 ```
-app/                  Pages: /, /guide, /forum, /sources, /about, plus sitemap, robots, and the share image
-components/ui/        Design-system primitives: Button, Card, ThemeToggle, SiteNav, AttributionFooter
+app/[locale]/         Pages: /, /guide, /forum, /sources, /about, in /en and /es
+app/                  Sitemap, robots, and the share image
+messages/             en.json and es.json, every string on the site
+i18n.ts, middleware.ts  Loads messages per request; adds the locale and detects the browser language
+components/ui/        Design-system primitives: Button, Card, ThemeToggle, LanguageSwitcher, SiteNav, AttributionFooter
 components/guide/     AlgorithmExplorer
 components/forum/     VotingEngine, StatementSubmission, ConsensusCluster
 lib/                  Site config, SEO helpers, source registry, forum statements
 lib/data/sources.json The transparency registry every citation resolves to
 scripts/              Real-browser accessibility audit and screenshot tools
-__tests__/            143 unit, integration, accessibility, and SEO tests
+__tests__/            178 unit, integration, accessibility, i18n, and SEO tests
 ```
 
 ## ✅ Quality bar
 
 Every phase ships only when all of these pass:
 
-- 🧪 **Jest:** 143 tests, including axe on every page and tone checks that fail the build on blame words, "we" on the guide, or named companies.
+- 🧪 **Jest:** 178 tests, including axe on every page in both languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
 - 🔤 **TypeScript and lint:** zero errors, zero warnings.
 - 🏗️ **Production build:** zero warnings.
-- ♿ **Real-browser audit:** zero WCAG A/AA violations across 22 page states, with a built-in canary that proves the checks work.
+- ♿ **Real-browser audit:** zero WCAG A/AA violations across 42 page states in both languages, with a built-in canary that proves the checks work.
 
 ## 🤖 AI assistance disclosure
 
