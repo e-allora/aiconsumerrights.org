@@ -30,7 +30,7 @@ const PAGES = [
 beforeEach(() => localStorage.clear());
 
 // Every page, in every language.
-const CASES = (["en", "es", "pt-PT", "pt-BR"] as const).flatMap((locale) =>
+const CASES = (["en", "es", "pt-PT", "pt-BR", "it"] as const).flatMap((locale) =>
   PAGES.map(([path, Page]) => [`/${locale}${path === "/" ? "" : path}`, locale, Page] as const)
 );
 

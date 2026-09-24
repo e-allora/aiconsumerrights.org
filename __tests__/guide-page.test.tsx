@@ -14,7 +14,7 @@ describe("Guide page", () => {
     const h2s = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
     expect(h2s).toEqual([
       "Spot the AI in your day",
-      "Compare the rules in the US, the EU, and Brazil",
+      "Compare the rules in the US, the EU, Brazil, and Italy",
       "Take three calm steps when a decision seems wrong",
       "See every side of the table",
     ]);
@@ -43,15 +43,36 @@ describe("Guide page", () => {
     );
   });
 
-  it("compares US, EU, and Brazil rules in a table with proper headers", () => {
-    const table = screen.getByRole("table", { name: /US, EU, and Brazil rules compared/ });
+  it("compares US, EU, Brazil, and Italy rules in a table with proper headers", () => {
+    const table = screen.getByRole("table", { name: /US, EU, Brazil, and Italy rules compared/ });
     const cols = within(table).getAllByRole("columnheader").map((c) => c.textContent);
-    expect(cols).toEqual(["Your question", "United States", "European Union", "Brazil"]);
+    expect(cols).toEqual(["Your question", "United States", "European Union", "Brazil", "Italy"]);
     expect(within(table).getAllByRole("rowheader")).toHaveLength(5);
   });
 
+  it("cites every Italy cell to Law 132/2025, EU law, or the Garante, and names no company", () => {
+    const table = screen.getByRole("table", { name: /Italy rules compared/ });
+    const italy = within(table)
+      .getAllByRole("row")
+      .slice(1)
+      .map((row) => within(row).getAllByRole("cell")[3]);
+    const cited = (cell: HTMLElement) =>
+      within(cell)
+        .queryAllByRole("link")
+        .map((a) => a.getAttribute("href")!.replace("/en/sources#", ""));
+    expect(italy.map(cited)).toEqual([
+      ["eu-ai-act-art50", "it-law-132-2025"],
+      ["gdpr", "it-law-132-2025"],
+      ["gdpr", "it-law-132-2025"],
+      ["it-law-132-2025", "garante-en"],
+      ["it-law-132-normattiva", "it-law-132-2025"],
+    ]);
+    expect(italy[3]).toHaveTextContent("Garante");
+    expect(italy[4]).toHaveTextContent("in force since 10 October 2025");
+  });
+
   it("cites every Brazil cell: the LGPD for rights in force, PL 2338/2023 for what is pending", () => {
-    const table = screen.getByRole("table", { name: /Brazil rules compared/ });
+    const table = screen.getByRole("table", { name: /rules compared/ });
     const brazil = within(table)
       .getAllByRole("row")
       .slice(1)

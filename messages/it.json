@@ -1,0 +1,430 @@
+{
+  "Common": {
+    "siteName": "Diritti dei Consumatori nell'IA",
+    "siteDescription": "Aiuto in linguaggio semplice sui tuoi diritti quando l'IA prende decisioni su di te, costruito con un dialogo aperto e rispettoso.",
+    "skipToContent": "Vai al contenuto principale",
+    "factsChecked": "Fatti verificati il {date}.",
+    "legalNotice": "Informazioni generali, non consulenza legale. Le leggi cambiano da un luogo all'altro. Se si tratta di molti soldi, di salute, di casa o della tua situazione legale, parla con un avvocato, uno sportello di assistenza legale o l'autorità per la tutela dei consumatori.",
+    "opensInNewTab": "(si apre in una nuova scheda)",
+    "sourceMarker": "Fonte {number}: {title}",
+    "darkTheme": "Tema scuro",
+    "startOver": "Ricomincia",
+    "notFoundTitle": "Pagina non trovata",
+    "notFoundBody": "Questa pagina non esiste, oppure è stata spostata.",
+    "notFoundHome": "Vai alla pagina iniziale"
+  },
+  "Navigation": {
+    "main": "Principale",
+    "quick": "Accesso rapido",
+    "allPages": "Tutte le pagine",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "menuTitle": "Menu",
+    "menuDescription": "Tutte le pagine di questo sito, con un breve suggerimento per ciascuna.",
+    "home": "Home",
+    "homeHint": "Inizia da qui",
+    "guide": "Guida",
+    "guideHint": "Tre passi con calma quando l'IA decide su di te",
+    "forum": "Forum",
+    "forumHint": "Vota idee comuni, senza creare un account",
+    "sources": "Fonti",
+    "sourcesHint": "Ogni fonte, e come è stata verificata",
+    "about": "Chi siamo",
+    "aboutHint": "Perché esiste questo sito e come funziona",
+    "language": "Lingua",
+    "languageLabel": "Scegli una lingua. Lingua attuale: {current}",
+    "languageNames": {
+      "en": "English",
+      "es": "Español",
+      "pt-PT": "Português (PT)",
+      "pt-BR": "Português (BR)",
+      "it": "Italiano"
+    }
+  },
+  "Home": {
+    "title": "Diritti dei Consumatori nell'IA",
+    "lead": "Guida in linguaggio semplice quando l'IA prende decisioni su di te.",
+    "readGuide": "Leggi la guida",
+    "joinForum": "Partecipa al forum"
+  },
+  "Guide": {
+    "metaTitle": "Un'IA a cui puoi fare domande",
+    "metaDescription": "Aiuto semplice su chatbot, raccomandazioni e selezione automatica, con le regole a confronto e tre passi da fare con calma.",
+    "eyebrow": "La guida",
+    "title": "Un'IA a cui puoi fare domande",
+    "lead": "<b>Oggi l'IA aiuta a prendere molte decisioni di tutti i giorni. Puoi chiedere come funziona, chiedere di parlare con una persona e parlarne insieme.</b> Questa pagina ti mostra come, con le regole dei vari paesi messe a confronto.",
+    "touchpoints": {
+      "heading": "Scopri l'IA nella tua giornata",
+      "lead": "<b>Ci sono tre tipi di IA che toccano la vita di quasi tutti.</b> È più facile fare domande quando sai come si chiamano.",
+      "askLabel": "Chiedi:",
+      "chatbots": {
+        "term": "I chatbot",
+        "what": "rispondono alle domande in una finestra di chat o al telefono. Spesso sono veloci e utili. Possono anche dire una cosa falsa con molta sicurezza.",
+        "ask": "Sto parlando con un'IA? Dove posso controllare questa risposta?",
+        "rule1Label": "Legge (UE).",
+        "rule1": "Dal 2 agosto 2026, un chatbot deve dirti che è un'IA, a meno che non sia evidente.",
+        "rule2Label": "Legge (USA).",
+        "rule2": "Nessuna legge federale lo richiede. Alcuni stati sì, e le regole cambiano da stato a stato."
+      },
+      "recommendations": {
+        "term": "Gli algoritmi di raccomandazione",
+        "what": "scelgono cosa vedi dopo: video, prodotti, notizie e pubblicità. Imparano da quello che clicchi, guardi e compri.",
+        "ask": "Perché vedo questo? Posso disattivare i suggerimenti personalizzati?",
+        "rule1Label": "Linee guida.",
+        "rule1": "Lo standard mondiale dell'UNESCO sull'etica dell'IA dice che i sistemi di IA non sostituiscono la responsabilità umana, e chiede trasparenza.",
+        "rule2Label": "",
+        "rule2": "Il Progetto per una Carta dei diritti dell'IA degli Stati Uniti chiede avvisi e spiegazioni chiare. Nessuno dei due è una legge vincolante."
+      },
+      "screening": {
+        "term": "La selezione automatica",
+        "what": "ordina le domande per prestiti, lavori, case e assicurazioni. Un programma può dare un punteggio alla tua pratica prima che la veda una persona.",
+        "ask": "Un programma ha aiutato a decidere? Quali sono stati i motivi principali?",
+        "rule1Label": "Legge (USA, credito).",
+        "rule1": "Se un finanziatore rifiuta la tua richiesta, deve darti i motivi principali in modo preciso.",
+        "rule2Label": "Legge (UE).",
+        "rule2": "Quando solo una macchina prende una decisione importante su di te, puoi chiedere che una persona la riveda."
+      }
+    },
+    "compare": {
+      "heading": "Confronta le regole di USA, UE, Brasile e Italia",
+      "lead": "<b>Tutti vogliono un'IA di cui le persone possano fidarsi.</b> Seguono strade diverse. Gli USA applicano soprattutto leggi che esistono già, un settore e uno stato alla volta. L'UE ha approvato una legge ampia sull'IA e la unisce alla sua legge sulla privacy. La legge sulla protezione dei dati del Brasile, la LGPD, dà il diritto di chiedere la revisione delle decisioni automatiche. L'Italia segue le regole dell'UE e aggiunge una propria legge nazionale sull'IA.",
+      "caption": "Regole di USA, UE, Brasile e Italia a confronto, al {date}",
+      "colQuestion": "La tua domanda",
+      "colUS": "Stati Uniti",
+      "colEU": "Unione Europea",
+      "colBR": "Brasile",
+      "colIT": "Italia",
+      "rows": {
+        "told": {
+          "question": "Mi diranno che è un'IA?",
+          "us": "Nessuna regola federale. Alcuni stati lo richiedono.",
+          "eu": "Sì, dal 2 agosto 2026, a meno che non sia evidente.",
+          "br": "Non ancora richiesto da una legge nazionale sull'IA. Il disegno di legge PL 2338/2023, approvato dal Senato nel dicembre 2024, lo richiederebbe. È ancora un disegno di legge.",
+          "it": "Valgono le regole dell'UE. La legge italiana aggiunge altro: i professionisti devono spiegare ai clienti, con parole chiare e semplici, quali sistemi di IA usano. I datori di lavoro devono informare i lavoratori."
+        },
+        "reasons": {
+          "question": "Posso conoscere i motivi di una decisione?",
+          "us": "Sì, per il credito: i motivi principali, in modo preciso.",
+          "eu": "Puoi chiedere informazioni utili su come è stata presa una decisione automatica.",
+          "br": "Puoi chiedere informazioni chiare sui criteri e sulle procedure usate, entro i limiti del segreto commerciale. Una richiesta dei tuoi dati riceve una risposta completa entro 15 giorni.",
+          "it": "Valgono i diritti del GDPR, come in tutta l'UE. Nella sanità, hai il diritto di sapere quando si usa l'IA."
+        },
+        "review": {
+          "question": "Una persona può rivedere la decisione?",
+          "us": "Nessun diritto federale generale. Il Progetto del 2022 lo consiglia, ma non è una legge.",
+          "eu": "Sì, quando solo una macchina ha preso una decisione con effetti legali o altrettanto importanti.",
+          "br": "Sì, per le decisioni prese solo con un trattamento automatico. La legge non dice più che la revisione debba farla una persona.",
+          "it": "Vale l'articolo 22 del GDPR. La legge italiana aggiunge: nella sanità la decisione spetta sempre al medico, e nella pubblica amministrazione la persona resta l'unica responsabile."
+        },
+        "enforce": {
+          "question": "Chi controlla le regole?",
+          "us": "La FTC dice che le leggi attuali non hanno eccezioni per l'IA. La CFPB si occupa del credito.",
+          "eu": "Le autorità nazionali di ogni paese dell'UE.",
+          "br": "L'autorità nazionale per la protezione dei dati (ANPD). Può fare verifiche su un sistema per cercare discriminazioni quando il segreto commerciale limita ciò che ti dicono.",
+          "it": "Il Garante per la protezione dei dati personali mantiene i suoi poteri di controllo, di blocco e di sanzione. La legge sull'IA nomina due autorità nazionali per l'IA: AgID e ACN."
+        },
+        "changing": {
+          "question": "Che cosa sta cambiando?",
+          "us": "Un ordine esecutivo del dicembre 2025 chiede un unico approccio nazionale e una revisione delle leggi statali sull'IA.",
+          "eu": "Le regole per l'IA ad alto rischio, come nel lavoro e nel credito, ora partono il 2 dicembre 2027.",
+          "br": "Il disegno di legge PL 2338/2023 creerebbe una legge sull'IA basata sul rischio, con il diritto a una spiegazione, a contestare le decisioni e a una revisione umana. Al 23 settembre 2026, attende una relazione in una commissione speciale della Camera dei Deputati.",
+          "it": "La legge n. 132/2025, la legge italiana sull'IA, è in vigore dal 10 ottobre 2025. Funziona insieme all'AI Act dell'UE. I minori di 14 anni hanno bisogno del consenso di un genitore per usare l'IA."
+        }
+      }
+    },
+    "steps": {
+      "heading": "Fai tre passi con calma quando una decisione sembra sbagliata",
+      "lead": "<b>Parti da poco e sii preciso.</b> La maggior parte dei problemi si risolve al primo passo. Usa le frecce della tastiera o tocca un passo per spostarti tra i passi."
+    },
+    "everyone": {
+      "heading": "Guarda tutti i lati del tavolo",
+      "lead": "<b>La maggior parte delle persone in questa storia cerca di fare del bene.</b> Una domanda fatta in buona fede di solito riceve una risposta migliore.",
+      "people": "Le persone che usano l'IA",
+      "peopleText": "vogliono risposte giuste e un modo semplice per fare domande.",
+      "educators": "Gli insegnanti",
+      "educatorsText": "insegnano nuove competenze molto in fretta, spesso con poche risorse.",
+      "regulators": "Le autorità di regolazione",
+      "regulatorsText": "bilanciano la sicurezza con le idee nuove, e scrivere buone regole richiede tempo.",
+      "builders": "I team che creano l'IA",
+      "buildersText": "spesso vogliono un riscontro. Una domanda chiara e precisa li aiuta a risolvere problemi reali.",
+      "researchLabel": "Ricerca (2026).",
+      "research1": "Gli esperti e il pubblico spesso vedono l'IA in modo diverso. L'AI Index di Stanford ha trovato una differenza di 50 punti tra loro su come l'IA cambierà il lavoro.",
+      "research2": "In un sondaggio del Pew su 5119 adulti negli Stati Uniti, la maggior parte ha detto che l'IA avanza troppo in fretta.",
+      "research3": "Le domande oneste aiutano a ridurre distanze come queste.",
+      "voiceLabel": "Aggiungi la tua voce.",
+      "voiceLink": "Vota idee comuni nel forum",
+      "voiceAfter": ". Non serve un account."
+    },
+    "explorer": {
+      "tablistLabel": "Tre passi quando una decisione sembra sbagliata",
+      "stepOf": "Passo {current} di {total}",
+      "stepPrefix": "Passo {number}: ",
+      "wordsYouCanUse": "Parole che puoi usare",
+      "settledQuestion": "Questo passo ha risolto il problema?",
+      "yesSettled": "Sì, è risolto",
+      "noNext": "No, vai al passo {number}",
+      "noWhereElse": "No, a chi altro posso rivolgermi?",
+      "backTo": "Torna al passo {number}",
+      "announceStep": "Passo {current} di {total}: {title}",
+      "announceSettled": "Risolto. Conserva una copia dei tuoi messaggi.",
+      "announceAgency": "Dove trovare altro aiuto",
+      "resolvedTitle": "Bene. Conserva una traccia.",
+      "resolvedBody": "<b>Conserva una copia dei tuoi messaggi e della risposta.</b> Se lo stesso problema si ripresenta, puoi mostrare cosa era stato deciso.",
+      "agencyTitle": "Chiedi aiuto a un'autorità per i consumatori",
+      "agencyBody": "<b>Le autorità per i consumatori esistono proprio per questo momento.</b> Condividi i tuoi messaggi e le risposte. Possono dirti quali regole valgono dove vivi.",
+      "agencyUS": "Stati Uniti:",
+      "agencyUSCredit": "Per credito, prestiti e banche:",
+      "agencyEU": "Unione Europea:",
+      "agencyEUText": "l'autorità nazionale per i consumatori o per la protezione dei dati del tuo paese.",
+      "agencyElsewhere": "Altrove:",
+      "agencyElsewhereText": "l'autorità nazionale per la tutela dei consumatori. In Italia, l'Autorità Garante della Concorrenza e del Mercato (AGCM).",
+      "steps": {
+        "ask": {
+          "short": "Chiedi per iscritto",
+          "title": "Chiedi per iscritto",
+          "lead": "Invia un messaggio breve e gentile. Chiedi se un programma ha aiutato a prendere la decisione, quali informazioni ha usato e quali sono stati i motivi principali.",
+          "why": "Una domanda per iscritto dà a te e all'azienda la stessa traccia chiara. Dà anche al loro team la possibilità di trovare un errore in tempo.",
+          "sample": "Buongiorno. Ho ricevuto una decisione su [la mia richiesta] il [data]. Potete dirmi se un sistema automatico ha aiutato a prenderla, quali informazioni su di me ha usato e quali sono stati i motivi principali? Grazie per l'aiuto.",
+          "rule1Label": "Legge (USA, credito)",
+          "rule1": "Se un finanziatore rifiuta la tua richiesta, deve darti i motivi principali in modo preciso, oppure dirti come chiederli. (Regolamento B)",
+          "rule2Label": "Legge (UE)",
+          "rule2": "Puoi chiedere i tuoi dati e informazioni utili su come è stata presa una decisione automatica. (GDPR, articolo 15)"
+        },
+        "review": {
+          "short": "Chiedi una persona",
+          "title": "Chiedere una revisione umana",
+          "lead": "Chiedi che una persona riveda il tuo caso. Aggiungi le informazioni che il sistema forse non aveva.",
+          "why": "Una persona può tenere conto di dettagli che un programma forse non vede, come un cambiamento recente nella tua situazione o un errore nei tuoi dati.",
+          "sample": "Grazie per la risposta. Vorrei che una persona rivedesse questa decisione. Ecco alcune informazioni che possono aiutare: [dettagli]. Fatemi sapere, per favore, di cos'altro avete bisogno.",
+          "rule1Label": "Legge (UE)",
+          "rule1": "Quando solo una macchina prende una decisione con effetti legali o altrettanto importanti per te, puoi chiedere che intervenga una persona. (GDPR, articolo 22)",
+          "rule2Label": "Linee guida (USA)",
+          "rule2": "Il Progetto del 2022 per una Carta dei diritti dell'IA consiglia di offrire un modo per parlare con una persona. Non è una legge, ed è stato archiviato."
+        },
+        "dialogue": {
+          "short": "Parliamone",
+          "title": "Mantieni un dialogo costruttivo",
+          "lead": "Se non sei ancora d'accordo, di' cosa pensi che sia andato storto e cosa lo risolverebbe. Sii preciso e resta calmo.",
+          "why": "Un riscontro chiaro e preciso è più facile da mettere in pratica. Può anche aiutare a migliorare il processo per la prossima persona.",
+          "sample": "Grazie per aver riguardato la questione. Penso ancora che [il problema preciso]. Una soluzione giusta sarebbe [quello che chiedi]. Possiamo trovare insieme una via d'uscita?",
+          "rule1Label": "Legge (USA)",
+          "rule1": "Le leggi sulla tutela dei consumatori che esistono già valgono anche per l'IA. La FTC ha detto che non ci sono eccezioni per l'IA. (FTC, 2024)",
+          "rule2Label": "Ovunque",
+          "rule2": "Quasi tutti i paesi vietano le pratiche commerciali ingannevoli. L'autorità per i consumatori può dirti cosa vale nel tuo caso."
+        }
+      }
+    }
+  },
+  "PAUSEStrategy": {
+    "title": "La Strategia PAUSA",
+    "subtitle": "Abitudine quotidiana in 5 passi di fronte all'IA",
+    "tablistLabel": "I cinque passi della Strategia PAUSA",
+    "stepOf": "Passo {current} di {total}",
+    "tabName": "{letter}: {title}",
+    "announce": "Passo {current} di {total}: {title}",
+    "hint": "Usa le frecce della tastiera o tocca una lettera per spostarti tra i passi.",
+    "steps": {
+      "protect": {
+        "letter": "P",
+        "title": "Proteggere le tue informazioni",
+        "body": "Non incollare mai numeri di conto, password o dettagli medici/finanziari riservati in strumenti di IA pubblici. Controlla le impostazioni sulla privacy per disattivare la raccolta dei dati di addestramento."
+      },
+      "assess": {
+        "letter": "A",
+        "title": "Analizzare l'accuratezza",
+        "body": "I modelli di IA generano risposte basate su schemi; non 'conoscono' i fatti. Per decisioni critiche sulla salute, finanziarie o legali, verifica sempre le risposte rispetto a fonti primarie."
+      },
+      "understand": {
+        "letter": "U",
+        "title": "Uso e origine dei dati",
+        "body": "Chiedi su quali informazioni si basa lo strumento, se è stato testato in modo indipendente e se esistono pregiudizi o interessi commerciali nascosti."
+      },
+      "seek": {
+        "letter": "S",
+        "title": "Sollecitare un contatto umano responsabile",
+        "body": "I sistemi di IA sono guidati da persone. Cerca canali di contatto organizzativi chiari e verifica che vi sia un team responsabile per la supervisione umana."
+      },
+      "exit": {
+        "letter": "A",
+        "title": "Agire e segnalare",
+        "body": "Hai sempre il diritto di smettere di usare un prodotto, richiedere la cancellazione dei tuoi dati o segnalare decisioni automatizzate ingiuste alle autorità per la tutela dei consumatori."
+      }
+    }
+  },
+  "Forum": {
+    "metaTitle": "Forum",
+    "metaDescription": "Vota brevi frasi sull'IA e sui tuoi diritti, oppure proponine una. Non serve un account. Prima mostriamo ciò che abbiamo in comune.",
+    "eyebrow": "Foro Voce e Visione",
+    "title": "La tua voce ha un posto qui",
+    "lead": "<b>La tecnologia funziona meglio quando tutti partecipano a darle forma.</b> Vota brevi frasi, oppure proponi la tua. Non serve un account.",
+    "preview": "<b>Questo forum è in versione di prova.</b> I voti e le frasi restano nel tuo browser. Niente viene inviato finché il forum non apre.",
+    "civility": "I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
+    "principles": {
+      "heading": "Segui cinque principi per un dialogo costruttivo",
+      "lead": "<b>Questi principi rendono il forum utile per tutti.</b> Ogni frase sta da sola, quindi non ci sono discussioni a catena in cui litigare.",
+      "critique": "Critica le idee, mai le persone",
+      "critiqueText": "Puoi non essere d'accordo con un'idea in modo chiaro. Lascia fuori la persona.",
+      "goodFaith": "Presumi la buona fede",
+      "goodFaithText": "La maggior parte delle persone fa del suo meglio con quello che sa. Chiedi prima di pensare male.",
+      "positivity": "Positività con sostanza",
+      "positivityText": "Incoraggiamento e rigore vanno insieme. Sii gentile e sii preciso.",
+      "ethics": "Etica e trasparenza",
+      "ethicsText": "Di' quando l'IA ti ha aiutato a scrivere qualcosa, cita le tue fonti e sii onesto su quello che non sai.",
+      "lift": "Cresci e aiuta a crescere",
+      "liftText": "Condividi quello che impari, così la prossima persona avrà meno difficoltà."
+    },
+    "vote": {
+      "heading": "Vota {count} frasi",
+      "lead": "<b>Scegli D'accordo, Non d'accordo o Passo per ciascuna.</b> Le frasi riguardano {tracks} temi: {trackList}. Usa Tab per raggiungere i pulsanti e le frecce per spostarti tra loro."
+    },
+    "suggest": {
+      "heading": "Aggiungi una tua frase"
+    },
+    "results": {
+      "heading": "Guarda su cosa le persone sono d'accordo",
+      "lead": "<b>I risultati mostrano ciò che abbiamo in comune, non le voci più forti.</b> Le persone sono raggruppate in base a come votano, e una frase conta come accordo ampio solo quando tutti i gruppi la sostengono."
+    },
+    "loop": {
+      "heading": "Segui cosa cambia grazie a te",
+      "lead": "<b>Ogni domanda porta a un risultato visibile.</b> Questa scheda viene aggiornata ogni volta che i voti cambiano una guida o una risorsa di questo sito.",
+      "title": "Abbiamo chiesto, hai risposto, abbiamo agito",
+      "status": "Stato: in attesa che il forum apra.",
+      "asked": "Abbiamo chiesto",
+      "askedText": "{count} frasi su {tracks} temi, che trovi più sopra.",
+      "said": "Hai risposto",
+      "saidText": "Ancora nessun risultato. I punti di accordo ampio compariranno qui quando avranno votato abbastanza persone.",
+      "did": "Abbiamo agito",
+      "didText": "Niente per ora. Ogni cambiamento comparirà qui con la sua data e un link alla pagina che è cambiata."
+    },
+    "tracks": {
+      "transparency": "Trasparenza",
+      "agency": "Controllo umano",
+      "privacy": "Privacy",
+      "shared": "Responsabilità condivisa"
+    },
+    "statements": {
+      "t1-disclose": "Gli assistenti automatici dovrebbero dire che sono un'IA all'inizio di una conversazione.",
+      "t1-credentials": "Foto, audio e video creati con l'IA dovrebbero avere un'etichetta che mostri come sono stati fatti.",
+      "t2-reasons": "Quando un programma aiuta a prendere una decisione su di te, dovresti ricevere i motivi principali in parole semplici.",
+      "t2-person": "Ogni decisione automatica che ti riguarda dovrebbe offrire un modo chiaro per parlare con una persona.",
+      "t3-optin": "Usare le tue conversazioni per addestrare un'IA dovrebbe restare spento, a meno che tu non scelga di attivarlo.",
+      "t3-clear": "Dovresti poter cancellare la cronologia delle chat con un solo tocco.",
+      "t4-together": "Persone, insegnanti, autorità e aziende dovrebbero creare insieme le regole dell'IA.",
+      "t4-accountable": "Le organizzazioni dovrebbero rispondere di ciò che i loro strumenti di IA dicono ai clienti."
+    },
+    "voting": {
+      "answered": "{answered} di {total} risposte",
+      "tally": "I tuoi voti: {agree} d'accordo, {disagree} non d'accordo, {pass} passo",
+      "progressLabel": "Frasi a cui hai risposto",
+      "cardMeta": "{track} · Frase {current} di {total}",
+      "toolbarLabel": "Il tuo voto",
+      "agree": "D'accordo",
+      "agreeTip": "Sostieni questa frase.",
+      "disagree": "Non d'accordo",
+      "disagreeTip": "Non sostieni questa frase.",
+      "pass": "Passo",
+      "passTip": "Salta questa frase. Non sei sicuro, oppure non riguarda il tuo caso.",
+      "recorded": "Registrato: {choice}. Frase {next} di {total}.",
+      "recordedAll": "Registrato: {choice}. Hai risposto a tutte le {total} frasi.",
+      "cleared": "Voti cancellati. Frase 1 di {total}.",
+      "doneTitle": "Grazie. Hai risposto a tutte le frasi.",
+      "clear": "Cancella i miei voti e ricomincia"
+    },
+    "submission": {
+      "label": "Proponi una frase da far votare agli altri",
+      "disclosure": "<b>Una persona legge ogni frase prima che venga mostrata.</b> Non pubblichiamo frasi che prendono di mira una persona, un'azienda o un gruppo. I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
+      "placeholder": "Per esempio: «I portali di assistenza clienti dovrebbero sempre permetterti di chiedere un operatore umano con un solo tocco.»",
+      "remaining": "Restano {remaining} di {max} caratteri",
+      "submit": "Invia per la revisione",
+      "empty": "Scrivi prima una frase, per favore.",
+      "sent": "Grazie. La tua frase è in attesa di revisione.",
+      "kept": "Grazie. Questo forum è ancora in versione di prova, quindi la tua frase non è stata ancora inviata da nessuna parte."
+    },
+    "consensus": {
+      "example": "Dati di esempio. Nessun voto è stato ancora contato. Questi numeri mostrano solo come appariranno i risultati.",
+      "heading": "Su cosa i gruppi sono d'accordo",
+      "lead": "<b>Prima ciò che abbiamo in comune.</b> Una frase compare qui solo quando tutti i gruppi sono d'accordo al {threshold}% o più.",
+      "none": "Nessuna frase ha ancora un accordo ampio.",
+      "summary": "Il {percent}% dei partecipanti di tutti i gruppi è d'accordo",
+      "exampleTag": "(esempio)",
+      "groupAgree": "{percent}% d'accordo",
+      "exampleStatement": "sul fatto che motivi in parole semplici creano fiducia.",
+      "exampleGroup": "Gruppo di opinione {letter}"
+    }
+  },
+  "About": {
+    "metaTitle": "Chi siamo",
+    "metaDescription": "Perché esiste questo sito, come mantiene un dialogo giusto e aperto, e chi controlla le sue pagine.",
+    "title": "Informazioni su questo sito",
+    "lead": "<b>Questo sito spiega i tuoi diritti quando l'IA prende decisioni su di te, in linguaggio semplice e senza dare colpe.</b> Mette a confronto approcci diversi e invita tutti alla conversazione.",
+    "missionHeading": "Scopri la missione",
+    "mission": "<b>Rendere i diritti dei consumatori di fronte all'IA facili da capire e facili da discutere.</b> Le persone che usano l'IA, gli insegnanti, le autorità e i team che creano l'IA hanno tutti qualcosa in gioco. Questo sito parte dall'idea che ognuno agisca in buona fede e faccia del suo meglio con quello che sa. Critica le idee e i sistemi, mai le persone.",
+    "safeguardsHeading": "Scopri le cinque garanzie",
+    "safeguardsLead": "Queste regole mantengono il sito giusto, aperto e difficile da usare male.",
+    "safeguards": {
+      "trace": "Ogni domanda porta a qualcosa che puoi vedere",
+      "traceText": "Quando i voti del forum cambiano una guida o una risorsa, il cambiamento compare con la sua data. È la scheda «Abbiamo chiesto, hai risposto, abbiamo agito».",
+      "isolated": "Ogni frase sta da sola",
+      "isolatedText": "Il forum non ha discussioni a catena. Voti una frase breve alla volta, e questo lascia poco spazio allo spam o agli attacchi di gruppo.",
+      "access": "Nessuna barriera per partecipare",
+      "accessText": "Non serve un account per votare. Le pagine puntano a un livello di lettura da scuola media, e sono create e verificate secondo le WCAG 2.2, livello AA.",
+      "common": "Prima ciò che abbiamo in comune",
+      "commonText": "I risultati mettono in luce su cosa i gruppi sono d'accordo, non ciò che li divide.",
+      "sturdy": "Pagine veloci e solide",
+      "sturdyText": "La guida e le altre pagine sono pagine statiche semplici, separate da tutto ciò che è interattivo, quindi si caricano in fretta e continuano a funzionare."
+    },
+    "whoHeading": "Scopri chi c'è dietro",
+    "who": "<b>Robert Sweetman gestisce questo sito.</b> Alcuni modelli di IA hanno aiutato nella ricerca e nella scrittura. Una persona controlla ogni pagina prima del lancio. Il piè di pagina di ogni pagina mostra quali modelli hanno aiutato, quali fonti sostengono i fatti e a che punto è la revisione.",
+    "whoLink": "Guarda ogni fonte e come è stata verificata",
+    "joinHeading": "Aggiungi la tua voce",
+    "joinLead": "La tua opinione aiuta a decidere cosa viene dopo.",
+    "joinLink": "Vota idee comuni nel forum",
+    "joinAfter": ". Non serve un account."
+  },
+  "Attribution": {
+    "heading": "Come è stato fatto questo sito",
+    "aiHeading": "L'IA ha aiutato nella ricerca e nella scrittura",
+    "aiLead": "Questo sito è stato ricercato e scritto con l'aiuto di diversi modelli di IA. Una persona decide cosa pubblicare.",
+    "primaryHeading": "I fatti si basano su fonti originali",
+    "reviewHeading": "Una persona controlla ogni pagina",
+    "reviewLabel": "Revisione umana",
+    "reviewDone": "Controllato da {reviewer} il {date}.",
+    "reviewPending": "Non ancora completata. {reviewer} controlla ogni pagina prima del lancio.",
+    "checkedLabel": "Fonti verificate",
+    "seeAll": "Vedi tutte le {total} fonti in {groups} gruppi",
+    "openRegistry": "Apri l'elenco completo delle fonti",
+    "registryAbout": "Tutte le fonti usate da questo sito, con il livello di verifica di ogni link. Stato «confermato»: il link è stato aperto alla data della verifica e il contenuto corrispondeva. «Non aperto»: il link viene da un indice ufficiale o da una ricerca, ma nessuno lo ha ancora aperto; una persona dovrebbe aprirlo una volta. «Senza link»: compare come lettura di contesto, senza un link pubblico registrato.",
+    "status": {
+      "confirmed": "Link aperto e confermato",
+      "unopened": "Link non ancora aperto da una persona",
+      "no-link": "Ancora senza link pubblico"
+    },
+    "models": {
+      "gpt": "Bozze di ricerca, settembre 2026.",
+      "claude": "Bozze di ricerca, settembre 2026. Ha scritto il codice e i testi di questo sito in Claude Code, settembre 2026.",
+      "gemini": "Bozze di ricerca, settembre 2026. Ha riassunto il rapporto di design di Figma usato per la grafica.",
+      "openrouter-unrecorded": "Conversazioni di ricerca, settembre 2026. Le esportazioni delle chat non registrano quale modello ha scritto ogni risposta.",
+      "llama": "Previsto. Nessun testo di Llama è stato trovato nei documenti di ricerca, quindi non viene mostrato."
+    },
+    "modelNames": {
+      "openrouter-unrecorded": "Altri modelli tramite OpenRouter"
+    },
+    "variousMakers": "Vari",
+    "categories": {
+      "governance": "Governance globale e infrastruttura civica",
+      "empirical": "Dati empirici e riferimenti di settore",
+      "accessibility": "Accessibilità universale e standard WCAG 2.2",
+      "usability": "Usabilità cognitiva e sistemi di design",
+      "synthesis": "Sintesi di più modelli di IA e standard del progetto",
+      "latam-global": "Quadri normativi dell'America Latina e globali",
+      "eu-national": "Quadri normativi nazionali europei"
+    },
+    "sourcesLanguageNote": "I titoli e i dettagli delle fonti compaiono nella lingua originale, quasi sempre in inglese."
+  },
+  "Sources": {
+    "metaTitle": "Fonti",
+    "metaDescription": "Tutte le fonti usate da questo sito, divise per tema, con il livello di verifica di ogni link e la sua data.",
+    "title": "Fonti",
+    "lead": "<b>Tutte le {total} fonti in {groups} gruppi, verificate il {date}.</b> I numeri corrispondono ai piccoli segni di fonte in ogni pagina."
+  }
+}

@@ -37,7 +37,8 @@
       "en": "English",
       "es": "Español",
       "pt-PT": "Português (PT)",
-      "pt-BR": "Português (BR)"
+      "pt-BR": "Português (BR)",
+      "it": "Italiano"
     }
   },
   "Home": {
@@ -85,43 +86,49 @@
       }
     },
     "compare": {
-      "heading": "Compare as regras dos EUA, da UE e do Brasil",
-      "lead": "<b>Os três querem uma IA em que as pessoas possam confiar.</b> Eles seguem caminhos diferentes. Os EUA aplicam principalmente leis que já existem, um setor e um estado de cada vez. A UE aprovou uma lei ampla sobre a IA e a combina com sua lei de privacidade. A Lei Geral de Proteção de Dados do Brasil, a LGPD, dá o direito de pedir a revisão de decisões automatizadas.",
-      "caption": "Regras dos EUA, da UE e do Brasil comparadas, em {date}",
+      "heading": "Compare as regras dos EUA, da UE, do Brasil e da Itália",
+      "lead": "<b>Os três querem uma IA em que as pessoas possam confiar.</b> Eles seguem caminhos diferentes. Os EUA aplicam principalmente leis que já existem, um setor e um estado de cada vez. A UE aprovou uma lei ampla sobre a IA e a combina com sua lei de privacidade. A Lei Geral de Proteção de Dados do Brasil, a LGPD, dá o direito de pedir a revisão de decisões automatizadas. A Itália segue as regras da UE e acrescenta sua própria lei nacional sobre IA.",
+      "caption": "Regras dos EUA, da UE, do Brasil e da Itália comparadas, em {date}",
       "colQuestion": "Sua pergunta",
       "colUS": "Estados Unidos",
       "colEU": "União Europeia",
       "colBR": "Brasil",
+      "colIT": "Itália",
       "rows": {
         "told": {
           "question": "Vão me dizer que é uma IA?",
           "us": "Não existe uma regra federal. Alguns estados exigem.",
           "eu": "Sim, desde 2 de agosto de 2026, a não ser que seja óbvio.",
-          "br": "Ainda não é exigido por uma lei nacional de IA. O projeto de lei PL 2338/2023, aprovado pelo Senado em dezembro de 2024, passaria a exigir isso. Ele ainda é um projeto."
+          "br": "Ainda não é exigido por uma lei nacional de IA. O projeto de lei PL 2338/2023, aprovado pelo Senado em dezembro de 2024, passaria a exigir isso. Ele ainda é um projeto.",
+          "it": "Valem as regras da UE. A lei italiana de IA acrescenta mais: os profissionais precisam explicar aos clientes, com palavras claras e simples, quais sistemas de IA usam. Os empregadores precisam informar os trabalhadores."
         },
         "reasons": {
           "question": "Posso saber os motivos de uma decisão?",
           "us": "Sim, no crédito: os principais motivos, de forma concreta.",
           "eu": "Você pode pedir informações úteis sobre como uma decisão automática foi tomada.",
-          "br": "Você pode pedir informações claras sobre os critérios e procedimentos usados, respeitados os segredos comercial e industrial. Um pedido de acesso aos seus dados recebe resposta completa em até 15 dias."
+          "br": "Você pode pedir informações claras sobre os critérios e procedimentos usados, respeitados os segredos comercial e industrial. Um pedido de acesso aos seus dados recebe resposta completa em até 15 dias.",
+          "it": "Valem os direitos do GDPR, como em toda a UE. Na saúde, você tem o direito de saber quando a IA é usada."
         },
         "review": {
           "question": "Uma pessoa pode revisar a decisão?",
           "us": "Não existe um direito federal geral. O Plano de 2022 recomenda isso, mas não é lei.",
           "eu": "Sim, quando só uma máquina tomou uma decisão com efeitos legais ou igualmente importantes.",
-          "br": "Sim, para decisões tomadas unicamente com base em tratamento automatizado. A lei não exige mais que a revisão seja feita por uma pessoa."
+          "br": "Sim, para decisões tomadas unicamente com base em tratamento automatizado. A lei não exige mais que a revisão seja feita por uma pessoa.",
+          "it": "Vale o artigo 22 do GDPR. A lei italiana acrescenta: na saúde, a decisão cabe sempre ao médico, e na administração pública a pessoa continua sendo a única responsável."
         },
         "enforce": {
           "question": "Quem fiscaliza as regras?",
           "us": "A FTC diz que as leis atuais não têm exceções para a IA. A CFPB cuida do crédito.",
           "eu": "As autoridades nacionais de cada país da UE.",
-          "br": "A Autoridade Nacional de Proteção de Dados (ANPD). Ela pode fazer auditoria para verificar discriminação quando o segredo comercial limita o que informam a você."
+          "br": "A Autoridade Nacional de Proteção de Dados (ANPD). Ela pode fazer auditoria para verificar discriminação quando o segredo comercial limita o que informam a você.",
+          "it": "A autoridade de proteção de dados (Garante) mantém seus poderes de fiscalizar, bloquear e multar. A lei da IA nomeia duas autoridades nacionais de IA: a AgID e a ACN."
         },
         "changing": {
           "question": "O que está mudando?",
           "us": "Uma ordem executiva de dezembro de 2025 pede uma única abordagem nacional e uma revisão das leis estaduais sobre IA.",
           "eu": "As regras para a IA de alto risco, como em emprego e crédito, agora começam em 2 de dezembro de 2027.",
-          "br": "O projeto PL 2338/2023 criaria uma lei de IA por níveis de risco, com direito a explicação, a contestar decisões e a revisão humana. Em 23 de setembro de 2026, ele aguarda o parecer do relator em uma comissão especial da Câmara dos Deputados."
+          "br": "O projeto PL 2338/2023 criaria uma lei de IA por níveis de risco, com direito a explicação, a contestar decisões e a revisão humana. Em 23 de setembro de 2026, ele aguarda o parecer do relator em uma comissão especial da Câmara dos Deputados.",
+          "it": "A Lei nº 132/2025, a lei nacional de IA da Itália, está em vigor desde 10 de outubro de 2025. Ela funciona junto com o Regulamento de IA da UE. Menores de 14 anos precisam do consentimento dos pais ou responsáveis para usar IA."
         }
       }
     },
@@ -409,7 +416,8 @@
       "accessibility": "Acessibilidade universal e normas WCAG 2.2",
       "usability": "Usabilidade cognitiva e sistemas de design",
       "synthesis": "Síntese de vários modelos de IA e normas do projeto",
-      "latam-global": "Marcos regulatórios da América Latina e globais"
+      "latam-global": "Marcos regulatórios da América Latina e globais",
+      "eu-national": "Marcos nacionais europeus"
     },
     "sourcesLanguageNote": "Os títulos e detalhes das fontes aparecem no idioma original, quase sempre em inglês."
   },

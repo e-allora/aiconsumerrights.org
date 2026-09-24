@@ -2,7 +2,7 @@
 
 **Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.**
 
-🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English, Español, Português (PT), and Português (BR) · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
+🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English, Español, Português (PT), Português (BR), and Italiano · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
 
 ![The guide page, "AI you can question", on a warm cream background](docs/screenshots/guide-light.png)
 
@@ -33,7 +33,7 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 ### 📖 The guide: "AI you can question"
 
 - 🔍 **Spot the AI in your day:** chatbots, recommendation algorithms, and automated screening, in plain words.
-- ⚖️ **US and EU rules, side by side:** each claim is labeled (Law, Guidance, Research) and linked to a numbered source.
+- ⚖️ **US, EU, Brazil, and Italy rules, side by side:** each claim is labeled (Law, Guidance, Research) and linked to a numbered source.
 - 🪜 **Algorithm Decision Explorer:** three calm steps (ask in writing, ask for a person, talk it through), with sample wording you can copy.
 
 ![The three-step Algorithm Decision Explorer](docs/screenshots/explorer.png)
@@ -58,12 +58,12 @@ Every page ends with a **"How this site was made"** footer that lists:
 
 The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.app/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
 
-### 🗣️ English, Spanish, and Portuguese (Portugal and Brazil)
+### 🗣️ English, Spanish, Portuguese (Portugal and Brazil), and Italian
 
-- 🌎 Every page exists at `/en/...`, `/es/...`, `/pt/...` (Portugal), and `/pt-BR/...` (Brazil). A visit to `/` opens the language your browser asks for.
+- 🌎 Every page exists at `/en/...`, `/es/...`, `/pt/...` (Portugal), `/pt-BR/...` (Brazil), and `/it/...` (Italy). A visit to `/` opens the language your browser asks for.
 - 🔁 The language menu in the header, or in the mobile menu, keeps you on the same page: `/en/forum` becomes `/es/forum`.
-- 📝 Spanish, European Portuguese, and Brazilian Portuguese text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
-- ⏸️ The PAUSE Strategy spells PAUSE in English and PAUSA in Spanish and Portuguese.
+- 📝 Spanish, European Portuguese, Brazilian Portuguese, and Italian text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
+- ⏸️ The PAUSE Strategy spells PAUSE in English and PAUSA in Spanish, Portuguese, and Italian.
 - 🔎 Search engines get `hreflang` links between the versions, in the page head and in the sitemap.
 
 ### 🌗 Light and dark, desktop and mobile
@@ -97,7 +97,7 @@ npm run dev          # http://localhost:3000 (opens /en or /es)
 | `npx tsc --noEmit` | Type-checks the project |
 | `npm run lint` | Runs Next.js lint |
 | `npm run build` | Makes the production build |
-| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all four languages, in light and dark, on desktop and mobile |
+| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all five languages, in light and dark, on desktop and mobile |
 | `npm run screenshots` | Regenerates the images in `docs/screenshots` |
 
 > 💡 `audit:a11y` and `screenshots` need a Chromium browser. Set `CHROME_PATH` if yours is not at Playwright's default location.
@@ -105,9 +105,9 @@ npm run dev          # http://localhost:3000 (opens /en or /es)
 ## 🗂️ Project layout
 
 ```
-app/[locale]/         Pages: /, /guide, /forum, /sources, /about, in /en, /es, /pt, and /pt-BR
+app/[locale]/         Pages: /, /guide, /forum, /sources, /about, in /en, /es, /pt, /pt-BR, and /it
 app/                  Sitemap, robots, and the share image
-messages/             en.json, es.json, pt.json, and pt-BR.json, every string on the site
+messages/             en.json, es.json, pt-PT.json, pt-BR.json, and it.json, every string on the site
 i18n.ts, middleware.ts  Loads messages per request; adds the locale and detects the browser language
 components/ui/        Design-system primitives: Button, Card, ThemeToggle, LanguageSwitcher, SiteNav, AttributionFooter
 components/guide/     AlgorithmExplorer
@@ -115,17 +115,17 @@ components/forum/     VotingEngine, StatementSubmission, ConsensusCluster
 lib/                  Site config, SEO helpers, source registry, forum statements
 lib/data/sources.json The transparency registry every citation resolves to
 scripts/              Real-browser accessibility audit and screenshot tools
-__tests__/            249 unit, integration, accessibility, i18n, and SEO tests
+__tests__/            272 unit, integration, accessibility, i18n, and SEO tests
 ```
 
 ## ✅ Quality bar
 
 Every phase ships only when all of these pass:
 
-- 🧪 **Jest:** 249 tests, including axe on every page in all four languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
+- 🧪 **Jest:** 272 tests, including axe on every page in all five languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
 - 🔤 **TypeScript and lint:** zero errors, zero warnings.
 - 🏗️ **Production build:** zero warnings.
-- ♿ **Real-browser audit:** zero WCAG A/AA violations across 82 page states in all four languages, with a built-in canary that proves the checks work.
+- ♿ **Real-browser audit:** zero WCAG A/AA violations across 102 page states in all five languages, with a built-in canary that proves the checks work.
 
 ## 🤖 AI assistance disclosure
 

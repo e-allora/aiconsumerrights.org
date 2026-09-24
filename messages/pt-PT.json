@@ -37,7 +37,8 @@
       "en": "English",
       "es": "Español",
       "pt-PT": "Português (PT)",
-      "pt-BR": "Português (BR)"
+      "pt-BR": "Português (BR)",
+      "it": "Italiano"
     }
   },
   "Home": {
@@ -85,43 +86,49 @@
       }
     },
     "compare": {
-      "heading": "Compare as regras dos EUA, da UE e do Brasil",
-      "lead": "<b>Os três querem uma IA em que as pessoas possam confiar.</b> Seguem caminhos diferentes. Os EUA aplicam sobretudo leis que já existem, um setor e um estado de cada vez. A UE aprovou uma lei ampla sobre a IA e junta-a à sua lei de privacidade. A lei de proteção de dados do Brasil, a LGPD, dá o direito de pedir a revisão de decisões automatizadas.",
-      "caption": "Regras dos EUA, da UE e do Brasil comparadas, a {date}",
+      "heading": "Compare as regras dos EUA, da UE, do Brasil e de Itália",
+      "lead": "<b>Os três querem uma IA em que as pessoas possam confiar.</b> Seguem caminhos diferentes. Os EUA aplicam sobretudo leis que já existem, um setor e um estado de cada vez. A UE aprovou uma lei ampla sobre a IA e junta-a à sua lei de privacidade. A lei de proteção de dados do Brasil, a LGPD, dá o direito de pedir a revisão de decisões automatizadas. A Itália segue as regras da UE e acrescenta a sua própria lei nacional sobre IA.",
+      "caption": "Regras dos EUA, da UE, do Brasil e de Itália comparadas, a {date}",
       "colQuestion": "A sua pergunta",
       "colUS": "Estados Unidos",
       "colEU": "União Europeia",
       "colBR": "Brasil",
+      "colIT": "Itália",
       "rows": {
         "told": {
           "question": "Vão dizer-me que é uma IA?",
           "us": "Não há uma regra federal. Alguns estados exigem-no.",
           "eu": "Sim, desde 2 de agosto de 2026, a não ser que seja evidente.",
-          "br": "Ainda não é exigido por uma lei nacional de IA. O projeto de lei PL 2338/2023, aprovado pelo Senado em dezembro de 2024, passaria a exigi-lo. Continua a ser um projeto."
+          "br": "Ainda não é exigido por uma lei nacional de IA. O projeto de lei PL 2338/2023, aprovado pelo Senado em dezembro de 2024, passaria a exigi-lo. Continua a ser um projeto.",
+          "it": "Aplicam-se as regras da UE. A lei italiana de IA acrescenta mais: os profissionais têm de explicar aos clientes, com palavras claras e simples, que sistemas de IA usam. Os empregadores têm de informar os trabalhadores."
         },
         "reasons": {
           "question": "Posso saber as razões de uma decisão?",
           "us": "Sim, no crédito: as principais razões, de forma concreta.",
           "eu": "Pode pedir informação útil sobre como foi tomada uma decisão automática.",
-          "br": "Pode pedir informação clara sobre os critérios e procedimentos usados, dentro dos limites do segredo comercial. Um pedido dos seus dados recebe uma resposta completa em 15 dias."
+          "br": "Pode pedir informação clara sobre os critérios e procedimentos usados, dentro dos limites do segredo comercial. Um pedido dos seus dados recebe uma resposta completa em 15 dias.",
+          "it": "Aplicam-se os direitos do RGPD, como em toda a UE. Na saúde, tem o direito de saber quando é usada IA."
         },
         "review": {
           "question": "Uma pessoa pode revê-la?",
           "us": "Não há um direito federal geral. O Plano de 2022 recomenda-o, mas não é lei.",
           "eu": "Sim, quando só uma máquina tomou uma decisão com efeitos legais ou igualmente importantes.",
-          "br": "Sim, para decisões tomadas só por tratamento automatizado. A lei já não diz que tem de ser uma pessoa a fazer a revisão."
+          "br": "Sim, para decisões tomadas só por tratamento automatizado. A lei já não diz que tem de ser uma pessoa a fazer a revisão.",
+          "it": "Aplica-se o artigo 22.º do RGPD. A lei italiana acrescenta: na saúde, a decisão cabe sempre ao médico, e na administração pública a pessoa continua a ser a única responsável."
         },
         "enforce": {
           "question": "Quem fiscaliza as regras?",
           "us": "A FTC diz que as leis atuais não têm exceções para a IA. A CFPB trata do crédito.",
           "eu": "As autoridades nacionais de cada país da UE.",
-          "br": "A autoridade nacional de proteção de dados (ANPD). Pode auditar um sistema para verificar discriminação quando o segredo comercial limita o que lhe dizem."
+          "br": "A autoridade nacional de proteção de dados (ANPD). Pode auditar um sistema para verificar discriminação quando o segredo comercial limita o que lhe dizem.",
+          "it": "A autoridade de proteção de dados (Garante) mantém os seus poderes para inspecionar, bloquear e multar. A lei da IA nomeia duas autoridades nacionais de IA: a AgID e a ACN."
         },
         "changing": {
           "question": "O que está a mudar?",
           "us": "Uma ordem executiva de dezembro de 2025 pede uma única abordagem nacional e uma revisão das leis estaduais sobre IA.",
           "eu": "As regras para a IA de alto risco, como no emprego e no crédito, começam agora a 2 de dezembro de 2027.",
-          "br": "O projeto PL 2338/2023 criaria uma lei de IA por níveis de risco, com direito a uma explicação, a contestar decisões e a revisão humana. A 23 de setembro de 2026, aguarda um parecer numa comissão especial da Câmara dos Deputados."
+          "br": "O projeto PL 2338/2023 criaria uma lei de IA por níveis de risco, com direito a uma explicação, a contestar decisões e a revisão humana. A 23 de setembro de 2026, aguarda um parecer numa comissão especial da Câmara dos Deputados.",
+          "it": "A Lei n.º 132/2025, a lei nacional de IA de Itália, está em vigor desde 10 de outubro de 2025. Funciona em conjunto com o Regulamento da IA da UE. Os menores de 14 anos precisam do consentimento dos pais ou tutores para usar IA."
         }
       }
     },
@@ -409,7 +416,8 @@
       "accessibility": "Acessibilidade universal e normas WCAG 2.2",
       "usability": "Usabilidade cognitiva e sistemas de design",
       "synthesis": "Síntese de vários modelos de IA e normas do projeto",
-      "latam-global": "Enquadramentos regulatórios da América Latina e globais"
+      "latam-global": "Enquadramentos regulatórios da América Latina e globais",
+      "eu-national": "Enquadramentos nacionais europeus"
     },
     "sourcesLanguageNote": "Os títulos e pormenores das fontes aparecem na língua original, quase sempre em inglês."
   },

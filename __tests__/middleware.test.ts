@@ -26,6 +26,11 @@ describe("locale middleware", () => {
     expect(res.headers.get("location")).toBe(`https://aiconsumerrights.org${path}`);
   });
 
+  it("sends an Italian browser from / to /it", async () => {
+    const res = await visit("/", "it-IT,it;q=0.9,en;q=0.5");
+    expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/it");
+  });
+
   it("sends an English-language browser from / to /en", async () => {
     const res = await visit("/", "en-US,en;q=0.9");
     expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/en");
@@ -57,7 +62,7 @@ describe("locale middleware", () => {
   });
 
   it("lets /en and /es pages through without a redirect", async () => {
-    for (const path of ["/en/guide", "/es/forum", "/pt/about", "/pt-BR/guide"]) {
+    for (const path of ["/en/guide", "/es/forum", "/pt/about", "/pt-BR/guide", "/it/forum"]) {
       const res = await visit(path, "es");
       expect(res.headers.get("location")).toBeNull();
     }

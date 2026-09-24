@@ -491,6 +491,55 @@
           "summary": "As of 23 September 2026, PL 2338/2023 is waiting for the rapporteur's report in the Chamber's Special Committee on Artificial Intelligence. The full Chamber has not voted on it."
         }
       ]
+    },
+    {
+      "id": "eu-national",
+      "title": "European national frameworks",
+      "sources": [
+        {
+          "id": "it-law-132-2025",
+          "title": "Legge 23 settembre 2025, n. 132: Disposizioni e deleghe al Governo in materia di intelligenza artificiale",
+          "publisher": "Gazzetta Ufficiale della Repubblica Italiana, Serie Generale n. 223",
+          "date": "2025-09-25",
+          "type": "Law (Italy)",
+          "jurisdiction": "Italy",
+          "url": "https://www.gazzettaufficiale.it/eli/gu/2025/09/25/223/sg/pdf",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Full text of Articles 1 to 28 read from the official issue.",
+          "summary": "Italy's national AI law. Art. 4: children under 14 need a parent's consent to use AI. Art. 7: in health care, patients have the right to be told when AI is used, and the decision always stays with the doctor. Art. 11: employers must inform workers. Art. 13: professionals must explain their AI systems to clients in clear, simple language. Art. 14: in public administration, the person stays solely responsible. Art. 20: AgID and ACN are the national AI authorities; the Garante keeps its powers."
+        },
+        {
+          "id": "it-law-132-normattiva",
+          "title": "Legge 23 settembre 2025, n. 132 (Normattiva record)",
+          "publisher": "Normattiva, Istituto Poligrafico e Zecca dello Stato",
+          "type": "Official legal database (Italy)",
+          "jurisdiction": "Italy",
+          "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-09-23;132",
+          "status": "confirmed",
+          "summary": "Official record of Law No. 132/2025: published in Gazzetta Ufficiale n. 223 on 25 September 2025, in force since 10 October 2025."
+        },
+        {
+          "id": "garante-en",
+          "title": "Italian Data Protection Authority (Garante per la protezione dei dati personali)",
+          "publisher": "Garante per la protezione dei dati personali",
+          "type": "Regulator (Italy)",
+          "jurisdiction": "Italy",
+          "url": "https://www.garanteprivacy.it/web/garante-privacy-en",
+          "status": "confirmed",
+          "summary": "Italy's independent administrative authority for monitoring the application of the GDPR."
+        },
+        {
+          "id": "garante-ai",
+          "title": "Intelligenza artificiale",
+          "publisher": "Garante per la protezione dei dati personali",
+          "type": "Regulator guidance (Italy)",
+          "jurisdiction": "Italy",
+          "url": "https://www.garanteprivacy.it/temi/intelligenza-artificiale",
+          "status": "confirmed",
+          "summary": "The Garante's page on artificial intelligence and data protection, with its guidance, statements, and related documents."
+        }
+      ]
     }
   ]
 }

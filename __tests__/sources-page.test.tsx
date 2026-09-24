@@ -2,7 +2,7 @@ import SourcesPage from "@/app/[locale]/sources/page";
 import { sources } from "@/lib/sources";
 import { MESSAGES, render, screen, within } from "@/test-utils";
 
-describe.each(["en", "es", "pt-PT", "pt-BR"] as const)("Sources page in %s", (locale) => {
+describe.each(["en", "es", "pt-PT", "pt-BR", "it"] as const)("Sources page in %s", (locale) => {
   it("lists every category, including Latin American and global frameworks", () => {
     render(<SourcesPage params={{ locale }} />, { locale });
     for (const c of sources.categories) {

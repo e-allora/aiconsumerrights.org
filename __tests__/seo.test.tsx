@@ -15,7 +15,7 @@ import { IntlWrapper } from "@/test-utils";
 
 jest.mock("next/og", () => ({ ImageResponse: jest.fn() }));
 
-const params = (locale: "en" | "es" | "pt-PT" | "pt-BR") => ({ params: { locale } });
+const params = (locale: "en" | "es" | "pt-PT" | "pt-BR" | "it") => ({ params: { locale } });
 
 function jsonLd(html: string) {
   return Array.from(html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)).map((m) =>
@@ -50,7 +50,7 @@ describe("site metadata", () => {
     ["/sources", sourcesMeta],
     ["/about", aboutMeta],
   ] as const)("%s has title, description, canonical, hreflang and share image in each locale", async (path, fn) => {
-    for (const locale of ["en", "es", "pt-PT", "pt-BR"] as const) {
+    for (const locale of ["en", "es", "pt-PT", "pt-BR", "it"] as const) {
       const meta = await fn(params(locale) as never);
       expect(meta.title).toBeTruthy();
       expect(String(meta.description).length).toBeGreaterThan(50);
@@ -60,6 +60,7 @@ describe("site metadata", () => {
         es: `/es${path}`,
         "pt-PT": `/pt${path}`,
         "pt-BR": `/pt-BR${path}`,
+        it: `/it${path}`,
         "x-default": `/en${path}`,
       });
       expect(meta.openGraph?.url).toBe(localizedPath(locale, path));
@@ -87,6 +88,15 @@ describe("site metadata", () => {
     expect(guide.title).toBe("Uma IA a que pode fazer perguntas");
   });
 
+  it("gives the Italian pages Italian titles and the it_IT OpenGraph locale", async () => {
+    const site = await rootMeta(params("it") as never);
+    expect(site.title).toEqual({
+      default: "Diritti dei Consumatori nell'IA",
+      template: "%s | Diritti dei Consumatori nell'IA",
+    });
+    expect(site.openGraph).toMatchObject({ locale: "it_IT" });
+  });
+
   it("gives the Brazilian pages the pt_BR OpenGraph locale", async () => {
     const site = await rootMeta(params("pt-BR") as never);
     expect(site.openGraph).toMatchObject({ locale: "pt_BR" });
@@ -105,6 +115,7 @@ describe("JSON-LD structured data", () => {
     ["es", "es"],
     ["pt-PT", "pt-PT"],
     ["pt-BR", "pt-BR"],
+    ["it", "it"],
   ] as const)("declares the WebSite in the %s layout with its language (%s)", async (locale, lang) => {
     const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: { locale } }));
     const [site] = jsonLd(html);
@@ -117,7 +128,7 @@ describe("JSON-LD structured data", () => {
   });
 
   it("marks the guide as an Article with its fact-check date, in each language", () => {
-    for (const [locale, lang] of [["en", "en"], ["es", "es"], ["pt-PT", "pt-PT"], ["pt-BR", "pt-BR"]] as const) {
+    for (const [locale, lang] of [["en", "en"], ["es", "es"], ["pt-PT", "pt-PT"], ["pt-BR", "pt-BR"], ["it", "it"]] as const) {
       (globalThis as unknown as { __requestLocale: string }).__requestLocale = locale;
       const html = renderToStaticMarkup(
         <IntlWrapper locale={locale}>

@@ -18,7 +18,8 @@ const en = flatten(MESSAGES.en as unknown as Tree);
 const es = flatten(MESSAGES.es as unknown as Tree);
 const pt = flatten(MESSAGES["pt-PT"] as unknown as Tree);
 const ptBR = flatten(MESSAGES["pt-BR"] as unknown as Tree);
-const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR };
+const itMsgs = flatten(MESSAGES.it as unknown as Tree);
+const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).
 const MAY_BE_EMPTY = /(rule2Label|sourcesLanguageNote)$/;
 const placeholders = (s: string) => Array.from(s.matchAll(/\{(\w+)/g), (m) => m[1]).sort();
@@ -37,7 +38,7 @@ describe("message files", () => {
   });
 
   it("have no empty translations", () => {
-    for (const messages of [en, es, pt, ptBR]) {
+    for (const messages of [en, es, pt, ptBR, itMsgs]) {
       for (const [k, v] of Object.entries(messages)) {
         if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
       }
@@ -101,6 +102,7 @@ describe("message files", () => {
         es: "Español",
         "pt-PT": "Português (PT)",
         "pt-BR": "Português (BR)",
+        it: "Italiano",
       });
     }
   });
@@ -118,6 +120,38 @@ describe("message files", () => {
     const text = Object.values(es).join(" ");
     expect(text).not.toMatch(/\b(estafa|fraude|culpable|vergüenza|codicios)/i);
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
+  });
+
+  it("include the required Italian wording", () => {
+    const m = MESSAGES.it;
+    expect(m.Common.siteName).toBe("Diritti dei Consumatori nell'IA");
+    expect(m.Home.lead).toBe("Guida in linguaggio semplice quando l'IA prende decisioni su di te.");
+    expect(m.Forum.eyebrow).toBe("Foro Voce e Visione");
+    expect([
+      m.Forum.principles.critique,
+      m.Forum.principles.goodFaith,
+      m.Forum.principles.positivity,
+      m.Forum.principles.ethics,
+      m.Forum.principles.lift,
+    ]).toEqual([
+      "Critica le idee, mai le persone",
+      "Presumi la buona fede",
+      "Positività con sostanza",
+      "Etica e trasparenza",
+      "Cresci e aiuta a crescere",
+    ]);
+    expect(m.PAUSEStrategy.title).toBe("La Strategia PAUSA");
+    expect(m.PAUSEStrategy.subtitle).toBe("Abitudine quotidiana in 5 passi di fronte all'IA");
+  });
+
+  it("never put an apostrophe right before a placeholder (ICU would hide it) in Italian", () => {
+    for (const [key, value] of Object.entries(itMsgs)) expect({ key, bad: /'\{/.test(value) }).toEqual({ key, bad: false });
+  });
+
+  it("keep the blameless tone in Italian: no blame words or named companies", () => {
+    const text = Object.values(itMsgs).join(" ");
+    expect(text).not.toMatch(/\b(truffa|frode|colpevole|vergogna|avid[io])/i);
+    expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|DeepSeek|Replika|Rite Aid)\b/);
   });
 
   it("keep the blameless tone in Portuguese: no blame words or named companies", () => {
@@ -151,6 +185,7 @@ describe("PAUSE Strategy messages", () => {
     expect(letters("es")).toBe("PAUSA");
     expect(letters("pt-PT")).toBe("PAUSA");
     expect(letters("pt-BR")).toBe("PAUSA");
+    expect(letters("it")).toBe("PAUSA");
   });
 
   it("start each step title with its letter", () => {

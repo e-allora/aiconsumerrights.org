@@ -47,6 +47,19 @@ describe("LanguageSwitcher", () => {
     expect(state.__mockRouter.replace).toHaveBeenCalledWith("/forum", { locale: "pt-BR" });
   });
 
+  it("switches /en/forum to /it/forum, and describes itself in Italian there", async () => {
+    const user = userEvent.setup();
+    render(<LanguageSwitcher />);
+    await user.click(trigger());
+    await user.click(await screen.findByRole("menuitemradio", { name: "Italiano" }));
+    expect(state.__mockRouter.replace).toHaveBeenCalledWith("/forum", { locale: "it" });
+  });
+
+  it("describes itself in Italian on /it pages", () => {
+    render(<LanguageSwitcher />, { locale: "it" });
+    expect(screen.getByRole("button", { name: "Scegli una lingua. Lingua attuale: Italiano" })).toBeInTheDocument();
+  });
+
   it("describes itself in Brazilian Portuguese on /pt-BR pages", () => {
     render(<LanguageSwitcher />, { locale: "pt-BR" });
     expect(trigger()).toHaveAccessibleName("Escolha um idioma. Idioma atual: Português (BR)");
@@ -64,9 +77,15 @@ describe("LanguageSwitcher", () => {
     await user.keyboard("{Enter}");
     const menu = await screen.findByRole("menu");
     const items = within(menu).getAllByRole("menuitemradio");
-    expect(items.map((i) => i.textContent)).toEqual(["English", "Español", "Português (PT)", "Português (BR)"]);
-    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es", "pt-PT", "pt-BR"]);
-    expect(items.map((i) => i.getAttribute("aria-checked"))).toEqual(["true", "false", "false", "false"]);
+    expect(items.map((i) => i.textContent)).toEqual([
+      "English",
+      "Español",
+      "Português (PT)",
+      "Português (BR)",
+      "Italiano",
+    ]);
+    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es", "pt-PT", "pt-BR", "it"]);
+    expect(items.map((i) => i.getAttribute("aria-checked"))).toEqual(["true", "false", "false", "false", "false"]);
   });
 
   it("switches /en/forum to /es/forum, keeping the page", async () => {

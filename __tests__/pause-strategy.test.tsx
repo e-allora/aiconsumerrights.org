@@ -8,7 +8,7 @@ import { MESSAGES, render, screen, within } from "@/test-utils";
 const tabs = () => screen.getAllByRole("tab");
 const panel = () => screen.getByRole("tabpanel");
 
-describe.each(["en", "es", "pt-PT", "pt-BR"] as const)("PAUSE Strategy in %s", (locale) => {
+describe.each(["en", "es", "pt-PT", "pt-BR", "it"] as const)("PAUSE Strategy in %s", (locale) => {
   const m = MESSAGES[locale].PAUSEStrategy;
   const steps = PAUSE_STEPS.map((id) => m.steps[id]);
 

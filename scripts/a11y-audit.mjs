@@ -25,7 +25,7 @@ const AXE = require.resolve("axe-core/axe.min.js");
 const PORT = Number(process.env.AUDIT_PORT ?? 3217);
 const BASE = `http://localhost:${PORT}`;
 const PAGES = ["", "/guide", "/forum", "/sources", "/about"];
-const LOCALES = ["en", "es", "pt", "pt-BR"];
+const LOCALES = ["en", "es", "pt", "pt-BR", "it"];
 const ROUTES = LOCALES.flatMap((locale) => PAGES.map((p) => `/${locale}${p}`));
 const CHROME =
   process.env.CHROME_PATH ??
