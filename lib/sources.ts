@@ -14,6 +14,10 @@ export type Source = {
   status: SourceStatus;
   note?: string;
   primary?: boolean;
+  /** Where the source applies, e.g. "Brazil (LGPD)". */
+  jurisdiction?: string;
+  /** One or two sentences on what the source says, shown on /sources. */
+  summary?: string;
 };
 
 export type SourceCategory = { id: string; title: string; sources: Source[] };

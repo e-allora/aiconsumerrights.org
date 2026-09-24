@@ -3,14 +3,31 @@ import { sources } from "@/lib/sources";
 const all = sources.categories.flatMap((c) => c.sources);
 
 describe("lib/data/sources.json", () => {
-  it("has the five source categories", () => {
+  it("has the six source categories", () => {
     expect(sources.categories.map((c) => c.id)).toEqual([
       "governance",
       "empirical",
       "accessibility",
       "usability",
       "synthesis",
+      "latam-global",
     ]);
+  });
+
+  it("anchors Brazil's LGPD on the ANPD's official English translation", () => {
+    const lgpd = sources.categories.find((c) => c.id === "latam-global")!.sources;
+    const anpd = lgpd.find((s) => s.id === "anpd-lgpd-en")!;
+    expect(anpd).toMatchObject({ status: "confirmed", primary: true, jurisdiction: "Brazil (LGPD)" });
+    expect(anpd.url).toMatch(/^https:\/\/www\.gov\.br\/anpd\//);
+    // The third-party text is labeled unofficial, never "official".
+    const unofficial = lgpd.find((s) => s.id === "lgpd-article-20")!;
+    expect(unofficial.type).toMatch(/unofficial/i);
+    for (const s of lgpd) expect(`${s.summary ?? ""} ${s.type}`).not.toMatch(/\bofficial text\b/i);
+  });
+
+  it("keeps existing source numbers stable by adding new sources at the end", () => {
+    const ids = all.map((s) => s.id);
+    expect(ids.indexOf("anpd-lgpd-en")).toBeGreaterThan(ids.indexOf("vercel-ai-sdk"));
   });
 
   it("uses unique ids", () => {

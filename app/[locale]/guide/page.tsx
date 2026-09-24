@@ -36,12 +36,14 @@ const TOUCHPOINTS = [
   { id: "screening", cites: [["cfpb-reg-b"], ["gdpr"]] },
 ] as const;
 
+// Brazil cells with no citation say so in words ("not covered by this
+// site's sources yet") instead of guessing.
 const COMPARISON = [
-  { id: "told", us: ["ncsl-ai-database"], eu: ["eu-ai-act-art50"] },
-  { id: "reasons", us: ["cfpb-reg-b"], eu: ["gdpr"] },
-  { id: "review", us: ["ostp-blueprint-2022"], eu: ["gdpr"] },
-  { id: "enforce", us: ["ftc-ai-comply-2024", "cfpb-reg-b"], eu: ["eu-ai-act"] },
-  { id: "changing", us: ["eo-14365-2025"], eu: ["eu-digital-omnibus-2026"] },
+  { id: "told", us: ["ncsl-ai-database"], eu: ["eu-ai-act-art50"], br: [] },
+  { id: "reasons", us: ["cfpb-reg-b"], eu: ["gdpr"], br: ["anpd-lgpd-en", "lawsofbrazil-2026"] },
+  { id: "review", us: ["ostp-blueprint-2022"], eu: ["gdpr"], br: ["anpd-lgpd-en", "iba-mariotto-2024"] },
+  { id: "enforce", us: ["ftc-ai-comply-2024", "cfpb-reg-b"], eu: ["eu-ai-act"], br: ["anpd-lgpd-en", "lgpd-article-20"] },
+  { id: "changing", us: ["eo-14365-2025"], eu: ["eu-digital-omnibus-2026"], br: [] },
 ] as const;
 
 const STAKEHOLDERS = ["people", "educators", "regulators", "builders"] as const;
@@ -120,13 +122,14 @@ export default function GuidePage({ params: { locale } }: Props) {
           <p>{t.rich("compare.lead", { b: bold })}</p>
         </div>
         <div className="depth-card overflow-x-auto">
-          <table className="w-full min-w-[36rem] border-collapse text-left text-base">
+          <table className="w-full min-w-[48rem] border-collapse text-left text-base">
             <caption className="sr-only">{t("compare.caption", { date: checked })}</caption>
             <thead>
               <tr className="border-b-2 border-border/15">
                 <th scope="col" className="p-4 font-display">{t("compare.colQuestion")}</th>
                 <th scope="col" className="p-4 font-display">{t("compare.colUS")}</th>
                 <th scope="col" className="p-4 font-display">{t("compare.colEU")}</th>
+                <th scope="col" className="p-4 font-display">{t("compare.colBR")}</th>
               </tr>
             </thead>
             <tbody>
@@ -140,6 +143,10 @@ export default function GuidePage({ params: { locale } }: Props) {
                   <td className="p-4">
                     {t(`compare.rows.${row.id}.eu`)}
                     <Cite ids={[...row.eu]} />
+                  </td>
+                  <td className="p-4">
+                    {t(`compare.rows.${row.id}.br`)}
+                    {row.br.length > 0 && <Cite ids={[...row.br]} />}
                   </td>
                 </tr>
               ))}

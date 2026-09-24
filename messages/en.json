@@ -85,37 +85,43 @@
       }
     },
     "compare": {
-      "heading": "Compare the rules in the US and the EU",
-      "lead": "<b>Both places want AI that people can trust.</b> They take different routes. The US mostly applies existing laws, one sector and one state at a time. The EU passed one broad AI law and pairs it with its privacy law.",
-      "caption": "US and EU rules compared, as of {date}",
+      "heading": "Compare the rules in the US, the EU, and Brazil",
+      "lead": "<b>All three want AI that people can trust.</b> They take different routes. The US mostly applies existing laws, one sector and one state at a time. The EU passed one broad AI law and pairs it with its privacy law. Brazil's data protection law, the LGPD, gives people a right to ask for a review of automated decisions.",
+      "caption": "US, EU, and Brazil rules compared, as of {date}",
       "colQuestion": "Your question",
       "colUS": "United States",
       "colEU": "European Union",
+      "colBR": "Brazil",
       "rows": {
         "told": {
           "question": "Will I be told it is AI?",
           "us": "No federal rule. Some states require it.",
-          "eu": "Yes, since 2 August 2026, unless it is obvious."
+          "eu": "Yes, since 2 August 2026, unless it is obvious.",
+          "br": "Not covered by this site's sources yet."
         },
         "reasons": {
           "question": "Can I get the reasons for a decision?",
           "us": "Yes for credit: the specific main reasons.",
-          "eu": "You can ask for meaningful information about how an automated decision was made."
+          "eu": "You can ask for meaningful information about how an automated decision was made.",
+          "br": "You can ask for clear information on the criteria and procedures used, within trade-secret limits. A request for your data gets a complete answer within 15 days."
         },
         "review": {
           "question": "Can a person review it?",
           "us": "No general federal right. The 2022 Blueprint recommends it, but it is not law.",
-          "eu": "Yes, when a machine alone made a decision with a legal or similarly serious effect."
+          "eu": "Yes, when a machine alone made a decision with a legal or similarly serious effect.",
+          "br": "Yes, for decisions made solely by automated processing. The law no longer says a person must do the review."
         },
         "enforce": {
           "question": "Who checks the rules?",
           "us": "The FTC says existing law has no AI exemption. The CFPB covers credit.",
-          "eu": "National authorities in each EU country."
+          "eu": "National authorities in each EU country.",
+          "br": "The national data protection authority (ANPD). It can audit a system for discrimination when trade secrets limit what you are told."
         },
         "changing": {
           "question": "What is changing?",
           "us": "A December 2025 executive order calls for one national approach and a review of state AI laws.",
-          "eu": "Rules for high-risk AI, like hiring and credit, now start on 2 December 2027."
+          "eu": "Rules for high-risk AI, like hiring and credit, now start on 2 December 2027.",
+          "br": "Not covered by this site's sources yet."
         }
       }
     },
@@ -402,7 +408,8 @@
       "empirical": "Empirical data and industry benchmarks",
       "accessibility": "Universal accessibility and WCAG 2.2 standards",
       "usability": "Cognitive usability and design systems",
-      "synthesis": "Multi-model AI synthesis and blueprint standards"
+      "synthesis": "Multi-model AI synthesis and blueprint standards",
+      "latam-global": "Latin American and global regulatory frameworks"
     },
     "sourcesLanguageNote": ""
   },

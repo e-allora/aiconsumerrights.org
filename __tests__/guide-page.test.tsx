@@ -14,7 +14,7 @@ describe("Guide page", () => {
     const h2s = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
     expect(h2s).toEqual([
       "Spot the AI in your day",
-      "Compare the rules in the US and the EU",
+      "Compare the rules in the US, the EU, and Brazil",
       "Take three calm steps when a decision seems wrong",
       "See every side of the table",
     ]);
@@ -43,11 +43,34 @@ describe("Guide page", () => {
     );
   });
 
-  it("compares US and EU rules in a table with proper headers", () => {
-    const table = screen.getByRole("table", { name: /US and EU rules compared/ });
+  it("compares US, EU, and Brazil rules in a table with proper headers", () => {
+    const table = screen.getByRole("table", { name: /US, EU, and Brazil rules compared/ });
     const cols = within(table).getAllByRole("columnheader").map((c) => c.textContent);
-    expect(cols).toEqual(["Your question", "United States", "European Union"]);
+    expect(cols).toEqual(["Your question", "United States", "European Union", "Brazil"]);
     expect(within(table).getAllByRole("rowheader")).toHaveLength(5);
+  });
+
+  it("cites the LGPD sources in the Brazil column, and says so plainly where none apply", () => {
+    const table = screen.getByRole("table", { name: /Brazil rules compared/ });
+    const brazil = within(table)
+      .getAllByRole("row")
+      .slice(1)
+      .map((row) => within(row).getAllByRole("cell")[2]);
+    const cited = (cell: HTMLElement) =>
+      within(cell)
+        .queryAllByRole("link")
+        .map((a) => a.getAttribute("href")!.replace("/en/sources#", ""));
+    expect(brazil.map(cited)).toEqual([
+      [],
+      ["anpd-lgpd-en", "lawsofbrazil-2026"],
+      ["anpd-lgpd-en", "iba-mariotto-2024"],
+      ["anpd-lgpd-en", "lgpd-article-20"],
+      [],
+    ]);
+    expect(brazil[0]).toHaveTextContent("Not covered by this site's sources yet.");
+    expect(brazil[4]).toHaveTextContent("Not covered by this site's sources yet.");
+    expect(brazil[1]).toHaveTextContent("15 days");
+    expect(brazil[2]).toHaveTextContent("no longer says a person must do the review");
   });
 
   it("cites only sources that exist in the registry", () => {

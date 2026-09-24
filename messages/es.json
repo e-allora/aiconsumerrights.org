@@ -85,37 +85,43 @@
       }
     },
     "compare": {
-      "heading": "Compara las reglas de EE. UU. y de la UE",
-      "lead": "<b>Los dos lugares quieren una IA en la que la gente pueda confiar.</b> Siguen caminos distintos. EE. UU. aplica sobre todo leyes que ya existen, un sector y un estado a la vez. La UE aprobó una ley amplia sobre la IA y la combina con su ley de privacidad.",
-      "caption": "Reglas de EE. UU. y de la UE comparadas, al {date}",
+      "heading": "Compara las reglas de EE. UU., la UE y Brasil",
+      "lead": "<b>Los tres quieren una IA en la que la gente pueda confiar.</b> Siguen caminos distintos. EE. UU. aplica sobre todo leyes que ya existen, un sector y un estado a la vez. La UE aprobó una ley amplia sobre la IA y la combina con su ley de privacidad. La ley de protección de datos de Brasil, la LGPD, da derecho a pedir la revisión de decisiones automáticas.",
+      "caption": "Reglas de EE. UU., la UE y Brasil comparadas, al {date}",
       "colQuestion": "Tu pregunta",
       "colUS": "Estados Unidos",
       "colEU": "Unión Europea",
+      "colBR": "Brasil",
       "rows": {
         "told": {
           "question": "¿Me dirán que es una IA?",
           "us": "No hay una regla federal. Algunos estados lo exigen.",
-          "eu": "Sí, desde el 2 de agosto de 2026, a menos que sea evidente."
+          "eu": "Sí, desde el 2 de agosto de 2026, a menos que sea evidente.",
+          "br": "Todavía no está en las fuentes de este sitio."
         },
         "reasons": {
           "question": "¿Puedo conocer las razones de una decisión?",
           "us": "Sí, en el crédito: las razones principales y concretas.",
-          "eu": "Puedes pedir información útil sobre cómo se tomó una decisión automática."
+          "eu": "Puedes pedir información útil sobre cómo se tomó una decisión automática.",
+          "br": "Puedes pedir información clara sobre los criterios y procedimientos usados, dentro de los límites del secreto comercial. Una solicitud de tus datos recibe una respuesta completa en 15 días."
         },
         "review": {
           "question": "¿Puede revisarla una persona?",
           "us": "No hay un derecho federal general. El Plan de 2022 lo recomienda, pero no es ley.",
-          "eu": "Sí, cuando solo una máquina tomó una decisión con efectos legales o igual de importantes."
+          "eu": "Sí, cuando solo una máquina tomó una decisión con efectos legales o igual de importantes.",
+          "br": "Sí, para decisiones tomadas solo por procesamiento automático. La ley ya no dice que deba hacerla una persona."
         },
         "enforce": {
           "question": "¿Quién vigila las reglas?",
           "us": "La FTC dice que las leyes actuales no tienen excepciones para la IA. La CFPB se ocupa del crédito.",
-          "eu": "Las autoridades nacionales de cada país de la UE."
+          "eu": "Las autoridades nacionales de cada país de la UE.",
+          "br": "La autoridad nacional de protección de datos (ANPD). Puede auditar un sistema para detectar discriminación cuando el secreto comercial limita lo que te dicen."
         },
         "changing": {
           "question": "¿Qué está cambiando?",
           "us": "Una orden ejecutiva de diciembre de 2025 pide un solo enfoque nacional y una revisión de las leyes estatales sobre IA.",
-          "eu": "Las reglas para la IA de alto riesgo, como en empleo y crédito, ahora empiezan el 2 de diciembre de 2027."
+          "eu": "Las reglas para la IA de alto riesgo, como en empleo y crédito, ahora empiezan el 2 de diciembre de 2027.",
+          "br": "Todavía no está en las fuentes de este sitio."
         }
       }
     },
@@ -402,7 +408,8 @@
       "empirical": "Datos empíricos y referencias del sector",
       "accessibility": "Accesibilidad universal y normas WCAG 2.2",
       "usability": "Usabilidad cognitiva y sistemas de diseño",
-      "synthesis": "Síntesis de varios modelos de IA y normas del proyecto"
+      "synthesis": "Síntesis de varios modelos de IA y normas del proyecto",
+      "latam-global": "Marcos regulatorios de América Latina y globales"
     },
     "sourcesLanguageNote": "Los títulos y detalles de las fuentes aparecen en su idioma original, casi siempre inglés."
   },

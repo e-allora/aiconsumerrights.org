@@ -36,12 +36,17 @@ export function SourceLink({ source, className }: { source: Source; className?: 
   );
 }
 
-function SourceMeta({ source }: { source: Source }) {
+function SourceMeta({ source, detailed }: { source: Source; detailed: boolean }) {
   const t = useTranslations("Attribution.status");
-  const bits = [source.author, source.publisher, source.date, source.type].filter(Boolean);
+  const bits = [source.author, source.publisher, source.date, source.type, source.jurisdiction].filter(Boolean);
   return (
     <p className="text-base text-muted-foreground">
       <span lang="en">{bits.join(" · ")}</span>
+      {detailed && source.summary && (
+        <span lang="en" className="mt-1 block text-foreground">
+          {source.summary}
+        </span>
+      )}
       <span className="block text-sm">
         {t(source.status)}
         {source.note ? (
@@ -79,7 +84,7 @@ export function SourceCategoryList({
               {sourceNumber(s.id)}.
             </span>
             <SourceLink source={s} />
-            <SourceMeta source={s} />
+            <SourceMeta source={s} detailed={anchors} />
           </li>
         ))}
       </ul>
