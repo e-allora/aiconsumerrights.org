@@ -1,6 +1,6 @@
 {
   "Common": {
-    "siteName": "Diritti dei Consumatori nell'IA",
+    "siteName": "Diritti dei consumatori di fronte all'IA",
     "siteDescription": "Aiuto in linguaggio semplice sui tuoi diritti quando l'IA prende decisioni su di te, costruito con un dialogo aperto e rispettoso.",
     "skipToContent": "Vai al contenuto principale",
     "factsChecked": "Fatti verificati il {date}.",
@@ -42,7 +42,7 @@
     }
   },
   "Home": {
-    "title": "Diritti dei Consumatori nell'IA",
+    "title": "Diritti dei consumatori di fronte all'IA",
     "lead": "Guida in linguaggio semplice quando l'IA prende decisioni su di te.",
     "readGuide": "Leggi la guida",
     "joinForum": "Partecipa al forum"
@@ -232,7 +232,7 @@
       "assess": {
         "letter": "A",
         "title": "Analizzare l'accuratezza",
-        "body": "I modelli di IA generano risposte basate su schemi; non 'conoscono' i fatti. Per decisioni critiche sulla salute, finanziarie o legali, verifica sempre le risposte rispetto a fonti primarie."
+        "body": "I modelli di IA generano risposte basate su schemi; non 'conoscono' i fatti. Per decisioni importanti sulla salute, sulle finanze o su questioni legali, verifica sempre le risposte confrontandole con fonti primarie."
       },
       "understand": {
         "letter": "U",
@@ -242,7 +242,7 @@
       "seek": {
         "letter": "S",
         "title": "Sollecitare un contatto umano responsabile",
-        "body": "I sistemi di IA sono guidati da persone. Cerca canali di contatto organizzativi chiari e verifica che vi sia un team responsabile per la supervisione umana."
+        "body": "I sistemi di IA sono guidati da persone. Cerca canali di contatto organizzativi chiari e verifica che vi sia un team responsabile della supervisione umana."
       },
       "exit": {
         "letter": "A",
@@ -254,7 +254,7 @@
   "Forum": {
     "metaTitle": "Forum",
     "metaDescription": "Vota brevi frasi sull'IA e sui tuoi diritti, oppure proponine una. Non serve un account. Prima mostriamo ciò che abbiamo in comune.",
-    "eyebrow": "Foro Voce e Visione",
+    "eyebrow": "Forum Voce e Visione",
     "title": "La tua voce ha un posto qui",
     "lead": "<b>La tecnologia funziona meglio quando tutti partecipano a darle forma.</b> Vota brevi frasi, oppure proponi la tua. Non serve un account.",
     "preview": "<b>Questo forum è in versione di prova.</b> I voti e le frasi restano nel tuo browser. Niente viene inviato finché il forum non apre.",

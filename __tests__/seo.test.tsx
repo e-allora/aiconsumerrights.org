@@ -91,8 +91,8 @@ describe("site metadata", () => {
   it("gives the Italian pages Italian titles and the it_IT OpenGraph locale", async () => {
     const site = await rootMeta(params("it") as never);
     expect(site.title).toEqual({
-      default: "Diritti dei Consumatori nell'IA",
-      template: "%s | Diritti dei Consumatori nell'IA",
+      default: "Diritti dei consumatori di fronte all'IA",
+      template: "%s | Diritti dei consumatori di fronte all'IA",
     });
     expect(site.openGraph).toMatchObject({ locale: "it_IT" });
   });

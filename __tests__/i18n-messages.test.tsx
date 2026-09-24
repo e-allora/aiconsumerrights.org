@@ -124,9 +124,9 @@ describe("message files", () => {
 
   it("include the required Italian wording", () => {
     const m = MESSAGES.it;
-    expect(m.Common.siteName).toBe("Diritti dei Consumatori nell'IA");
+    expect(m.Common.siteName).toBe("Diritti dei consumatori di fronte all'IA");
     expect(m.Home.lead).toBe("Guida in linguaggio semplice quando l'IA prende decisioni su di te.");
-    expect(m.Forum.eyebrow).toBe("Foro Voce e Visione");
+    expect(m.Forum.eyebrow).toBe("Forum Voce e Visione");
     expect([
       m.Forum.principles.critique,
       m.Forum.principles.goodFaith,
