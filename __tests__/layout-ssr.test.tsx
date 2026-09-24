@@ -12,12 +12,16 @@ async function renderLayout(locale: string) {
 }
 
 describe("LocaleLayout (server render)", () => {
-  it.each(["en", "es"])("renders the full %s document without errors", async (locale) => {
+  it.each([
+    ["en", "en"],
+    ["es", "es"],
+    ["pt", "pt-PT"],
+  ])("renders the full %s document without errors (lang=%s)", async (locale, lang) => {
     const errors = jest.spyOn(console, "error").mockImplementation(() => {});
     const html = await renderLayout(locale);
     expect(errors).not.toHaveBeenCalled();
     errors.mockRestore();
-    expect(html).toMatch(new RegExp(`^<html lang="${locale}">`));
+    expect(html).toMatch(new RegExp(`^<html lang="${lang}">`));
     expect(html).toContain('<main id="main">');
   });
 

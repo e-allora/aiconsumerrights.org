@@ -35,7 +35,7 @@ describe("sitemap.xml", () => {
   it("links each page to its translations with hreflang, plus x-default", () => {
     for (const u of urls) {
       const langs = u["xhtml:link"].map((l) => l["@_hreflang"]);
-      expect(langs).toEqual(expect.arrayContaining(["en", "es", "x-default"]));
+      expect(langs).toEqual(expect.arrayContaining(["en", "es", "pt", "x-default"]));
       for (const l of u["xhtml:link"]) expect(l["@_href"].startsWith(SITE_URL)).toBe(true);
     }
   });

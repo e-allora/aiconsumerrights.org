@@ -25,7 +25,8 @@ const AXE = require.resolve("axe-core/axe.min.js");
 const PORT = Number(process.env.AUDIT_PORT ?? 3217);
 const BASE = `http://localhost:${PORT}`;
 const PAGES = ["", "/guide", "/forum", "/sources", "/about"];
-const ROUTES = ["en", "es"].flatMap((locale) => PAGES.map((p) => `/${locale}${p}`));
+const LOCALES = ["en", "es", "pt"];
+const ROUTES = LOCALES.flatMap((locale) => PAGES.map((p) => `/${locale}${p}`));
 const CHROME =
   process.env.CHROME_PATH ??
   join(homedir(), ".cache/ms-playwright/chromium-1234/chrome-linux64/chrome");
@@ -213,7 +214,7 @@ try {
     const page = await browser.newPage();
     await page.setViewport(VIEWPORTS.mobile);
     await page.evaluateOnNewDocument((t) => localStorage.setItem("theme", t), theme);
-    await page.goto(BASE + `/${theme === "dark" ? "es" : "en"}/guide`, { waitUntil: "networkidle0" });
+    await page.goto(BASE + `/${theme === "dark" ? "es" : "pt"}/guide`, { waitUntil: "networkidle0" });
     await page.click('header button[aria-haspopup="dialog"]');
     await page.waitForSelector('[role="dialog"]');
     // Let the drawer finish sliding in, then open its language menu too.
@@ -234,7 +235,7 @@ try {
   server.stop();
 }
 
-console.log(`Audited ${runs} page states (${ROUTES.length} routes in 2 languages x 2 themes x 2 viewports, plus the drawer).`);
+console.log(`Audited ${runs} page states (${ROUTES.length} routes in ${LOCALES.length} languages x 2 themes x 2 viewports, plus the drawer).`);
 if (failures.length) {
   console.log(`\n${failures.length} problem(s):`);
   for (const f of failures) console.log(`  - ${f}`);

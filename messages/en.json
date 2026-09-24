@@ -35,7 +35,8 @@
     "languageLabel": "Choose a language. Current language: {current}",
     "languageNames": {
       "en": "English",
-      "es": "Español"
+      "es": "Español",
+      "pt": "Português"
     }
   },
   "Home": {

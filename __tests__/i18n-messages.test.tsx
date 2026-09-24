@@ -16,6 +16,8 @@ function flatten(tree: Tree, prefix = ""): Record<string, string> {
 
 const en = flatten(MESSAGES.en as unknown as Tree);
 const es = flatten(MESSAGES.es as unknown as Tree);
+const pt = flatten(MESSAGES.pt as unknown as Tree);
+const TRANSLATIONS = { es, pt };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).
 const MAY_BE_EMPTY = /(rule2Label|sourcesLanguageNote)$/;
 const placeholders = (s: string) => Array.from(s.matchAll(/\{(\w+)/g), (m) => m[1]).sort();
@@ -29,19 +31,22 @@ describe("message files", () => {
     }
   });
 
-  it("have exactly the same keys in English and Spanish", () => {
-    expect(Object.keys(es).sort()).toEqual(Object.keys(en).sort());
+  it.each(Object.entries(TRANSLATIONS))("have exactly the same keys in English and %s", (_, messages) => {
+    expect(Object.keys(messages).sort()).toEqual(Object.keys(en).sort());
   });
 
   it("have no empty translations", () => {
-    for (const [k, v] of Object.entries(es)) if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
-    for (const [k, v] of Object.entries(en)) if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
+    for (const messages of [en, es, pt]) {
+      for (const [k, v] of Object.entries(messages)) {
+        if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
+      }
+    }
   });
 
-  it("keep every {placeholder} and <tag> in both languages", () => {
+  it.each(Object.entries(TRANSLATIONS))("keep every {placeholder} and <tag> in %s", (_, messages) => {
     for (const key of Object.keys(en)) {
-      expect({ key, p: placeholders(es[key]) }).toEqual({ key, p: placeholders(en[key]) });
-      expect({ key, t: tags(es[key]) }).toEqual({ key, t: tags(en[key]) });
+      expect({ key, p: placeholders(messages[key]) }).toEqual({ key, p: placeholders(en[key]) });
+      expect({ key, t: tags(messages[key]) }).toEqual({ key, t: tags(en[key]) });
     }
   });
 
@@ -51,6 +56,34 @@ describe("message files", () => {
     expect(MESSAGES.es.PAUSEStrategy.title).toBe("La Estrategia PAUSA");
     expect(MESSAGES.es.Forum.civility).toContain("Analizamos las ideas, no a las personas");
     expect(MESSAGES.es.Guide.explorer.steps.review.title).toBe("Solicitar revisión humana");
+  });
+
+  it("include the required Portuguese wording", () => {
+    const m = MESSAGES.pt;
+    expect(m.Common.siteName).toBe("Direitos do Consumidor perante a IA");
+    expect(m.Home.lead).toBe("Ajuda em linguagem simples quando a IA toma decisões sobre si.");
+    expect(m.Forum.eyebrow).toBe("Fórum Voz e Visão");
+    expect([
+      m.Forum.principles.critique,
+      m.Forum.principles.goodFaith,
+      m.Forum.principles.positivity,
+      m.Forum.principles.ethics,
+      m.Forum.principles.lift,
+    ]).toEqual([
+      "Critique as ideias, nunca as pessoas",
+      "Presuma boa-fé",
+      "Positividade com substância",
+      "Ética e transparência",
+      "Crescer e ajudar a crescer",
+    ]);
+    expect(m.PAUSEStrategy.title).toBe("A Estratégia PAUSA");
+    expect(m.PAUSEStrategy.subtitle).toBe("O seu hábito diário de 5 passos perante a IA");
+  });
+
+  it("name every language in its own language, in every file", () => {
+    for (const locale of routing.locales) {
+      expect(MESSAGES[locale].Navigation.languageNames).toEqual({ en: "English", es: "Español", pt: "Português" });
+    }
   });
 
   it("cover every forum statement, model credit, and source category", () => {
@@ -67,10 +100,16 @@ describe("message files", () => {
     expect(text).not.toMatch(/\b(estafa|fraude|culpable|vergüenza|codicios)/i);
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
   });
+
+  it("keep the blameless tone in Portuguese: no blame words or named companies", () => {
+    const text = Object.values(pt).join(" ");
+    expect(text).not.toMatch(/\b(burla|fraude|culpado|vergonha|ganancios)/i);
+    expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
+  });
 });
 
 describe("PAUSE Strategy messages", () => {
-  const letters = (locale: "en" | "es") =>
+  const letters = (locale: "en" | "es" | "pt") =>
     Object.values(MESSAGES[locale].PAUSEStrategy.steps)
       .map((step) => step.letter)
       .join("");
@@ -78,10 +117,11 @@ describe("PAUSE Strategy messages", () => {
   it("spell PAUSE in English and PAUSA in Spanish", () => {
     expect(letters("en")).toBe("PAUSE");
     expect(letters("es")).toBe("PAUSA");
+    expect(letters("pt")).toBe("PAUSA");
   });
 
   it("start each step title with its letter", () => {
-    for (const locale of ["en", "es"] as const) {
+    for (const locale of routing.locales) {
       for (const step of Object.values(MESSAGES[locale].PAUSEStrategy.steps)) {
         expect(step.title[0]).toBe(step.letter);
       }

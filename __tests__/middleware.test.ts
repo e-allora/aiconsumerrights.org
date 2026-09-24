@@ -18,6 +18,14 @@ describe("locale middleware", () => {
     expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/es");
   });
 
+  it.each([
+    ["pt-BR,pt;q=0.9,en;q=0.5", "Brazilian"],
+    ["pt-PT,pt;q=0.9", "European"],
+  ])("sends a Portuguese browser (%s, %s) from / to /pt", async (header) => {
+    const res = await visit("/", header);
+    expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/pt");
+  });
+
   it("sends an English-language browser from / to /en", async () => {
     const res = await visit("/", "en-US,en;q=0.9");
     expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/en");
@@ -34,7 +42,7 @@ describe("locale middleware", () => {
   });
 
   it("lets /en and /es pages through without a redirect", async () => {
-    for (const path of ["/en/guide", "/es/forum"]) {
+    for (const path of ["/en/guide", "/es/forum", "/pt/about"]) {
       const res = await visit(path, "es");
       expect(res.headers.get("location")).toBeNull();
     }

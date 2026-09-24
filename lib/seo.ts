@@ -9,7 +9,7 @@ export const ogImage = (alt: string) => ({ url: "/opengraph-image", width: 1200,
 export function languageAlternates(path: `/${string}`) {
   const suffix = path === "/" ? "" : path;
   const languages: Record<string, string> = {};
-  for (const l of routing.locales) languages[LOCALE_TAGS[l].lang] = `/${l}${suffix}`;
+  for (const l of routing.locales) languages[LOCALE_TAGS[l].hreflang] = `/${l}${suffix}`;
   languages["x-default"] = `/${routing.defaultLocale}${suffix}`;
   return languages;
 }

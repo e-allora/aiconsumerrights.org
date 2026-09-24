@@ -16,7 +16,7 @@ beforeEach(() => {
   window.location.hash = "";
 });
 
-const trigger = () => screen.getByRole("button", { name: /Choose a language|Elige un idioma/ });
+const trigger = () => screen.getByRole("button", { name: /Choose a language|Elige un idioma|Escolha um idioma/ });
 
 describe("LanguageSwitcher", () => {
   it("names the menu button and the current language for screen readers", () => {
@@ -24,6 +24,19 @@ describe("LanguageSwitcher", () => {
     expect(trigger()).toHaveAccessibleName("Choose a language. Current language: English");
     expect(trigger()).toHaveAttribute("aria-haspopup", "menu");
     expect(trigger()).toHaveAttribute("aria-expanded", "false");
+  });
+
+  it("describes itself in Portuguese on Portuguese pages", () => {
+    render(<LanguageSwitcher />, { locale: "pt" });
+    expect(trigger()).toHaveAccessibleName("Escolha um idioma. Idioma atual: Português");
+  });
+
+  it("switches /en/forum to /pt/forum, keeping the page", async () => {
+    const user = userEvent.setup();
+    render(<LanguageSwitcher />);
+    await user.click(trigger());
+    await user.click(await screen.findByRole("menuitemradio", { name: "Português" }));
+    expect(state.__mockRouter.replace).toHaveBeenCalledWith("/forum", { locale: "pt" });
   });
 
   it("describes itself in Spanish on Spanish pages", () => {
@@ -38,10 +51,9 @@ describe("LanguageSwitcher", () => {
     await user.keyboard("{Enter}");
     const menu = await screen.findByRole("menu");
     const items = within(menu).getAllByRole("menuitemradio");
-    expect(items.map((i) => i.textContent)).toEqual(["English", "Español"]);
-    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es"]);
-    expect(items[0]).toHaveAttribute("aria-checked", "true");
-    expect(items[1]).toHaveAttribute("aria-checked", "false");
+    expect(items.map((i) => i.textContent)).toEqual(["English", "Español", "Português"]);
+    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es", "pt"]);
+    expect(items.map((i) => i.getAttribute("aria-checked"))).toEqual(["true", "false", "false"]);
   });
 
   it("switches /en/forum to /es/forum, keeping the page", async () => {

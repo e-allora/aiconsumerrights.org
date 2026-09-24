@@ -14,7 +14,7 @@ import { IntlWrapper } from "@/test-utils";
 
 jest.mock("next/og", () => ({ ImageResponse: jest.fn() }));
 
-const params = (locale: "en" | "es") => ({ params: { locale } });
+const params = (locale: "en" | "es" | "pt") => ({ params: { locale } });
 
 function jsonLd(html: string) {
   return Array.from(html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)).map((m) =>
@@ -49,7 +49,7 @@ describe("site metadata", () => {
     ["/sources", sourcesMeta],
     ["/about", aboutMeta],
   ] as const)("%s has title, description, canonical, hreflang and share image in each locale", async (path, fn) => {
-    for (const locale of ["en", "es"] as const) {
+    for (const locale of ["en", "es", "pt"] as const) {
       const meta = await fn(params(locale) as never);
       expect(meta.title).toBeTruthy();
       expect(String(meta.description).length).toBeGreaterThan(50);
@@ -57,6 +57,7 @@ describe("site metadata", () => {
       expect(meta.alternates?.languages).toEqual({
         en: `/en${path}`,
         es: `/es${path}`,
+        pt: `/pt${path}`,
         "x-default": `/en${path}`,
       });
       expect(meta.openGraph?.url).toBe(`/${locale}${path}`);
@@ -73,25 +74,40 @@ describe("site metadata", () => {
     expect(image.alt).toMatch(/^Derechos del Consumidor frente a la IA: /);
   });
 
+  it("gives the Portuguese pages Portuguese titles and the pt_PT OpenGraph locale", async () => {
+    const site = await rootMeta(params("pt") as never);
+    expect(site.title).toEqual({
+      default: "Direitos do Consumidor perante a IA",
+      template: "%s | Direitos do Consumidor perante a IA",
+    });
+    expect(site.openGraph).toMatchObject({ locale: "pt_PT" });
+    const guide = await guideMeta(params("pt") as never);
+    expect(guide.title).toBe("Uma IA a que pode fazer perguntas");
+  });
+
   it("sizes the share image for OpenGraph", () => {
     expect(ogSize).toEqual({ width: 1200, height: 630 });
   });
 });
 
 describe("JSON-LD structured data", () => {
-  it.each(["en", "es"] as const)("declares the WebSite in the %s layout with its language", async (locale) => {
+  it.each([
+    ["en", "en"],
+    ["es", "es"],
+    ["pt", "pt-PT"],
+  ] as const)("declares the WebSite in the %s layout with its language (%s)", async (locale, lang) => {
     const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: { locale } }));
     const [site] = jsonLd(html);
     expect(site).toMatchObject({
       "@context": "https://schema.org",
       "@type": "WebSite",
       url: `${SITE_URL}/${locale}`,
-      inLanguage: locale,
+      inLanguage: lang,
     });
   });
 
   it("marks the guide as an Article with its fact-check date, in each language", () => {
-    for (const locale of ["en", "es"] as const) {
+    for (const [locale, lang] of [["en", "en"], ["es", "es"], ["pt", "pt-PT"]] as const) {
       (globalThis as unknown as { __requestLocale: string }).__requestLocale = locale;
       const html = renderToStaticMarkup(
         <IntlWrapper locale={locale}>
@@ -99,7 +115,7 @@ describe("JSON-LD structured data", () => {
         </IntlWrapper>
       );
       const [article] = jsonLd(html);
-      expect(article).toMatchObject({ "@type": "Article", dateModified: "2026-09-23", inLanguage: locale });
+      expect(article).toMatchObject({ "@type": "Article", dateModified: "2026-09-23", inLanguage: lang });
     }
   });
 
