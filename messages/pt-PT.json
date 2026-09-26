@@ -390,6 +390,7 @@
     "reviewLabel": "Revisão humana",
     "reviewDone": "Revisto por {reviewer} a {date}.",
     "reviewPending": "Ainda não está concluída. {reviewer} revê cada página antes do lançamento.",
+    "translationThanks": "Estas traduções existem graças aos meus avós, Giuffrido e Isolina DiCenso, e à minha mãe, Joanne Sweetman. Obrigado do fundo do coração.",
     "checkedLabel": "Fontes verificadas",
     "seeAll": "Ver as {total} fontes em {groups} grupos",
     "openRegistry": "Abrir o registo completo de fontes",

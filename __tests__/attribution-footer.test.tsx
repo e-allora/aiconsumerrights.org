@@ -69,6 +69,13 @@ describe("AttributionFooter", () => {
     expect(screen.getByText("23 September 2026")).toBeInTheDocument();
   });
 
+  it("thanks the family who inspired the translations", () => {
+    render(<AttributionFooter />);
+    expect(screen.getByTestId("translation-thanks")).toHaveTextContent(
+      "These translations exist thanks to my grandparents, Giuffrido and Isolina DiCenso, and my mother, Joanne Sweetman."
+    );
+  });
+
   it("shows the reviewer and date once review is recorded", () => {
     const reviewed: Registry = {
       ...sources,

@@ -85,6 +85,9 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
                       })
                     : t("reviewPending", { reviewer: review.reviewer })}
                 </dd>
+                <dd data-testid="translation-thanks" className="mt-2 italic">
+                  {t("translationThanks")}
+                </dd>
               </div>
               <div>
                 <dt className="font-bold">{t("checkedLabel")}</dt>
