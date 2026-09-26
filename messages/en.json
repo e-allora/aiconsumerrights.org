@@ -390,7 +390,7 @@
     "reviewLabel": "Human review",
     "reviewDone": "Reviewed by {reviewer} on {date}.",
     "reviewPending": "Not yet complete. {reviewer} reviews each page before launch.",
-    "translationThanks": "These translations exist thanks to my grandparents, Giuffrido and Isolina DiCenso, and my mother, Joanne Sweetman. Thank you, with all my heart.",
+    "translationThanks": "These translations exist thanks to my grandparents, Giuffrido and Isolina DiCenso, and my parents, Joanne Sweetman and Robert Sweetman Sr. Thank you, with all my heart.",
     "checkedLabel": "Sources checked",
     "seeAll": "See all {total} sources in {groups} groups",
     "openRegistry": "Open the full source registry",

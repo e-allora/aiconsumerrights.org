@@ -72,7 +72,7 @@ describe("AttributionFooter", () => {
   it("thanks the family who inspired the translations", () => {
     render(<AttributionFooter />);
     expect(screen.getByTestId("translation-thanks")).toHaveTextContent(
-      "These translations exist thanks to my grandparents, Giuffrido and Isolina DiCenso, and my mother, Joanne Sweetman."
+      "These translations exist thanks to my grandparents, Giuffrido and Isolina DiCenso, and my parents, Joanne Sweetman and Robert Sweetman Sr."
     );
   });
 
