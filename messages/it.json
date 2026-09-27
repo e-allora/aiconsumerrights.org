@@ -394,7 +394,7 @@
     "reviewLabel": "Revisione umana",
     "reviewDone": "Controllato da {reviewer} il {date}.",
     "reviewPending": "Non ancora completata. {reviewer} controlla ogni pagina prima del lancio.",
-    "translationThanks": "Queste traduzioni sono nate grazie ai miei nonni, Giuffrido e Isolina DiCenso, e ai miei genitori, Joanne Sweetman e Robert Sweetman Sr. Grazie di cuore.",
+    "translationThanks": "I miei nonni, Giuffrido e Isolina DiCenso, lasciarono l'Italia per un nuovo paese e impararono una nuova lingua. Il loro viaggio ha ispirato queste traduzioni. Con amore e gratitudine a loro e ai miei genitori, Joanne Sweetman e Robert Sweetman Sr.",
     "checkedLabel": "Fonti verificate",
     "seeAll": "Vedi tutte le {total} fonti in {groups} gruppi",
     "openRegistry": "Apri l'elenco completo delle fonti",
@@ -460,15 +460,26 @@
     "unfinishedHeading": "Cosa non è finito o non è perfetto",
     "unfinished": {
       "review": "La revisione umana della guida è ancora in corso.",
+      "translations": "Le traduzioni sono state fatte con l'aiuto dell'IA. Non tutte sono ancora state controllate da madrelingua.",
       "language": "Le proposte compaiono solo nella lingua in cui sono state scritte.",
       "results": "I risultati compaiono solo con {minVotes} voti o più per lingua, quindi all'inizio non ce ne sono.",
       "ai": "Il controllo con l'IA può sbagliare. Ogni decisione la prende una persona.",
       "twice": "Votare senza account non impedisce del tutto a qualcuno di votare due volte, per esempio usando un altro browser."
     },
+    "correctionsHeading": "Correzioni",
+    "correctionsLead": "<b>Quando qualcosa su questo sito è sbagliato, lo correggiamo e lo annotiamo qui</b>, dal più recente. Ogni voce dice cosa era sbagliato e cosa è cambiato. Nominiamo chi l'ha segnalato solo se lo chiede.",
     "contactHeading": "Dicci cosa non va",
     "contact": "<b>Le critiche sono benvenute quando hanno una ragione.</b> Dicci cosa non va, perché conta e, se puoi, come risolverlo.",
     "contactHow": "Scrivi a <mail>{email}</mail> oppure <issues>apri una segnalazione su GitHub</issues>.",
     "domainNote": "L'indirizzo di contatto usa shipitworks.com, il dominio di un'attività che Robert intende avviare. Quell'attività non ha alcun ruolo in questo sito.",
     "footerLink": "Come funziona questo sito: ogni servizio che usa, cosa conserviamo e cosa non è ancora finito"
+  },
+  "PublicLog": {
+    "wrong": "Cosa era sbagliato",
+    "changed": "Cosa abbiamo cambiato",
+    "flaggedBy": "Segnalato da {name}. Grazie.",
+    "commit": "Vedi la modifica esatta su GitHub",
+    "englishOnly": "Per ora solo in inglese.",
+    "noCorrections": "Nessuna correzione per ora. Se trovi un errore, faccelo sapere."
   }
 }

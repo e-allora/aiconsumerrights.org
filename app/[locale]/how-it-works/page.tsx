@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { CorrectionsLog } from "@/components/ui/PublicLog";
 import { RULES } from "@/lib/forum/consensus";
 import { VOTER_COOKIE_DAYS } from "@/lib/forum/votes";
 import type { Locale } from "@/lib/i18n/routing";
@@ -25,7 +26,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 
 const SERVICES = ["vercel", "neon", "openrouter", "models", "github"] as const;
 const KEEP = ["votes", "suggestions", "never"] as const;
-const UNFINISHED = ["review", "language", "results", "ai", "twice"] as const;
+const UNFINISHED = ["review", "translations", "language", "results", "ai", "twice"] as const;
 
 const bold = (c: React.ReactNode) => <strong>{c}</strong>;
 const linkClass = "font-semibold text-link underline underline-offset-4";
@@ -41,7 +42,8 @@ function external(href: string) {
 
 /**
  * The site's own transparency page: who runs it, every service it uses and
- * what each one sees, what is kept, and what isn't finished. Numbers come
+ * what each one sees, what is kept, what isn't finished, and every error
+ * that has been fixed. Numbers come
  * from the code, so the page can't drift from what the site does.
  */
 export default function HowItWorksPage({ params: { locale } }: Props) {
@@ -86,6 +88,12 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
       <section aria-labelledby="unfinished" className="flex flex-col gap-4">
         <h2 id="unfinished">{t("unfinishedHeading")}</h2>
         {list(UNFINISHED, "unfinished", { minVotes: RULES.minVotes })}
+      </section>
+
+      <section aria-labelledby="corrections" className="flex flex-col gap-4">
+        <h2 id="corrections">{t("correctionsHeading")}</h2>
+        <p>{t.rich("correctionsLead", { b: bold })}</p>
+        <CorrectionsLog />
       </section>
 
       <section aria-labelledby="contact" className="depth-card flex flex-col gap-4 p-6 sm:p-8">

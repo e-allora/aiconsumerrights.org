@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ForumResults } from "@/components/forum/ForumResults";
 import { StatementSubmission } from "@/components/forum/StatementSubmission";
 import { VotingEngine } from "@/components/forum/VotingEngine";
+import { WeDidList } from "@/components/ui/PublicLog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Locale } from "@/lib/i18n/routing";
 import { STATEMENTS, TRACKS } from "@/lib/forum/statements";
@@ -109,7 +110,7 @@ export default function ForumPage({ params: { locale } }: Props) {
               {LOOP.map((k) => (
                 <div key={k} className="flex flex-col gap-1">
                   <dt className="font-display text-lg font-bold">{t(`loop.${k}`)}</dt>
-                  <dd className="text-base">{t(`loop.${k}Text`, counts)}</dd>
+                  <dd className="text-base">{k === "did" ? <WeDidList /> : t(`loop.${k}Text`, counts)}</dd>
                 </div>
               ))}
             </dl>

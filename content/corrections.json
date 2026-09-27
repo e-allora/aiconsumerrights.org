@@ -1,0 +1,65 @@
+{
+  "about": "Errors on this site that were found and fixed, newest first. Robert writes every entry by hand. See content/README.md.",
+  "entries": [
+    {
+      "id": "2026-09-26-tool-names",
+      "date": "2026-09-26",
+      "page": "/forum",
+      "commit": "96397a0",
+      "wrong": {
+        "en": "The note under the suggestion box stopped naming the AI tools that read each suggestion. We removed the names by mistake, thinking our rule against singling out companies applied.",
+        "es": "La nota bajo el cuadro de sugerencias dejó de nombrar las herramientas de IA que leen cada sugerencia. Quitamos los nombres por error, pensando que se aplicaba nuestra regla de no señalar a empresas.",
+        "pt-PT": "A nota por baixo da caixa de sugestões deixou de indicar as ferramentas de IA que leem cada sugestão. Retirámos os nomes por engano, pensando que a nossa regra de não apontar empresas se aplicava.",
+        "pt-BR": "A nota abaixo da caixa de sugestões deixou de citar as ferramentas de IA que leem cada sugestão. Tiramos os nomes por engano, achando que nossa regra de não apontar empresas se aplicava.",
+        "it": "La nota sotto il riquadro dei suggerimenti aveva smesso di nominare gli strumenti di IA che leggono ogni suggerimento. Avevamo tolto i nomi per errore, pensando che valesse la nostra regola di non additare le aziende."
+      },
+      "changed": {
+        "en": "The note names them again: Mistral Small, with Google's Gemini as a backup, on EU servers, through OpenRouter. That rule is about what the site says about others. It never hides the tools the site itself uses.",
+        "es": "La nota vuelve a nombrarlas: Mistral Small, con Gemini de Google como respaldo, en servidores de la UE, a través de OpenRouter. Esa regla trata de lo que el sitio dice sobre otros. Nunca oculta las herramientas que usa el propio sitio.",
+        "pt-PT": "A nota volta a indicá-las: Mistral Small, com o Gemini da Google como alternativa, em servidores da UE, através do OpenRouter. Essa regra é sobre o que o site diz sobre os outros. Nunca esconde as ferramentas que o próprio site usa.",
+        "pt-BR": "A nota volta a citá-las: Mistral Small, com o Gemini do Google como reserva, em servidores da UE, por meio do OpenRouter. Essa regra trata do que o site diz sobre os outros. Ela nunca esconde as ferramentas que o próprio site usa.",
+        "it": "La nota li nomina di nuovo: Mistral Small, con Gemini di Google come riserva, su server nell'UE, tramite OpenRouter. Quella regola riguarda ciò che il sito dice degli altri. Non nasconde mai gli strumenti che il sito stesso usa."
+      }
+    },
+    {
+      "id": "2026-09-26-stuck-results",
+      "date": "2026-09-26",
+      "page": "/forum",
+      "commit": "e1c28c1",
+      "wrong": {
+        "en": "Forum results could get stuck on the first answer the server ever gave, so new votes might not show up in the results.",
+        "es": "Los resultados del foro podían quedarse fijos en la primera respuesta que dio el servidor, así que los votos nuevos podían no aparecer.",
+        "pt-PT": "Os resultados do fórum podiam ficar presos na primeira resposta que o servidor deu, e os votos novos podiam não aparecer.",
+        "pt-BR": "Os resultados do fórum podiam ficar travados na primeira resposta que o servidor deu, e os votos novos podiam não aparecer.",
+        "it": "I risultati del forum potevano restare bloccati sulla prima risposta data dal server, quindi i nuovi voti potevano non comparire."
+      },
+      "changed": {
+        "en": "The site now asks the database for fresh numbers every time. A test checks this, so the problem can't quietly come back.",
+        "es": "Ahora el sitio pide datos nuevos a la base de datos cada vez. Una prueba lo comprueba, así que el error no puede volver sin que nadie lo note.",
+        "pt-PT": "Agora o site pede sempre números atualizados à base de dados. Um teste verifica isto, para que o erro não volte sem ninguém reparar.",
+        "pt-BR": "Agora o site pede números atualizados ao banco de dados toda vez. Um teste verifica isso, para que o erro não volte sem ninguém perceber.",
+        "it": "Ora il sito chiede ogni volta dati aggiornati al database. Un test lo verifica, così l'errore non può tornare senza che nessuno se ne accorga."
+      }
+    },
+    {
+      "id": "2026-09-23-italian-wording",
+      "date": "2026-09-23",
+      "page": "/",
+      "commit": "10aa4a7",
+      "wrong": {
+        "en": "The Italian site name said \"nell'IA\", which reads as \"inside AI\". The forum was called \"Foro\", which in Italian can mean a hole or a law court. Two PAUSA steps had grammar mistakes.",
+        "es": "El nombre del sitio en italiano decía «nell'IA», que se lee como «dentro de la IA». El foro se llamaba «Foro», que en italiano puede significar un agujero o un tribunal. Dos pasos de PAUSA tenían errores de gramática.",
+        "pt-PT": "O nome do site em italiano dizia «nell'IA», que se lê como «dentro da IA». O fórum chamava-se «Foro», que em italiano pode significar um buraco ou um tribunal. Dois passos da PAUSA tinham erros de gramática.",
+        "pt-BR": "O nome do site em italiano dizia \"nell'IA\", que se lê como \"dentro da IA\". O fórum se chamava \"Foro\", que em italiano pode significar um buraco ou um tribunal. Dois passos da PAUSA tinham erros de gramática.",
+        "it": "Il nome del sito diceva «nell'IA», che si legge come «dentro l'IA». Il forum si chiamava «Foro», che in italiano può voler dire un buco o un tribunale. Due passi di PAUSA avevano errori di grammatica."
+      },
+      "changed": {
+        "en": "The site name is now \"Diritti dei consumatori di fronte all'IA\", the forum is the \"Forum Voce e Visione\", and the two PAUSA steps were rewritten in proper Italian.",
+        "es": "El nombre ahora es «Diritti dei consumatori di fronte all'IA», el foro es el «Forum Voce e Visione» y los dos pasos de PAUSA se reescribieron en un italiano correcto.",
+        "pt-PT": "O nome é agora «Diritti dei consumatori di fronte all'IA», o fórum é o «Forum Voce e Visione» e os dois passos da PAUSA foram reescritos em italiano correto.",
+        "pt-BR": "O nome agora é \"Diritti dei consumatori di fronte all'IA\", o fórum é o \"Forum Voce e Visione\" e os dois passos da PAUSA foram reescritos em italiano correto.",
+        "it": "Ora il nome è «Diritti dei consumatori di fronte all'IA», il forum è il «Forum Voce e Visione» e i due passi di PAUSA sono stati riscritti in un italiano corretto."
+      }
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import AboutPage from "@/app/[locale]/about/page";
 import { AttributionFooter } from "@/components/ui/AttributionFooter";
 import { RULES } from "@/lib/forum/consensus";
 import { VOTER_COOKIE_DAYS } from "@/lib/forum/votes";
+import { corrections } from "@/lib/public-log";
 import { PUBLISHED_ROUTES } from "@/lib/site";
 import { MESSAGES } from "@/test-utils";
 
@@ -46,8 +47,18 @@ describe("How this site works page", () => {
   it("lists what isn't finished, including the weaknesses", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     const items = within(section("What isn't finished or perfect")).getAllByRole("listitem");
-    expect(items).toHaveLength(5);
+    expect(items).toHaveLength(6);
+    expect(items[1]).toHaveTextContent("Native speakers haven't checked all of them yet.");
     expect(items.at(-1)).toHaveTextContent("can't fully stop someone from voting twice");
+  });
+
+  it("lists every fixed error from the corrections log, before the contact box", () => {
+    render(<HowItWorksPage params={{ locale: "en" }} />);
+    const log = section("Corrections");
+    expect(log).toHaveTextContent("When something on this site is wrong, we fix it and list it here");
+    expect(within(log).queryAllByRole("listitem")).toHaveLength(corrections.length);
+    const contact = section("Tell us what's wrong");
+    expect(log.compareDocumentPosition(contact) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
   it("asks for criticism with a reason, gives the email, and says whose domain it is", () => {

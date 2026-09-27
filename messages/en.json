@@ -394,7 +394,7 @@
     "reviewLabel": "Human review",
     "reviewDone": "Reviewed by {reviewer} on {date}.",
     "reviewPending": "Not yet complete. {reviewer} reviews each page before launch.",
-    "translationThanks": "These translations exist thanks to my grandparents, Giuffrido and Isolina DiCenso, and my parents, Joanne Sweetman and Robert Sweetman Sr. Thank you, with all my heart.",
+    "translationThanks": "My grandparents, Giuffrido and Isolina DiCenso, left Italy for a new country and learned a new language. Their journey inspired these translations. With love and thanks to them and to my parents, Joanne Sweetman and Robert Sweetman Sr.",
     "checkedLabel": "Sources checked",
     "seeAll": "See all {total} sources in {groups} groups",
     "openRegistry": "Open the full source registry",
@@ -460,15 +460,26 @@
     "unfinishedHeading": "What isn't finished or perfect",
     "unfinished": {
       "review": "Human review of the guide is still in progress.",
+      "translations": "The translations were made with AI help. Native speakers haven't checked all of them yet.",
       "language": "Suggestions only appear in the language they were written in.",
       "results": "Results appear only after {minVotes} or more votes per language, so early on there are none.",
       "ai": "The AI check can be wrong. A person makes every decision.",
       "twice": "Voting without accounts can't fully stop someone from voting twice, for example by using a second browser."
     },
+    "correctionsHeading": "Corrections",
+    "correctionsLead": "<b>When something on this site is wrong, we fix it and list it here</b>, newest first. Each entry says what was wrong and what changed. We name the person who flagged it only if they ask.",
     "contactHeading": "Tell us what's wrong",
     "contact": "<b>Criticism is welcome when it comes with a reason.</b> Tell us what's wrong, why it matters, and, if you can, how to fix it.",
     "contactHow": "Email <mail>{email}</mail>, or <issues>open an issue on GitHub</issues>.",
     "domainNote": "The feedback address uses shipitworks.com, the domain of a business Robert plans to start. That business has no part in this site.",
     "footerLink": "How this site works: every service it uses, what we keep, and what isn't finished"
+  },
+  "PublicLog": {
+    "wrong": "What was wrong",
+    "changed": "What we changed",
+    "flaggedBy": "Flagged by {name}. Thank you.",
+    "commit": "See the exact change on GitHub",
+    "englishOnly": "Only in English for now.",
+    "noCorrections": "No corrections yet. If you find a mistake, please tell us."
   }
 }
