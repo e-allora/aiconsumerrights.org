@@ -1,27 +1,41 @@
 import { render, screen, within } from "@/test-utils";
 
 import ForumPage from "@/app/[locale]/forum/page";
-import { ConsensusCluster, BROAD_AGREEMENT } from "@/components/forum/ConsensusCluster";
+import { ConsensusCluster } from "@/components/forum/ConsensusCluster";
+import { ForumResults } from "@/components/forum/ForumResults";
 
-beforeEach(() => localStorage.clear());
+// The page's vote engine and results card call the API; answer with no votes.
+jest.mock("@/lib/forum/client", () => ({ sendVote: jest.fn(async () => true), clearVotes: jest.fn(async () => true) }));
+const mockFetch = jest.fn();
+beforeEach(() => {
+  localStorage.clear();
+  mockFetch.mockReset().mockResolvedValue({ ok: true, json: async () => ({ rows: [] }) });
+  global.fetch = mockFetch as unknown as typeof fetch;
+});
+
+// Renders the page and waits for its results card to finish loading.
+async function renderPage() {
+  render(<ForumPage params={{ locale: "en" }} />);
+  await screen.findByTestId("progress");
+}
 
 describe("Forum page", () => {
-  it("leads with the psychological safety message", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
+  it("leads with the psychological safety message", async () => {
+    await renderPage();
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Your voice belongs here");
     expect(
       screen.getByText("Technology works best when everyone participates in shaping it.")
     ).toBeInTheDocument();
   });
 
-  it("says plainly that votes are counted and suggestions are not sent yet", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
+  it("says plainly that votes are counted and suggestions are not sent yet", async () => {
+    await renderPage();
     expect(screen.getByTestId("preview-notice")).toHaveTextContent("Your votes are now counted");
     expect(screen.getByTestId("preview-notice")).toHaveTextContent("Suggested statements are not sent yet");
   });
 
-  it("says what a vote stores, where, and how to delete it, before the voting card", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
+  it("says what a vote stores, where, and how to delete it, before the voting card", async () => {
+    await renderPage();
     const note = screen.getByTestId("vote-privacy");
     expect(note).toHaveTextContent("a random code saved in your browser");
     expect(note).toHaveTextContent("We don't store your name, email, or IP address");
@@ -31,8 +45,8 @@ describe("Forum page", () => {
     expect(note.compareDocumentPosition(toolbar) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
-  it("lists the five principles of constructive dialogue in order", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
+  it("lists the five principles of constructive dialogue in order", async () => {
+    await renderPage();
     const list = screen.getByRole("region", { name: "Follow five principles of constructive dialogue" });
     const names = within(list).getAllByRole("listitem").map((li) => li.querySelector("strong")!.textContent);
     expect(names).toEqual([
@@ -44,33 +58,31 @@ describe("Forum page", () => {
     ]);
   });
 
-  it("shows the civil discourse notice", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
+  it("shows the civil discourse notice", async () => {
+    await renderPage();
     expect(
       screen.getAllByText(/Your input is reviewed for civil discourse standards\. We critique ideas, not people\./).length
     ).toBeGreaterThan(0);
   });
 
-  it("shows the feedback loop card without claiming results that do not exist", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
+  it("shows the feedback loop card without claiming results that do not exist", async () => {
+    await renderPage();
     const card = screen.getByRole("region", { name: "We asked, you said, we did" });
     expect(within(card).getByText("We asked")).toBeInTheDocument();
     expect(within(card).getByText(/^No results yet/)).toBeInTheDocument();
     expect(within(card).getByText(/^Nothing yet/)).toBeInTheDocument();
-    expect(card).toHaveAccessibleDescription("Status: waiting for the forum to open.");
+    expect(card).toHaveAccessibleDescription("Status: voting is open.");
   });
 
-  it("labels the consensus numbers as example data before any number", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
-    const cluster = screen.getByRole("region", { name: "Where groups agree" });
-    const banner = within(cluster).getByTestId("example-banner");
-    expect(banner).toHaveTextContent("Example data. No votes have been counted yet.");
-    const text = cluster.textContent!;
-    expect(text.indexOf("Example data")).toBeLessThan(text.search(/\d+%/));
+  it("explains results by language group, never by opinion clusters that do not exist", async () => {
+    await renderPage();
+    const section = screen.getByRole("region", { name: "See where people agree" });
+    expect(section).toHaveTextContent("Votes are grouped by the language people vote in.");
+    expect(section).not.toHaveTextContent(/grouped by how they vote|example/i);
   });
 
-  it("has one h1 and action-first section headings", () => {
-    render(<ForumPage params={{ locale: "en" }} />);
+  it("has one h1 and action-first section headings", async () => {
+    await renderPage();
     const h2s = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
     expect(h2s).toEqual([
       "Follow five principles of constructive dialogue",
@@ -83,23 +95,63 @@ describe("Forum page", () => {
 });
 
 describe("ConsensusCluster", () => {
-  const item = (agree: number[]) => ({
-    id: "x",
-    statement: "reasons help.",
-    groups: agree.map((a, i) => ({ group: `Group ${i}`, agree: a })),
-  });
+  const result = { id: "t2-reasons", lowest: 72, groups: [
+    { locale: "en" as const, agree: 88, votes: 40 },
+    { locale: "it" as const, agree: 72, votes: 25 },
+  ] };
 
-  it("shows a statement only when every group agrees at the threshold or above", () => {
-    const { rerender } = render(<ConsensusCluster items={[item([90, 80, BROAD_AGREEMENT])]} example={false} />);
-    expect(screen.getByText(/of participants across all groups agree/)).toBeInTheDocument();
-    rerender(<ConsensusCluster items={[item([95, 95, BROAD_AGREEMENT - 1])]} example={false} />);
+  it("states the rules and the vote count before any result", () => {
+    render(<ConsensusCluster items={[]} progress={{ votes: 0, languages: 0 }} />);
+    const card = screen.getByRole("region", { name: "Where groups agree" });
+    expect(card).toHaveTextContent(
+      "only when at least 2 language groups each have 20 or more votes on it, and every one of those groups agrees at 60% or more. Passes are not counted."
+    );
+    expect(screen.getByTestId("progress")).toHaveTextContent("No votes have been counted yet.");
     expect(screen.getByText("No statement has broad agreement yet.")).toBeInTheDocument();
   });
 
-  it("gives every bar its number in text, not only in color", () => {
-    render(<ConsensusCluster items={[item([91, 86, 87])]} example={false} />);
-    for (const n of [91, 86, 87]) expect(screen.getByText(`${n}% agree`)).toBeInTheDocument();
-    expect(screen.getByText("88% of participants across all groups agree")).toBeInTheDocument();
-    expect(screen.queryByTestId("example-banner")).not.toBeInTheDocument();
+  it("shows the lowest group's percent, and each group's percent and vote count in text", () => {
+    render(<ConsensusCluster items={[result]} progress={{ votes: 70, languages: 2 }} />);
+    expect(screen.getByTestId("progress")).toHaveTextContent("70 votes counted so far, from 2 languages.");
+    expect(screen.getByText("At least 72% agree in every language group:").parentElement).toHaveTextContent(
+      "When software helps make a decision about you, you should get the top reasons in plain language."
+    );
+    expect(screen.getByText("88% agree, 40 votes")).toBeInTheDocument();
+    expect(screen.getByText("72% agree, 25 votes")).toBeInTheDocument();
+    expect(screen.getByText("Italiano")).toHaveAttribute("lang", "it");
+  });
+
+  it("uses singular words for one vote from one language", () => {
+    render(<ConsensusCluster items={[]} progress={{ votes: 1, languages: 1 }} />);
+    expect(screen.getByTestId("progress")).toHaveTextContent("1 vote counted so far, from 1 language.");
+  });
+});
+
+describe("ForumResults", () => {
+  const rows = (agreeEn: number, agreeIt: number) => [
+    { statementId: "t1-disclose", locale: "en", agree: agreeEn, disagree: 20 - agreeEn, pass: 3 },
+    { statementId: "t1-disclose", locale: "it", agree: agreeIt, disagree: 20 - agreeIt, pass: 0 },
+  ];
+
+  it("says it is loading, then shows live results from the API", async () => {
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ rows: rows(18, 15) }) });
+    render(<ForumResults />);
+    expect(screen.getByTestId("results-status")).toHaveTextContent("Loading results…");
+    expect(await screen.findByText("At least 75% agree in every language group:")).toBeInTheDocument();
+    expect(screen.getByTestId("progress")).toHaveTextContent("43 votes counted so far, from 2 languages.");
+    expect(mockFetch).toHaveBeenCalledWith("/api/forum/results");
+  });
+
+  it("shows no result when one language group falls below the threshold", async () => {
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ rows: rows(18, 11) }) });
+    render(<ForumResults />);
+    expect(await screen.findByText("No statement has broad agreement yet.")).toBeInTheDocument();
+  });
+
+  it("says plainly when results cannot load, and shows no numbers", async () => {
+    mockFetch.mockResolvedValue({ ok: false, status: 500 });
+    render(<ForumResults />);
+    expect(await screen.findByText("Results could not be loaded right now. Please try again later.")).toBeInTheDocument();
+    expect(screen.queryByText(/\d+%/)).not.toBeInTheDocument();
   });
 });

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { ConsensusCluster, type ConsensusItem } from "@/components/forum/ConsensusCluster";
+import { ForumResults } from "@/components/forum/ForumResults";
 import { StatementSubmission } from "@/components/forum/StatementSubmission";
 import { VotingEngine } from "@/components/forum/VotingEngine";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -33,18 +33,6 @@ export default function ForumPage({ params: { locale } }: Props) {
   setRequestLocale(locale);
   const t = useTranslations("Forum");
 
-  // Illustration only. The ConsensusCluster labels it as example data.
-  const exampleConsensus: ConsensusItem[] = [
-    {
-      id: "example-reasons",
-      statement: t("consensus.exampleStatement"),
-      groups: [
-        { group: t("consensus.exampleGroup", { letter: "A" }), agree: 91 },
-        { group: t("consensus.exampleGroup", { letter: "B" }), agree: 86 },
-        { group: t("consensus.exampleGroup", { letter: "C" }), agree: 87 },
-      ],
-    },
-  ];
   const counts = { count: STATEMENTS.length, tracks: TRACKS.length };
 
   return (
@@ -107,7 +95,7 @@ export default function ForumPage({ params: { locale } }: Props) {
           <h2 id="results">{t("results.heading")}</h2>
           <p>{t.rich("results.lead", { b: bold })}</p>
         </div>
-        <ConsensusCluster items={exampleConsensus} example />
+        <ForumResults />
       </section>
 
       <section aria-labelledby="loop" className="flex flex-col gap-6">

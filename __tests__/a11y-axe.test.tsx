@@ -1,4 +1,4 @@
-import { render } from "@/test-utils";
+import { render, screen } from "@/test-utils";
 import { axe } from "jest-axe";
 
 import AboutPage from "@/app/[locale]/about/page";
@@ -45,6 +45,8 @@ describe("axe: zero WCAG A/AA violations", () => {
       </ThemeProvider>,
       { locale }
     );
+    // Audit the forum's loaded results card, not its loading message.
+    if (Page === ForumPage) await screen.findByTestId("progress");
     const results = await axe(container, RUN);
     expect(results.violations.map((v) => `${v.id}: ${v.help} (${v.nodes.length})`)).toEqual([]);
   });

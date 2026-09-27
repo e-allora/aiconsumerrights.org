@@ -283,13 +283,13 @@
     },
     "results": {
       "heading": "See where people agree",
-      "lead": "<b>Results show common ground, not the loudest voices.</b> People are grouped by how they vote, and a statement counts as broad agreement only when every group supports it."
+      "lead": "<b>Results show common ground, not the loudest voices.</b> Votes are grouped by the language people vote in. A statement counts as broad agreement only when every language group supports it."
     },
     "loop": {
       "heading": "Track what changes because of you",
       "lead": "<b>Every question leads to a visible outcome.</b> This card is updated each time votes shape a guide or resource on this site.",
       "title": "We asked, you said, we did",
-      "status": "Status: waiting for the forum to open.",
+      "status": "Status: voting is open.",
       "asked": "We asked",
       "askedText": "{count} statements in {tracks} tracks, listed above.",
       "said": "You said",
@@ -344,15 +344,15 @@
       "kept": "Thank you. Suggestions open soon, so your statement was not sent anywhere yet."
     },
     "consensus": {
-      "example": "Example data. No votes have been counted yet. These numbers only show how results will look.",
       "heading": "Where groups agree",
-      "lead": "<b>Common ground comes first.</b> A statement shows here only when every group agrees at {threshold}% or more.",
+      "lead": "<b>Common ground comes first.</b> A statement shows here only when at least {minGroups} language groups each have {minVotes} or more votes on it, and every one of those groups agrees at {threshold}% or more. Passes are not counted.",
+      "noVotes": "No votes have been counted yet.",
+      "progress": "{votes, plural, one {1 vote counted so far, from {languages, plural, one {1 language} other {# languages}}.} other {# votes counted so far, from {languages, plural, one {1 language} other {# languages}}.}}",
       "none": "No statement has broad agreement yet.",
-      "summary": "{percent}% of participants across all groups agree",
-      "exampleTag": "(example)",
-      "groupAgree": "{percent}% agree",
-      "exampleStatement": "that plain-language reasons build trust.",
-      "exampleGroup": "Opinion group {letter}"
+      "summary": "At least {percent}% agree in every language group:",
+      "groupAgree": "{percent}% agree, {votes} votes",
+      "loading": "Loading results…",
+      "error": "Results could not be loaded right now. Please try again later."
     }
   },
   "About": {

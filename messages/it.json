@@ -283,13 +283,13 @@
     },
     "results": {
       "heading": "Guarda su cosa le persone sono d'accordo",
-      "lead": "<b>I risultati mostrano ciò che abbiamo in comune, non le voci più forti.</b> Le persone sono raggruppate in base a come votano, e una frase conta come accordo ampio solo quando tutti i gruppi la sostengono."
+      "lead": "<b>I risultati mostrano ciò che abbiamo in comune, non le voci più forti.</b> I voti sono raggruppati in base alla lingua in cui ognuno vota. Una frase conta come accordo ampio solo quando tutti i gruppi linguistici la sostengono."
     },
     "loop": {
       "heading": "Segui cosa cambia grazie a te",
       "lead": "<b>Ogni domanda porta a un risultato visibile.</b> Questa scheda viene aggiornata ogni volta che i voti cambiano una guida o una risorsa di questo sito.",
       "title": "Abbiamo chiesto, hai risposto, abbiamo agito",
-      "status": "Stato: in attesa che il forum apra.",
+      "status": "Stato: le votazioni sono aperte.",
       "asked": "Abbiamo chiesto",
       "askedText": "{count} frasi su {tracks} temi, che trovi più sopra.",
       "said": "Hai risposto",
@@ -344,15 +344,15 @@
       "kept": "Grazie. Le proposte apriranno presto, quindi la tua frase non è stata ancora inviata da nessuna parte."
     },
     "consensus": {
-      "example": "Dati di esempio. Nessun voto è stato ancora contato. Questi numeri mostrano solo come appariranno i risultati.",
       "heading": "Su cosa i gruppi sono d'accordo",
-      "lead": "<b>Prima ciò che abbiamo in comune.</b> Una frase compare qui solo quando tutti i gruppi sono d'accordo al {threshold}% o più.",
+      "lead": "<b>Prima ciò che abbiamo in comune.</b> Una frase compare qui solo quando almeno {minGroups} gruppi linguistici hanno ciascuno {minVotes} voti o più su di essa, e tutti questi gruppi sono d'accordo al {threshold}% o più. I voti «Passo» non vengono contati.",
+      "noVotes": "Nessun voto è stato ancora contato.",
+      "progress": "{votes, plural, one {1 voto contato finora, da {languages, plural, one {1 lingua} other {# lingue}}.} other {# voti contati finora, da {languages, plural, one {1 lingua} other {# lingue}}.}}",
       "none": "Nessuna frase ha ancora un accordo ampio.",
-      "summary": "Il {percent}% dei partecipanti di tutti i gruppi è d'accordo",
-      "exampleTag": "(esempio)",
-      "groupAgree": "{percent}% d'accordo",
-      "exampleStatement": "sul fatto che motivi in parole semplici creano fiducia.",
-      "exampleGroup": "Gruppo di opinione {letter}"
+      "summary": "Almeno il {percent}% è d'accordo in ogni gruppo linguistico:",
+      "groupAgree": "{percent}% d'accordo, {votes} voti",
+      "loading": "Caricamento dei risultati…",
+      "error": "Non è stato possibile caricare i risultati. Riprova più tardi."
     }
   },
   "About": {

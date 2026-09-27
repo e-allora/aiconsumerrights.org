@@ -100,3 +100,9 @@ if (typeof window !== "undefined") {
   proto.releasePointerCapture ??= () => {};
   proto.scrollIntoView ??= () => {};
 }
+
+// jsdom has no fetch. The forum calls its API from the browser; by default,
+// answer every call as an empty forum. Tests that care replace global.fetch.
+if (typeof window !== "undefined" && !globalThis.fetch) {
+  globalThis.fetch = (async () => ({ ok: true, status: 200, json: async () => ({ ok: true, rows: [] }) })) as unknown as typeof fetch;
+}

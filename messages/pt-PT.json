@@ -283,13 +283,13 @@
     },
     "results": {
       "heading": "Veja em que as pessoas concordam",
-      "lead": "<b>Os resultados mostram o que temos em comum, não as vozes mais altas.</b> As pessoas são agrupadas pela forma como votam, e uma frase só conta como acordo amplo quando todos os grupos a apoiam."
+      "lead": "<b>Os resultados mostram o que temos em comum, não as vozes mais altas.</b> Os votos são agrupados pelo idioma em que cada pessoa vota. Uma frase só conta como acordo amplo quando todos os grupos de idioma a apoiam."
     },
     "loop": {
       "heading": "Acompanhe o que muda graças a si",
       "lead": "<b>Cada pergunta leva a um resultado visível.</b> Este cartão é atualizado sempre que os votos mudam um guia ou um recurso deste site.",
       "title": "Perguntámos, respondeu, agimos",
-      "status": "Estado: à espera de que o fórum abra.",
+      "status": "Estado: a votação está aberta.",
       "asked": "Perguntámos",
       "askedText": "{count} frases em {tracks} temas, que vê mais acima.",
       "said": "Respondeu",
@@ -344,15 +344,15 @@
       "kept": "Obrigado. As sugestões abrem em breve, por isso a sua frase ainda não foi enviada para lado nenhum."
     },
     "consensus": {
-      "example": "Dados de exemplo. Ainda não foi contado nenhum voto. Estes números só mostram como os resultados vão aparecer.",
       "heading": "Em que os grupos concordam",
-      "lead": "<b>Primeiro o que temos em comum.</b> Uma frase só aparece aqui quando todos os grupos concordam a {threshold}% ou mais.",
+      "lead": "<b>Primeiro o que temos em comum.</b> Uma frase só aparece aqui quando pelo menos {minGroups} grupos de idioma têm, cada um, {minVotes} ou mais votos sobre ela, e todos esses grupos concordam a {threshold}% ou mais. Os votos «Passo» não contam.",
+      "noVotes": "Ainda não foi contado nenhum voto.",
+      "progress": "{votes, plural, one {1 voto contado até agora, de {languages, plural, one {1 idioma} other {# idiomas}}.} other {# votos contados até agora, de {languages, plural, one {1 idioma} other {# idiomas}}.}}",
       "none": "Ainda nenhuma frase tem acordo amplo.",
-      "summary": "{percent}% dos participantes de todos os grupos concordam",
-      "exampleTag": "(exemplo)",
-      "groupAgree": "{percent}% concordam",
-      "exampleStatement": "que as razões em linguagem simples criam confiança.",
-      "exampleGroup": "Grupo de opinião {letter}"
+      "summary": "Pelo menos {percent}% concordam em cada grupo de idioma:",
+      "groupAgree": "{percent}% concordam, {votes} votos",
+      "loading": "A carregar os resultados…",
+      "error": "Não foi possível carregar os resultados agora. Tente mais tarde."
     }
   },
   "About": {

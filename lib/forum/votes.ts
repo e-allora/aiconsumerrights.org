@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 
 import { isLocale, type Locale } from "@/lib/i18n/routing";
+import type { CountRow } from "@/lib/forum/consensus";
 import { getSql } from "@/lib/forum/db";
 import { STATEMENTS } from "@/lib/forum/statements";
 
@@ -42,4 +43,22 @@ export async function saveVote(voter: string, { statementId, vote, locale }: Vot
 /** Deletes every vote from one voter. */
 export async function deleteVotes(voter: string) {
   await getSql()`DELETE FROM votes WHERE voter = ${voter}`;
+}
+
+/** Agree, disagree, and pass counts for every statement in every language. */
+export async function countVotes(): Promise<CountRow[]> {
+  const rows = (await getSql()`
+    SELECT statement_id, locale,
+      count(*) FILTER (WHERE vote = 'agree')::int AS agree,
+      count(*) FILTER (WHERE vote = 'disagree')::int AS disagree,
+      count(*) FILTER (WHERE vote = 'pass')::int AS pass
+    FROM votes
+    GROUP BY statement_id, locale`) as Record<string, string | number>[];
+  return rows.map((r) => ({
+    statementId: String(r.statement_id),
+    locale: String(r.locale),
+    agree: Number(r.agree),
+    disagree: Number(r.disagree),
+    pass: Number(r.pass),
+  }));
 }
