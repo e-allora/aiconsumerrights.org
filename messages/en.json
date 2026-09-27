@@ -257,8 +257,9 @@
     "eyebrow": "Voice and Vision Forum",
     "title": "Your voice belongs here",
     "lead": "<b>Technology works best when everyone participates in shaping it.</b> Vote on short statements, or suggest your own. No account needed.",
-    "preview": "<b>This forum is in preview.</b> Votes and statements stay in your browser. Nothing is sent anywhere until the forum opens.",
+    "preview": "<b>The forum is partly open.</b> Your votes are now counted. Suggested statements are not sent yet; that part opens soon.",
     "civility": "Your input is reviewed for civil discourse standards. We critique ideas, not people.",
+    "privacy": "<b>What we keep when you vote:</b> your vote, the page language, and a random code saved in your browser so each person votes once. We don't store your name, email, or IP address with it. Votes are stored in Frankfurt, Germany. “Clear my votes” deletes them.",
     "principles": {
       "heading": "Follow five principles of constructive dialogue",
       "lead": "<b>These keep the forum useful for everyone.</b> Each statement stands on its own, so there are no reply threads to argue in.",
@@ -328,7 +329,9 @@
       "recordedAll": "Recorded: {choice}. You have answered all {total} statements.",
       "cleared": "Votes cleared. Statement 1 of {total}.",
       "doneTitle": "Thank you. You answered every statement.",
-      "clear": "Clear my votes and start over"
+      "clear": "Clear my votes and start over",
+      "unsent": "{count, plural, one {1 vote has} other {# votes have}} not been sent yet. We will try again on your next vote or visit.",
+      "clearFailed": "We could not clear your votes. Check your connection and try again."
     },
     "submission": {
       "label": "Suggest a statement for others to vote on",
@@ -338,7 +341,7 @@
       "submit": "Submit for review",
       "empty": "Please write a statement first.",
       "sent": "Thank you. Your statement is waiting for review.",
-      "kept": "Thank you. This forum is still in preview, so your statement was not sent anywhere yet."
+      "kept": "Thank you. Suggestions open soon, so your statement was not sent anywhere yet."
     },
     "consensus": {
       "example": "Example data. No votes have been counted yet. These numbers only show how results will look.",

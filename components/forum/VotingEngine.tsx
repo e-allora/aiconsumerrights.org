@@ -2,10 +2,11 @@
 
 import * as React from "react";
 import { ArrowRight, RotateCcw, ThumbsDown, ThumbsUp } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { clearVotes, sendVote } from "@/lib/forum/client";
 import { STATEMENTS, type Statement } from "@/lib/forum/statements";
 import { cn } from "@/lib/utils";
 
@@ -19,20 +20,24 @@ const CHOICES: { vote: Vote; icon: React.ElementType; variant: "default" | "seco
   { vote: "pass", icon: ArrowRight, variant: "outline" },
 ];
 
-const STORAGE_KEY = "forum-votes-v1";
+// v1 held votes from the preview, when the page promised nothing was sent.
+// They are left behind, never sent; everyone votes fresh.
+const STORAGE_KEY = "forum-votes-v2";
+// Statement ids whose vote has not reached the server yet.
+const UNSENT_KEY = "forum-unsent-v2";
 
-function loadVotes(): Votes {
+function load<T>(key: string, empty: T): T {
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as Votes) : {};
+    const raw = window.localStorage.getItem(key);
+    return raw ? (JSON.parse(raw) as T) : empty;
   } catch {
-    return {};
+    return empty;
   }
 }
 
-function saveVotes(votes: Votes) {
+function save(key: string, value: unknown) {
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(votes));
+    window.localStorage.setItem(key, JSON.stringify(value));
   } catch {
     // Private windows can block storage. Votes still work for this visit.
   }
@@ -66,26 +71,50 @@ export function VotingEngine({
 }) {
   const t = useTranslations("Forum.voting");
   const tf = useTranslations("Forum");
+  const locale = useLocale();
   const [votes, setVotes] = React.useState<Votes>({});
   // Mirrors `votes` synchronously, so two clicks in the same tick can't
   // both pass the one-vote check before React re-renders.
   const votesRef = React.useRef<Votes>({});
   const [current, setCurrent] = React.useState(0);
   const [announcement, setAnnouncement] = React.useState("");
+  const [unsent, setUnsent] = React.useState<string[]>([]);
+  const unsentRef = React.useRef<string[]>([]);
+  const [clearFailed, setClearFailed] = React.useState(false);
   const headingRef = React.useRef<HTMLHeadingElement>(null);
   const buttonRefs = React.useRef<(HTMLButtonElement | null)[]>([]);
   const focusHeading = React.useRef(false);
   const tipBase = React.useId();
 
+  function markUnsent(ids: string[]) {
+    unsentRef.current = ids;
+    save(UNSENT_KEY, ids);
+  }
+
+  // Sends every vote that hasn't reached the server. A vote that fails stays
+  // on the list and is tried again on the next vote or visit. The notice
+  // updates only after trying, so it never flashes during a normal send.
+  const flush = React.useCallback(async () => {
+    for (const id of unsentRef.current) {
+      const vote = votesRef.current[id];
+      const ok = !vote || (await sendVote(id, vote, locale));
+      if (ok) markUnsent(unsentRef.current.filter((x) => x !== id));
+    }
+    const left = unsentRef.current;
+    setUnsent((prev) => (prev.join() === left.join() ? prev : left));
+  }, [locale]);
+
   // Restore earlier votes after mount so server and client HTML match.
   React.useEffect(() => {
-    const saved = loadVotes();
+    const saved = load<Votes>(STORAGE_KEY, {});
     if (Object.keys(saved).length) {
       votesRef.current = saved;
       setVotes(saved);
       setCurrent(Math.max(firstOpen(saved, 0, statements), 0));
     }
-  }, [statements]);
+    unsentRef.current = load<string[]>(UNSENT_KEY, []);
+    void flush();
+  }, [statements, flush]);
 
   React.useEffect(() => {
     if (focusHeading.current) {
@@ -104,8 +133,10 @@ export function VotingEngine({
     const next = { ...votesRef.current, [statement.id]: vote };
     votesRef.current = next;
     const nextIdx = firstOpen(next, current + 1, statements);
-    saveVotes(next);
+    save(STORAGE_KEY, next);
     setVotes(next);
+    markUnsent([...unsentRef.current, statement.id]);
+    void flush();
     onVote?.(statement.id, vote);
     focusHeading.current = true;
     if (nextIdx >= 0) setCurrent(nextIdx);
@@ -117,8 +148,18 @@ export function VotingEngine({
     );
   }
 
-  function reset() {
-    saveVotes({});
+  // Clears the votes on the server first. If that fails, nothing is cleared
+  // here either, so the page never says votes are gone when they are not.
+  async function reset() {
+    if (!(await clearVotes())) {
+      setClearFailed(true);
+      setAnnouncement(t("clearFailed"));
+      return;
+    }
+    setClearFailed(false);
+    save(STORAGE_KEY, {});
+    markUnsent([]);
+    setUnsent([]);
     votesRef.current = {};
     setVotes({});
     setCurrent(0);
@@ -245,8 +286,15 @@ export function VotingEngine({
               <RotateCcw aria-hidden="true" />
               {t("clear")}
             </Button>
+            {clearFailed && <p className="font-bold">{t("clearFailed")}</p>}
           </CardContent>
         </Card>
+      )}
+
+      {unsent.length > 0 && (
+        <p data-testid="unsent" className="text-base text-muted-foreground">
+          {t("unsent", { count: unsent.length })}
+        </p>
       )}
 
       <p role="status" aria-live="polite" className="sr-only">

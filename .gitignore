@@ -45,3 +45,4 @@ next-env.d.ts
 
 # reference PDFs kept locally, never published
 /*.pdf
+.env*

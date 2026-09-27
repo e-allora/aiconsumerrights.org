@@ -90,6 +90,9 @@ export default function ForumPage({ params: { locale } }: Props) {
             })}
           </p>
           <p className="text-base text-muted-foreground">{t("civility")}</p>
+          <p data-testid="vote-privacy" className="text-base">
+            {t.rich("privacy", { b: bold })}
+          </p>
         </div>
         <VotingEngine />
       </section>

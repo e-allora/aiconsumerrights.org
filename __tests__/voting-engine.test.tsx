@@ -1,7 +1,8 @@
-import { act, render, screen } from "@/test-utils";
+import { act, render, screen, waitFor } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import { VotingEngine, tally } from "@/components/forum/VotingEngine";
+import { clearVotes, sendVote } from "@/lib/forum/client";
 import { STATEMENTS, TRACKS } from "@/lib/forum/statements";
 import { MESSAGES } from "@/test-utils";
 
@@ -11,7 +12,18 @@ const FOCUS_RING = ["focus-visible:ring-[3px]", "focus-visible:ring-ring", "focu
 const heading = () => screen.getByRole("heading", { level: 3 });
 const btn = (name: "Agree" | "Disagree" | "Pass") => screen.getByRole("button", { name });
 
-beforeEach(() => localStorage.clear());
+jest.mock("@/lib/forum/client", () => ({
+  sendVote: jest.fn(async () => true),
+  clearVotes: jest.fn(async () => true),
+}));
+const mockSend = sendVote as jest.MockedFunction<typeof sendVote>;
+const mockClear = clearVotes as jest.MockedFunction<typeof clearVotes>;
+
+beforeEach(() => {
+  localStorage.clear();
+  mockSend.mockReset().mockResolvedValue(true);
+  mockClear.mockReset().mockResolvedValue(true);
+});
 
 describe("seed statements", () => {
   it("has 8 short statements, 2 in each of the 4 tracks, in every language", () => {
@@ -97,6 +109,7 @@ describe("VotingEngine voting", () => {
     expect(screen.queryByRole("button", { name: "Agree" })).not.toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Clear my votes and start over" }));
+    expect(mockClear).toHaveBeenCalledTimes(1);
     expect(heading()).toHaveTextContent(text(0));
     expect(screen.getByTestId("tally")).toHaveTextContent("0 agree, 0 disagree, 0 pass");
   });
@@ -121,6 +134,50 @@ describe("VotingEngine voting", () => {
     await user.click(btn("Agree"));
     expect(heading()).toHaveTextContent(text(1));
     spy.mockRestore();
+  });
+});
+
+describe("VotingEngine sending votes", () => {
+  it("sends each vote with the page language", async () => {
+    const user = userEvent.setup();
+    render(<VotingEngine />, { locale: "it" });
+    await user.click(screen.getByRole("button", { name: MESSAGES.it.Forum.voting.agree }));
+    expect(mockSend).toHaveBeenCalledWith(STATEMENTS[0].id, "agree", "it");
+    expect(screen.queryByTestId("unsent")).not.toBeInTheDocument();
+  });
+
+  it("keeps a vote that fails to send, says so, and sends it on the next visit", async () => {
+    const user = userEvent.setup();
+    mockSend.mockResolvedValue(false);
+    const { unmount } = render(<VotingEngine />);
+    await user.click(btn("Agree"));
+    expect(await screen.findByTestId("unsent")).toHaveTextContent("1 vote has not been sent yet.");
+    unmount();
+
+    mockSend.mockClear().mockResolvedValue(true);
+    render(<VotingEngine />);
+    await waitFor(() => expect(mockSend).toHaveBeenCalledWith(STATEMENTS[0].id, "agree", "en"));
+    await waitFor(() => expect(screen.queryByTestId("unsent")).not.toBeInTheDocument());
+    expect(screen.getByText("1 of 8 answered")).toBeInTheDocument();
+  });
+
+  it("does not send or show votes saved during the preview", async () => {
+    localStorage.setItem("forum-votes-v1", JSON.stringify({ [STATEMENTS[0].id]: "agree" }));
+    render(<VotingEngine />);
+    await act(async () => {});
+    expect(mockSend).not.toHaveBeenCalled();
+    expect(screen.getByText("0 of 8 answered")).toBeInTheDocument();
+  });
+
+  it("keeps the votes and says so when clearing them on the server fails", async () => {
+    const user = userEvent.setup();
+    mockClear.mockResolvedValue(false);
+    render(<VotingEngine statements={STATEMENTS.slice(0, 1)} />);
+    await user.click(btn("Agree"));
+    await user.click(screen.getByRole("button", { name: "Clear my votes and start over" }));
+    expect(await screen.findByText("We could not clear your votes. Check your connection and try again.", { selector: "p.font-bold" })).toBeInTheDocument();
+    expect(screen.getByTestId("tally")).toHaveTextContent("1 agree");
+    expect(screen.getByRole("status")).toHaveTextContent("We could not clear your votes.");
   });
 });
 

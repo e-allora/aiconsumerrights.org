@@ -257,8 +257,9 @@
     "eyebrow": "Foro de Voz y Visión",
     "title": "Tu voz tiene un lugar aquí",
     "lead": "<b>La tecnología funciona mejor cuando todas las personas participan en darle forma.</b> Vota sobre frases cortas, o sugiere la tuya. No necesitas una cuenta.",
-    "preview": "<b>Este foro está en versión de prueba.</b> Los votos y las frases se quedan en tu navegador. No se envía nada hasta que el foro abra.",
+    "preview": "<b>El foro está abierto en parte.</b> Tus votos ya se cuentan. Las frases que propongas todavía no se envían; esa parte abrirá pronto.",
     "civility": "Tus aportes se revisan según normas de diálogo respetuoso. Analizamos las ideas, no a las personas.",
+    "privacy": "<b>Qué guardamos cuando votas:</b> tu voto, el idioma de la página y un código al azar guardado en tu navegador, para que cada persona vote una sola vez. No guardamos tu nombre, tu correo ni tu dirección IP con el voto. Los votos se guardan en Fráncfort (Alemania). «Borrar mis votos» los elimina.",
     "principles": {
       "heading": "Sigue cinco principios para un diálogo constructivo",
       "lead": "<b>Estos principios hacen que el foro sea útil para todas las personas.</b> Cada frase se sostiene sola, así que no hay hilos de respuestas para discutir.",
@@ -328,7 +329,9 @@
       "recordedAll": "Guardado: {choice}. Respondiste las {total} frases.",
       "cleared": "Votos borrados. Frase 1 de {total}.",
       "doneTitle": "Gracias. Respondiste todas las frases.",
-      "clear": "Borrar mis votos y empezar de nuevo"
+      "clear": "Borrar mis votos y empezar de nuevo",
+      "unsent": "{count, plural, one {1 voto aún no se ha enviado} other {# votos aún no se han enviado}}. Lo intentaremos de nuevo en tu próximo voto o visita.",
+      "clearFailed": "No pudimos borrar tus votos. Revisa tu conexión e inténtalo de nuevo."
     },
     "submission": {
       "label": "Sugiere una frase para que otras personas voten",
@@ -338,7 +341,7 @@
       "submit": "Enviar para revisión",
       "empty": "Primero escribe una frase, por favor.",
       "sent": "Gracias. Tu frase está esperando revisión.",
-      "kept": "Gracias. Este foro todavía está en versión de prueba, así que tu frase aún no se envió a ningún lugar."
+      "kept": "Gracias. Las propuestas abrirán pronto, así que tu frase aún no se envió a ningún lugar."
     },
     "consensus": {
       "example": "Datos de ejemplo. Todavía no se ha contado ningún voto. Estos números solo muestran cómo se verán los resultados.",

@@ -14,9 +14,21 @@ describe("Forum page", () => {
     ).toBeInTheDocument();
   });
 
-  it("says plainly that the forum is a preview and nothing is sent", () => {
+  it("says plainly that votes are counted and suggestions are not sent yet", () => {
     render(<ForumPage params={{ locale: "en" }} />);
-    expect(screen.getByTestId("preview-notice")).toHaveTextContent("Nothing is sent anywhere");
+    expect(screen.getByTestId("preview-notice")).toHaveTextContent("Your votes are now counted");
+    expect(screen.getByTestId("preview-notice")).toHaveTextContent("Suggested statements are not sent yet");
+  });
+
+  it("says what a vote stores, where, and how to delete it, before the voting card", () => {
+    render(<ForumPage params={{ locale: "en" }} />);
+    const note = screen.getByTestId("vote-privacy");
+    expect(note).toHaveTextContent("a random code saved in your browser");
+    expect(note).toHaveTextContent("We don't store your name, email, or IP address");
+    expect(note).toHaveTextContent("Frankfurt, Germany");
+    expect(note).toHaveTextContent("“Clear my votes” deletes them.");
+    const toolbar = screen.getByRole("toolbar", { name: "Your vote" });
+    expect(note.compareDocumentPosition(toolbar) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
   it("lists the five principles of constructive dialogue in order", () => {
