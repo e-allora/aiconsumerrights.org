@@ -335,7 +335,7 @@
     },
     "submission": {
       "label": "Sugira uma frase para outras pessoas votarem",
-      "disclosure": "<b>Uma pessoa lê cada frase antes de ela aparecer.</b> Primeiro, um modelo de IA da Mistral verifica se ela tem nomes ou dados de contato. Ele funciona pelo OpenRouter, configurado para não guardar o seu texto. As frases aprovadas aparecem para quem usa o mesmo idioma. Não publicamos frases que apontem para uma pessoa, uma empresa ou um grupo. Por favor, não inclua dados pessoais. Suas contribuições são revisadas segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
+      "disclosure": "<b>Uma pessoa lê cada frase antes de ela aparecer.</b> Primeiro, uma verificação automática com IA procura nomes e dados de contato. A IA funciona em servidores na UE e está configurada para não guardar o seu texto. As frases aprovadas aparecem para quem usa o mesmo idioma. Não publicamos frases que apontem para uma pessoa, uma empresa ou um grupo. Por favor, não inclua dados pessoais. Suas contribuições são revisadas segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
       "placeholder": "ex.: “Os portais de atendimento ao cliente deveriam sempre permitir pedir um atendente humano com um só toque.”",
       "remaining": "Faltam {remaining} de {max} caracteres",
       "submit": "Enviar para revisão",

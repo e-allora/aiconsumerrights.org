@@ -335,7 +335,7 @@
     },
     "submission": {
       "label": "Suggest a statement for others to vote on",
-      "disclosure": "<b>A person reads every statement before it is shown.</b> First, an AI model from Mistral checks it for names and contact details. It runs through OpenRouter, set not to keep your text. Approved statements are shown to people who use the same language. Statements that single out a person, company, or group are not published. Please leave out personal details. Your input is reviewed for civil discourse standards. We critique ideas, not people.",
+      "disclosure": "<b>A person reads every statement before it is shown.</b> First, an automated AI check looks for names and contact details. The AI runs on servers in the EU, and it is set not to keep your text. Approved statements are shown to people who use the same language. Statements that single out a person, company, or group are not published. Please leave out personal details. Your input is reviewed for civil discourse standards. We critique ideas, not people.",
       "placeholder": "e.g., 'Customer service portals should always let you request a human representative with one tap.'",
       "remaining": "{remaining} of {max} characters left",
       "submit": "Submit for review",

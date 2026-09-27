@@ -17,6 +17,11 @@ const LANGUAGES: Record<string, string> = {
   it: "Italian",
 };
 
+const MODEL_NAMES: Record<string, string> = {
+  "mistralai/mistral-small-2603": "Mistral Small",
+  "google/gemini-2.5-flash-lite": "Gemini 2.5 Flash-Lite (backup)",
+};
+
 const FLAGS: [keyof Omit<Precheck, "english">, string][] = [
   ["namesCompany", "Names a company or product"],
   ["namesPerson", "Names a person"],
@@ -36,6 +41,7 @@ function CheckSummary({ item }: { item: Submission }) {
   const raised = FLAGS.filter(([key]) => item.check![key]);
   return (
     <div className="flex flex-col gap-1">
+      {item.check.model && <p className="text-sm text-muted-foreground">Checked by {MODEL_NAMES[item.check.model] ?? item.check.model}.</p>}
       {raised.length === 0 ? (
         <p>AI pre-check: no concerns.</p>
       ) : (

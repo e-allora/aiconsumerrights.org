@@ -81,6 +81,7 @@ describe("Admin review page", () => {
       item({ check: { namesCompany: true, namesPerson: false, contactInfo: false, attack: true, english: "x" } }),
     ]);
     render(await AdminPage());
+    expect(screen.queryByText(/Checked by/)).not.toBeInTheDocument();
     const flags = screen.getByRole("list", { name: "AI pre-check concerns" });
     expect(within(flags).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
       "Names a company or product",
@@ -93,6 +94,14 @@ describe("Admin review page", () => {
     render(await AdminPage());
     expect(screen.getByText(/Not checked: the AI pre-check did not run/)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Check again" })).toBeInTheDocument();
+  });
+
+  it("says which model did the check", async () => {
+    mockList.mockResolvedValue([
+      item({ check: { namesCompany: false, namesPerson: false, contactInfo: false, attack: false, english: "x", model: "google/gemini-2.5-flash-lite" } }),
+    ]);
+    render(await AdminPage());
+    expect(screen.getByText("Checked by Gemini 2.5 Flash-Lite (backup).")).toBeInTheDocument();
   });
 
   it("offers no re-check for a suggestion that was checked", async () => {
