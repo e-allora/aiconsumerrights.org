@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { clearVotes, sendVote } from "@/lib/forum/client";
+import { clearVotes, loadSuggestions, sendVote } from "@/lib/forum/client";
 import { STATEMENTS, type Statement } from "@/lib/forum/statements";
 import { cn } from "@/lib/utils";
 
@@ -60,10 +60,11 @@ const firstOpen = (votes: Votes, from = 0, list = STATEMENTS) => {
 
 /**
  * Pol.is-style voting: one isolated statement at a time, no replies, no
- * threads. Agree, Disagree, or Pass, once per statement.
+ * threads. Agree, Disagree, or Pass, once per statement. The seed
+ * statements come first, then any approved suggestions in this language.
  */
 export function VotingEngine({
-  statements = STATEMENTS,
+  statements: seeds = STATEMENTS,
   onVote,
 }: {
   statements?: Statement[];
@@ -72,6 +73,9 @@ export function VotingEngine({
   const t = useTranslations("Forum.voting");
   const tf = useTranslations("Forum");
   const locale = useLocale();
+  const [suggested, setSuggested] = React.useState<Statement[]>([]);
+  const statements = React.useMemo(() => [...seeds, ...suggested], [seeds, suggested]);
+  const textOf = (s: Statement) => s.text ?? tf(`statements.${s.id}`);
   const [votes, setVotes] = React.useState<Votes>({});
   // Mirrors `votes` synchronously, so two clicks in the same tick can't
   // both pass the one-vote check before React re-renders.
@@ -104,7 +108,18 @@ export function VotingEngine({
     setUnsent((prev) => (prev.join() === left.join() ? prev : left));
   }, [locale]);
 
-  // Restore earlier votes after mount so server and client HTML match.
+  React.useEffect(() => {
+    let live = true;
+    loadSuggestions(locale).then((list) => {
+      if (live && list.length) setSuggested(list.map((s) => ({ id: s.id, text: s.text, track: "community" })));
+    });
+    return () => {
+      live = false;
+    };
+  }, [locale]);
+
+  // Restore earlier votes after mount so server and client HTML match. Runs
+  // again when suggestions arrive, moving to the first unanswered card.
   React.useEffect(() => {
     const saved = load<Votes>(STORAGE_KEY, {});
     if (Object.keys(saved).length) {
@@ -222,7 +237,7 @@ export function VotingEngine({
               })}
             </p>
             <CardTitle ref={headingRef} tabIndex={-1} className="text-display-md focus:outline-none">
-              {tf(`statements.${statement.id}`)}
+              {textOf(statement)}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -278,7 +293,7 @@ export function VotingEngine({
             <ul className="flex flex-col gap-2">
               {statements.map((s) => (
                 <li key={s.id}>
-                  <strong>{votes[s.id] ? t(votes[s.id]) : ""}:</strong> {tf(`statements.${s.id}`)}
+                  <strong>{votes[s.id] ? t(votes[s.id]) : ""}:</strong> {textOf(s)}
                 </li>
               ))}
             </ul>

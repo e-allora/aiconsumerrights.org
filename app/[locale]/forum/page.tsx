@@ -41,12 +41,6 @@ export default function ForumPage({ params: { locale } }: Props) {
         <p className="font-display text-lg font-bold text-link">{t("eyebrow")}</p>
         <h1>{t("title")}</h1>
         <p className="text-xl">{t.rich("lead", { b: bold })}</p>
-        <p
-          data-testid="preview-notice"
-          className="rounded-md border-2 border-border/20 bg-muted px-4 py-3 text-base"
-        >
-          {t.rich("preview", { b: bold })}
-        </p>
       </header>
 
       <section aria-labelledby="principles" className="flex flex-col gap-6">

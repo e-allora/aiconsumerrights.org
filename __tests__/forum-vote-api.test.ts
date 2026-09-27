@@ -7,11 +7,13 @@ import { VOTER_COOKIE, hashVoter, parseVote } from "@/lib/forum/votes";
 // A fake Neon query function that records each query and its values.
 const queries: { text: string; values: unknown[] }[] = [];
 let dbError: Error | null = null;
+let approved = false; // what the "is this suggestion approved?" query finds
 jest.mock("@/lib/forum/db", () => ({
   getSql: () => async (strings: TemplateStringsArray, ...values: unknown[]) => {
     if (dbError) throw dbError;
-    queries.push({ text: strings.join("?").replace(/\s+/g, " ").trim(), values });
-    return [];
+    const text = strings.join("?").replace(/\s+/g, " ").trim();
+    queries.push({ text, values });
+    return text.startsWith("SELECT 1 FROM submissions") && approved ? [{ "?column?": 1 }] : [];
   },
 }));
 
@@ -29,6 +31,7 @@ function request(method: "POST" | "DELETE", body?: unknown, headers: Record<stri
 beforeEach(() => {
   queries.length = 0;
   dbError = null;
+  approved = false;
   jest.spyOn(console, "error").mockImplementation(() => {});
 });
 afterEach(() => jest.restoreAllMocks());
@@ -109,6 +112,32 @@ describe("POST /api/forum/vote", () => {
     expect(res.status).toBe(500);
     expect(await res.json()).toEqual({ ok: false, error: "unavailable" });
     expect(res.headers.get("set-cookie")).toBeNull();
+  });
+});
+
+describe("votes on community suggestions", () => {
+  const ID = "s-5f0c6d6e-2f7a-4f0e-9a51-9a4c1d3f0a11";
+
+  it("saves a vote on an approved suggestion", async () => {
+    approved = true;
+    const res = await POST(request("POST", { ...VALID, statementId: ID }));
+    expect(res.status).toBe(200);
+    expect(queries[0].values).toEqual(["5f0c6d6e-2f7a-4f0e-9a51-9a4c1d3f0a11"]);
+    expect(queries[1].text).toMatch(/^INSERT INTO votes/);
+    expect(queries[1].values[0]).toBe(ID);
+  });
+
+  it("refuses a vote on a suggestion that is pending, rejected, or made up", async () => {
+    const res = await POST(request("POST", { ...VALID, statementId: ID }));
+    expect(res.status).toBe(400);
+    expect(queries.some((q) => q.text.startsWith("INSERT"))).toBe(false);
+  });
+
+  it("refuses ids that only look a bit like suggestions, without asking the database", async () => {
+    for (const statementId of ["s-123", "s-5f0c6d6e-2f7a-4f0e-9a51-9a4c1d3f0a11x", "S-5F0C6D6E-2F7A-4F0E-9A51-9A4C1D3F0A11"]) {
+      expect((await POST(request("POST", { ...VALID, statementId }))).status).toBe(400);
+    }
+    expect(queries).toHaveLength(0);
   });
 });
 

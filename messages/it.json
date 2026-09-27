@@ -257,7 +257,6 @@
     "eyebrow": "Forum Voce e Visione",
     "title": "La tua voce ha un posto qui",
     "lead": "<b>La tecnologia funziona meglio quando tutti partecipano a darle forma.</b> Vota brevi frasi, oppure proponi la tua. Non serve un account.",
-    "preview": "<b>Il forum è aperto in parte.</b> I tuoi voti ora vengono contati. Le frasi che proponi non vengono ancora inviate: questa parte aprirà presto.",
     "civility": "I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
     "privacy": "<b>Cosa conserviamo quando voti:</b> il tuo voto, la lingua della pagina e un codice casuale salvato nel tuo browser, così ognuno vota una sola volta. Non conserviamo il tuo nome, la tua email né il tuo indirizzo IP insieme al voto. I voti sono conservati a Francoforte, in Germania. «Cancella i miei voti» li elimina.",
     "principles": {
@@ -301,7 +300,8 @@
       "transparency": "Trasparenza",
       "agency": "Controllo umano",
       "privacy": "Privacy",
-      "shared": "Responsabilità condivisa"
+      "shared": "Responsabilità condivisa",
+      "community": "Proposta della comunità"
     },
     "statements": {
       "t1-disclose": "Gli assistenti automatici dovrebbero dire che sono un'IA all'inizio di una conversazione.",
@@ -335,13 +335,14 @@
     },
     "submission": {
       "label": "Proponi una frase da far votare agli altri",
-      "disclosure": "<b>Una persona legge ogni frase prima che venga mostrata.</b> Non pubblichiamo frasi che prendono di mira una persona, un'azienda o un gruppo. I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
+      "disclosure": "<b>Una persona legge ogni frase prima che venga mostrata.</b> Innanzitutto, un modello di IA di Mistral controlla se contiene nomi o dati di contatto. Funziona tramite OpenRouter, impostato per non conservare il tuo testo. Le frasi approvate vengono mostrate a chi usa la stessa lingua. Non pubblichiamo frasi che prendono di mira una persona, un'azienda o un gruppo. Per favore, non inserire dati personali. I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
       "placeholder": "Per esempio: «I portali di assistenza clienti dovrebbero sempre permetterti di chiedere un operatore umano con un solo tocco.»",
       "remaining": "Restano {remaining} di {max} caratteri",
       "submit": "Invia per la revisione",
       "empty": "Scrivi prima una frase, per favore.",
       "sent": "Grazie. La tua frase è in attesa di revisione.",
-      "kept": "Grazie. Le proposte apriranno presto, quindi la tua frase non è stata ancora inviata da nessuna parte."
+      "contact": "Togli link, indirizzi email, nomi utente dei social e numeri di telefono, poi riprova.",
+      "failed": "Non è stato possibile inviare la tua frase. Controlla la connessione e riprova. Il tuo testo è ancora nella casella."
     },
     "consensus": {
       "heading": "Su cosa i gruppi sono d'accordo",

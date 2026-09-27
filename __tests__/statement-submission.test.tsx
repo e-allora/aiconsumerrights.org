@@ -1,12 +1,18 @@
-import { render, screen } from "@/test-utils";
+import { act, render, screen } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import { StatementSubmission } from "@/components/forum/StatementSubmission";
+import { submitStatement } from "@/lib/forum/client";
 import { MESSAGES } from "@/test-utils";
+
+jest.mock("@/lib/forum/client", () => ({ submitStatement: jest.fn() }));
+const mockSubmit = submitStatement as jest.MockedFunction<typeof submitStatement>;
+beforeEach(() => mockSubmit.mockReset().mockResolvedValue("sent"));
 
 const PLACEHOLDER = MESSAGES.en.Forum.submission.placeholder;
 
 const box = () => screen.getByRole("textbox", { name: "Suggest a statement for others to vote on" });
+const box2 = (locale: "pt-BR") => screen.getByRole("textbox", { name: MESSAGES[locale].Forum.submission.label });
 
 describe("StatementSubmission", () => {
   it("renders a labelled box with the placeholder and the pre-moderation disclosure", () => {
@@ -52,7 +58,7 @@ describe("StatementSubmission", () => {
 
   it("sends trimmed text for review and clears the box", async () => {
     const user = userEvent.setup();
-    const onSubmit = jest.fn();
+    const onSubmit = jest.fn().mockResolvedValue("sent");
     render(<StatementSubmission onSubmit={onSubmit} />);
     await user.type(box(), "  Reasons should be plain.  ");
     await user.click(screen.getByRole("button", { name: "Submit for review" }));
@@ -61,12 +67,52 @@ describe("StatementSubmission", () => {
     expect(screen.getByText("Thank you. Your statement is waiting for review.")).toBeInTheDocument();
   });
 
-  it("says honestly that nothing was sent while there is no server", async () => {
+  it("sends to the review queue with the page language by default", async () => {
     const user = userEvent.setup();
+    render(<StatementSubmission />, { locale: "pt-BR" });
+    await user.type(box2("pt-BR"), "Motivos devem ser claros.");
+    await user.keyboard("{Tab}{Enter}");
+    expect(mockSubmit).toHaveBeenCalledWith("Motivos devem ser claros.", "pt-BR");
+    expect(screen.getByRole("status")).toHaveTextContent(MESSAGES["pt-BR"].Forum.submission.sent);
+  });
+
+  it("keeps the text and explains when it has contact details", async () => {
+    const user = userEvent.setup();
+    mockSubmit.mockResolvedValue("contact");
+    render(<StatementSubmission />);
+    await user.type(box(), "Write to me at ana@example.com");
+    await user.click(screen.getByRole("button", { name: "Submit for review" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "Please remove links, email addresses, social media handles, and phone numbers, then try again."
+    );
+    expect(box()).toHaveValue("Write to me at ana@example.com");
+    expect(box()).toHaveAttribute("aria-invalid", "true");
+  });
+
+  it("keeps the text and says so when sending fails", async () => {
+    const user = userEvent.setup();
+    mockSubmit.mockResolvedValue("failed");
     render(<StatementSubmission />);
     await user.type(box(), "Reasons should be plain.");
-    await user.keyboard("{Tab}{Enter}");
-    expect(screen.getByRole("status")).toHaveTextContent("your statement was not sent anywhere yet");
+    await user.click(screen.getByRole("button", { name: "Submit for review" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("Your text is still in the box.");
+    expect(box()).toHaveValue("Reasons should be plain.");
+    expect(screen.getByRole("status")).toHaveTextContent("");
+  });
+
+  it("sends once, even if the button is pressed again while sending", async () => {
+    const user = userEvent.setup();
+    let finish: (r: "sent") => void = () => {};
+    mockSubmit.mockImplementation(() => new Promise((r) => (finish = r)));
+    render(<StatementSubmission />);
+    await user.type(box(), "Reasons should be plain.");
+    const button = screen.getByRole("button", { name: "Submit for review" });
+    await user.click(button);
+    expect(button).toBeDisabled();
+    await user.click(button);
+    expect(mockSubmit).toHaveBeenCalledTimes(1);
+    await act(async () => finish("sent"));
+    expect(button).toBeEnabled();
   });
 
   it("is keyboard reachable, with tap targets and focus rings on box and button", async () => {

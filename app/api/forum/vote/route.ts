@@ -1,6 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse, type NextRequest } from "next/server";
 
+import { fail, fromThisSite } from "@/lib/forum/http";
+import { isApprovedSuggestion, looksLikeSuggestion } from "@/lib/forum/submissions";
 import { VOTER_COOKIE, deleteVotes, hashVoter, parseVote, saveVote } from "@/lib/forum/votes";
 
 // The voter code is sent only to /api/forum, never to pages, and scripts
@@ -13,20 +15,6 @@ const COOKIE_OPTIONS = {
   maxAge: 60 * 60 * 24 * 180,
 } as const;
 
-/** Only this site's own pages may vote, so other sites can't vote for a visitor. */
-function fromThisSite(request: NextRequest) {
-  const origin = request.headers.get("origin");
-  const host = request.headers.get("x-forwarded-host") ?? request.headers.get("host");
-  if (!origin || !host) return false;
-  try {
-    return new URL(origin).host === host;
-  } catch {
-    return false;
-  }
-}
-
-const fail = (status: number, error: string) => NextResponse.json({ ok: false, error }, { status });
-
 /** Records or changes one vote. */
 export async function POST(request: NextRequest) {
   if (!fromThisSite(request)) return fail(403, "forbidden");
@@ -37,6 +25,9 @@ export async function POST(request: NextRequest) {
   const existing = request.cookies.get(VOTER_COOKIE)?.value;
   const code = existing ?? randomUUID();
   try {
+    if (looksLikeSuggestion(input.statementId) && !(await isApprovedSuggestion(input.statementId))) {
+      return fail(400, "invalid");
+    }
     await saveVote(hashVoter(code), input);
   } catch (error) {
     console.error("forum vote failed", error);

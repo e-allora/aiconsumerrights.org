@@ -257,7 +257,6 @@
     "eyebrow": "Fórum Voz e Visão",
     "title": "A sua voz tem lugar aqui",
     "lead": "<b>A tecnologia funciona melhor quando todas as pessoas participam em dar-lhe forma.</b> Vote em frases curtas, ou sugira a sua. Não precisa de criar conta.",
-    "preview": "<b>O fórum está parcialmente aberto.</b> Os seus votos já são contados. As frases que sugerir ainda não são enviadas; essa parte abre em breve.",
     "civility": "Os seus contributos são revistos segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
     "privacy": "<b>O que guardamos quando vota:</b> o seu voto, o idioma da página e um código aleatório guardado no seu navegador, para que cada pessoa vote uma só vez. Não guardamos o seu nome, e-mail nem endereço IP com o voto. Os votos ficam guardados em Frankfurt, na Alemanha. «Apagar os meus votos» elimina-os.",
     "principles": {
@@ -301,7 +300,8 @@
       "transparency": "Transparência",
       "agency": "Controlo humano",
       "privacy": "Privacidade",
-      "shared": "Responsabilidade partilhada"
+      "shared": "Responsabilidade partilhada",
+      "community": "Sugestão da comunidade"
     },
     "statements": {
       "t1-disclose": "Os assistentes automáticos deviam dizer que são uma IA no início de uma conversa.",
@@ -335,13 +335,14 @@
     },
     "submission": {
       "label": "Sugira uma frase para outras pessoas votarem",
-      "disclosure": "<b>Uma pessoa lê cada frase antes de ser mostrada.</b> Não são publicadas frases que apontem para uma pessoa, uma empresa ou um grupo. Os seus contributos são revistos segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
+      "disclosure": "<b>Uma pessoa lê cada frase antes de ser mostrada.</b> Primeiro, um modelo de IA da Mistral verifica se tem nomes ou dados de contacto. Funciona através do OpenRouter, configurado para não guardar o seu texto. As frases aprovadas são mostradas a quem usa o mesmo idioma. Não são publicadas frases que apontem para uma pessoa, uma empresa ou um grupo. Por favor, não inclua dados pessoais. Os seus contributos são revistos segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
       "placeholder": "p. ex., «Os portais de apoio ao cliente deviam permitir sempre pedir um representante humano com um só toque.»",
       "remaining": "Faltam {remaining} de {max} caracteres",
       "submit": "Enviar para revisão",
       "empty": "Escreva primeiro uma frase, por favor.",
       "sent": "Obrigado. A sua frase está à espera de revisão.",
-      "kept": "Obrigado. As sugestões abrem em breve, por isso a sua frase ainda não foi enviada para lado nenhum."
+      "contact": "Retire as ligações, os endereços de e-mail, os nomes de utilizador de redes sociais e os números de telefone, e tente de novo.",
+      "failed": "Não foi possível enviar a sua frase. Verifique a ligação e tente de novo. O seu texto continua na caixa."
     },
     "consensus": {
       "heading": "Em que os grupos concordam",

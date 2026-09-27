@@ -17,3 +17,19 @@ CREATE TABLE IF NOT EXISTS votes (
 );
 
 CREATE INDEX IF NOT EXISTS votes_voter ON votes (voter);
+
+-- Suggested statements. Each waits as 'pending' until Robert approves it;
+-- a rejected suggestion is deleted, not kept. `ai_check` holds the
+-- automated pre-check (flags plus an English translation for the reviewer),
+-- or NULL when the check could not run.
+CREATE TABLE IF NOT EXISTS submissions (
+  id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  text        TEXT NOT NULL CHECK (char_length(text) BETWEEN 1 AND 140),
+  locale      TEXT NOT NULL,
+  status      TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved')),
+  ai_check    JSONB,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
+  reviewed_at TIMESTAMPTZ
+);
+
+CREATE INDEX IF NOT EXISTS submissions_status_locale ON submissions (status, locale);

@@ -257,7 +257,6 @@
     "eyebrow": "Voice and Vision Forum",
     "title": "Your voice belongs here",
     "lead": "<b>Technology works best when everyone participates in shaping it.</b> Vote on short statements, or suggest your own. No account needed.",
-    "preview": "<b>The forum is partly open.</b> Your votes are now counted. Suggested statements are not sent yet; that part opens soon.",
     "civility": "Your input is reviewed for civil discourse standards. We critique ideas, not people.",
     "privacy": "<b>What we keep when you vote:</b> your vote, the page language, and a random code saved in your browser so each person votes once. We don't store your name, email, or IP address with it. Votes are stored in Frankfurt, Germany. “Clear my votes” deletes them.",
     "principles": {
@@ -301,7 +300,8 @@
       "transparency": "Transparency",
       "agency": "Human agency",
       "privacy": "Privacy",
-      "shared": "Shared responsibility"
+      "shared": "Shared responsibility",
+      "community": "Community suggestion"
     },
     "statements": {
       "t1-disclose": "Automated assistants should say they are AI at the start of a conversation.",
@@ -335,13 +335,14 @@
     },
     "submission": {
       "label": "Suggest a statement for others to vote on",
-      "disclosure": "<b>A person reads every statement before it is shown.</b> Statements that single out a person, company, or group are not published. Your input is reviewed for civil discourse standards. We critique ideas, not people.",
+      "disclosure": "<b>A person reads every statement before it is shown.</b> First, an AI model from Mistral checks it for names and contact details. It runs through OpenRouter, set not to keep your text. Approved statements are shown to people who use the same language. Statements that single out a person, company, or group are not published. Please leave out personal details. Your input is reviewed for civil discourse standards. We critique ideas, not people.",
       "placeholder": "e.g., 'Customer service portals should always let you request a human representative with one tap.'",
       "remaining": "{remaining} of {max} characters left",
       "submit": "Submit for review",
       "empty": "Please write a statement first.",
       "sent": "Thank you. Your statement is waiting for review.",
-      "kept": "Thank you. Suggestions open soon, so your statement was not sent anywhere yet."
+      "contact": "Please remove links, email addresses, social media handles, and phone numbers, then try again.",
+      "failed": "Your statement could not be sent. Check your connection and try again. Your text is still in the box."
     },
     "consensus": {
       "heading": "Where groups agree",

@@ -5,7 +5,12 @@ import { ConsensusCluster } from "@/components/forum/ConsensusCluster";
 import { ForumResults } from "@/components/forum/ForumResults";
 
 // The page's vote engine and results card call the API; answer with no votes.
-jest.mock("@/lib/forum/client", () => ({ sendVote: jest.fn(async () => true), clearVotes: jest.fn(async () => true) }));
+jest.mock("@/lib/forum/client", () => ({
+  sendVote: jest.fn(async () => true),
+  clearVotes: jest.fn(async () => true),
+  loadSuggestions: jest.fn(async () => []),
+  submitStatement: jest.fn(async () => "sent"),
+}));
 const mockFetch = jest.fn();
 beforeEach(() => {
   localStorage.clear();
@@ -28,10 +33,10 @@ describe("Forum page", () => {
     ).toBeInTheDocument();
   });
 
-  it("says plainly that votes are counted and suggestions are not sent yet", async () => {
+  it("no longer shows the preview notice, now that votes and suggestions are live", async () => {
     await renderPage();
-    expect(screen.getByTestId("preview-notice")).toHaveTextContent("Your votes are now counted");
-    expect(screen.getByTestId("preview-notice")).toHaveTextContent("Suggested statements are not sent yet");
+    expect(screen.queryByTestId("preview-notice")).not.toBeInTheDocument();
+    expect(document.body).not.toHaveTextContent(/preview|not sent/i);
   });
 
   it("says what a vote stores, where, and how to delete it, before the voting card", async () => {

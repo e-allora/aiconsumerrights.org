@@ -2,7 +2,7 @@ import { act, render, screen, waitFor } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import { VotingEngine, tally } from "@/components/forum/VotingEngine";
-import { clearVotes, sendVote } from "@/lib/forum/client";
+import { clearVotes, loadSuggestions, sendVote } from "@/lib/forum/client";
 import { STATEMENTS, TRACKS } from "@/lib/forum/statements";
 import { MESSAGES } from "@/test-utils";
 
@@ -15,7 +15,9 @@ const btn = (name: "Agree" | "Disagree" | "Pass") => screen.getByRole("button", 
 jest.mock("@/lib/forum/client", () => ({
   sendVote: jest.fn(async () => true),
   clearVotes: jest.fn(async () => true),
+  loadSuggestions: jest.fn(async () => []),
 }));
+const mockSuggestions = loadSuggestions as jest.MockedFunction<typeof loadSuggestions>;
 const mockSend = sendVote as jest.MockedFunction<typeof sendVote>;
 const mockClear = clearVotes as jest.MockedFunction<typeof clearVotes>;
 
@@ -23,6 +25,7 @@ beforeEach(() => {
   localStorage.clear();
   mockSend.mockReset().mockResolvedValue(true);
   mockClear.mockReset().mockResolvedValue(true);
+  mockSuggestions.mockReset().mockResolvedValue([]);
 });
 
 describe("seed statements", () => {
@@ -134,6 +137,32 @@ describe("VotingEngine voting", () => {
     await user.click(btn("Agree"));
     expect(heading()).toHaveTextContent(text(1));
     spy.mockRestore();
+  });
+});
+
+describe("VotingEngine community suggestions", () => {
+  const SUGGESTION = { id: "s-5f0c6d6e-2f7a-4f0e-9a51-9a4c1d3f0a11", text: "Le app dovrebbero spiegare i loro limiti." };
+
+  it("loads approved suggestions for the page language and adds them after the seed statements", async () => {
+    const user = userEvent.setup();
+    mockSuggestions.mockResolvedValue([SUGGESTION]);
+    render(<VotingEngine statements={STATEMENTS.slice(0, 1)} />, { locale: "it" });
+    expect(mockSuggestions).toHaveBeenCalledWith("it");
+    expect(await screen.findByText("0 di 2 risposte")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: MESSAGES.it.Forum.voting.agree }));
+    expect(heading()).toHaveTextContent(SUGGESTION.text);
+    expect(screen.getByText(/Proposta della comunità · Frase 2 di 2/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: MESSAGES.it.Forum.voting.disagree }));
+    expect(mockSend).toHaveBeenLastCalledWith(SUGGESTION.id, "disagree", "it");
+  });
+
+  it("shows new suggestions to someone who had already answered everything", async () => {
+    localStorage.setItem("forum-votes-v2", JSON.stringify({ [STATEMENTS[0].id]: "agree" }));
+    mockSuggestions.mockResolvedValue([{ id: "s-5f0c6d6e-2f7a-4f0e-9a51-9a4c1d3f0a11", text: "Apps should explain their limits." }]);
+    render(<VotingEngine statements={STATEMENTS.slice(0, 1)} />);
+    expect(await screen.findByRole("heading", { level: 3, name: "Apps should explain their limits." })).toBeInTheDocument();
+    expect(screen.getByText("1 of 2 answered")).toBeInTheDocument();
   });
 });
 

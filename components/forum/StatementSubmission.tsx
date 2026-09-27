@@ -2,21 +2,25 @@
 
 import * as React from "react";
 import { Send } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
+import { submitStatement, type SubmitResult } from "@/lib/forum/client";
 import { MAX_STATEMENT_LENGTH } from "@/lib/forum/statements";
 import { cn } from "@/lib/utils";
 
 /**
- * One short statement, no account needed. `onSubmit` sends it for review;
- * without one (no server yet) the box says plainly that nothing was sent.
+ * One short statement, no account needed. It goes to the review queue; a
+ * person approves it before anyone sees it. If sending fails, the text
+ * stays in the box so nothing typed is lost.
  */
-export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) => Promise<void> | void }) {
+export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) => Promise<SubmitResult> }) {
   const t = useTranslations("Forum.submission");
+  const locale = useLocale();
   const [text, setText] = React.useState("");
   const [error, setError] = React.useState("");
-  const [result, setResult] = React.useState<"" | "sent" | "kept">("");
+  const [sent, setSent] = React.useState(false);
+  const [busy, setBusy] = React.useState(false);
   const ids = { input: React.useId(), count: React.useId(), note: React.useId(), error: React.useId() };
 
   const remaining = MAX_STATEMENT_LENGTH - text.length;
@@ -29,14 +33,17 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
       setError(t("empty"));
       return;
     }
+    if (busy) return;
     setError("");
-    if (onSubmit) {
-      await onSubmit(clean);
-      setResult("sent");
+    setBusy(true);
+    const result = await (onSubmit ?? ((s: string) => submitStatement(s, locale)))(clean);
+    setBusy(false);
+    if (result === "sent") {
+      setSent(true);
+      setText("");
     } else {
-      setResult("kept");
+      setError(t(result));
     }
-    setText("");
   }
 
   return (
@@ -58,7 +65,7 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
         aria-invalid={error ? true : undefined}
         onChange={(e) => {
           setText(e.target.value.slice(0, MAX_STATEMENT_LENGTH));
-          setResult("");
+          setSent(false);
           if (error) setError("");
         }}
         className="tap-target w-full resize-y rounded-md border-2 border-border/30 bg-card p-3 text-base placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -71,7 +78,7 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
         >
           {t("remaining", { remaining, max: MAX_STATEMENT_LENGTH })}
         </p>
-        <Button type="submit">
+        <Button type="submit" disabled={busy}>
           <Send aria-hidden="true" />
           {t("submit")}
         </Button>
@@ -82,8 +89,7 @@ export function StatementSubmission({ onSubmit }: { onSubmit?: (text: string) =>
         </p>
       )}
       <p role="status" className="text-base">
-        {result === "sent" && t("sent")}
-        {result === "kept" && t("kept")}
+        {sent && t("sent")}
       </p>
     </form>
   );

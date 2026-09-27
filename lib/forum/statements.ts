@@ -5,7 +5,12 @@
 export const TRACKS = ["transparency", "agency", "privacy", "shared"] as const;
 export type TrackId = (typeof TRACKS)[number];
 
-export type Statement = { id: string; track: TrackId };
+/**
+ * A statement on the voting card. Seed statements get their text from
+ * messages/*.json; an approved community suggestion carries its own text,
+ * in the one language it was written in.
+ */
+export type Statement = { id: string; track: TrackId | "community"; text?: string };
 
 export const STATEMENTS: Statement[] = [
   { id: "t1-disclose", track: "transparency" },

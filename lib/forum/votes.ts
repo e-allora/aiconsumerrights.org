@@ -4,6 +4,7 @@ import { isLocale, type Locale } from "@/lib/i18n/routing";
 import type { CountRow } from "@/lib/forum/consensus";
 import { getSql } from "@/lib/forum/db";
 import { STATEMENTS } from "@/lib/forum/statements";
+import { looksLikeSuggestion } from "@/lib/forum/submissions";
 
 export const VOTES = ["agree", "disagree", "pass"] as const;
 export type Vote = (typeof VOTES)[number];
@@ -12,11 +13,16 @@ export type VoteInput = { statementId: string; vote: Vote; locale: Locale };
 
 const STATEMENT_IDS = new Set(STATEMENTS.map((s) => s.id));
 
-/** Checks a vote request body. Returns the vote, or null if anything is off. */
+/**
+ * Checks a vote request body. Returns the vote, or null if anything is off.
+ * A suggestion id only has the right shape here; the route also checks the
+ * suggestion is approved.
+ */
 export function parseVote(body: unknown): VoteInput | null {
   if (!body || typeof body !== "object") return null;
   const { statementId, vote, locale } = body as Record<string, unknown>;
-  if (typeof statementId !== "string" || !STATEMENT_IDS.has(statementId)) return null;
+  if (typeof statementId !== "string") return null;
+  if (!STATEMENT_IDS.has(statementId) && !looksLikeSuggestion(statementId)) return null;
   if (typeof vote !== "string" || !(VOTES as readonly string[]).includes(vote)) return null;
   if (typeof locale !== "string" || !isLocale(locale)) return null;
   return { statementId, vote: vote as Vote, locale };
