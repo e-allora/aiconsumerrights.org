@@ -13,6 +13,7 @@ import { formatDate, sources, type Registry } from "@/lib/sources";
  */
 export function AttributionFooter({ registry = sources }: { registry?: Registry }) {
   const t = useTranslations("Attribution");
+  const th = useTranslations("HowItWorks");
   const locale = useLocale();
   // Only models with a record of their work are credited.
   const models = registry.models.filter((m) => m.confirmed);
@@ -33,6 +34,11 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
         <h2 id="provenance-heading" className="text-display-md">
           {t("heading")}
         </h2>
+        <p className="-mt-6 text-base">
+          <Link href="/how-it-works" className="font-semibold text-link underline underline-offset-4">
+            {th("footerLink")}
+          </Link>
+        </p>
 
         <div className="grid gap-8 md:grid-cols-3">
           <section aria-labelledby="provenance-ai">

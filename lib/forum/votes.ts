@@ -30,6 +30,8 @@ export function parseVote(body: unknown): VoteInput | null {
 
 /** Cookie holding a random code that lets one browser vote once per statement. */
 export const VOTER_COOKIE = "forum_voter";
+/** How long that code lasts. The How it works page quotes this number. */
+export const VOTER_COOKIE_DAYS = 180;
 
 /**
  * The voter code in the cookie is random. Only its hash is stored, so the

@@ -10,6 +10,12 @@ export const SITE_NAME = "AI Consumer Rights";
 export const SITE_DESCRIPTION =
   "Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.";
 
+// Where people send criticism and corrections. shipitworks.com is the domain
+// of a business Robert plans to start; the How it works page says so.
+export const CONTACT_EMAIL = "feedback@shipitworks.com";
+export const REPO_URL = "https://github.com/e-allora/aiconsumerrights.org";
+export const MISSION_URL = `${REPO_URL}/blob/main/docs/MISSION.md`;
+
 export type PublishedRoute = {
   path: `/${string}`;
   changeFrequency: "daily" | "weekly" | "monthly" | "yearly";
@@ -22,6 +28,7 @@ export const PUBLISHED_ROUTES: PublishedRoute[] = [
   { path: "/forum", changeFrequency: "weekly", priority: 0.8 },
   { path: "/sources", changeFrequency: "monthly", priority: 0.5 },
   { path: "/about", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/how-it-works", changeFrequency: "monthly", priority: 0.5 },
 ];
 
 export type NavKey = "home" | "guide" | "forum" | "sources" | "about";

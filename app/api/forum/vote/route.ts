@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 import { fail, fromThisSite } from "@/lib/forum/http";
 import { isApprovedSuggestion, looksLikeSuggestion } from "@/lib/forum/submissions";
-import { VOTER_COOKIE, deleteVotes, hashVoter, parseVote, saveVote } from "@/lib/forum/votes";
+import { VOTER_COOKIE, VOTER_COOKIE_DAYS, deleteVotes, hashVoter, parseVote, saveVote } from "@/lib/forum/votes";
 
 // The voter code is sent only to /api/forum, never to pages, and scripts
 // can't read it.
@@ -12,7 +12,7 @@ const COOKIE_OPTIONS = {
   secure: process.env.NODE_ENV === "production",
   sameSite: "lax",
   path: "/api/forum",
-  maxAge: 60 * 60 * 24 * 180,
+  maxAge: 60 * 60 * 24 * VOTER_COOKIE_DAYS,
 } as const;
 
 /** Records or changes one vote. */

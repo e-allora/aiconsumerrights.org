@@ -431,5 +431,44 @@
     "metaDescription": "Tutte le fonti usate da questo sito, divise per tema, con il livello di verifica di ogni link e la sua data.",
     "title": "Fonti",
     "lead": "<b>Tutte le {total} fonti in {groups} gruppi, verificate il {date}.</b> I numeri corrispondono ai piccoli segni di fonte in ogni pagina."
+  },
+  "HowItWorks": {
+    "metaTitle": "Come funziona questo sito",
+    "metaDescription": "Tutti i servizi che questo sito usa, cosa vede ciascuno, cosa conserviamo e cosa non è ancora finito.",
+    "title": "Come funziona questo sito",
+    "lead": "Questo sito chiede alle aziende di spiegare la loro IA con parole semplici. Quindi ecco come funziona questo sito, con parole semplici, compreso ciò che non è ancora finito.",
+    "whoHeading": "Chi lo gestisce",
+    "who": "<b>Robert Sweetman, da solo.</b> Dietro non ci sono soldi, sponsor né investitori. Niente pubblicità, niente tracciamento, niente statistiche.",
+    "open": "<b>Aperto per scelta.</b> <code>Il codice è pubblico su GitHub</code> con licenza MIT. I testi si possono riutilizzare citando la fonte, con licenza CC BY 4.0.",
+    "mission": "<mission>Leggi la missione e i valori a cui questo sito si impegna</mission> (in inglese).",
+    "builtHeading": "Come è stato fatto",
+    "built": "Robert l'ha costruito con l'aiuto dell'IA. Claude ha scritto con lui gran parte del codice, e diversi modelli di IA hanno aiutato a fare ricerca e a scrivere la guida; il piè di pagina di ogni pagina li indica. Una persona sta ancora rivedendo ogni pagina.",
+    "servicesHeading": "I servizi che usiamo e cosa vede ciascuno",
+    "services": {
+      "vercel": "<b>Vercel</b> ospita il sito e il suo firewall. Vede ogni visita, compresi gli indirizzi IP, in registri di breve durata.",
+      "neon": "<b>Neon</b> è il database, a Francoforte, in Germania. Conserva i voti, con un codice del browser codificato, e le frasi proposte.",
+      "openrouter": "<b>OpenRouter</b> invia ogni frase proposta a un modello di IA. Conserva i dati di utilizzo (ora, modello, costo) ma non il tuo testo, e usa solo servizi che a loro volta non lo conservano.",
+      "models": "<b>Mistral Small</b>, con <b>Gemini di Google</b> come riserva, legge ogni proposta su server nell'UE per segnalare nomi e dati di contatto. Segnala soltanto; decide una persona.",
+      "github": "<b>GitHub</b> conserva il codice pubblico. <b>Proton</b> gestisce la posta."
+    },
+    "keepHeading": "Cosa conserviamo e per quanto tempo",
+    "keep": {
+      "votes": "<b>Voti:</b> finché non premi «Cancella i miei voti». Il codice del browser dura {days} giorni. Non abbiamo ancora fissato una data di cancellazione automatica.",
+      "suggestions": "<b>Proposte:</b> quelle respinte vengono cancellate. Quelle approvate restano finché sono mostrate.",
+      "never": "<b>Mai conservati con il tuo voto:</b> il tuo nome, la tua email o il tuo indirizzo IP."
+    },
+    "unfinishedHeading": "Cosa non è finito o non è perfetto",
+    "unfinished": {
+      "review": "La revisione umana della guida è ancora in corso.",
+      "language": "Le proposte compaiono solo nella lingua in cui sono state scritte.",
+      "results": "I risultati compaiono solo con {minVotes} voti o più per lingua, quindi all'inizio non ce ne sono.",
+      "ai": "Il controllo con l'IA può sbagliare. Ogni decisione la prende una persona.",
+      "twice": "Votare senza account non impedisce del tutto a qualcuno di votare due volte, per esempio usando un altro browser."
+    },
+    "contactHeading": "Dicci cosa non va",
+    "contact": "<b>Le critiche sono benvenute quando hanno una ragione.</b> Dicci cosa non va, perché conta e, se puoi, come risolverlo.",
+    "contactHow": "Scrivi a <mail>{email}</mail> oppure <issues>apri una segnalazione su GitHub</issues>.",
+    "domainNote": "L'indirizzo di contatto usa shipitworks.com, il dominio di un'attività che Robert intende avviare. Quell'attività non ha alcun ruolo in questo sito.",
+    "footerLink": "Come funziona questo sito: ogni servizio che usa, cosa conserviamo e cosa non è ancora finito"
   }
 }

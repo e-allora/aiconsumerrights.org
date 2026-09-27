@@ -5,6 +5,7 @@ import AboutPage from "@/app/[locale]/about/page";
 import ForumPage from "@/app/[locale]/forum/page";
 import GuidePage from "@/app/[locale]/guide/page";
 import HomePage from "@/app/[locale]/page";
+import HowItWorksPage from "@/app/[locale]/how-it-works/page";
 import SourcesPage from "@/app/[locale]/sources/page";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AttributionFooter } from "@/components/ui/AttributionFooter";
@@ -25,6 +26,7 @@ const PAGES = [
   ["/forum", ForumPage],
   ["/sources", SourcesPage],
   ["/about", AboutPage],
+  ["/how-it-works", HowItWorksPage],
 ] as const;
 
 beforeEach(() => localStorage.clear());

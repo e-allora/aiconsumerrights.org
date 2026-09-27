@@ -23,10 +23,12 @@ const itMsgs = flatten(MESSAGES.it as unknown as Tree);
 // The blameless-tone checks keep companies out of what the site says about
 // AI and consumers. Naming the tools the site itself uses is disclosure, not
 // singling out, so these keys may name vendors. Keep this list short.
+// The How it works page (HowItWorks.*) exists to name them all.
 const TOOL_DISCLOSURES = ["Forum.submission.disclosure", "Forum.privacy"];
+const isDisclosure = (key: string) => TOOL_DISCLOSURES.includes(key) || key.startsWith("HowItWorks.");
 const opinions = (m: Record<string, string>) =>
   Object.entries(m)
-    .filter(([key]) => !TOOL_DISCLOSURES.includes(key))
+    .filter(([key]) => !isDisclosure(key))
     .map(([, v]) => v);
 const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).

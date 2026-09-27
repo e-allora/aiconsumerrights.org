@@ -31,6 +31,7 @@ export default function AboutPage({ params: { locale } }: Props) {
   setRequestLocale(locale);
   const t = useTranslations("About");
   const tc = useTranslations("Common");
+  const th = useTranslations("HowItWorks");
   return (
     <main id="main" className="mx-auto flex max-w-3xl flex-col gap-16 px-4 py-12 sm:py-16">
       <JsonLd
@@ -79,6 +80,12 @@ export default function AboutPage({ params: { locale } }: Props) {
         <p>
           <Link href="/sources" className={linkClass}>
             {t("whoLink")}
+          </Link>
+          .
+        </p>
+        <p>
+          <Link href="/how-it-works" className={linkClass}>
+            {th("footerLink")}
           </Link>
           .
         </p>

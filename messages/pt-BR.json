@@ -431,5 +431,44 @@
     "metaDescription": "Todas as fontes que este site usa, agrupadas por tema, com o nível de verificação de cada link e a data.",
     "title": "Fontes",
     "lead": "<b>As {total} fontes em {groups} grupos, verificadas em {date}.</b> Os números correspondem às pequenas marcas de fonte em cada página."
+  },
+  "HowItWorks": {
+    "metaTitle": "Como este site funciona",
+    "metaDescription": "Todos os serviços que este site usa, o que cada um vê, o que guardamos e o que ainda não está pronto.",
+    "title": "Como este site funciona",
+    "lead": "Este site pede às empresas que expliquem a IA delas em linguagem simples. Então aqui está como este site funciona, em linguagem simples, incluindo o que ainda não está pronto.",
+    "whoHeading": "Quem cuida dele",
+    "who": "<b>Robert Sweetman, sozinho.</b> Não há dinheiro, patrocinadores nem investidores por trás. Sem anúncios, sem rastreamento, sem análises.",
+    "open": "<b>Aberto por princípio.</b> <code>O código é público no GitHub</code>, com licença MIT. Os textos podem ser reutilizados com crédito, com licença CC BY 4.0.",
+    "mission": "<mission>Leia a missão e os valores que este site se compromete a seguir</mission> (em inglês).",
+    "builtHeading": "Como foi feito",
+    "built": "Robert fez o site com ajuda de IA. O Claude escreveu a maior parte do código com ele, e vários modelos de IA ajudaram a pesquisar e redigir o guia; o rodapé de cada página mostra quais. Uma pessoa ainda está revisando cada página.",
+    "servicesHeading": "Os serviços que usamos e o que cada um vê",
+    "services": {
+      "vercel": "A <b>Vercel</b> hospeda o site e o firewall dele. Ela vê cada visita, incluindo endereços IP, em registros de curta duração.",
+      "neon": "A <b>Neon</b> é o banco de dados, em Frankfurt, na Alemanha. Ela guarda os votos, com um código do navegador codificado, e as frases sugeridas.",
+      "openrouter": "O <b>OpenRouter</b> envia cada frase sugerida para um modelo de IA. Ele guarda registros de uso (horário, modelo, custo), mas não o seu texto, e só usa serviços que também não guardam.",
+      "models": "O <b>Mistral Small</b>, com o <b>Gemini do Google</b> como reserva, lê cada sugestão em servidores na UE para apontar nomes e dados de contato. Ele só aponta; quem decide é uma pessoa.",
+      "github": "O <b>GitHub</b> guarda o código público. O <b>Proton</b> cuida do e-mail."
+    },
+    "keepHeading": "O que guardamos e por quanto tempo",
+    "keep": {
+      "votes": "<b>Votos:</b> até você clicar em “Apagar meus votos”. O código do navegador dura {days} dias. Ainda não definimos uma data de exclusão automática.",
+      "suggestions": "<b>Sugestões:</b> as rejeitadas são apagadas. As aprovadas ficam enquanto aparecem.",
+      "never": "<b>Nunca guardado com o seu voto:</b> seu nome, e-mail ou endereço IP."
+    },
+    "unfinishedHeading": "O que não está pronto ou não é perfeito",
+    "unfinished": {
+      "review": "A revisão humana do guia ainda está em andamento.",
+      "language": "As sugestões só aparecem no idioma em que foram escritas.",
+      "results": "Os resultados só aparecem com {minVotes} ou mais votos por idioma, então no começo não há nenhum.",
+      "ai": "A verificação com IA pode errar. Toda decisão é tomada por uma pessoa.",
+      "twice": "Votar sem conta não impede totalmente que alguém vote duas vezes, por exemplo usando outro navegador."
+    },
+    "contactHeading": "Conte para a gente o que está errado",
+    "contact": "<b>Críticas são bem-vindas quando vêm com um motivo.</b> Diga o que está errado, por que isso importa e, se puder, como corrigir.",
+    "contactHow": "Escreva para <mail>{email}</mail> ou <issues>abra uma issue no GitHub</issues>.",
+    "domainNote": "O endereço de contato usa shipitworks.com, o domínio de um negócio que Robert planeja abrir. Esse negócio não tem nenhum papel neste site.",
+    "footerLink": "Como este site funciona: cada serviço que ele usa, o que guardamos e o que ainda não está pronto"
   }
 }

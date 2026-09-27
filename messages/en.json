@@ -431,5 +431,44 @@
     "metaDescription": "Every source this site draws on, grouped by topic, with how well each link has been checked and when.",
     "title": "Sources",
     "lead": "<b>All {total} sources in {groups} groups, checked on {date}.</b> Numbers match the small source markers on every page."
+  },
+  "HowItWorks": {
+    "metaTitle": "How this site works",
+    "metaDescription": "Every service this site uses, what each one sees, what we keep, and what isn't finished.",
+    "title": "How this site works",
+    "lead": "This site asks companies to explain their AI in plain words. So here is how this site works, in plain words, including what isn't finished.",
+    "whoHeading": "Who runs it",
+    "who": "<b>Robert Sweetman, on his own.</b> No money, sponsors, or investors are behind it. No ads, no tracking, no analytics.",
+    "open": "<b>Open by design.</b> <code>The code is public on GitHub</code> under the MIT license. The writing is free to reuse with credit, under CC BY 4.0.",
+    "mission": "<mission>Read the mission and values this site holds itself to</mission>.",
+    "builtHeading": "How it was built",
+    "built": "Robert built it with AI help. Claude wrote most of the code with him, and several AI models helped research and draft the guide; the footer on each page names them. A person is still reviewing every page.",
+    "servicesHeading": "Services we use, and what each one sees",
+    "services": {
+      "vercel": "<b>Vercel</b> hosts the site and its firewall. It sees each visit, including IP addresses, in short-term logs.",
+      "neon": "<b>Neon</b> is the database, in Frankfurt, Germany. It holds votes, stored with a scrambled browser code, and suggested statements.",
+      "openrouter": "<b>OpenRouter</b> passes each suggested statement to an AI model. It keeps usage records (time, model, cost) but not your text, and it only uses services that don't keep it either.",
+      "models": "<b>Mistral Small</b>, with <b>Google's Gemini</b> as a backup, reads each suggestion on EU servers to flag names and contact details. It only flags; a person decides.",
+      "github": "<b>GitHub</b> stores the public code. <b>Proton</b> handles email."
+    },
+    "keepHeading": "What we keep, and for how long",
+    "keep": {
+      "votes": "<b>Votes:</b> until you press “Clear my votes.” The browser code lasts {days} days. We haven't set an automatic deletion date yet.",
+      "suggestions": "<b>Suggestions:</b> rejected ones are deleted. Approved ones stay while they're shown.",
+      "never": "<b>Never kept with your vote:</b> your name, email, or IP address."
+    },
+    "unfinishedHeading": "What isn't finished or perfect",
+    "unfinished": {
+      "review": "Human review of the guide is still in progress.",
+      "language": "Suggestions only appear in the language they were written in.",
+      "results": "Results appear only after {minVotes} or more votes per language, so early on there are none.",
+      "ai": "The AI check can be wrong. A person makes every decision.",
+      "twice": "Voting without accounts can't fully stop someone from voting twice, for example by using a second browser."
+    },
+    "contactHeading": "Tell us what's wrong",
+    "contact": "<b>Criticism is welcome when it comes with a reason.</b> Tell us what's wrong, why it matters, and, if you can, how to fix it.",
+    "contactHow": "Email <mail>{email}</mail>, or <issues>open an issue on GitHub</issues>.",
+    "domainNote": "The feedback address uses shipitworks.com, the domain of a business Robert plans to start. That business has no part in this site.",
+    "footerLink": "How this site works: every service it uses, what we keep, and what isn't finished"
   }
 }

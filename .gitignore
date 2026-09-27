@@ -46,3 +46,7 @@ next-env.d.ts
 # reference PDFs kept locally, never published
 /*.pdf
 .env*
+
+# Robert's private notes and screenshots, never published
+/mission-guidelines*.md
+/Screenshot*.png
