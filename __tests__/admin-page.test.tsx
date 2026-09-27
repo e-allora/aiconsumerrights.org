@@ -1,8 +1,15 @@
 import { render, screen, within } from "@testing-library/react";
 
-import { approve, remove } from "@/app/admin/actions";
+import { approve, recheck, remove } from "@/app/admin/actions";
 import AdminPage from "@/app/admin/page";
-import { approveSubmission, deleteSubmission, listSubmissions, type Submission } from "@/lib/forum/submissions";
+import { precheck } from "@/lib/forum/precheck";
+import {
+  approveSubmission,
+  deleteSubmission,
+  listSubmissions,
+  recheckSubmission,
+  type Submission,
+} from "@/lib/forum/submissions";
 
 const PASSWORD = "correct horse battery staple";
 let authorization: string | null = null;
@@ -17,7 +24,9 @@ jest.mock("@/lib/forum/submissions", () => ({
   listSubmissions: jest.fn(),
   approveSubmission: jest.fn(),
   deleteSubmission: jest.fn(),
+  recheckSubmission: jest.fn(),
 }));
+jest.mock("@/lib/forum/precheck", () => ({ precheck: jest.fn() }));
 const mockList = listSubmissions as jest.MockedFunction<typeof listSubmissions>;
 
 const item = (over: Partial<Submission>): Submission => ({
@@ -79,10 +88,17 @@ describe("Admin review page", () => {
     ]);
   });
 
-  it("warns when the pre-check did not run", async () => {
+  it("warns when the pre-check did not run, and offers to check again", async () => {
     mockList.mockResolvedValue([item({ check: null })]);
     render(await AdminPage());
     expect(screen.getByText(/Not checked: the AI pre-check did not run/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Check again" })).toBeInTheDocument();
+  });
+
+  it("offers no re-check for a suggestion that was checked", async () => {
+    mockList.mockResolvedValue([item({})]);
+    render(await AdminPage());
+    expect(screen.queryByRole("button", { name: "Check again" })).not.toBeInTheDocument();
   });
 
   it("lists approved suggestions separately, with a way to remove them", async () => {
@@ -102,17 +118,20 @@ describe("Admin actions", () => {
     return f;
   };
 
-  it("approve and remove act on the given id", async () => {
+  it("approve, remove, and check again act on the given id", async () => {
     await approve(form("abc"));
     await remove(form("def"));
+    await recheck(form("ghi"));
     expect(approveSubmission).toHaveBeenCalledWith("abc");
     expect(deleteSubmission).toHaveBeenCalledWith("def");
+    expect(recheckSubmission).toHaveBeenCalledWith("ghi", precheck);
   });
 
   it("refuse to act without the password", async () => {
     authorization = null;
     await expect(approve(form("abc"))).rejects.toThrow("Not allowed");
     await expect(remove(form("abc"))).rejects.toThrow("Not allowed");
+    await expect(recheck(form("abc"))).rejects.toThrow("Not allowed");
     expect(approveSubmission).not.toHaveBeenCalled();
     expect(deleteSubmission).not.toHaveBeenCalled();
   });

@@ -29,6 +29,7 @@ describe("precheck", () => {
     expect(CHECK_MODEL).toBe("mistralai/mistral-small-2603");
     expect(body.model).toBe(CHECK_MODEL);
     expect(body.temperature).toBe(0);
+    expect(init.cache).toBe("no-store");
     expect(body.provider).toEqual({ only: ["mistral"], zdr: true, data_collection: "deny", require_parameters: true });
     expect(body.response_format.type).toBe("json_schema");
     expect(body.response_format.json_schema.strict).toBe(true);
@@ -48,13 +49,31 @@ describe("precheck", () => {
   });
 
   it.each([
-    ["an HTTP error", reply("", false, 503)],
+    ["an HTTP error", reply("", false, 401)],
     ["text that is not JSON", reply("sure, looks fine")],
     ["a missing field", reply(JSON.stringify({ ...ANSWER, attack: undefined }))],
     ["a wrong type", reply(JSON.stringify({ ...ANSWER, namesPerson: "no" }))],
   ])("returns null for %s", async (_label, response) => {
     mockFetch.mockResolvedValue(response);
     expect(await precheck("x", "en")).toBeNull();
+  });
+
+  it("tries once more when the model is busy, and uses the second answer", async () => {
+    mockFetch.mockResolvedValueOnce(reply("", false, 429));
+    expect(await precheck("x", "en")).toEqual(ANSWER);
+    expect(mockFetch).toHaveBeenCalledTimes(2);
+  });
+
+  it("gives up after two busy answers", async () => {
+    mockFetch.mockResolvedValue(reply("", false, 429));
+    expect(await precheck("x", "en")).toBeNull();
+    expect(mockFetch).toHaveBeenCalledTimes(2);
+  });
+
+  it("does not retry a request the provider refused as wrong (4xx other than 429)", async () => {
+    mockFetch.mockResolvedValue(reply("", false, 400));
+    expect(await precheck("x", "en")).toBeNull();
+    expect(mockFetch).toHaveBeenCalledTimes(1);
   });
 
   it("returns null when the request fails or times out", async () => {

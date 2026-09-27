@@ -84,6 +84,15 @@ export async function approveSubmission(id: string) {
   await getSql()`UPDATE submissions SET status = 'approved', reviewed_at = now() WHERE id = ${id}`;
 }
 
+/** Runs the AI pre-check again on a saved suggestion, e.g. after it was busy. */
+export async function recheckSubmission(id: string, run: (text: string, locale: string) => Promise<Precheck | null>) {
+  if (!UUID.test(id)) return;
+  const rows = (await getSql()`SELECT text, locale FROM submissions WHERE id = ${id}`) as Record<string, string>[];
+  if (!rows.length) return;
+  const check = await run(rows[0].text, rows[0].locale);
+  if (check) await getSql()`UPDATE submissions SET ai_check = ${JSON.stringify(check)}::jsonb WHERE id = ${id}`;
+}
+
 /** Rejecting or removing a suggestion deletes it and any votes on it. */
 export async function deleteSubmission(id: string) {
   if (!UUID.test(id)) return;

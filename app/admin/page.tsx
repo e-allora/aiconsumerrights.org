@@ -1,7 +1,7 @@
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 
-import { approve, remove } from "@/app/admin/actions";
+import { approve, recheck, remove } from "@/app/admin/actions";
 import { Button } from "@/components/ui/button";
 import { isAdmin } from "@/lib/admin-auth";
 import type { Precheck } from "@/lib/forum/precheck";
@@ -26,7 +26,12 @@ const FLAGS: [keyof Omit<Precheck, "english">, string][] = [
 
 function CheckSummary({ item }: { item: Submission }) {
   if (!item.check) {
-    return <p className="font-bold">Not checked: the AI pre-check did not run. Read it carefully.</p>;
+    return (
+      <p className="font-bold">
+        Not checked: the AI pre-check did not run, usually because the model was busy. Try &ldquo;Check again&rdquo;, or
+        read it carefully yourself.
+      </p>
+    );
   }
   const raised = FLAGS.filter(([key]) => item.check![key]);
   return (
@@ -63,6 +68,14 @@ function Item({ item }: { item: Submission }) {
       </p>
       <CheckSummary item={item} />
       <div className="flex flex-wrap gap-3">
+        {!item.check && (
+          <form action={recheck}>
+            <input type="hidden" name="id" value={item.id} />
+            <Button type="submit" variant="outline">
+              Check again
+            </Button>
+          </form>
+        )}
         {item.status === "pending" && (
           <form action={approve}>
             <input type="hidden" name="id" value={item.id} />

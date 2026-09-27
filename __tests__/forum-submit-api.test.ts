@@ -4,7 +4,7 @@ import { NextRequest } from "next/server";
 import { POST } from "@/app/api/forum/submit/route";
 import { GET as getSuggestions } from "@/app/api/forum/suggestions/route";
 import { precheck } from "@/lib/forum/precheck";
-import { cleanText, hasContactInfo, parseSubmission } from "@/lib/forum/submissions";
+import { cleanText, hasContactInfo, parseSubmission, recheckSubmission } from "@/lib/forum/submissions";
 
 const queries: { text: string; values: unknown[] }[] = [];
 let dbRows: unknown[] = [];
@@ -145,6 +145,34 @@ describe("POST /api/forum/submit", () => {
   it("returns 500 when the database is down", async () => {
     dbError = new Error("down");
     expect((await submit({ text: "Reasons should be plain.", locale: "en" })).status).toBe(500);
+  });
+});
+
+describe("recheckSubmission", () => {
+  const ID = "5f0c6d6e-2f7a-4f0e-9a51-9a4c1d3f0a11";
+
+  it("runs the check on the saved text and stores a new result", async () => {
+    dbRows = [{ text: "Le ragioni devono essere chiare.", locale: "it" }];
+    const run = jest.fn().mockResolvedValue(CHECK);
+    await recheckSubmission(ID, run);
+    expect(run).toHaveBeenCalledWith("Le ragioni devono essere chiare.", "it");
+    expect(queries[1]).toEqual({
+      text: "UPDATE submissions SET ai_check = ?::jsonb WHERE id = ?",
+      values: [JSON.stringify(CHECK), ID],
+    });
+  });
+
+  it("leaves the row alone when the check still can't run", async () => {
+    dbRows = [{ text: "x", locale: "en" }];
+    await recheckSubmission(ID, jest.fn().mockResolvedValue(null));
+    expect(queries).toHaveLength(1);
+  });
+
+  it("ignores ids that are not UUIDs", async () => {
+    const run = jest.fn();
+    await recheckSubmission("1 OR 1=1", run);
+    expect(run).not.toHaveBeenCalled();
+    expect(queries).toHaveLength(0);
   });
 });
 

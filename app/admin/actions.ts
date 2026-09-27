@@ -4,7 +4,8 @@ import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 
 import { isAdmin } from "@/lib/admin-auth";
-import { approveSubmission, deleteSubmission } from "@/lib/forum/submissions";
+import { precheck } from "@/lib/forum/precheck";
+import { approveSubmission, deleteSubmission, recheckSubmission } from "@/lib/forum/submissions";
 
 // Middleware already asks for the password; each action checks again, so
 // nothing depends on middleware alone.
@@ -22,5 +23,12 @@ export async function approve(form: FormData) {
 export async function remove(form: FormData) {
   requireAdmin();
   await deleteSubmission(String(form.get("id")));
+  revalidatePath("/admin");
+}
+
+/** Runs the AI pre-check again on a suggestion marked "not checked". */
+export async function recheck(form: FormData) {
+  requireAdmin();
+  await recheckSubmission(String(form.get("id")), precheck);
   revalidatePath("/admin");
 }
