@@ -335,7 +335,7 @@
     },
     "submission": {
       "label": "Proponi una frase da far votare agli altri",
-      "disclosure": "<b>Una persona legge ogni frase prima che venga mostrata.</b> Innanzitutto, un controllo automatico con l'IA cerca nomi e dati di contatto. L'IA funziona su server nell'UE ed è impostata per non conservare il tuo testo. Le frasi approvate vengono mostrate a chi usa la stessa lingua. Non pubblichiamo frasi che prendono di mira una persona, un'azienda o un gruppo. Per favore, non inserire dati personali. I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
+      "disclosure": "<b>Una persona legge ogni frase prima che venga mostrata.</b> Innanzitutto, un modello di IA controlla se contiene nomi o dati di contatto: Mistral Small o, in alternativa, Gemini di Google, entrambi su server nell'UE. Funziona tramite OpenRouter, impostato per non conservare il tuo testo. Le frasi approvate vengono mostrate a chi usa la stessa lingua. Non pubblichiamo frasi che prendono di mira una persona, un'azienda o un gruppo. Per favore, non inserire dati personali. I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
       "placeholder": "Per esempio: «I portali di assistenza clienti dovrebbero sempre permetterti di chiedere un operatore umano con un solo tocco.»",
       "remaining": "Restano {remaining} di {max} caratteri",
       "submit": "Invia per la revisione",

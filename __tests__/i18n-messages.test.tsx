@@ -19,6 +19,15 @@ const es = flatten(MESSAGES.es as unknown as Tree);
 const pt = flatten(MESSAGES["pt-PT"] as unknown as Tree);
 const ptBR = flatten(MESSAGES["pt-BR"] as unknown as Tree);
 const itMsgs = flatten(MESSAGES.it as unknown as Tree);
+
+// The blameless-tone checks keep companies out of what the site says about
+// AI and consumers. Naming the tools the site itself uses is disclosure, not
+// singling out, so these keys may name vendors. Keep this list short.
+const TOOL_DISCLOSURES = ["Forum.submission.disclosure"];
+const opinions = (m: Record<string, string>) =>
+  Object.entries(m)
+    .filter(([key]) => !TOOL_DISCLOSURES.includes(key))
+    .map(([, v]) => v);
 const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).
 const MAY_BE_EMPTY = /(rule2Label|sourcesLanguageNote)$/;
@@ -117,7 +126,7 @@ describe("message files", () => {
   });
 
   it("keep the blameless tone in Spanish: no blame words or named companies", () => {
-    const text = Object.values(es).join(" ");
+    const text = opinions(es).join(" ");
     expect(text).not.toMatch(/\b(estafa|fraude|culpable|vergüenza|codicios)/i);
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
   });
@@ -149,15 +158,28 @@ describe("message files", () => {
   });
 
   it("keep the blameless tone in Italian: no blame words or named companies", () => {
-    const text = Object.values(itMsgs).join(" ");
+    const text = opinions(itMsgs).join(" ");
     expect(text).not.toMatch(/\b(truffa|frode|colpevole|vergogna|avid[io])/i);
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|DeepSeek|Replika|Rite Aid)\b/);
   });
 
   it("keep the blameless tone in Portuguese: no blame words or named companies", () => {
-    const text = [...Object.values(pt), ...Object.values(ptBR)].join(" ");
+    const text = [...opinions(pt), ...opinions(ptBR)].join(" ");
     expect(text).not.toMatch(/\b(burla|fraude|culpado|vergonha|ganancios)/i);
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
+  });
+});
+
+describe("tool disclosure", () => {
+  it.each(Object.keys(MESSAGES))("names the AI tools that check suggestions in %s", (locale) => {
+    const text = MESSAGES[locale as keyof typeof MESSAGES].Forum.submission.disclosure;
+    for (const name of ["Mistral Small", "Gemini", "OpenRouter"]) expect(text).toContain(name);
+  });
+
+  it("still blocks company names in every other message", () => {
+    const withName = { ...es, "Forum.lead": "Google" };
+    expect(opinions(withName).join(" ")).toMatch(/Google/);
+    expect(opinions({ "Forum.submission.disclosure": "Google" })).toEqual([]);
   });
 });
 
