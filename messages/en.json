@@ -258,7 +258,7 @@
     "title": "Your voice belongs here",
     "lead": "<b>Technology works best when everyone participates in shaping it.</b> Vote on short statements, or suggest your own. No account needed.",
     "civility": "Your input is reviewed for civil discourse standards. We critique ideas, not people.",
-    "privacy": "<b>What we keep when you vote:</b> your vote, the page language, and a random code saved in your browser so each person votes once. We don't store your name, email, or IP address with it. Votes are stored in Frankfurt, Germany. “Clear my votes” deletes them.",
+    "privacy": "<b>What we keep when you vote:</b> your vote, the page language, and a random code saved in your browser so each person votes once. We don't store your name, email, or IP address with it. Votes are stored in a Neon database in Frankfurt, Germany. Like most websites, our host, Vercel, keeps short-term request logs that include IP addresses, for security. “Clear my votes” deletes them.",
     "principles": {
       "heading": "Follow five principles of constructive dialogue",
       "lead": "<b>These keep the forum useful for everyone.</b> Each statement stands on its own, so there are no reply threads to argue in.",

@@ -44,7 +44,8 @@ describe("Forum page", () => {
     const note = screen.getByTestId("vote-privacy");
     expect(note).toHaveTextContent("a random code saved in your browser");
     expect(note).toHaveTextContent("We don't store your name, email, or IP address");
-    expect(note).toHaveTextContent("Frankfurt, Germany");
+    expect(note).toHaveTextContent("a Neon database in Frankfurt, Germany");
+    expect(note).toHaveTextContent("our host, Vercel, keeps short-term request logs that include IP addresses");
     expect(note).toHaveTextContent("“Clear my votes” deletes them.");
     const toolbar = screen.getByRole("toolbar", { name: "Your vote" });
     expect(note.compareDocumentPosition(toolbar) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();

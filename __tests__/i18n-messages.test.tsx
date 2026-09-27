@@ -23,7 +23,7 @@ const itMsgs = flatten(MESSAGES.it as unknown as Tree);
 // The blameless-tone checks keep companies out of what the site says about
 // AI and consumers. Naming the tools the site itself uses is disclosure, not
 // singling out, so these keys may name vendors. Keep this list short.
-const TOOL_DISCLOSURES = ["Forum.submission.disclosure"];
+const TOOL_DISCLOSURES = ["Forum.submission.disclosure", "Forum.privacy"];
 const opinions = (m: Record<string, string>) =>
   Object.entries(m)
     .filter(([key]) => !TOOL_DISCLOSURES.includes(key))

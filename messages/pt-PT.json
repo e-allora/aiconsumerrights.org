@@ -258,7 +258,7 @@
     "title": "A sua voz tem lugar aqui",
     "lead": "<b>A tecnologia funciona melhor quando todas as pessoas participam em dar-lhe forma.</b> Vote em frases curtas, ou sugira a sua. Não precisa de criar conta.",
     "civility": "Os seus contributos são revistos segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
-    "privacy": "<b>O que guardamos quando vota:</b> o seu voto, o idioma da página e um código aleatório guardado no seu navegador, para que cada pessoa vote uma só vez. Não guardamos o seu nome, e-mail nem endereço IP com o voto. Os votos ficam guardados em Frankfurt, na Alemanha. «Apagar os meus votos» elimina-os.",
+    "privacy": "<b>O que guardamos quando vota:</b> o seu voto, o idioma da página e um código aleatório guardado no seu navegador, para que cada pessoa vote uma só vez. Não guardamos o seu nome, e-mail nem endereço IP com o voto. Os votos ficam guardados numa base de dados da Neon em Frankfurt, na Alemanha. Como a maioria dos sites, o nosso serviço de alojamento, a Vercel, guarda por pouco tempo registos de acesso que incluem endereços IP, por segurança. «Apagar os meus votos» elimina-os.",
     "principles": {
       "heading": "Siga cinco princípios para um diálogo construtivo",
       "lead": "<b>Estes princípios tornam o fórum útil para todas as pessoas.</b> Cada frase vale por si, por isso não há conversas de respostas para discutir.",
