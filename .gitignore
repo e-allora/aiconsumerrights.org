@@ -56,3 +56,6 @@ next-env.d.ts
 
 # Robert's private outreach drafts, never published
 /outreach-drafts/
+
+# Robert's reading notes and excerpts, never published
+/Reading-excerpts*.md
