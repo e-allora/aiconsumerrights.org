@@ -459,7 +459,7 @@
     "checkedLabel": "Sources vérifiées",
     "seeAll": "Voir les {total} sources, réparties en {groups} groupes",
     "openRegistry": "Ouvrir le registre complet des sources",
-    "registryAbout": "Toutes les sources sur lesquelles s'appuie ce site, avec la façon dont chaque lien a été vérifié. « Lien ouvert par une IA et conforme » veut dire qu'un modèle d'IA (Claude, ou des agents de recherche qu'il a dirigés) a ouvert le lien à la date de vérification et que le contenu correspondait à ce que dit ce site. Ce n'est pas la même chose qu'une lecture par une personne. Robert lit lui-même chaque source ; chacune qu'il a lue l'indique, avec la date. « Lien pas encore ouvert » veut dire que le lien vient d'un index officiel ou d'une recherche, mais que personne ne l'a encore ouvert. « Pas encore de lien public » veut dire qu'elle est listée comme lecture de fond, sans lien public enregistré.",
+    "registryAbout": "Toutes les sources sur lesquelles s'appuie ce site, avec la façon dont chaque lien a été vérifié. « Lien ouvert par une IA et conforme » veut dire qu'un modèle d'IA (Claude, ou des agents de recherche qu'il a dirigés) a ouvert le lien à la date de vérification et que le contenu correspondait à ce que dit ce site. Ce n'est pas la même chose qu'une lecture par une personne. Robert lit lui-même chaque source ; chacune qu'il a lue l'indique, avec la date. « Lien pas encore ouvert » veut dire que le lien vient d'un index officiel ou d'une recherche, mais que personne ne l'a encore ouvert. « Pas encore de lien public » veut dire qu'elle est listée comme lecture de fond, sans lien public enregistré. Chaque lien a aussi une copie enregistrée sur l'Internet Archive, pour que chacun puisse voir la page telle qu'elle était lors de la vérification. Les sources que Robert a lues montrent l'empreinte de sa propre copie, pour que toute personne ayant le même fichier puisse vérifier qu'il correspond.",
     "status": {
       "confirmed": "Lien ouvert par une IA et conforme",
       "unopened": "Lien pas encore ouvert",
@@ -486,7 +486,10 @@
       "eu-national": "Cadres nationaux européens"
     },
     "sourcesLanguageNote": "Les titres et les détails des sources apparaissent dans leur langue d'origine, le plus souvent l'anglais.",
-    "readBy": "Lu par {name} le {date}."
+    "readBy": "Lu par {name} le {date}.",
+    "archived": "Copie archivée du {date}",
+    "copyOriginal": "Copie de Robert : le fichier original de l'éditeur, {pages} pages. Empreinte SHA-256 <code>{hash}</code>…",
+    "copyPrint": "Copie de Robert : enregistrée depuis la page web, {pages} pages. Empreinte SHA-256 <code>{hash}</code>…"
   },
   "Sources": {
     "metaTitle": "Sources",

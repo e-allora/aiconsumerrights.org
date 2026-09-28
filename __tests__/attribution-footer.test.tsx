@@ -32,9 +32,11 @@ describe("AttributionFooter", () => {
   it("gives every external link an aria-label and opens it safely in a new tab", () => {
     render(<AttributionFooter />);
     const external = screen.getAllByRole("link").filter((a) => a.getAttribute("href")!.startsWith("http"));
-    // primary sources appear twice: in the summary column and in the full list
+    // Primary sources appear twice (summary column and full list); archived
+    // copies once each, in the full list.
     const primaryLinked = linked.filter((s) => s.primary).length;
-    expect(external).toHaveLength(linked.length + primaryLinked);
+    const archived = linked.filter((s) => s.archived).length;
+    expect(external).toHaveLength(linked.length + primaryLinked + archived);
     for (const a of external) {
       expect(a).toHaveAttribute("target", "_blank");
       expect(a).toHaveAttribute("rel", "noopener noreferrer");

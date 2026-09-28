@@ -459,7 +459,7 @@
     "checkedLabel": "Fontes verificadas",
     "seeAll": "Ver as {total} fontes em {groups} grupos",
     "openRegistry": "Abrir o registo completo de fontes",
-    "registryAbout": "Todas as fontes em que este site se apoia, com a forma como cada ligação foi verificada. «Ligação aberta por IA e confirmada» significa que um modelo de IA (o Claude, ou agentes de pesquisa que ele orientou) abriu a ligação na data de verificação e o conteúdo correspondia ao que este site diz. Não é o mesmo que a leitura de uma pessoa. O Robert está a ler cada fonte ele próprio; cada uma que já leu indica-o, com a data. «Ligação ainda não aberta» significa que a ligação vem de um índice oficial ou de uma pesquisa, mas ninguém a abriu ainda. «Ainda sem ligação pública» significa que está listada como leitura de fundo, sem ligação pública registada.",
+    "registryAbout": "Todas as fontes em que este site se apoia, com a forma como cada ligação foi verificada. «Ligação aberta por IA e confirmada» significa que um modelo de IA (o Claude, ou agentes de pesquisa que ele orientou) abriu a ligação na data de verificação e o conteúdo correspondia ao que este site diz. Não é o mesmo que a leitura de uma pessoa. O Robert está a ler cada fonte ele próprio; cada uma que já leu indica-o, com a data. «Ligação ainda não aberta» significa que a ligação vem de um índice oficial ou de uma pesquisa, mas ninguém a abriu ainda. «Ainda sem ligação pública» significa que está listada como leitura de fundo, sem ligação pública registada. Cada ligação tem também uma cópia guardada no Internet Archive, para que qualquer pessoa veja a página tal como estava quando foi verificada. As fontes que o Robert já leu mostram a impressão digital da sua própria cópia, para que qualquer pessoa com o mesmo ficheiro possa confirmar que coincide.",
     "status": {
       "confirmed": "Ligação aberta por IA e confirmada",
       "unopened": "Ligação ainda não aberta",
@@ -486,7 +486,10 @@
       "eu-national": "Enquadramentos nacionais europeus"
     },
     "sourcesLanguageNote": "Os títulos e pormenores das fontes aparecem na língua original, quase sempre em inglês.",
-    "readBy": "Lido por {name} a {date}."
+    "readBy": "Lido por {name} a {date}.",
+    "archived": "Cópia arquivada de {date}",
+    "copyOriginal": "Cópia do Robert: o ficheiro do próprio editor, {pages} páginas. Impressão digital SHA-256 <code>{hash}</code>…",
+    "copyPrint": "Cópia do Robert: guardada a partir da página web, {pages} páginas. Impressão digital SHA-256 <code>{hash}</code>…"
   },
   "Sources": {
     "metaTitle": "Fontes",

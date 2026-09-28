@@ -22,6 +22,14 @@ export type Source = {
   lang?: string;
   /** The day Robert read the source himself (YYYY-MM-DD). "confirmed" alone means an AI opened it. */
   readBy?: string;
+  /** A snapshot at the Internet Archive, so anyone can see the page as it was when checked. */
+  archived?: { url: string; date: string };
+  /**
+   * Robert's own saved copies, by SHA-256 fingerprint. "original" is the
+   * publisher's file, which anyone can download and compare; "print" is his
+   * browser's PDF of a web page, which only his copy will match.
+   */
+  copies?: { sha256: string; pages: number; kind: "original" | "print" }[];
 };
 
 export type SourceCategory = { id: string; title: string; sources: Source[] };

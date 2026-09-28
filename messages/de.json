@@ -459,7 +459,7 @@
     "checkedLabel": "Quellen geprüft",
     "seeAll": "Alle {total} Quellen in {groups} Gruppen ansehen",
     "openRegistry": "Das vollständige Quellenverzeichnis öffnen",
-    "registryAbout": "Alle Quellen, auf die sich diese Website stützt, und wie jeder Link geprüft wurde. „Link von KI geöffnet und bestätigt“ heißt: Ein KI-Modell (Claude oder Recherche-Agenten, die es gesteuert hat) hat den Link am Prüfdatum geöffnet, und der Inhalt stimmte mit dem überein, was diese Website sagt. Das ist nicht dasselbe, wie wenn ein Mensch die Quelle liest. Robert liest jede Quelle selbst; bei jeder, die er gelesen hat, steht das mit Datum. „Link noch nicht geöffnet“ heißt: Der Link stammt aus einem offiziellen Verzeichnis oder einer Suche, wurde aber noch von niemandem geöffnet. „Noch kein öffentlicher Link“ heißt: als Hintergrundlektüre aufgeführt, ohne erfassten öffentlichen Link.",
+    "registryAbout": "Alle Quellen, auf die sich diese Website stützt, und wie jeder Link geprüft wurde. „Link von KI geöffnet und bestätigt“ heißt: Ein KI-Modell (Claude oder Recherche-Agenten, die es gesteuert hat) hat den Link am Prüfdatum geöffnet, und der Inhalt stimmte mit dem überein, was diese Website sagt. Das ist nicht dasselbe, wie wenn ein Mensch die Quelle liest. Robert liest jede Quelle selbst; bei jeder, die er gelesen hat, steht das mit Datum. „Link noch nicht geöffnet“ heißt: Der Link stammt aus einem offiziellen Verzeichnis oder einer Suche, wurde aber noch von niemandem geöffnet. „Noch kein öffentlicher Link“ heißt: als Hintergrundlektüre aufgeführt, ohne erfassten öffentlichen Link. Zu jedem Link gibt es außerdem eine Kopie im Internet Archive, damit alle die Seite so sehen können, wie sie bei der Prüfung war. Bei Quellen, die Robert gelesen hat, steht der Fingerabdruck seiner eigenen Kopie, damit alle mit derselben Datei prüfen können, ob sie übereinstimmt.",
     "status": {
       "confirmed": "Link von KI geöffnet und bestätigt",
       "unopened": "Link noch nicht geöffnet",
@@ -486,7 +486,10 @@
       "eu-national": "Nationale Rechtsrahmen in Europa"
     },
     "sourcesLanguageNote": "Titel und Angaben der Quellen erscheinen in ihrer Originalsprache, meist Englisch.",
-    "readBy": "Gelesen von {name} am {date}."
+    "readBy": "Gelesen von {name} am {date}.",
+    "archived": "Archivierte Kopie vom {date}",
+    "copyOriginal": "Roberts Kopie: die Originaldatei des Herausgebers, {pages} Seiten. SHA-256-Fingerabdruck <code>{hash}</code>…",
+    "copyPrint": "Roberts Kopie: aus der Webseite gespeichert, {pages} Seiten. SHA-256-Fingerabdruck <code>{hash}</code>…"
   },
   "Sources": {
     "metaTitle": "Quellen",

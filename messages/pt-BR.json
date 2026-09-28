@@ -459,7 +459,7 @@
     "checkedLabel": "Fontes verificadas",
     "seeAll": "Ver as {total} fontes em {groups} grupos",
     "openRegistry": "Abrir o registro completo de fontes",
-    "registryAbout": "Todas as fontes em que este site se apoia, com a forma como cada link foi verificado. \"Link aberto por IA e confirmado\" significa que um modelo de IA (o Claude, ou agentes de pesquisa que ele orientou) abriu o link na data da verificação e o conteúdo batia com o que este site diz. Não é o mesmo que a leitura de uma pessoa. O Robert está lendo cada fonte ele mesmo; cada uma que ele já leu mostra isso, com a data. \"Link ainda não aberto\" significa que o link vem de um índice oficial ou de uma busca, mas ninguém o abriu ainda. \"Ainda sem link público\" significa que está listada como leitura de fundo, sem link público registrado.",
+    "registryAbout": "Todas as fontes em que este site se apoia, com a forma como cada link foi verificado. \"Link aberto por IA e confirmado\" significa que um modelo de IA (o Claude, ou agentes de pesquisa que ele orientou) abriu o link na data da verificação e o conteúdo batia com o que este site diz. Não é o mesmo que a leitura de uma pessoa. O Robert está lendo cada fonte ele mesmo; cada uma que ele já leu mostra isso, com a data. \"Link ainda não aberto\" significa que o link vem de um índice oficial ou de uma busca, mas ninguém o abriu ainda. \"Ainda sem link público\" significa que está listada como leitura de fundo, sem link público registrado. Cada link também tem uma cópia salva no Internet Archive, para que qualquer pessoa veja a página como ela estava na verificação. As fontes que o Robert já leu mostram a impressão digital da cópia dele, para que qualquer pessoa com o mesmo arquivo possa confirmar que bate.",
     "status": {
       "confirmed": "Link aberto por IA e confirmado",
       "unopened": "Link ainda não aberto",
@@ -486,7 +486,10 @@
       "eu-national": "Marcos nacionais europeus"
     },
     "sourcesLanguageNote": "Os títulos e detalhes das fontes aparecem no idioma original, quase sempre em inglês.",
-    "readBy": "Lido por {name} em {date}."
+    "readBy": "Lido por {name} em {date}.",
+    "archived": "Cópia arquivada de {date}",
+    "copyOriginal": "Cópia do Robert: o arquivo do próprio editor, {pages} páginas. Impressão digital SHA-256 <code>{hash}</code>…",
+    "copyPrint": "Cópia do Robert: salva a partir da página, {pages} páginas. Impressão digital SHA-256 <code>{hash}</code>…"
   },
   "Sources": {
     "metaTitle": "Fontes",

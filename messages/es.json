@@ -459,7 +459,7 @@
     "checkedLabel": "Fuentes revisadas",
     "seeAll": "Ver las {total} fuentes en {groups} grupos",
     "openRegistry": "Abrir el registro completo de fuentes",
-    "registryAbout": "Todas las fuentes en las que se apoya este sitio, con cómo se revisó cada enlace. «Enlace abierto por IA y conforme» significa que un modelo de IA (Claude, o agentes de investigación que dirigió) abrió el enlace en la fecha de revisión y el contenido coincidía con lo que dice este sitio. No es lo mismo que la lectura de una persona. Robert está leyendo cada fuente él mismo; cada una que ya leyó lo indica, con la fecha. «Enlace aún sin abrir» significa que el enlace viene de un índice oficial o de una búsqueda, pero nadie lo ha abierto todavía. «Todavía sin enlace público» significa que figura como lectura de fondo, sin enlace público registrado.",
+    "registryAbout": "Todas las fuentes en las que se apoya este sitio, con cómo se revisó cada enlace. «Enlace abierto por IA y conforme» significa que un modelo de IA (Claude, o agentes de investigación que dirigió) abrió el enlace en la fecha de revisión y el contenido coincidía con lo que dice este sitio. No es lo mismo que la lectura de una persona. Robert está leyendo cada fuente él mismo; cada una que ya leyó lo indica, con la fecha. «Enlace aún sin abrir» significa que el enlace viene de un índice oficial o de una búsqueda, pero nadie lo ha abierto todavía. «Todavía sin enlace público» significa que figura como lectura de fondo, sin enlace público registrado. Cada enlace tiene además una copia guardada en el Internet Archive, para que cualquiera vea la página tal como estaba al revisarla. Las fuentes que Robert ya leyó muestran la huella de su propia copia, para que cualquiera con el mismo archivo pueda comprobar que coincide.",
     "status": {
       "confirmed": "Enlace abierto por IA y conforme",
       "unopened": "Enlace aún sin abrir",
@@ -486,7 +486,10 @@
       "eu-national": "Marcos nacionales europeos"
     },
     "sourcesLanguageNote": "Los títulos y detalles de las fuentes aparecen en su idioma original, casi siempre inglés.",
-    "readBy": "Leído por {name} el {date}."
+    "readBy": "Leído por {name} el {date}.",
+    "archived": "Copia archivada del {date}",
+    "copyOriginal": "Copia de Robert: el archivo del propio editor, {pages} páginas. Huella SHA-256 <code>{hash}</code>…",
+    "copyPrint": "Copia de Robert: guardada desde la página web, {pages} páginas. Huella SHA-256 <code>{hash}</code>…"
   },
   "Sources": {
     "metaTitle": "Fuentes",

@@ -56,7 +56,23 @@
           "type": "Global standard",
           "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "1cc4db1499d8e6bef668de3cc5980eb0b9ed507037145f7981bbfd64cd654162",
+              "pages": 44,
+              "kind": "original"
+            },
+            {
+              "sha256": "6028636390a5f5d7e2dd84b75fea04f1400919da483b3b462dbe486f00d2beff",
+              "pages": 20,
+              "kind": "original"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928020626/https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "eu-ai-act",
@@ -67,7 +83,23 @@
           "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
           "status": "unopened",
           "note": "EUR-Lex blocks automated readers. Opens in a browser.",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "f3953bad8281428f008aa0c408e817ef0033630cbc6a6ef2d2ae92a605fb3194",
+              "pages": 178,
+              "kind": "print"
+            },
+            {
+              "sha256": "1bcbed6169f785492cb30251f5d94552ca56dd6f2499e6c17e7d36752bf615bb",
+              "pages": 182,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928020718/https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "eu-ai-act-art50",
@@ -76,7 +108,11 @@
           "type": "Law (EU)",
           "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "archived": {
+            "url": "https://web.archive.org/web/20260928020745/https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "eu-digital-omnibus-2026",
@@ -87,7 +123,18 @@
           "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
           "status": "unopened",
           "note": "EUR-Lex blocks automated readers. In force 27 July 2026 per several law-firm summaries.",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "153ea40a48aa0f6039852a84eb9ef96de9e999933c45c031e1672dec7063f293",
+              "pages": 49,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928020810/https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "gdpr",
@@ -98,7 +145,18 @@
           "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
           "status": "unopened",
           "note": "EUR-Lex blocks automated readers. Standard legal citation.",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "15da991a0eff48ad22cbb52e933f1d8aa93fa229f518762267cd7b3361e011b4",
+              "pages": 107,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928020836/https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "ftc-ai-comply-2024",
@@ -108,7 +166,18 @@
           "type": "Press release",
           "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "344a55cacfac33ddd248e5cd80cb7933265ff7dda65ec36ed7c8f5bed0e06a6c",
+              "pages": 7,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928020903/https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "cfpb-reg-b",
@@ -117,7 +186,18 @@
           "type": "Law (US)",
           "url": "https://www.consumerfinance.gov/rules-policy/regulations/1002/9/",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "cd28d328891d2576314924efbf9264d7161f2ac26e68bc2751b5b60079ec6bfe",
+              "pages": 6,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928020931/https://www.consumerfinance.gov/rules-policy/regulations/1002/9/#ef294f11e05c2618c24bf90559957c6ef5c5681669578d00cfbe6c03",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "ostp-blueprint-2022",
@@ -127,7 +207,23 @@
           "type": "Guidance (US, non-binding)",
           "url": "https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "ab34b52e55b3f6641d5db725333129a66c0bbbb33a060f62ad44d52d98935c0a",
+              "pages": 73,
+              "kind": "original"
+            },
+            {
+              "sha256": "867859053c46647df0c187d279d555860b34d148b567e3892f37f03c43e7165e",
+              "pages": 8,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260914154421/https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
+            "date": "2026-09-14"
+          }
         },
         {
           "id": "eo-14365-2025",
@@ -136,7 +232,11 @@
           "date": "2025-12-11",
           "type": "Executive order (US)",
           "url": "https://www.federalregister.gov/documents/2025/12/16/2025-23092/ensuring-a-national-policy-framework-for-artificial-intelligence",
-          "status": "unopened"
+          "status": "unopened",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021037/https://unblock.federalregister.gov/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "ncsl-ai-database",
@@ -144,7 +244,11 @@
           "publisher": "National Conference of State Legislatures (NCSL)",
           "type": "Legislation tracker",
           "url": "https://www.ncsl.org/financial-services/artificial-intelligence-legislation-database",
-          "status": "unopened"
+          "status": "unopened",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021124/https://www.ncsl.org/financial-services/artificial-intelligence-legislation-database",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "ftc-reportfraud",
@@ -152,7 +256,11 @@
           "publisher": "Federal Trade Commission (FTC)",
           "type": "Complaint portal (US)",
           "url": "https://reportfraud.ftc.gov/",
-          "status": "unopened"
+          "status": "unopened",
+          "archived": {
+            "url": "https://web.archive.org/web/20260927070603/https://reportfraud.ftc.gov/",
+            "date": "2026-09-27"
+          }
         },
         {
           "id": "cfpb-complaint",
@@ -160,7 +268,11 @@
           "publisher": "Consumer Financial Protection Bureau (CFPB)",
           "type": "Complaint portal (US)",
           "url": "https://www.consumerfinance.gov/complaint/",
-          "status": "unopened"
+          "status": "unopened",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021228/https://www.consumerfinance.gov/complaint/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "unesco-ai-competency-students",
@@ -232,7 +344,18 @@
           "type": "Survey data",
           "url": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "b6b3e0ada5820403b6c32ad5fb286205d994d930687bc01bad77d2df3f4db226",
+              "pages": 83,
+              "kind": "original"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021254/https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "stanford-ai-index-2026",
@@ -242,7 +365,18 @@
           "type": "Benchmark report",
           "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "fff5ac1df971cee7daf847fa5ed00dd7444db693092821c3e691debc1eaada09",
+              "pages": 425,
+              "kind": "original"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928011612/https://hai.stanford.edu/ai-index/2026-ai-index-report",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "pew-ai-in-lives",
@@ -280,7 +414,18 @@
           "type": "Global standard",
           "url": "https://www.w3.org/TR/WCAG22/",
           "status": "confirmed",
-          "primary": true
+          "primary": true,
+          "copies": [
+            {
+              "sha256": "b84678e74c174008a93c4c2cdfde395bd658bdb6de25a313f2beff6104a5ba5e",
+              "pages": 101,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021335/https://www.w3.org/TR/WCAG22/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "wcag-understanding-2-5-8",
@@ -288,7 +433,11 @@
           "publisher": "W3C WAI",
           "type": "Accessibility standard",
           "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
-          "status": "confirmed"
+          "status": "confirmed",
+          "archived": {
+            "url": "https://web.archive.org/web/20260911055046/https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+            "date": "2026-09-11"
+          }
         },
         {
           "id": "wcag-checklists",
@@ -332,7 +481,18 @@
           "date": "2017-11-12",
           "type": "Usability study",
           "url": "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
-          "status": "confirmed"
+          "status": "confirmed",
+          "copies": [
+            {
+              "sha256": "47cbce29ad4bba72eb5d19646a6bdc51abd720e65e2d185e42434714a1d62177",
+              "pages": 11,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021501/https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "figma-trends-2026",
@@ -341,7 +501,11 @@
           "type": "Design benchmark",
           "url": "https://www.figma.com/resource-library/web-design-trends/",
           "status": "unopened",
-          "note": "A saved copy was summarized; the live page was not opened."
+          "note": "A saved copy was summarized; the live page was not opened.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021530/https://www.figma.com/resource-library/web-design-trends/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "mayer-multimedia",
@@ -422,7 +586,18 @@
           "url": "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/outros-documentos-e-publicacoes-institucionais/lgpd-en-lei-no-13-709-capa.pdf",
           "status": "confirmed",
           "primary": true,
-          "summary": "Article 20 gives the data subject the right to request a review of decisions made solely by automated processing, and clear information on the criteria and procedures used, within trade and industrial secrecy. Article 19 requires a complete answer to a data request within 15 days."
+          "summary": "Article 20 gives the data subject the right to request a review of decisions made solely by automated processing, and clear information on the criteria and procedures used, within trade and industrial secrecy. Article 19 requires a complete answer to a data request within 15 days.",
+          "copies": [
+            {
+              "sha256": "268d284b279f9f2ec9e0e494ccf2841ead40155599c77a095cf8d0ae867ebd61",
+              "pages": 32,
+              "kind": "original"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021554/https://www.gov.br/anpd/pt-br/centrais-de-conteudo/outros-documentos-e-publicacoes-institucionais/lgpd-en-lei-no-13-709-capa.pdf",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "lgpd-article-20",
@@ -433,7 +608,11 @@
           "url": "https://lgpd-brazil.info/chapter_03/article_20",
           "status": "confirmed",
           "note": "The page does not say whether its translation is official. The ANPD translation is the primary source.",
-          "summary": "English text of LGPD Article 20: the right to request a review of solely automated decisions affecting personal, professional, consumer, or credit profiles, and clear information on the criteria and procedures used."
+          "summary": "English text of LGPD Article 20: the right to request a review of solely automated decisions affecting personal, professional, consumer, or credit profiles, and clear information on the criteria and procedures used.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021626/https://lgpd-brazil.info/chapter_03/article_20",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "iba-mariotto-2024",
@@ -445,7 +624,18 @@
           "jurisdiction": "Brazil / International",
           "url": "https://www.ibanet.org/Brazilian-legal-framework-on-automated-decision-making",
           "status": "confirmed",
-          "summary": "Compares GDPR Article 22 and LGPD Article 20, including the amendment that removed the requirement that a person carry out the review."
+          "summary": "Compares GDPR Article 22 and LGPD Article 20, including the amendment that removed the requirement that a person carry out the review.",
+          "copies": [
+            {
+              "sha256": "5410748b5ff0193ca4dd9572475c4ed1fd9f18cc373afcc1dc667e582ac37aa9",
+              "pages": 2,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021653/https://www.ibanet.org/Brazilian-legal-framework-on-automated-decision-making",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "lawsofbrazil-2026",
@@ -457,7 +647,18 @@
           "jurisdiction": "EU and Brazil",
           "url": "https://lawsofbrazil.com/the-right-to-an-explanation-in-automated-decision-making-gdpr-and-lgpd-compared/",
           "status": "confirmed",
-          "summary": "Compares explanation duties under the GDPR and the LGPD, trade-secret limits on explanations, and the LGPD's 15-day deadline for answering data requests (Article 19)."
+          "summary": "Compares explanation duties under the GDPR and the LGPD, trade-secret limits on explanations, and the LGPD's 15-day deadline for answering data requests (Article 19).",
+          "copies": [
+            {
+              "sha256": "b9a30e70b356f852ee3969c6d49707f9d39a85fc4dcadea4459d402cd65fba20",
+              "pages": 20,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021720/https://lawsofbrazil.com/the-right-to-an-explanation-in-automated-decision-making-gdpr-and-lgpd-compared/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "lgpd-research-report",
@@ -478,7 +679,18 @@
           "url": "https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara",
           "status": "confirmed",
           "summary": "The Senate passed AI bill PL 2338/2023 on 10 December 2024 and sent it to the Chamber of Deputies. The Senate text includes rights to prior information that you are interacting with AI, to an explanation, to contest decisions, and to human review, and sorts AI systems by risk level.",
-          "lang": "pt-BR"
+          "lang": "pt-BR",
+          "copies": [
+            {
+              "sha256": "abe509f3f4d3dd75e00e3e836262d8c3c1eadc8b5f96b0b37ff5e3464479ece8",
+              "pages": 9,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021833/https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "pl2338-camara-status",
@@ -490,7 +702,18 @@
           "status": "confirmed",
           "note": "Status read on 23 September 2026. Check again before relying on it.",
           "summary": "As of 23 September 2026, PL 2338/2023 is waiting for the rapporteur's report in the Chamber's Special Committee on Artificial Intelligence. The full Chamber has not voted on it.",
-          "lang": "pt-BR"
+          "lang": "pt-BR",
+          "copies": [
+            {
+              "sha256": "c11ee4564d2c613f2b9ac9e6ff1477eaab92cc353084449d78311192059a4ef4",
+              "pages": 83,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928021921/https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "in-dpdp-act-2023",
@@ -515,7 +738,11 @@
           "url": "https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf",
           "status": "confirmed",
           "note": "Full Gazette notification read.",
-          "summary": "The Board's sections (18 to 26) came into force at once. The rights (sections 11 to 14), most duties, and the Board's complaint and penalty powers start eighteen months after publication, in May 2027."
+          "summary": "The Board's sections (18 to 26) came into force at once. The rights (sections 11 to 14), most duties, and the Board's complaint and penalty powers start eighteen months after publication, in May 2027.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260411055400/https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf",
+            "date": "2026-04-11"
+          }
         },
         {
           "id": "in-dpdp-rules-2025",
@@ -527,7 +754,11 @@
           "url": "https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf",
           "status": "confirmed",
           "note": "Rule 1 (commencement), rules 13 and 14 read.",
-          "summary": "Detailed rules for the data protection law. Most duties, including rights requests and a 90-day limit to answer grievances, start eighteen months after publication."
+          "summary": "Detailed rules for the data protection law. Most duties, including rights requests and a 90-day limit to answer grievances, start eighteen months after publication.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260907002344/https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf",
+            "date": "2026-09-07"
+          }
         },
         {
           "id": "in-pib-dpdp-rules-2025",
@@ -539,7 +770,11 @@
           "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014",
           "status": "confirmed",
           "note": "Full press release read.",
-          "summary": "Says the Rules have an 18-month phased timeline and that companies must answer rights requests within 90 days."
+          "summary": "Says the Rules have an 18-month phased timeline and that companies must answer rights requests within 90 days.",
+          "archived": {
+            "url": "https://web.archive.org/web/20251114132353/https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014",
+            "date": "2025-11-14"
+          }
         },
         {
           "id": "in-dpbi-appointments-2026",
@@ -564,7 +799,11 @@
           "status": "confirmed",
           "primary": true,
           "note": "Gazette PDF read, including rule 1 (in force from 20 February 2026).",
-          "summary": "Online platforms must clearly label realistic AI-made or AI-changed audio and visual content, add lasting metadata, and not let the label be removed. In force since 20 February 2026."
+          "summary": "Online platforms must clearly label realistic AI-made or AI-changed audio and visual content, add lasting metadata, and not let the label be removed. In force since 20 February 2026.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260830084151/https://www.meity.gov.in/static/uploads/2026/02/f55fe52418b03f58b0669f6a8bc03b6d.pdf",
+            "date": "2026-08-30"
+          }
         },
         {
           "id": "in-it-rules-2021-consolidated",
@@ -576,7 +815,11 @@
           "url": "https://www.meity.gov.in/static/uploads/2026/02/550681ab908f8afb135b0ad42816a1c9.pdf",
           "status": "confirmed",
           "note": "Rules 2(1)(wa), 3(3), 3A and 4(1A) read.",
-          "summary": "The current platform rules: what counts as AI-made content, labelling duties, user declarations on large social media, and appeals to the Grievance Appellate Committee."
+          "summary": "The current platform rules: what counts as AI-made content, labelling duties, user declarations on large social media, and appeals to the Grievance Appellate Committee.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260410125618/https://www.meity.gov.in/static/uploads/2026/02/550681ab908f8afb135b0ad42816a1c9.pdf",
+            "date": "2026-04-10"
+          }
         },
         {
           "id": "in-it-draft-notice-2026-04",
@@ -588,7 +831,11 @@
           "url": "https://www.meity.gov.in/static/uploads/2026/04/ec197f1206279efb4964965f0dede6c1.pdf",
           "status": "confirmed",
           "note": "Full notice read. No notified final version was found as of 27 September 2026.",
-          "summary": "A draft, not in force: AI-content labels would stay visible for the whole length of the content. Comments were due by 7 May 2026."
+          "summary": "A draft, not in force: AI-content labels would stay visible for the whole length of the content. Comments were due by 7 May 2026.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260421193825/https://www.meity.gov.in/static/uploads/2026/04/ec197f1206279efb4964965f0dede6c1.pdf",
+            "date": "2026-04-21"
+          }
         },
         {
           "id": "in-ai-governance-guidelines-2025",
@@ -600,7 +847,11 @@
           "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf",
           "status": "confirmed",
           "note": "Full text searched; sections on existing laws and voluntary measures read.",
-          "summary": "Non-binding guidelines. They say a separate AI law is not needed at this stage and encourage voluntary measures, disclosures, and grievance redress."
+          "summary": "Non-binding guidelines. They say a separate AI law is not needed at this stage and encourage voluntary measures, disclosures, and grievance redress.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928022712/https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "in-gac-portal",
@@ -611,7 +862,11 @@
           "url": "https://gac.gov.in/",
           "status": "confirmed",
           "note": "Home page read on 27 September 2026.",
-          "summary": "Online appeals against a platform grievance officer's decision, within 30 days."
+          "summary": "Online appeals against a platform grievance officer's decision, within 30 days.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928022731/https://gac.gov.in/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "in-nch",
@@ -622,7 +877,11 @@
           "url": "https://consumerhelpline.gov.in/public/",
           "status": "confirmed",
           "note": "Home page read on 27 September 2026.",
-          "summary": "The government helpline for consumer complaints: toll-free 1915 (8 AM to 8 PM), WhatsApp, online, and app."
+          "summary": "The government helpline for consumer complaints: toll-free 1915 (8 AM to 8 PM), WhatsApp, online, and app.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928022804/https://consumerhelpline.gov.in/public/",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "br-anpd-peticao-denuncia",
@@ -634,7 +893,11 @@
           "status": "confirmed",
           "lang": "pt-BR",
           "note": "Read on 27 September 2026 (page updated 22 June 2026): petitions go through the free gov.br request system, only after first asking the company, with proof of that contact. The ANPD considers petitions in its wider work and generally does not reply to each one.",
-          "summary": "How people in Brazil can petition the data protection agency, for free with a gov.br login, after first asking the company to respect their data rights."
+          "summary": "How people in Brazil can petition the data protection agency, for free with a gov.br login, after first asking the company to respect their data rights.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928022842/https://www.gov.br/anpd/pt-br/canais_atendimento/cidadao-titular-de-dados/denuncia-peticao-de-titular-referente-lgpd",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "br-consumidor-gov",
@@ -646,7 +909,11 @@
           "status": "confirmed",
           "lang": "pt-BR",
           "note": "Read on 27 September 2026: a free public online service run by Senacon where consumers complain directly to participating companies, which have up to 10 days to reply. Only registered companies can be named, and there is no direct penalty in an individual case.",
-          "summary": "Brazil's free government website for sending a complaint straight to a participating company."
+          "summary": "Brazil's free government website for sending a complaint straight to a participating company.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928022932/https://www.consumidor.gov.br/pages/conteudo/publico/1",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "br-sndc-procon",
@@ -658,7 +925,11 @@
           "status": "confirmed",
           "lang": "pt-BR",
           "note": "Read on 27 September 2026.",
-          "summary": "Explains that Procons are state and city consumer offices that help consumers directly with problems with a business."
+          "summary": "Explains that Procons are state and city consumer offices that help consumers directly with problems with a business.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928023004/https://www.consumidor.gov.br/pages/conteudo/publico/6",
+            "date": "2026-09-28"
+          }
         }
       ]
     },
@@ -678,7 +949,18 @@
           "primary": true,
           "note": "Full text of Articles 1 to 28 read from the official issue.",
           "summary": "Italy's national AI law. Art. 4: children under 14 need a parent's consent to use AI. Art. 7: in health care, patients have the right to be told when AI is used, and the decision always stays with the doctor. Art. 11: employers must inform workers. Art. 13: professionals must explain their AI systems to clients in clear, simple language. Art. 14: in public administration, the person stays solely responsible. Art. 20: AgID and ACN are the national AI authorities; the Garante keeps its powers.",
-          "lang": "it"
+          "lang": "it",
+          "copies": [
+            {
+              "sha256": "4c988d4597728ce27617f8dabc17839ee82186f33d8b3a0a08246cd38b0d7339",
+              "pages": 64,
+              "kind": "original"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928023039/https://www.gazzettaufficiale.it/eli/gu/2025/09/25/223/sg/pdf",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "it-law-132-normattiva",
@@ -689,7 +971,18 @@
           "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-09-23;132",
           "status": "confirmed",
           "summary": "Official record of Law No. 132/2025: published in Gazzetta Ufficiale n. 223 on 25 September 2025, in force since 10 October 2025.",
-          "lang": "it"
+          "lang": "it",
+          "copies": [
+            {
+              "sha256": "9d44e2a860337cece74e2b3bdc3c4ca8eb43eea10d4ab02a07552b28f8fe5903",
+              "pages": 2,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928023107/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-09-23%3B132",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "garante-en",
@@ -699,7 +992,18 @@
           "jurisdiction": "Italy",
           "url": "https://www.garanteprivacy.it/web/garante-privacy-en",
           "status": "confirmed",
-          "summary": "Italy's independent administrative authority for monitoring the application of the GDPR."
+          "summary": "Italy's independent administrative authority for monitoring the application of the GDPR.",
+          "copies": [
+            {
+              "sha256": "6d065b0faaef8633143c1dfd032c68b0c44bb8a826f9edbe46f68c4465168394",
+              "pages": 2,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928023141/https://www.garanteprivacy.it/web/garante-privacy-en",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "garante-ai",
@@ -710,7 +1014,18 @@
           "url": "https://www.garanteprivacy.it/temi/intelligenza-artificiale",
           "status": "confirmed",
           "summary": "The Garante's page on artificial intelligence and data protection, with its guidance, statements, and related documents.",
-          "lang": "it"
+          "lang": "it",
+          "copies": [
+            {
+              "sha256": "60141792f6886bbf238fbef84d799cfef49edbd0086eef49e67a55037e2d222f",
+              "pages": 10,
+              "kind": "print"
+            }
+          ],
+          "archived": {
+            "url": "https://web.archive.org/web/20260928023213/https://www.garanteprivacy.it/temi/intelligenza-artificiale",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "fr-crpa-l311-3-1",
@@ -724,7 +1039,11 @@
           "primary": true,
           "note": "Full article text read; in force since 9 October 2016, created by Loi n° 2016-1321 (République numérique), art. 4.",
           "summary": "When a public body makes an individual decision using an algorithm, the decision must say so. On request, the body must share the algorithm's rules and main features.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20250126141052/https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033205535/",
+            "date": "2025-01-26"
+          }
         },
         {
           "id": "fr-crpa-r311-3-1-2",
@@ -737,7 +1056,11 @@
           "status": "confirmed",
           "note": "Full article text read; in force since 1 September 2017 (Décret n° 2017-330).",
           "summary": "On request, and in a form people can understand, the public body must explain how much the algorithm counted, what data it used and where the data came from, the parameters and their weights as applied to the person, and what the processing did.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20241122193324/https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034195881",
+            "date": "2024-11-22"
+          }
         },
         {
           "id": "fr-loi-78-17-art47",
@@ -776,7 +1099,11 @@
           "url": "https://www.cnil.fr/fr/vos-droits-lintervention-humaine-face-votre-profilage-ou-une-decision-automatisee",
           "status": "confirmed",
           "summary": "Where a fully automated decision with serious effects is allowed, you can be told about it, learn its logic, challenge it, and ask a person to review it.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20260927141517/https://www.cnil.fr/fr/vos-droits-lintervention-humaine-face-votre-profilage-ou-une-decision-automatisee",
+            "date": "2026-09-27"
+          }
         },
         {
           "id": "fr-cnil-ria-qr",
@@ -789,7 +1116,11 @@
           "status": "confirmed",
           "note": "Q&A read as updated on 17 August 2026.",
           "summary": "The CNIL says the EU AI Act adds to the GDPR and does not replace it, that it still fully enforces the GDPR for AI, and that each EU country organizes its own AI Act oversight.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928023700/https://www.cnil.fr/fr/entree-en-vigueur-du-reglement-europeen-sur-lia-les-premieres-questions-reponses-de-la-cnil",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "fr-conso-l511-7",
@@ -815,7 +1146,11 @@
           "status": "confirmed",
           "note": "Title IV, Articles 24 to 24 terdecies (EU AI Act oversight), read as adopted by the Senate. This is a bill, not law.",
           "summary": "A bill that would make the CNIL France's main AI Act authority and have it handle AI complaints. Arcom, the DGCCRF, the ACPR and other regulators would share the rest.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20260921005254/https://www.senat.fr/leg/tas25-063.html",
+            "date": "2026-09-21"
+          }
         },
         {
           "id": "fr-senat-dossier-pjl25-118",
@@ -828,7 +1163,11 @@
           "status": "confirmed",
           "note": "Timeline read on 27 September 2026 (page updated 4 September 2026).",
           "summary": "Filed 10 November 2025 under the accelerated procedure, adopted by the Senate 18 February 2026, and sent to the National Assembly 20 February 2026. Not yet law.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928023901/https://www.senat.fr/dossier-legislatif/pjl25-118.html",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "fr-an-dossier-2518",
@@ -841,7 +1180,11 @@
           "status": "confirmed",
           "note": "Timeline read on 27 September 2026: referred to committee 20 February 2026 and to advisory committees 23 April 2026; no report or vote shown.",
           "summary": "The National Assembly has received the Senate-adopted bill but has not yet voted on it.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024001/https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "fr-signalconso",
@@ -852,7 +1195,11 @@
           "url": "https://signal.conso.gouv.fr/fr",
           "status": "confirmed",
           "summary": "A free public service, run by the consumer agency, where consumers report problems with businesses.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024028/https://signal.conso.gouv.fr/fr",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "fr-cnil-plaintes",
@@ -863,7 +1210,11 @@
           "url": "https://www.cnil.fr/fr/plaintes",
           "status": "confirmed",
           "summary": "The CNIL's online page for filing a data protection complaint.",
-          "lang": "fr"
+          "lang": "fr",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024100/https://www.cnil.fr/fr/plaintes",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-ki-mig",
@@ -877,7 +1228,11 @@
           "primary": true,
           "note": "Full text read on 27 September 2026, including the note that it entered into force on 29 July 2026.",
           "summary": "Germany's law for carrying out the EU AI Act, in force since 29 July 2026. The Bundesnetzagentur is the main AI market surveillance authority and the central complaint office; BaFin covers AI in regulated finance.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024130/https://www.gesetze-im-internet.de/ki-mig/BJNR0DF0B0026.html",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-bgbl-2026-223",
@@ -890,7 +1245,11 @@
           "status": "confirmed",
           "note": "Official gazette record read: signed 22 July 2026, published 28 July 2026.",
           "summary": "Official publication of Germany's EU AI Act implementation law, whose Article 1 is the KI-MIG.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024157/https://www.recht.bund.de/bgbl/1/2026/223/VO.html",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-bgbl-2026-139",
@@ -904,7 +1263,11 @@
           "primary": true,
           "note": "Official gazette PDF read: Art. 1 (§ 491a BGB), Art. 3 (BDSG § 30, deletion of § 31, new § 37a), Art. 16 (in force 20 November 2026).",
           "summary": "Germany's consumer credit law. From 20 November 2026 a new credit-scoring rule (§ 37a BDSG) bans some data from scores, gives a right to learn the main factors, and a right to challenge a score-based decision and have a person decide.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024238/https://www.recht.bund.de/bgbl/1/2026/139/regelungstext.pdf?__blob=publicationFile&v=1",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-bt-21-5381",
@@ -917,7 +1280,11 @@
           "status": "confirmed",
           "note": "Committee amendments and reasons for the BDSG changes read (pp. 20-22).",
           "summary": "The committee report that added the new scoring rule, and says it takes effect on 20 November 2026.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024251/https://dserver.bundestag.de/btd/21/053/2105381.pdf",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-bdsg",
@@ -930,7 +1297,11 @@
           "status": "confirmed",
           "note": "Current text read on 27 September 2026: §§ 9, 31, 37, 40.",
           "summary": "Germany's federal data protection act. It splits data protection oversight between the federal commissioner (BfDI) and the state authorities.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024310/https://www.gesetze-im-internet.de/bdsg_2018/BJNR209710017.html",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-egbgb-246a",
@@ -942,7 +1313,11 @@
           "status": "confirmed",
           "note": "§ 1(1) No. 6 of the current text read.",
           "summary": "For online and other distance contracts, a seller must tell the consumer when a price was personalized based on automated decision-making.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024335/https://www.gesetze-im-internet.de/bgbeg/art_246a__1.html",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-cjeu-c634-21",
@@ -954,7 +1329,11 @@
           "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2023-12/cp230186en.pdf",
           "status": "confirmed",
           "note": "The official press release was read; the full judgment could not be opened by automated readers.",
-          "summary": "The EU Court of Justice held that producing a credit score can be an automated decision under GDPR Article 22 when a lender gives the score a deciding role in granting credit."
+          "summary": "The EU Court of Justice held that producing a credit score can be an automated decision under GDPR Article 22 when a lender gives the score a deciding role in granting credit.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024401/https://curia.europa.eu/site/upload/docs/application/pdf/2023-12/cp230186en.pdf",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-bnetza-ki-beschwerde",
@@ -966,7 +1345,11 @@
           "status": "confirmed",
           "note": "Page read on 27 September 2026.",
           "summary": "The Bundesnetzagentur's central AI complaint office. Complaints are free, go through an online form, and are passed on to the right authority if needed.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024418/https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/18_Beschwerdestelle/start.html",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-bfdi-beschwerde",
@@ -978,7 +1361,11 @@
           "status": "confirmed",
           "note": "Page read on 27 September 2026.",
           "summary": "Explains the right to complain to a data protection authority, and which authority covers which organizations.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024512/https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Datenschutz/BeschwerdeBeiDatenschutzbehoereden.html",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "de-verbraucherzentrale",
@@ -990,7 +1377,11 @@
           "status": "confirmed",
           "note": "Page read on 27 September 2026.",
           "summary": "The consumer advice centres in the German states give advice and help with consumer problems; some advice has a fee.",
-          "lang": "de"
+          "lang": "de",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024605/https://www.verbraucherzentrale.de/beratung",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "it-garante-reclamo",
@@ -1002,7 +1393,11 @@
           "status": "confirmed",
           "lang": "it",
           "note": "Read on 27 September 2026, with the companion page on exercising your rights, which says the complaint is free and advises asking the company first (reply due within one month).",
-          "summary": "How anyone in Italy can make a free, signed complaint to the data protection authority, usually after first asking the company to respect their data rights."
+          "summary": "How anyone in Italy can make a free, signed complaint to the data protection authority, usually after first asking the company to respect their data rights.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024635/https://www.garanteprivacy.it/diritti/come-agire-per-tutelare-i-tuoi-dati-personali/reclamo",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "it-agcm-segnalazione",
@@ -1014,7 +1409,11 @@
           "status": "confirmed",
           "lang": "it",
           "note": "Read on 27 September 2026: reports by certified email or online form, with no formalities, fees or lawyer; no reply unless an investigation opens. The form notice says the AGCM cannot settle individual disputes or order refunds. Phone line 800 166 661, weekdays 10:00 to 14:00.",
-          "summary": "How to report an unfair business practice to Italy's consumer authority for free, which can act against the practice but cannot get you a refund."
+          "summary": "How to report an unfair business practice to Italy's consumer authority for free, which can act against the practice but cannot get you a refund.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928024707/https://www.agcm.it/per-i-consumatori/segnalare-pratiche-scorrette",
+            "date": "2026-09-28"
+          }
         }
       ]
     }

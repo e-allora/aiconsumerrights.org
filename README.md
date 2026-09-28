@@ -58,6 +58,15 @@ Every page ends with a **"How this site was made"** footer that lists:
 
 The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.app/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
 
+#### 🔐 Check a source yourself
+
+- **`status: "confirmed"`** means an AI (Claude, or research agents it directed) opened the link and the content matched. It does **not** mean a person read it.
+- **`readBy`** is the day Robert read the source himself.
+- **`archived`** is a snapshot at the [Internet Archive](https://web.archive.org). A third party timestamps it and nobody here can change it, so you can see the page as it was when checked, even if the original later moves or changes.
+- **`copies`** holds the SHA-256 fingerprint of each copy Robert saved. The copies themselves are not published, because the work belongs to its authors.
+  - `"original"` means the publisher's own file. Download it from the source link and check that it matches, e.g. `sha256sum file.pdf`.
+  - `"print"` means Robert's browser saved the web page as a PDF. Only his copy will match that fingerprint, and he can share it on request.
+
 ### 🗣️ English, Spanish, Portuguese (Portugal and Brazil), Italian, French, German, and Hindi
 
 - 🌎 Every page exists at `/en/...`, `/es/...`, `/pt/...` (Portugal), `/pt-BR/...` (Brazil), and `/it/...` (Italy). A visit to `/` opens the language your browser asks for.

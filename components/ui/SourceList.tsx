@@ -41,6 +41,7 @@ export function SourceLink({ source, className }: { source: Source; className?: 
 function SourceMeta({ source, detailed }: { source: Source; detailed: boolean }) {
   const t = useTranslations("Attribution.status");
   const ta = useTranslations("Attribution");
+  const tc = useTranslations("Common");
   const locale = useLocale();
   const bits = [source.author, source.publisher, source.date, source.type, source.jurisdiction].filter(Boolean);
   return (
@@ -59,11 +60,36 @@ function SourceMeta({ source, detailed }: { source: Source; detailed: boolean })
           </>
         ) : null}
       </span>
+      {source.archived && (
+        <span className="block text-sm">
+          <a
+            href={source.archived.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            hrefLang={source.lang ?? "en"}
+            // Every source has one of these links, so the name says which source it is.
+            aria-label={`${ta("archived", { date: formatDate(source.archived.date, locale) })}: ${source.title} ${tc("opensInNewTab")}`}
+            className="font-semibold text-link underline underline-offset-4"
+          >
+            {ta("archived", { date: formatDate(source.archived.date, locale) })}
+          </a>
+        </span>
+      )}
       {source.readBy && (
         <span className="block text-sm font-semibold text-foreground">
           {ta("readBy", { name: sources.review.reviewer, date: formatDate(source.readBy, locale) })}
         </span>
       )}
+      {source.readBy &&
+        source.copies?.map((c) => (
+          <span key={c.sha256} className="block break-all text-sm">
+            {ta.rich(c.kind === "original" ? "copyOriginal" : "copyPrint", {
+              pages: c.pages,
+              hash: c.sha256.slice(0, 16),
+              code: (chunks) => <code title={c.sha256}>{chunks}</code>,
+            })}
+          </span>
+        ))}
     </p>
   );
 }

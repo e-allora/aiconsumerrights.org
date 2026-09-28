@@ -459,7 +459,7 @@
     "checkedLabel": "Fonti verificate",
     "seeAll": "Vedi tutte le {total} fonti in {groups} gruppi",
     "openRegistry": "Apri l'elenco completo delle fonti",
-    "registryAbout": "Tutte le fonti su cui si basa questo sito, con il modo in cui è stato controllato ogni link. «Link aperto dall'IA e verificato» vuol dire che un modello di IA (Claude, o agenti di ricerca guidati da lui) ha aperto il link nella data del controllo e il contenuto corrispondeva a quanto dice il sito. Non è la stessa cosa della lettura di una persona. Robert sta leggendo ogni fonte di persona; ognuna che ha già letto lo indica, con la data. «Link non ancora aperto» vuol dire che il link viene da un indice ufficiale o da una ricerca, ma nessuno l'ha ancora aperto. «Ancora senza link pubblico» vuol dire che è elencata come lettura di approfondimento, senza un link pubblico registrato.",
+    "registryAbout": "Tutte le fonti su cui si basa questo sito, con il modo in cui è stato controllato ogni link. «Link aperto dall'IA e verificato» vuol dire che un modello di IA (Claude, o agenti di ricerca guidati da lui) ha aperto il link nella data del controllo e il contenuto corrispondeva a quanto dice il sito. Non è la stessa cosa della lettura di una persona. Robert sta leggendo ogni fonte di persona; ognuna che ha già letto lo indica, con la data. «Link non ancora aperto» vuol dire che il link viene da un indice ufficiale o da una ricerca, ma nessuno l'ha ancora aperto. «Ancora senza link pubblico» vuol dire che è elencata come lettura di approfondimento, senza un link pubblico registrato. Ogni link ha anche una copia salvata sull'Internet Archive, così chiunque può vedere la pagina com'era al momento del controllo. Le fonti che Robert ha già letto mostrano l'impronta della sua copia, così chiunque abbia lo stesso file può verificare che corrisponde.",
     "status": {
       "confirmed": "Link aperto dall'IA e verificato",
       "unopened": "Link non ancora aperto",
@@ -486,7 +486,10 @@
       "eu-national": "Quadri normativi nazionali europei"
     },
     "sourcesLanguageNote": "I titoli e i dettagli delle fonti compaiono nella lingua originale, quasi sempre in inglese.",
-    "readBy": "Letto da {name} il {date}."
+    "readBy": "Letto da {name} il {date}.",
+    "archived": "Copia archiviata del {date}",
+    "copyOriginal": "Copia di Robert: il file originale dell'editore, {pages} pagine. Impronta SHA-256 <code>{hash}</code>…",
+    "copyPrint": "Copia di Robert: salvata dalla pagina web, {pages} pagine. Impronta SHA-256 <code>{hash}</code>…"
   },
   "Sources": {
     "metaTitle": "Fonti",

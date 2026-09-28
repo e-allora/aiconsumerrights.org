@@ -459,7 +459,7 @@
     "checkedLabel": "Sources checked",
     "seeAll": "See all {total} sources in {groups} groups",
     "openRegistry": "Open the full source registry",
-    "registryAbout": "Every source this site draws on, with how each link was checked. “Link opened by AI and matched” means an AI model (Claude, or research agents it directed) opened the link on the checked date and the content matched what this site says. That is not the same as a person reading it. Robert is reading every source himself; each one he has read says so, with the date. “Link not yet opened” means the link comes from an official index or search, but no one has opened it yet. “No public link yet” means it is listed as background reading, with no public link recorded.",
+    "registryAbout": "Every source this site draws on, with how each link was checked. “Link opened by AI and matched” means an AI model (Claude, or research agents it directed) opened the link on the checked date and the content matched what this site says. That is not the same as a person reading it. Robert is reading every source himself; each one he has read says so, with the date. “Link not yet opened” means the link comes from an official index or search, but no one has opened it yet. “No public link yet” means it is listed as background reading, with no public link recorded. Every link also has a copy saved at the Internet Archive, so anyone can see the page as it was when it was checked. Sources Robert has read show the fingerprint of his own copy, so anyone with the same file can confirm it matches.",
     "status": {
       "confirmed": "Link opened by AI and matched",
       "unopened": "Link not yet opened",
@@ -486,7 +486,10 @@
       "eu-national": "European national frameworks"
     },
     "sourcesLanguageNote": "",
-    "readBy": "Read by {name} on {date}."
+    "readBy": "Read by {name} on {date}.",
+    "archived": "Archived copy from {date}",
+    "copyOriginal": "Robert's copy: the publisher's own file, {pages} pages. SHA-256 fingerprint <code>{hash}</code>…",
+    "copyPrint": "Robert's copy: saved from the web page, {pages} pages. SHA-256 fingerprint <code>{hash}</code>…"
   },
   "Sources": {
     "metaTitle": "Sources",
