@@ -2,6 +2,31 @@
   "about": "Errors on this site that were found and fixed, newest first. Robert writes every entry by hand. See content/README.md.",
   "entries": [
     {
+      "id": "2026-09-27-anpd-name",
+      "date": "2026-09-27",
+      "page": "/guide",
+      "wrong": {
+        "en": "The Brazilian Portuguese guide called Brazil's data protection body by its old name, \"Autoridade Nacional de Proteção de Dados\".",
+        "es": "La guía en portugués de Brasil llamaba al organismo brasileño de protección de datos por su nombre antiguo, «Autoridade Nacional de Proteção de Dados».",
+        "pt-PT": "O guia em português do Brasil chamava o organismo brasileiro de proteção de dados pelo nome antigo, «Autoridade Nacional de Proteção de Dados».",
+        "pt-BR": "O guia em português do Brasil chamava o órgão brasileiro de proteção de dados pelo nome antigo, \"Autoridade Nacional de Proteção de Dados\".",
+        "it": "La guida in portoghese brasiliano chiamava l'ente brasiliano per la protezione dei dati con il vecchio nome, «Autoridade Nacional de Proteção de Dados».",
+        "fr": "Le guide en portugais du Brésil désignait l'organisme brésilien de protection des données par son ancien nom, « Autoridade Nacional de Proteção de Dados ».",
+        "de": "Der Ratgeber auf brasilianischem Portugiesisch nannte die brasilianische Datenschutzbehörde mit ihrem alten Namen, „Autoridade Nacional de Proteção de Dados“.",
+        "hi": "ब्राज़ीलियाई पुर्तगाली गाइड में ब्राज़ील की डेटा सुरक्षा संस्था का पुराना नाम, \"Autoridade Nacional de Proteção de Dados\", लिखा था।"
+      },
+      "changed": {
+        "en": "It now uses the official name, \"Agência Nacional de Proteção de Dados\" (still ANPD), as the agency's own website does. This was found while checking the agency's complaint page.",
+        "es": "Ahora usa el nombre oficial, «Agência Nacional de Proteção de Dados» (sigue siendo ANPD), como en el propio sitio web de la agencia. Se detectó al revisar la página de quejas de la agencia.",
+        "pt-PT": "Agora usa o nome oficial, «Agência Nacional de Proteção de Dados» (continua a ser ANPD), como no próprio site da agência. O erro foi detetado ao verificar a página de queixas da agência.",
+        "pt-BR": "Agora usa o nome oficial, \"Agência Nacional de Proteção de Dados\" (continua ANPD), como no próprio site da agência. O erro foi encontrado ao verificar a página de reclamações da agência.",
+        "it": "Ora usa il nome ufficiale, «Agência Nacional de Proteção de Dados» (sempre ANPD), come sul sito dell'agenzia. L'errore è emerso controllando la pagina dei reclami dell'agenzia.",
+        "fr": "Il utilise maintenant le nom officiel, « Agência Nacional de Proteção de Dados » (toujours ANPD), comme sur le site de l'agence. L'erreur a été repérée en vérifiant la page de plaintes de l'agence.",
+        "de": "Er nutzt jetzt den offiziellen Namen „Agência Nacional de Proteção de Dados“ (weiterhin ANPD), wie auf der Website der Behörde. Der Fehler fiel bei der Prüfung ihrer Beschwerdeseite auf.",
+        "hi": "अब इसमें आधिकारिक नाम, \"Agência Nacional de Proteção de Dados\" (अब भी ANPD), है, जैसा एजेंसी की अपनी वेबसाइट पर है। यह गलती एजेंसी का शिकायत पेज जाँचते समय पकड़ी गई।"
+      }
+    },
+    {
       "id": "2026-09-26-tool-names",
       "date": "2026-09-26",
       "page": "/forum",

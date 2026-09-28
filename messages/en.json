@@ -251,6 +251,28 @@
           "rule2Label": "Everywhere",
           "rule2": "Almost every country bans misleading business practices. Your consumer agency can tell you what applies to you."
         }
+      },
+      "help": {
+        "br": {
+          "label": "Brazil:",
+          "text": "try <consumidor>consumidor.gov.br</consumidor> first (free; it works only with companies that have joined). If that does not solve it, go to your local Procon (<procon>what Procon does</procon>). For personal data, ask the company first, then <anpd>petition the ANPD</anpd> (free, with a gov.br login; it uses petitions to plan its work and does not reply to each one)."
+        },
+        "fr": {
+          "label": "France:",
+          "text": "report a problem with a business on <signalconso>SignalConso</signalconso>. For your personal data or an automated decision, <cnil>complain to the CNIL</cnil>."
+        },
+        "de": {
+          "label": "Germany:",
+          "text": "for problems with AI, use the <bnetza>free AI complaint office of the Bundesnetzagentur</bnetza>. For personal data, contact your state data protection authority; <bfdi>the BfDI explains which one</bfdi>. For advice, sometimes for a fee, <vz>your Verbraucherzentrale</vz>."
+        },
+        "in": {
+          "label": "India:",
+          "text": "call the National Consumer Helpline on <tel>1915</tel> (free, 8 AM to 8 PM), or <nch>complain online</nch>. For AI-made content on a platform, complain to the platform's grievance officer first, then <gac>appeal to the Grievance Appellate Committee</gac>."
+        },
+        "it": {
+          "label": "Italy:",
+          "text": "for personal data, <garante>complain to the Garante</garante> (free; ask the company first, and it must answer within a month). For an unfair business practice, <agcm>report it to the AGCM</agcm> (free; it can act against the practice but cannot get you a refund). AGCM phone line: <tel>800 166 661</tel>, weekdays 10:00 to 14:00."
+        }
       }
     }
   },
@@ -437,10 +459,10 @@
     "checkedLabel": "Sources checked",
     "seeAll": "See all {total} sources in {groups} groups",
     "openRegistry": "Open the full source registry",
-    "registryAbout": "Every source this site draws on, with how well each link has been checked. Status 'confirmed': the link was opened on the checked date and the content matched. 'unopened': the link comes from an official index or search, but no one has opened it yet; a person should open it once. 'no-link': listed as background reading, with no public link recorded yet.",
+    "registryAbout": "Every source this site draws on, with how each link was checked. “Link opened by AI and matched” means an AI model (Claude, or research agents it directed) opened the link on the checked date and the content matched what this site says. That is not the same as a person reading it. Robert is reading every source himself; each one he has read says so, with the date. “Link not yet opened” means the link comes from an official index or search, but no one has opened it yet. “No public link yet” means it is listed as background reading, with no public link recorded.",
     "status": {
-      "confirmed": "Link opened and matched",
-      "unopened": "Link not yet opened by a person",
+      "confirmed": "Link opened by AI and matched",
+      "unopened": "Link not yet opened",
       "no-link": "No public link yet"
     },
     "models": {
@@ -463,7 +485,8 @@
       "latam-global": "Latin American and global regulatory frameworks",
       "eu-national": "European national frameworks"
     },
-    "sourcesLanguageNote": ""
+    "sourcesLanguageNote": "",
+    "readBy": "Read by {name} on {date}."
   },
   "Sources": {
     "metaTitle": "Sources",

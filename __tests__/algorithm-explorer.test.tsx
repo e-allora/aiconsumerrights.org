@@ -1,7 +1,8 @@
-import { render, screen } from "@/test-utils";
+import { MESSAGES, render, screen, within } from "@/test-utils";
 import userEvent from "@testing-library/user-event";
 
 import { AlgorithmExplorer } from "@/components/guide/AlgorithmExplorer";
+import { getSource } from "@/lib/sources";
 
 const tabs = () => screen.getAllByRole("tab");
 const selectedIndex = () => tabs().findIndex((t) => t.getAttribute("aria-selected") === "true");
@@ -113,10 +114,48 @@ describe("AlgorithmExplorer", () => {
     await user.click(tabs()[2]);
     await user.click(screen.getByRole("button", { name: "No, where else can I turn?" }));
     const links = screen.getAllByRole("link", { name: /opens in a new tab/ });
-    expect(links).toHaveLength(2);
+    // US (2), Brazil (3), France (2), Germany (3), India (2), Italy (2).
+    expect(links).toHaveLength(14);
     for (const a of links) {
       expect(a).toHaveAttribute("target", "_blank");
       expect(a).toHaveAttribute("rel", "noopener noreferrer");
     }
+  });
+
+  it.each([
+    ["en", "United States:"],
+    ["fr", "France :"],
+    ["de", "Deutschland:"],
+    ["hi", "भारत:"],
+    ["it", "Italia:"],
+    ["pt-BR", "Brasil:"],
+  ] as const)("in %s, lists the visitor's own country first (%s)", async (locale, first) => {
+    const user = userEvent.setup();
+    render(<AlgorithmExplorer />, { locale });
+    await user.click(tabs()[2]);
+    await user.click(screen.getByRole("button", { name: MESSAGES[locale].Guide.explorer.noWhereElse }));
+    const items = within(screen.getByRole("tabpanel")).getAllByRole("listitem");
+    expect(items[0].querySelector("strong")!.textContent!.replace(/\u00a0/g, " ")).toBe(first);
+    expect(items).toHaveLength(8);
+  });
+
+  it("links each country's help to its checked source, and India's helpline to a phone call", async () => {
+    const user = userEvent.setup();
+    render(<AlgorithmExplorer />);
+    await user.click(tabs()[2]);
+    await user.click(screen.getByRole("button", { name: "No, where else can I turn?" }));
+    expect(screen.getByRole("link", { name: "1915" })).toHaveAttribute("href", "tel:1915");
+    expect(screen.getByRole("link", { name: "800 166 661" })).toHaveAttribute("href", "tel:800166661");
+    // Say plainly what a route cannot do, so no one is promised more than it gives.
+    const panel = screen.getByRole("tabpanel");
+    expect(panel).toHaveTextContent("cannot get you a refund");
+    expect(panel).toHaveTextContent("does not reply to each one");
+    const signal = screen.getByRole("link", { name: /^SignalConso/ });
+    expect(signal).toHaveAttribute("href", getSource("fr-signalconso").url);
+    expect(signal).toHaveAttribute("hrefLang", "fr");
+    expect(screen.getByRole("link", { name: /Bundesnetzagentur/ })).toHaveAttribute(
+      "href",
+      getSource("de-bnetza-ki-beschwerde").url
+    );
   });
 });

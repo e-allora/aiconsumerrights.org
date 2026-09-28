@@ -216,7 +216,7 @@
       "agencyEU": "Unione Europea:",
       "agencyEUText": "l'autorità nazionale per i consumatori o per la protezione dei dati del tuo paese.",
       "agencyElsewhere": "Altrove:",
-      "agencyElsewhereText": "l'autorità nazionale per la tutela dei consumatori. In Italia, l'Autorità Garante della Concorrenza e del Mercato (AGCM).",
+      "agencyElsewhereText": "l'autorità nazionale per la tutela dei consumatori del tuo paese.",
       "steps": {
         "ask": {
           "short": "Chiedi per iscritto",
@@ -250,6 +250,28 @@
           "rule1": "Le leggi sulla tutela dei consumatori che esistono già valgono anche per l'IA. La FTC ha detto che non ci sono eccezioni per l'IA. (FTC, 2024)",
           "rule2Label": "Ovunque",
           "rule2": "Quasi tutti i paesi vietano le pratiche commerciali ingannevoli. L'autorità per i consumatori può dirti cosa vale nel tuo caso."
+        }
+      },
+      "help": {
+        "br": {
+          "label": "Brasile:",
+          "text": "prova prima <consumidor>consumidor.gov.br</consumidor> (gratis; funziona solo con le aziende iscritte). Se non si risolve, rivolgiti al Procon della tua zona (<procon>cosa fa il Procon</procon>). Per i dati personali, chiedi prima all'azienda, poi <anpd>presenta una petizione all'ANPD</anpd> (gratis, con accesso gov.br; usa le petizioni per pianificare il suo lavoro e non risponde a ciascuna)."
+        },
+        "fr": {
+          "label": "Francia:",
+          "text": "segnala un problema con un'azienda su <signalconso>SignalConso</signalconso>. Per i tuoi dati personali o una decisione automatizzata, <cnil>presenta un reclamo alla CNIL</cnil>."
+        },
+        "de": {
+          "label": "Germania:",
+          "text": "per problemi con l'IA, usa <bnetza>l'ufficio reclami gratuito sull'IA della Bundesnetzagentur</bnetza>. Per i dati personali, contatta l'autorità per la protezione dei dati del tuo Land; <bfdi>la BfDI spiega quale</bfdi>. Per una consulenza, a volte a pagamento, <vz>la tua Verbraucherzentrale</vz>."
+        },
+        "in": {
+          "label": "India:",
+          "text": "chiama il National Consumer Helpline al <tel>1915</tel> (gratis, dalle 8 alle 20) oppure <nch>presenta un reclamo online</nch>. Per contenuti creati con l'IA su una piattaforma, reclama prima presso il responsabile dei reclami della piattaforma, poi <gac>fai ricorso al Grievance Appellate Committee</gac>."
+        },
+        "it": {
+          "label": "Italia:",
+          "text": "per i dati personali, <garante>presenta un reclamo al Garante</garante> (gratis; chiedi prima all'azienda, che deve rispondere entro un mese). Per una pratica commerciale scorretta, <agcm>segnalala all'AGCM</agcm> (gratis; può intervenire contro la pratica, ma non può farti ottenere un rimborso). Numero verde dell'AGCM: <tel>800 166 661</tel>, dal lunedì al venerdì, dalle 10:00 alle 14:00."
         }
       }
     }
@@ -437,10 +459,10 @@
     "checkedLabel": "Fonti verificate",
     "seeAll": "Vedi tutte le {total} fonti in {groups} gruppi",
     "openRegistry": "Apri l'elenco completo delle fonti",
-    "registryAbout": "Tutte le fonti usate da questo sito, con il livello di verifica di ogni link. Stato «confermato»: il link è stato aperto alla data della verifica e il contenuto corrispondeva. «Non aperto»: il link viene da un indice ufficiale o da una ricerca, ma nessuno lo ha ancora aperto; una persona dovrebbe aprirlo una volta. «Senza link»: compare come lettura di contesto, senza un link pubblico registrato.",
+    "registryAbout": "Tutte le fonti su cui si basa questo sito, con il modo in cui è stato controllato ogni link. «Link aperto dall'IA e verificato» vuol dire che un modello di IA (Claude, o agenti di ricerca guidati da lui) ha aperto il link nella data del controllo e il contenuto corrispondeva a quanto dice il sito. Non è la stessa cosa della lettura di una persona. Robert sta leggendo ogni fonte di persona; ognuna che ha già letto lo indica, con la data. «Link non ancora aperto» vuol dire che il link viene da un indice ufficiale o da una ricerca, ma nessuno l'ha ancora aperto. «Ancora senza link pubblico» vuol dire che è elencata come lettura di approfondimento, senza un link pubblico registrato.",
     "status": {
-      "confirmed": "Link aperto e confermato",
-      "unopened": "Link non ancora aperto da una persona",
+      "confirmed": "Link aperto dall'IA e verificato",
+      "unopened": "Link non ancora aperto",
       "no-link": "Ancora senza link pubblico"
     },
     "models": {
@@ -463,7 +485,8 @@
       "latam-global": "Quadri normativi dell'America Latina e globali",
       "eu-national": "Quadri normativi nazionali europei"
     },
-    "sourcesLanguageNote": "I titoli e i dettagli delle fonti compaiono nella lingua originale, quasi sempre in inglese."
+    "sourcesLanguageNote": "I titoli e i dettagli delle fonti compaiono nella lingua originale, quasi sempre in inglese.",
+    "readBy": "Letto da {name} il {date}."
   },
   "Sources": {
     "metaTitle": "Fonti",

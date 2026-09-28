@@ -251,6 +251,28 @@
           "rule2Label": "En todas partes",
           "rule2": "Casi todos los países prohíben las prácticas comerciales engañosas. Tu agencia de protección al consumidor puede decirte qué aplica en tu caso."
         }
+      },
+      "help": {
+        "br": {
+          "label": "Brasil:",
+          "text": "prueba primero <consumidor>consumidor.gov.br</consumidor> (gratis; solo funciona con empresas registradas). Si no se resuelve, acude al Procon de tu zona (<procon>qué hace el Procon</procon>). Para datos personales, pregunta primero a la empresa y luego <anpd>presenta una petición ante la ANPD</anpd> (gratis, con cuenta gov.br; usa las peticiones para planificar su trabajo y no responde a cada una)."
+        },
+        "fr": {
+          "label": "Francia:",
+          "text": "informa de un problema con una empresa en <signalconso>SignalConso</signalconso>. Para tus datos personales o una decisión automatizada, <cnil>presenta una queja ante la CNIL</cnil>."
+        },
+        "de": {
+          "label": "Alemania:",
+          "text": "para problemas con la IA, usa la <bnetza>oficina gratuita de quejas sobre IA de la Bundesnetzagentur</bnetza>. Para datos personales, contacta con la autoridad de protección de datos de tu estado; <bfdi>la BfDI explica cuál</bfdi>. Para asesoría, a veces con costo, <vz>tu Verbraucherzentrale</vz>."
+        },
+        "in": {
+          "label": "India:",
+          "text": "llama a la Línea Nacional del Consumidor al <tel>1915</tel> (gratis, de 8 a 20 h) o <nch>presenta una queja en línea</nch>. Para contenido hecho con IA en una plataforma, quéjate primero ante el responsable de reclamaciones de la plataforma y luego <gac>apela ante el Comité de Apelación de Quejas</gac>."
+        },
+        "it": {
+          "label": "Italia:",
+          "text": "para datos personales, <garante>presenta una queja ante el Garante</garante> (gratis; pregunta primero a la empresa, que debe responder en un mes). Para una práctica comercial injusta, <agcm>denúnciala ante la AGCM</agcm> (gratis; puede actuar contra la práctica, pero no puede conseguirte un reembolso). Teléfono de la AGCM: <tel>800 166 661</tel>, de lunes a viernes de 10:00 a 14:00."
+        }
       }
     }
   },
@@ -437,10 +459,10 @@
     "checkedLabel": "Fuentes revisadas",
     "seeAll": "Ver las {total} fuentes en {groups} grupos",
     "openRegistry": "Abrir el registro completo de fuentes",
-    "registryAbout": "Todas las fuentes que usa este sitio, con el nivel de revisión de cada enlace. Estado «confirmado»: el enlace se abrió en la fecha de revisión y el contenido coincidió. «Sin abrir»: el enlace viene de un índice oficial o de una búsqueda, pero nadie lo ha abierto todavía; una persona debería abrirlo una vez. «Sin enlace»: aparece como lectura de fondo, sin un enlace público registrado todavía.",
+    "registryAbout": "Todas las fuentes en las que se apoya este sitio, con cómo se revisó cada enlace. «Enlace abierto por IA y conforme» significa que un modelo de IA (Claude, o agentes de investigación que dirigió) abrió el enlace en la fecha de revisión y el contenido coincidía con lo que dice este sitio. No es lo mismo que la lectura de una persona. Robert está leyendo cada fuente él mismo; cada una que ya leyó lo indica, con la fecha. «Enlace aún sin abrir» significa que el enlace viene de un índice oficial o de una búsqueda, pero nadie lo ha abierto todavía. «Todavía sin enlace público» significa que figura como lectura de fondo, sin enlace público registrado.",
     "status": {
-      "confirmed": "Enlace abierto y confirmado",
-      "unopened": "Enlace que una persona todavía no abrió",
+      "confirmed": "Enlace abierto por IA y conforme",
+      "unopened": "Enlace aún sin abrir",
       "no-link": "Todavía sin enlace público"
     },
     "models": {
@@ -463,7 +485,8 @@
       "latam-global": "Marcos regulatorios de América Latina y globales",
       "eu-national": "Marcos nacionales europeos"
     },
-    "sourcesLanguageNote": "Los títulos y detalles de las fuentes aparecen en su idioma original, casi siempre inglés."
+    "sourcesLanguageNote": "Los títulos y detalles de las fuentes aparecen en su idioma original, casi siempre inglés.",
+    "readBy": "Leído por {name} el {date}."
   },
   "Sources": {
     "metaTitle": "Fuentes",

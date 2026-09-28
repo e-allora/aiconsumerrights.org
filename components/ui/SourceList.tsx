@@ -1,18 +1,20 @@
 import { ExternalLink as ExternalIcon } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
-import { sourceNumber, type Source, type SourceCategory } from "@/lib/sources";
+import { formatDate, sourceNumber, sources, type Source, type SourceCategory } from "@/lib/sources";
 import { cn } from "@/lib/utils";
 
-// Source titles and details stay in their original language (English), so
-// they carry lang="en" and screen readers pronounce them correctly (SC 3.1.2).
+// Source titles stay in their original language, marked with lang so screen
+// readers pronounce them correctly (SC 3.1.2). Most are English; French,
+// German, Italian and Portuguese laws carry their own language.
 
 /** An external source link: new tab, no opener access, and a full accessible name. */
 export function SourceLink({ source, className }: { source: Source; className?: string }) {
   const t = useTranslations("Common");
+  const lang = source.lang ?? "en";
   if (!source.url) {
     return (
-      <span lang="en" className={className}>
+      <span lang={lang} className={className}>
         {source.title}
       </span>
     );
@@ -23,14 +25,14 @@ export function SourceLink({ source, className }: { source: Source; className?: 
       href={source.url}
       target="_blank"
       rel="noopener noreferrer"
-      hrefLang="en"
+      hrefLang={lang}
       aria-label={`${name} ${t("opensInNewTab")}`}
       className={cn(
         "tap-target inline-flex items-center gap-1 font-semibold text-link underline underline-offset-4 hover:decoration-2",
         className
       )}
     >
-      <span lang="en">{source.title}</span>
+      <span lang={lang}>{source.title}</span>
       <ExternalIcon aria-hidden="true" className="size-4 shrink-0 self-center" />
     </a>
   );
@@ -38,6 +40,8 @@ export function SourceLink({ source, className }: { source: Source; className?: 
 
 function SourceMeta({ source, detailed }: { source: Source; detailed: boolean }) {
   const t = useTranslations("Attribution.status");
+  const ta = useTranslations("Attribution");
+  const locale = useLocale();
   const bits = [source.author, source.publisher, source.date, source.type, source.jurisdiction].filter(Boolean);
   return (
     <p className="text-base text-muted-foreground">
@@ -55,6 +59,11 @@ function SourceMeta({ source, detailed }: { source: Source; detailed: boolean })
           </>
         ) : null}
       </span>
+      {source.readBy && (
+        <span className="block text-sm font-semibold text-foreground">
+          {ta("readBy", { name: sources.review.reviewer, date: formatDate(source.readBy, locale) })}
+        </span>
+      )}
     </p>
   );
 }

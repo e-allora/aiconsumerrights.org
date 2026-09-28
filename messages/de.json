@@ -251,6 +251,28 @@
           "rule2Label": "Überall",
           "rule2": "Fast jedes Land verbietet irreführende Geschäftspraktiken. Ihre Verbraucherstelle kann Ihnen sagen, was für Sie gilt."
         }
+      },
+      "help": {
+        "br": {
+          "label": "Brasilien:",
+          "text": "versuchen Sie es zuerst über <consumidor>consumidor.gov.br</consumidor> (kostenlos; nur für Unternehmen, die dort registriert sind). Wenn das nicht hilft, wenden Sie sich an Ihr örtliches Procon (<procon>was Procon macht</procon>). Bei personenbezogenen Daten fragen Sie zuerst das Unternehmen und <anpd>reichen dann eine Petition bei der ANPD ein</anpd> (kostenlos, mit gov.br-Konto; die ANPD nutzt Petitionen für ihre Planung und antwortet nicht auf jede einzeln)."
+        },
+        "fr": {
+          "label": "Frankreich:",
+          "text": "melden Sie ein Problem mit einem Unternehmen bei <signalconso>SignalConso</signalconso>. Bei Ihren persönlichen Daten oder einer automatisierten Entscheidung <cnil>beschweren Sie sich bei der CNIL</cnil>."
+        },
+        "de": {
+          "label": "Deutschland:",
+          "text": "bei Problemen mit KI nutzen Sie die <bnetza>kostenlose KI-Beschwerdestelle der Bundesnetzagentur</bnetza>. Bei personenbezogenen Daten wenden Sie sich an die Datenschutzbehörde Ihres Bundeslandes; <bfdi>die BfDI erklärt, welche zuständig ist</bfdi>. Beratung, teils kostenpflichtig, bietet <vz>Ihre Verbraucherzentrale</vz>."
+        },
+        "in": {
+          "label": "Indien:",
+          "text": "rufen Sie die nationale Verbraucher-Hotline unter <tel>1915</tel> an (kostenlos, 8 bis 20 Uhr), oder <nch>beschweren Sie sich online</nch>. Bei KI-Inhalten auf einer Plattform beschweren Sie sich zuerst bei der Beschwerdestelle der Plattform und <gac>legen dann beim Grievance Appellate Committee Einspruch ein</gac>."
+        },
+        "it": {
+          "label": "Italien:",
+          "text": "bei personenbezogenen Daten <garante>beschweren Sie sich beim Garante</garante> (kostenlos; fragen Sie zuerst das Unternehmen, das innerhalb eines Monats antworten muss). Bei unlauteren Geschäftspraktiken <agcm>melden Sie diese der AGCM</agcm> (kostenlos; sie kann gegen die Praxis vorgehen, Ihnen aber kein Geld zurückholen). Telefon der AGCM: <tel>800 166 661</tel>, werktags 10 bis 14 Uhr."
+        }
       }
     }
   },
@@ -437,10 +459,10 @@
     "checkedLabel": "Quellen geprüft",
     "seeAll": "Alle {total} Quellen in {groups} Gruppen ansehen",
     "openRegistry": "Das vollständige Quellenverzeichnis öffnen",
-    "registryAbout": "Alle Quellen, auf die sich diese Website stützt, und wie gründlich jeder Link geprüft wurde. Status „confirmed“: Der Link wurde am Prüfdatum geöffnet und der Inhalt stimmte. „unopened“: Der Link stammt aus einem offiziellen Verzeichnis oder einer Suche, wurde aber noch von niemandem geöffnet; ein Mensch sollte ihn einmal öffnen. „no-link“: als Hintergrundlektüre aufgeführt, noch ohne öffentlichen Link.",
+    "registryAbout": "Alle Quellen, auf die sich diese Website stützt, und wie jeder Link geprüft wurde. „Link von KI geöffnet und bestätigt“ heißt: Ein KI-Modell (Claude oder Recherche-Agenten, die es gesteuert hat) hat den Link am Prüfdatum geöffnet, und der Inhalt stimmte mit dem überein, was diese Website sagt. Das ist nicht dasselbe, wie wenn ein Mensch die Quelle liest. Robert liest jede Quelle selbst; bei jeder, die er gelesen hat, steht das mit Datum. „Link noch nicht geöffnet“ heißt: Der Link stammt aus einem offiziellen Verzeichnis oder einer Suche, wurde aber noch von niemandem geöffnet. „Noch kein öffentlicher Link“ heißt: als Hintergrundlektüre aufgeführt, ohne erfassten öffentlichen Link.",
     "status": {
-      "confirmed": "Link geöffnet und bestätigt",
-      "unopened": "Link noch nicht von einem Menschen geöffnet",
+      "confirmed": "Link von KI geöffnet und bestätigt",
+      "unopened": "Link noch nicht geöffnet",
       "no-link": "Noch kein öffentlicher Link"
     },
     "models": {
@@ -463,7 +485,8 @@
       "latam-global": "Rechtsrahmen in Lateinamerika und weltweit",
       "eu-national": "Nationale Rechtsrahmen in Europa"
     },
-    "sourcesLanguageNote": "Titel und Angaben der Quellen erscheinen in ihrer Originalsprache, meist Englisch."
+    "sourcesLanguageNote": "Titel und Angaben der Quellen erscheinen in ihrer Originalsprache, meist Englisch.",
+    "readBy": "Gelesen von {name} am {date}."
   },
   "Sources": {
     "metaTitle": "Quellen",

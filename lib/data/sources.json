@@ -1,5 +1,5 @@
 {
-  "about": "Every source this site draws on, with how well each link has been checked. Status 'confirmed': the link was opened on the checked date and the content matched. 'unopened': the link comes from an official index or search, but no one has opened it yet; a person should open it once. 'no-link': listed as background reading, with no public link recorded yet.",
+  "about": "Every source this site draws on, with how each link was checked. 'confirmed': an AI model (Claude, or research agents it directed) opened the link on the checked date and the content matched. That is not the same as a person reading it; sources Robert has read himself carry a readBy date. 'unopened': the link comes from an official index or search, but no one has opened it yet. 'no-link': listed as background reading, with no public link recorded yet.",
   "checkedOn": "2026-09-23",
   "review": {
     "reviewer": "Robert Sweetman",
@@ -477,7 +477,8 @@
           "jurisdiction": "Brazil (bill, not law)",
           "url": "https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara",
           "status": "confirmed",
-          "summary": "The Senate passed AI bill PL 2338/2023 on 10 December 2024 and sent it to the Chamber of Deputies. The Senate text includes rights to prior information that you are interacting with AI, to an explanation, to contest decisions, and to human review, and sorts AI systems by risk level."
+          "summary": "The Senate passed AI bill PL 2338/2023 on 10 December 2024 and sent it to the Chamber of Deputies. The Senate text includes rights to prior information that you are interacting with AI, to an explanation, to contest decisions, and to human review, and sorts AI systems by risk level.",
+          "lang": "pt-BR"
         },
         {
           "id": "pl2338-camara-status",
@@ -488,7 +489,8 @@
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262",
           "status": "confirmed",
           "note": "Status read on 23 September 2026. Check again before relying on it.",
-          "summary": "As of 23 September 2026, PL 2338/2023 is waiting for the rapporteur's report in the Chamber's Special Committee on Artificial Intelligence. The full Chamber has not voted on it."
+          "summary": "As of 23 September 2026, PL 2338/2023 is waiting for the rapporteur's report in the Chamber's Special Committee on Artificial Intelligence. The full Chamber has not voted on it.",
+          "lang": "pt-BR"
         },
         {
           "id": "in-dpdp-act-2023",
@@ -621,6 +623,42 @@
           "status": "confirmed",
           "note": "Home page read on 27 September 2026.",
           "summary": "The government helpline for consumer complaints: toll-free 1915 (8 AM to 8 PM), WhatsApp, online, and app."
+        },
+        {
+          "id": "br-anpd-peticao-denuncia",
+          "title": "Denúncia / Petição de Titular referente à LGPD",
+          "publisher": "Agência Nacional de Proteção de Dados (ANPD)",
+          "type": "Regulator (Brazil)",
+          "jurisdiction": "Brazil",
+          "url": "https://www.gov.br/anpd/pt-br/canais_atendimento/cidadao-titular-de-dados/denuncia-peticao-de-titular-referente-lgpd",
+          "status": "confirmed",
+          "lang": "pt-BR",
+          "note": "Read on 27 September 2026 (page updated 22 June 2026): petitions go through the free gov.br request system, only after first asking the company, with proof of that contact. The ANPD considers petitions in its wider work and generally does not reply to each one.",
+          "summary": "How people in Brazil can petition the data protection agency, for free with a gov.br login, after first asking the company to respect their data rights."
+        },
+        {
+          "id": "br-consumidor-gov",
+          "title": "Conheça o Consumidor.gov.br",
+          "publisher": "Secretaria Nacional do Consumidor (Senacon), Ministério da Justiça e Segurança Pública",
+          "type": "Regulator (Brazil)",
+          "jurisdiction": "Brazil",
+          "url": "https://www.consumidor.gov.br/pages/conteudo/publico/1",
+          "status": "confirmed",
+          "lang": "pt-BR",
+          "note": "Read on 27 September 2026: a free public online service run by Senacon where consumers complain directly to participating companies, which have up to 10 days to reply. Only registered companies can be named, and there is no direct penalty in an individual case.",
+          "summary": "Brazil's free government website for sending a complaint straight to a participating company."
+        },
+        {
+          "id": "br-sndc-procon",
+          "title": "Sistema Nacional de Defesa do Consumidor - SNDC",
+          "publisher": "Secretaria Nacional do Consumidor (Senacon), Ministério da Justiça e Segurança Pública",
+          "type": "Regulator (Brazil)",
+          "jurisdiction": "Brazil",
+          "url": "https://www.consumidor.gov.br/pages/conteudo/publico/6",
+          "status": "confirmed",
+          "lang": "pt-BR",
+          "note": "Read on 27 September 2026.",
+          "summary": "Explains that Procons are state and city consumer offices that help consumers directly with problems with a business."
         }
       ]
     },
@@ -639,7 +677,8 @@
           "status": "confirmed",
           "primary": true,
           "note": "Full text of Articles 1 to 28 read from the official issue.",
-          "summary": "Italy's national AI law. Art. 4: children under 14 need a parent's consent to use AI. Art. 7: in health care, patients have the right to be told when AI is used, and the decision always stays with the doctor. Art. 11: employers must inform workers. Art. 13: professionals must explain their AI systems to clients in clear, simple language. Art. 14: in public administration, the person stays solely responsible. Art. 20: AgID and ACN are the national AI authorities; the Garante keeps its powers."
+          "summary": "Italy's national AI law. Art. 4: children under 14 need a parent's consent to use AI. Art. 7: in health care, patients have the right to be told when AI is used, and the decision always stays with the doctor. Art. 11: employers must inform workers. Art. 13: professionals must explain their AI systems to clients in clear, simple language. Art. 14: in public administration, the person stays solely responsible. Art. 20: AgID and ACN are the national AI authorities; the Garante keeps its powers.",
+          "lang": "it"
         },
         {
           "id": "it-law-132-normattiva",
@@ -649,7 +688,8 @@
           "jurisdiction": "Italy",
           "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-09-23;132",
           "status": "confirmed",
-          "summary": "Official record of Law No. 132/2025: published in Gazzetta Ufficiale n. 223 on 25 September 2025, in force since 10 October 2025."
+          "summary": "Official record of Law No. 132/2025: published in Gazzetta Ufficiale n. 223 on 25 September 2025, in force since 10 October 2025.",
+          "lang": "it"
         },
         {
           "id": "garante-en",
@@ -669,7 +709,8 @@
           "jurisdiction": "Italy",
           "url": "https://www.garanteprivacy.it/temi/intelligenza-artificiale",
           "status": "confirmed",
-          "summary": "The Garante's page on artificial intelligence and data protection, with its guidance, statements, and related documents."
+          "summary": "The Garante's page on artificial intelligence and data protection, with its guidance, statements, and related documents.",
+          "lang": "it"
         },
         {
           "id": "fr-crpa-l311-3-1",
@@ -682,7 +723,8 @@
           "status": "confirmed",
           "primary": true,
           "note": "Full article text read; in force since 9 October 2016, created by Loi n° 2016-1321 (République numérique), art. 4.",
-          "summary": "When a public body makes an individual decision using an algorithm, the decision must say so. On request, the body must share the algorithm's rules and main features."
+          "summary": "When a public body makes an individual decision using an algorithm, the decision must say so. On request, the body must share the algorithm's rules and main features.",
+          "lang": "fr"
         },
         {
           "id": "fr-crpa-r311-3-1-2",
@@ -694,7 +736,8 @@
           "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034195881",
           "status": "confirmed",
           "note": "Full article text read; in force since 1 September 2017 (Décret n° 2017-330).",
-          "summary": "On request, and in a form people can understand, the public body must explain how much the algorithm counted, what data it used and where the data came from, the parameters and their weights as applied to the person, and what the processing did."
+          "summary": "On request, and in a form people can understand, the public body must explain how much the algorithm counted, what data it used and where the data came from, the parameters and their weights as applied to the person, and what the processing did.",
+          "lang": "fr"
         },
         {
           "id": "fr-loi-78-17-art47",
@@ -707,7 +750,8 @@
           "status": "confirmed",
           "primary": true,
           "note": "Full article text read (version in force since 1 June 2019).",
-          "summary": "No court decision judging a person's behavior may rest on automated profiling of their personality. Fully automated decisions with serious effects are allowed only in narrow cases with explanation duties, and never when a public body rules on an administrative appeal."
+          "summary": "No court decision judging a person's behavior may rest on automated profiling of their personality. Fully automated decisions with serious effects are allowed only in narrow cases with explanation duties, and never when a public body rules on an administrative appeal.",
+          "lang": "fr"
         },
         {
           "id": "fr-loi-2023-451-art5",
@@ -719,7 +763,8 @@
           "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000050468897",
           "status": "confirmed",
           "note": "Consolidated article read (version in force since 8 November 2024).",
-          "summary": "Paid influencers must label AI-generated images of a face or body \"Images virtuelles\", or with an equivalent notice suited to the format."
+          "summary": "Paid influencers must label AI-generated images of a face or body \"Images virtuelles\", or with an equivalent notice suited to the format.",
+          "lang": "fr"
         },
         {
           "id": "fr-cnil-intervention-humaine",
@@ -730,7 +775,8 @@
           "jurisdiction": "France",
           "url": "https://www.cnil.fr/fr/vos-droits-lintervention-humaine-face-votre-profilage-ou-une-decision-automatisee",
           "status": "confirmed",
-          "summary": "Where a fully automated decision with serious effects is allowed, you can be told about it, learn its logic, challenge it, and ask a person to review it."
+          "summary": "Where a fully automated decision with serious effects is allowed, you can be told about it, learn its logic, challenge it, and ask a person to review it.",
+          "lang": "fr"
         },
         {
           "id": "fr-cnil-ria-qr",
@@ -742,7 +788,8 @@
           "url": "https://www.cnil.fr/fr/entree-en-vigueur-du-reglement-europeen-sur-lia-les-premieres-questions-reponses-de-la-cnil",
           "status": "confirmed",
           "note": "Q&A read as updated on 17 August 2026.",
-          "summary": "The CNIL says the EU AI Act adds to the GDPR and does not replace it, that it still fully enforces the GDPR for AI, and that each EU country organizes its own AI Act oversight."
+          "summary": "The CNIL says the EU AI Act adds to the GDPR and does not replace it, that it still fully enforces the GDPR for AI, and that each EU country organizes its own AI Act oversight.",
+          "lang": "fr"
         },
         {
           "id": "fr-conso-l511-7",
@@ -754,7 +801,8 @@
           "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051558799",
           "status": "confirmed",
           "note": "Current version read (in force since 10 July 2026). It does not yet mention the EU AI Act.",
-          "summary": "Lists the rules that consumer-agency (DGCCRF) inspectors can investigate. The EU AI Act is not on the list yet."
+          "summary": "Lists the rules that consumer-agency (DGCCRF) inspectors can investigate. The EU AI Act is not on the list yet.",
+          "lang": "fr"
         },
         {
           "id": "fr-ddadue-senate-text",
@@ -766,7 +814,8 @@
           "url": "https://www.senat.fr/leg/tas25-063.html",
           "status": "confirmed",
           "note": "Title IV, Articles 24 to 24 terdecies (EU AI Act oversight), read as adopted by the Senate. This is a bill, not law.",
-          "summary": "A bill that would make the CNIL France's main AI Act authority and have it handle AI complaints. Arcom, the DGCCRF, the ACPR and other regulators would share the rest."
+          "summary": "A bill that would make the CNIL France's main AI Act authority and have it handle AI complaints. Arcom, the DGCCRF, the ACPR and other regulators would share the rest.",
+          "lang": "fr"
         },
         {
           "id": "fr-senat-dossier-pjl25-118",
@@ -778,7 +827,8 @@
           "url": "https://www.senat.fr/dossier-legislatif/pjl25-118.html",
           "status": "confirmed",
           "note": "Timeline read on 27 September 2026 (page updated 4 September 2026).",
-          "summary": "Filed 10 November 2025 under the accelerated procedure, adopted by the Senate 18 February 2026, and sent to the National Assembly 20 February 2026. Not yet law."
+          "summary": "Filed 10 November 2025 under the accelerated procedure, adopted by the Senate 18 February 2026, and sent to the National Assembly 20 February 2026. Not yet law.",
+          "lang": "fr"
         },
         {
           "id": "fr-an-dossier-2518",
@@ -790,7 +840,8 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
           "status": "confirmed",
           "note": "Timeline read on 27 September 2026: referred to committee 20 February 2026 and to advisory committees 23 April 2026; no report or vote shown.",
-          "summary": "The National Assembly has received the Senate-adopted bill but has not yet voted on it."
+          "summary": "The National Assembly has received the Senate-adopted bill but has not yet voted on it.",
+          "lang": "fr"
         },
         {
           "id": "fr-signalconso",
@@ -800,7 +851,8 @@
           "jurisdiction": "France",
           "url": "https://signal.conso.gouv.fr/fr",
           "status": "confirmed",
-          "summary": "A free public service, run by the consumer agency, where consumers report problems with businesses."
+          "summary": "A free public service, run by the consumer agency, where consumers report problems with businesses.",
+          "lang": "fr"
         },
         {
           "id": "fr-cnil-plaintes",
@@ -810,7 +862,8 @@
           "jurisdiction": "France",
           "url": "https://www.cnil.fr/fr/plaintes",
           "status": "confirmed",
-          "summary": "The CNIL's online page for filing a data protection complaint."
+          "summary": "The CNIL's online page for filing a data protection complaint.",
+          "lang": "fr"
         },
         {
           "id": "de-ki-mig",
@@ -823,7 +876,8 @@
           "status": "confirmed",
           "primary": true,
           "note": "Full text read on 27 September 2026, including the note that it entered into force on 29 July 2026.",
-          "summary": "Germany's law for carrying out the EU AI Act, in force since 29 July 2026. The Bundesnetzagentur is the main AI market surveillance authority and the central complaint office; BaFin covers AI in regulated finance."
+          "summary": "Germany's law for carrying out the EU AI Act, in force since 29 July 2026. The Bundesnetzagentur is the main AI market surveillance authority and the central complaint office; BaFin covers AI in regulated finance.",
+          "lang": "de"
         },
         {
           "id": "de-bgbl-2026-223",
@@ -835,7 +889,8 @@
           "url": "https://www.recht.bund.de/bgbl/1/2026/223/VO.html",
           "status": "confirmed",
           "note": "Official gazette record read: signed 22 July 2026, published 28 July 2026.",
-          "summary": "Official publication of Germany's EU AI Act implementation law, whose Article 1 is the KI-MIG."
+          "summary": "Official publication of Germany's EU AI Act implementation law, whose Article 1 is the KI-MIG.",
+          "lang": "de"
         },
         {
           "id": "de-bgbl-2026-139",
@@ -848,7 +903,8 @@
           "status": "confirmed",
           "primary": true,
           "note": "Official gazette PDF read: Art. 1 (§ 491a BGB), Art. 3 (BDSG § 30, deletion of § 31, new § 37a), Art. 16 (in force 20 November 2026).",
-          "summary": "Germany's consumer credit law. From 20 November 2026 a new credit-scoring rule (§ 37a BDSG) bans some data from scores, gives a right to learn the main factors, and a right to challenge a score-based decision and have a person decide."
+          "summary": "Germany's consumer credit law. From 20 November 2026 a new credit-scoring rule (§ 37a BDSG) bans some data from scores, gives a right to learn the main factors, and a right to challenge a score-based decision and have a person decide.",
+          "lang": "de"
         },
         {
           "id": "de-bt-21-5381",
@@ -860,7 +916,8 @@
           "url": "https://dserver.bundestag.de/btd/21/053/2105381.pdf",
           "status": "confirmed",
           "note": "Committee amendments and reasons for the BDSG changes read (pp. 20-22).",
-          "summary": "The committee report that added the new scoring rule, and says it takes effect on 20 November 2026."
+          "summary": "The committee report that added the new scoring rule, and says it takes effect on 20 November 2026.",
+          "lang": "de"
         },
         {
           "id": "de-bdsg",
@@ -872,7 +929,8 @@
           "url": "https://www.gesetze-im-internet.de/bdsg_2018/BJNR209710017.html",
           "status": "confirmed",
           "note": "Current text read on 27 September 2026: §§ 9, 31, 37, 40.",
-          "summary": "Germany's federal data protection act. It splits data protection oversight between the federal commissioner (BfDI) and the state authorities."
+          "summary": "Germany's federal data protection act. It splits data protection oversight between the federal commissioner (BfDI) and the state authorities.",
+          "lang": "de"
         },
         {
           "id": "de-egbgb-246a",
@@ -883,7 +941,8 @@
           "url": "https://www.gesetze-im-internet.de/bgbeg/art_246a__1.html",
           "status": "confirmed",
           "note": "§ 1(1) No. 6 of the current text read.",
-          "summary": "For online and other distance contracts, a seller must tell the consumer when a price was personalized based on automated decision-making."
+          "summary": "For online and other distance contracts, a seller must tell the consumer when a price was personalized based on automated decision-making.",
+          "lang": "de"
         },
         {
           "id": "de-cjeu-c634-21",
@@ -906,7 +965,8 @@
           "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/18_Beschwerdestelle/start.html",
           "status": "confirmed",
           "note": "Page read on 27 September 2026.",
-          "summary": "The Bundesnetzagentur's central AI complaint office. Complaints are free, go through an online form, and are passed on to the right authority if needed."
+          "summary": "The Bundesnetzagentur's central AI complaint office. Complaints are free, go through an online form, and are passed on to the right authority if needed.",
+          "lang": "de"
         },
         {
           "id": "de-bfdi-beschwerde",
@@ -917,7 +977,8 @@
           "url": "https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Datenschutz/BeschwerdeBeiDatenschutzbehoereden.html",
           "status": "confirmed",
           "note": "Page read on 27 September 2026.",
-          "summary": "Explains the right to complain to a data protection authority, and which authority covers which organizations."
+          "summary": "Explains the right to complain to a data protection authority, and which authority covers which organizations.",
+          "lang": "de"
         },
         {
           "id": "de-verbraucherzentrale",
@@ -928,7 +989,32 @@
           "url": "https://www.verbraucherzentrale.de/beratung",
           "status": "confirmed",
           "note": "Page read on 27 September 2026.",
-          "summary": "The consumer advice centres in the German states give advice and help with consumer problems; some advice has a fee."
+          "summary": "The consumer advice centres in the German states give advice and help with consumer problems; some advice has a fee.",
+          "lang": "de"
+        },
+        {
+          "id": "it-garante-reclamo",
+          "title": "Reclami - Garante Privacy",
+          "publisher": "Garante per la protezione dei dati personali",
+          "type": "Regulator (Italy)",
+          "jurisdiction": "Italy",
+          "url": "https://www.garanteprivacy.it/diritti/come-agire-per-tutelare-i-tuoi-dati-personali/reclamo",
+          "status": "confirmed",
+          "lang": "it",
+          "note": "Read on 27 September 2026, with the companion page on exercising your rights, which says the complaint is free and advises asking the company first (reply due within one month).",
+          "summary": "How anyone in Italy can make a free, signed complaint to the data protection authority, usually after first asking the company to respect their data rights."
+        },
+        {
+          "id": "it-agcm-segnalazione",
+          "title": "AGCM - Segnalare pratiche scorrette",
+          "publisher": "Autorità Garante della Concorrenza e del Mercato (AGCM)",
+          "type": "Regulator (Italy)",
+          "jurisdiction": "Italy",
+          "url": "https://www.agcm.it/per-i-consumatori/segnalare-pratiche-scorrette",
+          "status": "confirmed",
+          "lang": "it",
+          "note": "Read on 27 September 2026: reports by certified email or online form, with no formalities, fees or lawyer; no reply unless an investigation opens. The form notice says the AGCM cannot settle individual disputes or order refunds. Phone line 800 166 661, weekdays 10:00 to 14:00.",
+          "summary": "How to report an unfair business practice to Italy's consumer authority for free, which can act against the practice but cannot get you a refund."
         }
       ]
     }

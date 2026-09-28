@@ -59,6 +59,12 @@ describe("message files", () => {
     }
   });
 
+  it("never put an apostrophe right before a <tag> or {placeholder}, which the message format reads as an escape", () => {
+    for (const messages of [en, ...Object.values(TRANSLATIONS)]) {
+      for (const [k, v] of Object.entries(messages)) expect(`${k}: ${v}`).not.toMatch(/'[<{]/);
+    }
+  });
+
   it.each(Object.entries(TRANSLATIONS))("keep every {placeholder} and <tag> in %s", (_, messages) => {
     for (const key of Object.keys(en)) {
       expect({ key, p: placeholders(messages[key]) }).toEqual({ key, p: placeholders(en[key]) });

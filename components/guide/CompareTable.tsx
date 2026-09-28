@@ -4,17 +4,12 @@ import { useLocale, useTranslations } from "next-intl";
 import { useId, useState } from "react";
 
 import { Cite } from "@/components/ui/Cite";
-import type { Locale } from "@/lib/i18n/routing";
+import { COUNTRIES, homeCountry, type Country } from "@/lib/countries";
 
 type Row = { id: string; us: readonly string[]; eu: readonly string[] } & Record<Country, readonly string[]>;
 
 // The countries a visitor can compare with the US and the EU, in picker order.
-export const COMPARE_COUNTRIES = ["br", "fr", "de", "in", "it"] as const;
-export type Country = (typeof COMPARE_COUNTRIES)[number];
-
-// Each language opens on the country its speakers most likely live in.
-// Languages without a country of their own open on the first one.
-const HOME_COUNTRY: Partial<Record<Locale, Country>> = { "pt-BR": "br", it: "it", fr: "fr", de: "de", hi: "in" };
+export const COMPARE_COUNTRIES = COUNTRIES;
 
 // Citations sit beside the translated cells, so every language keeps the
 // same numbered sources.
@@ -88,8 +83,8 @@ export const COMPARISON: readonly Row[] = [
  */
 export function CompareTable({ checked }: { checked: string }) {
   const t = useTranslations("Guide.compare");
-  const locale = useLocale() as Locale;
-  const [country, setCountry] = useState<Country>(HOME_COUNTRY[locale] ?? COMPARE_COUNTRIES[0]);
+  // Languages without a country of their own open on the first one.
+  const [country, setCountry] = useState<Country>(homeCountry(useLocale()) ?? COMPARE_COUNTRIES[0]);
   const pickerId = useId();
   const name = (c: Country) => t(`countries.${c}.name`);
 

@@ -251,6 +251,28 @@
           "rule2Label": "Partout",
           "rule2": "Presque tous les pays interdisent les pratiques commerciales trompeuses. Votre organisme de protection des consommateurs peut vous dire ce qui s'applique à vous."
         }
+      },
+      "help": {
+        "br": {
+          "label": "Brésil :",
+          "text": "essayez d'abord <consumidor>consumidor.gov.br</consumidor> (gratuit ; ne fonctionne qu'avec les entreprises inscrites). Si cela ne règle pas le problème, allez au Procon de votre région (<procon>ce que fait le Procon</procon>). Pour vos données personnelles, demandez d'abord à l'entreprise, puis <anpd>adressez une pétition à l'ANPD</anpd> (gratuit, avec un compte gov.br ; elle utilise les pétitions pour orienter son travail et ne répond pas à chacune)."
+        },
+        "fr": {
+          "label": "France :",
+          "text": "signalez un problème avec une entreprise sur <signalconso>SignalConso</signalconso>. Pour vos données personnelles ou une décision automatisée, <cnil>déposez une plainte auprès de la CNIL</cnil>."
+        },
+        "de": {
+          "label": "Allemagne :",
+          "text": "pour un problème lié à l'IA, utilisez le <bnetza>service gratuit de plaintes sur l'IA de la Bundesnetzagentur</bnetza>. Pour les données personnelles, contactez l'autorité de protection des données de votre Land ; <bfdi>la BfDI explique laquelle</bfdi>. Pour un conseil, parfois payant, <vz>votre Verbraucherzentrale</vz>."
+        },
+        "in": {
+          "label": "Inde :",
+          "text": "appelez la ligne nationale des consommateurs au <tel>1915</tel> (gratuit, de 8 h à 20 h), ou <nch>déposez une plainte en ligne</nch>. Pour un contenu créé par IA sur une plateforme, plaignez-vous d'abord auprès du responsable des réclamations de la plateforme, puis <gac>faites appel auprès du Grievance Appellate Committee</gac>."
+        },
+        "it": {
+          "label": "Italie :",
+          "text": "pour vos données personnelles, <garante>déposez une plainte auprès du Garante</garante> (gratuit ; demandez d'abord à l'entreprise, qui doit répondre sous un mois). Pour une pratique commerciale déloyale, <agcm>signalez-la à l'AGCM</agcm> (gratuit ; elle peut agir contre la pratique, mais ne peut pas vous obtenir un remboursement). Numéro de l'AGCM : <tel>800 166 661</tel>, en semaine de 10 h à 14 h."
+        }
       }
     }
   },
@@ -437,10 +459,10 @@
     "checkedLabel": "Sources vérifiées",
     "seeAll": "Voir les {total} sources, réparties en {groups} groupes",
     "openRegistry": "Ouvrir le registre complet des sources",
-    "registryAbout": "Toutes les sources sur lesquelles s'appuie ce site, avec le degré de vérification de chaque lien. Statut « confirmed » : le lien a été ouvert à la date de vérification et le contenu correspondait. « unopened » : le lien vient d'un index officiel ou d'une recherche, mais personne ne l'a encore ouvert ; une personne devrait l'ouvrir une fois. « no-link » : listé comme lecture de fond, sans lien public enregistré pour l'instant.",
+    "registryAbout": "Toutes les sources sur lesquelles s'appuie ce site, avec la façon dont chaque lien a été vérifié. « Lien ouvert par une IA et conforme » veut dire qu'un modèle d'IA (Claude, ou des agents de recherche qu'il a dirigés) a ouvert le lien à la date de vérification et que le contenu correspondait à ce que dit ce site. Ce n'est pas la même chose qu'une lecture par une personne. Robert lit lui-même chaque source ; chacune qu'il a lue l'indique, avec la date. « Lien pas encore ouvert » veut dire que le lien vient d'un index officiel ou d'une recherche, mais que personne ne l'a encore ouvert. « Pas encore de lien public » veut dire qu'elle est listée comme lecture de fond, sans lien public enregistré.",
     "status": {
-      "confirmed": "Lien ouvert et conforme",
-      "unopened": "Lien pas encore ouvert par une personne",
+      "confirmed": "Lien ouvert par une IA et conforme",
+      "unopened": "Lien pas encore ouvert",
       "no-link": "Pas encore de lien public"
     },
     "models": {
@@ -463,7 +485,8 @@
       "latam-global": "Cadres réglementaires d'Amérique latine et du monde",
       "eu-national": "Cadres nationaux européens"
     },
-    "sourcesLanguageNote": "Les titres et les détails des sources apparaissent dans leur langue d'origine, le plus souvent l'anglais."
+    "sourcesLanguageNote": "Les titres et les détails des sources apparaissent dans leur langue d'origine, le plus souvent l'anglais.",
+    "readBy": "Lu par {name} le {date}."
   },
   "Sources": {
     "metaTitle": "Sources",

@@ -18,6 +18,10 @@ export type Source = {
   jurisdiction?: string;
   /** One or two sentences on what the source says, shown on /sources. */
   summary?: string;
+  /** The language of the title and page, when not English, e.g. "fr". */
+  lang?: string;
+  /** The day Robert read the source himself (YYYY-MM-DD). "confirmed" alone means an AI opened it. */
+  readBy?: string;
 };
 
 export type SourceCategory = { id: string; title: string; sources: Source[] };

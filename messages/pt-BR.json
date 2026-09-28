@@ -153,7 +153,7 @@
           "question": "Quem fiscaliza as regras?",
           "us": "A FTC diz que as leis atuais não têm exceções para a IA. A CFPB cuida do crédito.",
           "eu": "As autoridades nacionais de cada país da UE.",
-          "br": "A Autoridade Nacional de Proteção de Dados (ANPD). Ela pode fazer auditoria para verificar discriminação quando o segredo comercial limita o que informam a você.",
+          "br": "A Agência Nacional de Proteção de Dados (ANPD). Ela pode fazer auditoria para verificar discriminação quando o segredo comercial limita o que informam a você.",
           "it": "A autoridade de proteção de dados (Garante) mantém seus poderes de fiscalizar, bloquear e multar. A lei da IA nomeia duas autoridades nacionais de IA: a AgID e a ACN.",
           "fr": "A autoridade de proteção de dados (CNIL) fiscaliza as regras sobre dados, e a agência do consumidor (DGCCRF) fiscaliza as regras de consumo. A França ainda não definiu em lei suas autoridades para o Regulamento de IA da UE.",
           "de": "A Bundesnetzagentur fiscaliza as regras do Regulamento de IA da UE e recebe as reclamações sobre IA de todo o país. O supervisor financeiro (BaFin) cuida da IA nas finanças. As autoridades de proteção de dados federais e estaduais cuidam dos dados pessoais.",
@@ -250,6 +250,28 @@
           "rule1": "As leis de proteção ao consumidor que já existem valem para a IA. A FTC já disse que não há exceções para a IA. (FTC, 2024)",
           "rule2Label": "Em todo lugar",
           "rule2": "Quase todos os países proíbem práticas comerciais enganosas. O órgão de defesa do consumidor pode dizer o que vale para o seu caso."
+        }
+      },
+      "help": {
+        "br": {
+          "label": "Brasil:",
+          "text": "tente primeiro o <consumidor>consumidor.gov.br</consumidor> (grátis; funciona só com empresas cadastradas). Se não resolver, procure o Procon da sua cidade ou estado (<procon>o que o Procon faz</procon>). Para dados pessoais, peça primeiro à empresa e depois <anpd>faça uma petição à ANPD</anpd> (grátis, com login gov.br; ela usa as petições para planejar o trabalho e não responde a cada uma)."
+        },
+        "fr": {
+          "label": "França:",
+          "text": "relate um problema com uma empresa no <signalconso>SignalConso</signalconso>. Para seus dados pessoais ou uma decisão automatizada, <cnil>faça uma reclamação à CNIL</cnil>."
+        },
+        "de": {
+          "label": "Alemanha:",
+          "text": "para problemas com IA, use o <bnetza>canal gratuito de reclamações sobre IA da Bundesnetzagentur</bnetza>. Para dados pessoais, fale com a autoridade de proteção de dados do seu estado; <bfdi>a BfDI explica qual</bfdi>. Para orientação, às vezes paga, <vz>a Verbraucherzentrale da sua região</vz>."
+        },
+        "in": {
+          "label": "Índia:",
+          "text": "ligue para a Linha Nacional do Consumidor, <tel>1915</tel> (grátis, das 8h às 20h), ou <nch>reclame online</nch>. Para conteúdos feitos com IA em uma plataforma, reclame primeiro com o responsável por reclamações da plataforma e depois <gac>recorra ao Comitê de Apelação de Reclamações</gac>."
+        },
+        "it": {
+          "label": "Itália:",
+          "text": "para dados pessoais, <garante>faça uma reclamação ao Garante</garante> (grátis; pergunte primeiro à empresa, que precisa responder em até um mês). Para uma prática comercial abusiva, <agcm>denuncie à AGCM</agcm> (grátis; ela pode agir contra a prática, mas não consegue um reembolso para você). Telefone da AGCM: <tel>800 166 661</tel>, dias úteis, das 10h às 14h."
         }
       }
     }
@@ -437,10 +459,10 @@
     "checkedLabel": "Fontes verificadas",
     "seeAll": "Ver as {total} fontes em {groups} grupos",
     "openRegistry": "Abrir o registro completo de fontes",
-    "registryAbout": "Todas as fontes que este site usa, com o nível de verificação de cada link. Status “confirmado”: o link foi aberto na data da verificação e o conteúdo conferia. “Não aberto”: o link vem de um índice oficial ou de uma busca, mas ninguém o abriu ainda; uma pessoa deve abri-lo uma vez. “Sem link”: aparece como leitura de apoio, sem link público registrado ainda.",
+    "registryAbout": "Todas as fontes em que este site se apoia, com a forma como cada link foi verificado. \"Link aberto por IA e confirmado\" significa que um modelo de IA (o Claude, ou agentes de pesquisa que ele orientou) abriu o link na data da verificação e o conteúdo batia com o que este site diz. Não é o mesmo que a leitura de uma pessoa. O Robert está lendo cada fonte ele mesmo; cada uma que ele já leu mostra isso, com a data. \"Link ainda não aberto\" significa que o link vem de um índice oficial ou de uma busca, mas ninguém o abriu ainda. \"Ainda sem link público\" significa que está listada como leitura de fundo, sem link público registrado.",
     "status": {
-      "confirmed": "Link aberto e confirmado",
-      "unopened": "Link que uma pessoa ainda não abriu",
+      "confirmed": "Link aberto por IA e confirmado",
+      "unopened": "Link ainda não aberto",
       "no-link": "Ainda sem link público"
     },
     "models": {
@@ -463,7 +485,8 @@
       "latam-global": "Marcos regulatórios da América Latina e globais",
       "eu-national": "Marcos nacionais europeus"
     },
-    "sourcesLanguageNote": "Os títulos e detalhes das fontes aparecem no idioma original, quase sempre em inglês."
+    "sourcesLanguageNote": "Os títulos e detalhes das fontes aparecem no idioma original, quase sempre em inglês.",
+    "readBy": "Lido por {name} em {date}."
   },
   "Sources": {
     "metaTitle": "Fontes",

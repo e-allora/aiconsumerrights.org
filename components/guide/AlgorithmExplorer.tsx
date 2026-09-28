@@ -2,12 +2,13 @@
 
 import * as React from "react";
 import { ArrowLeft, ArrowRight, Check, RotateCcw } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Cite } from "@/components/ui/Cite";
 import { SourceLink } from "@/components/ui/SourceList";
-import { getSource } from "@/lib/sources";
+import { COUNTRIES, homeCountry, type Country } from "@/lib/countries";
+import { getSource, type Source } from "@/lib/sources";
 import { cn } from "@/lib/utils";
 
 // Each step asks a little more of both sides, and each starts from good faith.
@@ -18,11 +19,59 @@ export const STEPS = [
   { id: "dialogue", cites: [["ftc-ai-comply-2024"], []] },
 ] as const;
 
+// Official places to turn to, by country. Each message's <tags> become links
+// to these registry sources (so every one is checked and cited like the rest),
+// and <tel> becomes a phone link.
+const HELP: Record<Country, { links: Record<string, string>; phone?: string }> = {
+  br: { links: { consumidor: "br-consumidor-gov", procon: "br-sndc-procon", anpd: "br-anpd-peticao-denuncia" } },
+  fr: { links: { signalconso: "fr-signalconso", cnil: "fr-cnil-plaintes" } },
+  de: { links: { bnetza: "de-bnetza-ki-beschwerde", bfdi: "de-bfdi-beschwerde", vz: "de-verbraucherzentrale" } },
+  in: { links: { nch: "in-nch", gac: "in-gac-portal" }, phone: "1915" },
+  it: { links: { garante: "it-garante-reclamo", agcm: "it-agcm-segnalazione" }, phone: "800166661" },
+};
+
+const inlineLink = "font-semibold text-link underline underline-offset-4";
+
+/** An external link inside a sentence, in the visitor's words, to a registry source. */
+function HelpLink({ source, children }: { source: Source; children: React.ReactNode }) {
+  const tc = useTranslations("Common");
+  return (
+    <a href={source.url} target="_blank" rel="noopener noreferrer" hrefLang={source.lang ?? "en"} className={inlineLink}>
+      {children}
+      <span className="sr-only"> {tc("opensInNewTab")}</span>
+    </a>
+  );
+}
+
 type View = { kind: "step"; index: number } | { kind: "resolved"; index: number } | { kind: "agency" };
 
 export function AlgorithmExplorer() {
   const t = useTranslations("Guide.explorer");
   const tc = useTranslations("Common");
+  // The visitor's own country comes first, then the US and the EU, then the rest.
+  const home = homeCountry(useLocale());
+  const helpItem = (c: Country) => {
+    const { links, phone } = HELP[c];
+    const tags = Object.fromEntries(
+      Object.entries(links).map(([tag, id]) => [
+        tag,
+        (chunks: React.ReactNode) => <HelpLink source={getSource(id)}>{chunks}</HelpLink>,
+      ])
+    );
+    return (
+      <li key={c}>
+        <strong>{t(`help.${c}.label`)}</strong>{" "}
+        {t.rich(`help.${c}.text`, {
+          ...tags,
+          tel: (chunks) => (
+            <a href={`tel:${phone}`} className={inlineLink}>
+              {chunks}
+            </a>
+          ),
+        })}
+      </li>
+    );
+  };
   const baseId = React.useId();
   const [view, setView] = React.useState<View>({ kind: "step", index: 0 });
   const [announcement, setAnnouncement] = React.useState("");
@@ -207,6 +256,7 @@ export function AlgorithmExplorer() {
             </h3>
             <p>{t.rich("agencyBody", { b: (c) => <strong>{c}</strong> })}</p>
             <ul className="flex flex-col gap-3 text-base">
+              {home && helpItem(home)}
               <li>
                 <strong>{t("agencyUS")}</strong> <SourceLink source={getSource("ftc-reportfraud")} />.{" "}
                 {t("agencyUSCredit")} <SourceLink source={getSource("cfpb-complaint")} />.
@@ -214,6 +264,7 @@ export function AlgorithmExplorer() {
               <li>
                 <strong>{t("agencyEU")}</strong> {t("agencyEUText")}
               </li>
+              {COUNTRIES.filter((c) => c !== home).map(helpItem)}
               <li>
                 <strong>{t("agencyElsewhere")}</strong> {t("agencyElsewhereText")}
               </li>
