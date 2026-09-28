@@ -2,7 +2,7 @@
 
 **Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.**
 
-🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English, Español, Português (PT), Português (BR), and Italiano · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
+🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English, Español, Português (PT), Português (BR), Italiano, and Français · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
 
 ![The guide page, "AI you can question", on a warm cream background](docs/screenshots/guide-light.png)
 
@@ -58,12 +58,12 @@ Every page ends with a **"How this site was made"** footer that lists:
 
 The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.app/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
 
-### 🗣️ English, Spanish, Portuguese (Portugal and Brazil), and Italian
+### 🗣️ English, Spanish, Portuguese (Portugal and Brazil), Italian, and French
 
 - 🌎 Every page exists at `/en/...`, `/es/...`, `/pt/...` (Portugal), `/pt-BR/...` (Brazil), and `/it/...` (Italy). A visit to `/` opens the language your browser asks for.
 - 🔁 The language menu in the header, or in the mobile menu, keeps you on the same page: `/en/forum` becomes `/es/forum`.
-- 📝 Spanish, European Portuguese, Brazilian Portuguese, and Italian text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
-- ⏸️ The PAUSE Strategy spells PAUSE in English and PAUSA in Spanish, Portuguese, and Italian.
+- 📝 Spanish, European Portuguese, Brazilian Portuguese, Italian, and French text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
+- ⏸️ The PAUSE Strategy spells PAUSE in English and French, and PAUSA in Spanish, Portuguese, and Italian.
 - 🔎 Search engines get `hreflang` links between the versions, in the page head and in the sitemap.
 
 ### 🌗 Light and dark, desktop and mobile
@@ -97,7 +97,7 @@ npm run dev          # http://localhost:3000 (opens /en or /es)
 | `npx tsc --noEmit` | Type-checks the project |
 | `npm run lint` | Runs Next.js lint |
 | `npm run build` | Makes the production build |
-| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all five languages, in light and dark, on desktop and mobile |
+| `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all six languages, in light and dark, on desktop and mobile |
 | `npm run screenshots` | Regenerates the images in `docs/screenshots` |
 
 > 💡 `audit:a11y` and `screenshots` need a Chromium browser. Set `CHROME_PATH` if yours is not at Playwright's default location.
@@ -122,10 +122,10 @@ __tests__/            272 unit, integration, accessibility, i18n, and SEO tests
 
 Every phase ships only when all of these pass:
 
-- 🧪 **Jest:** 272 tests, including axe on every page in all five languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
+- 🧪 **Jest:** 450 tests, including axe on every page in all six languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
 - 🔤 **TypeScript and lint:** zero errors, zero warnings.
 - 🏗️ **Production build:** zero warnings.
-- ♿ **Real-browser audit:** zero WCAG A/AA violations across 102 page states in all five languages, with a built-in canary that proves the checks work.
+- ♿ **Real-browser audit:** zero WCAG A/AA violations across 146 page states in all six languages, with a built-in canary that proves the checks work.
 
 ## 🤖 AI assistance disclosure
 

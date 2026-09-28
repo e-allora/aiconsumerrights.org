@@ -1,7 +1,9 @@
-import { render, screen, within } from "@/test-utils";
+import { fireEvent, render, screen, within } from "@/test-utils";
 
 import GuidePage from "@/app/[locale]/guide/page";
+import { COMPARE_COUNTRIES, COMPARISON } from "@/components/guide/CompareTable";
 import { Cite } from "@/components/ui/Cite";
+import { MESSAGES } from "@/test-utils";
 import { getSource } from "@/lib/sources";
 
 describe("Guide page", () => {
@@ -14,7 +16,7 @@ describe("Guide page", () => {
     const h2s = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
     expect(h2s).toEqual([
       "Spot the AI in your day",
-      "Compare the rules in the US, the EU, Brazil, and Italy",
+      "Compare the rules in the US, the EU, and other countries",
       "Take three calm steps when a decision seems wrong",
       "See every side of the table",
     ]);
@@ -43,23 +45,46 @@ describe("Guide page", () => {
     );
   });
 
-  it("compares US, EU, Brazil, and Italy rules in a table with proper headers", () => {
-    const table = screen.getByRole("table", { name: /US, EU, Brazil, and Italy rules compared/ });
+  // The table's cells after the row header: US, EU, then the picked country.
+  const countryCells = () =>
+    within(screen.getByRole("table", { name: /Rules compared/ }))
+      .getAllByRole("row")
+      .slice(1)
+      .map((row) => within(row).getAllByRole("cell")[2]);
+  const cited = (cell: HTMLElement) =>
+    within(cell)
+      .queryAllByRole("link")
+      .map((a) => a.getAttribute("href")!.replace("/en/sources#", ""));
+
+  it("always shows the US and the EU, plus one country the visitor picks", () => {
+    const table = screen.getByRole("table", { name: "Rules compared: US, EU, and Brazil, as of 23 September 2026" });
     const cols = within(table).getAllByRole("columnheader").map((c) => c.textContent);
-    expect(cols).toEqual(["Your question", "United States", "European Union", "Brazil", "Italy"]);
+    expect(cols).toEqual(["Your question", "United States", "European Union", "Brazil"]);
     expect(within(table).getAllByRole("rowheader")).toHaveLength(5);
+
+    const picker = screen.getByRole("group", { name: "Compare with" });
+    const radios = within(picker).getAllByRole("radio");
+    expect(radios.map((r) => r.closest("label")!.textContent)).toEqual(["Brazil", "France", "Italy"]);
+    expect(within(picker).getByRole("radio", { name: "Brazil" })).toBeChecked();
+
+    fireEvent.click(within(picker).getByRole("radio", { name: "Italy" }));
+    expect(screen.getByRole("table", { name: /US, EU, and Italy/ })).toBeInTheDocument();
+    expect(within(table).getAllByRole("columnheader").at(-1)).toHaveTextContent("Italy");
+    expect(screen.getByText("Italy follows EU rules and adds its own national AI law.")).toBeInTheDocument();
+  });
+
+  it("has a cell and citations for every row in every country", () => {
+    for (const row of COMPARISON) {
+      for (const c of COMPARE_COUNTRIES) {
+        expect(MESSAGES.en.Guide.compare.rows[row.id as keyof typeof MESSAGES.en.Guide.compare.rows]).toHaveProperty(c);
+        expect(row[c].length).toBeGreaterThan(0);
+      }
+    }
   });
 
   it("cites every Italy cell to Law 132/2025, EU law, or the Garante, and names no company", () => {
-    const table = screen.getByRole("table", { name: /Italy rules compared/ });
-    const italy = within(table)
-      .getAllByRole("row")
-      .slice(1)
-      .map((row) => within(row).getAllByRole("cell")[3]);
-    const cited = (cell: HTMLElement) =>
-      within(cell)
-        .queryAllByRole("link")
-        .map((a) => a.getAttribute("href")!.replace("/en/sources#", ""));
+    fireEvent.click(screen.getByRole("radio", { name: "Italy" }));
+    const italy = countryCells();
     expect(italy.map(cited)).toEqual([
       ["eu-ai-act-art50", "it-law-132-2025"],
       ["gdpr", "it-law-132-2025"],
@@ -71,16 +96,23 @@ describe("Guide page", () => {
     expect(italy[4]).toHaveTextContent("in force since 10 October 2025");
   });
 
+  it("cites every France cell, and frames its AI Act oversight as a dated bill", () => {
+    fireEvent.click(screen.getByRole("radio", { name: "France" }));
+    const france = countryCells();
+    expect(france.map(cited)).toEqual([
+      ["eu-ai-act-art50", "fr-crpa-l311-3-1", "fr-loi-2023-451-art5"],
+      ["gdpr", "fr-crpa-l311-3-1", "fr-crpa-r311-3-1-2"],
+      ["gdpr", "fr-loi-78-17-art47", "fr-cnil-intervention-humaine"],
+      ["fr-cnil-ria-qr", "fr-conso-l511-7"],
+      ["fr-ddadue-senate-text", "fr-senat-dossier-pjl25-118", "fr-an-dossier-2518"],
+    ]);
+    expect(france[3]).toHaveTextContent("has not yet named its EU AI Act authorities in law");
+    expect(france[4]).toHaveTextContent("A bill passed by the Senate");
+    expect(france[4]).toHaveTextContent("As of 27 September 2026");
+  });
+
   it("cites every Brazil cell: the LGPD for rights in force, PL 2338/2023 for what is pending", () => {
-    const table = screen.getByRole("table", { name: /rules compared/ });
-    const brazil = within(table)
-      .getAllByRole("row")
-      .slice(1)
-      .map((row) => within(row).getAllByRole("cell")[2]);
-    const cited = (cell: HTMLElement) =>
-      within(cell)
-        .queryAllByRole("link")
-        .map((a) => a.getAttribute("href")!.replace("/en/sources#", ""));
+    const brazil = countryCells();
     expect(brazil.map(cited)).toEqual([
       ["pl2338-senado-2024", "pl2338-camara-status"],
       ["anpd-lgpd-en", "lawsofbrazil-2026"],
@@ -120,6 +152,19 @@ describe("Guide page", () => {
     for (const who of ["People using AI", "Educators", "Regulators", "Teams that build AI"]) {
       expect(screen.getByText(who, { selector: "strong" })).toBeInTheDocument();
     }
+  });
+});
+
+describe("Guide comparison picker", () => {
+  it.each([
+    ["it", "Italia"],
+    ["pt-BR", "Brasil"],
+    ["fr", "France"],
+    ["es", "Brasil"],
+  ] as const)("opens in %s on %s", (locale, country) => {
+    render(<GuidePage params={{ locale }} />, { locale });
+    expect(screen.getByRole("radio", { name: country })).toBeChecked();
+    expect(screen.getAllByRole("columnheader").at(-1)).toHaveTextContent(country);
   });
 });
 

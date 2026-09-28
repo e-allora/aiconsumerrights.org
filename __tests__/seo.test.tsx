@@ -9,13 +9,13 @@ import GuidePage, { generateMetadata as guideMeta } from "@/app/[locale]/guide/p
 import LocaleLayout, { generateMetadata as rootMeta } from "@/app/[locale]/layout";
 import { size as ogSize } from "@/app/opengraph-image";
 import { generateMetadata as sourcesMeta } from "@/app/[locale]/sources/page";
-import { localizedPath } from "@/lib/i18n/routing";
+import { localizedPath, type Locale } from "@/lib/i18n/routing";
 import { SITE_URL } from "@/lib/site";
 import { IntlWrapper } from "@/test-utils";
 
 jest.mock("next/og", () => ({ ImageResponse: jest.fn() }));
 
-const params = (locale: "en" | "es" | "pt-PT" | "pt-BR" | "it") => ({ params: { locale } });
+const params = (locale: Locale) => ({ params: { locale } });
 
 function jsonLd(html: string) {
   return Array.from(html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)).map((m) =>
@@ -50,7 +50,7 @@ describe("site metadata", () => {
     ["/sources", sourcesMeta],
     ["/about", aboutMeta],
   ] as const)("%s has title, description, canonical, hreflang and share image in each locale", async (path, fn) => {
-    for (const locale of ["en", "es", "pt-PT", "pt-BR", "it"] as const) {
+    for (const locale of ["en", "es", "pt-PT", "pt-BR", "it", "fr"] as const) {
       const meta = await fn(params(locale) as never);
       expect(meta.title).toBeTruthy();
       expect(String(meta.description).length).toBeGreaterThan(50);
@@ -61,6 +61,7 @@ describe("site metadata", () => {
         "pt-PT": `/pt${path}`,
         "pt-BR": `/pt-BR${path}`,
         it: `/it${path}`,
+        fr: `/fr${path}`,
         "x-default": `/en${path}`,
       });
       expect(meta.openGraph?.url).toBe(localizedPath(locale, path));
@@ -116,6 +117,7 @@ describe("JSON-LD structured data", () => {
     ["pt-PT", "pt-PT"],
     ["pt-BR", "pt-BR"],
     ["it", "it"],
+    ["fr", "fr"],
   ] as const)("declares the WebSite in the %s layout with its language (%s)", async (locale, lang) => {
     const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: { locale } }));
     const [site] = jsonLd(html);

@@ -19,6 +19,7 @@ const es = flatten(MESSAGES.es as unknown as Tree);
 const pt = flatten(MESSAGES["pt-PT"] as unknown as Tree);
 const ptBR = flatten(MESSAGES["pt-BR"] as unknown as Tree);
 const itMsgs = flatten(MESSAGES.it as unknown as Tree);
+const frMsgs = flatten(MESSAGES.fr as unknown as Tree);
 
 // The blameless-tone checks keep companies out of what the site says about
 // AI and consumers. Naming the tools the site itself uses is disclosure, not
@@ -30,7 +31,7 @@ const opinions = (m: Record<string, string>) =>
   Object.entries(m)
     .filter(([key]) => !isDisclosure(key))
     .map(([, v]) => v);
-const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs };
+const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs, fr: frMsgs };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).
 const MAY_BE_EMPTY = /(rule2Label|sourcesLanguageNote)$/;
 const placeholders = (s: string) => Array.from(s.matchAll(/\{(\w+)/g), (m) => m[1]).sort();
@@ -49,7 +50,7 @@ describe("message files", () => {
   });
 
   it("have no empty translations", () => {
-    for (const messages of [en, es, pt, ptBR, itMsgs]) {
+    for (const messages of [en, es, pt, ptBR, itMsgs, frMsgs]) {
       for (const [k, v] of Object.entries(messages)) {
         if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
       }
@@ -114,6 +115,7 @@ describe("message files", () => {
         "pt-PT": "Português (PT)",
         "pt-BR": "Português (BR)",
         it: "Italiano",
+        fr: "Français",
       });
     }
   });
@@ -157,6 +159,22 @@ describe("message files", () => {
 
   it("never put an apostrophe right before a placeholder (ICU would hide it) in Italian", () => {
     for (const [key, value] of Object.entries(itMsgs)) expect({ key, bad: /'\{/.test(value) }).toEqual({ key, bad: false });
+  });
+
+  it("include the required French wording", () => {
+    const m = MESSAGES.fr;
+    expect(m.Common.siteName).toBe("Droits des consommateurs face à l'IA");
+    expect(m.Forum.eyebrow).toBe("Forum Voix et Vision");
+    expect(m.PAUSEStrategy.title).toBe("La stratégie PAUSE");
+    expect(m.Forum.principles.critique).toBe("Critiquer les idées, jamais les personnes");
+    // French puts a non-breaking space before : ; ? ! and inside « ».
+    for (const v of Object.values(frMsgs)) expect(v).not.toMatch(/ [:;?!»]|« /);
+  });
+
+  it("keep the blameless tone in French: no blame words or named companies", () => {
+    const text = opinions(frMsgs).join(" ");
+    expect(text).not.toMatch(/\b(arnaque|fraude|coupable|honte|cupide)/i);
+    expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
   });
 
   it("keep the blameless tone in Italian: no blame words or named companies", () => {
@@ -210,6 +228,7 @@ describe("PAUSE Strategy messages", () => {
     expect(letters("pt-PT")).toBe("PAUSA");
     expect(letters("pt-BR")).toBe("PAUSA");
     expect(letters("it")).toBe("PAUSA");
+    expect(letters("fr")).toBe("PAUSE");
   });
 
   it("start each step title with its letter", () => {
@@ -232,7 +251,7 @@ describe("i18n.ts request config", () => {
   });
 
   it("falls back to English for an unknown or missing locale", async () => {
-    expect((await load({ requestLocale: Promise.resolve("fr") })).locale).toBe("en");
+    expect((await load({ requestLocale: Promise.resolve("ja") })).locale).toBe("en");
     expect((await load({ requestLocale: Promise.resolve(undefined) })).locale).toBe("en");
   });
 });

@@ -38,7 +38,8 @@
       "es": "Español",
       "pt-PT": "Português (PT)",
       "pt-BR": "Português (BR)",
-      "it": "Italiano"
+      "it": "Italiano",
+      "fr": "Français"
     }
   },
   "Home": {
@@ -86,49 +87,67 @@
       }
     },
     "compare": {
-      "heading": "Compara las reglas de EE. UU., la UE, Brasil e Italia",
-      "lead": "<b>Los tres quieren una IA en la que la gente pueda confiar.</b> Siguen caminos distintos. EE. UU. aplica sobre todo leyes que ya existen, un sector y un estado a la vez. La UE aprobó una ley amplia sobre la IA y la combina con su ley de privacidad. La ley de protección de datos de Brasil, la LGPD, da derecho a pedir la revisión de decisiones automáticas. Italia sigue las reglas de la UE y suma su propia ley nacional sobre IA.",
-      "caption": "Reglas de EE. UU., la UE, Brasil e Italia comparadas, al {date}",
+      "heading": "Compara las reglas de EE. UU., la UE y otros países",
+      "lead": "<b>Todos quieren una IA en la que la gente pueda confiar.</b> Siguen caminos distintos. EE. UU. aplica sobre todo leyes que ya existen, un sector y un estado a la vez. La UE aprobó una ley amplia sobre la IA y la combina con su ley de privacidad. Elige un país para compararlo con ambos.",
+      "pickLabel": "Comparar con",
+      "caption": "Reglas comparadas: EE. UU., la UE y {country}, al {date}",
       "colQuestion": "Tu pregunta",
       "colUS": "Estados Unidos",
       "colEU": "Unión Europea",
-      "colBR": "Brasil",
-      "colIT": "Italia",
+      "countries": {
+        "br": {
+          "name": "Brasil",
+          "intro": "La ley de protección de datos de Brasil, la LGPD, da derecho a pedir la revisión de decisiones automáticas."
+        },
+        "it": {
+          "name": "Italia",
+          "intro": "Italia sigue las reglas de la UE y suma su propia ley nacional sobre IA."
+        },
+        "fr": {
+          "name": "Francia",
+          "intro": "Francia sigue las reglas de la UE. Sus propias leyes suman derechos cuando un organismo público usa un algoritmo."
+        }
+      },
       "rows": {
         "told": {
           "question": "¿Me dirán que es una IA?",
           "us": "No hay una regla federal. Algunos estados lo exigen.",
           "eu": "Sí, desde el 2 de agosto de 2026, a menos que sea evidente.",
           "br": "Todavía no lo exige una ley nacional de IA. El proyecto de ley PL 2338/2023, aprobado por el Senado en diciembre de 2024, lo exigiría. Sigue siendo un proyecto.",
-          "it": "Se aplican las reglas de la UE. La ley italiana de IA agrega más: los profesionales deben explicar a sus clientes, con palabras claras y sencillas, qué sistemas de IA usan. Los empleadores deben informar a los trabajadores."
+          "it": "Se aplican las reglas de la UE. La ley italiana de IA agrega más: los profesionales deben explicar a sus clientes, con palabras claras y sencillas, qué sistemas de IA usan. Los empleadores deben informar a los trabajadores.",
+          "fr": "Se aplican las reglas de la UE. Francia suma dos reglas. Un organismo público debe avisarte cuando usó un algoritmo para decidir sobre ti. Los influencers pagados deben marcar las imágenes de una cara o un cuerpo hechas con IA como «Images virtuelles»."
         },
         "reasons": {
           "question": "¿Puedo conocer las razones de una decisión?",
           "us": "Sí, en el crédito: las razones principales y concretas.",
           "eu": "Puedes pedir información útil sobre cómo se tomó una decisión automática.",
           "br": "Puedes pedir información clara sobre los criterios y procedimientos usados, dentro de los límites del secreto comercial. Una solicitud de tus datos recibe una respuesta completa en 15 días.",
-          "it": "Se aplican los derechos del RGPD, como en toda la UE. En la atención de salud, tienes derecho a saber cuándo se usa IA."
+          "it": "Se aplican los derechos del RGPD, como en toda la UE. En la atención de salud, tienes derecho a saber cuándo se usa IA.",
+          "fr": "Se aplican los derechos del RGPD, como en toda la UE. Si un organismo público usó un algoritmo para decidir sobre ti, puedes preguntar cómo: qué datos usó, de dónde salieron y cuánto pesó el algoritmo."
         },
         "review": {
           "question": "¿Puede revisarla una persona?",
           "us": "No hay un derecho federal general. El Plan de 2022 lo recomienda, pero no es ley.",
           "eu": "Sí, cuando solo una máquina tomó una decisión con efectos legales o igual de importantes.",
           "br": "Sí, para decisiones tomadas solo por procesamiento automático. La ley ya no dice que deba hacerla una persona.",
-          "it": "Se aplica el artículo 22 del RGPD. La ley italiana agrega: en salud, la decisión siempre la toma el médico, y en la administración pública la persona sigue siendo la única responsable."
+          "it": "Se aplica el artículo 22 del RGPD. La ley italiana agrega: en salud, la decisión siempre la toma el médico, y en la administración pública la persona sigue siendo la única responsable.",
+          "fr": "Sí, según las reglas de la UE (RGPD). Francia añade más: una máquina sola nunca puede resolver tu recurso ante un organismo público, y un tribunal no puede juzgar tu conducta solo con un perfil automático."
         },
         "enforce": {
           "question": "¿Quién vigila las reglas?",
           "us": "La FTC dice que las leyes actuales no tienen excepciones para la IA. La CFPB se ocupa del crédito.",
           "eu": "Las autoridades nacionales de cada país de la UE.",
           "br": "La autoridad nacional de protección de datos (ANPD). Puede auditar un sistema para detectar discriminación cuando el secreto comercial limita lo que te dicen.",
-          "it": "La autoridad de protección de datos (Garante) mantiene sus poderes para inspeccionar, bloquear y multar. La ley de IA nombra dos autoridades nacionales de IA: AgID y ACN."
+          "it": "La autoridad de protección de datos (Garante) mantiene sus poderes para inspeccionar, bloquear y multar. La ley de IA nombra dos autoridades nacionales de IA: AgID y ACN.",
+          "fr": "La autoridad de protección de datos (CNIL) vigila las reglas de datos, y la agencia de consumo (DGCCRF) vigila las reglas de consumo. Francia aún no ha nombrado por ley a sus autoridades para la Ley de IA de la UE."
         },
         "changing": {
           "question": "¿Qué está cambiando?",
           "us": "Una orden ejecutiva de diciembre de 2025 pide un solo enfoque nacional y una revisión de las leyes estatales sobre IA.",
           "eu": "Las reglas para la IA de alto riesgo, como en empleo y crédito, ahora empiezan el 2 de diciembre de 2027.",
           "br": "El proyecto PL 2338/2023 crearía una ley de IA por niveles de riesgo, con derecho a una explicación, a impugnar decisiones y a una revisión humana. Al 23 de septiembre de 2026, espera un informe en una comisión especial de la Cámara de Diputados.",
-          "it": "La Ley n.º 132/2025, la ley nacional de IA de Italia, está vigente desde el 10 de octubre de 2025. Funciona junto con la Ley de IA de la UE. Los menores de 14 años necesitan el permiso de sus padres o tutores para usar IA."
+          "it": "La Ley n.º 132/2025, la ley nacional de IA de Italia, está vigente desde el 10 de octubre de 2025. Funciona junto con la Ley de IA de la UE. Los menores de 14 años necesitan el permiso de sus padres o tutores para usar IA.",
+          "fr": "Un proyecto de ley aprobado por el Senado el 18 de febrero de 2026 haría de la CNIL la principal autoridad de IA de Francia y le permitiría tramitar quejas sobre IA. Al 27 de septiembre de 2026, espera una votación en la Asamblea Nacional."
         }
       }
     },

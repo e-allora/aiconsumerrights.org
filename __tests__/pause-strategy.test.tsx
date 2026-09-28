@@ -8,7 +8,7 @@ import { MESSAGES, render, screen, within } from "@/test-utils";
 const tabs = () => screen.getAllByRole("tab");
 const panel = () => screen.getByRole("tabpanel");
 
-describe.each(["en", "es", "pt-PT", "pt-BR", "it"] as const)("PAUSE Strategy in %s", (locale) => {
+describe.each(["en", "es", "pt-PT", "pt-BR", "it", "fr"] as const)("PAUSE Strategy in %s", (locale) => {
   const m = MESSAGES[locale].PAUSEStrategy;
   const steps = PAUSE_STEPS.map((id) => m.steps[id]);
 
@@ -23,7 +23,9 @@ describe.each(["en", "es", "pt-PT", "pt-BR", "it"] as const)("PAUSE Strategy in 
 
   it("names each tab with its letter and title", () => {
     render(<PAUSEStrategy />, { locale });
-    expect(tabs().map((t) => t.getAttribute("aria-label"))).toEqual(steps.map((s) => `${s.letter}: ${s.title}`));
+    // French writes "P : titre", with a space before the colon.
+    const name = (s: (typeof steps)[number]) => m.tabName.replace("{letter}", s.letter).replace("{title}", s.title);
+    expect(tabs().map((t) => t.getAttribute("aria-label"))).toEqual(steps.map(name));
   });
 
   it("shows every step's title and full text when chosen", async () => {
@@ -33,7 +35,8 @@ describe.each(["en", "es", "pt-PT", "pt-BR", "it"] as const)("PAUSE Strategy in 
       await user.click(tabs()[i]);
       expect(tabs()[i]).toHaveAttribute("aria-selected", "true");
       expect(within(panel()).getByRole("heading", { level: 3 })).toHaveTextContent(steps[i].title);
-      expect(within(panel()).getByText(steps[i].body)).toBeInTheDocument();
+      // The query collapses French non-breaking spaces, so compare the same way.
+      expect(within(panel()).getByText(steps[i].body.replace(/\s+/g, " "))).toBeInTheDocument();
       expect(panel()).toHaveAttribute("aria-labelledby", tabs()[i].id);
     }
   });

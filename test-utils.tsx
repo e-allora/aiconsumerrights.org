@@ -8,8 +8,9 @@ import es from "@/messages/es.json";
 import ptPT from "@/messages/pt-PT.json";
 import ptBR from "@/messages/pt-BR.json";
 import it from "@/messages/it.json";
+import fr from "@/messages/fr.json";
 
-export const MESSAGES = { en, es, "pt-PT": ptPT, "pt-BR": ptBR, it } as const;
+export const MESSAGES = { en, es, "pt-PT": ptPT, "pt-BR": ptBR, it, fr } as const;
 export type TestLocale = keyof typeof MESSAGES;
 
 export function IntlWrapper({ locale = "en", children }: { locale?: TestLocale; children: React.ReactNode }) {

@@ -93,7 +93,7 @@ describe("parseSubmission", () => {
   });
 
   it.each([
-    [{ text: "ok", locale: "fr" }],
+    [{ text: "ok", locale: "ja" }],
     [{ text: 42, locale: "en" }],
     [{ locale: "en" }],
     [null],

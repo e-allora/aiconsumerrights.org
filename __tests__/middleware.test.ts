@@ -37,8 +37,13 @@ describe("locale middleware", () => {
   });
 
   it("uses English when the browser prefers a language the site lacks", async () => {
-    const res = await visit("/", "fr-FR,fr;q=0.9");
+    const res = await visit("/", "ja-JP,ja;q=0.9");
     expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/en");
+  });
+
+  it("sends a French-language browser from / to /fr", async () => {
+    const res = await visit("/", "fr-FR,fr;q=0.9,en;q=0.5");
+    expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/fr");
   });
 
   it("keeps the page when adding a locale to an old link", async () => {
