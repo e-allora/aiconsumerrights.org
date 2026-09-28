@@ -50,3 +50,6 @@ next-env.d.ts
 # Robert's private notes and screenshots, never published
 /mission-guidelines*.md
 /Screenshot*.png
+
+# Robert's downloaded reading copies (PDFs of sources), never published
+/Ai-consumerrights-reading/
