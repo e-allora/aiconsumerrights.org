@@ -1,0 +1,514 @@
+{
+  "Common": {
+    "siteName": "Verbraucherrechte gegenüber KI",
+    "siteDescription": "Hilfe in einfacher Sprache zu Ihren Rechten, wenn KI über Sie entscheidet, entstanden im offenen und respektvollen Dialog.",
+    "skipToContent": "Zum Hauptinhalt springen",
+    "factsChecked": "Fakten geprüft am {date}.",
+    "legalNotice": "Allgemeine Informationen, keine Rechtsberatung. Gesetze sind je nach Ort verschieden. Wenn es um viel Geld, Gesundheit, Wohnen oder Ihren rechtlichen Status geht, sprechen Sie mit einer Anwältin oder einem Anwalt, einer Rechtsberatungsstelle oder Ihrer Verbraucherzentrale.",
+    "opensInNewTab": "(öffnet in einem neuen Tab)",
+    "sourceMarker": "Quelle {number}: {title}",
+    "darkTheme": "Dunkles Design",
+    "startOver": "Neu beginnen",
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundBody": "Diese Seite gibt es nicht, oder sie wurde verschoben.",
+    "notFoundHome": "Zur Startseite"
+  },
+  "Navigation": {
+    "main": "Hauptnavigation",
+    "quick": "Schnellzugriff",
+    "allPages": "Alle Seiten",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "menuTitle": "Menü",
+    "menuDescription": "Alle Seiten dieser Website, jeweils mit einem kurzen Hinweis.",
+    "home": "Start",
+    "homeHint": "Hier beginnen",
+    "guide": "Ratgeber",
+    "guideHint": "Drei ruhige Schritte, wenn KI über Sie entscheidet",
+    "forum": "Forum",
+    "forumHint": "Über gemeinsame Ideen abstimmen, ohne Konto",
+    "sources": "Quellen",
+    "sourcesHint": "Alle Quellen und wie sie geprüft wurden",
+    "about": "Hintergrund",
+    "aboutHint": "Warum es diese Website gibt und wie sie funktioniert",
+    "language": "Sprache",
+    "languageLabel": "Sprache wählen. Aktuelle Sprache: {current}",
+    "languageNames": {
+      "en": "English",
+      "es": "Español",
+      "pt-PT": "Português (PT)",
+      "pt-BR": "Português (BR)",
+      "it": "Italiano",
+      "fr": "Français",
+      "de": "Deutsch"
+    }
+  },
+  "Home": {
+    "title": "Verbraucher­rechte gegenüber KI",
+    "lead": "Hilfe in einfacher Sprache, wenn KI über Sie entscheidet.",
+    "readGuide": "Ratgeber lesen",
+    "joinForum": "Zum Forum"
+  },
+  "Guide": {
+    "metaTitle": "KI, die Sie hinterfragen können",
+    "metaDescription": "Hilfe in einfacher Sprache zu Chatbots, Empfehlungen und automatischer Auswahl, mit den Regeln der USA und der EU im Vergleich und drei ruhigen Schritten.",
+    "eyebrow": "Der Ratgeber",
+    "title": "KI, die Sie hinterfragen können",
+    "lead": "<b>KI hilft heute bei vielen Entscheidungen im Alltag. Sie können fragen, wie sie funktioniert, einen Menschen verlangen und darüber sprechen.</b> Diese Seite zeigt Ihnen, wie das geht, mit den Regeln der USA und der EU im Vergleich.",
+    "touchpoints": {
+      "heading": "Erkennen Sie die KI in Ihrem Alltag",
+      "lead": "<b>Drei Arten von KI berühren das Leben der meisten Menschen.</b> Jede lässt sich leichter hinterfragen, wenn man ihren Namen kennt.",
+      "askLabel": "Fragen Sie:",
+      "chatbots": {
+        "term": "Chatbots",
+        "what": "beantworten Fragen in einem Chatfenster oder am Telefon. Sie sind oft schnell und hilfreich. Sie können aber auch etwas Falsches sehr überzeugt behaupten.",
+        "ask": "Spreche ich mit einer KI? Wo kann ich diese Antwort prüfen?",
+        "rule1Label": "Gesetz (EU).",
+        "rule1": "Seit dem 2. August 2026 muss ein Chatbot Ihnen sagen, dass er eine KI ist, außer wenn das offensichtlich ist.",
+        "rule2Label": "Gesetz (USA).",
+        "rule2": "Kein Bundesgesetz verlangt das. Einige Bundesstaaten tun es, und die Regeln sind von Staat zu Staat verschieden."
+      },
+      "recommendations": {
+        "term": "Empfehlungsalgorithmen",
+        "what": "wählen aus, was Sie als Nächstes sehen: Videos, Produkte, Nachrichten und Werbung. Sie lernen aus dem, was Sie anklicken, ansehen und kaufen.",
+        "ask": "Warum sehe ich das? Kann ich persönliche Vorschläge ausschalten?",
+        "rule1Label": "Empfehlung.",
+        "rule1": "Der weltweite Standard der UNESCO zur Ethik der KI sagt, dass KI-Systeme die menschliche Verantwortung nicht ersetzen, und er verlangt Transparenz.",
+        "rule2Label": "",
+        "rule2": "Der amerikanische Blueprint for an AI Bill of Rights verlangt klare Hinweise und Erklärungen. Beides ist kein verbindliches Gesetz."
+      },
+      "screening": {
+        "term": "Automatische Auswahl",
+        "what": "sortiert Anträge für Kredite, Jobs, Wohnungen und Versicherungen. Eine Software kann Ihre Unterlagen bewerten, bevor ein Mensch sie sieht.",
+        "ask": "Hat eine Software bei der Entscheidung geholfen? Was waren die wichtigsten Gründe?",
+        "rule1Label": "Gesetz (USA, Kredit).",
+        "rule1": "Ein Kreditgeber, der Sie ablehnt, muss die konkreten Hauptgründe nennen.",
+        "rule2Label": "Gesetz (EU).",
+        "rule2": "Wenn eine Maschine allein eine wichtige Entscheidung über Sie trifft, können Sie verlangen, dass ein Mensch sie prüft."
+      }
+    },
+    "compare": {
+      "heading": "Vergleichen Sie die Regeln der USA, der EU und anderer Länder",
+      "lead": "<b>Alle wollen KI, der die Menschen vertrauen können.</b> Sie gehen verschiedene Wege. Die USA wenden vor allem bestehende Gesetze an, Bereich für Bereich und Bundesstaat für Bundesstaat. Die EU hat ein großes KI-Gesetz beschlossen und verbindet es mit ihrem Datenschutzrecht. Wählen Sie ein Land, um es mit beiden zu vergleichen.",
+      "pickLabel": "Vergleichen mit",
+      "caption": "Regeln im Vergleich: USA, EU und {country}, Stand {date}",
+      "colQuestion": "Ihre Frage",
+      "colUS": "Vereinigte Staaten",
+      "colEU": "Europäische Union",
+      "countries": {
+        "br": {
+          "name": "Brasilien",
+          "intro": "Das brasilianische Datenschutzgesetz, das LGPD, gibt Menschen das Recht, eine Überprüfung automatisierter Entscheidungen zu verlangen."
+        },
+        "it": {
+          "name": "Italien",
+          "intro": "Italien folgt den Regeln der EU und hat zusätzlich ein eigenes nationales KI-Gesetz."
+        },
+        "fr": {
+          "name": "Frankreich",
+          "intro": "Frankreich folgt den Regeln der EU. Eigene Gesetze geben zusätzliche Rechte, wenn eine Behörde einen Algorithmus nutzt."
+        },
+        "de": {
+          "name": "Deutschland",
+          "intro": "Deutschland folgt den Regeln der EU. Es hat eine nationale KI-Aufsicht, und neue Rechte beim Kredit-Scoring gelten ab dem 20. November 2026."
+        }
+      },
+      "rows": {
+        "told": {
+          "question": "Erfahre ich, dass es eine KI ist?",
+          "us": "Keine Regel auf Bundesebene. Einige Bundesstaaten verlangen es.",
+          "eu": "Ja, seit dem 2. August 2026, außer wenn es offensichtlich ist.",
+          "br": "Noch nicht durch ein nationales KI-Gesetz vorgeschrieben. Der Gesetzentwurf PL 2338/2023, im Dezember 2024 vom Senat beschlossen, würde es verlangen. Er ist noch ein Entwurf.",
+          "it": "Die Regeln der EU gelten. Das italienische KI-Gesetz geht weiter: Fachleute müssen ihren Kundinnen und Kunden in klaren, einfachen Worten sagen, welche KI-Systeme sie nutzen. Arbeitgeber müssen die Beschäftigten informieren.",
+          "fr": "Die Regeln der EU gelten. Frankreich hat zwei zusätzliche Regeln. Eine Behörde muss Ihnen sagen, wenn sie einen Algorithmus genutzt hat, um über Sie zu entscheiden. Bezahlte Influencer müssen mit KI erstellte Bilder eines Gesichts oder Körpers als „Images virtuelles“ kennzeichnen.",
+          "de": "Die Regeln der EU gelten. Deutschland hat eine zusätzliche Regel für Preise: Online-Händler müssen Ihnen sagen, wenn ein Preis durch eine automatisierte Entscheidung personalisiert wurde. Ab dem 20. November 2026 müssen auch Kreditgeber sagen, wenn ein Kreditangebot so personalisiert wurde."
+        },
+        "reasons": {
+          "question": "Kann ich die Gründe für eine Entscheidung erfahren?",
+          "us": "Ja, bei Krediten: die konkreten Hauptgründe.",
+          "eu": "Sie können aussagekräftige Informationen darüber verlangen, wie eine automatisierte Entscheidung zustande kam.",
+          "br": "Sie können klare Informationen über die genutzten Kriterien und Verfahren verlangen, soweit Geschäftsgeheimnisse es erlauben. Eine Anfrage zu Ihren Daten wird innerhalb von 15 Tagen vollständig beantwortet.",
+          "it": "Die Rechte der DSGVO gelten, wie in der ganzen EU. Im Gesundheitswesen haben Sie das Recht zu erfahren, wann KI eingesetzt wird.",
+          "fr": "Die Rechte der DSGVO gelten, wie in der ganzen EU. Wenn eine Behörde einen Algorithmus genutzt hat, um über Sie zu entscheiden, können Sie fragen, wie: welche Daten sie genutzt hat, woher die Daten kamen und wie stark der Algorithmus gewichtet wurde.",
+          "de": "Die Rechte der DSGVO gelten, wie in der ganzen EU. Ab dem 20. November 2026 muss, wer einen Score zur Kreditwürdigkeit erstellt, Ihnen auf Antrag und in klaren Worten sagen, welche Ihrer Daten und Kriterien ihn am stärksten beeinflusst haben."
+        },
+        "review": {
+          "question": "Kann ein Mensch die Entscheidung prüfen?",
+          "us": "Kein allgemeines Recht auf Bundesebene. Der Blueprint von 2022 empfiehlt es, aber er ist kein Gesetz.",
+          "eu": "Ja, wenn eine Maschine allein eine Entscheidung mit rechtlicher oder ähnlich erheblicher Wirkung getroffen hat.",
+          "br": "Ja, bei Entscheidungen, die ausschließlich automatisiert getroffen wurden. Das Gesetz sagt nicht mehr, dass ein Mensch die Prüfung machen muss.",
+          "it": "Artikel 22 der DSGVO gilt. Das italienische Gesetz ergänzt: Im Gesundheitswesen entscheidet immer die Ärztin oder der Arzt, und in der öffentlichen Verwaltung bleibt der Mensch allein verantwortlich.",
+          "fr": "Ja, nach den Regeln der EU (DSGVO). Frankreich geht weiter: Über Ihren Widerspruch bei einer Behörde darf nie eine Maschine allein entscheiden, und ein Gericht darf Ihr Verhalten nicht allein auf Grundlage eines automatischen Profils bewerten.",
+          "de": "Ja, nach den Regeln der EU. Der Gerichtshof der EU (Rechtssache C-634/21) hat gesagt, dass ein Kredit-Score als automatisierte Entscheidung zählen kann, wenn ein Kreditgeber sich stark auf ihn stützt. Ab dem 20. November 2026 können Sie eine auf einem Score beruhende Entscheidung anfechten und verlangen, dass ein Mensch entscheidet."
+        },
+        "enforce": {
+          "question": "Wer prüft die Regeln?",
+          "us": "Die FTC sagt, dass das geltende Recht keine Ausnahme für KI macht. Das CFPB ist für Kredite zuständig.",
+          "eu": "Nationale Behörden in jedem EU-Land.",
+          "br": "Die nationale Datenschutzbehörde (ANPD). Sie kann ein System auf Diskriminierung prüfen, wenn Geschäftsgeheimnisse begrenzen, was man Ihnen sagt.",
+          "it": "Die Datenschutzbehörde (Garante) behält ihre Befugnisse zu prüfen, zu sperren und Bußgelder zu verhängen. Das KI-Gesetz benennt zwei nationale KI-Behörden: AgID und ACN.",
+          "fr": "Die Datenschutzbehörde (CNIL) prüft die Datenregeln, und die Verbraucherschutzbehörde (DGCCRF) prüft die Verbraucherregeln. Frankreich hat seine Behörden für die KI-Verordnung der EU noch nicht per Gesetz benannt.",
+          "de": "Die Bundesnetzagentur prüft die Regeln der KI-Verordnung der EU und nimmt Beschwerden zu KI für ganz Deutschland an. Die Finanzaufsicht (BaFin) ist für KI im Finanzbereich zuständig. Für personenbezogene Daten sind die Datenschutzbehörden des Bundes und der Länder zuständig."
+        },
+        "changing": {
+          "question": "Was ändert sich?",
+          "us": "Ein Präsidialerlass vom Dezember 2025 verlangt einen einheitlichen nationalen Ansatz und eine Prüfung der KI-Gesetze der Bundesstaaten.",
+          "eu": "Die Regeln für KI mit hohem Risiko, etwa bei Einstellungen und Krediten, gelten jetzt ab dem 2. Dezember 2027.",
+          "br": "Der Gesetzentwurf PL 2338/2023 würde ein risikobasiertes KI-Gesetz schaffen, mit Rechten auf eine Erklärung, auf Anfechtung von Entscheidungen und auf menschliche Prüfung. Stand 23. September 2026 wartet er auf einen Bericht in einem Sonderausschuss der Abgeordnetenkammer.",
+          "it": "Das Gesetz Nr. 132/2025, Italiens nationales KI-Gesetz, gilt seit dem 10. Oktober 2025. Es wirkt zusammen mit der KI-Verordnung der EU. Kinder unter 14 Jahren brauchen die Zustimmung eines Elternteils, um KI zu nutzen.",
+          "fr": "Ein Gesetzentwurf, den der Senat am 18. Februar 2026 beschlossen hat, würde die CNIL zur wichtigsten KI-Behörde Frankreichs machen und ihr Beschwerden zu KI übertragen. Stand 27. September 2026 wartet er auf eine Abstimmung in der Nationalversammlung.",
+          "de": "Das deutsche KI-Aufsichtsgesetz (KI-MIG) gilt seit dem 29. Juli 2026. Ab dem 20. November 2026 dürfen Kredit-Scores weder Ihre Adresse, Ihr Alter, Ihr Geschlecht, Ihren Namen, soziale Netzwerke, Kontobewegungen noch sensible Daten wie Gesundheitsdaten nutzen, und sie dürfen nicht über Minderjährige erstellt werden."
+        }
+      }
+    },
+    "steps": {
+      "heading": "Gehen Sie drei ruhige Schritte, wenn eine Entscheidung falsch wirkt",
+      "lead": "<b>Fangen Sie klein an und bleiben Sie konkret.</b> Die meisten Probleme lösen sich schon beim ersten Schritt. Nutzen Sie die Pfeiltasten oder tippen Sie auf einen Schritt, um zwischen den Schritten zu wechseln."
+    },
+    "everyone": {
+      "heading": "Sehen Sie alle Seiten des Tisches",
+      "lead": "<b>Die meisten Menschen in dieser Geschichte wollen anderen gegenüber das Richtige tun.</b> Eine Frage in gutem Glauben bekommt meist eine bessere Antwort.",
+      "people": "Menschen, die KI nutzen",
+      "peopleText": "wollen faire Antworten und einen einfachen Weg, Fragen zu stellen.",
+      "educators": "Lehrkräfte",
+      "educatorsText": "bringen schnell neue Fähigkeiten bei, oft mit wenig Mitteln.",
+      "regulators": "Aufsichtsbehörden",
+      "regulatorsText": "wägen Sicherheit gegen neue Ideen ab, und gute Regeln zu schreiben braucht Zeit.",
+      "builders": "Teams, die KI entwickeln",
+      "buildersText": "wünschen sich oft Rückmeldungen. Eine klare, konkrete Frage hilft ihnen, echte Probleme zu lösen.",
+      "researchLabel": "Forschung (2026).",
+      "research1": "Fachleute und die Öffentlichkeit sehen KI oft unterschiedlich. Der AI Index der Stanford University fand zwischen ihnen einen Abstand von 50 Punkten bei der Frage, wie KI die Arbeitswelt verändert.",
+      "research2": "In einer Pew-Umfrage unter 5.119 Erwachsenen in den USA sagte die Mehrheit, dass sich KI zu schnell entwickelt.",
+      "research3": "Ehrliche Fragen helfen, solche Abstände zu verkleinern.",
+      "voiceLabel": "Reden Sie mit.",
+      "voiceLink": "Stimmen Sie im Forum über gemeinsame Ideen ab",
+      "voiceAfter": ". Kein Konto nötig."
+    },
+    "explorer": {
+      "tablistLabel": "Drei Schritte, wenn eine Entscheidung falsch wirkt",
+      "stepOf": "Schritt {current} von {total}",
+      "stepPrefix": "Schritt {number}: ",
+      "wordsYouCanUse": "Worte, die Sie nutzen können",
+      "settledQuestion": "Hat dieser Schritt die Sache geklärt?",
+      "yesSettled": "Ja, es ist geklärt",
+      "noNext": "Nein, weiter zu Schritt {number}",
+      "noWhereElse": "Nein, an wen kann ich mich sonst wenden?",
+      "backTo": "Zurück zu Schritt {number}",
+      "announceStep": "Schritt {current} von {total}: {title}",
+      "announceSettled": "Geklärt. Bewahren Sie eine Kopie Ihrer Nachrichten auf.",
+      "announceAgency": "Wo Sie mehr Hilfe bekommen",
+      "resolvedTitle": "Gut. Halten Sie es fest.",
+      "resolvedBody": "<b>Bewahren Sie eine Kopie Ihrer Nachrichten und der Antwort auf.</b> Wenn dasselbe Problem wieder auftritt, können Sie zeigen, was vereinbart wurde.",
+      "agencyTitle": "Holen Sie sich Hilfe bei einer Verbraucherstelle",
+      "agencyBody": "<b>Verbraucherstellen gibt es genau für diesen Moment.</b> Zeigen Sie Ihre Nachrichten und die Antworten. Dort erfahren Sie, welche Regeln an Ihrem Wohnort gelten.",
+      "agencyUS": "Vereinigte Staaten:",
+      "agencyUSCredit": "Für Kredite, Darlehen und Bankgeschäfte:",
+      "agencyEU": "Europäische Union:",
+      "agencyEUText": "die nationale Verbraucherschutz- oder Datenschutzbehörde Ihres Landes.",
+      "agencyElsewhere": "Anderswo:",
+      "agencyElsewhereText": "die nationale Verbraucherschutzstelle Ihres Landes.",
+      "steps": {
+        "ask": {
+          "short": "Schriftlich fragen",
+          "title": "Fragen Sie schriftlich",
+          "lead": "Schicken Sie eine kurze, höfliche Nachricht. Fragen Sie, ob eine Software bei der Entscheidung geholfen hat, welche Informationen sie genutzt hat und was die Hauptgründe waren.",
+          "why": "Eine schriftliche Frage gibt Ihnen und dem Unternehmen denselben klaren Nachweis. Sie gibt dem Team dort auch die Chance, einen Fehler früh zu erkennen.",
+          "sample": "Guten Tag. Ich habe am [Datum] eine Entscheidung zu [meinem Antrag] erhalten. Können Sie mir sagen, ob ein automatisiertes System dabei geholfen hat, welche Informationen über mich es genutzt hat und was die Hauptgründe waren? Vielen Dank für Ihre Hilfe.",
+          "rule1Label": "Gesetz (USA, Kredit)",
+          "rule1": "Ein Kreditgeber, der Sie ablehnt, muss die konkreten Hauptgründe nennen oder Ihnen sagen, wie Sie sie erfragen können. (Regulation B)",
+          "rule2Label": "Gesetz (EU)",
+          "rule2": "Sie können Ihre Daten verlangen und aussagekräftige Informationen darüber, wie eine automatisierte Entscheidung zustande kam. (DSGVO, Artikel 15)"
+        },
+        "review": {
+          "short": "Einen Menschen verlangen",
+          "title": "Verlangen Sie eine Prüfung durch einen Menschen",
+          "lead": "Bitten Sie darum, dass ein Mensch Ihren Fall ansieht. Ergänzen Sie Fakten, die das System vielleicht nicht hatte.",
+          "why": "Ein Mensch kann Einzelheiten berücksichtigen, die eine Software vielleicht übersieht, etwa eine neue Veränderung in Ihrer Lage oder einen Fehler in Ihren Unterlagen.",
+          "sample": "Danke für Ihre Antwort. Ich möchte, dass ein Mensch diese Entscheidung prüft. Hier sind Informationen, die helfen können: [Einzelheiten]. Bitte sagen Sie mir, was Sie sonst noch von mir brauchen.",
+          "rule1Label": "Gesetz (EU)",
+          "rule1": "Wenn eine Maschine allein eine Entscheidung mit rechtlicher oder ähnlich erheblicher Wirkung für Sie trifft, können Sie verlangen, dass ein Mensch eingreift. (DSGVO, Artikel 22)",
+          "rule2Label": "Empfehlung (USA)",
+          "rule2": "Der Blueprint for an AI Bill of Rights von 2022 empfiehlt einen Weg, einen Menschen zu erreichen. Er ist kein Gesetz und wurde archiviert."
+        },
+        "dialogue": {
+          "short": "Darüber sprechen",
+          "title": "Bleiben Sie im konstruktiven Gespräch",
+          "lead": "Wenn Sie immer noch anderer Meinung sind, sagen Sie, was aus Ihrer Sicht schiefgelaufen ist und was es lösen würde. Bleiben Sie konkret und ruhig.",
+          "why": "Klare, konkrete Rückmeldungen lassen sich leichter umsetzen. Sie können auch den Ablauf für die nächste Person verbessern.",
+          "sample": "Danke, dass Sie sich das noch einmal angesehen haben. Ich denke weiterhin, dass [das konkrete Problem]. Eine faire Lösung wäre [Ihr Anliegen]. Können wir gemeinsam einen Weg finden?",
+          "rule1Label": "Gesetz (USA)",
+          "rule1": "Das bestehende Verbraucherschutzrecht gilt auch für KI. Die FTC hat gesagt, dass es keine Ausnahme für KI gibt. (FTC, 2024)",
+          "rule2Label": "Überall",
+          "rule2": "Fast jedes Land verbietet irreführende Geschäftspraktiken. Ihre Verbraucherstelle kann Ihnen sagen, was für Sie gilt."
+        }
+      }
+    }
+  },
+  "PAUSEStrategy": {
+    "title": "Die PAUSE-Strategie",
+    "subtitle": "Ihre tägliche 5-Schritte-Gewohnheit im Umgang mit KI",
+    "tablistLabel": "Die fünf Schritte der PAUSE-Strategie",
+    "stepOf": "Schritt {current} von {total}",
+    "tabName": "{letter}: {title}",
+    "announce": "Schritt {current} von {total}: {title}",
+    "hint": "Nutzen Sie die Pfeiltasten oder tippen Sie auf einen Buchstaben, um zwischen den Schritten zu wechseln.",
+    "steps": {
+      "protect": {
+        "letter": "P",
+        "title": "Persönliche Daten schützen",
+        "body": "Geben Sie nie Kontonummern, Passwörter oder vertrauliche Gesundheits- oder Finanzdaten in öffentliche KI-Werkzeuge ein. Prüfen Sie Ihre Datenschutzeinstellungen, um der Nutzung Ihrer Daten zum Training der Modelle zu widersprechen, wo das möglich ist."
+      },
+      "assess": {
+        "letter": "A",
+        "title": "Antworten auf Richtigkeit prüfen",
+        "body": "KI-Modelle erzeugen Text aus Mustern. Sie „wissen“ keine Fakten. Prüfen Sie bei wichtigen Entscheidungen zu Gesundheit, Geld oder Recht die Antworten immer anhand von Primärquellen, die von Menschen stammen."
+      },
+      "understand": {
+        "letter": "U",
+        "title": "Ursprung und Zweck der Daten verstehen",
+        "body": "Fragen Sie, auf welche Informationen sich das Werkzeug stützt, ob es unabhängig getestet wurde und ob es versteckte Verzerrungen oder geschäftliche Interessen gibt."
+      },
+      "seek": {
+        "letter": "S",
+        "title": "Sich an eine verantwortliche Person wenden",
+        "body": "KI-Systeme werden von Menschen gesteuert. Suchen Sie klare Kontaktwege und prüfen Sie, ob ein verantwortliches Team von Menschen die Technik beaufsichtigt."
+      },
+      "exit": {
+        "letter": "E",
+        "title": "Eigene Rechte nutzen und melden",
+        "body": "Sie haben immer das Recht, ein Produkt nicht mehr zu nutzen, die Löschung Ihrer Daten zu verlangen oder Fehler und unfaire automatisierte Ergebnisse bei Verbraucherschutzstellen zu melden."
+      }
+    }
+  },
+  "Forum": {
+    "metaTitle": "Forum",
+    "metaDescription": "Stimmen Sie über kurze Aussagen zu KI und Ihren Rechten ab, oder schlagen Sie selbst eine vor. Kein Konto nötig. Gemeinsamkeiten werden zuerst gezeigt.",
+    "eyebrow": "Forum Stimme und Vision",
+    "title": "Ihre Stimme gehört hierher",
+    "lead": "<b>Technik funktioniert am besten, wenn alle sie mitgestalten.</b> Stimmen Sie über kurze Aussagen ab, oder schlagen Sie eigene vor. Kein Konto nötig.",
+    "civility": "Ihre Beiträge werden auf einen respektvollen Umgangston geprüft. Wir kritisieren Ideen, nicht Menschen.",
+    "privacy": "<b>Was wir speichern, wenn Sie abstimmen:</b> Ihre Stimme, die Sprache der Seite und einen zufälligen Code in Ihrem Browser, damit jede Person nur einmal abstimmt. Ihren Namen, Ihre E-Mail-Adresse oder Ihre IP-Adresse speichern wir nicht dazu. Die Stimmen liegen in einer Neon-Datenbank in Frankfurt. Wie die meisten Websites speichert unser Hoster Vercel zur Sicherheit kurzzeitig Anfrageprotokolle mit IP-Adressen. „Meine Stimmen löschen“ entfernt Ihre Stimmen.",
+    "principles": {
+      "heading": "Folgen Sie fünf Grundsätzen für einen konstruktiven Dialog",
+      "lead": "<b>Sie machen das Forum für alle nützlich.</b> Jede Aussage steht für sich, es gibt also keine Antwortketten, in denen man streiten kann.",
+      "critique": "Ideen kritisieren, nie Menschen",
+      "critiqueText": "Widersprechen Sie einer Idee so deutlich, wie Sie möchten. Lassen Sie die Person dabei aus dem Spiel.",
+      "goodFaith": "Guten Willen voraussetzen",
+      "goodFaithText": "Die meisten Menschen tun ihr Bestes mit dem, was sie wissen. Fragen Sie nach, bevor Sie böse Absicht vermuten.",
+      "positivity": "Positiv, mit Substanz",
+      "positivityText": "Ermutigung und Genauigkeit gehören zusammen. Seien Sie freundlich und konkret.",
+      "ethics": "Ethik und Transparenz",
+      "ethicsText": "Sagen Sie, wenn KI Ihnen beim Schreiben geholfen hat, nennen Sie Ihre Quellen und seien Sie ehrlich darüber, was Sie nicht wissen.",
+      "lift": "Andere mitnehmen",
+      "liftText": "Teilen Sie, was Sie lernen, damit es die nächste Person leichter hat."
+    },
+    "vote": {
+      "heading": "Stimmen Sie über {count} Aussagen ab",
+      "lead": "<b>Wählen Sie bei jeder Aussage Zustimmen, Ablehnen oder Überspringen.</b> Die Aussagen gehören zu {tracks} Themen: {trackList}. Mit der Tab-Taste erreichen Sie die Knöpfe, mit den Pfeiltasten wechseln Sie zwischen ihnen."
+    },
+    "suggest": {
+      "heading": "Schlagen Sie eine eigene Aussage vor"
+    },
+    "results": {
+      "heading": "Sehen Sie, wo Menschen übereinstimmen",
+      "lead": "<b>Die Ergebnisse zeigen Gemeinsamkeiten, nicht die lautesten Stimmen.</b> Die Stimmen werden nach der Sprache gruppiert, in der Menschen abstimmen. Eine Aussage gilt nur dann als breite Übereinstimmung, wenn jede Sprachgruppe sie unterstützt."
+    },
+    "loop": {
+      "heading": "Verfolgen Sie, was sich durch Sie ändert",
+      "lead": "<b>Jede Frage führt zu einem sichtbaren Ergebnis.</b> Diese Karte wird jedes Mal aktualisiert, wenn Abstimmungen einen Ratgeber oder ein Angebot dieser Website verändern.",
+      "title": "Wir haben gefragt, Sie haben geantwortet, wir haben gehandelt",
+      "status": "Stand: Die Abstimmung ist offen.",
+      "asked": "Wir haben gefragt",
+      "askedText": "{count} Aussagen zu {tracks} Themen, oben aufgeführt.",
+      "said": "Sie haben geantwortet",
+      "saidText": "Noch keine Ergebnisse. Bereiche mit breiter Übereinstimmung erscheinen hier, sobald genug Menschen abgestimmt haben.",
+      "did": "Wir haben gehandelt",
+      "didText": "Noch nichts. Jede Änderung wird hier mit Datum und einem Link zur geänderten Seite aufgeführt."
+    },
+    "tracks": {
+      "transparency": "Transparenz",
+      "agency": "Selbstbestimmung",
+      "privacy": "Privatsphäre",
+      "shared": "Gemeinsame Verantwortung",
+      "community": "Vorschlag aus der Community"
+    },
+    "statements": {
+      "t1-disclose": "Automatische Assistenten sollten zu Beginn eines Gesprächs sagen, dass sie eine KI sind.",
+      "t1-credentials": "Fotos, Tonaufnahmen und Videos, die mit KI gemacht wurden, sollten einen Hinweis tragen, der zeigt, wie sie entstanden sind.",
+      "t2-reasons": "Wenn eine Software bei einer Entscheidung über Sie hilft, sollten Sie die wichtigsten Gründe in einfacher Sprache erhalten.",
+      "t2-person": "Jede automatisierte Entscheidung, die Sie betrifft, sollte einen klaren Weg bieten, einen Menschen zu erreichen.",
+      "t3-optin": "Die Nutzung Ihrer Gespräche zum Training von KI sollte ausgeschaltet bleiben, außer Sie schalten sie selbst ein.",
+      "t3-clear": "Sie sollten Ihren Chatverlauf mit einem Tippen löschen können.",
+      "t4-together": "Bürgerinnen und Bürger, Lehrkräfte, Aufsichtsbehörden und Unternehmen sollten die Regeln für KI gemeinsam gestalten.",
+      "t4-accountable": "Organisationen sollten Verantwortung dafür übernehmen, was ihre KI-Werkzeuge Kundinnen und Kunden sagen."
+    },
+    "voting": {
+      "answered": "{answered} von {total} beantwortet",
+      "tally": "Ihre Stimmen: {agree} zugestimmt, {disagree} abgelehnt, {pass} übersprungen",
+      "progressLabel": "Beantwortete Aussagen",
+      "cardMeta": "{track} · Aussage {current} von {total}",
+      "toolbarLabel": "Ihre Stimme",
+      "agree": "Zustimmen",
+      "agreeTip": "Sie unterstützen diese Aussage.",
+      "disagree": "Ablehnen",
+      "disagreeTip": "Sie unterstützen diese Aussage nicht.",
+      "pass": "Überspringen",
+      "passTip": "Auslassen. Sie sind unsicher, oder es betrifft Sie nicht.",
+      "recorded": "Gespeichert: {choice}. Aussage {next} von {total}.",
+      "recordedAll": "Gespeichert: {choice}. Sie haben alle {total} Aussagen beantwortet.",
+      "cleared": "Stimmen gelöscht. Aussage 1 von {total}.",
+      "doneTitle": "Danke. Sie haben alle Aussagen beantwortet.",
+      "clear": "Meine Stimmen löschen und neu beginnen",
+      "unsent": "{count, plural, one {1 Stimme wurde} other {# Stimmen wurden}} noch nicht gesendet. Wir versuchen es bei Ihrer nächsten Stimme oder Ihrem nächsten Besuch erneut.",
+      "clearFailed": "Wir konnten Ihre Stimmen nicht löschen. Prüfen Sie Ihre Verbindung und versuchen Sie es noch einmal."
+    },
+    "submission": {
+      "label": "Schlagen Sie eine Aussage vor, über die andere abstimmen können",
+      "disclosure": "<b>Ein Mensch liest jede Aussage, bevor sie gezeigt wird.</b> Zuerst prüft ein KI-Modell, ob sie Namen oder Kontaktdaten enthält: Mistral Small, oder Gemini von Google als Ersatz, beide auf Servern in der EU. Es läuft über OpenRouter und ist so eingestellt, dass Ihr Text nicht gespeichert wird. Freigegebene Aussagen werden Menschen gezeigt, die dieselbe Sprache nutzen. Aussagen, die eine Person, ein Unternehmen oder eine Gruppe herausgreifen, werden nicht veröffentlicht. Bitte lassen Sie persönliche Angaben weg. Ihre Beiträge werden auf einen respektvollen Umgangston geprüft. Wir kritisieren Ideen, nicht Menschen.",
+      "placeholder": "z. B. „Kundenportale sollten immer mit einem Tippen einen Menschen als Ansprechpartner anbieten.“",
+      "remaining": "Noch {remaining} von {max} Zeichen",
+      "submit": "Zur Prüfung senden",
+      "empty": "Bitte schreiben Sie zuerst eine Aussage.",
+      "sent": "Danke. Ihre Aussage wartet auf die Prüfung.",
+      "contact": "Bitte entfernen Sie Links, E-Mail-Adressen, Social-Media-Namen und Telefonnummern und versuchen Sie es dann noch einmal.",
+      "failed": "Ihre Aussage konnte nicht gesendet werden. Prüfen Sie Ihre Verbindung und versuchen Sie es noch einmal. Ihr Text steht noch im Feld."
+    },
+    "consensus": {
+      "heading": "Wo Gruppen übereinstimmen",
+      "lead": "<b>Gemeinsamkeiten kommen zuerst.</b> Eine Aussage erscheint hier nur, wenn mindestens {minGroups} Sprachgruppen jeweils {minVotes} oder mehr Stimmen dazu haben und jede dieser Gruppen zu {threshold} % oder mehr zustimmt. Übersprungene Stimmen zählen nicht.",
+      "noVotes": "Es wurden noch keine Stimmen gezählt.",
+      "progress": "{votes, plural, one {1 Stimme bisher gezählt, aus {languages, plural, one {1 Sprache} other {# Sprachen}}.} other {# Stimmen bisher gezählt, aus {languages, plural, one {1 Sprache} other {# Sprachen}}.}}",
+      "none": "Noch keine Aussage hat breite Übereinstimmung.",
+      "summary": "Mindestens {percent} % Zustimmung in jeder Sprachgruppe:",
+      "groupAgree": "{percent} % Zustimmung, {votes} Stimmen",
+      "loading": "Ergebnisse werden geladen…",
+      "error": "Die Ergebnisse können gerade nicht geladen werden. Bitte versuchen Sie es später noch einmal."
+    }
+  },
+  "About": {
+    "metaTitle": "Hintergrund",
+    "metaDescription": "Warum es diese Website gibt, wie sie den Dialog fair und offen hält und wer ihre Seiten prüft.",
+    "title": "Über diese Website",
+    "lead": "<b>Diese Website erklärt Ihre Rechte, wenn KI über Sie entscheidet, in einfacher Sprache und ohne Schuldzuweisung.</b> Sie vergleicht die Ansätze der USA und der EU und lädt alle zum Gespräch ein.",
+    "missionHeading": "Die Aufgabe verstehen",
+    "mission": "<b>Verbraucherrechte gegenüber KI leicht verständlich machen, und leicht besprechbar.</b> Menschen, die KI nutzen, Lehrkräfte, Aufsichtsbehörden und Teams, die KI entwickeln, sind alle betroffen. Diese Website geht davon aus, dass alle in gutem Glauben handeln und ihr Bestes tun mit dem, was sie wissen. Sie kritisiert Ideen und Systeme, nie Menschen.",
+    "safeguardsHeading": "Die fünf Schutzregeln",
+    "safeguardsLead": "Diese Regeln halten die Website fair, offen und schwer zu missbrauchen.",
+    "safeguards": {
+      "trace": "Jede Frage führt zu einem sichtbaren Ergebnis",
+      "traceText": "Wenn Abstimmungen im Forum einen Ratgeber oder ein Angebot verändern, wird die Änderung mit Datum aufgeführt. Das ist der Bericht „Wir haben gefragt, Sie haben geantwortet, wir haben gehandelt“.",
+      "isolated": "Aussagen stehen für sich",
+      "isolatedText": "Das Forum hat keine Antwortketten. Sie stimmen jeweils über eine kurze Aussage ab. Das lässt wenig Raum für Spam oder Angriffe von vielen auf einen.",
+      "access": "Keine Hürden beim Mitmachen",
+      "accessText": "Zum Abstimmen brauchen Sie kein Konto. Die Seiten zielen auf ein Leseniveau der 6. bis 8. Klasse und werden nach WCAG 2.2 Stufe AA gebaut und getestet.",
+      "common": "Gemeinsamkeiten kommen zuerst",
+      "commonText": "Die Ergebnisse zeigen, worin sich verschiedene Gruppen einig sind, nicht, was sie trennt.",
+      "sturdy": "Schnelle, stabile Seiten",
+      "sturdyText": "Der Ratgeber und die anderen Seiten sind einfache statische Seiten, getrennt von allem Interaktiven. So laden sie schnell und funktionieren zuverlässig."
+    },
+    "whoHeading": "Wer dahintersteht",
+    "who": "<b>Robert Sweetman betreibt diese Website.</b> KI-Modelle haben beim Recherchieren und Schreiben geholfen. Ein Mensch prüft jede Seite vor der Veröffentlichung. Die Fußzeile jeder Seite nennt, welche Modelle geholfen haben, welche Quellen die Fakten stützen und wie weit die Prüfung ist.",
+    "whoLink": "Alle Quellen ansehen und wie sie geprüft wurden",
+    "joinHeading": "Reden Sie mit",
+    "joinLead": "Ihre Sicht hilft zu entscheiden, wie es weitergeht.",
+    "joinLink": "Stimmen Sie im Forum über gemeinsame Ideen ab",
+    "joinAfter": ". Kein Konto nötig."
+  },
+  "Attribution": {
+    "heading": "Wie diese Website entstanden ist",
+    "aiHeading": "KI half beim Recherchieren und Schreiben",
+    "aiLead": "Diese Website wurde mit Hilfe mehrerer KI-Modelle recherchiert und geschrieben. Ein Mensch entscheidet, was veröffentlicht wird.",
+    "primaryHeading": "Die Fakten beruhen auf Primärquellen",
+    "reviewHeading": "Ein Mensch prüft jede Seite",
+    "reviewLabel": "Prüfung durch einen Menschen",
+    "reviewDone": "Geprüft von {reviewer} am {date}.",
+    "reviewPending": "Noch nicht abgeschlossen. {reviewer} prüft jede Seite vor der Veröffentlichung.",
+    "translationThanks": "Meine Großeltern, Giuffrido und Isolina DiCenso, verließen Italien für ein neues Land und lernten eine neue Sprache. Ihr Weg hat diese Übersetzungen inspiriert. In Liebe und Dankbarkeit an sie und an meine Eltern, Joanne Sweetman und Robert Sweetman Sr.",
+    "checkedLabel": "Quellen geprüft",
+    "seeAll": "Alle {total} Quellen in {groups} Gruppen ansehen",
+    "openRegistry": "Das vollständige Quellenverzeichnis öffnen",
+    "registryAbout": "Alle Quellen, auf die sich diese Website stützt, und wie gründlich jeder Link geprüft wurde. Status „confirmed“: Der Link wurde am Prüfdatum geöffnet und der Inhalt stimmte. „unopened“: Der Link stammt aus einem offiziellen Verzeichnis oder einer Suche, wurde aber noch von niemandem geöffnet; ein Mensch sollte ihn einmal öffnen. „no-link“: als Hintergrundlektüre aufgeführt, noch ohne öffentlichen Link.",
+    "status": {
+      "confirmed": "Link geöffnet und bestätigt",
+      "unopened": "Link noch nicht von einem Menschen geöffnet",
+      "no-link": "Noch kein öffentlicher Link"
+    },
+    "models": {
+      "gpt": "Rechercheentwürfe, September 2026.",
+      "claude": "Rechercheentwürfe, September 2026. Hat den Code und die Seitentexte dieser Website in Claude Code geschrieben, September 2026.",
+      "gemini": "Rechercheentwürfe, September 2026. Hat den Figma-Designbericht zusammengefasst, der für das visuelle Design genutzt wurde.",
+      "openrouter-unrecorded": "Recherche-Chats, September 2026. Die Chat-Exporte halten nicht fest, welches Modell welche Antwort geschrieben hat.",
+      "llama": "Geplant. In den Rechercheunterlagen wurde keine Ausgabe von Llama gefunden, deshalb wird es nicht angezeigt."
+    },
+    "modelNames": {
+      "openrouter-unrecorded": "Weitere Modelle über OpenRouter"
+    },
+    "variousMakers": "Verschiedene",
+    "categories": {
+      "governance": "Globale Governance und zivilgesellschaftliche Infrastruktur",
+      "empirical": "Empirische Daten und Branchenvergleiche",
+      "accessibility": "Barrierefreiheit für alle und WCAG-2.2-Standards",
+      "usability": "Kognitive Benutzerfreundlichkeit und Designsysteme",
+      "synthesis": "Synthese aus mehreren KI-Modellen und Leitstandards",
+      "latam-global": "Rechtsrahmen in Lateinamerika und weltweit",
+      "eu-national": "Nationale Rechtsrahmen in Europa"
+    },
+    "sourcesLanguageNote": "Titel und Angaben der Quellen erscheinen in ihrer Originalsprache, meist Englisch."
+  },
+  "Sources": {
+    "metaTitle": "Quellen",
+    "metaDescription": "Alle Quellen, auf die sich diese Website stützt, nach Thema geordnet, mit dem Stand der Prüfung jedes Links und dem Datum.",
+    "title": "Quellen",
+    "lead": "<b>Alle {total} Quellen in {groups} Gruppen, geprüft am {date}.</b> Die Nummern entsprechen den kleinen Quellenhinweisen auf jeder Seite."
+  },
+  "HowItWorks": {
+    "metaTitle": "So funktioniert diese Website",
+    "metaDescription": "Jeder Dienst, den diese Website nutzt, was jeder davon sieht, was wir speichern und was noch nicht fertig ist.",
+    "title": "So funktioniert diese Website",
+    "lead": "Diese Website bittet Unternehmen, ihre KI in einfachen Worten zu erklären. Deshalb steht hier in einfachen Worten, wie diese Website funktioniert, auch was noch nicht fertig ist.",
+    "whoHeading": "Wer sie betreibt",
+    "who": "<b>Robert Sweetman, allein.</b> Kein Geld, keine Sponsoren und keine Investoren stehen dahinter. Keine Werbung, kein Tracking, keine Besucherstatistik.",
+    "open": "<b>Offen aus Prinzip.</b> <code>Der Code ist auf GitHub öffentlich</code>, unter der MIT-Lizenz. Die Texte dürfen mit Namensnennung weiterverwendet werden, unter CC BY 4.0.",
+    "mission": "<mission>Die Aufgabe und die Werte lesen, an die sich diese Website hält</mission>.",
+    "builtHeading": "Wie sie gebaut wurde",
+    "built": "Robert hat sie mit Hilfe von KI gebaut. Claude hat den Großteil des Codes mit ihm geschrieben, und mehrere KI-Modelle haben beim Recherchieren und Schreiben des Ratgebers geholfen; die Fußzeile jeder Seite nennt sie. Ein Mensch prüft noch jede Seite.",
+    "servicesHeading": "Dienste, die wir nutzen, und was jeder davon sieht",
+    "services": {
+      "vercel": "<b>Vercel</b> betreibt die Website und ihre Firewall. Vercel sieht jeden Besuch, auch IP-Adressen, in kurzlebigen Protokollen.",
+      "neon": "<b>Neon</b> ist die Datenbank, in Frankfurt. Sie enthält die Stimmen, gespeichert mit einem unkenntlich gemachten Browser-Code, und die vorgeschlagenen Aussagen.",
+      "openrouter": "<b>OpenRouter</b> leitet jede vorgeschlagene Aussage an ein KI-Modell weiter. OpenRouter speichert Nutzungsdaten (Zeit, Modell, Kosten), aber nicht Ihren Text, und nutzt nur Dienste, die ihn auch nicht speichern.",
+      "models": "<b>Mistral Small</b>, mit <b>Gemini von Google</b> als Ersatz, liest jeden Vorschlag auf Servern in der EU, um Namen und Kontaktdaten zu markieren. Es markiert nur; ein Mensch entscheidet.",
+      "github": "<b>GitHub</b> speichert den öffentlichen Code. <b>Proton</b> kümmert sich um E-Mails."
+    },
+    "keepHeading": "Was wir speichern, und wie lange",
+    "keep": {
+      "votes": "<b>Stimmen:</b> bis Sie auf „Meine Stimmen löschen“ drücken. Der Browser-Code gilt {days} Tage. Ein automatisches Löschdatum haben wir noch nicht festgelegt.",
+      "suggestions": "<b>Vorschläge:</b> Abgelehnte werden gelöscht. Freigegebene bleiben, solange sie gezeigt werden.",
+      "never": "<b>Nie mit Ihrer Stimme gespeichert:</b> Ihr Name, Ihre E-Mail-Adresse oder Ihre IP-Adresse."
+    },
+    "unfinishedHeading": "Was noch nicht fertig oder perfekt ist",
+    "unfinished": {
+      "review": "Die Prüfung des Ratgebers durch einen Menschen läuft noch.",
+      "translations": "Die Übersetzungen wurden mit Hilfe von KI erstellt. Muttersprachlerinnen und Muttersprachler haben noch nicht alle geprüft.",
+      "language": "Vorschläge erscheinen nur in der Sprache, in der sie geschrieben wurden.",
+      "results": "Ergebnisse erscheinen erst ab {minVotes} oder mehr Stimmen pro Sprache, am Anfang gibt es also keine.",
+      "ai": "Die Prüfung durch die KI kann sich irren. Jede Entscheidung trifft ein Mensch.",
+      "twice": "Abstimmen ohne Konto kann nicht ganz verhindern, dass jemand zweimal abstimmt, zum Beispiel mit einem zweiten Browser."
+    },
+    "correctionsHeading": "Korrekturen",
+    "correctionsLead": "<b>Wenn auf dieser Website etwas falsch ist, korrigieren wir es und führen es hier auf</b>, das Neueste zuerst. Jeder Eintrag sagt, was falsch war und was sich geändert hat. Die Person, die es gemeldet hat, nennen wir nur, wenn sie das möchte.",
+    "contactHeading": "Sagen Sie uns, was falsch ist",
+    "contact": "<b>Kritik ist willkommen, wenn sie begründet ist.</b> Sagen Sie uns, was falsch ist, warum es wichtig ist und, wenn Sie können, wie man es behebt.",
+    "contactHow": "Schreiben Sie an <mail>{email}</mail>, oder <issues>eröffnen Sie ein Issue auf GitHub</issues>.",
+    "domainNote": "Die Kontaktadresse nutzt shipitworks.com, die Domain eines Unternehmens, das Robert gründen möchte. Dieses Unternehmen hat mit dieser Website nichts zu tun.",
+    "footerLink": "So funktioniert diese Website: jeder genutzte Dienst, was wir speichern und was noch nicht fertig ist"
+  },
+  "PublicLog": {
+    "wrong": "Was falsch war",
+    "changed": "Was wir geändert haben",
+    "flaggedBy": "Gemeldet von {name}. Danke.",
+    "commit": "Die genaue Änderung auf GitHub ansehen",
+    "englishOnly": "Vorerst nur auf Englisch.",
+    "noCorrections": "Noch keine Korrekturen. Wenn Sie einen Fehler finden, sagen Sie es uns bitte."
+  }
+}

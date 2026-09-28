@@ -20,6 +20,7 @@ const pt = flatten(MESSAGES["pt-PT"] as unknown as Tree);
 const ptBR = flatten(MESSAGES["pt-BR"] as unknown as Tree);
 const itMsgs = flatten(MESSAGES.it as unknown as Tree);
 const frMsgs = flatten(MESSAGES.fr as unknown as Tree);
+const deMsgs = flatten(MESSAGES.de as unknown as Tree);
 
 // The blameless-tone checks keep companies out of what the site says about
 // AI and consumers. Naming the tools the site itself uses is disclosure, not
@@ -31,7 +32,7 @@ const opinions = (m: Record<string, string>) =>
   Object.entries(m)
     .filter(([key]) => !isDisclosure(key))
     .map(([, v]) => v);
-const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs, fr: frMsgs };
+const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs, fr: frMsgs, de: deMsgs };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).
 const MAY_BE_EMPTY = /(rule2Label|sourcesLanguageNote)$/;
 const placeholders = (s: string) => Array.from(s.matchAll(/\{(\w+)/g), (m) => m[1]).sort();
@@ -50,7 +51,7 @@ describe("message files", () => {
   });
 
   it("have no empty translations", () => {
-    for (const messages of [en, es, pt, ptBR, itMsgs, frMsgs]) {
+    for (const messages of [en, es, pt, ptBR, itMsgs, frMsgs, deMsgs]) {
       for (const [k, v] of Object.entries(messages)) {
         if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
       }
@@ -116,6 +117,7 @@ describe("message files", () => {
         "pt-BR": "Português (BR)",
         it: "Italiano",
         fr: "Français",
+        de: "Deutsch",
       });
     }
   });
@@ -177,6 +179,21 @@ describe("message files", () => {
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
   });
 
+  it("include the required German wording, in the formal Sie register", () => {
+    const m = MESSAGES.de;
+    expect(m.Common.siteName).toBe("Verbraucherrechte gegenüber KI");
+    expect(m.PAUSEStrategy.title).toBe("Die PAUSE-Strategie");
+    expect(m.Forum.principles.critique).toBe("Ideen kritisieren, nie Menschen");
+    // Informal "du" forms would read as too familiar on a civic site.
+    expect(Object.values(deMsgs).join(" ")).not.toMatch(/\b(du|dich|dir|dein\w*)\b/);
+  });
+
+  it("keep the blameless tone in German: no blame words or named companies", () => {
+    const text = opinions(deMsgs).join(" ");
+    expect(text).not.toMatch(/\b(Betrug|betrüger|schuldig|Schande|gierig)/i);
+    expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
+  });
+
   it("keep the blameless tone in Italian: no blame words or named companies", () => {
     const text = opinions(itMsgs).join(" ");
     expect(text).not.toMatch(/\b(truffa|frode|colpevole|vergogna|avid[io])/i);
@@ -229,6 +246,7 @@ describe("PAUSE Strategy messages", () => {
     expect(letters("pt-BR")).toBe("PAUSA");
     expect(letters("it")).toBe("PAUSA");
     expect(letters("fr")).toBe("PAUSE");
+    expect(letters("de")).toBe("PAUSE");
   });
 
   it("start each step title with its letter", () => {

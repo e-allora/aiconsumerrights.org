@@ -76,7 +76,7 @@ describe("How this site works page", () => {
     expect(contact).toHaveTextContent("a business Robert plans to start. That business has no part in this site.");
   });
 
-  it.each(["es", "pt-PT", "pt-BR", "it", "fr"] as const)("renders in %s with the same numbers and links", (locale) => {
+  it.each(["es", "pt-PT", "pt-BR", "it", "fr", "de"] as const)("renders in %s with the same numbers and links", (locale) => {
     render(<HowItWorksPage params={{ locale }} />, { locale });
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(MESSAGES[locale].HowItWorks.title);
     expect(document.body).toHaveTextContent(String(VOTER_COOKIE_DAYS));

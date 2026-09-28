@@ -64,7 +64,7 @@ describe("Guide page", () => {
 
     const picker = screen.getByRole("group", { name: "Compare with" });
     const radios = within(picker).getAllByRole("radio");
-    expect(radios.map((r) => r.closest("label")!.textContent)).toEqual(["Brazil", "France", "Italy"]);
+    expect(radios.map((r) => r.closest("label")!.textContent)).toEqual(["Brazil", "France", "Germany", "Italy"]);
     expect(within(picker).getByRole("radio", { name: "Brazil" })).toBeChecked();
 
     fireEvent.click(within(picker).getByRole("radio", { name: "Italy" }));
@@ -109,6 +109,21 @@ describe("Guide page", () => {
     expect(france[3]).toHaveTextContent("has not yet named its EU AI Act authorities in law");
     expect(france[4]).toHaveTextContent("A bill passed by the Senate");
     expect(france[4]).toHaveTextContent("As of 27 September 2026");
+  });
+
+  it("cites every Germany cell, and dates the credit-score rights that start later", () => {
+    fireEvent.click(screen.getByRole("radio", { name: "Germany" }));
+    const germany = countryCells();
+    expect(germany.map(cited)).toEqual([
+      ["eu-ai-act-art50", "de-egbgb-246a", "de-bgbl-2026-139"],
+      ["gdpr", "de-bgbl-2026-139", "de-bt-21-5381"],
+      ["gdpr", "de-cjeu-c634-21", "de-bgbl-2026-139"],
+      ["de-ki-mig", "de-bnetza-ki-beschwerde", "de-bdsg"],
+      ["de-ki-mig", "de-bgbl-2026-223", "de-bgbl-2026-139"],
+    ]);
+    // These rights start on 20 November 2026; until then the cells must say so.
+    for (const i of [1, 2, 4]) expect(germany[i]).toHaveTextContent("From 20 November 2026");
+    expect(germany[4]).toHaveTextContent("in force since 29 July 2026");
   });
 
   it("cites every Brazil cell: the LGPD for rights in force, PL 2338/2023 for what is pending", () => {
@@ -160,6 +175,7 @@ describe("Guide comparison picker", () => {
     ["it", "Italia"],
     ["pt-BR", "Brasil"],
     ["fr", "France"],
+    ["de", "Deutschland"],
     ["es", "Brasil"],
   ] as const)("opens in %s on %s", (locale, country) => {
     render(<GuidePage params={{ locale }} />, { locale });

@@ -39,7 +39,8 @@
       "pt-PT": "Português (PT)",
       "pt-BR": "Português (BR)",
       "it": "Italiano",
-      "fr": "Français"
+      "fr": "Français",
+      "de": "Deutsch"
     }
   },
   "Home": {
@@ -106,6 +107,10 @@
         "fr": {
           "name": "França",
           "intro": "A França segue as regras da UE. As suas próprias leis acrescentam direitos quando um organismo público usa um algoritmo."
+        },
+        "de": {
+          "name": "Alemanha",
+          "intro": "A Alemanha segue as regras da UE. Tem um supervisor nacional de IA, e novos direitos sobre a pontuação de crédito começam a 20 de novembro de 2026."
         }
       },
       "rows": {
@@ -115,7 +120,8 @@
           "eu": "Sim, desde 2 de agosto de 2026, a não ser que seja evidente.",
           "br": "Ainda não é exigido por uma lei nacional de IA. O projeto de lei PL 2338/2023, aprovado pelo Senado em dezembro de 2024, passaria a exigi-lo. Continua a ser um projeto.",
           "it": "Aplicam-se as regras da UE. A lei italiana de IA acrescenta mais: os profissionais têm de explicar aos clientes, com palavras claras e simples, que sistemas de IA usam. Os empregadores têm de informar os trabalhadores.",
-          "fr": "Aplicam-se as regras da UE. A França acrescenta duas regras. Um organismo público tem de o informar quando usou um algoritmo para decidir sobre si. Os influenciadores pagos têm de marcar as imagens de um rosto ou corpo feitas com IA como «Images virtuelles»."
+          "fr": "Aplicam-se as regras da UE. A França acrescenta duas regras. Um organismo público tem de o informar quando usou um algoritmo para decidir sobre si. Os influenciadores pagos têm de marcar as imagens de um rosto ou corpo feitas com IA como «Images virtuelles».",
+          "de": "Aplicam-se as regras da UE. A Alemanha acrescenta uma regra sobre preços: as lojas online têm de o informar se um preço foi personalizado por uma decisão automatizada. A partir de 20 de novembro de 2026, os credores também têm de o informar se uma oferta de crédito foi personalizada assim."
         },
         "reasons": {
           "question": "Posso saber as razões de uma decisão?",
@@ -123,7 +129,8 @@
           "eu": "Pode pedir informação útil sobre como foi tomada uma decisão automática.",
           "br": "Pode pedir informação clara sobre os critérios e procedimentos usados, dentro dos limites do segredo comercial. Um pedido dos seus dados recebe uma resposta completa em 15 dias.",
           "it": "Aplicam-se os direitos do RGPD, como em toda a UE. Na saúde, tem o direito de saber quando é usada IA.",
-          "fr": "Aplicam-se os direitos do RGPD, como em toda a UE. Se um organismo público usou um algoritmo para decidir sobre si, pode perguntar como: que dados usou, de onde vieram e quanto pesou o algoritmo."
+          "fr": "Aplicam-se os direitos do RGPD, como em toda a UE. Se um organismo público usou um algoritmo para decidir sobre si, pode perguntar como: que dados usou, de onde vieram e quanto pesou o algoritmo.",
+          "de": "Aplicam-se os direitos do RGPD, como em toda a UE. A partir de 20 de novembro de 2026, quem calcula uma pontuação de crédito tem de lhe dizer, a pedido e em palavras claras, que dados e fatores seus mais pesaram."
         },
         "review": {
           "question": "Uma pessoa pode revê-la?",
@@ -131,7 +138,8 @@
           "eu": "Sim, quando só uma máquina tomou uma decisão com efeitos legais ou igualmente importantes.",
           "br": "Sim, para decisões tomadas só por tratamento automatizado. A lei já não diz que tem de ser uma pessoa a fazer a revisão.",
           "it": "Aplica-se o artigo 22.º do RGPD. A lei italiana acrescenta: na saúde, a decisão cabe sempre ao médico, e na administração pública a pessoa continua a ser a única responsável.",
-          "fr": "Sim, pelas regras da UE (RGPD). A França acrescenta mais: uma máquina sozinha nunca pode decidir o seu recurso junto de um organismo público, e um tribunal não pode julgar o seu comportamento apenas com base num perfil automático."
+          "fr": "Sim, pelas regras da UE (RGPD). A França acrescenta mais: uma máquina sozinha nunca pode decidir o seu recurso junto de um organismo público, e um tribunal não pode julgar o seu comportamento apenas com base num perfil automático.",
+          "de": "Sim, pelas regras da UE. O Tribunal de Justiça da UE (processo C-634/21) disse que uma pontuação de crédito pode contar como decisão automatizada quando um credor depende muito dela. A partir de 20 de novembro de 2026, pode contestar uma decisão baseada numa pontuação e pedir que uma pessoa decida."
         },
         "enforce": {
           "question": "Quem fiscaliza as regras?",
@@ -139,7 +147,8 @@
           "eu": "As autoridades nacionais de cada país da UE.",
           "br": "A autoridade nacional de proteção de dados (ANPD). Pode auditar um sistema para verificar discriminação quando o segredo comercial limita o que lhe dizem.",
           "it": "A autoridade de proteção de dados (Garante) mantém os seus poderes para inspecionar, bloquear e multar. A lei da IA nomeia duas autoridades nacionais de IA: a AgID e a ACN.",
-          "fr": "A autoridade de proteção de dados (CNIL) fiscaliza as regras sobre dados, e a agência do consumidor (DGCCRF) fiscaliza as regras de consumo. A França ainda não designou por lei as suas autoridades para o Regulamento da IA."
+          "fr": "A autoridade de proteção de dados (CNIL) fiscaliza as regras sobre dados, e a agência do consumidor (DGCCRF) fiscaliza as regras de consumo. A França ainda não designou por lei as suas autoridades para o Regulamento da IA.",
+          "de": "A Bundesnetzagentur fiscaliza as regras do Regulamento da IA e recebe as queixas sobre IA de todo o país. O supervisor financeiro (BaFin) cobre a IA nas finanças. As autoridades de proteção de dados federais e de cada estado cobrem os dados pessoais."
         },
         "changing": {
           "question": "O que está a mudar?",
@@ -147,7 +156,8 @@
           "eu": "As regras para a IA de alto risco, como no emprego e no crédito, começam agora a 2 de dezembro de 2027.",
           "br": "O projeto PL 2338/2023 criaria uma lei de IA por níveis de risco, com direito a uma explicação, a contestar decisões e a revisão humana. A 23 de setembro de 2026, aguarda um parecer numa comissão especial da Câmara dos Deputados.",
           "it": "A Lei n.º 132/2025, a lei nacional de IA de Itália, está em vigor desde 10 de outubro de 2025. Funciona em conjunto com o Regulamento da IA da UE. Os menores de 14 anos precisam do consentimento dos pais ou tutores para usar IA.",
-          "fr": "Um projeto de lei aprovado pelo Senado a 18 de fevereiro de 2026 faria da CNIL a principal autoridade de IA de França e deixá-la-ia tratar queixas sobre IA. A 27 de setembro de 2026, aguarda votação na Assembleia Nacional."
+          "fr": "Um projeto de lei aprovado pelo Senado a 18 de fevereiro de 2026 faria da CNIL a principal autoridade de IA de França e deixá-la-ia tratar queixas sobre IA. A 27 de setembro de 2026, aguarda votação na Assembleia Nacional.",
+          "de": "A lei alemã de supervisão da IA (KI-MIG) está em vigor desde 29 de julho de 2026. A partir de 20 de novembro de 2026, as pontuações de crédito não podem usar a sua morada, idade, género, nome, redes sociais, movimentos da conta bancária nem dados sensíveis como a saúde, nem ser feitas sobre menores."
         }
       }
     },

@@ -50,7 +50,7 @@ describe("site metadata", () => {
     ["/sources", sourcesMeta],
     ["/about", aboutMeta],
   ] as const)("%s has title, description, canonical, hreflang and share image in each locale", async (path, fn) => {
-    for (const locale of ["en", "es", "pt-PT", "pt-BR", "it", "fr"] as const) {
+    for (const locale of ["en", "es", "pt-PT", "pt-BR", "it", "fr", "de"] as const) {
       const meta = await fn(params(locale) as never);
       expect(meta.title).toBeTruthy();
       expect(String(meta.description).length).toBeGreaterThan(50);
@@ -62,6 +62,7 @@ describe("site metadata", () => {
         "pt-BR": `/pt-BR${path}`,
         it: `/it${path}`,
         fr: `/fr${path}`,
+        de: `/de${path}`,
         "x-default": `/en${path}`,
       });
       expect(meta.openGraph?.url).toBe(localizedPath(locale, path));
@@ -118,6 +119,7 @@ describe("JSON-LD structured data", () => {
     ["pt-BR", "pt-BR"],
     ["it", "it"],
     ["fr", "fr"],
+    ["de", "de"],
   ] as const)("declares the WebSite in the %s layout with its language (%s)", async (locale, lang) => {
     const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: { locale } }));
     const [site] = jsonLd(html);

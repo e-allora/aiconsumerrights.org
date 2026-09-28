@@ -60,6 +60,9 @@
 
   h1, h2, h3, h4 {
     @apply font-display tracking-tight;
+    /* Safety net: a long word breaks instead of running off a narrow phone.
+       Planned break points are soft hyphens in the text itself. */
+    overflow-wrap: break-word;
   }
   h1 { @apply text-display-xl; }
   h2 { @apply text-display-lg; }

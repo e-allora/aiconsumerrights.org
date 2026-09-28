@@ -9,12 +9,12 @@ import type { Locale } from "@/lib/i18n/routing";
 type Row = { id: string; us: readonly string[]; eu: readonly string[] } & Record<Country, readonly string[]>;
 
 // The countries a visitor can compare with the US and the EU, in picker order.
-export const COMPARE_COUNTRIES = ["br", "fr", "it"] as const;
+export const COMPARE_COUNTRIES = ["br", "fr", "de", "it"] as const;
 export type Country = (typeof COMPARE_COUNTRIES)[number];
 
 // Each language opens on the country its speakers most likely live in.
 // Languages without a country of their own open on the first one.
-const HOME_COUNTRY: Partial<Record<Locale, Country>> = { "pt-BR": "br", it: "it", fr: "fr" };
+const HOME_COUNTRY: Partial<Record<Locale, Country>> = { "pt-BR": "br", it: "it", fr: "fr", de: "de" };
 
 // Citations sit beside the translated cells, so every language keeps the
 // same numbered sources.
@@ -24,12 +24,15 @@ const HOME_COUNTRY: Partial<Record<Locale, Country>> = { "pt-BR": "br", it: "it"
 // national rules. No company is named; enforcement is described by powers.
 // France's AI Act oversight is still a bill (Senate-adopted, 18 Feb 2026);
 // its rights in force are about algorithms used by public bodies.
+// Germany's credit-score rights (new BDSG § 37a) start on 20 Nov 2026, so
+// those cells say "From 20 November 2026"; update them once it passes.
 export const COMPARISON: readonly Row[] = [
   {
     id: "told",
     us: ["ncsl-ai-database"],
     eu: ["eu-ai-act-art50"],
     br: ["pl2338-senado-2024", "pl2338-camara-status"],
+    de: ["eu-ai-act-art50", "de-egbgb-246a", "de-bgbl-2026-139"],
     fr: ["eu-ai-act-art50", "fr-crpa-l311-3-1", "fr-loi-2023-451-art5"],
     it: ["eu-ai-act-art50", "it-law-132-2025"],
   },
@@ -38,6 +41,7 @@ export const COMPARISON: readonly Row[] = [
     us: ["cfpb-reg-b"],
     eu: ["gdpr"],
     br: ["anpd-lgpd-en", "lawsofbrazil-2026"],
+    de: ["gdpr", "de-bgbl-2026-139", "de-bt-21-5381"],
     fr: ["gdpr", "fr-crpa-l311-3-1", "fr-crpa-r311-3-1-2"],
     it: ["gdpr", "it-law-132-2025"],
   },
@@ -46,6 +50,7 @@ export const COMPARISON: readonly Row[] = [
     us: ["ostp-blueprint-2022"],
     eu: ["gdpr"],
     br: ["anpd-lgpd-en", "iba-mariotto-2024"],
+    de: ["gdpr", "de-cjeu-c634-21", "de-bgbl-2026-139"],
     fr: ["gdpr", "fr-loi-78-17-art47", "fr-cnil-intervention-humaine"],
     it: ["gdpr", "it-law-132-2025"],
   },
@@ -54,6 +59,7 @@ export const COMPARISON: readonly Row[] = [
     us: ["ftc-ai-comply-2024", "cfpb-reg-b"],
     eu: ["eu-ai-act"],
     br: ["anpd-lgpd-en", "lgpd-article-20"],
+    de: ["de-ki-mig", "de-bnetza-ki-beschwerde", "de-bdsg"],
     fr: ["fr-cnil-ria-qr", "fr-conso-l511-7"],
     it: ["it-law-132-2025", "garante-en"],
   },
@@ -62,6 +68,7 @@ export const COMPARISON: readonly Row[] = [
     us: ["eo-14365-2025"],
     eu: ["eu-digital-omnibus-2026"],
     br: ["pl2338-senado-2024", "pl2338-camara-status"],
+    de: ["de-ki-mig", "de-bgbl-2026-223", "de-bgbl-2026-139"],
     fr: ["fr-ddadue-senate-text", "fr-senat-dossier-pjl25-118", "fr-an-dossier-2518"],
     it: ["it-law-132-normattiva", "it-law-132-2025"],
   },

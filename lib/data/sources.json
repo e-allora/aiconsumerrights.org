@@ -679,6 +679,124 @@
           "url": "https://www.cnil.fr/fr/plaintes",
           "status": "confirmed",
           "summary": "The CNIL's online page for filing a data protection complaint."
+        },
+        {
+          "id": "de-ki-mig",
+          "title": "Gesetz zur Marktüberwachung und Innovationsförderung von künstlicher Intelligenz (KI-Marktüberwachungs-und-Innovationsförderungs-Gesetz - KI-MIG)",
+          "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+          "date": "2026-07-22",
+          "type": "Law (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.gesetze-im-internet.de/ki-mig/BJNR0DF0B0026.html",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Full text read on 27 September 2026, including the note that it entered into force on 29 July 2026.",
+          "summary": "Germany's law for carrying out the EU AI Act, in force since 29 July 2026. The Bundesnetzagentur is the main AI market surveillance authority and the central complaint office; BaFin covers AI in regulated finance."
+        },
+        {
+          "id": "de-bgbl-2026-223",
+          "title": "Gesetz zur Durchführung der Verordnung über künstliche Intelligenz (BGBl. 2026 I Nr. 223)",
+          "publisher": "Bundesgesetzblatt (recht.bund.de)",
+          "date": "2026-07-28",
+          "type": "Official legal database (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.recht.bund.de/bgbl/1/2026/223/VO.html",
+          "status": "confirmed",
+          "note": "Official gazette record read: signed 22 July 2026, published 28 July 2026.",
+          "summary": "Official publication of Germany's EU AI Act implementation law, whose Article 1 is the KI-MIG."
+        },
+        {
+          "id": "de-bgbl-2026-139",
+          "title": "Gesetz zur Umsetzung der Richtlinie (EU) 2023/2225 über Verbraucherkreditverträge und zur Regelung der Förderung klimaneutraler Mobilität (BGBl. 2026 I Nr. 139)",
+          "publisher": "Bundesgesetzblatt (recht.bund.de)",
+          "date": "2026-05-12",
+          "type": "Law (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.recht.bund.de/bgbl/1/2026/139/regelungstext.pdf?__blob=publicationFile&v=1",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Official gazette PDF read: Art. 1 (§ 491a BGB), Art. 3 (BDSG § 30, deletion of § 31, new § 37a), Art. 16 (in force 20 November 2026).",
+          "summary": "Germany's consumer credit law. From 20 November 2026 a new credit-scoring rule (§ 37a BDSG) bans some data from scores, gives a right to learn the main factors, and a right to challenge a score-based decision and have a person decide."
+        },
+        {
+          "id": "de-bt-21-5381",
+          "title": "Beschlussempfehlung und Bericht des Ausschusses für Recht und Verbraucherschutz zu dem Gesetzentwurf zur Umsetzung der Richtlinie (EU) 2023/2225 über Verbraucherkreditverträge (Drucksache 21/5381)",
+          "publisher": "Deutscher Bundestag",
+          "date": "2026-04-15",
+          "type": "Official legal database (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://dserver.bundestag.de/btd/21/053/2105381.pdf",
+          "status": "confirmed",
+          "note": "Committee amendments and reasons for the BDSG changes read (pp. 20-22).",
+          "summary": "The committee report that added the new scoring rule, and says it takes effect on 20 November 2026."
+        },
+        {
+          "id": "de-bdsg",
+          "title": "Bundesdatenschutzgesetz (BDSG)",
+          "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+          "date": "2017-06-30",
+          "type": "Law (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.gesetze-im-internet.de/bdsg_2018/BJNR209710017.html",
+          "status": "confirmed",
+          "note": "Current text read on 27 September 2026: §§ 9, 31, 37, 40.",
+          "summary": "Germany's federal data protection act. It splits data protection oversight between the federal commissioner (BfDI) and the state authorities."
+        },
+        {
+          "id": "de-egbgb-246a",
+          "title": "Einführungsgesetz zum Bürgerlichen Gesetzbuche, Art. 246a § 1 Informationspflichten",
+          "publisher": "Bundesamt für Justiz (gesetze-im-internet.de)",
+          "type": "Law (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.gesetze-im-internet.de/bgbeg/art_246a__1.html",
+          "status": "confirmed",
+          "note": "§ 1(1) No. 6 of the current text read.",
+          "summary": "For online and other distance contracts, a seller must tell the consumer when a price was personalized based on automated decision-making."
+        },
+        {
+          "id": "de-cjeu-c634-21",
+          "title": "Press Release No 186/23: Judgments of the Court of Justice in Case C-634/21 and in Joined Cases C-26/22 and C-64/22",
+          "publisher": "Court of Justice of the European Union",
+          "date": "2023-12-07",
+          "type": "Court ruling (EU)",
+          "jurisdiction": "European Union",
+          "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2023-12/cp230186en.pdf",
+          "status": "confirmed",
+          "note": "The official press release was read; the full judgment could not be opened by automated readers.",
+          "summary": "The EU Court of Justice held that producing a credit score can be an automated decision under GDPR Article 22 when a lender gives the score a deciding role in granting credit."
+        },
+        {
+          "id": "de-bnetza-ki-beschwerde",
+          "title": "KI Service Desk – Beschwerdestelle",
+          "publisher": "Bundesnetzagentur",
+          "type": "Regulator (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/Digitales/KI/18_Beschwerdestelle/start.html",
+          "status": "confirmed",
+          "note": "Page read on 27 September 2026.",
+          "summary": "The Bundesnetzagentur's central AI complaint office. Complaints are free, go through an online form, and are passed on to the right authority if needed."
+        },
+        {
+          "id": "de-bfdi-beschwerde",
+          "title": "Beschwerde über Datenschutzverstöße bei den Aufsichtsbehörden",
+          "publisher": "Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)",
+          "type": "Regulator (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.bfdi.bund.de/DE/Buerger/Inhalte/Allgemein/Datenschutz/BeschwerdeBeiDatenschutzbehoereden.html",
+          "status": "confirmed",
+          "note": "Page read on 27 September 2026.",
+          "summary": "Explains the right to complain to a data protection authority, and which authority covers which organizations."
+        },
+        {
+          "id": "de-verbraucherzentrale",
+          "title": "Beratung bei den Verbraucherzentralen",
+          "publisher": "Verbraucherzentrale Bundesverband / Verbraucherzentralen der Länder",
+          "type": "Consumer organization (Germany)",
+          "jurisdiction": "Germany",
+          "url": "https://www.verbraucherzentrale.de/beratung",
+          "status": "confirmed",
+          "note": "Page read on 27 September 2026.",
+          "summary": "The consumer advice centres in the German states give advice and help with consumer problems; some advice has a fee."
         }
       ]
     }

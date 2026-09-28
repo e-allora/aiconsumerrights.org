@@ -7,7 +7,7 @@ import { defineRouting } from "next-intl/routing";
 // matches it: a bare "pt" counts as Brazilian to the language matcher, which
 // sent pt-PT visitors to /pt-BR. Its URL stays /pt.
 export const routing = defineRouting({
-  locales: ["en", "es", "pt-PT", "pt-BR", "it", "fr"],
+  locales: ["en", "es", "pt-PT", "pt-BR", "it", "fr", "de"],
   defaultLocale: "en",
   localePrefix: { mode: "always", prefixes: { "pt-PT": "/pt" } },
 });
@@ -38,4 +38,5 @@ export const LOCALE_TAGS: Record<Locale, { lang: string; hreflang: string; og: s
   "pt-BR": { lang: "pt-BR", hreflang: "pt-BR", og: "pt_BR" },
   it: { lang: "it", hreflang: "it", og: "it_IT" },
   fr: { lang: "fr", hreflang: "fr", og: "fr_FR" },
+  de: { lang: "de", hreflang: "de", og: "de_DE" },
 };
