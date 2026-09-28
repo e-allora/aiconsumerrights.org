@@ -53,3 +53,6 @@ next-env.d.ts
 
 # Robert's downloaded reading copies (PDFs of sources), never published
 /Ai-consumerrights-reading/
+
+# Robert's private outreach drafts, never published
+/outreach-drafts/
