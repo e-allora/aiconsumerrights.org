@@ -33,8 +33,8 @@ const config: Config = {
         charcoal: "#12232E",
       },
       fontFamily: {
-        sans: ["var(--font-body)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "var(--font-body)", "sans-serif"],
+        sans: ["var(--font-body)", "var(--font-devanagari)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-body)", "var(--font-devanagari)", "sans-serif"],
       },
       // Layer-cake scale: big, bold headings a reader can scan down the page.
       fontSize: {

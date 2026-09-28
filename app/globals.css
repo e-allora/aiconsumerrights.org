@@ -64,6 +64,13 @@
        Planned break points are soft hyphens in the text itself. */
     overflow-wrap: break-word;
   }
+  /* Devanagari has vowel marks above and below the letters, which tight
+     heading lines would clip, and a bar across the top that joins each
+     word, which negative letter spacing would break. */
+  :lang(hi) :is(h1, h2, h3, h4) {
+    line-height: 1.35;
+    letter-spacing: normal;
+  }
   h1 { @apply text-display-xl; }
   h2 { @apply text-display-lg; }
   h3 { @apply text-display-md; }

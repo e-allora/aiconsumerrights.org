@@ -40,7 +40,8 @@
       "pt-BR": "Português (BR)",
       "it": "Italiano",
       "fr": "Français",
-      "de": "Deutsch"
+      "de": "Deutsch",
+      "hi": "हिन्दी"
     }
   },
   "Home": {
@@ -111,6 +112,10 @@
         "de": {
           "name": "Deutschland",
           "intro": "Deutschland folgt den Regeln der EU. Es hat eine nationale KI-Aufsicht, und neue Rechte beim Kredit-Scoring gelten ab dem 20. November 2026."
+        },
+        "in": {
+          "name": "Indien",
+          "intro": "Indien hat kein eigenes KI-Gesetz. Die wichtigsten Rechte seines Datenschutzgesetzes gelten ab Mai 2027, und Online-Plattformen müssen realistische KI-Inhalte kennzeichnen."
         }
       },
       "rows": {
@@ -121,7 +126,8 @@
           "br": "Noch nicht durch ein nationales KI-Gesetz vorgeschrieben. Der Gesetzentwurf PL 2338/2023, im Dezember 2024 vom Senat beschlossen, würde es verlangen. Er ist noch ein Entwurf.",
           "it": "Die Regeln der EU gelten. Das italienische KI-Gesetz geht weiter: Fachleute müssen ihren Kundinnen und Kunden in klaren, einfachen Worten sagen, welche KI-Systeme sie nutzen. Arbeitgeber müssen die Beschäftigten informieren.",
           "fr": "Die Regeln der EU gelten. Frankreich hat zwei zusätzliche Regeln. Eine Behörde muss Ihnen sagen, wenn sie einen Algorithmus genutzt hat, um über Sie zu entscheiden. Bezahlte Influencer müssen mit KI erstellte Bilder eines Gesichts oder Körpers als „Images virtuelles“ kennzeichnen.",
-          "de": "Die Regeln der EU gelten. Deutschland hat eine zusätzliche Regel für Preise: Online-Händler müssen Ihnen sagen, wenn ein Preis durch eine automatisierte Entscheidung personalisiert wurde. Ab dem 20. November 2026 müssen auch Kreditgeber sagen, wenn ein Kreditangebot so personalisiert wurde."
+          "de": "Die Regeln der EU gelten. Deutschland hat eine zusätzliche Regel für Preise: Online-Händler müssen Ihnen sagen, wenn ein Preis durch eine automatisierte Entscheidung personalisiert wurde. Ab dem 20. November 2026 müssen auch Kreditgeber sagen, wenn ein Kreditangebot so personalisiert wurde.",
+          "in": "Teilweise. Seit dem 20. Februar 2026 müssen Online-Plattformen realistische Bilder, Videos und Töne, die mit KI erstellt oder verändert wurden, deutlich kennzeichnen. Die geprüften Quellen zeigen keine allgemeine Regel, dass man Ihnen sagen muss, wenn Sie mit einem KI-System wie einem Chatbot zu tun haben."
         },
         "reasons": {
           "question": "Kann ich die Gründe für eine Entscheidung erfahren?",
@@ -130,7 +136,8 @@
           "br": "Sie können klare Informationen über die genutzten Kriterien und Verfahren verlangen, soweit Geschäftsgeheimnisse es erlauben. Eine Anfrage zu Ihren Daten wird innerhalb von 15 Tagen vollständig beantwortet.",
           "it": "Die Rechte der DSGVO gelten, wie in der ganzen EU. Im Gesundheitswesen haben Sie das Recht zu erfahren, wann KI eingesetzt wird.",
           "fr": "Die Rechte der DSGVO gelten, wie in der ganzen EU. Wenn eine Behörde einen Algorithmus genutzt hat, um über Sie zu entscheiden, können Sie fragen, wie: welche Daten sie genutzt hat, woher die Daten kamen und wie stark der Algorithmus gewichtet wurde.",
-          "de": "Die Rechte der DSGVO gelten, wie in der ganzen EU. Ab dem 20. November 2026 muss, wer einen Score zur Kreditwürdigkeit erstellt, Ihnen auf Antrag und in klaren Worten sagen, welche Ihrer Daten und Kriterien ihn am stärksten beeinflusst haben."
+          "de": "Die Rechte der DSGVO gelten, wie in der ganzen EU. Ab dem 20. November 2026 muss, wer einen Score zur Kreditwürdigkeit erstellt, Ihnen auf Antrag und in klaren Worten sagen, welche Ihrer Daten und Kriterien ihn am stärksten beeinflusst haben.",
+          "in": "Kein eigenes Recht auf Gründe. Ab Mai 2027 können Sie ein Unternehmen um eine Übersicht Ihrer personenbezogenen Daten und ihrer Nutzung bitten, und es muss innerhalb von höchstens 90 Tagen antworten. Das Gesetz gibt kein Recht auf eine Erklärung einer automatisierten Entscheidung."
         },
         "review": {
           "question": "Kann ein Mensch die Entscheidung prüfen?",
@@ -139,7 +146,8 @@
           "br": "Ja, bei Entscheidungen, die ausschließlich automatisiert getroffen wurden. Das Gesetz sagt nicht mehr, dass ein Mensch die Prüfung machen muss.",
           "it": "Artikel 22 der DSGVO gilt. Das italienische Gesetz ergänzt: Im Gesundheitswesen entscheidet immer die Ärztin oder der Arzt, und in der öffentlichen Verwaltung bleibt der Mensch allein verantwortlich.",
           "fr": "Ja, nach den Regeln der EU (DSGVO). Frankreich geht weiter: Über Ihren Widerspruch bei einer Behörde darf nie eine Maschine allein entscheiden, und ein Gericht darf Ihr Verhalten nicht allein auf Grundlage eines automatischen Profils bewerten.",
-          "de": "Ja, nach den Regeln der EU. Der Gerichtshof der EU (Rechtssache C-634/21) hat gesagt, dass ein Kredit-Score als automatisierte Entscheidung zählen kann, wenn ein Kreditgeber sich stark auf ihn stützt. Ab dem 20. November 2026 können Sie eine auf einem Score beruhende Entscheidung anfechten und verlangen, dass ein Mensch entscheidet."
+          "de": "Ja, nach den Regeln der EU. Der Gerichtshof der EU (Rechtssache C-634/21) hat gesagt, dass ein Kredit-Score als automatisierte Entscheidung zählen kann, wenn ein Kreditgeber sich stark auf ihn stützt. Ab dem 20. November 2026 können Sie eine auf einem Score beruhende Entscheidung anfechten und verlangen, dass ein Mensch entscheidet.",
+          "in": "Kein Recht darauf, dass ein Mensch eine automatisierte Entscheidung prüft. Ab Mai 2027 können Sie verlangen, dass falsche Daten berichtigt werden, und Daten, mit denen über Sie entschieden wird, müssen vollständig und richtig sein."
         },
         "enforce": {
           "question": "Wer prüft die Regeln?",
@@ -148,7 +156,8 @@
           "br": "Die nationale Datenschutzbehörde (ANPD). Sie kann ein System auf Diskriminierung prüfen, wenn Geschäftsgeheimnisse begrenzen, was man Ihnen sagt.",
           "it": "Die Datenschutzbehörde (Garante) behält ihre Befugnisse zu prüfen, zu sperren und Bußgelder zu verhängen. Das KI-Gesetz benennt zwei nationale KI-Behörden: AgID und ACN.",
           "fr": "Die Datenschutzbehörde (CNIL) prüft die Datenregeln, und die Verbraucherschutzbehörde (DGCCRF) prüft die Verbraucherregeln. Frankreich hat seine Behörden für die KI-Verordnung der EU noch nicht per Gesetz benannt.",
-          "de": "Die Bundesnetzagentur prüft die Regeln der KI-Verordnung der EU und nimmt Beschwerden zu KI für ganz Deutschland an. Die Finanzaufsicht (BaFin) ist für KI im Finanzbereich zuständig. Für personenbezogene Daten sind die Datenschutzbehörden des Bundes und der Länder zuständig."
+          "de": "Die Bundesnetzagentur prüft die Regeln der KI-Verordnung der EU und nimmt Beschwerden zu KI für ganz Deutschland an. Die Finanzaufsicht (BaFin) ist für KI im Finanzbereich zuständig. Für personenbezogene Daten sind die Datenschutzbehörden des Bundes und der Länder zuständig.",
+          "in": "Das Data Protection Board of India (Datenschutzbehörde). Das Gesetz hat es im November 2025 eingerichtet, aber seine Befugnis, Beschwerden zu prüfen und Bußgelder zu verhängen, beginnt erst im Mai 2027. Im Mai 2026 hat die Regierung die Stellen für seine Mitglieder ausgeschrieben. Einsprüche zu Inhalten auf Plattformen gehen an das Grievance Appellate Committee."
         },
         "changing": {
           "question": "Was ändert sich?",
@@ -157,7 +166,8 @@
           "br": "Der Gesetzentwurf PL 2338/2023 würde ein risikobasiertes KI-Gesetz schaffen, mit Rechten auf eine Erklärung, auf Anfechtung von Entscheidungen und auf menschliche Prüfung. Stand 23. September 2026 wartet er auf einen Bericht in einem Sonderausschuss der Abgeordnetenkammer.",
           "it": "Das Gesetz Nr. 132/2025, Italiens nationales KI-Gesetz, gilt seit dem 10. Oktober 2025. Es wirkt zusammen mit der KI-Verordnung der EU. Kinder unter 14 Jahren brauchen die Zustimmung eines Elternteils, um KI zu nutzen.",
           "fr": "Ein Gesetzentwurf, den der Senat am 18. Februar 2026 beschlossen hat, würde die CNIL zur wichtigsten KI-Behörde Frankreichs machen und ihr Beschwerden zu KI übertragen. Stand 27. September 2026 wartet er auf eine Abstimmung in der Nationalversammlung.",
-          "de": "Das deutsche KI-Aufsichtsgesetz (KI-MIG) gilt seit dem 29. Juli 2026. Ab dem 20. November 2026 dürfen Kredit-Scores weder Ihre Adresse, Ihr Alter, Ihr Geschlecht, Ihren Namen, soziale Netzwerke, Kontobewegungen noch sensible Daten wie Gesundheitsdaten nutzen, und sie dürfen nicht über Minderjährige erstellt werden."
+          "de": "Das deutsche KI-Aufsichtsgesetz (KI-MIG) gilt seit dem 29. Juli 2026. Ab dem 20. November 2026 dürfen Kredit-Scores weder Ihre Adresse, Ihr Alter, Ihr Geschlecht, Ihren Namen, soziale Netzwerke, Kontobewegungen noch sensible Daten wie Gesundheitsdaten nutzen, und sie dürfen nicht über Minderjährige erstellt werden.",
+          "in": "Die wichtigsten Datenrechte gelten ab Mai 2027. Ein Entwurf, zu dem man bis Mai 2026 Stellung nehmen konnte, würde KI-Kennzeichnungen während eines ganzen Videos sichtbar halten. Die KI-Leitlinien der Regierung (November 2025) sind nicht verbindlich und sagen, dass ein eigenes KI-Gesetz noch nicht nötig ist."
         }
       }
     },

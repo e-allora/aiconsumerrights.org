@@ -21,6 +21,7 @@ const ptBR = flatten(MESSAGES["pt-BR"] as unknown as Tree);
 const itMsgs = flatten(MESSAGES.it as unknown as Tree);
 const frMsgs = flatten(MESSAGES.fr as unknown as Tree);
 const deMsgs = flatten(MESSAGES.de as unknown as Tree);
+const hiMsgs = flatten(MESSAGES.hi as unknown as Tree);
 
 // The blameless-tone checks keep companies out of what the site says about
 // AI and consumers. Naming the tools the site itself uses is disclosure, not
@@ -32,7 +33,7 @@ const opinions = (m: Record<string, string>) =>
   Object.entries(m)
     .filter(([key]) => !isDisclosure(key))
     .map(([, v]) => v);
-const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs, fr: frMsgs, de: deMsgs };
+const TRANSLATIONS = { es, "pt-PT": pt, "pt-BR": ptBR, it: itMsgs, fr: frMsgs, de: deMsgs, hi: hiMsgs };
 // Keys that may be empty on purpose (an unlabeled rule; a note only Spanish needs).
 const MAY_BE_EMPTY = /(rule2Label|sourcesLanguageNote)$/;
 const placeholders = (s: string) => Array.from(s.matchAll(/\{(\w+)/g), (m) => m[1]).sort();
@@ -51,7 +52,7 @@ describe("message files", () => {
   });
 
   it("have no empty translations", () => {
-    for (const messages of [en, es, pt, ptBR, itMsgs, frMsgs, deMsgs]) {
+    for (const messages of [en, es, pt, ptBR, itMsgs, frMsgs, deMsgs, hiMsgs]) {
       for (const [k, v] of Object.entries(messages)) {
         if (!MAY_BE_EMPTY.test(k)) expect(`${k}: ${v.trim()}`).not.toBe(`${k}: `);
       }
@@ -118,6 +119,7 @@ describe("message files", () => {
         it: "Italiano",
         fr: "Français",
         de: "Deutsch",
+        hi: "हिन्दी",
       });
     }
   });
@@ -194,6 +196,21 @@ describe("message files", () => {
     expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
   });
 
+  it("include the required Hindi wording, gender-neutral in the first person", () => {
+    const m = MESSAGES.hi;
+    expect(m.Common.siteName).toBe("एआई और उपभोक्ता अधिकार");
+    expect(m.Forum.principles.critique).toBe("विचारों की आलोचना करें, लोगों की कभी नहीं");
+    expect(m.PAUSEStrategy.steps.protect.title).toBe("Protect (अपनी जानकारी सुरक्षित रखें)");
+    // "सकता हूँ" and similar mark the reader as male; the site addresses everyone.
+    expect(Object.values(hiMsgs).join(" ")).not.toMatch(/(सकता|रहा|चाहता|करता) हूँ/);
+  });
+
+  it("keep the blameless tone in Hindi: no blame words or named companies", () => {
+    const text = opinions(hiMsgs).join(" ");
+    expect(text).not.toMatch(/(धोखा|घोटाला|शर्म|लालची|दोषी)/);
+    expect(text).not.toMatch(/\b(OpenAI|Google|Meta|Amazon|Microsoft|Apple|Rite Aid)\b/);
+  });
+
   it("keep the blameless tone in Italian: no blame words or named companies", () => {
     const text = opinions(itMsgs).join(" ");
     expect(text).not.toMatch(/\b(truffa|frode|colpevole|vergogna|avid[io])/i);
@@ -247,6 +264,8 @@ describe("PAUSE Strategy messages", () => {
     expect(letters("it")).toBe("PAUSA");
     expect(letters("fr")).toBe("PAUSE");
     expect(letters("de")).toBe("PAUSE");
+    // Devanagari can't spell PAUSE; Hindi keeps the English keyword, then its meaning.
+    expect(letters("hi")).toBe("PAUSE");
   });
 
   it("start each step title with its letter", () => {

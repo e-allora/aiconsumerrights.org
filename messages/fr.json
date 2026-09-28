@@ -40,7 +40,8 @@
       "pt-BR": "Português (BR)",
       "it": "Italiano",
       "fr": "Français",
-      "de": "Deutsch"
+      "de": "Deutsch",
+      "hi": "हिन्दी"
     }
   },
   "Home": {
@@ -111,6 +112,10 @@
         "de": {
           "name": "Allemagne",
           "intro": "L'Allemagne suit les règles de l'UE. Elle a une autorité nationale de contrôle de l'IA, et de nouveaux droits sur le score de crédit commencent le 20 novembre 2026."
+        },
+        "in": {
+          "name": "Inde",
+          "intro": "L'Inde n'a pas de loi propre à l'IA. Les principaux droits de sa loi sur la protection des données commencent en mai 2027, et les plateformes en ligne doivent signaler les contenus réalistes créés par IA."
         }
       },
       "rows": {
@@ -121,7 +126,8 @@
           "br": "Pas encore exigé par une loi nationale sur l'IA. Le projet de loi PL 2338/2023, adopté par le Sénat en décembre 2024, l'exigerait. Ce n'est encore qu'un projet de loi.",
           "it": "Les règles de l'UE s'appliquent. La loi italienne sur l'IA va plus loin : les professionnels doivent dire à leurs clients, avec des mots clairs et simples, quels systèmes d'IA ils utilisent. Les employeurs doivent informer leurs salariés.",
           "fr": "Les règles de l'UE s'appliquent. La France ajoute deux règles. Un organisme public doit vous dire quand il a utilisé un algorithme pour décider à votre sujet. Les influenceurs rémunérés doivent marquer « Images virtuelles » les images d'un visage ou d'un corps créées par IA.",
-          "de": "Les règles de l'UE s'appliquent. L'Allemagne ajoute une règle sur les prix : les vendeurs en ligne doivent vous dire si un prix a été personnalisé par une décision automatisée. À partir du 20 novembre 2026, les prêteurs devront aussi vous dire si une offre de prêt a été personnalisée ainsi."
+          "de": "Les règles de l'UE s'appliquent. L'Allemagne ajoute une règle sur les prix : les vendeurs en ligne doivent vous dire si un prix a été personnalisé par une décision automatisée. À partir du 20 novembre 2026, les prêteurs devront aussi vous dire si une offre de prêt a été personnalisée ainsi.",
+          "in": "En partie. Depuis le 20 février 2026, les plateformes en ligne doivent signaler clairement les images, vidéos et sons réalistes créés ou modifiés par IA. Les sources consultées ne montrent aucune règle générale obligeant à vous dire quand vous avez affaire à un système d'IA, comme un chatbot."
         },
         "reasons": {
           "question": "Puis-je connaître les raisons d'une décision ?",
@@ -130,7 +136,8 @@
           "br": "Vous pouvez demander des informations claires sur les critères et les procédures utilisés, dans les limites du secret des affaires. Une demande d'accès à vos données reçoit une réponse complète sous 15 jours.",
           "it": "Les droits du RGPD s'appliquent, comme dans toute l'UE. Dans la santé, vous avez le droit de savoir quand l'IA est utilisée.",
           "fr": "Les droits du RGPD s'appliquent, comme dans toute l'UE. Si un organisme public a utilisé un algorithme pour décider à votre sujet, vous pouvez demander comment : quelles données il a utilisées, d'où elles venaient et quel poids l'algorithme a eu.",
-          "de": "Les droits du RGPD s'appliquent, comme dans toute l'UE. À partir du 20 novembre 2026, celui qui calcule un score de crédit devra vous dire, sur demande et avec des mots clairs, quelles données et quels facteurs ont le plus pesé."
+          "de": "Les droits du RGPD s'appliquent, comme dans toute l'UE. À partir du 20 novembre 2026, celui qui calcule un score de crédit devra vous dire, sur demande et avec des mots clairs, quelles données et quels facteurs ont le plus pesé.",
+          "in": "Pas de droit précis à connaître les raisons. À partir de mai 2027, vous pourrez demander à une entreprise un résumé de vos données personnelles et de leur usage, et elle devra répondre sous 90 jours au plus. La loi ne donne aucun droit à une explication d'une décision automatisée."
         },
         "review": {
           "question": "Une personne peut-elle réexaminer la décision ?",
@@ -139,7 +146,8 @@
           "br": "Oui, pour les décisions prises uniquement par un traitement automatisé. La loi ne dit plus qu'une personne doit faire le réexamen.",
           "it": "L'article 22 du RGPD s'applique. La loi italienne ajoute : dans la santé, la décision reste toujours au médecin, et dans l'administration publique, la personne reste seule responsable.",
           "fr": "Oui, selon les règles de l'UE (RGPD). La France va plus loin : une machine seule ne peut jamais trancher votre recours auprès d'un organisme public, et un juge ne peut pas évaluer votre comportement sur la seule base d'un profilage automatisé.",
-          "de": "Oui, selon les règles de l'UE. La Cour de justice de l'UE (affaire C-634/21) a dit qu'un score de crédit peut compter comme une décision automatisée quand un prêteur s'appuie fortement dessus. À partir du 20 novembre 2026, vous pourrez contester une décision fondée sur un score et demander qu'une personne décide."
+          "de": "Oui, selon les règles de l'UE. La Cour de justice de l'UE (affaire C-634/21) a dit qu'un score de crédit peut compter comme une décision automatisée quand un prêteur s'appuie fortement dessus. À partir du 20 novembre 2026, vous pourrez contester une décision fondée sur un score et demander qu'une personne décide.",
+          "in": "Pas de droit à un réexamen humain d'une décision automatisée. À partir de mai 2027, vous pourrez demander la correction de données fausses, et les données utilisées pour décider à votre sujet devront être complètes et exactes."
         },
         "enforce": {
           "question": "Qui contrôle les règles ?",
@@ -148,7 +156,8 @@
           "br": "L'autorité nationale de protection des données (ANPD). Elle peut vérifier si un système discrimine quand le secret des affaires limite ce qu'on vous dit.",
           "it": "L'autorité de protection des données (Garante) garde ses pouvoirs de contrôle, de blocage et de sanction. La loi sur l'IA désigne deux autorités nationales de l'IA : l'AgID et l'ACN.",
           "fr": "L'autorité de protection des données (CNIL) contrôle les règles sur les données, et l'administration de la consommation (DGCCRF) contrôle les règles de consommation. La France n'a pas encore désigné par la loi ses autorités pour le règlement européen sur l'IA.",
-          "de": "La Bundesnetzagentur contrôle les règles du règlement européen sur l'IA et reçoit les plaintes liées à l'IA pour tout le pays. Le superviseur financier (BaFin) s'occupe de l'IA dans la finance. Les autorités de protection des données, fédérale et régionales, s'occupent des données personnelles."
+          "de": "La Bundesnetzagentur contrôle les règles du règlement européen sur l'IA et reçoit les plaintes liées à l'IA pour tout le pays. Le superviseur financier (BaFin) s'occupe de l'IA dans la finance. Les autorités de protection des données, fédérale et régionales, s'occupent des données personnelles.",
+          "in": "Le Data Protection Board of India (conseil de protection des données). La loi l'a créé en novembre 2025, mais son pouvoir de traiter les plaintes et d'infliger des amendes commence en mai 2027. En mai 2026, le gouvernement a lancé l'appel à candidatures pour ses membres. Les recours sur les contenus des plateformes vont au Grievance Appellate Committee."
         },
         "changing": {
           "question": "Qu'est-ce qui change ?",
@@ -157,7 +166,8 @@
           "br": "Le projet de loi PL 2338/2023 créerait une loi sur l'IA fondée sur le risque, avec le droit à une explication, à contester les décisions et à un réexamen humain. Au 23 septembre 2026, il attend un rapport dans une commission spéciale de la Chambre des députés.",
           "it": "La loi n° 132/2025, la loi nationale italienne sur l'IA, est en vigueur depuis le 10 octobre 2025. Elle s'applique avec le règlement européen sur l'IA. Les enfants de moins de 14 ans ont besoin de l'accord d'un parent pour utiliser l'IA.",
           "fr": "Un projet de loi adopté par le Sénat le 18 février 2026 ferait de la CNIL la principale autorité française de l'IA et lui confierait les plaintes liées à l'IA. Au 27 septembre 2026, il attend un vote à l'Assemblée nationale.",
-          "de": "La loi allemande de contrôle de l'IA (KI-MIG) est en vigueur depuis le 29 juillet 2026. À partir du 20 novembre 2026, les scores de crédit ne pourront plus utiliser votre adresse, votre âge, votre genre, votre nom, vos réseaux sociaux, les mouvements de votre compte bancaire ni des données sensibles comme la santé, ni concerner des mineurs."
+          "de": "La loi allemande de contrôle de l'IA (KI-MIG) est en vigueur depuis le 29 juillet 2026. À partir du 20 novembre 2026, les scores de crédit ne pourront plus utiliser votre adresse, votre âge, votre genre, votre nom, vos réseaux sociaux, les mouvements de votre compte bancaire ni des données sensibles comme la santé, ni concerner des mineurs.",
+          "in": "Les principaux droits sur les données commencent en mai 2027. Un projet de règle, ouvert aux commentaires jusqu'en mai 2026, garderait les étiquettes d'IA visibles pendant toute une vidéo. Les lignes directrices du gouvernement sur l'IA (novembre 2025) ne sont pas contraignantes et disent qu'une loi à part sur l'IA n'est pas encore nécessaire."
         }
       }
     },

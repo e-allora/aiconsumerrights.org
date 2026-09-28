@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Atkinson_Hyperlegible, Bricolage_Grotesque } from "next/font/google";
+import { Atkinson_Hyperlegible, Bricolage_Grotesque, Noto_Sans_Devanagari } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -23,6 +23,17 @@ const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
+});
+
+// Hindi: neither font above has Devanagari, so this one fills in, glyph by
+// glyph. Its @font-face is limited to the Devanagari range, so browsers only
+// download it on pages that show Devanagari text.
+const devanagari = Noto_Sans_Devanagari({
+  subsets: ["devanagari"],
+  weight: ["400", "700"],
+  variable: "--font-devanagari",
+  display: "swap",
+  preload: false,
 });
 
 type Props = { children: React.ReactNode; params: { locale: string } };
@@ -96,7 +107,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
     // next-themes sets the class on <html> before hydration.
     <html lang={LOCALE_TAGS[locale].lang} suppressHydrationWarning>
       <body
-        className={`${body.variable} ${display.variable} pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0`}
+        className={`${body.variable} ${display.variable} ${devanagari.variable} pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0`}
       >
         <JsonLd data={websiteLd} />
         <NextIntlClientProvider locale={locale} messages={messages} timeZone="UTC">

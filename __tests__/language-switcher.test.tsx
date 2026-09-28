@@ -85,9 +85,10 @@ describe("LanguageSwitcher", () => {
       "Italiano",
       "Français",
       "Deutsch",
+      "हिन्दी",
     ]);
-    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es", "pt-PT", "pt-BR", "it", "fr", "de"]);
-    expect(items.map((i) => i.getAttribute("aria-checked"))).toEqual(["true", "false", "false", "false", "false", "false", "false"]);
+    expect(items.map((i) => i.getAttribute("lang"))).toEqual(["en", "es", "pt-PT", "pt-BR", "it", "fr", "de", "hi"]);
+    expect(items.map((i) => i.getAttribute("aria-checked"))).toEqual(["true", "false", "false", "false", "false", "false", "false", "false"]);
   });
 
   it("switches /en/forum to /es/forum, keeping the page", async () => {

@@ -270,7 +270,9 @@ export function VotingEngine({
                       id={tipId}
                       role="tooltip"
                       className={cn(
-                        "pointer-events-none absolute left-0 top-full z-10 mt-2 w-56 rounded-md bg-foreground px-3 py-2 text-sm text-background shadow-depth-2",
+                        // As wide as its button, never wider: the buttons wrap on phones,
+                        // and a wider tip under the second one ran off screen.
+                        "pointer-events-none absolute inset-x-0 top-full z-10 mt-2 rounded-md bg-foreground px-3 py-2 text-sm text-background shadow-depth-2",
                         "invisible opacity-0 transition-opacity duration-fast group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100"
                       )}
                     >

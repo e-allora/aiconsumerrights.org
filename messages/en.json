@@ -40,7 +40,8 @@
       "pt-BR": "Português (BR)",
       "it": "Italiano",
       "fr": "Français",
-      "de": "Deutsch"
+      "de": "Deutsch",
+      "hi": "हिन्दी"
     }
   },
   "Home": {
@@ -111,6 +112,10 @@
         "de": {
           "name": "Germany",
           "intro": "Germany follows EU rules. It has a national AI supervisor, and new credit-score rights start on 20 November 2026."
+        },
+        "in": {
+          "name": "India",
+          "intro": "India has no AI-specific law. Its data protection law's main rights start in May 2027, and online platforms must label realistic AI-made content."
         }
       },
       "rows": {
@@ -121,7 +126,8 @@
           "br": "Not yet required by a national AI law. Bill PL 2338/2023, passed by the Senate in December 2024, would require it. It is still a bill.",
           "it": "EU rules apply. Italy's AI law adds more: professionals must tell clients, in clear and simple words, which AI systems they use. Employers must inform workers.",
           "fr": "EU rules apply. France adds two rules. A public body must tell you when it used an algorithm to decide about you. Paid influencers must label AI-made images of a face or body as \"Images virtuelles\".",
-          "de": "EU rules apply. Germany adds a rule for prices: online sellers must tell you if a price was personalized by an automated decision. From 20 November 2026, lenders must also tell you if a loan offer was personalized this way."
+          "de": "EU rules apply. Germany adds a rule for prices: online sellers must tell you if a price was personalized by an automated decision. From 20 November 2026, lenders must also tell you if a loan offer was personalized this way.",
+          "in": "Partly. Since 20 February 2026, online platforms must clearly label realistic AI-made or AI-changed pictures, video, and sound. The sources checked show no general rule that you must be told when you deal with an AI system, such as a chatbot."
         },
         "reasons": {
           "question": "Can I get the reasons for a decision?",
@@ -130,7 +136,8 @@
           "br": "You can ask for clear information on the criteria and procedures used, within trade-secret limits. A request for your data gets a complete answer within 15 days.",
           "it": "GDPR rights apply, as across the EU. In health care, you have the right to be told when AI is used.",
           "fr": "GDPR rights apply, as across the EU. If a public body used an algorithm to decide about you, you can ask how: what data it used, where the data came from, and how much the algorithm counted.",
-          "de": "GDPR rights apply, as across the EU. From 20 November 2026, whoever makes a credit score must tell you, on request and in plain words, which of your data and factors shaped it most."
+          "de": "GDPR rights apply, as across the EU. From 20 November 2026, whoever makes a credit score must tell you, on request and in plain words, which of your data and factors shaped it most.",
+          "in": "No specific right to reasons. From May 2027, you can ask a company for a summary of your personal data and how it is used, and it must answer within 90 days. The law gives no right to an explanation of an automated decision."
         },
         "review": {
           "question": "Can a person review it?",
@@ -139,7 +146,8 @@
           "br": "Yes, for decisions made solely by automated processing. The law no longer says a person must do the review.",
           "it": "GDPR Article 22 applies. Italy's law adds: in health care the decision always stays with the doctor, and in public administration the person stays solely responsible.",
           "fr": "Yes, under EU rules (GDPR). France adds more: a machine alone can never decide your appeal to a public body, and a court can't judge your behavior based only on automated profiling.",
-          "de": "Yes, under EU rules. The EU Court of Justice (case C-634/21) said a credit score can count as an automated decision when a lender relies on it heavily. From 20 November 2026, you can challenge a score-based decision and have a person decide."
+          "de": "Yes, under EU rules. The EU Court of Justice (case C-634/21) said a credit score can count as an automated decision when a lender relies on it heavily. From 20 November 2026, you can challenge a score-based decision and have a person decide.",
+          "in": "No right to a human review of an automated decision. From May 2027, you can ask for wrong data to be corrected, and data used to make a decision about you must be complete and accurate."
         },
         "enforce": {
           "question": "Who checks the rules?",
@@ -148,7 +156,8 @@
           "br": "The national data protection authority (ANPD). It can audit a system for discrimination when trade secrets limit what you are told.",
           "it": "The data protection authority (Garante) keeps its powers to inspect, block, and fine. The AI law names two national AI authorities: AgID and ACN.",
           "fr": "The data protection authority (CNIL) checks data rules, and the consumer agency (DGCCRF) checks consumer rules. France has not yet named its EU AI Act authorities in law.",
-          "de": "The Bundesnetzagentur checks the EU AI Act rules and takes AI complaints for the whole country. The financial supervisor (BaFin) covers AI in finance. Federal and state data protection authorities cover personal data."
+          "de": "The Bundesnetzagentur checks the EU AI Act rules and takes AI complaints for the whole country. The financial supervisor (BaFin) covers AI in finance. Federal and state data protection authorities cover personal data.",
+          "in": "The Data Protection Board of India. The law set it up in November 2025, but its power to hear complaints and fine starts in May 2027. In May 2026 the government invited applications for its members. Appeals about platform content go to the Grievance Appellate Committee."
         },
         "changing": {
           "question": "What is changing?",
@@ -157,7 +166,8 @@
           "br": "Bill PL 2338/2023 would add a risk-based AI law with rights to an explanation, to contest decisions, and to human review. As of 23 September 2026, it waits for a report in a special committee of the Chamber of Deputies.",
           "it": "Law No. 132/2025, Italy's national AI law, has been in force since 10 October 2025. It works alongside the EU AI Act. Children under 14 need a parent's consent to use AI.",
           "fr": "A bill passed by the Senate on 18 February 2026 would make the CNIL France's main AI authority and let it handle AI complaints. As of 27 September 2026, it waits for a vote in the National Assembly.",
-          "de": "Germany's AI supervision law (KI-MIG) has been in force since 29 July 2026. From 20 November 2026, credit scores may not use your address, age, gender, name, social media, bank account payments, or sensitive data such as health, and may not be made about children."
+          "de": "Germany's AI supervision law (KI-MIG) has been in force since 29 July 2026. From 20 November 2026, credit scores may not use your address, age, gender, name, social media, bank account payments, or sensitive data such as health, and may not be made about children.",
+          "in": "The main data rights start in May 2027. A draft rule, open for comment until May 2026, would keep AI labels visible for the whole length of a video. The government's AI guidelines (November 2025) are not binding and say no separate AI law is needed yet."
         }
       }
     },

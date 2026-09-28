@@ -64,7 +64,7 @@ describe("Guide page", () => {
 
     const picker = screen.getByRole("group", { name: "Compare with" });
     const radios = within(picker).getAllByRole("radio");
-    expect(radios.map((r) => r.closest("label")!.textContent)).toEqual(["Brazil", "France", "Germany", "Italy"]);
+    expect(radios.map((r) => r.closest("label")!.textContent)).toEqual(["Brazil", "France", "Germany", "India", "Italy"]);
     expect(within(picker).getByRole("radio", { name: "Brazil" })).toBeChecked();
 
     fireEvent.click(within(picker).getByRole("radio", { name: "Italy" }));
@@ -126,6 +126,22 @@ describe("Guide page", () => {
     expect(germany[4]).toHaveTextContent("in force since 29 July 2026");
   });
 
+  it("cites every India cell, and says plainly which rights India's law does not give", () => {
+    fireEvent.click(screen.getByRole("radio", { name: "India" }));
+    const india = countryCells();
+    expect(india.map(cited)).toEqual([
+      ["in-it-amendment-rules-2026", "in-it-rules-2021-consolidated", "in-ai-governance-guidelines-2025"],
+      ["in-dpdp-act-2023", "in-dpdp-commencement-2025", "in-pib-dpdp-rules-2025"],
+      ["in-dpdp-act-2023", "in-dpdp-commencement-2025"],
+      ["in-dpdp-act-2023", "in-dpbi-appointments-2026", "in-gac-portal"],
+      ["in-dpdp-commencement-2025", "in-it-draft-notice-2026-04", "in-ai-governance-guidelines-2025"],
+    ]);
+    expect(india[1]).toHaveTextContent("no right to an explanation of an automated decision");
+    expect(india[2]).toHaveTextContent("No right to a human review");
+    expect(india[4]).toHaveTextContent("A draft rule");
+    expect(india[4]).toHaveTextContent("not binding");
+  });
+
   it("cites every Brazil cell: the LGPD for rights in force, PL 2338/2023 for what is pending", () => {
     const brazil = countryCells();
     expect(brazil.map(cited)).toEqual([
@@ -176,6 +192,7 @@ describe("Guide comparison picker", () => {
     ["pt-BR", "Brasil"],
     ["fr", "France"],
     ["de", "Deutschland"],
+    ["hi", "भारत"],
     ["es", "Brasil"],
   ] as const)("opens in %s on %s", (locale, country) => {
     render(<GuidePage params={{ locale }} />, { locale });
