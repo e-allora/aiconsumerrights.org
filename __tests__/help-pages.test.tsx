@@ -37,6 +37,7 @@ describe("lib/help", () => {
       const m = MESSAGES[locale].Help as unknown as Tree;
       for (const s of SITUATIONS) {
         for (const key of s.happened) expect(at(m, `${s.id}.happened.${key}`)).toEqual(expect.any(String));
+        expect(Object.keys(at(m, `${s.id}.company`) as Tree).sort()).toEqual(s.company.map((c) => c.key).sort());
         for (const region of REGIONS) {
           const help = s.regions[region];
           // One message per right, and no extra ones the page would never show.
@@ -125,6 +126,15 @@ describe("/help/credit", () => {
     render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
     expect(screen.getByRole("radio", { name: "Brazil" })).toBeChecked();
     expect(screen.getByText(/Articles 18 and 19 of the LGPD/)).toBeInTheDocument();
+  });
+
+  it("invites the company team that gets the letter, without blame", () => {
+    render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
+    const company = screen.getByRole("region", { name: "If this letter reaches you at work" });
+    expect(within(company).getAllByRole("listitem")).toHaveLength(SITUATIONS[0].company.length);
+    expect(within(company).getByText(/Reply soon/)).toBeInTheDocument();
+    expect(within(company).getByRole("link", { name: /^Source/ })).toBeInTheDocument();
+    expect(within(company).getByRole("link", { name: "Your view is welcome in the forum too" })).toHaveAttribute("href", "/en/forum");
   });
 
   it("is a 404 for a situation that doesn't exist", () => {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Handshake } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -129,6 +129,31 @@ export default function SituationPage({ params: { locale, situation: id } }: Pro
       <section aria-labelledby="where" className="flex flex-col gap-4">
         <h2 id="where">{t("whereHeading")}</h2>
         <RegionPicker initial={homeRegion(locale)} panels={panels} />
+      </section>
+
+      <section aria-labelledby="company" className="depth-card flex flex-col gap-4 p-6 sm:p-8">
+        <h2 id="company" className="flex items-start gap-3">
+          <Handshake aria-hidden="true" className="mt-2 size-8 shrink-0 text-link" />
+          {t("companyHeading")}
+        </h2>
+        <p>{t("companyLead")}</p>
+        <ul className="flex list-disc flex-col gap-3 pl-6">
+          {situation.company.map(({ key, cites }) => (
+            <li key={key}>
+              {t.rich(`${situation.id}.company.${key}`, { b: bold })}
+              {cites && <Cite ids={cites} />}
+            </li>
+          ))}
+        </ul>
+        <p>
+          {t.rich("companyClose", {
+            forum: (c) => (
+              <Link href="/forum" className={linkClass}>
+                {c}
+              </Link>
+            ),
+          })}
+        </p>
       </section>
 
       <section aria-labelledby="urgent" className="flex flex-col gap-4">

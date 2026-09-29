@@ -62,7 +62,8 @@ describe("Source language and Robert's own reading", () => {
   it("says who read a source and when, and says nothing when no one has yet", () => {
     const base = sources.categories[0];
     const read = { ...base.sources[0], readBy: "2026-09-28" };
-    render(<SourceCategoryList category={{ ...base, sources: [read, base.sources[1]] }} anchors />);
+    const unread = { ...base.sources[1], readBy: undefined };
+    render(<SourceCategoryList category={{ ...base, sources: [read, unread] }} anchors />);
     expect(screen.getByText("Read by Robert Sweetman on 28 September 2026.")).toBeInTheDocument();
     expect(screen.getAllByText(/^Read by /)).toHaveLength(1);
   });

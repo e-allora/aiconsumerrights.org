@@ -304,6 +304,9 @@
     "letterLead": "Fill in the blanks, and the letter updates as you type. Send it by email, through the company's website, or by post. Keep a copy.",
     "noReplyHeading": "If they don't answer",
     "euHomeLabel": "Your country's authority:",
+    "companyHeading": "If this letter reaches you at work",
+    "companyLead": "Thank you for reading it. Nobody is being blamed here. Most people who write just want to understand and be treated fairly. Here are some ideas that help.",
+    "companyClose": "A clear, kind answer can settle things for both sides. Working inside a company? <forum>Your view is welcome in the forum too</forum>.",
     "urgentHeading": "When to get help from a person soon",
     "urgent": "If you could lose your home, your job, or money you need for food or bills, don't wait for letters. A legal aid office or consumer advice centre near you can help. Many are free.",
     "recordHeading": "Keep a record",
@@ -352,6 +355,13 @@
         "score": "Lenders often use a credit score: a number a computer works out from your payment history and other data.",
         "automatic": "Sometimes the whole decision is automatic. Sometimes a person decides, using the score.",
         "mistakes": "Mistakes happen. Old or wrong data in your file can pull your score down."
+      },
+      "company": {
+        "answer": "<b>Reply soon, even just to say it arrived</b> and when to expect a full answer. The deadlines above are the latest you can answer, not the goal.",
+        "reasons": "<b>Give the real main reasons, in plain words.</b> “You didn't reach our score” leaves people guessing. The factors that counted most help them understand and improve. In the US, a score alone isn't enough as a reason.",
+        "person": "<b>Let a person look again,</b> someone who can change the decision, not only repeat it.",
+        "data": "<b>Check the data.</b> If something was wrong or out of date, fix it where it came from, and tell the person what changed.",
+        "patterns": "<b>Share what you learn.</b> If similar letters keep coming, they may point to a step in the process worth improving."
       },
       "us": {
         "rights": {

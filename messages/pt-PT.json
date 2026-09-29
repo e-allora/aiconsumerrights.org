@@ -304,6 +304,9 @@
     "letterLead": "Preencha os espaços e a carta atualiza-se enquanto escreve. Envie-a por e-mail, pelo site da empresa ou por correio. Guarde uma cópia.",
     "noReplyHeading": "Se não responderem",
     "euHomeLabel": "A autoridade do seu país:",
+    "companyHeading": "Se esta carta lhe chegar no trabalho",
+    "companyLead": "Obrigado por a ler. Aqui ninguém está a ser acusado. A maioria de quem escreve só quer perceber e ser tratada com justiça. Eis algumas ideias que ajudam.",
+    "companyClose": "Uma resposta clara e cordial pode resolver as coisas para ambos os lados. Trabalha numa empresa? <forum>A sua opinião também é bem-vinda no fórum</forum>.",
     "urgentHeading": "Quando pedir ajuda a uma pessoa em breve",
     "urgent": "Se puder perder a sua casa, o seu emprego ou o dinheiro de que precisa para comida ou contas, não espere pelas cartas. Um serviço de apoio jurídico ou de defesa do consumidor perto de si pode ajudar. Muitos são gratuitos.",
     "recordHeading": "Guarde um registo",
@@ -352,6 +355,13 @@
         "score": "Os credores usam muitas vezes uma pontuação de crédito: um número que um computador calcula a partir do seu histórico de pagamentos e de outros dados.",
         "automatic": "Por vezes a decisão é toda automática. Por vezes decide uma pessoa, com base na pontuação.",
         "mistakes": "Há erros. Dados antigos ou errados no seu ficheiro podem baixar a sua pontuação."
+      },
+      "company": {
+        "answer": "<b>Responda cedo, nem que seja para dizer que a carta chegou</b> e quando pode esperar a resposta completa. Os prazos acima são o limite, não o objetivo.",
+        "reasons": "<b>Dê os verdadeiros motivos principais, em palavras simples.</b> «Não atingiu a nossa pontuação» deixa as pessoas a adivinhar. Os fatores que mais pesaram ajudam-nas a perceber e a melhorar. Nos EUA, uma pontuação sozinha não basta como motivo.",
+        "person": "<b>Deixe uma pessoa voltar a analisar,</b> alguém que possa mudar a decisão, e não apenas repeti-la.",
+        "data": "<b>Verifique os dados.</b> Se algo estava errado ou desatualizado, corrija-o na origem e diga à pessoa o que mudou.",
+        "patterns": "<b>Partilhe o que aprender.</b> Se continuarem a chegar cartas parecidas, podem apontar para um passo do processo que vale a pena melhorar."
       },
       "us": {
         "rights": {

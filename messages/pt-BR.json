@@ -304,6 +304,9 @@
     "letterLead": "Preencha os espaços e a carta se atualiza enquanto você digita. Envie por e-mail, pelo site da empresa ou pelo correio. Guarde uma cópia.",
     "noReplyHeading": "Se não responderem",
     "euHomeLabel": "A autoridade do seu país:",
+    "companyHeading": "Se esta carta chegar até você no trabalho",
+    "companyLead": "Obrigado por ler. Aqui ninguém está sendo acusado. A maioria de quem escreve só quer entender e ser tratada com justiça. Veja algumas ideias que ajudam.",
+    "companyClose": "Uma resposta clara e gentil pode resolver as coisas para os dois lados. Você trabalha em uma empresa? <forum>Sua opinião também é bem-vinda no fórum</forum>.",
     "urgentHeading": "Quando pedir ajuda a uma pessoa logo",
     "urgent": "Se você puder perder sua casa, seu emprego ou o dinheiro de que precisa para comida ou contas, não espere pelas cartas. A Defensoria Pública ou um órgão de defesa do consumidor perto de você pode ajudar. Muitos serviços são gratuitos.",
     "recordHeading": "Guarde um histórico",
@@ -352,6 +355,13 @@
         "score": "As financeiras costumam usar um score de crédito: um número que um computador calcula a partir do seu histórico de pagamentos e de outros dados.",
         "automatic": "Às vezes a decisão é toda automática. Às vezes uma pessoa decide, usando o score.",
         "mistakes": "Erros acontecem. Dados antigos ou errados no seu cadastro podem baixar seu score."
+      },
+      "company": {
+        "answer": "<b>Responda logo, nem que seja para dizer que a carta chegou</b> e quando a resposta completa vai sair. Os prazos acima são o limite, não a meta.",
+        "reasons": "<b>Dê os verdadeiros motivos principais, em palavras simples.</b> “Você não atingiu nosso score” deixa as pessoas adivinhando. Os fatores que mais pesaram ajudam a entender e a melhorar. Nos EUA, um score sozinho não basta como motivo.",
+        "person": "<b>Deixe uma pessoa analisar de novo,</b> alguém que possa mudar a decisão, e não só repeti-la.",
+        "data": "<b>Confira os dados.</b> Se algo estava errado ou desatualizado, corrija na origem e conte para a pessoa o que mudou.",
+        "patterns": "<b>Compartilhe o que aprender.</b> Se cartas parecidas continuarem chegando, elas podem apontar uma etapa do processo que vale a pena melhorar."
       },
       "us": {
         "rights": {

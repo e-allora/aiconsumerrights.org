@@ -304,6 +304,9 @@
     "letterLead": "Füllen Sie die Lücken aus; der Brief ändert sich beim Tippen mit. Schicken Sie ihn per E-Mail, über die Website des Unternehmens oder per Post. Behalten Sie eine Kopie.",
     "noReplyHeading": "Wenn niemand antwortet",
     "euHomeLabel": "Die Behörde in Ihrem Land:",
+    "companyHeading": "Wenn dieser Brief Sie bei der Arbeit erreicht",
+    "companyLead": "Danke, dass Sie ihn lesen. Hier wird niemandem die Schuld gegeben. Die meisten Menschen, die schreiben, wollen nur verstehen und fair behandelt werden. Hier sind ein paar Ideen, die helfen.",
+    "companyClose": "Eine klare, freundliche Antwort kann die Sache für beide Seiten klären. Sie arbeiten in einem Unternehmen? <forum>Ihre Sicht ist auch im Forum willkommen</forum>.",
     "urgentHeading": "Wann Sie bald eine Person um Hilfe bitten sollten",
     "urgent": "Wenn Sie Ihre Wohnung, Ihre Arbeit oder Geld für Essen oder Rechnungen verlieren könnten, warten Sie nicht auf Briefe. Eine Rechtsberatung oder Verbraucherberatung in Ihrer Nähe kann helfen. Viele Angebote sind kostenlos.",
     "recordHeading": "Alles festhalten",
@@ -352,6 +355,13 @@
         "score": "Kreditgeber nutzen oft einen Kredit-Score: eine Zahl, die ein Computer aus Ihrem Zahlungsverhalten und anderen Daten berechnet.",
         "automatic": "Manchmal ist die ganze Entscheidung automatisch. Manchmal entscheidet ein Mensch mithilfe des Scores.",
         "mistakes": "Fehler kommen vor. Alte oder falsche Daten über Sie können Ihren Score senken."
+      },
+      "company": {
+        "answer": "<b>Antworten Sie bald, und sei es nur, um den Eingang zu bestätigen</b> und zu sagen, wann die volle Antwort kommt. Die Fristen oben sind die Grenze, nicht das Ziel.",
+        "reasons": "<b>Nennen Sie die wirklichen Hauptgründe in einfachen Worten.</b> „Sie haben unseren Score nicht erreicht“ lässt Menschen raten. Die Faktoren, die am meisten zählten, helfen beim Verstehen und Verbessern. In den USA reicht ein Score allein als Grund nicht aus.",
+        "person": "<b>Lassen Sie einen Menschen noch einmal prüfen,</b> jemanden, der die Entscheidung ändern kann und sie nicht nur wiederholt.",
+        "data": "<b>Prüfen Sie die Daten.</b> Wenn etwas falsch oder veraltet war, berichtigen Sie es an der Quelle und sagen Sie der Person, was sich geändert hat.",
+        "patterns": "<b>Geben Sie weiter, was Sie lernen.</b> Wenn ähnliche Briefe immer wieder kommen, zeigen sie vielleicht einen Schritt im Ablauf, der sich verbessern lässt."
       },
       "us": {
         "rights": {

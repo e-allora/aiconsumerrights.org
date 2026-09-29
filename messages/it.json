@@ -304,6 +304,9 @@
     "letterLead": "Compila gli spazi: la lettera si aggiorna mentre scrivi. Inviala per email, dal sito dell'azienda o per posta. Conservane una copia.",
     "noReplyHeading": "Se non rispondono",
     "euHomeLabel": "L'autorità del tuo Paese:",
+    "companyHeading": "Se questa lettera ti arriva al lavoro",
+    "companyLead": "Grazie per averla letta. Qui nessuno viene incolpato. Quasi sempre chi scrive vuole solo capire ed essere trattato in modo equo. Ecco alcune idee che aiutano.",
+    "companyClose": "Una risposta chiara e gentile può risolvere le cose per entrambe le parti. Lavori in un'azienda? <forum>Anche la tua opinione è benvenuta nel forum</forum>.",
     "urgentHeading": "Quando chiedere presto aiuto a una persona",
     "urgent": "Se rischi di perdere la casa, il lavoro o i soldi che ti servono per il cibo o le bollette, non aspettare le lettere. Uno sportello di assistenza legale o un'associazione dei consumatori vicino a te può aiutarti. Molti servizi sono gratuiti.",
     "recordHeading": "Tieni traccia di tutto",
@@ -352,6 +355,13 @@
         "score": "I finanziatori usano spesso un punteggio di credito: un numero che un computer calcola dalla tua storia dei pagamenti e da altri dati.",
         "automatic": "A volte tutta la decisione è automatica. A volte decide una persona, usando il punteggio.",
         "mistakes": "Gli errori capitano. Dati vecchi o sbagliati nella tua posizione possono abbassare il punteggio."
+      },
+      "company": {
+        "answer": "<b>Rispondi presto, anche solo per dire che è arrivata</b> e quando arriverà la risposta completa. Le scadenze qui sopra sono il limite, non l'obiettivo.",
+        "reasons": "<b>Dai i veri motivi principali, con parole semplici.</b> «Non ha raggiunto il nostro punteggio» lascia le persone a indovinare. I fattori che hanno pesato di più le aiutano a capire e a migliorare. Negli Stati Uniti, un punteggio da solo non basta come motivo.",
+        "person": "<b>Lascia che una persona riesamini,</b> qualcuno che possa cambiare la decisione, non solo ripeterla.",
+        "data": "<b>Controlla i dati.</b> Se qualcosa era sbagliato o non aggiornato, correggilo alla fonte e di' alla persona che cosa è cambiato.",
+        "patterns": "<b>Condividi quello che impari.</b> Se continuano ad arrivare lettere simili, possono indicare un passaggio del processo che vale la pena migliorare."
       },
       "us": {
         "rights": {

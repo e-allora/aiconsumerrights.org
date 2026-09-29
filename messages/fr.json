@@ -304,6 +304,9 @@
     "letterLead": "Complétez les blancs, et la lettre se met à jour pendant que vous écrivez. Envoyez-la par e-mail, via le site de l'entreprise ou par courrier. Gardez-en une copie.",
     "noReplyHeading": "S'ils ne répondent pas",
     "euHomeLabel": "L'autorité de votre pays :",
+    "companyHeading": "Si cette lettre vous parvient au travail",
+    "companyLead": "Merci de la lire. Personne n'est mis en cause ici. La plupart des personnes qui écrivent veulent simplement comprendre et être traitées équitablement. Voici quelques idées qui aident.",
+    "companyClose": "Une réponse claire et bienveillante peut régler les choses pour les deux parties. Vous travaillez dans une entreprise ? <forum>Votre avis est aussi bienvenu sur le forum</forum>.",
     "urgentHeading": "Quand demander vite l'aide d'une personne",
     "urgent": "Si vous risquez de perdre votre logement, votre emploi ou l'argent dont vous avez besoin pour manger ou payer vos factures, n'attendez pas les lettres. Un point d'accès au droit ou une association de consommateurs près de chez vous peut vous aider. Beaucoup sont gratuits.",
     "recordHeading": "Gardez une trace",
@@ -352,6 +355,13 @@
         "score": "Les organismes de crédit utilisent souvent un score de crédit : un nombre qu'un ordinateur calcule à partir de votre historique de paiements et d'autres données.",
         "automatic": "Parfois, toute la décision est automatique. Parfois, une personne décide en s'appuyant sur le score.",
         "mistakes": "Les erreurs arrivent. Des données anciennes ou fausses dans votre dossier peuvent faire baisser votre score."
+      },
+      "company": {
+        "answer": "<b>Répondez vite, même juste pour dire que la lettre est arrivée</b> et quand viendra la réponse complète. Les délais ci-dessus sont une limite, pas un objectif.",
+        "reasons": "<b>Donnez les vraies raisons principales, avec des mots simples.</b> Dire seulement que le score n'a pas été atteint laisse les gens dans le flou. Les facteurs qui ont le plus compté les aident à comprendre et à progresser. Aux États-Unis, un score seul ne suffit pas comme raison.",
+        "person": "<b>Laissez une personne réexaminer le dossier,</b> quelqu'un qui peut changer la décision, pas seulement la répéter.",
+        "data": "<b>Vérifiez les données.</b> Si quelque chose était faux ou périmé, corrigez-le à la source et dites à la personne ce qui a changé.",
+        "patterns": "<b>Partagez ce que vous apprenez.</b> Si des lettres semblables reviennent, elles signalent peut-être une étape du processus qui mérite d'être améliorée."
       },
       "us": {
         "rights": {

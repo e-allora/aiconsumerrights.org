@@ -304,6 +304,9 @@
     "letterLead": "Completa los espacios y la carta se actualiza mientras escribes. Envíala por correo electrónico, por la web de la empresa o por correo postal. Guarda una copia.",
     "noReplyHeading": "Si no responden",
     "euHomeLabel": "La autoridad de tu país:",
+    "companyHeading": "Si esta carta te llega en el trabajo",
+    "companyLead": "Gracias por leerla. Aquí no se culpa a nadie. La mayoría de quienes escriben solo quieren entender y recibir un trato justo. Aquí tienes algunas ideas que ayudan.",
+    "companyClose": "Una respuesta clara y amable puede resolver las cosas para ambas partes. ¿Trabajas en una empresa? <forum>Tu opinión también es bienvenida en el foro</forum>.",
     "urgentHeading": "Cuándo pedir ayuda a una persona pronto",
     "urgent": "Si podrías perder tu vivienda, tu trabajo o el dinero que necesitas para comida o facturas, no esperes a las cartas. Una oficina de asistencia jurídica o de consumo cerca de ti puede ayudarte. Muchas son gratuitas.",
     "recordHeading": "Guarda un registro",
@@ -352,6 +355,13 @@
         "score": "Los prestamistas suelen usar una puntuación de crédito: un número que un ordenador calcula a partir de tu historial de pagos y otros datos.",
         "automatic": "A veces toda la decisión es automática. A veces decide una persona, usando la puntuación.",
         "mistakes": "Hay errores. Datos antiguos o equivocados en tu expediente pueden bajar tu puntuación."
+      },
+      "company": {
+        "answer": "<b>Responde pronto, aunque sea para decir que la recibiste</b> y cuándo llegará la respuesta completa. Los plazos de arriba son el límite, no la meta.",
+        "reasons": "<b>Da los motivos principales reales, con palabras sencillas.</b> «No alcanzó nuestra puntuación» deja a la gente adivinando. Los factores que más pesaron le ayudan a entender y a mejorar. En EE. UU., una puntuación sola no basta como motivo.",
+        "person": "<b>Deja que una persona lo vuelva a mirar,</b> alguien que pueda cambiar la decisión, no solo repetirla.",
+        "data": "<b>Revisa los datos.</b> Si algo estaba mal o desactualizado, corrígelo en su origen y dile a la persona qué cambió.",
+        "patterns": "<b>Comparte lo que aprendas.</b> Si llegan cartas parecidas una y otra vez, pueden señalar un paso del proceso que vale la pena mejorar."
       },
       "us": {
         "rights": {

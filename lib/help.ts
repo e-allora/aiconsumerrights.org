@@ -57,6 +57,12 @@ export type Situation = {
   id: string;
   /** Keys under Help.<id>.happened: what probably happened, in order. */
   happened: readonly string[];
+  /**
+   * "If this letter reaches you at work": how a company team can answer
+   * well. Keys under Help.<id>.company, with citations where a tip rests on
+   * a rule. It invites companies in; it never blames them.
+   */
+  company: readonly { key: string; cites?: string[] }[];
   regions: Record<Region, RegionHelp>;
 };
 
@@ -64,6 +70,13 @@ export const SITUATIONS: Situation[] = [
   {
     id: "credit",
     happened: ["score", "automatic", "mistakes"],
+    company: [
+      { key: "answer" },
+      { key: "reasons", cites: ["cfpb-reg-b"] },
+      { key: "person" },
+      { key: "data" },
+      { key: "patterns" },
+    ],
     regions: {
       us: {
         rights: [["cfpb-reg-b"], ["cfpb-reg-b"], ["fcra-1681m"], ["fcra-1681i"]],

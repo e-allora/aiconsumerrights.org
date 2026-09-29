@@ -82,7 +82,7 @@
           "type": "Law (EU)",
           "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
           "status": "unopened",
-          "note": "EUR-Lex blocks automated readers. Opens in a browser.",
+          "note": "EUR-Lex blocks automated readers. Opens in a browser. Robert read Articles 50, 86 and 113, the parts this site cites, in his saved copy.",
           "primary": true,
           "copies": [
             {
@@ -99,7 +99,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928020718/https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-09-29"
         },
         {
           "id": "eu-ai-act-art50",
@@ -144,7 +145,7 @@
           "type": "Law (EU)",
           "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
           "status": "unopened",
-          "note": "EUR-Lex blocks automated readers. Standard legal citation.",
+          "note": "EUR-Lex blocks automated readers. Standard legal citation. Robert read Articles 12, 15 and 22, the parts this site cites, in his saved copy.",
           "primary": true,
           "copies": [
             {
@@ -156,7 +157,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928020836/https://eur-lex.europa.eu/eli/reg/2016/679/oj",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-09-29"
         },
         {
           "id": "ftc-ai-comply-2024",
