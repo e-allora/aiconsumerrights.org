@@ -289,7 +289,6 @@
     "pending": "<b>Aún sin revisión de una persona experta en derecho.</b> Robert Sweetman está comprobando estas páginas con sus fuentes, pero ningún abogado, clínica jurídica ni organización de consumidores las ha revisado, y ninguna persona nativa ha revisado las traducciones. Si puedes ayudar a revisarlas, <contact>ponte en contacto</contact>.",
     "comingHeading": "Próximamente",
     "coming": {
-      "chatbot": "Un chatbot dio información errónea o te negaron un reembolso",
       "account": "Bloquearon una cuenta o retiraron una publicación",
       "deepfake": "Alguien usó una voz o un video falsos para engañarte"
     },
@@ -308,7 +307,7 @@
     "urgentHeading": "Cuándo pedir ayuda a una persona pronto",
     "urgent": "Si podrías perder tu vivienda, tu trabajo o el dinero que necesitas para comida o facturas, no esperes a las cartas. Una oficina de asistencia jurídica o de consumo cerca de ti puede ayudarte. Muchas son gratuitas.",
     "recordHeading": "Guarda un registro",
-    "record": "Guarda cada carta, correo y aviso, con su fecha. De las llamadas, anota la fecha, con quién hablaste y qué te dijeron.",
+    "record": "Guarda cada carta, correo, chat y aviso, con su fecha. Haz capturas de pantalla de los chats. De las llamadas, anota la fecha, con quién hablaste y qué te dijeron.",
     "forum": "¿Debería funcionar de otra manera? <forum>Di qué debería cambiar en el foro</forum>.",
     "regions": {
       "question": "¿Dónde vives?",
@@ -695,6 +694,93 @@
         "plain": {
           "subject": "Consulta sobre su decisión sobre mi seguro{hasReference, select, yes { (póliza {reference})} other {}}",
           "body": "Hola:\n\nEl {decisionDate} recibí su decisión sobre mi seguro. Les agradecería conocer los motivos principales y si influyó una puntuación o un sistema informático.\n\nTambién les ruego que me digan qué información sobre mí usaron, para que pueda comprobar que es correcta. Les agradecería que una persona revisara la decisión.\n\nGracias por su tiempo,\n{name}"
+        }
+      }
+    },
+    "chatbot": {
+      "metaTitle": "Un chatbot dio información errónea o te negaron un reembolso",
+      "metaDescription": "Qué hacer cuando un chatbot de atención al cliente se equivocó o no conseguiste un reembolso: tus derechos, una carta para pedir que lo arreglen y adónde acudir.",
+      "title": "Un chatbot dio información errónea o te negaron un reembolso",
+      "summary": "El chatbot de una empresa se equivocó, no pudiste hablar con una persona o te negaron un reembolso.",
+      "lead": "El chatbot de una empresa te dijo algo que resultó ser falso, te hizo dar vueltas o te negaron un reembolso. Puedes pedir que lo arreglen, pedir hablar con una persona y pedir una copia del chat.",
+      "happened": {
+        "bot": "Muchas empresas atienden primero con un chatbot. Algunos son IA que redactan sus propias respuestas.",
+        "wrong": "Los chatbots de IA pueden sonar seguros y aun así equivocarse sobre precios, normas o reembolsos.",
+        "loop": "A veces cuesta hablar con una persona y el chat da vueltas. Haz capturas de pantalla del chat, con fecha y hora."
+      },
+      "company": {
+        "person": "<b>Facilita hablar con una persona.</b> Una opción clara de “hablar con una persona” ahorra tiempo a ambas partes.",
+        "honour": "<b>Si tu chatbot dio información errónea, arréglalo para el cliente</b> y luego corrige el bot para que no se repita.",
+        "disclose": "<b>Di claramente cuándo se habla con una IA.</b> En la UE es obligatorio, salvo que sea evidente.",
+        "transcript": "<b>Ofrece una copia del chat,</b> para que ambas partes vean lo mismo.",
+        "patterns": "<b>Lee los chats que terminan en queja.</b> Muestran dónde hay que mejorar el bot."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Usar IA no pone a una empresa por encima de la ley de consumo.</b> La FTC ha dicho que no hay ninguna exención para la IA en las leyes vigentes.",
+          "2": "<b>Si pagaste con tarjeta de crédito y no recibiste lo acordado,</b> puedes impugnar el cargo ante tu emisor de tarjeta por escrito en 60 días desde el extracto. Deben responder en 30 días y resolverlo en 90.",
+          "3": "<b>Ninguna ley federal da un derecho general a un reembolso si cambias de opinión.</b> Revisa la política de reembolsos del vendedor y pide por escrito."
+        },
+        "noReply": "Si el emisor de la tarjeta no corrige un error de facturación, puedes <cfpb>reclamar ante la CFPB</cfpb>. También puedes contactar con la oficina de protección al consumidor de tu estado."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Normalmente puedes cancelar compras en línea en 14 días,</b> sin dar motivos. El plazo empieza el día después de la entrega. El vendedor debe reembolsarte en 14 días desde que recibe el artículo o la prueba de que lo enviaste.",
+          "2": "<b>Si pagaste con tarjeta de crédito</b> y el artículo costó más de 100 £ y hasta 30 000 £, puedes reclamar a la empresa de la tarjeta según la sección 75. Si no, pide a tu banco un contracargo (chargeback).",
+          "3": "<b>Puedes pedir una copia de tu chat,</b> porque son tus datos personales. Las organizaciones suelen tener un mes para responder."
+        },
+        "noReply": "Si la empresa de la tarjeta dice que no, puedes llevarlo gratis al <fos>Financial Ombudsman Service</fos>. Si no te dan tu chat o tus datos, puedes reclamar ante la <ico>Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Un chatbot debe decirte que es IA,</b> salvo que sea evidente. Esto se aplica desde el 2 de agosto de 2026.",
+          "2": "<b>Puedes cancelar la mayoría de las compras en línea en 14 días,</b> sin dar motivos. Si el vendedor no te informó de este derecho, el plazo se amplía a 12 meses.",
+          "3": "<b>Algunas cosas no se pueden cancelar así,</b> como entradas, alimentos perecederos y artículos hechos a medida.",
+          "4": "<b>Puedes pedir una copia de tu chat,</b> porque son tus datos personales. Deben responder en un mes, gratis."
+        },
+        "noReply": "Si el vendedor no lo resuelve, contacta con la autoridad de consumo o una organización de consumidores de tu país. Si no te dan tu chat o tus datos, puedes reclamar gratis ante tu autoridad de protección de datos: <edpb>encuéntrala en la lista de autoridades de protección de datos de la UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Puedes desistir de compras hechas en línea o por teléfono en 7 días</b> desde la firma o la recepción del producto, y recuperar de inmediato todo lo que pagaste.",
+          "2": "<b>En los servicios regulados por el gobierno federal,</b> como telefonía e internet, la atención al cliente debe ofrecer una persona al menos 8 horas al día, poner reclamación y cancelación en el primer menú y responder en 7 días.",
+          "3": "<b>Puedes pedir una copia de tu chat y de otros datos.</b> Una declaración clara y completa de tus datos debe llegar en un plazo de 15 días desde tu solicitud."
+        },
+        "noReply": "Si no recibes respuesta, puedes reclamar en <consumidor>Consumidor.gov.br</consumidor> o ante tu <procon>Procon</procon> local."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La Línea Nacional de Ayuda al Consumidor recibe quejas de consumo,</b> por teléfono, WhatsApp, en línea o por aplicación.",
+          "2": "<b>Primero, escribe a la empresa</b> y guarda capturas del chat. Una solicitud por escrito te deja un registro."
+        },
+        "noReply": "Si no recibes respuesta, la <nch>Línea Nacional de Ayuda al Consumidor</nch> puede ayudarte. Llama al <tel>1915</tel>, gratis."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Este sitio aún no cubre las leyes de tu país.</b> Aun así, vale la pena enviar una solicitud por escrito: pide las cosas con claridad y te deja un registro."
+        },
+        "noReply": "Si no recibes respuesta, busca una autoridad de protección del consumidor o una organización de consumidores en tu país."
+      },
+      "letters": {
+        "us": {
+          "subject": "Solicitud para corregir lo que me dijo su asistente de chat{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} los contacté por [describe brevemente el problema]. Su asistente de chat me dijo [lo que dijo], pero [lo que pasó en realidad].\n\nLes ruego que lo corrijan, ya sea respetando lo que me dijo su asistente de chat o reembolsándome. También les pido hablar con una persona que pueda resolverlo y una copia de mi chat.\n\nSi pagué con tarjeta de crédito y esto no se resuelve, podría impugnar el cargo ante el emisor de mi tarjeta.\n\nGracias,\n{name}"
+        },
+        "uk": {
+          "subject": "Solicitud para corregir lo que me dijo su asistente de chat{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} los contacté por [describe brevemente el problema]. Su asistente de chat me dijo [lo que dijo], pero [lo que pasó en realidad].\n\nLes ruego que lo corrijan, ya sea respetando lo que me dijo su asistente de chat o reembolsándome. También les pido hablar con una persona que pueda resolverlo.\n\nConforme al artículo 15 del UK GDPR, les pido una copia de mi chat y de cualquier otro dato personal que tengan sobre mí.\n\nLes ruego que respondan en el plazo de un mes.\n\nAtentamente,\n{name}"
+        },
+        "eu": {
+          "subject": "Solicitud para corregir lo que me dijo su asistente de chat{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} los contacté por [describe brevemente el problema]. Su asistente de chat me dijo [lo que dijo], pero [lo que pasó en realidad].\n\nLes ruego que lo corrijan, ya sea respetando lo que me dijo su asistente de chat o reembolsándome. También les pido hablar con una persona que pueda resolverlo.\n\nConforme al artículo 15 del RGPD, les pido una copia de mi chat y de cualquier otro dato personal que tengan sobre mí, en el plazo de un mes que exige el artículo 12, apartado 3.\n\nAtentamente,\n{name}"
+        },
+        "br": {
+          "subject": "Solicitud para corregir lo que me dijo su asistente de chat{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} los contacté por [describe brevemente el problema]. Su asistente de chat me dijo [lo que dijo], pero [lo que pasó en realidad].\n\nLes ruego que lo corrijan, ya sea respetando lo que me dijo su asistente de chat o reembolsándome. También les pido hablar con una persona que pueda resolverlo.\n\nConforme a los artículos 18 y 19 de la LGPD (Ley n.º 13.709/2018), les pido una copia de mi chat y una declaración clara y completa de los datos personales que tienen sobre mí, en un plazo de 15 días.\n\nAtentamente,\n{name}"
+        },
+        "plain": {
+          "subject": "Solicitud para corregir lo que me dijo su asistente de chat{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} los contacté por [describe brevemente el problema]. Su asistente de chat me dijo [lo que dijo], pero [lo que pasó en realidad].\n\nLes ruego que lo corrijan, ya sea respetando lo que me dijo su asistente de chat o reembolsándome. También les pido hablar con una persona que pueda resolverlo y una copia de mi chat.\n\nQuedo a la espera de su respuesta por escrito.\n\nAtentamente,\n{name}"
         }
       }
     }

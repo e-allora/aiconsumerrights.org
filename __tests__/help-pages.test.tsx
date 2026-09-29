@@ -215,6 +215,35 @@ describe("/help/insurance", () => {
   });
 });
 
+describe("/help/chatbot", () => {
+  it("tells US visitors there is no AI exemption and how to dispute a card charge", async () => {
+    const user = userEvent.setup();
+    render(<SituationPage params={{ locale: "en", situation: "chatbot" }} />);
+    await user.click(screen.getByRole("radio", { name: "United States" }));
+    expect(screen.getByText(/no AI exemption from the laws on the books/)).toBeInTheDocument();
+    expect(screen.getByText(/within 60 days of the statement/)).toBeInTheDocument();
+    expect(screen.getByText(/\[briefly describe the problem\]/)).toBeInTheDocument();
+  });
+
+  it("gives EU visitors the AI disclosure rule, the 14-day right to cancel, and a copy of their chat", () => {
+    render(<SituationPage params={{ locale: "fr", situation: "chatbot" }} />, { locale: "fr" });
+    expect(screen.getByText(/depuis le 2 août 2026/)).toBeInTheDocument();
+    expect(screen.getByText(/dans les 14 jours/)).toBeInTheDocument();
+    expect(screen.getByText(/une copie de ma conversation/)).toBeInTheDocument();
+  });
+
+  it("gives Brazilian visitors the 7-day right to withdraw and the customer service rules", () => {
+    render(<SituationPage params={{ locale: "pt-BR", situation: "chatbot" }} />, { locale: "pt-BR" });
+    expect(screen.getByText(/desistir de compras feitas online ou por telefone em até 7 dias/)).toBeInTheDocument();
+    expect(screen.getByText(/atendimento humano pelo menos 8 horas por dia/)).toBeInTheDocument();
+  });
+
+  it("asks everyone to screenshot their chats", () => {
+    render(<SituationPage params={{ locale: "en", situation: "chatbot" }} />);
+    expect(screen.getByText(/Take screenshots of chats/)).toBeInTheDocument();
+  });
+});
+
 describe("LetterBuilder", () => {
   const letter = () => document.querySelector(".letter-print")!.textContent!;
 

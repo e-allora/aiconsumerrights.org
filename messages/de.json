@@ -289,7 +289,6 @@
     "pending": "<b>Noch nicht juristisch geprüft.</b> Robert Sweetman prüft diese Seiten anhand ihrer Quellen, aber noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation hat sie geprüft, und Muttersprachler haben die Übersetzungen noch nicht kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
     "comingHeading": "Demnächst",
     "coming": {
-      "chatbot": "Ein Chatbot gab falsche Auskünfte, oder eine Erstattung wurde abgelehnt",
       "account": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
       "deepfake": "Jemand hat eine gefälschte Stimme oder ein gefälschtes Video benutzt, um Sie zu täuschen"
     },
@@ -308,7 +307,7 @@
     "urgentHeading": "Wann Sie bald eine Person um Hilfe bitten sollten",
     "urgent": "Wenn Sie Ihre Wohnung, Ihre Arbeit oder Geld für Essen oder Rechnungen verlieren könnten, warten Sie nicht auf Briefe. Eine Rechtsberatung oder Verbraucherberatung in Ihrer Nähe kann helfen. Viele Angebote sind kostenlos.",
     "recordHeading": "Alles festhalten",
-    "record": "Heben Sie jeden Brief, jede E-Mail und jeden Bescheid mit Datum auf. Notieren Sie bei Anrufen das Datum, mit wem Sie gesprochen haben und was gesagt wurde.",
+    "record": "Heben Sie jeden Brief, jede E-Mail, jeden Chat und jeden Bescheid mit Datum auf. Machen Sie Screenshots von Chats. Notieren Sie bei Anrufen das Datum, mit wem Sie gesprochen haben und was gesagt wurde.",
     "forum": "Sollte das anders laufen? <forum>Sagen Sie im Forum, was sich ändern sollte</forum>.",
     "regions": {
       "question": "Wo leben Sie?",
@@ -695,6 +694,93 @@
         "plain": {
           "subject": "Frage zu Ihrer Entscheidung über meine Versicherung{hasReference, select, yes { (Police {reference})} other {}}",
           "body": "Guten Tag,\n\nam {decisionDate} habe ich Ihre Entscheidung über meine Versicherung erhalten. Ich wäre dankbar, die wichtigsten Gründe zu erfahren und ob ein Score oder ein Computersystem eine Rolle gespielt hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich wäre dankbar, wenn ein Mensch die Entscheidung prüfen könnte.\n\nDanke für Ihre Zeit\n{name}"
+        }
+      }
+    },
+    "chatbot": {
+      "metaTitle": "Ein Chatbot gab falsche Auskünfte, oder eine Erstattung wurde abgelehnt",
+      "metaDescription": "Was Sie tun können, wenn ein Kundenservice-Chatbot falsch lag oder Sie keine Erstattung bekommen haben: Ihre Rechte, ein Brief mit der Bitte um Korrektur, und Stellen, an die Sie sich wenden können.",
+      "title": "Ein Chatbot gab falsche Auskünfte, oder eine Erstattung wurde abgelehnt",
+      "summary": "Der Chatbot eines Unternehmens lag falsch, Sie erreichten keinen Menschen, oder eine Erstattung wurde abgelehnt.",
+      "lead": "Der Chatbot eines Unternehmens hat Ihnen etwas gesagt, das sich als falsch herausstellte, Sie im Kreis geschickt, oder eine Erstattung wurde abgelehnt. Sie können um Korrektur bitten, einen Menschen verlangen und eine Kopie des Chats anfordern.",
+      "happened": {
+        "bot": "Viele Unternehmen antworten zuerst mit einem Chatbot. Manche sind KI, die ihre Antworten selbst formuliert.",
+        "wrong": "KI-Chatbots können sicher klingen und sich trotzdem bei Preisen, Regeln oder Erstattungen irren.",
+        "loop": "Manchmal ist es schwer, einen Menschen zu erreichen, und der Chat dreht sich im Kreis. Machen Sie Screenshots des Chats, mit Datum und Uhrzeit."
+      },
+      "company": {
+        "person": "<b>Machen Sie es leicht, einen Menschen zu erreichen.</b> Eine klare Option „Mit einem Menschen sprechen“ spart beiden Seiten Zeit.",
+        "honour": "<b>Wenn Ihr Chatbot falsche Auskünfte gab, bringen Sie es für die Kundschaft in Ordnung</b> und korrigieren Sie danach den Bot, damit es nicht wieder passiert.",
+        "disclose": "<b>Sagen Sie klar, wenn Kunden mit einer KI sprechen.</b> In der EU ist das Pflicht, außer es ist offensichtlich.",
+        "transcript": "<b>Bieten Sie eine Kopie des Chats an,</b> damit beide Seiten dasselbe sehen.",
+        "patterns": "<b>Lesen Sie die Chats, die in einer Beschwerde enden.</b> Sie zeigen, wo der Bot besser werden muss."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Der Einsatz von KI stellt ein Unternehmen nicht über das Verbraucherrecht.</b> Die FTC hat erklärt, dass es in den geltenden Gesetzen keine Ausnahme für KI gibt.",
+          "2": "<b>Wenn Sie mit Kreditkarte bezahlt und nicht das Vereinbarte bekommen haben,</b> können Sie die Abbuchung innerhalb von 60 Tagen nach der Abrechnung schriftlich beim Kartenanbieter beanstanden. Er muss innerhalb von 30 Tagen antworten und die Sache innerhalb von 90 Tagen klären.",
+          "3": "<b>Kein Bundesgesetz gibt ein allgemeines Recht auf Erstattung, wenn Sie es sich anders überlegen.</b> Prüfen Sie die Rückgaberegeln des Verkäufers und fragen Sie schriftlich nach."
+        },
+        "noReply": "Wenn der Kartenanbieter einen Abrechnungsfehler nicht korrigiert, können Sie sich <cfpb>bei der CFPB beschweren</cfpb>. Sie können sich auch an die Verbraucherschutzstelle Ihres Bundesstaats wenden."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Online gekaufte Waren können Sie meist innerhalb von 14 Tagen stornieren,</b> ohne Grund. Die Frist beginnt am Tag nach der Lieferung. Der Verkäufer muss innerhalb von 14 Tagen erstatten, nachdem er die Ware oder einen Versandnachweis erhalten hat.",
+          "2": "<b>Wenn Sie mit Kreditkarte bezahlt haben</b> und der Artikel mehr als 100 £ und bis zu 30.000 £ gekostet hat, können Sie nach Section 75 beim Kartenanbieter Geld zurückfordern. Sonst bitten Sie Ihre Bank um eine Rückbuchung (Chargeback).",
+          "3": "<b>Sie können eine Kopie Ihres Chats verlangen,</b> denn das sind Ihre personenbezogenen Daten. Organisationen haben in der Regel einen Monat Zeit für die Antwort."
+        },
+        "noReply": "Wenn der Kartenanbieter ablehnt, können Sie den Fall kostenlos beim <fos>Financial Ombudsman Service</fos> einreichen. Wenn man Ihnen den Chat oder Ihre Daten nicht gibt, können Sie sich beim <ico>Information Commissioner's Office (ICO)</ico> beschweren."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Ein Chatbot muss Ihnen sagen, dass er eine KI ist,</b> außer es ist offensichtlich. Das gilt seit dem 2. August 2026.",
+          "2": "<b>Die meisten Online-Käufe können Sie innerhalb von 14 Tagen widerrufen,</b> ohne Grund. Wenn der Verkäufer Sie nicht über dieses Recht informiert hat, verlängert sich die Frist auf 12 Monate.",
+          "3": "<b>Manches lässt sich so nicht widerrufen,</b> etwa Tickets, leicht verderbliche Lebensmittel und Maßanfertigungen.",
+          "4": "<b>Sie können eine Kopie Ihres Chats verlangen,</b> denn das sind Ihre personenbezogenen Daten. Man muss Ihnen innerhalb eines Monats antworten, kostenlos."
+        },
+        "noReply": "Wenn der Verkäufer das nicht klärt, wenden Sie sich an die Verbraucherschutzbehörde oder eine Verbraucherzentrale in Ihrem Land. Wenn man Ihnen den Chat oder Ihre Daten nicht gibt, können Sie sich kostenlos bei Ihrer Datenschutzbehörde beschweren: <edpb>Finden Sie Ihre in der Liste der Datenschutzbehörden der EU</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Käufe, die online oder am Telefon abgeschlossen wurden, können Sie innerhalb von 7 Tagen widerrufen,</b> ab Unterschrift oder Erhalt des Produkts, und bekommen alles Gezahlte sofort zurück.",
+          "2": "<b>Bei Diensten, die der Bund reguliert,</b> etwa Telefon und Internet, muss der Kundenservice mindestens 8 Stunden am Tag einen Menschen anbieten, Beschwerde und Kündigung ins erste Menü stellen und innerhalb von 7 Tagen antworten.",
+          "3": "<b>Sie können eine Kopie Ihres Chats und anderer Daten verlangen.</b> Eine klare, vollständige Aufstellung Ihrer Daten ist innerhalb von 15 Tagen nach Ihrer Anfrage fällig."
+        },
+        "noReply": "Wenn keine Antwort kommt, können Sie sich bei <consumidor>Consumidor.gov.br</consumidor> oder beim örtlichen <procon>Procon</procon> beschweren."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Die National Consumer Helpline nimmt Verbraucherbeschwerden an,</b> per Telefon, WhatsApp, online oder per App.",
+          "2": "<b>Schreiben Sie zuerst dem Unternehmen</b> und behalten Sie Screenshots des Chats. Eine schriftliche Anfrage ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, hilft die <nch>National Consumer Helpline</nch>. Rufen Sie gebührenfrei die <tel>1915</tel> an."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Diese Website deckt die Gesetze Ihres Landes noch nicht ab.</b> Eine schriftliche Anfrage lohnt sich trotzdem: Sie fragt klar nach und ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, suchen Sie eine Verbraucherschutzbehörde oder eine Verbraucherorganisation in Ihrem Land."
+      },
+      "letters": {
+        "us": {
+          "subject": "Bitte um Korrektur einer Auskunft Ihres Chat-Assistenten{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Sie wegen [kurze Beschreibung des Problems] kontaktiert. Ihr Chat-Assistent hat mir gesagt: [was er gesagt hat]. Tatsächlich [was wirklich passiert ist].\n\nBitte bringen Sie das in Ordnung, indem Sie sich an die Auskunft Ihres Chat-Assistenten halten oder mir den Betrag erstatten. Bitte ermöglichen Sie mir außerdem ein Gespräch mit einem Menschen, der das klären kann. Bitte schicken Sie mir auch eine Kopie meines Chats.\n\nFalls ich mit Kreditkarte bezahlt habe und die Sache nicht geklärt wird, kann ich die Abbuchung beim Kartenanbieter beanstanden.\n\nVielen Dank\n{name}"
+        },
+        "uk": {
+          "subject": "Bitte um Korrektur einer Auskunft Ihres Chat-Assistenten{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Sie wegen [kurze Beschreibung des Problems] kontaktiert. Ihr Chat-Assistent hat mir gesagt: [was er gesagt hat]. Tatsächlich [was wirklich passiert ist].\n\nBitte bringen Sie das in Ordnung, indem Sie sich an die Auskunft Ihres Chat-Assistenten halten oder mir den Betrag erstatten. Bitte ermöglichen Sie mir außerdem ein Gespräch mit einem Menschen, der das klären kann.\n\nNach Art. 15 UK GDPR bitte ich um eine Kopie meines Chats und aller anderen personenbezogenen Daten, die Sie über mich verarbeiten.\n\nBitte antworten Sie innerhalb eines Monats.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "eu": {
+          "subject": "Bitte um Korrektur einer Auskunft Ihres Chat-Assistenten{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Sie wegen [kurze Beschreibung des Problems] kontaktiert. Ihr Chat-Assistent hat mir gesagt: [was er gesagt hat]. Tatsächlich [was wirklich passiert ist].\n\nBitte bringen Sie das in Ordnung, indem Sie sich an die Auskunft Ihres Chat-Assistenten halten oder mir den Betrag erstatten. Bitte ermöglichen Sie mir außerdem ein Gespräch mit einem Menschen, der das klären kann.\n\nNach Art. 15 DSGVO bitte ich um eine Kopie meines Chats und aller anderen personenbezogenen Daten, die Sie über mich verarbeiten, innerhalb der Monatsfrist nach Art. 12 Abs. 3 DSGVO.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "br": {
+          "subject": "Bitte um Korrektur einer Auskunft Ihres Chat-Assistenten{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Sie wegen [kurze Beschreibung des Problems] kontaktiert. Ihr Chat-Assistent hat mir gesagt: [was er gesagt hat]. Tatsächlich [was wirklich passiert ist].\n\nBitte bringen Sie das in Ordnung, indem Sie sich an die Auskunft Ihres Chat-Assistenten halten oder mir den Betrag erstatten. Bitte ermöglichen Sie mir außerdem ein Gespräch mit einem Menschen, der das klären kann.\n\nNach Art. 18 und 19 LGPD (Gesetz Nr. 13.709/2018) bitte ich um eine Kopie meines Chats und eine klare und vollständige Aufstellung der personenbezogenen Daten, die Sie über mich verarbeiten, innerhalb von 15 Tagen.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "plain": {
+          "subject": "Bitte um Korrektur einer Auskunft Ihres Chat-Assistenten{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Sie wegen [kurze Beschreibung des Problems] kontaktiert. Ihr Chat-Assistent hat mir gesagt: [was er gesagt hat]. Tatsächlich [was wirklich passiert ist].\n\nBitte bringen Sie das in Ordnung, indem Sie sich an die Auskunft Ihres Chat-Assistenten halten oder mir den Betrag erstatten. Bitte ermöglichen Sie mir außerdem ein Gespräch mit einem Menschen, der das klären kann. Bitte schicken Sie mir auch eine Kopie meines Chats.\n\nIch freue mich auf Ihre schriftliche Antwort.\n\nMit freundlichen Grüßen\n{name}"
         }
       }
     }

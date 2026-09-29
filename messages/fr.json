@@ -289,7 +289,6 @@
     "pending": "<b>Pas encore relues par un expert juridique.</b> Robert Sweetman vérifie ces pages à partir de leurs sources, mais aucun avocat, aucune clinique juridique ni aucune association de consommateurs ne les a encore relues, et aucune personne de langue maternelle n'a vérifié les traductions. Si vous pouvez aider à les relire, <contact>contactez-nous</contact>.",
     "comingHeading": "Bientôt",
     "coming": {
-      "chatbot": "Un chatbot a donné une information fausse, ou un remboursement a été refusé",
       "account": "Un compte a été bloqué ou une publication a été retirée",
       "deepfake": "Quelqu'un a utilisé une fausse voix ou une fausse vidéo pour vous tromper"
     },
@@ -308,7 +307,7 @@
     "urgentHeading": "Quand demander vite l'aide d'une personne",
     "urgent": "Si vous risquez de perdre votre logement, votre emploi ou l'argent dont vous avez besoin pour manger ou payer vos factures, n'attendez pas les lettres. Un point d'accès au droit ou une association de consommateurs près de chez vous peut vous aider. Beaucoup sont gratuits.",
     "recordHeading": "Gardez une trace",
-    "record": "Gardez chaque lettre, e-mail et avis, avec sa date. Pour les appels, notez la date, la personne à qui vous avez parlé et ce qu'elle a dit.",
+    "record": "Gardez chaque lettre, e-mail, conversation et avis, avec sa date. Faites des captures d'écran des conversations. Pour les appels, notez la date, la personne à qui vous avez parlé et ce qu'elle a dit.",
     "forum": "Cela devrait-il fonctionner autrement ? <forum>Dites sur le forum ce qui devrait changer</forum>.",
     "regions": {
       "question": "Où vivez-vous ?",
@@ -695,6 +694,93 @@
         "plain": {
           "subject": "Question sur votre décision concernant mon assurance{hasReference, select, yes { (police {reference})} other {}}",
           "body": "Bonjour,\n\nLe {decisionDate}, j'ai reçu votre décision concernant mon assurance. J'aimerais connaître les principales raisons, et savoir si un score ou un système informatique a joué un rôle.\n\nMerci aussi de me dire quelles informations me concernant vous avez utilisées, pour que je puisse vérifier qu'elles sont exactes. J'aimerais qu'une personne réexamine la décision.\n\nMerci de votre temps,\n{name}"
+        }
+      }
+    },
+    "chatbot": {
+      "metaTitle": "Un chatbot a donné une information fausse, ou un remboursement a été refusé",
+      "metaDescription": "Que faire quand un chatbot de service client s'est trompé ou que vous n'avez pas obtenu de remboursement : vos droits, une lettre pour demander réparation, et à qui vous adresser.",
+      "title": "Un chatbot a donné une information fausse, ou un remboursement a été refusé",
+      "summary": "Le chatbot d'une entreprise s'est trompé, impossible de joindre une personne, ou un remboursement a été refusé.",
+      "lead": "Le chatbot d'une entreprise vous a dit quelque chose qui s'est révélé faux, vous a fait tourner en rond, ou un remboursement a été refusé. Vous pouvez demander qu'on corrige la situation, demander à parler à une personne, et demander une copie de la conversation.",
+      "happened": {
+        "bot": "Beaucoup d'entreprises répondent d'abord avec un chatbot. Certains sont des IA qui rédigent leurs propres réponses.",
+        "wrong": "Les chatbots d'IA peuvent paraître sûrs d'eux et se tromper malgré tout sur des prix, des règles ou des remboursements.",
+        "loop": "Il est parfois difficile de joindre une personne, et la conversation tourne en rond. Faites des captures d'écran de la conversation, avec la date et l'heure."
+      },
+      "company": {
+        "person": "<b>Rendez facile le contact avec une personne.</b> Une option claire pour parler à quelqu'un fait gagner du temps aux deux parties.",
+        "honour": "<b>Si votre chatbot a donné une information fausse, corrigez la situation pour le client,</b> puis corrigez le bot pour que cela ne se reproduise pas.",
+        "disclose": "<b>Dites clairement quand les clients parlent à une IA.</b> Dans l'UE, c'est obligatoire, sauf si c'est évident.",
+        "transcript": "<b>Proposez une copie de la conversation,</b> pour que les deux parties voient la même chose.",
+        "patterns": "<b>Lisez les conversations qui finissent en réclamation.</b> Elles montrent où le bot doit progresser."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Utiliser l'IA ne place pas une entreprise au-dessus du droit de la consommation.</b> La FTC a déclaré qu'il n'existe aucune exemption pour l'IA dans les lois en vigueur.",
+          "2": "<b>Si vous avez payé par carte de crédit sans recevoir ce qui était convenu,</b> vous pouvez contester le débit par écrit auprès de l'émetteur de la carte dans les 60 jours suivant le relevé. Il doit répondre dans les 30 jours et régler le problème dans les 90 jours.",
+          "3": "<b>Aucune loi fédérale ne donne un droit général au remboursement si vous changez d'avis.</b> Vérifiez la politique de remboursement du vendeur et faites votre demande par écrit."
+        },
+        "noReply": "Si l'émetteur de la carte ne corrige pas une erreur de facturation, vous pouvez <cfpb>déposer une plainte auprès de la CFPB</cfpb>. Vous pouvez aussi contacter le service de protection des consommateurs de votre État."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Vous pouvez en général annuler un achat en ligne dans les 14 jours,</b> sans motif. Le délai commence le lendemain de la livraison. Le vendeur doit vous rembourser dans les 14 jours après avoir reçu l'article ou la preuve de l'envoi.",
+          "2": "<b>Si vous avez payé par carte de crédit</b> et que l'article coûtait plus de 100 £ et jusqu'à 30 000 £, vous pouvez réclamer auprès de l'émetteur de la carte au titre de la section 75. Sinon, demandez à votre banque une rétrofacturation (chargeback).",
+          "3": "<b>Vous pouvez demander une copie de la conversation,</b> car ce sont vos données personnelles. Les organisations ont en général un mois pour répondre."
+        },
+        "noReply": "Si l'émetteur de la carte refuse, vous pouvez porter gratuitement le dossier devant le <fos>Financial Ombudsman Service</fos>. Si on ne vous donne pas la conversation ou vos données, vous pouvez porter plainte <ico>auprès de l'Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Un chatbot doit vous dire qu'il est une IA,</b> sauf si c'est évident. Cette règle s'applique depuis le 2 août 2026.",
+          "2": "<b>Vous pouvez annuler la plupart des achats en ligne dans les 14 jours,</b> sans donner de motif. Si le vendeur n'a donné aucune information sur ce droit, le délai passe à 12 mois.",
+          "3": "<b>Certains achats ne peuvent pas être annulés ainsi,</b> comme les billets, les denrées périssables et les articles faits sur mesure.",
+          "4": "<b>Vous pouvez demander une copie de la conversation,</b> car ce sont vos données personnelles. On doit vous répondre dans un délai d'un mois, gratuitement."
+        },
+        "noReply": "Si le vendeur ne règle pas le problème, contactez l'autorité de protection des consommateurs ou une association de consommateurs de votre pays. Si on ne vous donne pas la conversation ou vos données, vous pouvez porter plainte gratuitement auprès de votre autorité de protection des données : <edpb>trouvez la vôtre dans la liste des autorités de protection des données de l'UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Vous pouvez renoncer à un achat fait en ligne ou par téléphone dans les 7 jours</b> suivant la signature ou la réception du produit, et récupérer aussitôt tout ce que vous avez payé.",
+          "2": "<b>Pour les services régulés par le gouvernement fédéral,</b> comme le téléphone et internet, le service client doit proposer une personne au moins 8 heures par jour, mettre réclamation et résiliation dans le premier menu, et répondre dans les 7 jours.",
+          "3": "<b>Vous pouvez demander une copie de la conversation et d'autres données.</b> Une déclaration claire et complète de vos données est due dans les 15 jours suivant votre demande."
+        },
+        "noReply": "Sans réponse, vous pouvez déposer une réclamation sur <consumidor>Consumidor.gov.br</consumidor> ou auprès de votre <procon>Procon</procon> local."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La National Consumer Helpline reçoit les plaintes des consommateurs,</b> par téléphone, WhatsApp, en ligne ou par application.",
+          "2": "<b>Écrivez d'abord à l'entreprise</b> et gardez des captures d'écran de la conversation. Une demande écrite vous laisse une trace."
+        },
+        "noReply": "Sans réponse, la <nch>National Consumer Helpline</nch> peut vous aider. Appelez le <tel>1915</tel>, numéro gratuit."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Ce site ne couvre pas encore les lois de votre pays.</b> Une demande écrite vaut quand même la peine : elle pose clairement la question et vous laisse une trace."
+        },
+        "noReply": "Sans réponse, cherchez une autorité de protection des consommateurs ou une association de consommateurs dans votre pays."
+      },
+      "letters": {
+        "us": {
+          "subject": "Demande de correction de ce que m'a dit votre assistant de conversation{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, je vous ai contactés au sujet de [décrivez brièvement le problème]. Votre assistant de conversation m'a dit [ce qu'il a dit], mais [ce qui s'est réellement passé].\n\nMerci de corriger la situation, en respectant ce que m'a dit votre assistant de conversation ou en me remboursant. Merci aussi de me permettre de parler à une personne qui peut régler ce problème. Merci enfin de m'envoyer une copie de ma conversation.\n\nSi j'ai payé par carte de crédit et que ce n'est pas réglé, je pourrai contester le débit auprès de l'émetteur de ma carte.\n\nCordialement,\n{name}"
+        },
+        "uk": {
+          "subject": "Demande de correction de ce que m'a dit votre assistant de conversation{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, je vous ai contactés au sujet de [décrivez brièvement le problème]. Votre assistant de conversation m'a dit [ce qu'il a dit], mais [ce qui s'est réellement passé].\n\nMerci de corriger la situation, en respectant ce que m'a dit votre assistant de conversation ou en me remboursant. Merci aussi de me permettre de parler à une personne qui peut régler ce problème.\n\nAu titre de l'article 15 du UK GDPR, merci de m'envoyer une copie de ma conversation et de toute autre donnée personnelle que vous détenez sur moi.\n\nMerci de me répondre dans un délai d'un mois.\n\nCordialement,\n{name}"
+        },
+        "eu": {
+          "subject": "Demande de correction de ce que m'a dit votre assistant de conversation{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, je vous ai contactés au sujet de [décrivez brièvement le problème]. Votre assistant de conversation m'a dit [ce qu'il a dit], mais [ce qui s'est réellement passé].\n\nMerci de corriger la situation, en respectant ce que m'a dit votre assistant de conversation ou en me remboursant. Merci aussi de me permettre de parler à une personne qui peut régler ce problème.\n\nAu titre de l'article 15 du RGPD, merci de m'envoyer une copie de ma conversation et de toute autre donnée personnelle que vous détenez sur moi, dans le délai d'un mois prévu par l'article 12, paragraphe 3.\n\nCordialement,\n{name}"
+        },
+        "br": {
+          "subject": "Demande de correction de ce que m'a dit votre assistant de conversation{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, je vous ai contactés au sujet de [décrivez brièvement le problème]. Votre assistant de conversation m'a dit [ce qu'il a dit], mais [ce qui s'est réellement passé].\n\nMerci de corriger la situation, en respectant ce que m'a dit votre assistant de conversation ou en me remboursant. Merci aussi de me permettre de parler à une personne qui peut régler ce problème.\n\nAu titre des articles 18 et 19 de la LGPD (loi n° 13.709/2018), merci de m'envoyer une copie de ma conversation et une déclaration claire et complète des données personnelles que vous détenez sur moi, dans un délai de 15 jours.\n\nCordialement,\n{name}"
+        },
+        "plain": {
+          "subject": "Demande de correction de ce que m'a dit votre assistant de conversation{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, je vous ai contactés au sujet de [décrivez brièvement le problème]. Votre assistant de conversation m'a dit [ce qu'il a dit], mais [ce qui s'est réellement passé].\n\nMerci de corriger la situation, en respectant ce que m'a dit votre assistant de conversation ou en me remboursant. Merci aussi de me permettre de parler à une personne qui peut régler ce problème. Merci enfin de m'envoyer une copie de ma conversation.\n\nJ'attends votre réponse écrite.\n\nCordialement,\n{name}"
         }
       }
     }

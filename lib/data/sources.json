@@ -179,7 +179,9 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928020903/https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-09-29",
+          "note": "Robert read the whole press release in his saved copy."
         },
         {
           "id": "cfpb-reg-b",
@@ -1638,6 +1640,77 @@
           "status": "confirmed",
           "note": "Read on 29 September 2026: complaints are attended to within 14 days; if unresolved beyond 15 days or the answer is unsatisfactory, you may go to the Insurance Ombudsman; no payment is asked at any stage.",
           "summary": "India's free insurance complaint portal, with a path to the Insurance Ombudsman if the insurer doesn't resolve the complaint."
+        },
+        {
+          "id": "fcba-1666",
+          "title": "15 U.S. Code § 1666: Correction of billing errors",
+          "publisher": "Legal Information Institute, Cornell Law School",
+          "type": "Law (US)",
+          "jurisdiction": "United States (Fair Credit Billing Act)",
+          "url": "https://www.law.cornell.edu/uscode/text/15/1666",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
+          "summary": "You can dispute a credit card billing error in writing within 60 days of the statement, including for goods or services not delivered as agreed. The card company must acknowledge within 30 days and resolve it within two billing cycles, and no later than 90 days."
+        },
+        {
+          "id": "eu-your-europe-returns",
+          "title": "Guarantees and returns",
+          "publisher": "Your Europe (European Union)",
+          "type": "Official guidance (EU)",
+          "jurisdiction": "European Union",
+          "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026.",
+          "summary": "You can cancel most online and other distance purchases within 14 days without giving a reason; the period extends to 12 months if the seller didn't tell you about this right. Some things, such as tickets, perishable goods, and custom-made items, are excluded."
+        },
+        {
+          "id": "uk-ca-cooling-off",
+          "title": "Changing your mind about something you've bought",
+          "publisher": "Citizens Advice",
+          "type": "Consumer advice (UK)",
+          "jurisdiction": "United Kingdom",
+          "url": "https://www.citizensadvice.org.uk/consumer/changed-your-mind/changing-your-mind-about-something-youve-bought/",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026. Citizens Advice is an independent charity, not a regulator.",
+          "summary": "Things bought without seeing them in person usually come with a 14-day cooling-off period, starting the day after delivery, and nothing needs to be wrong with them. The seller must refund within 14 days of getting the item back or proof it was posted."
+        },
+        {
+          "id": "uk-ca-card-refunds",
+          "title": "Getting your money back if you paid by card or PayPal",
+          "publisher": "Citizens Advice",
+          "type": "Consumer advice (UK)",
+          "jurisdiction": "United Kingdom (Consumer Credit Act 1974, section 75)",
+          "url": "https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/getting-your-money-back-if-you-paid-by-card-or-paypal/",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026. Citizens Advice is an independent charity, not a regulator.",
+          "summary": "Credit card purchases of more than £100 and up to £30,000 per item can be claimed back from the card company under section 75; otherwise, ask for a chargeback. If refused, the Financial Ombudsman can look at the case."
+        },
+        {
+          "id": "br-cdc-art49",
+          "title": "Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), art. 49",
+          "publisher": "Presidência da República (Planalto)",
+          "type": "Law (Brazil)",
+          "jurisdiction": "Brazil",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+          "status": "confirmed",
+          "primary": true,
+          "lang": "pt-BR",
+          "note": "Read on 29 September 2026.",
+          "summary": "For purchases made outside a shop, such as online or by phone, the consumer can withdraw within 7 days of signing or receiving the product, and everything paid must be returned at once."
+        },
+        {
+          "id": "br-decreto-11034",
+          "title": "Decreto nº 11.034, de 5 de abril de 2022 (Serviço de Atendimento ao Consumidor)",
+          "publisher": "Presidência da República (Planalto)",
+          "type": "Law (Brazil)",
+          "jurisdiction": "Brazil",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11034.htm",
+          "status": "confirmed",
+          "primary": true,
+          "lang": "pt-BR",
+          "note": "Read on 29 September 2026: applies to services regulated by the federal government (art. 1); phone service with a human for at least 8 hours a day, and complaint and cancellation in the first menu (art. 5); answers within 7 calendar days (art. 13).",
+          "summary": "Customer service rules for federally regulated services: a phone line with a human available at least eight hours a day, complaint and cancellation options in the first menu, and answers within seven days."
         }
       ]
     }

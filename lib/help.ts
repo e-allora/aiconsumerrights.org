@@ -244,9 +244,53 @@ export const SITUATIONS: Situation[] = [
       },
     },
   },
+  {
+    id: "chatbot",
+    happened: ["bot", "wrong", "loop"],
+    company: [
+      { key: "person" },
+      { key: "honour" },
+      { key: "disclose", cites: ["eu-ai-act-art50"] },
+      { key: "transcript" },
+      { key: "patterns" },
+    ],
+    regions: {
+      us: {
+        rights: [["ftc-ai-comply-2024"], ["fcba-1666"], []],
+        letter: "us",
+        complain: { cfpb: "cfpb-complaint" },
+      },
+      uk: {
+        rights: [["uk-ca-cooling-off"], ["uk-ca-card-refunds"], ["uk-ico-sar"]],
+        letter: "uk",
+        complain: { fos: "uk-fos-complain", ico: "uk-ico-complaint" },
+      },
+      eu: {
+        rights: [["eu-ai-act-art50"], ["eu-your-europe-returns"], ["eu-your-europe-returns"], ["gdpr"]],
+        letter: "eu",
+        complain: { edpb: "edpb-members" },
+      },
+      br: {
+        rights: [["br-cdc-art49"], ["br-decreto-11034"], ["anpd-lgpd-en"]],
+        letter: "br",
+        complain: { consumidor: "br-consumidor-gov", procon: "br-sndc-procon" },
+      },
+      in: {
+        rights: [["in-nch"], []],
+        letter: "plain",
+        complain: { nch: "in-nch" },
+        phone: "1915",
+      },
+      other: {
+        rights: [[]],
+        letter: "plain",
+        complain: {},
+      },
+    },
+  },
 ];
 
 /** Situations planned but not written yet, shown as "coming next" on /help. */
-export const COMING = ["chatbot", "account", "deepfake"] as const;
+export const COMING = ["account", "deepfake"] as const;
 
 export const getSituation = (id: string): Situation | undefined => SITUATIONS.find((s) => s.id === id);

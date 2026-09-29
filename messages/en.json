@@ -289,7 +289,6 @@
     "pending": "<b>Not reviewed by a legal expert yet.</b> Robert Sweetman is checking these pages against their sources, but no lawyer, legal clinic, or consumer organisation has reviewed them, and native speakers haven't checked the translations. If you can help review them, <contact>please get in touch</contact>.",
     "comingHeading": "Coming next",
     "coming": {
-      "chatbot": "A chatbot gave wrong information, or a refund was refused",
       "account": "An account was blocked or a post was removed",
       "deepfake": "Someone used a fake voice or video to trick you"
     },
@@ -308,7 +307,7 @@
     "urgentHeading": "When to get help from a person soon",
     "urgent": "If you could lose your home, your job, or money you need for food or bills, don't wait for letters. A legal aid office or consumer advice centre near you can help. Many are free.",
     "recordHeading": "Keep a record",
-    "record": "Keep every letter, email, and notice, with its date. For phone calls, write down the date, who you spoke to, and what they said.",
+    "record": "Keep every letter, email, chat, and notice, with its date. Take screenshots of chats. For phone calls, write down the date, who you spoke to, and what they said.",
     "forum": "Should this work differently? <forum>Say what should change in the forum</forum>.",
     "regions": {
       "question": "Where do you live?",
@@ -695,6 +694,93 @@
         "plain": {
           "subject": "Question about your decision on my insurance{hasReference, select, yes { (policy {reference})} other {}}",
           "body": "Hello,\n\nOn {decisionDate}, I received your decision about my insurance. I would be grateful to know the main reasons, and whether a score or computer system played a part.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would appreciate it if a person could review the decision.\n\nThank you for your time,\n{name}"
+        }
+      }
+    },
+    "chatbot": {
+      "metaTitle": "A chatbot gave wrong information, or a refund was refused",
+      "metaDescription": "What to do when a customer service chatbot got it wrong or you couldn't get a refund: your rights, a letter asking them to put it right, and where to turn.",
+      "title": "A chatbot gave wrong information, or a refund was refused",
+      "summary": "A company's chatbot got it wrong, you couldn't reach a person, or a refund was refused.",
+      "lead": "A company's chatbot told you something that turned out to be wrong, sent you in circles, or a refund was refused. You can ask them to put it right, ask for a person, and ask for a copy of the chat.",
+      "happened": {
+        "bot": "Many companies answer customers with a chatbot first. Some are AI that write their own replies.",
+        "wrong": "AI chatbots can sound sure and still be wrong about prices, rules, or refunds.",
+        "loop": "Sometimes it's hard to reach a person, and the chat goes in circles. Take screenshots of the chat, with the date and time."
+      },
+      "company": {
+        "person": "<b>Make it easy to reach a person.</b> A clear “talk to a person” option saves time for both sides.",
+        "honour": "<b>If your chatbot gave wrong information, put it right for the customer,</b> then fix the bot so it doesn't happen again.",
+        "disclose": "<b>Say clearly when customers are talking to AI.</b> In the EU, that is required unless it's obvious.",
+        "transcript": "<b>Offer a copy of the chat,</b> so both sides are looking at the same thing.",
+        "patterns": "<b>Read the chats that end in complaints.</b> They show where the bot needs work."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Using AI doesn't put a company above consumer law.</b> The FTC has said there is no AI exemption from the laws on the books.",
+          "2": "<b>If you paid by credit card and didn't get what you agreed to,</b> you can dispute the charge with your card company in writing within 60 days of the statement. They must reply within 30 days and resolve it within 90.",
+          "3": "<b>No federal law gives a general right to a refund if you change your mind.</b> Check the seller's refund policy, and ask in writing."
+        },
+        "noReply": "If the card company doesn't fix a billing error, you can <cfpb>complain to the CFPB</cfpb>. You can also contact your state's consumer protection office."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>You can usually cancel things bought online within 14 days,</b> with no reason. The period starts the day after delivery. The seller must refund you within 14 days of getting the item back or proof you sent it.",
+          "2": "<b>If you paid by credit card</b> and the item cost more than £100 and up to £30,000, you can claim from the card company under section 75. Otherwise, ask your bank for a chargeback.",
+          "3": "<b>You can ask for a copy of your chat,</b> because it's your personal data. Organisations usually have one month to answer."
+        },
+        "noReply": "If the card company says no, you can take it to the <fos>Financial Ombudsman Service</fos> for free. If they won't give you your chat or data, you can complain to the <ico>Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>A chatbot must tell you it's AI,</b> unless that's obvious. This has applied since 2 August 2026.",
+          "2": "<b>You can cancel most online purchases within 14 days,</b> without giving a reason. If the seller didn't tell you about this right, the period stretches to 12 months.",
+          "3": "<b>Some things can't be cancelled this way,</b> such as tickets, food that spoils quickly, and custom-made items.",
+          "4": "<b>You can ask for a copy of your chat,</b> because it's your personal data. They must answer within one month, for free."
+        },
+        "noReply": "If the seller doesn't sort it out, contact the consumer authority or a consumer organisation in your country. If they won't give you your chat or data, you can complain for free to your data protection authority: <edpb>find yours on the list of EU data protection authorities</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>You can withdraw from purchases made online or by phone within 7 days</b> of signing or receiving the product, and get everything you paid back straight away.",
+          "2": "<b>For services regulated by the federal government,</b> such as phone and internet, the customer service line must offer a person at least 8 hours a day, put complaint and cancellation in the first menu, and answer within 7 days.",
+          "3": "<b>You can ask for a copy of your chat and other data.</b> A clear, full statement of your data is due within 15 days of your request."
+        },
+        "noReply": "If you get no answer, you can complain on <consumidor>Consumidor.gov.br</consumidor> or with your local <procon>Procon</procon>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>The National Consumer Helpline takes consumer complaints,</b> by phone, WhatsApp, online, or app.",
+          "2": "<b>Ask the company in writing first,</b> and keep screenshots of the chat. A written request gives you a record."
+        },
+        "noReply": "If you get no answer, the <nch>National Consumer Helpline</nch> can help. Call <tel>1915</tel>, toll-free."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>This site doesn't cover your country's laws yet.</b> A written request is still worth sending: it asks clearly, and it gives you a record."
+        },
+        "noReply": "If you get no answer, look for a consumer protection authority or consumer organisation in your country."
+      },
+      "letters": {
+        "us": {
+          "subject": "Please put right what your chat assistant told me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I contacted you about [briefly describe the problem]. Your chat assistant told me [what it said], but [what actually happened].\n\nPlease put this right, either by honoring what your chat assistant told me or by giving me a refund. Please also let me speak with a person who can resolve this, and send me a copy of my chat.\n\nIf I paid by credit card and this isn't resolved, I may dispute the charge with my card company.\n\nThank you,\n{name}"
+        },
+        "uk": {
+          "subject": "Please put right what your chat assistant told me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I contacted you about [briefly describe the problem]. Your chat assistant told me [what it said], but [what actually happened].\n\nPlease put this right, either by honouring what your chat assistant told me or by giving me a refund. Please also let me speak with a person who can resolve this.\n\nUnder Article 15 of the UK GDPR, please send me a copy of my chat and any other personal data you hold about me.\n\nPlease reply within one month.\n\nKind regards,\n{name}"
+        },
+        "eu": {
+          "subject": "Please put right what your chat assistant told me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I contacted you about [briefly describe the problem]. Your chat assistant told me [what it said], but [what actually happened].\n\nPlease put this right, either by honouring what your chat assistant told me or by giving me a refund. Please also let me speak with a person who can resolve this.\n\nUnder Article 15 of the GDPR, please send me a copy of my chat and any other personal data you hold about me, within one month as Article 12(3) requires.\n\nKind regards,\n{name}"
+        },
+        "br": {
+          "subject": "Please put right what your chat assistant told me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I contacted you about [briefly describe the problem]. Your chat assistant told me [what it said], but [what actually happened].\n\nPlease put this right, either by honouring what your chat assistant told me or by giving me a refund. Please also let me speak with a person who can resolve this.\n\nUnder Articles 18 and 19 of the LGPD (Law No. 13,709/2018), please send me a copy of my chat and a clear and complete statement of the personal data you hold about me, within 15 days.\n\nKind regards,\n{name}"
+        },
+        "plain": {
+          "subject": "Please put right what your chat assistant told me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I contacted you about [briefly describe the problem]. Your chat assistant told me [what it said], but [what actually happened].\n\nPlease put this right, either by honouring what your chat assistant told me or by giving me a refund. Please also let me speak with a person who can resolve this, and send me a copy of my chat.\n\nI look forward to your reply in writing.\n\nKind regards,\n{name}"
         }
       }
     }
