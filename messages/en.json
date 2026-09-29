@@ -289,7 +289,7 @@
     "pending": "<b>Not reviewed by a legal expert yet.</b> Robert Sweetman is checking these pages against their sources, but no lawyer, legal clinic, or consumer organisation has reviewed them, and native speakers haven't checked the translations. If you can help review them, <contact>please get in touch</contact>.",
     "comingHeading": "Coming next",
     "coming": {
-      "housing": "A rental or insurance decision went against you",
+      "insurance": "An insurance decision went against you",
       "chatbot": "A chatbot gave wrong information, or a refund was refused",
       "account": "An account was blocked or a post was removed",
       "deepfake": "Someone used a fake voice or video to trick you"
@@ -520,6 +520,94 @@
         "plain": {
           "subject": "Question about my job application{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hello,\n\nOn {decisionDate}, I learned that my application was not successful. I would be grateful for some feedback on the main reasons, and I would like to know whether a computer system screened or scored my application.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would appreciate it if a person could look at my application again.\n\nThank you for your time,\n{name}"
+        }
+      }
+    },
+    "housing": {
+      "metaTitle": "A rental application was turned down",
+      "metaDescription": "What to do when a tenant screening check may have cost you a home: your rights, a letter asking what happened, and where to turn.",
+      "title": "A rental application was turned down",
+      "summary": "A landlord or letting agent said no, maybe after a screening check.",
+      "lead": "You applied to rent a home and the landlord or agent said no, or asked for a much bigger deposit. A screening check or score may have played a part. You can ask what was used, check it for mistakes, and ask for a person to look again.",
+      "happened": {
+        "screening": "Many landlords and letting agents use screening services. They can check credit, rental history, court records, and ID.",
+        "score": "Some services turn this into a score, or a simple yes or no.",
+        "mistakes": "Mistakes happen: an old record, a debt already paid, or a record that belongs to someone else."
+      },
+      "company": {
+        "answer": "<b>Reply, even briefly.</b> People looking for a home are often under time pressure. A quick answer lets them move on or fix things.",
+        "reasons": "<b>Say what counted.</b> If a screening report was used, say which company made it, so the person can check it. In the US, that is required.",
+        "person": "<b>Let a person look again,</b> especially if the report might be about someone else.",
+        "data": "<b>If a record turns out to be wrong,</b> tell the screening company and the applicant, so it doesn't happen again.",
+        "patterns": "<b>Check what your screening looks at.</b> Old or unrelated records can shut out good tenants."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Tenant screening reports count as consumer reports.</b> If a landlord turns you down because of one, they must tell you which company supplied it, that the company didn't make the decision, and that you can get a free copy within 60 days and dispute anything wrong.",
+          "2": "<b>The screening company must check a dispute for free,</b> usually within 30 days.",
+          "3": "<b>Housing discrimination is illegal</b> because of race, color, national origin, religion, sex, familial status, or disability.",
+          "4": "<b>No federal law makes a landlord explain every reason for saying no.</b> Asking politely can still help, and a written request gives you a record."
+        },
+        "noReply": "If a screening report had wrong information, dispute it with the company that made it, and <cfpb>complain to the CFPB</cfpb>. If you think you were turned down because of a protected trait, you can <hud>report it to HUD</hud> for free. The deadline is one year."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>You can ask for copies of your data,</b> including any screening or credit check. Organisations usually have one month to answer.",
+          "2": "<b>If a computer alone turned you down,</b> with no meaningful human involvement, and the decision significantly affects you, they must let you get information about it, give your side, ask for a person to step in, and challenge it."
+        },
+        "noReply": "If you get no answer, or you disagree with it, you can complain to the <ico>Information Commissioner's Office (ICO)</ico> about how your data was used."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>You can ask the landlord or agent for your data and how the decision was made.</b> If it was automated, they must give you meaningful information about the logic involved.",
+          "2": "<b>If a computer alone made the decision,</b> you can usually ask for a person to review it, give your side, and challenge it.",
+          "3": "<b>If they used a credit check or score from another company,</b> you can ask that company too for the data it holds about you and where it came from.",
+          "4": "<b>They must answer within one month, for free.</b> For hard cases they can take two more months, but they must tell you within the first month."
+        },
+        "noReply": "If you get no answer within one month, send a reminder. Then you can complain for free to the data protection authority in your country. <edpb>Find yours on the list of EU data protection authorities</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>You can ask for a review of a decision made only by a computer,</b> including decisions based on your consumer or credit profile.",
+          "2": "<b>You can ask for the criteria and steps used.</b> Trade secrets can limit the details.",
+          "3": "<b>You can see and correct your data.</b> A clear, full statement of your data is due within 15 days of your request.",
+          "4": "<b>The law doesn't say a person must do the review.</b> That rule was removed in 2019, so ask for a person anyway."
+        },
+        "noReply": "If you get no answer, you can file a free petition with the <anpd>national data protection authority (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>India's data protection law gives you the right to a summary of your data and to correct it, but these rights start in May 2027.</b>",
+          "2": "<b>You can still ask now.</b> Write to the landlord or agent, ask whether a screening check or score was used, and ask for a person to look again. A written request gives you a record."
+        },
+        "noReply": "If you get no answer, keep your letter and any replies. This site doesn't yet list a place in India to take rental screening complaints."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>This site doesn't cover your country's laws yet.</b> A written request is still worth sending: it asks clearly, and it gives you a record."
+        },
+        "noReply": "If you get no answer, look for a data protection authority, a housing advice service, or an equality body in your country."
+      },
+      "letters": {
+        "us": {
+          "subject": "Question about my rental application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my rental application was not accepted. If a tenant screening report or other consumer report played any part, please tell me which company supplied it, so I can get my free copy and check it for errors, as the Fair Credit Reporting Act provides.\n\nI would also be grateful to know the main reasons for the decision, and whether a score or automated system was used.\n\nIf any information about me was wrong, I am ready to correct it, and I would appreciate it if a person could look at my application again.\n\nThank you for your time,\n{name}"
+        },
+        "uk": {
+          "subject": "Request under UK GDPR Articles 15 and 22C about my rental application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my rental application was not accepted. Under Article 15 of the UK GDPR, please send me a copy of the personal data you hold about me, including any screening or credit check results, tell me where it came from, and tell me whether the decision was made by automated means.\n\nIf the decision was based solely on automated processing, with no meaningful human involvement, I ask under Article 22C for information about it. I want to make representations, to have a person step in, and to contest the decision.\n\nPlease reply within one month.\n\nKind regards,\n{name}"
+        },
+        "eu": {
+          "subject": "Request under GDPR Articles 15 and 22 about my rental application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my rental application was not accepted. Under Article 15 of the GDPR, please send me:\n- a copy of the personal data you hold about me, including any screening or credit check results, and where it came from;\n- whether the decision was automated and, if so, meaningful information about the logic involved and what it means for me.\n\nIf the decision was based solely on automated processing, I ask under Article 22(3) for a person to review it. I want to give my point of view and to contest the decision.\n\nPlease reply within one month, as Article 12(3) requires.\n\nKind regards,\n{name}"
+        },
+        "br": {
+          "subject": "Request under Articles 18, 19 and 20 of the LGPD about my rental application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my rental application was not accepted. Under Articles 18 and 19 of the LGPD (Law No. 13,709/2018), please confirm whether you process my personal data, and send me a clear and complete statement of it, with its origin, the criteria used, and the purpose, within 15 days.\n\nUnder Article 20, I ask for a review of this decision, and for clear information on the criteria and procedures used to make it. I would like a person to carry out the review.\n\nKind regards,\n{name}"
+        },
+        "plain": {
+          "subject": "Question about my rental application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my rental application was not accepted. I would be grateful to know the main reasons, and whether a screening check, score, or computer system played a part.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would appreciate it if a person could look at my application again.\n\nThank you for your time,\n{name}"
         }
       }
     }

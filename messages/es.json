@@ -289,7 +289,7 @@
     "pending": "<b>Aún sin revisión de una persona experta en derecho.</b> Robert Sweetman está comprobando estas páginas con sus fuentes, pero ningún abogado, clínica jurídica ni organización de consumidores las ha revisado, y ninguna persona nativa ha revisado las traducciones. Si puedes ayudar a revisarlas, <contact>ponte en contacto</contact>.",
     "comingHeading": "Próximamente",
     "coming": {
-      "housing": "Una decisión de alquiler o de seguro te fue desfavorable",
+      "insurance": "Una decisión de seguro te fue desfavorable",
       "chatbot": "Un chatbot dio información errónea o te negaron un reembolso",
       "account": "Bloquearon una cuenta o retiraron una publicación",
       "deepfake": "Alguien usó una voz o un video falsos para engañarte"
@@ -520,6 +520,94 @@
         "plain": {
           "subject": "Consulta sobre mi solicitud de empleo{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hola:\n\nEl {decisionDate} supe que mi solicitud no fue seleccionada. Les agradecería algún comentario sobre los motivos principales y quisiera saber si un sistema informático revisó o puntuó mi solicitud.\n\nTambién les ruego que me digan qué información sobre mí usaron, para que pueda comprobar que es correcta. Les agradecería que una persona revisara de nuevo mi solicitud.\n\nGracias por su tiempo,\n{name}"
+        }
+      }
+    },
+    "housing": {
+      "metaTitle": "Rechazaron tu solicitud de alquiler",
+      "metaDescription": "Qué hacer cuando una verificación de inquilinos pudo costarte una vivienda: tus derechos, una carta para preguntar qué pasó y adónde acudir.",
+      "title": "Rechazaron tu solicitud de alquiler",
+      "summary": "Un propietario o una agencia dijo que no, quizá después de una verificación.",
+      "lead": "Solicitaste alquilar una vivienda y el propietario o la agencia dijo que no, o pidió un depósito mucho mayor. Puede que influyera una verificación o una puntuación. Puedes preguntar qué se usó, revisarlo por si hay errores y pedir que una persona lo vuelva a mirar.",
+      "happened": {
+        "screening": "Muchos propietarios y agencias usan servicios de verificación de inquilinos. Pueden revisar el crédito, el historial de alquiler, registros judiciales y la identidad.",
+        "score": "Algunos servicios lo convierten en una puntuación o en un simple sí o no.",
+        "mistakes": "Hay errores: un registro antiguo, una deuda ya pagada o un registro que pertenece a otra persona."
+      },
+      "company": {
+        "answer": "<b>Responde, aunque sea brevemente.</b> Quien busca vivienda suele tener prisa. Una respuesta rápida le permite seguir adelante o corregir algo.",
+        "reasons": "<b>Di qué pesó.</b> Si se usó un informe de verificación, di qué empresa lo hizo, para que la persona pueda revisarlo. En EE. UU. es obligatorio.",
+        "person": "<b>Deja que una persona lo vuelva a mirar,</b> sobre todo si el informe podría ser de otra persona.",
+        "data": "<b>Si un registro resulta erróneo,</b> avisa a la empresa de verificación y a quien lo solicitó, para que no vuelva a pasar.",
+        "patterns": "<b>Revisa en qué se fija tu verificación.</b> Registros antiguos o sin relación pueden dejar fuera a buenos inquilinos."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Los informes de verificación de inquilinos cuentan como informes del consumidor.</b> Si un propietario te rechaza por uno, debe decirte qué empresa lo proporcionó, que esa empresa no tomó la decisión y que puedes obtener una copia gratuita en 60 días e impugnar cualquier error.",
+          "2": "<b>La empresa de verificación debe revisar una impugnación gratis,</b> normalmente en 30 días.",
+          "3": "<b>La discriminación en la vivienda es ilegal</b> por raza, color, origen nacional, religión, sexo, situación familiar o discapacidad.",
+          "4": "<b>Ninguna ley federal obliga a un propietario a explicar todos los motivos de un no.</b> Aun así, preguntar con amabilidad puede ayudar, y una solicitud por escrito te deja un registro."
+        },
+        "noReply": "Si un informe de verificación tenía datos erróneos, impúgnalo ante la empresa que lo hizo y <cfpb>reclama ante la CFPB</cfpb>. Si crees que te rechazaron por un rasgo protegido, puedes <hud>denunciarlo ante el HUD</hud> gratis. El plazo es de un año."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Puedes pedir copias de tus datos,</b> incluida cualquier verificación o consulta de crédito. Las organizaciones suelen tener un mes para responder.",
+          "2": "<b>Si un ordenador te rechazó él solo,</b> sin intervención humana real, y la decisión te afecta de forma importante, deben permitirte obtener información, dar tu punto de vista, pedir que intervenga una persona e impugnarla."
+        },
+        "noReply": "Si no recibes respuesta, o no estás de acuerdo con ella, puedes reclamar ante la <ico>Information Commissioner's Office (ICO)</ico> sobre el uso de tus datos."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Puedes pedir al propietario o a la agencia tus datos y cómo se tomó la decisión.</b> Si fue automatizada, deben darte información significativa sobre la lógica aplicada.",
+          "2": "<b>Si un ordenador tomó la decisión él solo,</b> normalmente puedes pedir que una persona la revise, dar tu punto de vista e impugnarla.",
+          "3": "<b>Si usaron una consulta o puntuación de crédito de otra empresa,</b> también puedes pedir a esa empresa los datos que tiene sobre ti y su origen.",
+          "4": "<b>Deben responder en un mes, gratis.</b> En casos complejos pueden tardar dos meses más, pero deben avisarte dentro del primer mes."
+        },
+        "noReply": "Si no recibes respuesta en un mes, envía un recordatorio. Después puedes reclamar gratis ante la autoridad de protección de datos de tu país. <edpb>Encuentra la tuya en la lista de autoridades de protección de datos de la UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Puedes pedir la revisión de una decisión tomada solo por un ordenador,</b> incluidas las basadas en tu perfil de consumo o de crédito.",
+          "2": "<b>Puedes pedir los criterios y pasos usados.</b> Los secretos comerciales pueden limitar los detalles.",
+          "3": "<b>Puedes ver y corregir tus datos.</b> Una declaración clara y completa de tus datos debe llegar en un plazo de 15 días desde tu solicitud.",
+          "4": "<b>La ley no dice que la revisión deba hacerla una persona.</b> Esa norma se eliminó en 2019, así que pide una persona de todos modos."
+        },
+        "noReply": "Si no recibes respuesta, puedes presentar una petición gratuita ante la <anpd>autoridad nacional de protección de datos (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La ley de protección de datos de la India te da derecho a un resumen de tus datos y a corregirlos, pero estos derechos empiezan en mayo de 2027.</b>",
+          "2": "<b>Aun así, puedes pedirlo ya.</b> Escribe al propietario o a la agencia, pregunta si se usó una verificación o puntuación y pide que una persona lo vuelva a mirar. Una solicitud por escrito te deja un registro."
+        },
+        "noReply": "Si no recibes respuesta, guarda tu carta y cualquier respuesta. Este sitio aún no indica un lugar en la India para reclamaciones sobre verificación de inquilinos."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Este sitio aún no cubre las leyes de tu país.</b> Aun así, vale la pena enviar una solicitud por escrito: pide las cosas con claridad y te deja un registro."
+        },
+        "noReply": "Si no recibes respuesta, busca una autoridad de protección de datos, un servicio de orientación sobre vivienda o un organismo de igualdad en tu país."
+      },
+      "letters": {
+        "us": {
+          "subject": "Consulta sobre mi solicitud de alquiler{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} supe que no aceptaron mi solicitud de alquiler. Si influyó un informe de verificación de inquilinos u otro informe del consumidor, les ruego que me indiquen qué empresa lo proporcionó, para obtener mi copia gratuita y revisar si tiene errores, como prevé la Fair Credit Reporting Act.\n\nTambién les agradecería conocer los motivos principales de la decisión y si se usó una puntuación o un sistema automatizado.\n\nSi algún dato mío era erróneo, puedo corregirlo, y les agradecería que una persona revisara de nuevo mi solicitud.\n\nGracias por su tiempo,\n{name}"
+        },
+        "uk": {
+          "subject": "Solicitud conforme a los artículos 15 y 22C del UK GDPR sobre mi solicitud de alquiler{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} supe que no aceptaron mi solicitud de alquiler. Conforme al artículo 15 del UK GDPR, les pido una copia de los datos personales que tienen sobre mí, incluidos los resultados de cualquier verificación o consulta de crédito, su origen y si la decisión se tomó por medios automatizados.\n\nSi la decisión se basó únicamente en un tratamiento automatizado, sin intervención humana real, solicito, conforme al artículo 22C, información sobre ella. Quiero presentar mis alegaciones, que intervenga una persona e impugnar la decisión.\n\nLes ruego que respondan en el plazo de un mes.\n\nAtentamente,\n{name}"
+        },
+        "eu": {
+          "subject": "Solicitud conforme a los artículos 15 y 22 del RGPD sobre mi solicitud de alquiler{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} supe que no aceptaron mi solicitud de alquiler. Conforme al artículo 15 del RGPD, les pido que me envíen:\n- una copia de los datos personales que tienen sobre mí, incluidos los resultados de cualquier verificación o consulta de crédito, y su origen;\n- si la decisión fue automatizada y, en ese caso, información significativa sobre la lógica aplicada y las consecuencias para mí.\n\nSi la decisión se basó únicamente en un tratamiento automatizado, solicito, conforme al artículo 22, apartado 3, que una persona la revise. Quiero expresar mi punto de vista e impugnar la decisión.\n\nLes ruego que respondan en el plazo de un mes, como exige el artículo 12, apartado 3.\n\nAtentamente,\n{name}"
+        },
+        "br": {
+          "subject": "Solicitud conforme a los artículos 18, 19 y 20 de la LGPD sobre mi solicitud de alquiler{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} supe que no aceptaron mi solicitud de alquiler. Conforme a los artículos 18 y 19 de la LGPD (Ley n.º 13.709/2018), les pido que confirmen si tratan mis datos personales y que me envíen, en un plazo de 15 días, una declaración clara y completa de ellos, con su origen, los criterios usados y la finalidad.\n\nConforme al artículo 20, solicito la revisión de esta decisión e información clara sobre los criterios y procedimientos usados para tomarla. Quisiera que la revisión la hiciera una persona.\n\nAtentamente,\n{name}"
+        },
+        "plain": {
+          "subject": "Consulta sobre mi solicitud de alquiler{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} supe que no aceptaron mi solicitud de alquiler. Les agradecería conocer los motivos principales y si influyó una verificación, una puntuación o un sistema informático.\n\nTambién les ruego que me digan qué información sobre mí usaron, para que pueda comprobar que es correcta. Les agradecería que una persona revisara de nuevo mi solicitud.\n\nGracias por su tiempo,\n{name}"
         }
       }
     }

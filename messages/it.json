@@ -289,7 +289,7 @@
     "pending": "<b>Non ancora revisionate da un esperto legale.</b> Robert Sweetman sta verificando queste pagine con le loro fonti, ma nessun avvocato, clinica legale o associazione dei consumatori le ha ancora revisionate, e nessun madrelingua ha controllato le traduzioni. Se puoi aiutare a revisionarle, <contact>scrivici</contact>.",
     "comingHeading": "In arrivo",
     "coming": {
-      "housing": "Una decisione su un affitto o un'assicurazione ti ha penalizzato",
+      "insurance": "Una decisione assicurativa ti ha penalizzato",
       "chatbot": "Un chatbot ha dato informazioni sbagliate o ti è stato negato un rimborso",
       "account": "Un account è stato bloccato o un post è stato rimosso",
       "deepfake": "Qualcuno ha usato una voce o un video falsi per ingannarti"
@@ -520,6 +520,94 @@
         "plain": {
           "subject": "Domanda sulla mia candidatura{hasReference, select, yes { (rif. {reference})} other {}}",
           "body": "Buongiorno,\n\nil {decisionDate} ho saputo che la mia candidatura non è stata selezionata. Gradirei un riscontro sui motivi principali e vorrei sapere se un sistema informatico ha valutato o dato un punteggio alla mia candidatura.\n\nVi chiedo anche quali informazioni su di me avete usato, così da poter verificare che siano corrette. Gradirei che una persona potesse riesaminare la mia candidatura.\n\nGrazie per il vostro tempo,\n{name}"
+        }
+      }
+    },
+    "housing": {
+      "metaTitle": "Una domanda di affitto è stata rifiutata",
+      "metaDescription": "Che cosa fare quando un controllo sugli inquilini potrebbe esserti costato una casa: i tuoi diritti, una lettera per chiedere che cosa è successo e a chi rivolgerti.",
+      "title": "Una domanda di affitto è stata rifiutata",
+      "summary": "Un proprietario o un'agenzia ha detto di no, forse dopo un controllo.",
+      "lead": "Hai chiesto di affittare una casa e il proprietario o l'agenzia ha detto di no, o ha chiesto un deposito molto più alto. Potrebbe aver contato un controllo o un punteggio. Puoi chiedere che cosa è stato usato, verificare se ci sono errori e chiedere che una persona riesamini la domanda.",
+      "happened": {
+        "screening": "Molti proprietari e agenzie usano servizi di controllo sugli inquilini. Possono verificare il credito, gli affitti passati, i registri giudiziari e l'identità.",
+        "score": "Alcuni servizi trasformano tutto in un punteggio, o in un semplice sì o no.",
+        "mistakes": "Gli errori capitano: un dato vecchio, un debito già pagato o un dato che appartiene a un'altra persona."
+      },
+      "company": {
+        "answer": "<b>Rispondi, anche in breve.</b> Chi cerca casa spesso ha poco tempo. Una risposta rapida permette di andare avanti o di correggere qualcosa.",
+        "reasons": "<b>Di' che cosa ha contato.</b> Se è stato usato un rapporto di controllo, indica quale società l'ha fatto, così la persona può verificarlo. Negli Stati Uniti è obbligatorio.",
+        "person": "<b>Lascia che una persona riesamini,</b> soprattutto se il rapporto potrebbe riguardare qualcun altro.",
+        "data": "<b>Se un dato si rivela sbagliato,</b> avvisa la società di controllo e chi ha fatto domanda, così non si ripete.",
+        "patterns": "<b>Controlla che cosa guarda il tuo controllo.</b> Dati vecchi o non pertinenti possono escludere buoni inquilini."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>I rapporti di controllo sugli inquilini valgono come rapporti sul consumatore.</b> Se un proprietario ti rifiuta per uno di questi, deve dirti quale società l'ha fornito, che quella società non ha preso la decisione e che puoi averne una copia gratuita entro 60 giorni e contestare ogni errore.",
+          "2": "<b>La società di controllo deve verificare una contestazione gratis,</b> di solito entro 30 giorni.",
+          "3": "<b>La discriminazione negli alloggi è illegale</b> in base a origine etnica, colore, origine nazionale, religione, sesso, situazione familiare o disabilità.",
+          "4": "<b>Nessuna legge federale obbliga un proprietario a spiegare ogni motivo di un no.</b> Chiedere con cortesia può comunque aiutare, e una richiesta scritta ti lascia una traccia."
+        },
+        "noReply": "Se un rapporto di controllo conteneva dati sbagliati, contestalo con la società che l'ha fatto e <cfpb>presenta un reclamo alla CFPB</cfpb>. Se pensi che ti abbiano rifiutato per una caratteristica protetta, puoi <hud>segnalarlo all'HUD</hud> gratuitamente. Il termine è di un anno."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Puoi chiedere copia dei tuoi dati,</b> compresi eventuali controlli o verifiche del credito. Di solito le organizzazioni hanno un mese per rispondere.",
+          "2": "<b>Se ti ha rifiutato solo un computer,</b> senza un reale intervento umano, e la decisione ha un effetto importante su di te, devono permetterti di avere informazioni, esprimere la tua opinione, chiedere l'intervento di una persona e contestarla."
+        },
+        "noReply": "Se non ricevi risposta, o non sei d'accordo, puoi presentare un reclamo <ico>all'Information Commissioner's Office (ICO)</ico> sull'uso dei tuoi dati."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Puoi chiedere al proprietario o all'agenzia i tuoi dati e come è stata presa la decisione.</b> Se era automatizzata, devono darti informazioni significative sulla logica utilizzata.",
+          "2": "<b>Se ha deciso solo un computer,</b> di solito puoi chiedere che una persona riesamini la decisione, esprimere la tua opinione e contestarla.",
+          "3": "<b>Se hanno usato una verifica o un punteggio di credito di un'altra società,</b> puoi chiedere anche a quella società i dati che ha su di te e da dove vengono.",
+          "4": "<b>Devono rispondere entro un mese, gratis.</b> Nei casi complessi possono prendersi altri due mesi, ma devono avvisarti entro il primo mese."
+        },
+        "noReply": "Se non ricevi risposta entro un mese, invia un sollecito. Poi puoi presentare un reclamo gratuito all'autorità per la protezione dei dati del tuo Paese. <edpb>Trova la tua nell'elenco delle autorità per la protezione dei dati dell'UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Puoi chiedere il riesame di una decisione presa solo da un computer,</b> comprese quelle basate sul tuo profilo di consumatore o di credito.",
+          "2": "<b>Puoi chiedere i criteri e le procedure usati.</b> Il segreto commerciale può limitare i dettagli.",
+          "3": "<b>Puoi vedere e correggere i tuoi dati.</b> Una dichiarazione chiara e completa dei tuoi dati è dovuta entro 15 giorni dalla richiesta.",
+          "4": "<b>La legge non dice che il riesame debba farlo una persona.</b> Quella regola è stata tolta nel 2019, quindi chiedi comunque una persona."
+        },
+        "noReply": "Se non ricevi risposta, puoi presentare gratuitamente una <anpd>petizione all'autorità nazionale per la protezione dei dati (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La legge indiana sulla protezione dei dati ti dà diritto a un riepilogo dei tuoi dati e a correggerli, ma questi diritti partono da maggio 2027.</b>",
+          "2": "<b>Puoi comunque chiedere già ora.</b> Scrivi al proprietario o all'agenzia, chiedi se è stato usato un controllo o un punteggio e chiedi che una persona riesamini la domanda. Una richiesta scritta ti lascia una traccia."
+        },
+        "noReply": "Se non ricevi risposta, conserva la tua lettera e le eventuali risposte. Questo sito non indica ancora un ufficio in India per i reclami sui controlli degli inquilini."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Questo sito non copre ancora le leggi del tuo Paese.</b> Vale comunque la pena inviare una richiesta scritta: chiede le cose con chiarezza e ti lascia una traccia."
+        },
+        "noReply": "Se non ricevi risposta, cerca un'autorità per la protezione dei dati, un servizio di consulenza sulla casa o un organismo per la parità nel tuo Paese."
+      },
+      "letters": {
+        "us": {
+          "subject": "Domanda sulla mia richiesta di affitto{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho saputo che la mia richiesta di affitto non è stata accettata. Se un rapporto di controllo sugli inquilini o un altro rapporto sul consumatore ha avuto un ruolo, vi chiedo di indicarmi quale società l'ha fornito, così da ottenere la mia copia gratuita e verificare eventuali errori, come prevede il Fair Credit Reporting Act.\n\nGradirei anche conoscere i motivi principali della decisione e sapere se è stato usato un punteggio o un sistema automatico.\n\nSe qualche mio dato fosse sbagliato, posso correggerlo, e gradirei che una persona riesaminasse la mia richiesta.\n\nGrazie per il vostro tempo,\n{name}"
+        },
+        "uk": {
+          "subject": "Richiesta ai sensi degli articoli 15 e 22C dello UK GDPR sulla mia richiesta di affitto{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho saputo che la mia richiesta di affitto non è stata accettata. Ai sensi dell'articolo 15 dello UK GDPR, vi chiedo una copia dei dati personali che avete su di me, compresi i risultati di eventuali controlli o verifiche del credito, la loro origine e se la decisione è stata presa con mezzi automatizzati.\n\nSe la decisione si è basata unicamente su un trattamento automatizzato, senza un reale intervento umano, chiedo, ai sensi dell'articolo 22C, informazioni al riguardo. Desidero esprimere la mia posizione, ottenere l'intervento di una persona e contestare la decisione.\n\nVi chiedo di rispondere entro un mese.\n\nCordiali saluti,\n{name}"
+        },
+        "eu": {
+          "subject": "Richiesta ai sensi degli articoli 15 e 22 del GDPR sulla mia richiesta di affitto{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho saputo che la mia richiesta di affitto non è stata accettata. Ai sensi dell'articolo 15 del GDPR (Regolamento UE 2016/679), vi chiedo di inviarmi:\n- una copia dei dati personali che avete su di me, compresi i risultati di eventuali controlli o verifiche del credito, e la loro origine;\n- se la decisione è stata automatizzata e, in tal caso, informazioni significative sulla logica utilizzata e sulle conseguenze per me.\n\nSe la decisione si è basata unicamente su un trattamento automatizzato, chiedo, ai sensi dell'articolo 22, paragrafo 3, che una persona la riesamini. Desidero esprimere la mia opinione e contestare la decisione.\n\nVi chiedo di rispondere entro un mese, come prevede l'articolo 12, paragrafo 3.\n\nCordiali saluti,\n{name}"
+        },
+        "br": {
+          "subject": "Richiesta ai sensi degli articoli 18, 19 e 20 della LGPD sulla mia richiesta di affitto{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho saputo che la mia richiesta di affitto non è stata accettata. Ai sensi degli articoli 18 e 19 della LGPD (Legge n. 13.709/2018), vi chiedo di confermare se trattate i miei dati personali e di inviarmi, entro 15 giorni, una dichiarazione chiara e completa, con l'origine dei dati, i criteri usati e la finalità.\n\nAi sensi dell'articolo 20, chiedo il riesame di questa decisione e informazioni chiare sui criteri e sulle procedure usati. Vorrei che il riesame fosse fatto da una persona.\n\nCordiali saluti,\n{name}"
+        },
+        "plain": {
+          "subject": "Domanda sulla mia richiesta di affitto{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho saputo che la mia richiesta di affitto non è stata accettata. Gradirei conoscere i motivi principali e sapere se ha contato un controllo, un punteggio o un sistema informatico.\n\nVi chiedo anche quali informazioni su di me avete usato, così da poter verificare che siano corrette. Gradirei che una persona riesaminasse la mia richiesta.\n\nGrazie per il vostro tempo,\n{name}"
         }
       }
     }

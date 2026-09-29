@@ -289,7 +289,7 @@
     "pending": "<b>Pas encore relues par un expert juridique.</b> Robert Sweetman vérifie ces pages à partir de leurs sources, mais aucun avocat, aucune clinique juridique ni aucune association de consommateurs ne les a encore relues, et aucune personne de langue maternelle n'a vérifié les traductions. Si vous pouvez aider à les relire, <contact>contactez-nous</contact>.",
     "comingHeading": "Bientôt",
     "coming": {
-      "housing": "Une décision de location ou d'assurance vous a été défavorable",
+      "insurance": "Une décision d'assurance vous a été défavorable",
       "chatbot": "Un chatbot a donné une information fausse, ou un remboursement a été refusé",
       "account": "Un compte a été bloqué ou une publication a été retirée",
       "deepfake": "Quelqu'un a utilisé une fausse voix ou une fausse vidéo pour vous tromper"
@@ -465,7 +465,7 @@
       "uk": {
         "rights": {
           "1": "<b>Vous pouvez demander une copie de vos données,</b> y compris les notes et scores sur votre candidature. Les organisations ont en général un mois pour répondre.",
-          "2": "<b>Si un ordinateur vous a refusé seul,</b> sans réelle intervention humaine, et que la décision vous affecte de façon importante, l'employeur doit vous permettre d'obtenir des informations, de donner votre point de vue, de demander l'intervention d'une personne et de la contester."
+          "2": "<b>Si un ordinateur a refusé votre candidature à lui seul,</b> sans réelle intervention humaine, et que la décision vous affecte de façon importante, l'employeur doit vous permettre d'obtenir des informations, de donner votre point de vue, de demander l'intervention d'une personne et de la contester."
         },
         "noReply": "Sans réponse, ou si vous n'êtes pas d'accord, vous pouvez porter plainte <ico>auprès de l'Information Commissioner's Office (ICO)</ico> sur l'usage de vos données."
       },
@@ -520,6 +520,94 @@
         "plain": {
           "subject": "Question sur ma candidature{hasReference, select, yes { (réf. {reference})} other {}}",
           "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma candidature n'avait pas été retenue. J'aimerais beaucoup avoir un retour sur les principales raisons, et j'aimerais savoir si un système informatique a trié ou noté ma candidature.\n\nMerci aussi de me dire quelles informations me concernant vous avez utilisées, pour que je puisse vérifier qu'elles sont exactes. J'aimerais qu'une personne réexamine ma candidature.\n\nMerci de votre temps,\n{name}"
+        }
+      }
+    },
+    "housing": {
+      "metaTitle": "Une demande de location a été refusée",
+      "metaDescription": "Que faire quand une vérification de locataires vous a peut-être coûté un logement : vos droits, une lettre pour demander ce qui s'est passé, et à qui vous adresser.",
+      "title": "Une demande de location a été refusée",
+      "summary": "Un propriétaire ou une agence a dit non, peut-être après une vérification.",
+      "lead": "Vous avez demandé à louer un logement et le propriétaire ou l'agence a dit non, ou a demandé un dépôt de garantie bien plus élevé. Une vérification ou un score a peut-être joué un rôle. Vous pouvez demander ce qui a été utilisé, vérifier s'il y a des erreurs, et demander qu'une personne réexamine votre dossier.",
+      "happened": {
+        "screening": "Beaucoup de propriétaires et d'agences utilisent des services de vérification des locataires. Ils peuvent contrôler le crédit, l'historique locatif, les décisions de justice et l'identité.",
+        "score": "Certains services en tirent un score, ou un simple oui ou non.",
+        "mistakes": "Les erreurs arrivent : une donnée ancienne, une dette déjà payée, ou une donnée qui concerne quelqu'un d'autre."
+      },
+      "company": {
+        "answer": "<b>Répondez, même brièvement.</b> Les personnes qui cherchent un logement manquent souvent de temps. Une réponse rapide leur permet d'avancer ou de corriger quelque chose.",
+        "reasons": "<b>Dites ce qui a compté.</b> Si un rapport de vérification a été utilisé, indiquez quelle entreprise l'a établi, pour que la personne puisse le vérifier. Aux États-Unis, c'est obligatoire.",
+        "person": "<b>Laissez une personne réexaminer le dossier,</b> surtout si le rapport pourrait concerner quelqu'un d'autre.",
+        "data": "<b>Si une donnée se révèle fausse,</b> prévenez l'entreprise de vérification et la personne concernée, pour que cela ne se reproduise pas.",
+        "patterns": "<b>Vérifiez ce que votre vérification prend en compte.</b> Des données anciennes ou sans rapport peuvent écarter de bons locataires."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Les rapports de vérification des locataires comptent comme des rapports sur le consommateur.</b> Si un propriétaire vous refuse à cause de l'un d'eux, il doit vous dire quelle entreprise l'a fourni, que cette entreprise n'a pas pris la décision, et que vous pouvez en obtenir une copie gratuite dans les 60 jours et contester toute erreur.",
+          "2": "<b>L'entreprise de vérification doit examiner une contestation gratuitement,</b> en général dans les 30 jours.",
+          "3": "<b>La discrimination en matière de logement est illégale</b> en raison de la race, de la couleur, de l'origine nationale, de la religion, du sexe, de la situation familiale ou d'un handicap.",
+          "4": "<b>Aucune loi fédérale n'oblige un propriétaire à expliquer toutes les raisons d'un refus.</b> Demander poliment peut quand même aider, et une demande écrite vous laisse une trace."
+        },
+        "noReply": "Si un rapport de vérification contenait des erreurs, contestez-le auprès de l'entreprise qui l'a établi et <cfpb>déposez une plainte auprès de la CFPB</cfpb>. Si vous pensez que votre demande a été refusée en raison d'une caractéristique protégée, vous pouvez <hud>le signaler au HUD</hud> gratuitement. Le délai est d'un an."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Vous pouvez demander une copie de vos données,</b> y compris toute vérification ou consultation de crédit. Les organisations ont en général un mois pour répondre.",
+          "2": "<b>Si un ordinateur a refusé votre demande à lui seul,</b> sans réelle intervention humaine, et que la décision vous affecte de façon importante, on doit vous permettre d'obtenir des informations, de donner votre point de vue, de demander l'intervention d'une personne et de la contester."
+        },
+        "noReply": "Sans réponse, ou si vous n'êtes pas d'accord, vous pouvez porter plainte <ico>auprès de l'Information Commissioner's Office (ICO)</ico> sur l'usage de vos données."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Vous pouvez demander au propriétaire ou à l'agence vos données et comment la décision a été prise.</b> Si elle était automatisée, on doit vous donner des informations utiles sur la logique sous-jacente.",
+          "2": "<b>Si un ordinateur a décidé seul,</b> vous pouvez en général demander qu'une personne réexamine la décision, donner votre point de vue et la contester.",
+          "3": "<b>Si une vérification ou un score de crédit d'une autre entreprise a été utilisé,</b> vous pouvez aussi demander à cette entreprise les données qu'elle détient sur vous et leur source.",
+          "4": "<b>On doit vous répondre dans un délai d'un mois, gratuitement.</b> Pour les cas complexes, ce délai peut être prolongé de deux mois, mais on doit vous prévenir dans le premier mois."
+        },
+        "noReply": "Sans réponse sous un mois, envoyez une relance. Vous pouvez ensuite porter plainte gratuitement auprès de l'autorité de protection des données de votre pays. <edpb>Trouvez la vôtre dans la liste des autorités de protection des données de l'UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Vous pouvez demander le réexamen d'une décision prise uniquement par un ordinateur,</b> y compris celles fondées sur votre profil de consommateur ou de crédit.",
+          "2": "<b>Vous pouvez demander les critères et les procédures utilisés.</b> Le secret des affaires peut limiter les détails.",
+          "3": "<b>Vous pouvez consulter et corriger vos données.</b> Une déclaration claire et complète de vos données est due dans les 15 jours suivant votre demande.",
+          "4": "<b>La loi ne dit pas que le réexamen doit être fait par une personne.</b> Cette règle a été supprimée en 2019, alors demandez quand même une personne."
+        },
+        "noReply": "Sans réponse, vous pouvez déposer gratuitement une <anpd>requête auprès de l'autorité nationale de protection des données (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La loi indienne sur la protection des données vous donne droit à un résumé de vos données et à leur correction, mais ces droits ne commencent qu'en mai 2027.</b>",
+          "2": "<b>Vous pouvez quand même demander dès maintenant.</b> Écrivez au propriétaire ou à l'agence, demandez si une vérification ou un score a été utilisé, et demandez qu'une personne réexamine votre dossier. Une demande écrite vous laisse une trace."
+        },
+        "noReply": "Sans réponse, gardez votre lettre et les éventuelles réponses. Ce site n'indique pas encore d'organisme en Inde pour les plaintes liées à la vérification des locataires."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Ce site ne couvre pas encore les lois de votre pays.</b> Une demande écrite vaut quand même la peine : elle pose clairement la question et vous laisse une trace."
+        },
+        "noReply": "Sans réponse, cherchez une autorité de protection des données, un service d'information sur le logement ou un organisme pour l'égalité dans votre pays."
+      },
+      "letters": {
+        "us": {
+          "subject": "Question sur ma demande de location{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma demande de location n'avait pas été acceptée. Si un rapport de vérification des locataires ou un autre rapport sur le consommateur a joué un rôle, merci de m'indiquer quelle entreprise l'a fourni, afin que j'obtienne ma copie gratuite et que je vérifie s'il contient des erreurs, comme le prévoit le Fair Credit Reporting Act.\n\nJ'aimerais aussi connaître les principales raisons de la décision, et savoir si un score ou un système automatisé a été utilisé.\n\nSi certaines de mes informations étaient fausses, je peux les corriger, et j'aimerais qu'une personne réexamine ma demande.\n\nMerci de votre temps,\n{name}"
+        },
+        "uk": {
+          "subject": "Demande au titre des articles 15 et 22C du UK GDPR sur ma demande de location{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma demande de location n'avait pas été acceptée. Au titre de l'article 15 du UK GDPR, merci de m'envoyer une copie des données personnelles que vous détenez sur moi, y compris les résultats de toute vérification ou consultation de crédit, leur source, et de m'indiquer si la décision a été prise par des moyens automatisés.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, sans réelle intervention humaine, je demande, au titre de l'article 22C, des informations à son sujet. Je souhaite présenter mes observations, obtenir l'intervention d'une personne et contester la décision.\n\nMerci de me répondre dans un délai d'un mois.\n\nCordialement,\n{name}"
+        },
+        "eu": {
+          "subject": "Demande au titre des articles 15 et 22 du RGPD sur ma demande de location{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma demande de location n'avait pas été acceptée. Au titre de l'article 15 du RGPD, merci de m'envoyer :\n- une copie des données personnelles que vous détenez sur moi, y compris les résultats de toute vérification ou consultation de crédit, et leur source ;\n- si la décision a été automatisée et, dans ce cas, des informations utiles sur la logique sous-jacente et ses conséquences pour moi.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, je demande, au titre de l'article 22, paragraphe 3, qu'une personne la réexamine. Je souhaite exprimer mon point de vue et contester la décision.\n\nMerci de me répondre dans un délai d'un mois, comme l'exige l'article 12, paragraphe 3.\n\nCordialement,\n{name}"
+        },
+        "br": {
+          "subject": "Demande au titre des articles 18, 19 et 20 de la LGPD sur ma demande de location{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma demande de location n'avait pas été acceptée. Au titre des articles 18 et 19 de la LGPD (loi n° 13.709/2018), merci de confirmer si vous traitez mes données personnelles et de m'envoyer, dans un délai de 15 jours, une déclaration claire et complète, avec leur origine, les critères utilisés et la finalité.\n\nAu titre de l'article 20, je demande le réexamen de cette décision et des informations claires sur les critères et procédures utilisés. Je souhaite que le réexamen soit fait par une personne.\n\nCordialement,\n{name}"
+        },
+        "plain": {
+          "subject": "Question sur ma demande de location{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma demande de location n'avait pas été acceptée. J'aimerais connaître les principales raisons, et savoir si une vérification, un score ou un système informatique a joué un rôle.\n\nMerci aussi de me dire quelles informations me concernant vous avez utilisées, pour que je puisse vérifier qu'elles sont exactes. J'aimerais qu'une personne réexamine ma demande.\n\nMerci de votre temps,\n{name}"
         }
       }
     }

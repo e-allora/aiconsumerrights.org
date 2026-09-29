@@ -175,6 +175,25 @@ describe("/help/job", () => {
   });
 });
 
+describe("/help/housing", () => {
+  it("treats tenant screening reports as consumer reports and gives HUD's one-year deadline", async () => {
+    const user = userEvent.setup();
+    render(<SituationPage params={{ locale: "en", situation: "housing" }} />);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("A rental application was turned down");
+    await user.click(screen.getByRole("radio", { name: "United States" }));
+    expect(screen.getByText(/Tenant screening reports count as consumer reports/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /report it to HUD/ })).toHaveAttribute("href", getSource("hud-fheo-intake").url);
+    expect(screen.getByText(/The deadline is one year/)).toBeInTheDocument();
+    expect(screen.getByText(/so I can get my free copy and check it for errors/)).toBeInTheDocument();
+  });
+
+  it("lists insurance as still to come", () => {
+    render(<HelpPage params={{ locale: "en" }} />);
+    expect(screen.getByRole("link", { name: /A rental application was turned down/ })).toHaveAttribute("href", "/en/help/housing");
+    expect(screen.getByText("An insurance decision went against you")).toBeInTheDocument();
+  });
+});
+
 describe("LetterBuilder", () => {
   const letter = () => document.querySelector(".letter-print")!.textContent!;
 

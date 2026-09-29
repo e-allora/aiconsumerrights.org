@@ -289,7 +289,7 @@
     "pending": "<b>Noch nicht juristisch geprüft.</b> Robert Sweetman prüft diese Seiten anhand ihrer Quellen, aber noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation hat sie geprüft, und Muttersprachler haben die Übersetzungen noch nicht kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
     "comingHeading": "Demnächst",
     "coming": {
-      "housing": "Eine Entscheidung über eine Wohnung oder Versicherung fiel gegen Sie aus",
+      "insurance": "Eine Versicherungsentscheidung fiel gegen Sie aus",
       "chatbot": "Ein Chatbot gab falsche Auskünfte, oder eine Erstattung wurde abgelehnt",
       "account": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
       "deepfake": "Jemand hat eine gefälschte Stimme oder ein gefälschtes Video benutzt, um Sie zu täuschen"
@@ -520,6 +520,94 @@
         "plain": {
           "subject": "Frage zu meiner Bewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
           "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Bewerbung nicht erfolgreich war. Ich wäre dankbar für eine Rückmeldung zu den wichtigsten Gründen und möchte wissen, ob ein Computersystem meine Bewerbung sortiert oder bewertet hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich wäre dankbar, wenn ein Mensch meine Bewerbung noch einmal ansehen könnte.\n\nDanke für Ihre Zeit\n{name}"
+        }
+      }
+    },
+    "housing": {
+      "metaTitle": "Eine Mietbewerbung wurde abgelehnt",
+      "metaDescription": "Was Sie tun können, wenn eine Mieterprüfung Sie eine Wohnung gekostet haben könnte: Ihre Rechte, ein Brief mit der Frage, was passiert ist, und Stellen, an die Sie sich wenden können.",
+      "title": "Eine Mietbewerbung wurde abgelehnt",
+      "summary": "Ein Vermieter oder Makler hat Nein gesagt, vielleicht nach einer Prüfung.",
+      "lead": "Sie haben sich um eine Wohnung beworben, und der Vermieter oder Makler hat Nein gesagt oder eine viel höhere Kaution verlangt. Vielleicht hat eine Prüfung oder ein Score mitgespielt. Sie können fragen, was genutzt wurde, es auf Fehler prüfen und darum bitten, dass ein Mensch noch einmal hinschaut.",
+      "happened": {
+        "screening": "Viele Vermieter und Makler nutzen Dienste zur Mieterprüfung. Sie können Bonität, frühere Mietverhältnisse, Gerichtsdaten und Identität prüfen.",
+        "score": "Manche Dienste machen daraus einen Score oder ein einfaches Ja oder Nein.",
+        "mistakes": "Fehler kommen vor: ein alter Eintrag, eine längst bezahlte Schuld oder ein Eintrag, der zu jemand anderem gehört."
+      },
+      "company": {
+        "answer": "<b>Antworten Sie, auch kurz.</b> Wer eine Wohnung sucht, steht oft unter Zeitdruck. Eine schnelle Antwort hilft, weiterzusuchen oder etwas zu klären.",
+        "reasons": "<b>Sagen Sie, was gezählt hat.</b> Wenn ein Prüfbericht genutzt wurde, nennen Sie die Firma, die ihn erstellt hat, damit die Person ihn prüfen kann. In den USA ist das Pflicht.",
+        "person": "<b>Lassen Sie einen Menschen noch einmal hinsehen,</b> besonders wenn der Bericht jemand anderen betreffen könnte.",
+        "data": "<b>Wenn sich ein Eintrag als falsch herausstellt,</b> sagen Sie es der Prüffirma und der Person, damit es nicht wieder passiert.",
+        "patterns": "<b>Prüfen Sie, worauf Ihre Mieterprüfung achtet.</b> Alte oder sachfremde Einträge können gute Mieter ausschließen."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Berichte zur Mieterprüfung gelten als Verbraucherberichte.</b> Wenn ein Vermieter Sie deswegen ablehnt, muss er Ihnen sagen, welche Firma den Bericht geliefert hat, dass diese Firma nicht entschieden hat, und dass Sie innerhalb von 60 Tagen eine kostenlose Kopie bekommen und Fehler beanstanden können.",
+          "2": "<b>Die Prüffirma muss eine Beanstandung kostenlos prüfen,</b> in der Regel innerhalb von 30 Tagen.",
+          "3": "<b>Diskriminierung bei der Wohnungsvergabe ist verboten</b> wegen Hautfarbe, ethnischer oder nationaler Herkunft, Religion, Geschlecht, familiärer Situation (etwa Kindern im Haushalt) oder Behinderung.",
+          "4": "<b>Kein Bundesgesetz verpflichtet Vermieter, jeden Grund für eine Absage zu nennen.</b> Höflich nachzufragen kann trotzdem helfen, und eine schriftliche Anfrage ist ein Nachweis."
+        },
+        "noReply": "Wenn ein Prüfbericht falsche Angaben enthielt, beanstanden Sie ihn bei der Firma, die ihn erstellt hat, und <cfpb>beschweren Sie sich bei der CFPB</cfpb>. Wenn Sie glauben, wegen eines geschützten Merkmals abgelehnt worden zu sein, können Sie das <hud>kostenlos beim HUD melden</hud>. Die Frist beträgt ein Jahr."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Sie können Kopien Ihrer Daten verlangen,</b> auch zu jeder Mieter- oder Bonitätsprüfung. Organisationen haben in der Regel einen Monat Zeit für die Antwort.",
+          "2": "<b>Wenn allein ein Computer Sie abgelehnt hat,</b> ohne echte menschliche Beteiligung, und die Entscheidung Sie erheblich betrifft, muss man Ihnen Informationen geben, Sie Ihren Standpunkt darlegen lassen, einen Menschen eingreifen lassen und Ihnen die Anfechtung ermöglichen."
+        },
+        "noReply": "Wenn keine Antwort kommt oder Sie ihr nicht zustimmen, können Sie sich beim <ico>Information Commissioner's Office (ICO)</ico> über die Nutzung Ihrer Daten beschweren."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Sie können vom Vermieter oder Makler Ihre Daten und die Art der Entscheidung erfragen.</b> War sie automatisiert, muss man Ihnen aussagekräftige Informationen über die involvierte Logik geben.",
+          "2": "<b>Wenn allein ein Computer entschieden hat,</b> können Sie meist verlangen, dass ein Mensch die Entscheidung prüft, Ihren Standpunkt darlegen und sie anfechten.",
+          "3": "<b>Wenn eine Bonitätsauskunft oder ein Score einer anderen Firma genutzt wurde,</b> können Sie auch diese Firma nach den Daten über Sie und ihrer Herkunft fragen.",
+          "4": "<b>Man muss Ihnen innerhalb eines Monats antworten, kostenlos.</b> In schwierigen Fällen darf es zwei Monate länger dauern, aber man muss Ihnen das im ersten Monat mitteilen."
+        },
+        "noReply": "Wenn nach einem Monat keine Antwort kommt, schicken Sie eine Erinnerung. Danach können Sie sich kostenlos bei der Datenschutzbehörde in Ihrem Land beschweren. <edpb>Finden Sie Ihre in der Liste der Datenschutzbehörden der EU</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Sie können verlangen, dass eine allein vom Computer getroffene Entscheidung überprüft wird,</b> auch Entscheidungen auf Grundlage Ihres Verbraucher- oder Kreditprofils.",
+          "2": "<b>Sie können die verwendeten Kriterien und Verfahren erfragen.</b> Geschäftsgeheimnisse können die Einzelheiten begrenzen.",
+          "3": "<b>Sie können Ihre Daten einsehen und berichtigen.</b> Eine klare, vollständige Aufstellung Ihrer Daten ist innerhalb von 15 Tagen nach Ihrer Anfrage fällig.",
+          "4": "<b>Das Gesetz schreibt nicht vor, dass ein Mensch die Überprüfung macht.</b> Diese Regel wurde 2019 gestrichen; bitten Sie trotzdem um einen Menschen."
+        },
+        "noReply": "Wenn keine Antwort kommt, können Sie kostenlos eine Eingabe bei der <anpd>nationalen Datenschutzbehörde (ANPD)</anpd> machen."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Indiens Datenschutzgesetz gibt Ihnen das Recht auf eine Übersicht Ihrer Daten und auf Berichtigung, aber diese Rechte gelten erst ab Mai 2027.</b>",
+          "2": "<b>Sie können trotzdem schon jetzt fragen.</b> Schreiben Sie dem Vermieter oder Makler, fragen Sie, ob eine Prüfung oder ein Score genutzt wurde, und bitten Sie darum, dass ein Mensch noch einmal hinschaut. Eine schriftliche Anfrage ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, heben Sie Ihren Brief und alle Antworten auf. Diese Website nennt noch keine Stelle in Indien für Beschwerden über Mieterprüfungen."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Diese Website deckt die Gesetze Ihres Landes noch nicht ab.</b> Eine schriftliche Anfrage lohnt sich trotzdem: Sie fragt klar nach und ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, suchen Sie eine Datenschutzbehörde, eine Mieterberatung oder eine Gleichstellungsstelle in Ihrem Land."
+      },
+      "letters": {
+        "us": {
+          "subject": "Frage zu meiner Mietbewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Mietbewerbung nicht angenommen wurde. Falls ein Bericht zur Mieterprüfung oder ein anderer Verbraucherbericht eine Rolle gespielt hat, teilen Sie mir bitte mit, welche Firma ihn geliefert hat, damit ich meine kostenlose Kopie anfordern und auf Fehler prüfen kann, wie es der Fair Credit Reporting Act vorsieht.\n\nIch wäre auch dankbar, die wichtigsten Gründe für die Entscheidung zu erfahren und ob ein Score oder ein automatisiertes System genutzt wurde.\n\nFalls Angaben über mich falsch waren, berichtige ich sie gern, und ich wäre dankbar, wenn ein Mensch meine Bewerbung noch einmal ansehen könnte.\n\nDanke für Ihre Zeit\n{name}"
+        },
+        "uk": {
+          "subject": "Anfrage nach Art. 15 und Art. 22C UK GDPR zu meiner Mietbewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Mietbewerbung nicht angenommen wurde. Nach Art. 15 UK GDPR bitte ich um eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, einschließlich der Ergebnisse jeder Mieter- oder Bonitätsprüfung, um ihre Herkunft und um die Angabe, ob die Entscheidung automatisiert getroffen wurde.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung ohne echte menschliche Beteiligung beruhte, bitte ich nach Art. 22C UK GDPR um Informationen dazu. Ich möchte Stellung nehmen, einen Menschen eingreifen lassen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "eu": {
+          "subject": "Anfrage nach Art. 15 und Art. 22 DSGVO zu meiner Mietbewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Mietbewerbung nicht angenommen wurde. Nach Art. 15 DSGVO bitte ich Sie um:\n- eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, einschließlich der Ergebnisse jeder Mieter- oder Bonitätsprüfung, und ihre Herkunft;\n- die Angabe, ob die Entscheidung automatisiert getroffen wurde, und in diesem Fall aussagekräftige Informationen über die involvierte Logik und die Folgen für mich.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung beruhte, verlange ich nach Art. 22 Abs. 3 DSGVO, dass ein Mensch sie überprüft. Ich möchte meinen Standpunkt darlegen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats, wie es Art. 12 Abs. 3 DSGVO vorsieht.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "br": {
+          "subject": "Anfrage nach Art. 18, 19 und 20 LGPD zu meiner Mietbewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Mietbewerbung nicht angenommen wurde. Nach Art. 18 und 19 LGPD (Gesetz Nr. 13.709/2018) bitte ich Sie zu bestätigen, ob Sie meine personenbezogenen Daten verarbeiten, und mir innerhalb von 15 Tagen eine klare und vollständige Aufstellung zu schicken, mit Herkunft der Daten, verwendeten Kriterien und Zweck.\n\nNach Art. 20 LGPD bitte ich um Überprüfung dieser Entscheidung und um klare Informationen über die verwendeten Kriterien und Verfahren. Ich möchte, dass ein Mensch die Überprüfung vornimmt.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "plain": {
+          "subject": "Frage zu meiner Mietbewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Mietbewerbung nicht angenommen wurde. Ich wäre dankbar, die wichtigsten Gründe zu erfahren und ob eine Prüfung, ein Score oder ein Computersystem eine Rolle gespielt hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich wäre dankbar, wenn ein Mensch meine Bewerbung noch einmal ansehen könnte.\n\nDanke für Ihre Zeit\n{name}"
         }
       }
     }

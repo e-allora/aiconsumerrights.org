@@ -289,7 +289,7 @@
     "pending": "<b>Ainda sem revisão de um especialista jurídico.</b> Robert Sweetman está a verificar estas páginas com as suas fontes, mas nenhum advogado, clínica jurídica ou organização de consumidores as reviu, e nenhum falante nativo reviu as traduções. Se puder ajudar a revê-las, <contact>entre em contacto</contact>.",
     "comingHeading": "Em breve",
     "coming": {
-      "housing": "Uma decisão de arrendamento ou de seguro foi-lhe desfavorável",
+      "insurance": "Uma decisão de seguro foi-lhe desfavorável",
       "chatbot": "Um chatbot deu informação errada ou foi recusado um reembolso",
       "account": "Uma conta foi bloqueada ou uma publicação foi removida",
       "deepfake": "Alguém usou uma voz ou um vídeo falsos para o enganar"
@@ -520,6 +520,94 @@
         "plain": {
           "subject": "Pedido de informação sobre a minha candidatura{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Bom dia,\n\nEm {decisionDate}, soube que a minha candidatura não foi selecionada. Agradecia algum feedback sobre os motivos principais e gostaria de saber se um sistema informático analisou ou pontuou a minha candidatura.\n\nPeço também que me digam que informação sobre mim usaram, para eu poder confirmar que está correta. Agradecia que uma pessoa voltasse a ver a minha candidatura.\n\nCom os melhores cumprimentos,\n{name}"
+        }
+      }
+    },
+    "housing": {
+      "metaTitle": "Um pedido de arrendamento foi recusado",
+      "metaDescription": "O que fazer quando uma verificação de inquilinos lhe pode ter custado uma casa: os seus direitos, uma carta para perguntar o que aconteceu e a quem recorrer.",
+      "title": "Um pedido de arrendamento foi recusado",
+      "summary": "Um senhorio ou uma imobiliária disse que não, talvez depois de uma verificação.",
+      "lead": "Pediu para arrendar uma casa e o senhorio ou a imobiliária disse que não, ou pediu uma caução muito maior. Uma verificação ou pontuação pode ter tido peso. Pode perguntar o que foi usado, verificar se há erros e pedir que uma pessoa volte a analisar.",
+      "happened": {
+        "screening": "Muitos senhorios e imobiliárias usam serviços de verificação de inquilinos. Podem verificar o crédito, o histórico de arrendamento, registos judiciais e a identidade.",
+        "score": "Alguns serviços transformam isto numa pontuação ou num simples sim ou não.",
+        "mistakes": "Há erros: um registo antigo, uma dívida já paga ou um registo que pertence a outra pessoa."
+      },
+      "company": {
+        "answer": "<b>Responda, mesmo que brevemente.</b> Quem procura casa tem muitas vezes pouco tempo. Uma resposta rápida permite seguir em frente ou corrigir algo.",
+        "reasons": "<b>Diga o que pesou.</b> Se foi usado um relatório de verificação, diga que empresa o fez, para que a pessoa o possa verificar. Nos EUA, isso é obrigatório.",
+        "person": "<b>Deixe uma pessoa voltar a analisar,</b> sobretudo se o relatório puder ser sobre outra pessoa.",
+        "data": "<b>Se um registo estiver errado,</b> avise a empresa de verificação e quem fez o pedido, para que não volte a acontecer.",
+        "patterns": "<b>Verifique o que a sua verificação tem em conta.</b> Registos antigos ou sem relação podem afastar bons inquilinos."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Os relatórios de verificação de inquilinos contam como relatórios de consumidor.</b> Se um senhorio recusar o seu pedido por causa de um, tem de lhe dizer que empresa o forneceu, que essa empresa não tomou a decisão e que pode obter uma cópia gratuita em 60 dias e contestar qualquer erro.",
+          "2": "<b>A empresa de verificação tem de analisar uma contestação gratuitamente,</b> normalmente em 30 dias.",
+          "3": "<b>A discriminação na habitação é ilegal</b> por raça, cor, origem nacional, religião, sexo, situação familiar ou deficiência.",
+          "4": "<b>Nenhuma lei federal obriga um senhorio a explicar todos os motivos de um não.</b> Mesmo assim, perguntar com cortesia pode ajudar, e um pedido por escrito deixa-lhe um registo."
+        },
+        "noReply": "Se um relatório de verificação tinha dados errados, conteste-o junto da empresa que o fez e <cfpb>apresente queixa à CFPB</cfpb>. Se achar que o seu pedido foi recusado por uma característica protegida, pode <hud>denunciar ao HUD</hud> gratuitamente. O prazo é de um ano."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Pode pedir cópias dos seus dados,</b> incluindo qualquer verificação ou consulta de crédito. As organizações têm normalmente um mês para responder.",
+          "2": "<b>Se foi só um computador a recusar o pedido,</b> sem intervenção humana real, e a decisão tem um efeito importante para si, têm de lhe permitir obter informações, dar a sua opinião, pedir que intervenha uma pessoa e contestá-la."
+        },
+        "noReply": "Se não tiver resposta, ou não concordar com ela, pode apresentar queixa à <ico>Information Commissioner's Office (ICO)</ico> sobre o uso dos seus dados."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Pode pedir ao senhorio ou à imobiliária os seus dados e como a decisão foi tomada.</b> Se foi automatizada, têm de lhe dar informações úteis sobre a lógica subjacente.",
+          "2": "<b>Se foi só um computador a decidir,</b> em regra pode pedir que uma pessoa reveja a decisão, dar a sua opinião e contestá-la.",
+          "3": "<b>Se usaram uma consulta ou pontuação de crédito de outra empresa,</b> também pode pedir a essa empresa os dados que tem sobre si e a sua origem.",
+          "4": "<b>Têm de responder no prazo de um mês, gratuitamente.</b> Em casos complexos podem demorar mais dois meses, mas têm de o avisar no primeiro mês."
+        },
+        "noReply": "Se não tiver resposta num mês, envie um lembrete. Depois pode apresentar queixa gratuitamente à autoridade de proteção de dados do seu país. <edpb>Encontre a sua na lista de autoridades de proteção de dados da UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Pode pedir a revisão de uma decisão tomada só por um computador,</b> incluindo decisões baseadas no seu perfil de consumo ou de crédito.",
+          "2": "<b>Pode pedir os critérios e procedimentos usados.</b> Os segredos comercial e industrial podem limitar os pormenores.",
+          "3": "<b>Pode ver e corrigir os seus dados.</b> Uma declaração clara e completa dos seus dados tem de chegar no prazo de 15 dias após o pedido.",
+          "4": "<b>A lei não diz que a revisão tem de ser feita por uma pessoa.</b> Essa regra foi retirada em 2019, por isso peça uma pessoa na mesma."
+        },
+        "noReply": "Se não tiver resposta, pode apresentar uma petição gratuita à <anpd>Agência Nacional de Proteção de Dados (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>A lei de proteção de dados da Índia dá-lhe direito a um resumo dos seus dados e a corrigi-los, mas estes direitos só começam em maio de 2027.</b>",
+          "2": "<b>Mesmo assim, pode pedir já.</b> Escreva ao senhorio ou à imobiliária, pergunte se foi usada uma verificação ou pontuação e peça que uma pessoa volte a analisar. Um pedido por escrito deixa-lhe um registo."
+        },
+        "noReply": "Se não tiver resposta, guarde a sua carta e as respostas. Este site ainda não indica um local na Índia para queixas sobre verificação de inquilinos."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Este site ainda não cobre as leis do seu país.</b> Mesmo assim, vale a pena enviar um pedido por escrito: pede as coisas com clareza e deixa-lhe um registo."
+        },
+        "noReply": "Se não tiver resposta, procure uma autoridade de proteção de dados, um serviço de apoio à habitação ou um organismo para a igualdade no seu país."
+      },
+      "letters": {
+        "us": {
+          "subject": "Pedido de informação sobre o meu pedido de arrendamento{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, soube que o meu pedido de arrendamento não foi aceite. Se um relatório de verificação de inquilinos ou outro relatório de consumidor teve algum peso, peço que me indiquem que empresa o forneceu, para eu obter a minha cópia gratuita e verificar se tem erros, como prevê a Fair Credit Reporting Act.\n\nAgradecia também saber os motivos principais da decisão e se foi usada uma pontuação ou um sistema automático.\n\nSe algum dado meu estiver errado, posso corrigi-lo, e agradecia que uma pessoa voltasse a analisar o meu pedido.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "uk": {
+          "subject": "Pedido ao abrigo dos artigos 15.º e 22.º-C do UK GDPR sobre o meu pedido de arrendamento{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, soube que o meu pedido de arrendamento não foi aceite. Ao abrigo do artigo 15.º do UK GDPR, peço uma cópia dos dados pessoais que têm sobre mim, incluindo os resultados de qualquer verificação ou consulta de crédito, a sua origem e se a decisão foi tomada por meios automatizados.\n\nSe a decisão se baseou exclusivamente no tratamento automatizado, sem intervenção humana real, peço, ao abrigo do artigo 22.º-C, informações sobre ela. Quero apresentar a minha posição, que intervenha uma pessoa e contestar a decisão.\n\nPeço que respondam no prazo de um mês.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "eu": {
+          "subject": "Pedido ao abrigo dos artigos 15.º e 22.º do RGPD sobre o meu pedido de arrendamento{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, soube que o meu pedido de arrendamento não foi aceite. Ao abrigo do artigo 15.º do RGPD, peço que me enviem:\n- uma cópia dos dados pessoais que têm sobre mim, incluindo os resultados de qualquer verificação ou consulta de crédito, e a sua origem;\n- se a decisão foi automatizada e, nesse caso, informações úteis sobre a lógica subjacente e as consequências para mim.\n\nSe a decisão se baseou exclusivamente no tratamento automatizado, peço, ao abrigo do artigo 22.º, n.º 3, que uma pessoa a reveja. Quero manifestar o meu ponto de vista e contestar a decisão.\n\nPeço que respondam no prazo de um mês, como exige o artigo 12.º, n.º 3.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "br": {
+          "subject": "Pedido ao abrigo dos artigos 18, 19 e 20 da LGPD sobre o meu pedido de arrendamento{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, soube que o meu pedido de arrendamento não foi aceite. Com base nos artigos 18 e 19 da LGPD (Lei n.º 13.709/2018), peço que confirmem se tratam os meus dados pessoais e que me enviem, no prazo de 15 dias, uma declaração clara e completa, com a origem dos dados, os critérios usados e a finalidade.\n\nCom base no artigo 20, peço a revisão desta decisão e informações claras sobre os critérios e procedimentos usados. Gostaria que a revisão fosse feita por uma pessoa.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "plain": {
+          "subject": "Pedido de informação sobre o meu pedido de arrendamento{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, soube que o meu pedido de arrendamento não foi aceite. Agradecia saber os motivos principais e se uma verificação, uma pontuação ou um sistema informático teve peso.\n\nPeço também que me digam que informação sobre mim usaram, para eu poder confirmar que está correta. Agradecia que uma pessoa voltasse a analisar o meu pedido.\n\nCom os melhores cumprimentos,\n{name}"
         }
       }
     }

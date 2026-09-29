@@ -1571,6 +1571,39 @@
           "status": "confirmed",
           "note": "Read on 29 September 2026: 180 calendar days to file, extended to 300 where a state or local agency enforces a similar law; age claims differ.",
           "summary": "How job applicants and workers can file a discrimination charge, and the deadlines for doing so."
+        },
+        {
+          "id": "ftc-landlords",
+          "title": "Using Consumer Reports: What Landlords Need to Know",
+          "publisher": "Federal Trade Commission (FTC)",
+          "type": "Regulator guidance (US)",
+          "jurisdiction": "United States (Fair Credit Reporting Act)",
+          "url": "https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-landlords-need-know",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026.",
+          "summary": "Tenant background check reports are consumer reports. A landlord who turns someone down because of one must name the company that supplied it, say that company didn't make the decision, and tell the applicant about their right to a free copy within 60 days and to dispute errors."
+        },
+        {
+          "id": "hud-fha-overview",
+          "title": "Housing Discrimination Under the Fair Housing Act",
+          "publisher": "U.S. Department of Housing and Urban Development (HUD)",
+          "type": "Regulator (US)",
+          "jurisdiction": "United States (Fair Housing Act)",
+          "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026.",
+          "summary": "The Fair Housing Act bans housing discrimination because of race, color, national origin, religion, sex, familial status, or disability."
+        },
+        {
+          "id": "hud-fheo-intake",
+          "title": "Learn About FHEO's Process to Report and Investigate Housing Discrimination",
+          "publisher": "U.S. Department of Housing and Urban Development (HUD)",
+          "type": "Complaint route (US)",
+          "jurisdiction": "United States (Fair Housing Act)",
+          "url": "https://www.hud.gov/stat/fheo/intake-investigation",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026: file within one year of the last date of the alleged discrimination; online, by phone, e-mail, or mail; no fees when the government brings a case.",
+          "summary": "How to report housing discrimination to HUD, and the one-year deadline."
         }
       ]
     }
