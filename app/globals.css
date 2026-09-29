@@ -135,3 +135,23 @@
     transform: none;
   }
 }
+
+/* Printing a help letter prints only the letter: LetterBuilder adds
+   .printing-letter to <html> for the print, and removes it after. */
+@media print {
+  html.printing-letter body * {
+    visibility: hidden;
+  }
+  html.printing-letter .letter-print,
+  html.printing-letter .letter-print * {
+    visibility: visible;
+  }
+  html.printing-letter .letter-print {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    border: 0;
+    background: white;
+    color: black;
+  }
+}

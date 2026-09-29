@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/routing";
 
-// The main page: a short welcome, links to the guide and forum, and the
+// The main page: a short welcome, links to help, the guide and the forum, and the
 // PAUSE Strategy, an everyday habit people can use with any AI tool.
 export default function HomePage({ params: { locale } }: { params: { locale: Locale } }) {
   setRequestLocale(locale);
@@ -20,6 +20,9 @@ export default function HomePage({ params: { locale } }: { params: { locale: Loc
         </p>
         <div className="flex flex-wrap gap-3">
           <Button asChild size="lg">
+            <Link href="/help">{t("getHelp")}</Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
             <Link href="/guide">{t("readGuide")}</Link>
           </Button>
           <Button asChild size="lg" variant="outline">

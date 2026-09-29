@@ -1416,6 +1416,70 @@
           }
         }
       ]
+    },
+    {
+      "id": "consumer-help",
+      "title": "Your rights and where to get help",
+      "sources": [
+        {
+          "id": "fcra-1681m",
+          "title": "15 U.S. Code § 1681m: Requirements on users of consumer reports",
+          "publisher": "Legal Information Institute, Cornell Law School",
+          "type": "Law (US)",
+          "jurisdiction": "United States (Fair Credit Reporting Act)",
+          "url": "https://www.law.cornell.edu/uscode/text/15/1681m",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
+          "summary": "When a lender or insurer takes adverse action based on a credit report, it must tell you, name the credit bureau, say the bureau did not make the decision, and tell you about your right to a free copy of your report within 60 days and to dispute errors."
+        },
+        {
+          "id": "fcra-1681i",
+          "title": "15 U.S. Code § 1681i: Procedure in case of disputed accuracy",
+          "publisher": "Legal Information Institute, Cornell Law School",
+          "type": "Law (US)",
+          "jurisdiction": "United States (Fair Credit Reporting Act)",
+          "url": "https://www.law.cornell.edu/uscode/text/15/1681i",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
+          "summary": "A credit bureau must check disputed information for free within 30 days. It can take up to 15 more days if you send new information during that time."
+        },
+        {
+          "id": "edpb-members",
+          "title": "Our members",
+          "publisher": "European Data Protection Board (EDPB)",
+          "type": "Directory (EU)",
+          "jurisdiction": "European Union and EEA",
+          "url": "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en",
+          "status": "confirmed",
+          "summary": "Contact details for every national data protection authority in the EU and EEA, where people can complain about how their data is used."
+        },
+        {
+          "id": "es-aepd-reclamacion-derechos",
+          "title": "¿Puedo interponer una reclamación respecto al ejercicio de los derechos de protección de datos?",
+          "publisher": "Agencia Española de Protección de Datos (AEPD)",
+          "type": "Regulator (Spain)",
+          "jurisdiction": "Spain",
+          "url": "https://www.aepd.es/preguntas-frecuentes/13-reclamaciones/FAQ-1303-puedo-interponer-una-reclamacion-respecto-al-ejercicio-de-los-derechos-de-proteccion-de-datos",
+          "status": "confirmed",
+          "lang": "es",
+          "note": "Read on 29 September 2026: attach a copy of your request and any answer; filed through the AEPD's electronic office or by post.",
+          "summary": "If a company doesn't answer your data rights request in time, or answers badly, you can complain to Spain's data protection authority, sending a copy of your request and any reply."
+        },
+        {
+          "id": "pt-cnpd-participacoes",
+          "title": "Participações",
+          "publisher": "Comissão Nacional de Proteção de Dados (CNPD)",
+          "type": "Regulator (Portugal)",
+          "jurisdiction": "Portugal",
+          "url": "https://www.cnpd.pt/cidadaos/participacoes/",
+          "status": "confirmed",
+          "lang": "pt-PT",
+          "note": "Read on 29 September 2026: online forms, including a general form; the page does not say whether there is a fee.",
+          "summary": "How people in Portugal can submit a complaint to the data protection authority through its online forms."
+        }
+      ]
     }
   ]
 }

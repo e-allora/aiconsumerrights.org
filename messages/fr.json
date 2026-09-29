@@ -23,6 +23,8 @@
     "menuDescription": "Toutes les pages de ce site, avec une courte description pour chacune.",
     "home": "Accueil",
     "homeHint": "Commencez ici",
+    "help": "Aide",
+    "helpHint": "Que vous est-il arrivé ? Étapes et lettre",
     "guide": "Guide",
     "guideHint": "Trois étapes calmes quand l'IA décide à votre sujet",
     "forum": "Forum",
@@ -47,6 +49,7 @@
   "Home": {
     "title": "Droits des consommateurs face à l'IA",
     "lead": "Une aide en langage simple quand l'IA prend des décisions à votre sujet.",
+    "getHelp": "Que vous est-il arrivé ?",
     "readGuide": "Lire le guide",
     "joinForum": "Rejoindre le forum"
   },
@@ -173,7 +176,8 @@
     },
     "steps": {
       "heading": "Suivez trois étapes calmes quand une décision semble injuste",
-      "lead": "<b>Commencez petit et restez précis.</b> La plupart des problèmes se règlent dès la première étape. Utilisez les flèches du clavier ou touchez une étape pour passer de l'une à l'autre."
+      "lead": "<b>Commencez petit et restez précis.</b> La plupart des problèmes se règlent dès la première étape. Utilisez les flèches du clavier ou touchez une étape pour passer de l'une à l'autre.",
+      "helpLink": "Besoin d'une lettre à envoyer ? <help>Choisissez ce qui vous est arrivé</help>."
     },
     "everyone": {
       "heading": "Voyez tous les côtés de la table",
@@ -272,6 +276,139 @@
         "it": {
           "label": "Italie :",
           "text": "pour vos données personnelles, <garante>déposez une plainte auprès du Garante</garante> (gratuit ; demandez d'abord à l'entreprise, qui doit répondre sous un mois). Pour une pratique commerciale déloyale, <agcm>signalez-la à l'AGCM</agcm> (gratuit ; elle peut agir contre la pratique, mais ne peut pas vous obtenir un remboursement). Numéro de l'AGCM : <tel>800 166 661</tel>, en semaine de 10 h à 14 h."
+        }
+      }
+    }
+  },
+  "Help": {
+    "metaTitle": "Que vous est-il arrivé ?",
+    "metaDescription": "Choisissez ce qui vous est arrivé et obtenez des étapes claires, une lettre à compléter et à qui vous adresser si personne ne répond.",
+    "eyebrow": "Obtenir de l'aide",
+    "title": "Que vous est-il arrivé ?",
+    "lead": "Choisissez ce qui s'est passé. Vous aurez des étapes claires, une lettre à compléter et à qui vous adresser si personne ne répond.",
+    "pending": "Robert Sweetman vérifie encore ces pages à partir de leurs sources.",
+    "comingHeading": "Bientôt",
+    "coming": {
+      "job": "Une candidature à un emploi a été écartée",
+      "housing": "Une décision de location ou d'assurance vous a été défavorable",
+      "chatbot": "Un chatbot a donné une information fausse, ou un remboursement a été refusé",
+      "account": "Un compte a été bloqué ou une publication a été retirée",
+      "deepfake": "Quelqu'un a utilisé une fausse voix ou une fausse vidéo pour vous tromper"
+    },
+    "comingLead": "Ces guides sont encore en cours d'écriture. <forum>Dites-nous sur le forum</forum> celui dont vous avez le plus besoin.",
+    "backToHelp": "Toutes les situations",
+    "happenedHeading": "Ce qui s'est probablement passé",
+    "whereHeading": "Vos droits là où vous vivez",
+    "rightsHeading": "Vos droits",
+    "letterHeading": "Envoyer une lettre",
+    "letterLead": "Complétez les blancs, et la lettre se met à jour pendant que vous écrivez. Envoyez-la par e-mail, via le site de l'entreprise ou par courrier. Gardez-en une copie.",
+    "noReplyHeading": "S'ils ne répondent pas",
+    "euHomeLabel": "L'autorité de votre pays :",
+    "urgentHeading": "Quand demander vite l'aide d'une personne",
+    "urgent": "Si vous risquez de perdre votre logement, votre emploi ou l'argent dont vous avez besoin pour manger ou payer vos factures, n'attendez pas les lettres. Un point d'accès au droit ou une association de consommateurs près de chez vous peut vous aider. Beaucoup sont gratuits.",
+    "recordHeading": "Gardez une trace",
+    "record": "Gardez chaque lettre, e-mail et avis, avec sa date. Pour les appels, notez la date, la personne à qui vous avez parlé et ce qu'elle a dit.",
+    "forum": "Cela devrait-il fonctionner autrement ? <forum>Dites sur le forum ce qui devrait changer</forum>.",
+    "regions": {
+      "question": "Où vivez-vous ?",
+      "us": "États-Unis",
+      "eu": "Union européenne",
+      "br": "Brésil",
+      "in": "Inde",
+      "other": "Ailleurs",
+      "pickFirst": "Choisissez où vous vivez pour voir vos droits et une lettre à envoyer."
+    },
+    "letter": {
+      "fieldsHeading": "Complétez les blancs",
+      "fields": {
+        "name": "Votre nom",
+        "company": "Nom de l'entreprise",
+        "decisionDate": "Date de la décision",
+        "reference": "Numéro de demande ou de compte (facultatif)"
+      },
+      "blank": {
+        "name": "[votre nom]",
+        "company": "[entreprise]",
+        "decisionDate": "[date de la décision]",
+        "today": "[date du jour]"
+      },
+      "privacy": "Ce que vous écrivez reste sur cet appareil. Rien n'est envoyé à ce site ni enregistré.",
+      "previewHeading": "Votre lettre",
+      "to": "À : {company}",
+      "subjectLine": "Objet : {subject}",
+      "copy": "Copier la lettre",
+      "copied": "Copiée. Collez-la dans un e-mail ou dans le formulaire de contact de l'entreprise.",
+      "copyFailed": "La copie a échoué. Sélectionnez le texte de la lettre et copiez-le vous-même.",
+      "print": "Imprimer",
+      "email": "Ouvrir dans l'e-mail"
+    },
+    "credit": {
+      "metaTitle": "Un prêt ou un crédit a été refusé",
+      "metaDescription": "Votre droit de savoir pourquoi un prêt ou un crédit a été refusé, comment demander qu'une personne réexamine le dossier, et une lettre à envoyer.",
+      "title": "Un prêt ou un crédit a été refusé",
+      "summary": "Une banque, une carte ou un organisme de crédit a dit non, ou proposé de moins bonnes conditions.",
+      "lead": "Une banque, une société de cartes ou un autre organisme de crédit a dit non, ou vous a proposé de moins bonnes conditions. Un score calculé par un ordinateur y est souvent pour quelque chose. Vous pouvez demander pourquoi, et demander qu'une personne réexamine votre dossier.",
+      "happened": {
+        "score": "Les organismes de crédit utilisent souvent un score de crédit : un nombre qu'un ordinateur calcule à partir de votre historique de paiements et d'autres données.",
+        "automatic": "Parfois, toute la décision est automatique. Parfois, une personne décide en s'appuyant sur le score.",
+        "mistakes": "Les erreurs arrivent. Des données anciennes ou fausses dans votre dossier peuvent faire baisser votre score."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>L'organisme doit vous dire pourquoi.</b> L'avis doit donner les principales raisons. Dire seulement que vous n'avez pas atteint leur score ne suffit pas.",
+          "2": "<b>Si on ne vous a pas donné de raisons, demandez-les dans les 60 jours.</b> Elles doivent alors vous être données dans les 30 jours.",
+          "3": "<b>Si un rapport de crédit a été utilisé,</b> l'organisme doit nommer le bureau de crédit et vous dire que vous pouvez obtenir une copie gratuite de votre rapport dans les 60 jours et contester toute erreur.",
+          "4": "<b>Le bureau de crédit doit vérifier une contestation gratuitement,</b> en général dans les 30 jours."
+        },
+        "noReply": "Sans réponse sous 30 jours, renvoyez la lettre en indiquant la date de la première. Vous pouvez aussi <cfpb>déposer une plainte auprès du Consumer Financial Protection Bureau (CFPB)</cfpb>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Vous pouvez demander vos données et comment la décision a été prise.</b> Si elle était automatisée, on doit vous donner des informations utiles sur la logique sous-jacente et ce qu'elle a signifié pour vous.",
+          "2": "<b>Si un ordinateur a décidé seul,</b> vous pouvez en général demander qu'une personne réexamine la décision, donner votre point de vue et la contester.",
+          "3": "<b>Un score de crédit peut compter comme la décision elle-même</b> quand un organisme de crédit s'appuie fortement dessus. Ces règles s'appliquent alors aussi à l'entreprise qui a calculé le score.",
+          "4": "<b>On doit vous répondre dans un délai d'un mois, gratuitement.</b> Pour les cas complexes, ce délai peut être prolongé de deux mois, mais on doit vous prévenir dans le premier mois."
+        },
+        "noReply": "Sans réponse sous un mois, envoyez une relance. Vous pouvez ensuite porter plainte gratuitement auprès de l'autorité de protection des données de votre pays. <edpb>Trouvez la vôtre dans la liste des autorités de protection des données de l'UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Vous pouvez demander le réexamen d'une décision prise uniquement par un ordinateur,</b> y compris les décisions sur votre profil de crédit.",
+          "2": "<b>Vous pouvez demander les critères et les procédures utilisés</b> pour prendre la décision. Le secret des affaires peut limiter les détails.",
+          "3": "<b>Vous pouvez consulter et corriger vos données.</b> Une déclaration claire et complète de vos données est due dans les 15 jours suivant votre demande.",
+          "4": "<b>La loi ne dit pas que le réexamen doit être fait par une personne.</b> Cette règle a été supprimée en 2019, alors demandez quand même une personne."
+        },
+        "noReply": "Sans réponse, vous pouvez déposer gratuitement une <anpd>requête auprès de l'autorité nationale de protection des données (ANPD)</anpd>, ou une réclamation sur <consumidor>Consumidor.gov.br</consumidor> ou auprès de votre <procon>Procon</procon> local."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La loi indienne sur la protection des données vous donne droit à un résumé de vos données et à leur correction, mais ces droits ne commencent qu'en mai 2027.</b>",
+          "2": "<b>Vous pouvez quand même demander dès maintenant.</b> Écrivez à l'organisme de crédit pour demander les raisons et un réexamen par une personne. Une demande écrite vous laisse une trace."
+        },
+        "noReply": "Sans réponse, la <nch>National Consumer Helpline</nch> peut vous aider. Appelez le <tel>1915</tel>, numéro gratuit."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Ce site ne couvre pas encore les lois de votre pays.</b> Une demande écrite vaut quand même la peine : elle pose clairement la question et vous laisse une trace."
+        },
+        "noReply": "Sans réponse, cherchez une autorité de protection des consommateurs ou des données dans votre pays."
+      },
+      "letters": {
+        "us": {
+          "subject": "Demande des raisons du refus de ma demande de crédit{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. En vertu de la Regulation B (12 CFR 1002.9), je vous demande les raisons précises de cette décision.\n\nSi vous avez utilisé un rapport ou un score de crédit, merci de m'indiquer quel bureau de crédit l'a fourni et quel score vous avez utilisé.\n\nJe souhaite aussi qu'une personne réexamine ma demande. Si certaines de mes informations étaient fausses ou périmées, je suis prêt ou prête à les corriger.\n\nMerci de me répondre par écrit dans un délai de 30 jours.\n\nCordialement,\n{name}"
+        },
+        "eu": {
+          "subject": "Demande au titre des articles 15 et 22 du RGPD{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. Au titre de l'article 15 du RGPD, merci de m'envoyer :\n- une copie des données personnelles que vous détenez sur moi, et leur source ;\n- si la décision a été automatisée et, dans ce cas, des informations utiles sur la logique sous-jacente et ses conséquences pour moi.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, je demande, au titre de l'article 22, paragraphe 3, qu'une personne la réexamine. Je souhaite exprimer mon point de vue et contester la décision.\n\nMerci de me répondre dans un délai d'un mois, comme l'exige l'article 12, paragraphe 3.\n\nCordialement,\n{name}"
+        },
+        "br": {
+          "subject": "Demande au titre des articles 18, 19 et 20 de la LGPD{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. Au titre des articles 18 et 19 de la LGPD (loi n° 13.709/2018), merci de confirmer si vous traitez mes données personnelles et de m'envoyer, dans un délai de 15 jours, une déclaration claire et complète, avec leur origine, les critères utilisés et la finalité.\n\nAu titre de l'article 20, je demande le réexamen de cette décision et des informations claires sur les critères et procédures utilisés. Je souhaite que le réexamen soit fait par une personne.\n\nCordialement,\n{name}"
+        },
+        "plain": {
+          "subject": "Demande des raisons d'une décision de crédit{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. Merci de m'indiquer les principales raisons de cette décision, et si un système informatique ou un score y a joué un rôle.\n\nMerci aussi de me dire quelles informations me concernant vous avez utilisées, pour que je puisse vérifier qu'elles sont exactes. Je souhaite qu'une personne réexamine ma demande.\n\nJ'attends votre réponse écrite.\n\nCordialement,\n{name}"
         }
       }
     }
@@ -484,7 +621,8 @@
       "usability": "Facilité d'usage cognitive et systèmes de design",
       "synthesis": "Synthèse multi-modèles d'IA et normes de référence",
       "latam-global": "Cadres réglementaires d'Amérique latine et du monde",
-      "eu-national": "Cadres nationaux européens"
+      "eu-national": "Cadres nationaux européens",
+      "consumer-help": "Vos droits et où trouver de l'aide"
     },
     "sourcesLanguageNote": "Les titres et les détails des sources apparaissent dans leur langue d'origine, le plus souvent l'anglais.",
     "readBy": "Lu par {name} le {date}.",
@@ -521,6 +659,7 @@
     "keep": {
       "votes": "<b>Les votes :</b> jusqu'à ce que vous appuyiez sur « Effacer mes votes ». Le code du navigateur dure {days} jours. Nous n'avons pas encore fixé de date de suppression automatique.",
       "suggestions": "<b>Les propositions :</b> celles qui sont refusées sont supprimées. Celles qui sont approuvées restent tant qu'elles sont affichées.",
+      "letters": "<b>Lettres :</b> ce que vous écrivez dans une lettre reste sur votre appareil. Rien n'est envoyé à ce site ni enregistré.",
       "never": "<b>Jamais gardés avec votre vote :</b> votre nom, votre adresse e-mail ou votre adresse IP."
     },
     "unfinishedHeading": "Ce qui n'est pas terminé ou parfait",

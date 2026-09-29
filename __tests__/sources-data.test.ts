@@ -3,7 +3,7 @@ import { sources } from "@/lib/sources";
 const all = sources.categories.flatMap((c) => c.sources);
 
 describe("lib/data/sources.json", () => {
-  it("has the seven source categories", () => {
+  it("has the eight source categories", () => {
     expect(sources.categories.map((c) => c.id)).toEqual([
       "governance",
       "empirical",
@@ -12,6 +12,7 @@ describe("lib/data/sources.json", () => {
       "synthesis",
       "latam-global",
       "eu-national",
+      "consumer-help",
     ]);
   });
 

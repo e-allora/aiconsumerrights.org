@@ -23,6 +23,8 @@
     "menuDescription": "Every page on this site, with a short hint for each.",
     "home": "Home",
     "homeHint": "Start here",
+    "help": "Help",
+    "helpHint": "What happened to you? Steps and a letter",
     "guide": "Guide",
     "guideHint": "Three calm steps when AI decides about you",
     "forum": "Forum",
@@ -47,6 +49,7 @@
   "Home": {
     "title": "AI Consumer Rights",
     "lead": "Plain-language help when AI makes decisions about you.",
+    "getHelp": "What happened to you?",
     "readGuide": "Read the guide",
     "joinForum": "Join the forum"
   },
@@ -173,7 +176,8 @@
     },
     "steps": {
       "heading": "Take three calm steps when a decision seems wrong",
-      "lead": "<b>Start small and stay specific.</b> Most problems get fixed at step one. Use the arrow keys or tap a step to move between them."
+      "lead": "<b>Start small and stay specific.</b> Most problems get fixed at step one. Use the arrow keys or tap a step to move between them.",
+      "helpLink": "Need a letter to send? <help>Pick what happened to you</help>."
     },
     "everyone": {
       "heading": "See every side of the table",
@@ -272,6 +276,139 @@
         "it": {
           "label": "Italy:",
           "text": "for personal data, <garante>complain to the Garante</garante> (free; ask the company first, and it must answer within a month). For an unfair business practice, <agcm>report it to the AGCM</agcm> (free; it can act against the practice but cannot get you a refund). AGCM phone line: <tel>800 166 661</tel>, weekdays 10:00 to 14:00."
+        }
+      }
+    }
+  },
+  "Help": {
+    "metaTitle": "What happened to you?",
+    "metaDescription": "Pick what happened and get plain steps, a letter you can fill in, and where to turn if nobody answers.",
+    "eyebrow": "Get help",
+    "title": "What happened to you?",
+    "lead": "Pick what happened. You'll get plain steps, a letter you can fill in, and where to turn if nobody answers.",
+    "pending": "Robert Sweetman is still checking these pages against their sources.",
+    "comingHeading": "Coming next",
+    "coming": {
+      "job": "A job application was screened out",
+      "housing": "A rental or insurance decision went against you",
+      "chatbot": "A chatbot gave wrong information, or a refund was refused",
+      "account": "An account was blocked or a post was removed",
+      "deepfake": "Someone used a fake voice or video to trick you"
+    },
+    "comingLead": "These guides are still being written. <forum>Tell us in the forum</forum> what you need most.",
+    "backToHelp": "All situations",
+    "happenedHeading": "What probably happened",
+    "whereHeading": "Your rights where you live",
+    "rightsHeading": "Your rights",
+    "letterHeading": "Send a letter",
+    "letterLead": "Fill in the blanks, and the letter updates as you type. Send it by email, through the company's website, or by post. Keep a copy.",
+    "noReplyHeading": "If they don't answer",
+    "euHomeLabel": "Your country's authority:",
+    "urgentHeading": "When to get help from a person soon",
+    "urgent": "If you could lose your home, your job, or money you need for food or bills, don't wait for letters. A legal aid office or consumer advice centre near you can help. Many are free.",
+    "recordHeading": "Keep a record",
+    "record": "Keep every letter, email, and notice, with its date. For phone calls, write down the date, who you spoke to, and what they said.",
+    "forum": "Should this work differently? <forum>Say what should change in the forum</forum>.",
+    "regions": {
+      "question": "Where do you live?",
+      "us": "United States",
+      "eu": "European Union",
+      "br": "Brazil",
+      "in": "India",
+      "other": "Somewhere else",
+      "pickFirst": "Pick where you live to see your rights and a letter you can send."
+    },
+    "letter": {
+      "fieldsHeading": "Fill in the blanks",
+      "fields": {
+        "name": "Your name",
+        "company": "Company name",
+        "decisionDate": "Date of the decision",
+        "reference": "Application or account number (optional)"
+      },
+      "blank": {
+        "name": "[your name]",
+        "company": "[company]",
+        "decisionDate": "[date of the decision]",
+        "today": "[today's date]"
+      },
+      "privacy": "What you type stays on this device. It isn't sent to this site or saved.",
+      "previewHeading": "Your letter",
+      "to": "To: {company}",
+      "subjectLine": "Subject: {subject}",
+      "copy": "Copy letter",
+      "copied": "Copied. Paste it into an email or the company's contact form.",
+      "copyFailed": "Couldn't copy. Select the letter text and copy it yourself.",
+      "print": "Print",
+      "email": "Open in email"
+    },
+    "credit": {
+      "metaTitle": "A loan or credit was refused",
+      "metaDescription": "Your right to know why a loan or credit was refused, how to ask for a person to look again, and a letter you can send.",
+      "title": "A loan or credit was refused",
+      "summary": "A bank, card company, or lender said no, or offered worse terms.",
+      "lead": "A bank, card company, or other lender said no, or offered you worse terms. A score worked out by a computer often plays a part. You can ask why, and you can ask a person to look again.",
+      "happened": {
+        "score": "Lenders often use a credit score: a number a computer works out from your payment history and other data.",
+        "automatic": "Sometimes the whole decision is automatic. Sometimes a person decides, using the score.",
+        "mistakes": "Mistakes happen. Old or wrong data in your file can pull your score down."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>The lender must tell you why.</b> The notice must give the main reasons. Saying only that you didn't reach their score is not enough.",
+          "2": "<b>If they didn't give reasons, ask within 60 days.</b> They must then give you the reasons within 30 days.",
+          "3": "<b>If they used a credit report,</b> they must name the credit bureau, and tell you that you can get a free copy of your report within 60 days and dispute anything wrong.",
+          "4": "<b>The credit bureau must check a dispute for free,</b> usually within 30 days."
+        },
+        "noReply": "If you get no answer within 30 days, send the letter again and mention the date of your first one. You can also <cfpb>file a complaint with the Consumer Financial Protection Bureau</cfpb>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>You can ask for your data and how the decision was made.</b> If it was automated, they must give you meaningful information about the logic involved, and what it meant for you.",
+          "2": "<b>If a computer alone made the decision,</b> you can usually ask for a person to review it, give your side, and challenge it.",
+          "3": "<b>A credit score can count as the decision itself</b> when a lender relies on it heavily. Then these rules apply to the company that made the score too.",
+          "4": "<b>They must answer within one month, for free.</b> For hard cases they can take two more months, but they must tell you within the first month."
+        },
+        "noReply": "If you get no answer within one month, send a reminder. Then you can complain for free to the data protection authority in your country. <edpb>Find yours on the list of EU data protection authorities</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>You can ask for a review of a decision made only by a computer,</b> including decisions about your credit profile.",
+          "2": "<b>You can ask for the criteria and steps used</b> to reach the decision. Trade secrets can limit the details.",
+          "3": "<b>You can see and correct your data.</b> A clear, full statement of your data is due within 15 days of your request.",
+          "4": "<b>The law doesn't say a person must do the review.</b> That rule was removed in 2019, so ask for a person anyway."
+        },
+        "noReply": "If you get no answer, you can file a free petition with the <anpd>national data protection authority (ANPD)</anpd>, or a complaint on <consumidor>Consumidor.gov.br</consumidor> or with your local <procon>Procon</procon>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>India's data protection law gives you the right to a summary of your data and to correct it, but these rights start in May 2027.</b>",
+          "2": "<b>You can still ask now.</b> Write to the lender and ask for the reasons and for a person to look again. A written request gives you a record."
+        },
+        "noReply": "If you get no answer, the <nch>National Consumer Helpline</nch> can help. Call <tel>1915</tel>, toll-free."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>This site doesn't cover your country's laws yet.</b> A written request is still worth sending: it asks clearly, and it gives you a record."
+        },
+        "noReply": "If you get no answer, look for a consumer protection or data protection authority in your country."
+      },
+      "letters": {
+        "us": {
+          "subject": "Request for the reasons my credit application was refused{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Under Regulation B (12 CFR 1002.9), I am asking for the specific reasons for this decision.\n\nIf you used a credit report or credit score, please tell me which credit bureau provided it and what score you used.\n\nI would also like a person to look at my application again. If any of my information was wrong or out of date, I am ready to correct it.\n\nPlease reply in writing within 30 days.\n\nThank you,\n{name}"
+        },
+        "eu": {
+          "subject": "Request under GDPR Articles 15 and 22{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Under Article 15 of the GDPR, please send me:\n- a copy of the personal data you hold about me, and where it came from;\n- whether the decision was automated and, if so, meaningful information about the logic involved and what it means for me.\n\nIf the decision was based solely on automated processing, I ask under Article 22(3) for a person to review it. I want to give my point of view and to contest the decision.\n\nPlease reply within one month, as Article 12(3) requires.\n\nKind regards,\n{name}"
+        },
+        "br": {
+          "subject": "Request under Articles 18, 19 and 20 of the LGPD{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Under Articles 18 and 19 of the LGPD (Law No. 13,709/2018), please confirm whether you process my personal data, and send me a clear and complete statement of it, with its origin, the criteria used, and the purpose, within 15 days.\n\nUnder Article 20, I ask for a review of this decision, and for clear information on the criteria and procedures used to make it. I would like a person to carry out the review.\n\nKind regards,\n{name}"
+        },
+        "plain": {
+          "subject": "Request for the reasons for a credit decision{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Please tell me the main reasons for this decision, and whether a computer system or score played a part.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would like a person to look at my application again.\n\nI look forward to your reply in writing.\n\nKind regards,\n{name}"
         }
       }
     }
@@ -484,7 +621,8 @@
       "usability": "Cognitive usability and design systems",
       "synthesis": "Multi-model AI synthesis and blueprint standards",
       "latam-global": "Latin American and global regulatory frameworks",
-      "eu-national": "European national frameworks"
+      "eu-national": "European national frameworks",
+      "consumer-help": "Your rights and where to get help"
     },
     "sourcesLanguageNote": "",
     "readBy": "Read by {name} on {date}.",
@@ -521,6 +659,7 @@
     "keep": {
       "votes": "<b>Votes:</b> until you press “Clear my votes.” The browser code lasts {days} days. We haven't set an automatic deletion date yet.",
       "suggestions": "<b>Suggestions:</b> rejected ones are deleted. Approved ones stay while they're shown.",
+      "letters": "<b>Letters:</b> what you type into a letter stays on your device. It isn't sent to this site or saved.",
       "never": "<b>Never kept with your vote:</b> your name, email, or IP address."
     },
     "unfinishedHeading": "What isn't finished or perfect",

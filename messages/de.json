@@ -23,6 +23,8 @@
     "menuDescription": "Alle Seiten dieser Website, jeweils mit einem kurzen Hinweis.",
     "home": "Start",
     "homeHint": "Hier beginnen",
+    "help": "Hilfe",
+    "helpHint": "Was ist Ihnen passiert? Schritte und ein Brief",
     "guide": "Ratgeber",
     "guideHint": "Drei ruhige Schritte, wenn KI über Sie entscheidet",
     "forum": "Forum",
@@ -47,6 +49,7 @@
   "Home": {
     "title": "Verbraucher­rechte gegenüber KI",
     "lead": "Hilfe in einfacher Sprache, wenn KI über Sie entscheidet.",
+    "getHelp": "Was ist Ihnen passiert?",
     "readGuide": "Ratgeber lesen",
     "joinForum": "Zum Forum"
   },
@@ -173,7 +176,8 @@
     },
     "steps": {
       "heading": "Gehen Sie drei ruhige Schritte, wenn eine Entscheidung falsch wirkt",
-      "lead": "<b>Fangen Sie klein an und bleiben Sie konkret.</b> Die meisten Probleme lösen sich schon beim ersten Schritt. Nutzen Sie die Pfeiltasten oder tippen Sie auf einen Schritt, um zwischen den Schritten zu wechseln."
+      "lead": "<b>Fangen Sie klein an und bleiben Sie konkret.</b> Die meisten Probleme lösen sich schon beim ersten Schritt. Nutzen Sie die Pfeiltasten oder tippen Sie auf einen Schritt, um zwischen den Schritten zu wechseln.",
+      "helpLink": "Brauchen Sie einen Brief zum Verschicken? <help>Wählen Sie, was Ihnen passiert ist</help>."
     },
     "everyone": {
       "heading": "Sehen Sie alle Seiten des Tisches",
@@ -272,6 +276,139 @@
         "it": {
           "label": "Italien:",
           "text": "bei personenbezogenen Daten <garante>beschweren Sie sich beim Garante</garante> (kostenlos; fragen Sie zuerst das Unternehmen, das innerhalb eines Monats antworten muss). Bei unlauteren Geschäftspraktiken <agcm>melden Sie diese der AGCM</agcm> (kostenlos; sie kann gegen die Praxis vorgehen, Ihnen aber kein Geld zurückholen). Telefon der AGCM: <tel>800 166 661</tel>, werktags 10 bis 14 Uhr."
+        }
+      }
+    }
+  },
+  "Help": {
+    "metaTitle": "Was ist Ihnen passiert?",
+    "metaDescription": "Wählen Sie, was passiert ist, und erhalten Sie klare Schritte, einen Brief zum Ausfüllen und Stellen, an die Sie sich wenden können, wenn niemand antwortet.",
+    "eyebrow": "Hilfe finden",
+    "title": "Was ist Ihnen passiert?",
+    "lead": "Wählen Sie, was passiert ist. Sie erhalten klare Schritte, einen Brief zum Ausfüllen und Stellen, an die Sie sich wenden können, wenn niemand antwortet.",
+    "pending": "Robert Sweetman prüft diese Seiten noch anhand ihrer Quellen.",
+    "comingHeading": "Demnächst",
+    "coming": {
+      "job": "Eine Bewerbung wurde aussortiert",
+      "housing": "Eine Entscheidung über eine Wohnung oder Versicherung fiel gegen Sie aus",
+      "chatbot": "Ein Chatbot gab falsche Auskünfte, oder eine Erstattung wurde abgelehnt",
+      "account": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
+      "deepfake": "Jemand hat eine gefälschte Stimme oder ein gefälschtes Video benutzt, um Sie zu täuschen"
+    },
+    "comingLead": "Diese Anleitungen entstehen gerade. <forum>Sagen Sie uns im Forum</forum>, welche Sie am dringendsten brauchen.",
+    "backToHelp": "Alle Situationen",
+    "happenedHeading": "Was wahrscheinlich passiert ist",
+    "whereHeading": "Ihre Rechte dort, wo Sie leben",
+    "rightsHeading": "Ihre Rechte",
+    "letterHeading": "Einen Brief schicken",
+    "letterLead": "Füllen Sie die Lücken aus; der Brief ändert sich beim Tippen mit. Schicken Sie ihn per E-Mail, über die Website des Unternehmens oder per Post. Behalten Sie eine Kopie.",
+    "noReplyHeading": "Wenn niemand antwortet",
+    "euHomeLabel": "Die Behörde in Ihrem Land:",
+    "urgentHeading": "Wann Sie bald eine Person um Hilfe bitten sollten",
+    "urgent": "Wenn Sie Ihre Wohnung, Ihre Arbeit oder Geld für Essen oder Rechnungen verlieren könnten, warten Sie nicht auf Briefe. Eine Rechtsberatung oder Verbraucherberatung in Ihrer Nähe kann helfen. Viele Angebote sind kostenlos.",
+    "recordHeading": "Alles festhalten",
+    "record": "Heben Sie jeden Brief, jede E-Mail und jeden Bescheid mit Datum auf. Notieren Sie bei Anrufen das Datum, mit wem Sie gesprochen haben und was gesagt wurde.",
+    "forum": "Sollte das anders laufen? <forum>Sagen Sie im Forum, was sich ändern sollte</forum>.",
+    "regions": {
+      "question": "Wo leben Sie?",
+      "us": "Vereinigte Staaten",
+      "eu": "Europäische Union",
+      "br": "Brasilien",
+      "in": "Indien",
+      "other": "Anderswo",
+      "pickFirst": "Wählen Sie, wo Sie leben, um Ihre Rechte und einen Brief zum Verschicken zu sehen."
+    },
+    "letter": {
+      "fieldsHeading": "Lücken ausfüllen",
+      "fields": {
+        "name": "Ihr Name",
+        "company": "Name des Unternehmens",
+        "decisionDate": "Datum der Entscheidung",
+        "reference": "Antrags- oder Kontonummer (freiwillig)"
+      },
+      "blank": {
+        "name": "[Ihr Name]",
+        "company": "[Unternehmen]",
+        "decisionDate": "[Datum der Entscheidung]",
+        "today": "[heutiges Datum]"
+      },
+      "privacy": "Was Sie eintippen, bleibt auf diesem Gerät. Es wird nicht an diese Website geschickt und nicht gespeichert.",
+      "previewHeading": "Ihr Brief",
+      "to": "An: {company}",
+      "subjectLine": "Betreff: {subject}",
+      "copy": "Brief kopieren",
+      "copied": "Kopiert. Fügen Sie ihn in eine E-Mail oder das Kontaktformular des Unternehmens ein.",
+      "copyFailed": "Kopieren hat nicht geklappt. Markieren Sie den Brieftext und kopieren Sie ihn selbst.",
+      "print": "Drucken",
+      "email": "In E-Mail öffnen"
+    },
+    "credit": {
+      "metaTitle": "Ein Kredit wurde abgelehnt",
+      "metaDescription": "Ihr Recht zu erfahren, warum ein Kredit abgelehnt wurde, wie Sie eine Prüfung durch einen Menschen verlangen, und ein Brief zum Verschicken.",
+      "title": "Ein Kredit wurde abgelehnt",
+      "summary": "Eine Bank, ein Kartenanbieter oder ein anderer Kreditgeber hat Nein gesagt oder schlechtere Bedingungen angeboten.",
+      "lead": "Eine Bank, ein Kartenanbieter oder ein anderer Kreditgeber hat Nein gesagt oder Ihnen schlechtere Bedingungen angeboten. Oft spielt ein Score mit, den ein Computer berechnet. Sie können fragen, warum, und verlangen, dass ein Mensch noch einmal hinschaut.",
+      "happened": {
+        "score": "Kreditgeber nutzen oft einen Kredit-Score: eine Zahl, die ein Computer aus Ihrem Zahlungsverhalten und anderen Daten berechnet.",
+        "automatic": "Manchmal ist die ganze Entscheidung automatisch. Manchmal entscheidet ein Mensch mithilfe des Scores.",
+        "mistakes": "Fehler kommen vor. Alte oder falsche Daten über Sie können Ihren Score senken."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Der Kreditgeber muss Ihnen sagen, warum.</b> Der Bescheid muss die wichtigsten Gründe nennen. Nur zu sagen, dass Sie den Score nicht erreicht haben, reicht nicht.",
+          "2": "<b>Wenn keine Gründe genannt wurden, fragen Sie innerhalb von 60 Tagen nach.</b> Dann müssen Sie die Gründe innerhalb von 30 Tagen bekommen.",
+          "3": "<b>Wenn ein Kreditbericht genutzt wurde,</b> muss die Auskunftei genannt werden, und man muss Ihnen sagen, dass Sie innerhalb von 60 Tagen eine kostenlose Kopie Ihres Berichts bekommen und Fehler beanstanden können.",
+          "4": "<b>Die Auskunftei muss eine Beanstandung kostenlos prüfen,</b> in der Regel innerhalb von 30 Tagen."
+        },
+        "noReply": "Wenn nach 30 Tagen keine Antwort kommt, schicken Sie den Brief noch einmal und nennen Sie das Datum des ersten. Sie können sich auch beim <cfpb>Consumer Financial Protection Bureau (CFPB) beschweren</cfpb>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Sie können Ihre Daten und die Art der Entscheidung erfragen.</b> War sie automatisiert, muss man Ihnen aussagekräftige Informationen über die involvierte Logik geben und was sie für Sie bedeutete.",
+          "2": "<b>Wenn allein ein Computer entschieden hat,</b> können Sie meist verlangen, dass ein Mensch die Entscheidung prüft, Ihren Standpunkt darlegen und die Entscheidung anfechten.",
+          "3": "<b>Ein Kredit-Score kann selbst als die Entscheidung gelten,</b> wenn sich ein Kreditgeber stark darauf stützt. Dann gelten diese Regeln auch für das Unternehmen, das den Score berechnet hat.",
+          "4": "<b>Man muss Ihnen innerhalb eines Monats antworten, kostenlos.</b> In schwierigen Fällen darf es zwei Monate länger dauern, aber man muss Ihnen das im ersten Monat mitteilen."
+        },
+        "noReply": "Wenn nach einem Monat keine Antwort kommt, schicken Sie eine Erinnerung. Danach können Sie sich kostenlos bei der Datenschutzbehörde in Ihrem Land beschweren. <edpb>Finden Sie Ihre in der Liste der Datenschutzbehörden der EU</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Sie können verlangen, dass eine allein vom Computer getroffene Entscheidung überprüft wird,</b> auch Entscheidungen über Ihr Kreditprofil.",
+          "2": "<b>Sie können die verwendeten Kriterien und Verfahren erfragen.</b> Geschäftsgeheimnisse können die Einzelheiten begrenzen.",
+          "3": "<b>Sie können Ihre Daten einsehen und berichtigen.</b> Eine klare, vollständige Aufstellung Ihrer Daten ist innerhalb von 15 Tagen nach Ihrer Anfrage fällig.",
+          "4": "<b>Das Gesetz schreibt nicht vor, dass ein Mensch die Überprüfung macht.</b> Diese Regel wurde 2019 gestrichen; bitten Sie trotzdem um einen Menschen."
+        },
+        "noReply": "Wenn keine Antwort kommt, können Sie kostenlos eine Eingabe bei der <anpd>nationalen Datenschutzbehörde (ANPD)</anpd> machen oder sich bei <consumidor>Consumidor.gov.br</consumidor> oder beim örtlichen <procon>Procon</procon> beschweren."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Indiens Datenschutzgesetz gibt Ihnen das Recht auf eine Übersicht Ihrer Daten und auf Berichtigung, aber diese Rechte gelten erst ab Mai 2027.</b>",
+          "2": "<b>Sie können trotzdem schon jetzt fragen.</b> Schreiben Sie dem Kreditgeber und bitten Sie um die Gründe und darum, dass ein Mensch noch einmal hinschaut. Eine schriftliche Anfrage ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, hilft die <nch>National Consumer Helpline</nch>. Rufen Sie gebührenfrei die <tel>1915</tel> an."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Diese Website deckt die Gesetze Ihres Landes noch nicht ab.</b> Eine schriftliche Anfrage lohnt sich trotzdem: Sie fragt klar nach und ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, suchen Sie eine Verbraucherschutz- oder Datenschutzbehörde in Ihrem Land."
+      },
+      "letters": {
+        "us": {
+          "subject": "Bitte um die Gründe für die Ablehnung meines Kreditantrags{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Nach Regulation B (12 CFR 1002.9) bitte ich um die konkreten Gründe für diese Entscheidung.\n\nFalls Sie einen Kreditbericht oder Kredit-Score genutzt haben, teilen Sie mir bitte mit, welche Auskunftei ihn geliefert hat und welchen Score Sie verwendet haben.\n\nAußerdem bitte ich darum, dass ein Mensch meinen Antrag noch einmal prüft. Falls Angaben über mich falsch oder veraltet waren, berichtige ich sie gern.\n\nBitte antworten Sie schriftlich innerhalb von 30 Tagen.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "eu": {
+          "subject": "Anfrage nach Art. 15 und Art. 22 DSGVO{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Nach Art. 15 DSGVO bitte ich Sie um:\n- eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, und ihre Herkunft;\n- die Angabe, ob die Entscheidung automatisiert getroffen wurde, und in diesem Fall aussagekräftige Informationen über die involvierte Logik und die Folgen für mich.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung beruhte, verlange ich nach Art. 22 Abs. 3 DSGVO, dass ein Mensch sie überprüft. Ich möchte meinen Standpunkt darlegen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats, wie es Art. 12 Abs. 3 DSGVO vorsieht.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "br": {
+          "subject": "Anfrage nach Art. 18, 19 und 20 LGPD{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Nach Art. 18 und 19 LGPD (Gesetz Nr. 13.709/2018) bitte ich Sie zu bestätigen, ob Sie meine personenbezogenen Daten verarbeiten, und mir innerhalb von 15 Tagen eine klare und vollständige Aufstellung zu schicken, mit Herkunft der Daten, verwendeten Kriterien und Zweck.\n\nNach Art. 20 LGPD bitte ich um Überprüfung dieser Entscheidung und um klare Informationen über die verwendeten Kriterien und Verfahren. Ich möchte, dass ein Mensch die Überprüfung vornimmt.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "plain": {
+          "subject": "Bitte um die Gründe für eine Kreditentscheidung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Bitte nennen Sie mir die wichtigsten Gründe für diese Entscheidung und ob ein Computersystem oder ein Score dabei eine Rolle gespielt hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich bitte darum, dass ein Mensch meinen Antrag noch einmal prüft.\n\nIch freue mich auf Ihre schriftliche Antwort.\n\nMit freundlichen Grüßen\n{name}"
         }
       }
     }
@@ -484,7 +621,8 @@
       "usability": "Kognitive Benutzerfreundlichkeit und Designsysteme",
       "synthesis": "Synthese aus mehreren KI-Modellen und Leitstandards",
       "latam-global": "Rechtsrahmen in Lateinamerika und weltweit",
-      "eu-national": "Nationale Rechtsrahmen in Europa"
+      "eu-national": "Nationale Rechtsrahmen in Europa",
+      "consumer-help": "Ihre Rechte und wo Sie Hilfe finden"
     },
     "sourcesLanguageNote": "Titel und Angaben der Quellen erscheinen in ihrer Originalsprache, meist Englisch.",
     "readBy": "Gelesen von {name} am {date}.",
@@ -521,6 +659,7 @@
     "keep": {
       "votes": "<b>Stimmen:</b> bis Sie auf „Meine Stimmen löschen“ drücken. Der Browser-Code gilt {days} Tage. Ein automatisches Löschdatum haben wir noch nicht festgelegt.",
       "suggestions": "<b>Vorschläge:</b> Abgelehnte werden gelöscht. Freigegebene bleiben, solange sie gezeigt werden.",
+      "letters": "<b>Briefe:</b> Was Sie in einen Brief tippen, bleibt auf Ihrem Gerät. Es wird nicht an diese Website geschickt und nicht gespeichert.",
       "never": "<b>Nie mit Ihrer Stimme gespeichert:</b> Ihr Name, Ihre E-Mail-Adresse oder Ihre IP-Adresse."
     },
     "unfinishedHeading": "Was noch nicht fertig oder perfekt ist",

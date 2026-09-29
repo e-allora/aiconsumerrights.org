@@ -6,9 +6,10 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Cite } from "@/components/ui/Cite";
+import { HelpLink, PhoneLink } from "@/components/ui/HelpLink";
 import { SourceLink } from "@/components/ui/SourceList";
 import { COUNTRIES, homeCountry, type Country } from "@/lib/countries";
-import { getSource, type Source } from "@/lib/sources";
+import { getSource } from "@/lib/sources";
 import { cn } from "@/lib/utils";
 
 // Each step asks a little more of both sides, and each starts from good faith.
@@ -30,19 +31,6 @@ const HELP: Record<Country, { links: Record<string, string>; phone?: string }> =
   it: { links: { garante: "it-garante-reclamo", agcm: "it-agcm-segnalazione" }, phone: "800166661" },
 };
 
-const inlineLink = "font-semibold text-link underline underline-offset-4";
-
-/** An external link inside a sentence, in the visitor's words, to a registry source. */
-function HelpLink({ source, children }: { source: Source; children: React.ReactNode }) {
-  const tc = useTranslations("Common");
-  return (
-    <a href={source.url} target="_blank" rel="noopener noreferrer" hrefLang={source.lang ?? "en"} className={inlineLink}>
-      {children}
-      <span className="sr-only"> {tc("opensInNewTab")}</span>
-    </a>
-  );
-}
-
 type View = { kind: "step"; index: number } | { kind: "resolved"; index: number } | { kind: "agency" };
 
 export function AlgorithmExplorer() {
@@ -63,11 +51,7 @@ export function AlgorithmExplorer() {
         <strong>{t(`help.${c}.label`)}</strong>{" "}
         {t.rich(`help.${c}.text`, {
           ...tags,
-          tel: (chunks) => (
-            <a href={`tel:${phone}`} className={inlineLink}>
-              {chunks}
-            </a>
-          ),
+          tel: (chunks) => <PhoneLink phone={phone ?? ""}>{chunks}</PhoneLink>,
         })}
       </li>
     );

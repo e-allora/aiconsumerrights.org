@@ -119,6 +119,15 @@ export default function GuidePage({ params: { locale } }: Props) {
         <div className="flex max-w-3xl flex-col gap-3">
           <h2 id="steps">{t("steps.heading")}</h2>
           <p>{t.rich("steps.lead", { b: bold })}</p>
+          <p>
+            {t.rich("steps.helpLink", {
+              help: (c) => (
+                <Link href="/help" className="font-semibold text-link underline underline-offset-4">
+                  {c}
+                </Link>
+              ),
+            })}
+          </p>
         </div>
         <AlgorithmExplorer />
       </section>

@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { corrections, pick, weDid, type Correction, type LocalizedText, type WeDidEntry } from "@/lib/public-log";
 import { REPO_URL } from "@/lib/site";
-import { formatDate } from "@/lib/sources";
+import { formatDate } from "@/lib/dates";
 
 const linkClass = "font-semibold text-link underline underline-offset-4";
 // These links stand alone, not inside a sentence, so they get full-size touch targets (SC 2.5.8).

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { BookOpen, Home, Info, Library, Menu, MessagesSquare, X } from "lucide-react";
+import { BookOpen, Home, Info, Library, LifeBuoy, Menu, MessagesSquare, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 
 const ICONS: Record<string, React.ElementType> = {
   "/": Home,
+  "/help": LifeBuoy,
   "/guide": BookOpen,
   "/forum": MessagesSquare,
   "/sources": Library,
@@ -141,7 +142,7 @@ export function SiteNav() {
         aria-label={t("quick")}
         className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-border/10 bg-background/95 pb-[env(safe-area-inset-bottom)] backdrop-blur md:hidden"
       >
-        <ul className="grid grid-cols-5">
+        <ul className="grid grid-cols-6">
           {NAV_ITEMS.map((item) => {
             const Icon = ICONS[item.href];
             const current = isCurrent(pathname, item.href);
@@ -151,7 +152,9 @@ export function SiteNav() {
                   href={item.href}
                   aria-current={current ? "page" : undefined}
                   className={cn(
-                    "tap-target flex min-h-14 flex-col items-center justify-center gap-0.5 text-xs font-semibold",
+                    // Six labels share a phone's width; long words (German "Hintergrund")
+                    // hyphenate and wrap instead of spilling past the edge.
+                    "tap-target flex min-h-14 flex-col items-center justify-center gap-0.5 break-words px-0.5 text-center text-xs font-semibold leading-tight hyphens-auto",
                     current ? "text-link" : "text-foreground",
                     ring,
                     "focus-visible:ring-inset focus-visible:ring-offset-0"

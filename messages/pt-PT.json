@@ -23,6 +23,8 @@
     "menuDescription": "Todas as páginas deste site, com uma pequena dica para cada uma.",
     "home": "Início",
     "homeHint": "Comece aqui",
+    "help": "Ajuda",
+    "helpHint": "O que lhe aconteceu? Passos e uma carta",
     "guide": "Guia",
     "guideHint": "Três passos calmos quando a IA decide sobre si",
     "forum": "Fórum",
@@ -47,6 +49,7 @@
   "Home": {
     "title": "Direitos do Consumidor perante a IA",
     "lead": "Ajuda em linguagem simples quando a IA toma decisões sobre si.",
+    "getHelp": "O que lhe aconteceu?",
     "readGuide": "Ler o guia",
     "joinForum": "Participar no fórum"
   },
@@ -173,7 +176,8 @@
     },
     "steps": {
       "heading": "Siga três passos calmos quando uma decisão parecer errada",
-      "lead": "<b>Comece por algo pequeno e seja concreto.</b> A maioria dos problemas resolve-se no primeiro passo. Use as setas do teclado ou toque num passo para mudar entre eles."
+      "lead": "<b>Comece por algo pequeno e seja concreto.</b> A maioria dos problemas resolve-se no primeiro passo. Use as setas do teclado ou toque num passo para mudar entre eles.",
+      "helpLink": "Precisa de uma carta para enviar? <help>Escolha o que lhe aconteceu</help>."
     },
     "everyone": {
       "heading": "Veja todos os lados da mesa",
@@ -272,6 +276,139 @@
         "it": {
           "label": "Itália:",
           "text": "para dados pessoais, <garante>apresente queixa ao Garante</garante> (grátis; pergunte primeiro à empresa, que tem de responder no prazo de um mês). Para uma prática comercial desleal, <agcm>comunique-a à AGCM</agcm> (grátis; pode agir contra a prática, mas não lhe consegue um reembolso). Linha telefónica da AGCM: <tel>800 166 661</tel>, dias úteis, das 10:00 às 14:00."
+        }
+      }
+    }
+  },
+  "Help": {
+    "metaTitle": "O que lhe aconteceu?",
+    "metaDescription": "Escolha o que lhe aconteceu e obtenha passos claros, uma carta que pode preencher e a quem recorrer se ninguém responder.",
+    "eyebrow": "Obter ajuda",
+    "title": "O que lhe aconteceu?",
+    "lead": "Escolha o que aconteceu. Terá passos claros, uma carta que pode preencher e a quem recorrer se ninguém responder.",
+    "pending": "Robert Sweetman ainda está a verificar estas páginas com as suas fontes.",
+    "comingHeading": "Em breve",
+    "coming": {
+      "job": "Uma candidatura a emprego foi excluída",
+      "housing": "Uma decisão de arrendamento ou de seguro foi-lhe desfavorável",
+      "chatbot": "Um chatbot deu informação errada ou foi recusado um reembolso",
+      "account": "Uma conta foi bloqueada ou uma publicação foi removida",
+      "deepfake": "Alguém usou uma voz ou um vídeo falsos para o enganar"
+    },
+    "comingLead": "Estes guias ainda estão a ser escritos. <forum>Diga-nos no fórum</forum> de qual precisa mais.",
+    "backToHelp": "Todas as situações",
+    "happenedHeading": "O que provavelmente aconteceu",
+    "whereHeading": "Os seus direitos onde vive",
+    "rightsHeading": "Os seus direitos",
+    "letterHeading": "Envie uma carta",
+    "letterLead": "Preencha os espaços e a carta atualiza-se enquanto escreve. Envie-a por e-mail, pelo site da empresa ou por correio. Guarde uma cópia.",
+    "noReplyHeading": "Se não responderem",
+    "euHomeLabel": "A autoridade do seu país:",
+    "urgentHeading": "Quando pedir ajuda a uma pessoa em breve",
+    "urgent": "Se puder perder a sua casa, o seu emprego ou o dinheiro de que precisa para comida ou contas, não espere pelas cartas. Um serviço de apoio jurídico ou de defesa do consumidor perto de si pode ajudar. Muitos são gratuitos.",
+    "recordHeading": "Guarde um registo",
+    "record": "Guarde cada carta, e-mail e aviso, com a data. Nas chamadas, anote a data, com quem falou e o que lhe disseram.",
+    "forum": "Devia funcionar de outra forma? <forum>Diga no fórum o que devia mudar</forum>.",
+    "regions": {
+      "question": "Onde vive?",
+      "us": "Estados Unidos",
+      "eu": "União Europeia",
+      "br": "Brasil",
+      "in": "Índia",
+      "other": "Noutro lugar",
+      "pickFirst": "Escolha onde vive para ver os seus direitos e uma carta que pode enviar."
+    },
+    "letter": {
+      "fieldsHeading": "Preencha os espaços",
+      "fields": {
+        "name": "O seu nome",
+        "company": "Nome da empresa",
+        "decisionDate": "Data da decisão",
+        "reference": "Número do pedido ou da conta (opcional)"
+      },
+      "blank": {
+        "name": "[o seu nome]",
+        "company": "[empresa]",
+        "decisionDate": "[data da decisão]",
+        "today": "[data de hoje]"
+      },
+      "privacy": "O que escreve fica neste dispositivo. Não é enviado para este site nem guardado.",
+      "previewHeading": "A sua carta",
+      "to": "Para: {company}",
+      "subjectLine": "Assunto: {subject}",
+      "copy": "Copiar a carta",
+      "copied": "Copiada. Cole-a num e-mail ou no formulário de contacto da empresa.",
+      "copyFailed": "Não foi possível copiar. Selecione o texto da carta e copie-o.",
+      "print": "Imprimir",
+      "email": "Abrir no e-mail"
+    },
+    "credit": {
+      "metaTitle": "Um empréstimo ou crédito foi recusado",
+      "metaDescription": "O seu direito a saber porque foi recusado um empréstimo ou crédito, como pedir que uma pessoa o reveja e uma carta que pode enviar.",
+      "title": "Um empréstimo ou crédito foi recusado",
+      "summary": "Um banco, um cartão ou um credor disse que não, ou ofereceu piores condições.",
+      "lead": "Um banco, uma empresa de cartões ou outro credor disse que não, ou ofereceu-lhe piores condições. Muitas vezes, uma pontuação calculada por computador tem peso. Pode perguntar porquê e pedir que uma pessoa volte a analisar.",
+      "happened": {
+        "score": "Os credores usam muitas vezes uma pontuação de crédito: um número que um computador calcula a partir do seu histórico de pagamentos e de outros dados.",
+        "automatic": "Por vezes a decisão é toda automática. Por vezes decide uma pessoa, com base na pontuação.",
+        "mistakes": "Há erros. Dados antigos ou errados no seu ficheiro podem baixar a sua pontuação."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>O credor tem de lhe dizer porquê.</b> O aviso deve indicar os motivos principais. Dizer apenas que não atingiu a pontuação não basta.",
+          "2": "<b>Se não lhe deram motivos, peça-os no prazo de 60 dias.</b> Depois, têm de os dar no prazo de 30 dias.",
+          "3": "<b>Se usaram um relatório de crédito,</b> têm de indicar a agência de crédito e dizer-lhe que pode obter uma cópia gratuita do relatório no prazo de 60 dias e contestar qualquer erro.",
+          "4": "<b>A agência de crédito tem de analisar uma contestação gratuitamente,</b> normalmente no prazo de 30 dias."
+        },
+        "noReply": "Se não tiver resposta em 30 dias, envie a carta outra vez e refira a data da primeira. Também pode <cfpb>apresentar uma queixa ao Consumer Financial Protection Bureau (CFPB)</cfpb>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Pode pedir os seus dados e como a decisão foi tomada.</b> Se foi automatizada, têm de lhe dar informações úteis sobre a lógica subjacente e o que significou para si.",
+          "2": "<b>Se foi só um computador a decidir,</b> em regra pode pedir que uma pessoa reveja a decisão, dar a sua opinião e contestá-la.",
+          "3": "<b>Uma pontuação de crédito pode contar como a própria decisão</b> quando um credor se baseia muito nela. Então estas regras aplicam-se também à empresa que fez a pontuação.",
+          "4": "<b>Têm de responder no prazo de um mês, gratuitamente.</b> Em casos complexos podem demorar mais dois meses, mas têm de o avisar no primeiro mês."
+        },
+        "noReply": "Se não tiver resposta num mês, envie um lembrete. Depois pode apresentar queixa gratuitamente à autoridade de proteção de dados do seu país. <edpb>Encontre a sua na lista de autoridades de proteção de dados da UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Pode pedir a revisão de uma decisão tomada só por um computador,</b> incluindo decisões sobre o seu perfil de crédito.",
+          "2": "<b>Pode pedir os critérios e procedimentos usados</b> para chegar à decisão. Os segredos comercial e industrial podem limitar os pormenores.",
+          "3": "<b>Pode ver e corrigir os seus dados.</b> Uma declaração clara e completa dos seus dados tem de chegar no prazo de 15 dias após o pedido.",
+          "4": "<b>A lei não diz que a revisão tem de ser feita por uma pessoa.</b> Essa regra foi retirada em 2019, por isso peça uma pessoa na mesma."
+        },
+        "noReply": "Se não tiver resposta, pode apresentar uma petição gratuita à <anpd>Agência Nacional de Proteção de Dados (ANPD)</anpd>, ou uma reclamação no <consumidor>Consumidor.gov.br</consumidor> ou no <procon>Procon</procon> local."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>A lei de proteção de dados da Índia dá-lhe direito a um resumo dos seus dados e a corrigi-los, mas estes direitos só começam em maio de 2027.</b>",
+          "2": "<b>Mesmo assim, pode pedir já.</b> Escreva ao credor e peça os motivos e que uma pessoa volte a analisar. Um pedido por escrito deixa-lhe um registo."
+        },
+        "noReply": "Se não tiver resposta, a <nch>Linha Nacional de Apoio ao Consumidor</nch> pode ajudar. Ligue para o <tel>1915</tel>, gratuito."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Este site ainda não cobre as leis do seu país.</b> Mesmo assim, vale a pena enviar um pedido por escrito: pede as coisas com clareza e deixa-lhe um registo."
+        },
+        "noReply": "Se não tiver resposta, procure uma autoridade de defesa do consumidor ou de proteção de dados no seu país."
+      },
+      "letters": {
+        "us": {
+          "subject": "Pedido dos motivos da recusa do meu pedido de crédito{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, recusaram o meu pedido de crédito. Nos termos da Regulation B (12 CFR 1002.9), peço os motivos específicos desta decisão.\n\nSe usaram um relatório ou uma pontuação de crédito, peço que me indiquem que agência de crédito o forneceu e que pontuação usaram.\n\nGostaria também que uma pessoa voltasse a analisar o meu pedido. Se algum dos meus dados estiver errado ou desatualizado, estou disponível para o corrigir.\n\nPeço que respondam por escrito no prazo de 30 dias.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "eu": {
+          "subject": "Pedido ao abrigo dos artigos 15.º e 22.º do RGPD{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, recusaram o meu pedido de crédito. Ao abrigo do artigo 15.º do RGPD, peço que me enviem:\n- uma cópia dos dados pessoais que têm sobre mim e a sua origem;\n- se a decisão foi automatizada e, nesse caso, informações úteis sobre a lógica subjacente e as consequências para mim.\n\nSe a decisão se baseou exclusivamente no tratamento automatizado, peço, ao abrigo do artigo 22.º, n.º 3, que uma pessoa a reveja. Quero manifestar o meu ponto de vista e contestar a decisão.\n\nPeço que respondam no prazo de um mês, como exige o artigo 12.º, n.º 3.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "br": {
+          "subject": "Pedido ao abrigo dos artigos 18, 19 e 20 da LGPD{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, recusaram o meu pedido de crédito. Com base nos artigos 18 e 19 da LGPD (Lei n.º 13.709/2018), peço que confirmem se tratam os meus dados pessoais e que me enviem, no prazo de 15 dias, uma declaração clara e completa, com a origem dos dados, os critérios usados e a finalidade.\n\nCom base no artigo 20, peço a revisão desta decisão e informações claras sobre os critérios e procedimentos usados. Gostaria que a revisão fosse feita por uma pessoa.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "plain": {
+          "subject": "Pedido dos motivos de uma decisão de crédito{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, recusaram o meu pedido de crédito. Peço que me indiquem os motivos principais desta decisão e se um sistema informático ou uma pontuação teve peso nela.\n\nPeço também que me digam que informação sobre mim usaram, para eu poder confirmar que está correta. Gostaria que uma pessoa voltasse a analisar o meu pedido.\n\nAguardo a vossa resposta por escrito.\n\nCom os melhores cumprimentos,\n{name}"
         }
       }
     }
@@ -484,7 +621,8 @@
       "usability": "Usabilidade cognitiva e sistemas de design",
       "synthesis": "Síntese de vários modelos de IA e normas do projeto",
       "latam-global": "Enquadramentos regulatórios da América Latina e globais",
-      "eu-national": "Enquadramentos nacionais europeus"
+      "eu-national": "Enquadramentos nacionais europeus",
+      "consumer-help": "Os seus direitos e onde pedir ajuda"
     },
     "sourcesLanguageNote": "Os títulos e pormenores das fontes aparecem na língua original, quase sempre em inglês.",
     "readBy": "Lido por {name} a {date}.",
@@ -521,6 +659,7 @@
     "keep": {
       "votes": "<b>Votos:</b> até carregar em «Apagar os meus votos». O código do navegador dura {days} dias. Ainda não definimos uma data de eliminação automática.",
       "suggestions": "<b>Sugestões:</b> as rejeitadas são apagadas. As aprovadas ficam enquanto são mostradas.",
+      "letters": "<b>Cartas:</b> o que escreve numa carta fica no seu dispositivo. Não é enviado para este site nem guardado.",
       "never": "<b>Nunca guardado com o seu voto:</b> o seu nome, e-mail ou endereço IP."
     },
     "unfinishedHeading": "O que não está terminado ou não é perfeito",

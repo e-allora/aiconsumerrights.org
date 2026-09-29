@@ -23,6 +23,8 @@
     "menuDescription": "Tutte le pagine di questo sito, con un breve suggerimento per ciascuna.",
     "home": "Home",
     "homeHint": "Inizia da qui",
+    "help": "Aiuto",
+    "helpHint": "Che cosa ti è successo? Passi e una lettera",
     "guide": "Guida",
     "guideHint": "Tre passi con calma quando l'IA decide su di te",
     "forum": "Forum",
@@ -47,6 +49,7 @@
   "Home": {
     "title": "Diritti dei consumatori di fronte all'IA",
     "lead": "Guida in linguaggio semplice quando l'IA prende decisioni su di te.",
+    "getHelp": "Che cosa ti è successo?",
     "readGuide": "Leggi la guida",
     "joinForum": "Partecipa al forum"
   },
@@ -173,7 +176,8 @@
     },
     "steps": {
       "heading": "Fai tre passi con calma quando una decisione sembra sbagliata",
-      "lead": "<b>Parti da poco e sii preciso.</b> La maggior parte dei problemi si risolve al primo passo. Usa le frecce della tastiera o tocca un passo per spostarti tra i passi."
+      "lead": "<b>Parti da poco e sii preciso.</b> La maggior parte dei problemi si risolve al primo passo. Usa le frecce della tastiera o tocca un passo per spostarti tra i passi.",
+      "helpLink": "Ti serve una lettera da inviare? <help>Scegli che cosa ti è successo</help>."
     },
     "everyone": {
       "heading": "Guarda tutti i lati del tavolo",
@@ -272,6 +276,139 @@
         "it": {
           "label": "Italia:",
           "text": "per i dati personali, <garante>presenta un reclamo al Garante</garante> (gratis; chiedi prima all'azienda, che deve rispondere entro un mese). Per una pratica commerciale scorretta, <agcm>segnalala all'AGCM</agcm> (gratis; può intervenire contro la pratica, ma non può farti ottenere un rimborso). Numero verde dell'AGCM: <tel>800 166 661</tel>, dal lunedì al venerdì, dalle 10:00 alle 14:00."
+        }
+      }
+    }
+  },
+  "Help": {
+    "metaTitle": "Che cosa ti è successo?",
+    "metaDescription": "Scegli che cosa ti è successo e ottieni passi chiari, una lettera da compilare e a chi rivolgerti se nessuno risponde.",
+    "eyebrow": "Chiedi aiuto",
+    "title": "Che cosa ti è successo?",
+    "lead": "Scegli che cosa è successo. Avrai passi chiari, una lettera da compilare e a chi rivolgerti se nessuno risponde.",
+    "pending": "Robert Sweetman sta ancora verificando queste pagine con le loro fonti.",
+    "comingHeading": "In arrivo",
+    "coming": {
+      "job": "Una candidatura di lavoro è stata scartata",
+      "housing": "Una decisione su un affitto o un'assicurazione ti ha penalizzato",
+      "chatbot": "Un chatbot ha dato informazioni sbagliate o ti è stato negato un rimborso",
+      "account": "Un account è stato bloccato o un post è stato rimosso",
+      "deepfake": "Qualcuno ha usato una voce o un video falsi per ingannarti"
+    },
+    "comingLead": "Queste guide sono ancora in preparazione. <forum>Dicci nel forum</forum> quale ti serve di più.",
+    "backToHelp": "Tutte le situazioni",
+    "happenedHeading": "Che cosa è successo, probabilmente",
+    "whereHeading": "I tuoi diritti dove vivi",
+    "rightsHeading": "I tuoi diritti",
+    "letterHeading": "Invia una lettera",
+    "letterLead": "Compila gli spazi: la lettera si aggiorna mentre scrivi. Inviala per email, dal sito dell'azienda o per posta. Conservane una copia.",
+    "noReplyHeading": "Se non rispondono",
+    "euHomeLabel": "L'autorità del tuo Paese:",
+    "urgentHeading": "Quando chiedere presto aiuto a una persona",
+    "urgent": "Se rischi di perdere la casa, il lavoro o i soldi che ti servono per il cibo o le bollette, non aspettare le lettere. Uno sportello di assistenza legale o un'associazione dei consumatori vicino a te può aiutarti. Molti servizi sono gratuiti.",
+    "recordHeading": "Tieni traccia di tutto",
+    "record": "Conserva ogni lettera, email e avviso, con la data. Per le telefonate, annota la data, con chi hai parlato e che cosa ti hanno detto.",
+    "forum": "Dovrebbe funzionare diversamente? <forum>Di' nel forum che cosa dovrebbe cambiare</forum>.",
+    "regions": {
+      "question": "Dove vivi?",
+      "us": "Stati Uniti",
+      "eu": "Unione europea",
+      "br": "Brasile",
+      "in": "India",
+      "other": "Altrove",
+      "pickFirst": "Scegli dove vivi per vedere i tuoi diritti e una lettera da inviare."
+    },
+    "letter": {
+      "fieldsHeading": "Compila gli spazi",
+      "fields": {
+        "name": "Il tuo nome",
+        "company": "Nome dell'azienda",
+        "decisionDate": "Data della decisione",
+        "reference": "Numero della domanda o del conto (facoltativo)"
+      },
+      "blank": {
+        "name": "[il tuo nome]",
+        "company": "[azienda]",
+        "decisionDate": "[data della decisione]",
+        "today": "[data di oggi]"
+      },
+      "privacy": "Quello che scrivi resta su questo dispositivo. Non viene inviato a questo sito né salvato.",
+      "previewHeading": "La tua lettera",
+      "to": "A: {company}",
+      "subjectLine": "Oggetto: {subject}",
+      "copy": "Copia la lettera",
+      "copied": "Copiata. Incollala in un'email o nel modulo di contatto dell'azienda.",
+      "copyFailed": "Non è stato possibile copiare. Seleziona il testo della lettera e copialo tu.",
+      "print": "Stampa",
+      "email": "Apri nell'email"
+    },
+    "credit": {
+      "metaTitle": "Un prestito o un credito è stato rifiutato",
+      "metaDescription": "Il tuo diritto di sapere perché un prestito o un credito è stato rifiutato, come chiedere che una persona lo riesamini e una lettera da inviare.",
+      "title": "Un prestito o un credito è stato rifiutato",
+      "summary": "Una banca, una carta o un finanziatore ha detto di no, o ha offerto condizioni peggiori.",
+      "lead": "Una banca, una società di carte o un altro finanziatore ha detto di no, o ti ha offerto condizioni peggiori. Spesso conta un punteggio calcolato da un computer. Puoi chiedere perché e chiedere che una persona riesamini la domanda.",
+      "happened": {
+        "score": "I finanziatori usano spesso un punteggio di credito: un numero che un computer calcola dalla tua storia dei pagamenti e da altri dati.",
+        "automatic": "A volte tutta la decisione è automatica. A volte decide una persona, usando il punteggio.",
+        "mistakes": "Gli errori capitano. Dati vecchi o sbagliati nella tua posizione possono abbassare il punteggio."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Il finanziatore deve dirti perché.</b> L'avviso deve indicare i motivi principali. Dire solo che non hai raggiunto il loro punteggio non basta.",
+          "2": "<b>Se non ti hanno dato i motivi, chiedili entro 60 giorni.</b> Poi devono darteli entro 30 giorni.",
+          "3": "<b>Se hanno usato un rapporto di credito,</b> devono indicare l'agenzia di credito e dirti che puoi avere una copia gratuita del rapporto entro 60 giorni e contestare ogni errore.",
+          "4": "<b>L'agenzia di credito deve verificare una contestazione gratis,</b> di solito entro 30 giorni."
+        },
+        "noReply": "Se non ricevi risposta entro 30 giorni, invia di nuovo la lettera e indica la data della prima. Puoi anche <cfpb>presentare un reclamo al Consumer Financial Protection Bureau (CFPB)</cfpb>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Puoi chiedere i tuoi dati e come è stata presa la decisione.</b> Se era automatizzata, devono darti informazioni significative sulla logica utilizzata e su che cosa ha comportato per te.",
+          "2": "<b>Se ha deciso solo un computer,</b> di solito puoi chiedere che una persona riesamini la decisione, esprimere la tua opinione e contestarla.",
+          "3": "<b>Un punteggio di credito può valere come la decisione stessa</b> quando un finanziatore si basa molto su di esso. Allora queste regole valgono anche per la società che ha calcolato il punteggio.",
+          "4": "<b>Devono rispondere entro un mese, gratis.</b> Nei casi complessi possono prendersi altri due mesi, ma devono avvisarti entro il primo mese."
+        },
+        "noReply": "Se non ricevi risposta entro un mese, invia un sollecito. Poi puoi presentare un reclamo gratuito all'autorità per la protezione dei dati del tuo Paese. <edpb>Trova la tua nell'elenco delle autorità per la protezione dei dati dell'UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Puoi chiedere il riesame di una decisione presa solo da un computer,</b> comprese le decisioni sul tuo profilo di credito.",
+          "2": "<b>Puoi chiedere i criteri e le procedure usati</b> per arrivare alla decisione. Il segreto commerciale può limitare i dettagli.",
+          "3": "<b>Puoi vedere e correggere i tuoi dati.</b> Una dichiarazione chiara e completa dei tuoi dati è dovuta entro 15 giorni dalla richiesta.",
+          "4": "<b>La legge non dice che il riesame debba farlo una persona.</b> Quella regola è stata tolta nel 2019, quindi chiedi comunque una persona."
+        },
+        "noReply": "Se non ricevi risposta, puoi presentare gratuitamente una <anpd>petizione all'autorità nazionale per la protezione dei dati (ANPD)</anpd>, oppure un reclamo su <consumidor>Consumidor.gov.br</consumidor> o al <procon>Procon</procon> locale."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La legge indiana sulla protezione dei dati ti dà diritto a un riepilogo dei tuoi dati e a correggerli, ma questi diritti partono da maggio 2027.</b>",
+          "2": "<b>Puoi comunque chiedere già ora.</b> Scrivi al finanziatore e chiedi i motivi e che una persona riesamini la domanda. Una richiesta scritta ti lascia una traccia."
+        },
+        "noReply": "Se non ricevi risposta, la <nch>National Consumer Helpline</nch> può aiutarti. Chiama il <tel>1915</tel>, numero gratuito."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Questo sito non copre ancora le leggi del tuo Paese.</b> Vale comunque la pena inviare una richiesta scritta: chiede le cose con chiarezza e ti lascia una traccia."
+        },
+        "noReply": "Se non ricevi risposta, cerca un'autorità per la tutela dei consumatori o per la protezione dei dati nel tuo Paese."
+      },
+      "letters": {
+        "us": {
+          "subject": "Richiesta dei motivi del rifiuto della mia domanda di credito{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete rifiutato la mia domanda di credito. Ai sensi della Regulation B (12 CFR 1002.9), chiedo i motivi specifici di questa decisione.\n\nSe avete usato un rapporto o un punteggio di credito, vi chiedo di indicarmi quale agenzia di credito lo ha fornito e quale punteggio avete usato.\n\nVorrei inoltre che una persona riesaminasse la mia domanda. Se qualche mio dato fosse sbagliato o non aggiornato, sono disponibile a correggerlo.\n\nVi chiedo di rispondere per iscritto entro 30 giorni.\n\nCordiali saluti,\n{name}"
+        },
+        "eu": {
+          "subject": "Richiesta ai sensi degli articoli 15 e 22 del GDPR{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete rifiutato la mia domanda di credito. Ai sensi dell'articolo 15 del GDPR (Regolamento UE 2016/679), vi chiedo di inviarmi:\n- una copia dei dati personali che avete su di me e la loro origine;\n- se la decisione è stata automatizzata e, in tal caso, informazioni significative sulla logica utilizzata e sulle conseguenze per me.\n\nSe la decisione si è basata unicamente su un trattamento automatizzato, chiedo, ai sensi dell'articolo 22, paragrafo 3, che una persona la riesamini. Desidero esprimere la mia opinione e contestare la decisione.\n\nVi chiedo di rispondere entro un mese, come prevede l'articolo 12, paragrafo 3.\n\nCordiali saluti,\n{name}"
+        },
+        "br": {
+          "subject": "Richiesta ai sensi degli articoli 18, 19 e 20 della LGPD{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete rifiutato la mia domanda di credito. Ai sensi degli articoli 18 e 19 della LGPD (Legge n. 13.709/2018), vi chiedo di confermare se trattate i miei dati personali e di inviarmi, entro 15 giorni, una dichiarazione chiara e completa, con l'origine dei dati, i criteri usati e la finalità.\n\nAi sensi dell'articolo 20, chiedo il riesame di questa decisione e informazioni chiare sui criteri e sulle procedure usati. Vorrei che il riesame fosse fatto da una persona.\n\nCordiali saluti,\n{name}"
+        },
+        "plain": {
+          "subject": "Richiesta dei motivi di una decisione di credito{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete rifiutato la mia domanda di credito. Vi chiedo di indicarmi i motivi principali di questa decisione e se vi ha contribuito un sistema informatico o un punteggio.\n\nVi chiedo anche quali informazioni su di me avete usato, così da poter verificare che siano corrette. Vorrei che una persona riesaminasse la mia domanda.\n\nResto in attesa di una vostra risposta scritta.\n\nCordiali saluti,\n{name}"
         }
       }
     }
@@ -484,7 +621,8 @@
       "usability": "Usabilità cognitiva e sistemi di design",
       "synthesis": "Sintesi di più modelli di IA e standard del progetto",
       "latam-global": "Quadri normativi dell'America Latina e globali",
-      "eu-national": "Quadri normativi nazionali europei"
+      "eu-national": "Quadri normativi nazionali europei",
+      "consumer-help": "I tuoi diritti e a chi chiedere aiuto"
     },
     "sourcesLanguageNote": "I titoli e i dettagli delle fonti compaiono nella lingua originale, quasi sempre in inglese.",
     "readBy": "Letto da {name} il {date}.",
@@ -521,6 +659,7 @@
     "keep": {
       "votes": "<b>Voti:</b> finché non premi «Cancella i miei voti». Il codice del browser dura {days} giorni. Non abbiamo ancora fissato una data di cancellazione automatica.",
       "suggestions": "<b>Proposte:</b> quelle respinte vengono cancellate. Quelle approvate restano finché sono mostrate.",
+      "letters": "<b>Lettere:</b> quello che scrivi in una lettera resta sul tuo dispositivo. Non viene inviato a questo sito né salvato.",
       "never": "<b>Mai conservati con il tuo voto:</b> il tuo nome, la tua email o il tuo indirizzo IP."
     },
     "unfinishedHeading": "Cosa non è finito o non è perfetto",
