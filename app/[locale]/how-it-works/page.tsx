@@ -27,7 +27,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 
 const SERVICES = ["vercel", "neon", "openrouter", "models", "github"] as const;
 const KEEP = ["votes", "suggestions", "letters", "never"] as const;
-const UNFINISHED = ["review", "translations", "language", "results", "ai", "limits", "twice"] as const;
+const UNFINISHED = ["review", "legal", "translations", "language", "results", "ai", "limits", "twice"] as const;
 
 const bold = (c: React.ReactNode) => <strong>{c}</strong>;
 const linkClass = "font-semibold text-link underline underline-offset-4";

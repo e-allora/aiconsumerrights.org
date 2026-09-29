@@ -286,7 +286,7 @@
     "eyebrow": "Hilfe finden",
     "title": "Was ist Ihnen passiert?",
     "lead": "Wählen Sie, was passiert ist. Sie erhalten klare Schritte, einen Brief zum Ausfüllen und Stellen, an die Sie sich wenden können, wenn niemand antwortet.",
-    "pending": "Robert Sweetman prüft diese Seiten noch anhand ihrer Quellen.",
+    "pending": "<b>Noch nicht juristisch geprüft.</b> Robert Sweetman prüft diese Seiten anhand ihrer Quellen, aber noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation hat sie geprüft, und Muttersprachler haben die Übersetzungen noch nicht kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
     "comingHeading": "Demnächst",
     "coming": {
       "housing": "Eine Entscheidung über eine Wohnung oder Versicherung fiel gegen Sie aus",
@@ -776,6 +776,7 @@
     "unfinishedHeading": "Was noch nicht fertig oder perfekt ist",
     "unfinished": {
       "review": "Die Prüfung des Ratgebers durch einen Menschen läuft noch.",
+      "legal": "<b>Die Hilfeseiten und Briefe</b> hat noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation geprüft. Wir wollen um diese Prüfung bitten und Prüfende nur mit ihrer Erlaubnis nennen.",
       "translations": "Die Übersetzungen wurden mit Hilfe von KI erstellt. Muttersprachlerinnen und Muttersprachler haben noch nicht alle geprüft.",
       "language": "Vorschläge erscheinen nur in der Sprache, in der sie geschrieben wurden.",
       "results": "Ergebnisse erscheinen erst ab {minVotes} oder mehr Stimmen pro Sprache, am Anfang gibt es also keine.",

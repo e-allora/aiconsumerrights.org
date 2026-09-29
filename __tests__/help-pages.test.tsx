@@ -77,7 +77,11 @@ describe("/help", () => {
     expect(screen.getByRole("link", { name: /A loan or credit was refused/ })).toHaveAttribute("href", "/en/help/credit");
     const coming = screen.getByRole("region", { name: "Coming next" });
     expect(within(coming).getAllByRole("listitem")).toHaveLength(COMING.length);
-    expect(screen.getByText(/still checking these pages/)).toBeInTheDocument();
+    expect(screen.getByText(/still checking these pages|checking these pages against their sources/)).toBeInTheDocument();
+    // The shortcomings come first, with a way for reviewers to offer help.
+    expect(screen.getByText("Not reviewed by a legal expert yet.")).toBeInTheDocument();
+    expect(screen.getByText(/native speakers haven't checked the translations/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "please get in touch" })).toHaveAttribute("href", "/en/how-it-works#contact");
   });
 });
 

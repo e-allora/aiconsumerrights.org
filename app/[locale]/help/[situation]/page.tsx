@@ -112,9 +112,17 @@ export default function SituationPage({ params: { locale, situation: id } }: Pro
         </Link>
         <h1>{k("title")}</h1>
         <p className="text-xl">{k("lead")}</p>
-        <p className="text-base text-muted-foreground">
-          {t("pending")} {tc("legalNotice")}
+        <p className="rounded-md border-l-4 border-primary bg-muted/70 p-4 text-base">
+          {t.rich("pending", {
+            b: (c) => <strong>{c}</strong>,
+            contact: (c) => (
+              <Link href="/how-it-works#contact" className={linkClass}>
+                {c}
+              </Link>
+            ),
+          })}
         </p>
+        <p className="text-base text-muted-foreground">{tc("legalNotice")}</p>
       </header>
 
       <section aria-labelledby="happened" className="flex flex-col gap-4">

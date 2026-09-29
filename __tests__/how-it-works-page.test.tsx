@@ -52,8 +52,9 @@ describe("How this site works page", () => {
   it("lists what isn't finished, including the weaknesses", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     const items = within(section("What isn't finished or perfect")).getAllByRole("listitem");
-    expect(items).toHaveLength(7);
-    expect(items[1]).toHaveTextContent("Native speakers haven't checked all of them yet.");
+    expect(items).toHaveLength(8);
+    expect(items[1]).toHaveTextContent("haven't been reviewed by a lawyer, legal clinic, or consumer organisation yet");
+    expect(items[2]).toHaveTextContent("Native speakers haven't checked all of them yet.");
     expect(items.at(-1)).toHaveTextContent("can't fully stop someone from voting twice");
   });
 

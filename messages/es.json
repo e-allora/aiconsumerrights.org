@@ -286,7 +286,7 @@
     "eyebrow": "Obtener ayuda",
     "title": "¿Qué te ha pasado?",
     "lead": "Elige lo que te pasó. Tendrás pasos claros, una carta que puedes completar y adónde acudir si nadie responde.",
-    "pending": "Robert Sweetman aún está revisando estas páginas con sus fuentes.",
+    "pending": "<b>Aún sin revisión de una persona experta en derecho.</b> Robert Sweetman está comprobando estas páginas con sus fuentes, pero ningún abogado, clínica jurídica ni organización de consumidores las ha revisado, y ninguna persona nativa ha revisado las traducciones. Si puedes ayudar a revisarlas, <contact>ponte en contacto</contact>.",
     "comingHeading": "Próximamente",
     "coming": {
       "housing": "Una decisión de alquiler o de seguro te fue desfavorable",
@@ -776,6 +776,7 @@
     "unfinishedHeading": "Lo que no está terminado o no es perfecto",
     "unfinished": {
       "review": "La revisión humana de la guía todavía está en curso.",
+      "legal": "<b>Las páginas de ayuda y las cartas</b> aún no las ha revisado ningún abogado, clínica jurídica ni organización de consumidores. Pensamos pedir esa revisión y nombrar a quienes revisen solo con su permiso.",
       "translations": "Las traducciones se hicieron con ayuda de IA. Hablantes nativos aún no las han revisado todas.",
       "language": "Las propuestas solo aparecen en el idioma en que se escribieron.",
       "results": "Los resultados solo aparecen cuando hay {minVotes} votos o más por idioma, así que al principio no hay ninguno.",

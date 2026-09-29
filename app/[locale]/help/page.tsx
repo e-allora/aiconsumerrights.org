@@ -36,9 +36,17 @@ export default function HelpPage({ params: { locale } }: Props) {
         <p className="font-display text-lg font-bold text-link">{t("eyebrow")}</p>
         <h1>{t("title")}</h1>
         <p className="text-xl">{t("lead")}</p>
-        <p className="text-base text-muted-foreground">
-          {t("pending")} {tc("legalNotice")}
+        <p className="rounded-md border-l-4 border-primary bg-muted/70 p-4 text-base">
+          {t.rich("pending", {
+            b: (c) => <strong>{c}</strong>,
+            contact: (c) => (
+              <Link href="/how-it-works#contact" className={linkClass}>
+                {c}
+              </Link>
+            ),
+          })}
         </p>
+        <p className="text-base text-muted-foreground">{tc("legalNotice")}</p>
       </header>
 
       <ul className="flex flex-col gap-4">

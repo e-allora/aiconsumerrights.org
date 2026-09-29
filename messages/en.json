@@ -286,7 +286,7 @@
     "eyebrow": "Get help",
     "title": "What happened to you?",
     "lead": "Pick what happened. You'll get plain steps, a letter you can fill in, and where to turn if nobody answers.",
-    "pending": "Robert Sweetman is still checking these pages against their sources.",
+    "pending": "<b>Not reviewed by a legal expert yet.</b> Robert Sweetman is checking these pages against their sources, but no lawyer, legal clinic, or consumer organisation has reviewed them, and native speakers haven't checked the translations. If you can help review them, <contact>please get in touch</contact>.",
     "comingHeading": "Coming next",
     "coming": {
       "housing": "A rental or insurance decision went against you",
@@ -776,6 +776,7 @@
     "unfinishedHeading": "What isn't finished or perfect",
     "unfinished": {
       "review": "Human review of the guide is still in progress.",
+      "legal": "<b>The help pages and letters</b> haven't been reviewed by a lawyer, legal clinic, or consumer organisation yet. We plan to ask for that review, and to name reviewers only with their permission.",
       "translations": "The translations were made with AI help. Native speakers haven't checked all of them yet.",
       "language": "Suggestions only appear in the language they were written in.",
       "results": "Results appear only after {minVotes} or more votes per language, so early on there are none.",
