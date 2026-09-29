@@ -7,7 +7,7 @@ import type { Locale } from "@/lib/i18n/routing";
 // language keeps the same numbered sources.
 
 /** Where the visitor lives, as far as the help pages can tell them their rights. */
-export const REGIONS = ["us", "eu", "br", "in", "other"] as const;
+export const REGIONS = ["us", "uk", "eu", "br", "in", "other"] as const;
 export type Region = (typeof REGIONS)[number];
 
 // Each language opens on the region its speakers most likely live in.
@@ -41,7 +41,7 @@ export const EU_AUTHORITY: Partial<Record<Locale, string>> = {
 };
 
 /** Which letter a region uses. Regions without their own law get a plain request. */
-export type LetterKind = "us" | "eu" | "br" | "plain";
+export type LetterKind = "us" | "uk" | "eu" | "br" | "plain";
 
 export type RegionHelp = {
   /** One citation list per right, in order: Help.<situation>.<region>.rights.<n>. */
@@ -83,6 +83,13 @@ export const SITUATIONS: Situation[] = [
         letter: "us",
         complain: { cfpb: "cfpb-complaint" },
       },
+      // The UK left the EU: since 5 February 2026 its own Articles 22A to 22D
+      // apply, and lending complaints can go to the Financial Ombudsman.
+      uk: {
+        rights: [["uk-ico-sar"], ["uk-duaa-s80"], ["uk-duaa-s80"], ["uk-fos-complain"]],
+        letter: "uk",
+        complain: { fos: "uk-fos-complain", ico: "uk-ico-complaint" },
+      },
       eu: {
         rights: [["gdpr"], ["gdpr"], ["de-cjeu-c634-21"], ["gdpr"]],
         letter: "eu",
@@ -106,9 +113,52 @@ export const SITUATIONS: Situation[] = [
       },
     },
   },
+  {
+    id: "job",
+    happened: ["screening", "unread", "mistakes"],
+    company: [
+      { key: "answer" },
+      { key: "feedback" },
+      { key: "person" },
+      { key: "access", cites: ["ada-12112"] },
+      { key: "patterns" },
+    ],
+    regions: {
+      us: {
+        rights: [["fcra-1681b"], ["ada-12112"], ["nyc-aedt"], []],
+        letter: "us",
+        complain: { cfpb: "cfpb-complaint", eeoc: "eeoc-charge" },
+      },
+      uk: {
+        rights: [["uk-ico-sar"], ["uk-duaa-s80"]],
+        letter: "uk",
+        complain: { ico: "uk-ico-complaint" },
+      },
+      eu: {
+        rights: [["gdpr"], ["gdpr"], ["eu-digital-omnibus-2026"], ["gdpr"]],
+        letter: "eu",
+        complain: { edpb: "edpb-members" },
+      },
+      br: {
+        rights: [["lgpd-article-20"], ["lgpd-article-20"], ["anpd-lgpd-en"], ["iba-mariotto-2024"]],
+        letter: "br",
+        complain: { anpd: "br-anpd-peticao-denuncia" },
+      },
+      in: {
+        rights: [["in-dpdp-act-2023", "in-dpdp-commencement-2025"], []],
+        letter: "plain",
+        complain: {},
+      },
+      other: {
+        rights: [[]],
+        letter: "plain",
+        complain: {},
+      },
+    },
+  },
 ];
 
 /** Situations planned but not written yet, shown as "coming next" on /help. */
-export const COMING = ["job", "housing", "chatbot", "account", "deepfake"] as const;
+export const COMING = ["housing", "chatbot", "account", "deepfake"] as const;
 
 export const getSituation = (id: string): Situation | undefined => SITUATIONS.find((s) => s.id === id);

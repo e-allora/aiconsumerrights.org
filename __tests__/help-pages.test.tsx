@@ -104,6 +104,16 @@ describe("/help/credit", () => {
     );
   });
 
+  it("gives the UK its own rules since leaving the EU, with the Financial Ombudsman and the ICO", async () => {
+    const user = userEvent.setup();
+    render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
+    await user.click(screen.getByRole("radio", { name: "United Kingdom" }));
+    expect(screen.getByText(/have applied since 5 February 2026/)).toBeInTheDocument();
+    expect(screen.getByText(/I ask under Article 22C/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /^Financial Ombudsman Service/ })).toHaveAttribute("href", getSource("uk-fos-complain").url);
+    expect(screen.getByRole("link", { name: /^Information Commissioner's Office/ })).toHaveAttribute("href", getSource("uk-ico-complaint").url);
+  });
+
   it("opens Italian visitors on the EU, with a GDPR letter and the Garante", () => {
     render(<SituationPage params={{ locale: "it", situation: "credit" }} />, { locale: "it" });
     expect(screen.getByRole("radio", { name: "Unione europea" })).toBeChecked();
@@ -139,6 +149,25 @@ describe("/help/credit", () => {
 
   it("is a 404 for a situation that doesn't exist", () => {
     expect(() => render(<SituationPage params={{ locale: "en", situation: "nope" }} />)).toThrow("NEXT_NOT_FOUND");
+  });
+});
+
+describe("/help/job", () => {
+  it("covers background checks, accommodations, and the EEOC deadline, and says plainly what US law doesn't give", async () => {
+    const user = userEvent.setup();
+    render(<SituationPage params={{ locale: "en", situation: "job" }} />);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("A job application was screened out");
+    await user.click(screen.getByRole("radio", { name: "United States" }));
+    expect(screen.getByText(/No federal law gives you a general right to know why/)).toBeInTheDocument();
+    expect(screen.getByText(/Fair Credit Reporting Act provides for/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /file a charge with the EEOC/ })).toHaveAttribute("href", getSource("eeoc-charge").url);
+    expect(screen.getByText(/usually 180 days, or 300 in many states/)).toBeInTheDocument();
+  });
+
+  it("names e-recruiting as one of the GDPR's own examples for EU visitors", () => {
+    render(<SituationPage params={{ locale: "de", situation: "job" }} />, { locale: "de" });
+    expect(screen.getByText(/eines der Beispiele, die die DSGVO selbst nennt/)).toBeInTheDocument();
+    expect(screen.getByText(/2\. Dezember 2027/)).toBeInTheDocument();
   });
 });
 

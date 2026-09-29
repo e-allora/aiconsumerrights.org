@@ -289,7 +289,6 @@
     "pending": "Robert Sweetman vérifie encore ces pages à partir de leurs sources.",
     "comingHeading": "Bientôt",
     "coming": {
-      "job": "Une candidature à un emploi a été écartée",
       "housing": "Une décision de location ou d'assurance vous a été défavorable",
       "chatbot": "Un chatbot a donné une information fausse, ou un remboursement a été refusé",
       "account": "Un compte a été bloqué ou une publication a été retirée",
@@ -315,6 +314,7 @@
     "regions": {
       "question": "Où vivez-vous ?",
       "us": "États-Unis",
+      "uk": "Royaume-Uni",
       "eu": "Union européenne",
       "br": "Brésil",
       "in": "Inde",
@@ -372,6 +372,15 @@
         },
         "noReply": "Sans réponse sous 30 jours, renvoyez la lettre en indiquant la date de la première. Vous pouvez aussi <cfpb>déposer une plainte auprès du Consumer Financial Protection Bureau (CFPB)</cfpb>."
       },
+      "uk": {
+        "rights": {
+          "1": "<b>Vous pouvez demander une copie de vos données.</b> Les organisations ont en général un mois pour répondre.",
+          "2": "<b>Si un ordinateur a pris seul une décision importante vous concernant,</b> sans réelle intervention humaine, l'organisme doit vous permettre d'obtenir des informations, de donner votre point de vue, de demander l'intervention d'une personne et de contester la décision.",
+          "3": "<b>Ces règles britanniques s'appliquent depuis le 5 février 2026.</b> Le Royaume-Uni a quitté l'UE, c'est donc sa propre version de la loi qui s'applique.",
+          "4": "<b>Le Financial Ombudsman est gratuit.</b> Réclamez d'abord auprès de l'organisme de crédit. La plupart ont jusqu'à 8 semaines pour régler le problème. Après leur réponse finale, vous avez 6 mois pour saisir l'ombudsman."
+        },
+        "noReply": "Sans réponse, ou si vous n'êtes pas d'accord, vous pouvez porter gratuitement une réclamation sur un crédit devant le <fos>Financial Ombudsman Service</fos>. Pour l'usage de vos données, vous pouvez porter plainte <ico>auprès de l'Information Commissioner's Office (ICO)</ico>."
+      },
       "eu": {
         "rights": {
           "1": "<b>Vous pouvez demander vos données et comment la décision a été prise.</b> Si elle était automatisée, on doit vous donner des informations utiles sur la logique sous-jacente et ce qu'elle a signifié pour vous.",
@@ -408,6 +417,10 @@
           "subject": "Demande des raisons du refus de ma demande de crédit{hasReference, select, yes { (réf. {reference})} other {}}",
           "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. En vertu de la Regulation B (12 CFR 1002.9), je vous demande les raisons précises de cette décision.\n\nSi vous avez utilisé un rapport ou un score de crédit, merci de m'indiquer quel bureau de crédit l'a fourni et quel score vous avez utilisé.\n\nJe souhaite aussi qu'une personne réexamine ma demande. Si certaines de mes informations étaient fausses ou périmées, je suis prêt ou prête à les corriger.\n\nMerci de me répondre par écrit dans un délai de 30 jours.\n\nCordialement,\n{name}"
         },
+        "uk": {
+          "subject": "Demande au titre des articles 15 et 22C du UK GDPR{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. Au titre de l'article 15 du UK GDPR, merci de m'envoyer une copie des données personnelles que vous détenez sur moi, leur source, et de m'indiquer si la décision a été prise par des moyens automatisés.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, sans réelle intervention humaine, je demande, au titre de l'article 22C, des informations à son sujet. Je souhaite présenter mes observations, obtenir l'intervention d'une personne et contester la décision.\n\nMerci de me répondre dans un délai d'un mois.\n\nCordialement,\n{name}"
+        },
         "eu": {
           "subject": "Demande au titre des articles 15 et 22 du RGPD{hasReference, select, yes { (réf. {reference})} other {}}",
           "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. Au titre de l'article 15 du RGPD, merci de m'envoyer :\n- une copie des données personnelles que vous détenez sur moi, et leur source ;\n- si la décision a été automatisée et, dans ce cas, des informations utiles sur la logique sous-jacente et ses conséquences pour moi.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, je demande, au titre de l'article 22, paragraphe 3, qu'une personne la réexamine. Je souhaite exprimer mon point de vue et contester la décision.\n\nMerci de me répondre dans un délai d'un mois, comme l'exige l'article 12, paragraphe 3.\n\nCordialement,\n{name}"
@@ -419,6 +432,94 @@
         "plain": {
           "subject": "Demande des raisons d'une décision de crédit{hasReference, select, yes { (réf. {reference})} other {}}",
           "body": "Bonjour,\n\nLe {decisionDate}, vous avez refusé ma demande de crédit. Merci de m'indiquer les principales raisons de cette décision, et si un système informatique ou un score y a joué un rôle.\n\nMerci aussi de me dire quelles informations me concernant vous avez utilisées, pour que je puisse vérifier qu'elles sont exactes. Je souhaite qu'une personne réexamine ma demande.\n\nJ'attends votre réponse écrite.\n\nCordialement,\n{name}"
+        }
+      }
+    },
+    "job": {
+      "metaTitle": "Une candidature à un emploi a été écartée",
+      "metaDescription": "Que faire quand un logiciel a peut-être écarté votre candidature : vos droits, une lettre pour demander ce qui s'est passé, et à qui vous adresser.",
+      "title": "Une candidature à un emploi a été écartée",
+      "summary": "Vous avez postulé à un emploi sans nouvelles, ou avec un refus très rapide.",
+      "lead": "Vous avez postulé à un emploi et n'avez eu aucune réponse, ou un refus très rapide. Un logiciel a peut-être trié ou noté votre candidature. Vous pouvez demander ce qui s'est passé, demander qu'une personne la regarde, et demander une autre façon de participer si un test ne vous convient pas.",
+      "happened": {
+        "screening": "Beaucoup d'employeurs utilisent des logiciels pour trier les candidatures. Ils peuvent chercher des mots-clés dans les CV ou noter des tests en ligne et des entretiens vidéo.",
+        "unread": "Une candidature que le logiciel note mal peut ne jamais être lue par une personne.",
+        "mistakes": "Les outils peuvent passer à côté de choses : un intitulé de poste inhabituel, une pause dans la carrière, ou une mise en page que le logiciel ne sait pas lire."
+      },
+      "company": {
+        "answer": "<b>Répondez, même brièvement.</b> Un mot court disant qu'une décision a été prise est plus respectueux que le silence.",
+        "feedback": "<b>Donnez un retour sincère.</b> Un ou deux points aident à améliorer la prochaine candidature.",
+        "person": "<b>Laissez une personne réexaminer</b> quand on vous le demande, surtout si le logiciel a pu passer à côté de quelque chose.",
+        "access": "<b>Proposez une autre façon de participer.</b> Si un test ou un outil ne convient pas à quelqu'un, par exemple à cause d'un handicap, une alternative garde de bonnes candidatures dans la course. Aux États-Unis, la loi exige en général des aménagements raisonnables.",
+        "patterns": "<b>Vérifiez l'outil de temps en temps.</b> Si des personnes au profil semblable sont sans cesse écartées, ses réglages méritent peut-être un examen."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Si une vérification des antécédents a été utilisée</b> et qu'on prévoit de vous refuser à cause d'elle, on doit d'abord vous donner une copie du rapport et un résumé de vos droits.",
+          "2": "<b>Si vous avez un handicap,</b> vous pouvez demander un aménagement raisonnable, par exemple une autre façon de passer un test en ligne. Les tests doivent mesurer vos compétences, pas votre handicap.",
+          "3": "<b>À New York,</b> les employeurs qui utilisent des outils de recrutement automatisés doivent les faire auditer chaque année pour les biais, publier des informations à ce sujet et prévenir les candidats 10 jours ouvrables avant de les utiliser.",
+          "4": "<b>Aucune loi fédérale ne vous donne un droit général à savoir pourquoi votre candidature n'a pas été retenue.</b> Demander poliment peut quand même aider, et une demande écrite vous laisse une trace."
+        },
+        "noReply": "Si une vérification des antécédents contenait des erreurs, vous pouvez la contester auprès de l'entreprise qui l'a faite et <cfpb>déposer une plainte auprès de la CFPB</cfpb>. Si vous pensez que votre candidature a été écartée à cause d'un handicap, de l'origine, du sexe, de l'âge ou d'une autre caractéristique protégée, vous pouvez <eeoc>déposer une plainte auprès de l'EEOC</eeoc>. Le délai est en général de 180 jours, ou 300 dans beaucoup d'États, alors n'attendez pas."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Vous pouvez demander une copie de vos données,</b> y compris les notes et scores sur votre candidature. Les organisations ont en général un mois pour répondre.",
+          "2": "<b>Si un ordinateur vous a refusé seul,</b> sans réelle intervention humaine, et que la décision vous affecte de façon importante, l'employeur doit vous permettre d'obtenir des informations, de donner votre point de vue, de demander l'intervention d'une personne et de la contester."
+        },
+        "noReply": "Sans réponse, ou si vous n'êtes pas d'accord, vous pouvez porter plainte <ico>auprès de l'Information Commissioner's Office (ICO)</ico> sur l'usage de vos données."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Vous pouvez demander vos données et comment la décision a été prise,</b> y compris les scores et les notes. Si elle était automatisée, on doit vous donner des informations utiles sur la logique sous-jacente.",
+          "2": "<b>Le recrutement sans intervention humaine est l'un des exemples cités par le RGPD lui-même</b> d'une décision qu'un ordinateur ne devrait pas prendre seul. Vous pouvez en général demander qu'une personne la réexamine, donner votre point de vue et la contester.",
+          "3": "<b>Les nouvelles règles de l'UE sur l'IA pour les outils de recrutement commencent le 2 décembre 2027.</b> D'ici là, ce sont les droits sur les données ci-dessus qui s'appliquent.",
+          "4": "<b>On doit vous répondre dans un délai d'un mois, gratuitement.</b> Pour les cas complexes, ce délai peut être prolongé de deux mois, mais on doit vous prévenir dans le premier mois."
+        },
+        "noReply": "Sans réponse sous un mois, envoyez une relance. Vous pouvez ensuite porter plainte gratuitement auprès de l'autorité de protection des données de votre pays. <edpb>Trouvez la vôtre dans la liste des autorités de protection des données de l'UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Vous pouvez demander le réexamen d'une décision prise uniquement par un ordinateur,</b> y compris les décisions sur votre profil professionnel.",
+          "2": "<b>Vous pouvez demander les critères et les procédures utilisés.</b> Le secret des affaires peut limiter les détails.",
+          "3": "<b>Vous pouvez consulter et corriger vos données.</b> Une déclaration claire et complète de vos données est due dans les 15 jours suivant votre demande.",
+          "4": "<b>La loi ne dit pas que le réexamen doit être fait par une personne.</b> Cette règle a été supprimée en 2019, alors demandez quand même une personne."
+        },
+        "noReply": "Sans réponse, vous pouvez déposer gratuitement une <anpd>requête auprès de l'autorité nationale de protection des données (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La loi indienne sur la protection des données vous donne droit à un résumé de vos données et à leur correction, mais ces droits ne commencent qu'en mai 2027.</b>",
+          "2": "<b>Vous pouvez quand même demander dès maintenant.</b> Écrivez à l'employeur, demandez si un logiciel a trié votre candidature, et demandez qu'une personne la réexamine. Une demande écrite vous laisse une trace."
+        },
+        "noReply": "Sans réponse, gardez votre lettre et les éventuelles réponses. Ce site n'indique pas encore d'organisme en Inde pour les plaintes liées au recrutement."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Ce site ne couvre pas encore les lois de votre pays.</b> Une demande écrite vaut quand même la peine : elle pose clairement la question et vous laisse une trace."
+        },
+        "noReply": "Sans réponse, cherchez une autorité de protection des données ou un organisme pour l'égalité dans votre pays."
+      },
+      "letters": {
+        "us": {
+          "subject": "Question sur ma candidature{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma candidature n'avait pas été retenue. J'aimerais beaucoup avoir un retour sur les principales raisons, et j'aimerais savoir si un outil automatisé a servi à trier ou noter ma candidature.\n\nSi une vérification des antécédents ou un autre rapport sur le consommateur a joué un rôle, merci de m'en envoyer une copie ainsi que le résumé de mes droits prévu par le Fair Credit Reporting Act.\n\nJ'aimerais aussi qu'une personne puisse réexaminer ma candidature.\n\nMerci de votre temps,\n{name}"
+        },
+        "uk": {
+          "subject": "Demande au titre des articles 15 et 22C du UK GDPR sur ma candidature{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma candidature n'avait pas été retenue. Au titre de l'article 15 du UK GDPR, merci de m'envoyer une copie des données personnelles que vous détenez sur moi, y compris les scores ou notes sur ma candidature, et de m'indiquer si la décision a été prise par des moyens automatisés.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, sans réelle intervention humaine, je demande, au titre de l'article 22C, des informations à son sujet. Je souhaite présenter mes observations, obtenir l'intervention d'une personne et contester la décision.\n\nMerci de me répondre dans un délai d'un mois.\n\nCordialement,\n{name}"
+        },
+        "eu": {
+          "subject": "Demande au titre des articles 15 et 22 du RGPD sur ma candidature{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma candidature n'avait pas été retenue. Au titre de l'article 15 du RGPD, merci de m'envoyer :\n- une copie des données personnelles que vous détenez sur moi, y compris les scores ou notes sur ma candidature, et leur source ;\n- si la décision a été automatisée et, dans ce cas, des informations utiles sur la logique sous-jacente et ses conséquences pour moi.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, je demande, au titre de l'article 22, paragraphe 3, qu'une personne la réexamine. Je souhaite exprimer mon point de vue et contester la décision.\n\nMerci de me répondre dans un délai d'un mois, comme l'exige l'article 12, paragraphe 3.\n\nCordialement,\n{name}"
+        },
+        "br": {
+          "subject": "Demande au titre des articles 18, 19 et 20 de la LGPD sur ma candidature{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma candidature n'avait pas été retenue. Au titre des articles 18 et 19 de la LGPD (loi n° 13.709/2018), merci de confirmer si vous traitez mes données personnelles et de m'envoyer, dans un délai de 15 jours, une déclaration claire et complète, avec leur origine, les critères utilisés et la finalité.\n\nAu titre de l'article 20, je demande le réexamen de cette décision et des informations claires sur les critères et procédures utilisés. Je souhaite que le réexamen soit fait par une personne.\n\nCordialement,\n{name}"
+        },
+        "plain": {
+          "subject": "Question sur ma candidature{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai appris que ma candidature n'avait pas été retenue. J'aimerais beaucoup avoir un retour sur les principales raisons, et j'aimerais savoir si un système informatique a trié ou noté ma candidature.\n\nMerci aussi de me dire quelles informations me concernant vous avez utilisées, pour que je puisse vérifier qu'elles sont exactes. J'aimerais qu'une personne réexamine ma candidature.\n\nMerci de votre temps,\n{name}"
         }
       }
     }

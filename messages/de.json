@@ -289,7 +289,6 @@
     "pending": "Robert Sweetman prüft diese Seiten noch anhand ihrer Quellen.",
     "comingHeading": "Demnächst",
     "coming": {
-      "job": "Eine Bewerbung wurde aussortiert",
       "housing": "Eine Entscheidung über eine Wohnung oder Versicherung fiel gegen Sie aus",
       "chatbot": "Ein Chatbot gab falsche Auskünfte, oder eine Erstattung wurde abgelehnt",
       "account": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
@@ -315,6 +314,7 @@
     "regions": {
       "question": "Wo leben Sie?",
       "us": "Vereinigte Staaten",
+      "uk": "Vereinigtes Königreich",
       "eu": "Europäische Union",
       "br": "Brasilien",
       "in": "Indien",
@@ -372,6 +372,15 @@
         },
         "noReply": "Wenn nach 30 Tagen keine Antwort kommt, schicken Sie den Brief noch einmal und nennen Sie das Datum des ersten. Sie können sich auch beim <cfpb>Consumer Financial Protection Bureau (CFPB) beschweren</cfpb>."
       },
+      "uk": {
+        "rights": {
+          "1": "<b>Sie können Kopien Ihrer Daten verlangen.</b> Organisationen haben in der Regel einen Monat Zeit für die Antwort.",
+          "2": "<b>Wenn allein ein Computer eine wichtige Entscheidung über Sie getroffen hat,</b> ohne echte menschliche Beteiligung, muss der Kreditgeber Ihnen Informationen dazu geben, Sie Ihren Standpunkt darlegen lassen, einen Menschen eingreifen lassen und Ihnen die Anfechtung ermöglichen.",
+          "3": "<b>Diese britischen Regeln gelten seit dem 5. Februar 2026.</b> Das Vereinigte Königreich hat die EU verlassen, daher gilt seine eigene Fassung des Gesetzes.",
+          "4": "<b>Der Financial Ombudsman ist kostenlos.</b> Beschweren Sie sich zuerst beim Kreditgeber. Die meisten haben bis zu 8 Wochen Zeit für eine Lösung. Nach der abschließenden Antwort haben Sie 6 Monate, um sich an den Ombudsman zu wenden."
+        },
+        "noReply": "Wenn keine Antwort kommt oder Sie ihr nicht zustimmen, können Sie eine Kreditbeschwerde kostenlos beim <fos>Financial Ombudsman Service</fos> einreichen. Zur Nutzung Ihrer Daten können Sie sich beim <ico>Information Commissioner's Office (ICO)</ico> beschweren."
+      },
       "eu": {
         "rights": {
           "1": "<b>Sie können Ihre Daten und die Art der Entscheidung erfragen.</b> War sie automatisiert, muss man Ihnen aussagekräftige Informationen über die involvierte Logik geben und was sie für Sie bedeutete.",
@@ -408,6 +417,10 @@
           "subject": "Bitte um die Gründe für die Ablehnung meines Kreditantrags{hasReference, select, yes { (Az. {reference})} other {}}",
           "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Nach Regulation B (12 CFR 1002.9) bitte ich um die konkreten Gründe für diese Entscheidung.\n\nFalls Sie einen Kreditbericht oder Kredit-Score genutzt haben, teilen Sie mir bitte mit, welche Auskunftei ihn geliefert hat und welchen Score Sie verwendet haben.\n\nAußerdem bitte ich darum, dass ein Mensch meinen Antrag noch einmal prüft. Falls Angaben über mich falsch oder veraltet waren, berichtige ich sie gern.\n\nBitte antworten Sie schriftlich innerhalb von 30 Tagen.\n\nMit freundlichen Grüßen\n{name}"
         },
+        "uk": {
+          "subject": "Anfrage nach Art. 15 und Art. 22C UK GDPR{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Nach Art. 15 UK GDPR bitte ich um eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, um ihre Herkunft und um die Angabe, ob die Entscheidung automatisiert getroffen wurde.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung ohne echte menschliche Beteiligung beruhte, bitte ich nach Art. 22C UK GDPR um Informationen dazu. Ich möchte Stellung nehmen, einen Menschen eingreifen lassen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats.\n\nMit freundlichen Grüßen\n{name}"
+        },
         "eu": {
           "subject": "Anfrage nach Art. 15 und Art. 22 DSGVO{hasReference, select, yes { (Az. {reference})} other {}}",
           "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Nach Art. 15 DSGVO bitte ich Sie um:\n- eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, und ihre Herkunft;\n- die Angabe, ob die Entscheidung automatisiert getroffen wurde, und in diesem Fall aussagekräftige Informationen über die involvierte Logik und die Folgen für mich.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung beruhte, verlange ich nach Art. 22 Abs. 3 DSGVO, dass ein Mensch sie überprüft. Ich möchte meinen Standpunkt darlegen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats, wie es Art. 12 Abs. 3 DSGVO vorsieht.\n\nMit freundlichen Grüßen\n{name}"
@@ -419,6 +432,94 @@
         "plain": {
           "subject": "Bitte um die Gründe für eine Kreditentscheidung{hasReference, select, yes { (Az. {reference})} other {}}",
           "body": "Guten Tag,\n\nam {decisionDate} haben Sie meinen Kreditantrag abgelehnt. Bitte nennen Sie mir die wichtigsten Gründe für diese Entscheidung und ob ein Computersystem oder ein Score dabei eine Rolle gespielt hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich bitte darum, dass ein Mensch meinen Antrag noch einmal prüft.\n\nIch freue mich auf Ihre schriftliche Antwort.\n\nMit freundlichen Grüßen\n{name}"
+        }
+      }
+    },
+    "job": {
+      "metaTitle": "Eine Bewerbung wurde aussortiert",
+      "metaDescription": "Was Sie tun können, wenn eine Software Ihre Bewerbung aussortiert haben könnte: Ihre Rechte, ein Brief mit der Frage, was passiert ist, und Stellen, an die Sie sich wenden können.",
+      "title": "Eine Bewerbung wurde aussortiert",
+      "summary": "Sie haben sich beworben und nichts gehört, oder sehr schnell eine Absage bekommen.",
+      "lead": "Sie haben sich beworben und keine Antwort bekommen, oder sehr schnell eine Absage. Vielleicht hat eine Software Ihre Bewerbung sortiert oder bewertet. Sie können fragen, was passiert ist, darum bitten, dass ein Mensch sie ansieht, und um einen anderen Weg bitten, wenn ein Test für Sie nicht passt.",
+      "happened": {
+        "screening": "Viele Arbeitgeber sortieren Bewerbungen mit Software. Sie kann Lebensläufe nach Stichwörtern durchsuchen oder Online-Tests und Video-Interviews bewerten.",
+        "unread": "Eine Bewerbung, die die Software niedrig einstuft, liest vielleicht nie ein Mensch.",
+        "mistakes": "Werkzeuge können Dinge übersehen: eine ungewöhnliche Berufsbezeichnung, eine Lücke im Lebenslauf oder ein Layout, das die Software nicht lesen kann."
+      },
+      "company": {
+        "answer": "<b>Antworten Sie, auch kurz.</b> Eine kurze Nachricht, dass entschieden wurde, ist freundlicher als Schweigen.",
+        "feedback": "<b>Geben Sie ehrliches Feedback.</b> Ein oder zwei Punkte helfen bei der nächsten Bewerbung.",
+        "person": "<b>Lassen Sie einen Menschen noch einmal hinsehen,</b> wenn jemand darum bittet, besonders wenn die Software etwas übersehen haben könnte.",
+        "access": "<b>Bieten Sie einen anderen Weg an.</b> Wenn ein Test oder Werkzeug für jemanden nicht passt, zum Beispiel wegen einer Behinderung, hält eine Alternative gute Bewerbungen im Rennen. In den USA verlangt das Gesetz in der Regel angemessene Vorkehrungen.",
+        "patterns": "<b>Prüfen Sie das Werkzeug ab und zu.</b> Wenn ähnliche Menschen immer wieder aussortiert werden, lohnt ein Blick auf die Einstellungen."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Wenn eine Hintergrundprüfung genutzt wurde</b> und man Sie deshalb ablehnen will, muss man Ihnen vorher eine Kopie des Berichts und eine Übersicht Ihrer Rechte geben.",
+          "2": "<b>Wenn Sie eine Behinderung haben,</b> können Sie um angemessene Vorkehrungen bitten, etwa einen anderen Weg, einen Online-Test zu machen. Tests müssen Ihre Fähigkeiten messen, nicht Ihre Behinderung.",
+          "3": "<b>In New York City</b> müssen Arbeitgeber automatisierte Auswahlwerkzeuge jedes Jahr auf Verzerrungen prüfen lassen, Informationen dazu veröffentlichen und Bewerbende 10 Arbeitstage vor dem Einsatz informieren.",
+          "4": "<b>Kein Bundesgesetz gibt Ihnen ein allgemeines Recht zu erfahren, warum Sie nicht eingestellt wurden.</b> Höflich nachzufragen kann trotzdem helfen, und eine schriftliche Anfrage ist ein Nachweis."
+        },
+        "noReply": "Wenn eine Hintergrundprüfung falsche Angaben enthielt, können Sie sie bei der Firma beanstanden, die sie erstellt hat, und sich <cfpb>bei der CFPB beschweren</cfpb>. Wenn Sie glauben, wegen einer Behinderung, Herkunft, des Geschlechts, Alters oder eines anderen geschützten Merkmals aussortiert worden zu sein, können Sie <eeoc>eine Beschwerde bei der EEOC einreichen</eeoc>. Die Frist beträgt meist 180 Tage, in vielen Bundesstaaten 300, also warten Sie nicht."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Sie können Kopien Ihrer Daten verlangen,</b> auch Notizen und Bewertungen zu Ihrer Bewerbung. Organisationen haben in der Regel einen Monat Zeit für die Antwort.",
+          "2": "<b>Wenn allein ein Computer Sie abgelehnt hat,</b> ohne echte menschliche Beteiligung, und die Entscheidung Sie erheblich betrifft, muss der Arbeitgeber Ihnen Informationen geben, Sie Ihren Standpunkt darlegen lassen, einen Menschen eingreifen lassen und Ihnen die Anfechtung ermöglichen."
+        },
+        "noReply": "Wenn keine Antwort kommt oder Sie ihr nicht zustimmen, können Sie sich beim <ico>Information Commissioner's Office (ICO)</ico> über die Nutzung Ihrer Daten beschweren."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Sie können Ihre Daten und die Art der Entscheidung erfragen,</b> auch Bewertungen und Notizen. War sie automatisiert, muss man Ihnen aussagekräftige Informationen über die involvierte Logik geben.",
+          "2": "<b>Personalauswahl ohne menschliches Eingreifen ist eines der Beispiele, die die DSGVO selbst nennt,</b> für eine Entscheidung, die ein Computer nicht allein treffen sollte. Sie können meist verlangen, dass ein Mensch sie prüft, Ihren Standpunkt darlegen und sie anfechten.",
+          "3": "<b>Neue EU-Regeln für KI-Werkzeuge bei der Personalauswahl gelten ab dem 2. Dezember 2027.</b> Bis dahin gelten die Datenschutzrechte oben.",
+          "4": "<b>Man muss Ihnen innerhalb eines Monats antworten, kostenlos.</b> In schwierigen Fällen darf es zwei Monate länger dauern, aber man muss Ihnen das im ersten Monat mitteilen."
+        },
+        "noReply": "Wenn nach einem Monat keine Antwort kommt, schicken Sie eine Erinnerung. Danach können Sie sich kostenlos bei der Datenschutzbehörde in Ihrem Land beschweren. <edpb>Finden Sie Ihre in der Liste der Datenschutzbehörden der EU</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Sie können verlangen, dass eine allein vom Computer getroffene Entscheidung überprüft wird,</b> auch Entscheidungen über Ihr berufliches Profil.",
+          "2": "<b>Sie können die verwendeten Kriterien und Verfahren erfragen.</b> Geschäftsgeheimnisse können die Einzelheiten begrenzen.",
+          "3": "<b>Sie können Ihre Daten einsehen und berichtigen.</b> Eine klare, vollständige Aufstellung Ihrer Daten ist innerhalb von 15 Tagen nach Ihrer Anfrage fällig.",
+          "4": "<b>Das Gesetz schreibt nicht vor, dass ein Mensch die Überprüfung macht.</b> Diese Regel wurde 2019 gestrichen; bitten Sie trotzdem um einen Menschen."
+        },
+        "noReply": "Wenn keine Antwort kommt, können Sie kostenlos eine Eingabe bei der <anpd>nationalen Datenschutzbehörde (ANPD)</anpd> machen."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Indiens Datenschutzgesetz gibt Ihnen das Recht auf eine Übersicht Ihrer Daten und auf Berichtigung, aber diese Rechte gelten erst ab Mai 2027.</b>",
+          "2": "<b>Sie können trotzdem schon jetzt fragen.</b> Schreiben Sie dem Arbeitgeber, fragen Sie, ob eine Software Ihre Bewerbung sortiert hat, und bitten Sie darum, dass ein Mensch sie noch einmal ansieht. Eine schriftliche Anfrage ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, heben Sie Ihren Brief und alle Antworten auf. Diese Website nennt noch keine Stelle in Indien für Beschwerden über Einstellungsverfahren."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Diese Website deckt die Gesetze Ihres Landes noch nicht ab.</b> Eine schriftliche Anfrage lohnt sich trotzdem: Sie fragt klar nach und ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, suchen Sie eine Datenschutzbehörde oder eine Gleichstellungsstelle in Ihrem Land."
+      },
+      "letters": {
+        "us": {
+          "subject": "Frage zu meiner Bewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Bewerbung nicht erfolgreich war. Ich wäre dankbar für eine Rückmeldung zu den wichtigsten Gründen und möchte wissen, ob ein automatisiertes Werkzeug meine Bewerbung sortiert oder bewertet hat.\n\nFalls eine Hintergrundprüfung oder ein anderer Verbraucherbericht eine Rolle gespielt hat, schicken Sie mir bitte eine Kopie und die Übersicht meiner Rechte, die der Fair Credit Reporting Act vorsieht.\n\nIch wäre auch dankbar, wenn ein Mensch meine Bewerbung noch einmal ansehen könnte.\n\nDanke für Ihre Zeit\n{name}"
+        },
+        "uk": {
+          "subject": "Anfrage nach Art. 15 und Art. 22C UK GDPR zu meiner Bewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Bewerbung nicht erfolgreich war. Nach Art. 15 UK GDPR bitte ich um eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, einschließlich Bewertungen oder Notizen zu meiner Bewerbung, und um die Angabe, ob die Entscheidung automatisiert getroffen wurde.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung ohne echte menschliche Beteiligung beruhte, bitte ich nach Art. 22C UK GDPR um Informationen dazu. Ich möchte Stellung nehmen, einen Menschen eingreifen lassen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "eu": {
+          "subject": "Anfrage nach Art. 15 und Art. 22 DSGVO zu meiner Bewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Bewerbung nicht erfolgreich war. Nach Art. 15 DSGVO bitte ich Sie um:\n- eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, einschließlich Bewertungen oder Notizen zu meiner Bewerbung, und ihre Herkunft;\n- die Angabe, ob die Entscheidung automatisiert getroffen wurde, und in diesem Fall aussagekräftige Informationen über die involvierte Logik und die Folgen für mich.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung beruhte, verlange ich nach Art. 22 Abs. 3 DSGVO, dass ein Mensch sie überprüft. Ich möchte meinen Standpunkt darlegen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats, wie es Art. 12 Abs. 3 DSGVO vorsieht.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "br": {
+          "subject": "Anfrage nach Art. 18, 19 und 20 LGPD zu meiner Bewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Bewerbung nicht erfolgreich war. Nach Art. 18 und 19 LGPD (Gesetz Nr. 13.709/2018) bitte ich Sie zu bestätigen, ob Sie meine personenbezogenen Daten verarbeiten, und mir innerhalb von 15 Tagen eine klare und vollständige Aufstellung zu schicken, mit Herkunft der Daten, verwendeten Kriterien und Zweck.\n\nNach Art. 20 LGPD bitte ich um Überprüfung dieser Entscheidung und um klare Informationen über die verwendeten Kriterien und Verfahren. Ich möchte, dass ein Mensch die Überprüfung vornimmt.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "plain": {
+          "subject": "Frage zu meiner Bewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Bewerbung nicht erfolgreich war. Ich wäre dankbar für eine Rückmeldung zu den wichtigsten Gründen und möchte wissen, ob ein Computersystem meine Bewerbung sortiert oder bewertet hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich wäre dankbar, wenn ein Mensch meine Bewerbung noch einmal ansehen könnte.\n\nDanke für Ihre Zeit\n{name}"
         }
       }
     }

@@ -1480,6 +1480,97 @@
           "lang": "pt-PT",
           "note": "Read on 29 September 2026: online forms, including a general form; the page does not say whether there is a fee.",
           "summary": "How people in Portugal can submit a complaint to the data protection authority through its online forms."
+        },
+        {
+          "id": "uk-duaa-s80",
+          "title": "Data (Use and Access) Act 2025, section 80: Automated decision-making",
+          "publisher": "legislation.gov.uk (The National Archives)",
+          "type": "Law (UK)",
+          "jurisdiction": "United Kingdom (UK GDPR)",
+          "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/80",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Read on 29 September 2026. In force from 5 February 2026 (SI 2026/82). Replaces UK GDPR Article 22 with Articles 22A to 22D.",
+          "summary": "When a significant decision about you is based solely on automated processing, meaning no meaningful human involvement, the organisation must let you get information about it, make representations, obtain human intervention, and contest it."
+        },
+        {
+          "id": "uk-ico-sar",
+          "title": "Getting copies of your information (SAR)",
+          "publisher": "Information Commissioner's Office (ICO)",
+          "type": "Regulator (UK)",
+          "jurisdiction": "United Kingdom",
+          "url": "https://ico.org.uk/for-the-public/getting-copies-of-your-information-subject-access-request/",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026.",
+          "summary": "You can ask an organisation whether it uses your personal information and for copies of it. Organisations usually have one month to respond."
+        },
+        {
+          "id": "uk-ico-complaint",
+          "title": "Check if you can complain",
+          "publisher": "Information Commissioner's Office (ICO)",
+          "type": "Complaint portal (UK)",
+          "jurisdiction": "United Kingdom",
+          "url": "https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026. The page does not state a fee or a time limit.",
+          "summary": "How to complain to the UK's data protection regulator. It recommends raising the concern with the organisation first."
+        },
+        {
+          "id": "uk-fos-complain",
+          "title": "How to complain",
+          "publisher": "Financial Ombudsman Service",
+          "type": "Complaint route (UK)",
+          "jurisdiction": "United Kingdom",
+          "url": "https://www.financial-ombudsman.org.uk/consumers/how-to-complain",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026: free; complain to the business first; most businesses have up to 8 weeks; bring the complaint within 6 months of the final response.",
+          "summary": "A free service for complaints about banks, lenders and other financial businesses, after the business has had up to 8 weeks to sort it out."
+        },
+        {
+          "id": "fcra-1681b",
+          "title": "15 U.S. Code § 1681b: Permissible purposes of consumer reports",
+          "publisher": "Legal Information Institute, Cornell Law School",
+          "type": "Law (US)",
+          "status": "confirmed",
+          "primary": true,
+          "jurisdiction": "United States (Fair Credit Reporting Act)",
+          "url": "https://www.law.cornell.edu/uscode/text/15/1681b",
+          "note": "Read on 29 September 2026: subsection (b)(3)(A). Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
+          "summary": "Before an employer takes adverse action based on a background check or other consumer report, it must give the applicant a copy of the report and a written description of their rights."
+        },
+        {
+          "id": "ada-12112",
+          "title": "42 U.S. Code § 12112: Discrimination",
+          "publisher": "Legal Information Institute, Cornell Law School",
+          "type": "Law (US)",
+          "status": "confirmed",
+          "primary": true,
+          "jurisdiction": "United States (Americans with Disabilities Act)",
+          "url": "https://www.law.cornell.edu/uscode/text/42/12112",
+          "note": "Read on 29 September 2026: subsection (b)(5) to (7).",
+          "summary": "Employers must make reasonable accommodations for qualified applicants with disabilities, and employment tests must measure skills, not the effects of a disability."
+        },
+        {
+          "id": "nyc-aedt",
+          "title": "Automated Employment Decision Tools (AEDT)",
+          "publisher": "NYC Department of Consumer and Worker Protection",
+          "type": "Regulator (US, New York City)",
+          "jurisdiction": "New York City (Local Law 144 of 2021)",
+          "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026. Enforced since 5 July 2023.",
+          "summary": "Employers using automated hiring tools in New York City need a bias audit within the past year, must make information about it public, and must notify candidates 10 business days before using the tool."
+        },
+        {
+          "id": "eeoc-charge",
+          "title": "How to File a Charge of Employment Discrimination",
+          "publisher": "U.S. Equal Employment Opportunity Commission (EEOC)",
+          "type": "Complaint route (US)",
+          "jurisdiction": "United States",
+          "url": "https://www.eeoc.gov/how-file-charge-employment-discrimination",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026: 180 calendar days to file, extended to 300 where a state or local agency enforces a similar law; age claims differ.",
+          "summary": "How job applicants and workers can file a discrimination charge, and the deadlines for doing so."
         }
       ]
     }

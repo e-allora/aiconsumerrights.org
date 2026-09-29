@@ -289,7 +289,6 @@
     "pending": "Robert Sweetman is still checking these pages against their sources.",
     "comingHeading": "Coming next",
     "coming": {
-      "job": "A job application was screened out",
       "housing": "A rental or insurance decision went against you",
       "chatbot": "A chatbot gave wrong information, or a refund was refused",
       "account": "An account was blocked or a post was removed",
@@ -315,6 +314,7 @@
     "regions": {
       "question": "Where do you live?",
       "us": "United States",
+      "uk": "United Kingdom",
       "eu": "European Union",
       "br": "Brazil",
       "in": "India",
@@ -372,6 +372,15 @@
         },
         "noReply": "If you get no answer within 30 days, send the letter again and mention the date of your first one. You can also <cfpb>file a complaint with the Consumer Financial Protection Bureau</cfpb>."
       },
+      "uk": {
+        "rights": {
+          "1": "<b>You can ask for copies of your data.</b> Organisations usually have one month to answer.",
+          "2": "<b>If a computer alone made a significant decision about you,</b> with no meaningful human involvement, the lender must let you get information about it, give your side, ask for a person to step in, and challenge it.",
+          "3": "<b>These UK rules have applied since 5 February 2026.</b> The UK left the EU, so its own version of the law applies.",
+          "4": "<b>The Financial Ombudsman is free.</b> Complain to the lender first. Most lenders have up to 8 weeks to sort it out. After their final answer, you have 6 months to go to the ombudsman."
+        },
+        "noReply": "If you get no answer, or you disagree with it, you can take a lending complaint to the <fos>Financial Ombudsman Service</fos> for free. For how your data was used, you can complain to the <ico>Information Commissioner's Office (ICO)</ico>."
+      },
       "eu": {
         "rights": {
           "1": "<b>You can ask for your data and how the decision was made.</b> If it was automated, they must give you meaningful information about the logic involved, and what it meant for you.",
@@ -408,6 +417,10 @@
           "subject": "Request for the reasons my credit application was refused{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Under Regulation B (12 CFR 1002.9), I am asking for the specific reasons for this decision.\n\nIf you used a credit report or credit score, please tell me which credit bureau provided it and what score you used.\n\nI would also like a person to look at my application again. If any of my information was wrong or out of date, I am ready to correct it.\n\nPlease reply in writing within 30 days.\n\nThank you,\n{name}"
         },
+        "uk": {
+          "subject": "Request under UK GDPR Articles 15 and 22C{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Under Article 15 of the UK GDPR, please send me a copy of the personal data you hold about me, tell me where it came from, and tell me whether the decision was made by automated means.\n\nIf the decision was based solely on automated processing, with no meaningful human involvement, I ask under Article 22C for information about it. I want to make representations, to have a person step in, and to contest the decision.\n\nPlease reply within one month.\n\nKind regards,\n{name}"
+        },
         "eu": {
           "subject": "Request under GDPR Articles 15 and 22{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Under Article 15 of the GDPR, please send me:\n- a copy of the personal data you hold about me, and where it came from;\n- whether the decision was automated and, if so, meaningful information about the logic involved and what it means for me.\n\nIf the decision was based solely on automated processing, I ask under Article 22(3) for a person to review it. I want to give my point of view and to contest the decision.\n\nPlease reply within one month, as Article 12(3) requires.\n\nKind regards,\n{name}"
@@ -419,6 +432,94 @@
         "plain": {
           "subject": "Request for the reasons for a credit decision{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hello,\n\nOn {decisionDate}, you refused my application for credit. Please tell me the main reasons for this decision, and whether a computer system or score played a part.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would like a person to look at my application again.\n\nI look forward to your reply in writing.\n\nKind regards,\n{name}"
+        }
+      }
+    },
+    "job": {
+      "metaTitle": "A job application was screened out",
+      "metaDescription": "What to do when software may have screened out your job application: your rights, a letter asking what happened, and where to turn.",
+      "title": "A job application was screened out",
+      "summary": "You applied for a job and heard nothing, or got a quick no.",
+      "lead": "You applied for a job and heard nothing back, or got a fast rejection. Software may have sorted or scored your application. You can ask what happened, ask for a person to look, and ask for another way in if a test doesn't work for you.",
+      "happened": {
+        "screening": "Many employers use software to sort applications. It can scan CVs for keywords, or score online tests and video interviews.",
+        "unread": "An application the software ranks low may never be read by a person.",
+        "mistakes": "Tools can miss things: an unusual job title, a career break, or a layout the software can't read."
+      },
+      "company": {
+        "answer": "<b>Reply, even briefly.</b> A short note that a decision was made is kinder than silence.",
+        "feedback": "<b>Share a little honest feedback.</b> One or two points help people improve their next application.",
+        "person": "<b>Let a person look again</b> when someone asks, especially if the software may have missed something.",
+        "access": "<b>Offer another way in.</b> If a test or tool doesn't work for someone, for example because of a disability, an alternative keeps good candidates in the running. In the US, the law usually requires reasonable accommodations.",
+        "patterns": "<b>Check the tool now and then.</b> If similar people keep getting screened out, its settings may need a look."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>If a background check was used</b> and they plan to turn you down because of it, they must first give you a copy of the report and a summary of your rights.",
+          "2": "<b>If you have a disability,</b> you can ask for a reasonable accommodation, such as another way to take an online test. Tests must measure your skills, not your disability.",
+          "3": "<b>In New York City,</b> employers using automated hiring tools must have them checked for bias every year, publish information about it, and tell candidates 10 business days before using them.",
+          "4": "<b>No federal law gives you a general right to know why you weren't hired.</b> Asking politely can still help, and a written request gives you a record."
+        },
+        "noReply": "If a background check had wrong information, you can dispute it with the company that made it, and <cfpb>complain to the CFPB</cfpb>. If you think you were screened out because of disability, race, sex, age, or another protected trait, you can <eeoc>file a charge with the EEOC</eeoc>. The deadline is usually 180 days, or 300 in many states, so don't wait."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>You can ask for copies of your data,</b> including notes and scores about your application. Organisations usually have one month to answer.",
+          "2": "<b>If a computer alone turned you down,</b> with no meaningful human involvement, and the decision significantly affects you, the employer must let you get information about it, give your side, ask for a person to step in, and challenge it."
+        },
+        "noReply": "If you get no answer, or you disagree with it, you can complain to the <ico>Information Commissioner's Office (ICO)</ico> about how your data was used."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>You can ask for your data and how the decision was made,</b> including scores and notes. If it was automated, they must give you meaningful information about the logic involved.",
+          "2": "<b>Recruiting with no human involvement is one of the GDPR's own examples</b> of a decision a computer shouldn't make alone. You can usually ask for a person to review it, give your side, and challenge it.",
+          "3": "<b>New EU AI rules for hiring tools start on 2 December 2027.</b> Until then, the data protection rights above apply.",
+          "4": "<b>They must answer within one month, for free.</b> For hard cases they can take two more months, but they must tell you within the first month."
+        },
+        "noReply": "If you get no answer within one month, send a reminder. Then you can complain for free to the data protection authority in your country. <edpb>Find yours on the list of EU data protection authorities</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>You can ask for a review of a decision made only by a computer,</b> including decisions about your professional profile.",
+          "2": "<b>You can ask for the criteria and steps used.</b> Trade secrets can limit the details.",
+          "3": "<b>You can see and correct your data.</b> A clear, full statement of your data is due within 15 days of your request.",
+          "4": "<b>The law doesn't say a person must do the review.</b> That rule was removed in 2019, so ask for a person anyway."
+        },
+        "noReply": "If you get no answer, you can file a free petition with the <anpd>national data protection authority (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>India's data protection law gives you the right to a summary of your data and to correct it, but these rights start in May 2027.</b>",
+          "2": "<b>You can still ask now.</b> Write to the employer and ask whether software screened your application, and for a person to look again. A written request gives you a record."
+        },
+        "noReply": "If you get no answer, keep your letter and any replies. This site doesn't yet list a place in India to take hiring complaints."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>This site doesn't cover your country's laws yet.</b> A written request is still worth sending: it asks clearly, and it gives you a record."
+        },
+        "noReply": "If you get no answer, look for a data protection authority or an equality body in your country."
+      },
+      "letters": {
+        "us": {
+          "subject": "Question about my job application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my application was not successful. I would be grateful for some feedback on the main reasons, and I would like to know whether an automated tool was used to screen or score my application.\n\nIf a background check or other consumer report played any part, please send me a copy of it and the summary of my rights that the Fair Credit Reporting Act provides for.\n\nI would also appreciate it if a person could look at my application again.\n\nThank you for your time,\n{name}"
+        },
+        "uk": {
+          "subject": "Request under UK GDPR Articles 15 and 22C about my job application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my application was not successful. Under Article 15 of the UK GDPR, please send me a copy of the personal data you hold about me, including any scores or notes about my application, and tell me whether the decision was made by automated means.\n\nIf the decision was based solely on automated processing, with no meaningful human involvement, I ask under Article 22C for information about it. I want to make representations, to have a person step in, and to contest the decision.\n\nPlease reply within one month.\n\nKind regards,\n{name}"
+        },
+        "eu": {
+          "subject": "Request under GDPR Articles 15 and 22 about my job application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my application was not successful. Under Article 15 of the GDPR, please send me:\n- a copy of the personal data you hold about me, including any scores or notes about my application, and where it came from;\n- whether the decision was automated and, if so, meaningful information about the logic involved and what it means for me.\n\nIf the decision was based solely on automated processing, I ask under Article 22(3) for a person to review it. I want to give my point of view and to contest the decision.\n\nPlease reply within one month, as Article 12(3) requires.\n\nKind regards,\n{name}"
+        },
+        "br": {
+          "subject": "Request under Articles 18, 19 and 20 of the LGPD about my job application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my application was not successful. Under Articles 18 and 19 of the LGPD (Law No. 13,709/2018), please confirm whether you process my personal data, and send me a clear and complete statement of it, with its origin, the criteria used, and the purpose, within 15 days.\n\nUnder Article 20, I ask for a review of this decision, and for clear information on the criteria and procedures used to make it. I would like a person to carry out the review.\n\nKind regards,\n{name}"
+        },
+        "plain": {
+          "subject": "Question about my job application{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I learned that my application was not successful. I would be grateful for some feedback on the main reasons, and I would like to know whether a computer system screened or scored my application.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would appreciate it if a person could look at my application again.\n\nThank you for your time,\n{name}"
         }
       }
     }
