@@ -81,7 +81,7 @@ describe("/help", () => {
     // The shortcomings come first, with a way for reviewers to offer help.
     expect(screen.getByText("Not reviewed by a legal expert yet.")).toBeInTheDocument();
     expect(screen.getByText(/native speakers haven't checked the translations/)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "please get in touch" })).toHaveAttribute("href", "/en/how-it-works#contact");
+    expect(screen.getByRole("link", { name: "please get in touch" })).toHaveAttribute("href", "mailto:reviewers@aiconsumerrights.org");
   });
 });
 

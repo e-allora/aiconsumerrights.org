@@ -12,6 +12,7 @@ import { EU_AUTHORITY, REGIONS, SITUATIONS, getSituation, homeRegion, type Regio
 import { Link } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
+import { REVIEW_EMAIL } from "@/lib/site";
 import { getSource } from "@/lib/sources";
 
 type Props = { params: { locale: Locale; situation: string } };
@@ -116,9 +117,9 @@ export default function SituationPage({ params: { locale, situation: id } }: Pro
           {t.rich("pending", {
             b: (c) => <strong>{c}</strong>,
             contact: (c) => (
-              <Link href="/how-it-works#contact" className={linkClass}>
+              <a href={`mailto:${REVIEW_EMAIL}`} className={linkClass}>
                 {c}
-              </Link>
+              </a>
             ),
           })}
         </p>

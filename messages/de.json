@@ -789,7 +789,7 @@
     "contactHeading": "Sagen Sie uns, was falsch ist",
     "contact": "<b>Kritik ist willkommen, wenn sie begründet ist.</b> Sagen Sie uns, was falsch ist, warum es wichtig ist und, wenn Sie können, wie man es behebt.",
     "contactHow": "Schreiben Sie an <mail>{email}</mail>, oder <issues>eröffnen Sie ein Issue auf GitHub</issues>.",
-    "domainNote": "Die Kontaktadresse nutzt shipitworks.com, die Domain eines Unternehmens, das Robert gründen möchte. Dieses Unternehmen hat mit dieser Website nichts zu tun.",
+    "reviewers": "<b>Können Sie die Hilfeseiten oder Briefe prüfen?</b> Anwältinnen und Anwälte, Rechtskliniken, Verbraucherorganisationen und Muttersprachler sind alle willkommen. Schreiben Sie an <mail>{email}</mail>. Wir nennen Prüfende nur mit ihrer Erlaubnis, und ein Nein braucht keine Begründung.",
     "footerLink": "So funktioniert diese Website: jeder genutzte Dienst, was wir speichern und was noch nicht fertig ist"
   },
   "PublicLog": {

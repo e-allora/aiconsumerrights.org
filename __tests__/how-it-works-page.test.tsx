@@ -67,26 +67,32 @@ describe("How this site works page", () => {
     expect(log.compareDocumentPosition(contact) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
-  it("asks for criticism with a reason, gives the email, and says whose domain it is", () => {
+  it("asks for criticism with a reason, gives the email, and invites reviewers", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     const contact = section("Tell us what's wrong");
     expect(contact).toHaveTextContent("Criticism is welcome when it comes with a reason.");
-    expect(within(contact).getByRole("link", { name: "feedback@shipitworks.com" })).toHaveAttribute(
+    expect(within(contact).getByRole("link", { name: "feedback@aiconsumerrights.org" })).toHaveAttribute(
       "href",
-      "mailto:feedback@shipitworks.com"
+      "mailto:feedback@aiconsumerrights.org"
+    );
+    expect(within(contact).getByRole("link", { name: "reviewers@aiconsumerrights.org" })).toHaveAttribute(
+      "href",
+      "mailto:reviewers@aiconsumerrights.org"
     );
     expect(within(contact).getByRole("link", { name: "open an issue on GitHub" })).toHaveAttribute(
       "href",
       "https://github.com/e-allora/aiconsumerrights.org/issues"
     );
-    expect(contact).toHaveTextContent("a business Robert plans to start. That business has no part in this site.");
+    expect(contact).toHaveTextContent("a no needs no explanation");
+    expect(contact).not.toHaveTextContent("shipitworks");
   });
 
   it.each(["es", "pt-PT", "pt-BR", "it", "fr", "de", "hi"] as const)("renders in %s with the same numbers and links", (locale) => {
     render(<HowItWorksPage params={{ locale }} />, { locale });
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(MESSAGES[locale].HowItWorks.title);
     expect(document.body).toHaveTextContent(String(VOTER_COOKIE_DAYS));
-    expect(screen.getByRole("link", { name: "feedback@shipitworks.com" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "feedback@aiconsumerrights.org" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "reviewers@aiconsumerrights.org" })).toBeInTheDocument();
   });
 
   it("is published in the sitemap and linked from the footer and About", () => {

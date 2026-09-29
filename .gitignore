@@ -66,6 +66,7 @@ next-env.d.ts
 !/README.md
 !/CLAUDE.md
 /*.png
+/*.eml
 /reachout3
 /reading2
 /reading-excerpts

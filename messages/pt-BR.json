@@ -789,7 +789,7 @@
     "contactHeading": "Conte para a gente o que está errado",
     "contact": "<b>Críticas são bem-vindas quando vêm com um motivo.</b> Diga o que está errado, por que isso importa e, se puder, como corrigir.",
     "contactHow": "Escreva para <mail>{email}</mail> ou <issues>abra uma issue no GitHub</issues>.",
-    "domainNote": "O endereço de contato usa shipitworks.com, o domínio de um negócio que Robert planeja abrir. Esse negócio não tem nenhum papel neste site.",
+    "reviewers": "<b>Você pode revisar as páginas de ajuda ou as cartas?</b> Advogados, clínicas jurídicas, organizações de consumidores e falantes nativos são todos bem-vindos. Escreva para <mail>{email}</mail>. Só citamos quem revisa com a autorização da pessoa, e um não dispensa explicações.",
     "footerLink": "Como este site funciona: cada serviço que ele usa, o que guardamos e o que ainda não está pronto"
   },
   "PublicLog": {

@@ -1,7 +1,7 @@
 # aiconsumerrights.org: mission and values
 
 This is what the site holds itself to. If the site falls short of it, please
-[tell us what's wrong, why, and how to fix it](mailto:feedback@shipitworks.com),
+[tell us what's wrong, why, and how to fix it](mailto:feedback@aiconsumerrights.org),
 or [open an issue](https://github.com/e-allora/aiconsumerrights.org/issues).
 
 ## Mission

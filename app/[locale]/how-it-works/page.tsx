@@ -8,7 +8,7 @@ import { DAILY_LIMITS } from "@/lib/forum/submissions";
 import { VOTER_COOKIE_DAYS } from "@/lib/forum/votes";
 import type { Locale } from "@/lib/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
-import { CONTACT_EMAIL, MISSION_URL, REPO_URL } from "@/lib/site";
+import { CONTACT_EMAIL, MISSION_URL, REPO_URL, REVIEW_EMAIL } from "@/lib/site";
 
 type Props = { params: { locale: Locale } };
 
@@ -111,7 +111,7 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
             issues: external(`${REPO_URL}/issues`),
           })}
         </p>
-        <p className="text-base text-muted-foreground">{t("domainNote")}</p>
+        <p>{t.rich("reviewers", { b: bold, email: REVIEW_EMAIL, mail: external(`mailto:${REVIEW_EMAIL}`) })}</p>
       </section>
     </main>
   );

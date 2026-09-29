@@ -789,7 +789,7 @@
     "contactHeading": "Tell us what's wrong",
     "contact": "<b>Criticism is welcome when it comes with a reason.</b> Tell us what's wrong, why it matters, and, if you can, how to fix it.",
     "contactHow": "Email <mail>{email}</mail>, or <issues>open an issue on GitHub</issues>.",
-    "domainNote": "The feedback address uses shipitworks.com, the domain of a business Robert plans to start. That business has no part in this site.",
+    "reviewers": "<b>Can you review the help pages or letters?</b> Lawyers, legal clinics, consumer organisations, and native speakers are all welcome. Write to <mail>{email}</mail>. We name reviewers only with their permission, and a no needs no explanation.",
     "footerLink": "How this site works: every service it uses, what we keep, and what isn't finished"
   },
   "PublicLog": {

@@ -7,6 +7,7 @@ import { Link } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/routing";
 import { COMING, SITUATIONS } from "@/lib/help";
 import { pageMetadata } from "@/lib/seo";
+import { REVIEW_EMAIL } from "@/lib/site";
 
 type Props = { params: { locale: Locale } };
 
@@ -40,9 +41,9 @@ export default function HelpPage({ params: { locale } }: Props) {
           {t.rich("pending", {
             b: (c) => <strong>{c}</strong>,
             contact: (c) => (
-              <Link href="/how-it-works#contact" className={linkClass}>
+              <a href={`mailto:${REVIEW_EMAIL}`} className={linkClass}>
                 {c}
-              </Link>
+              </a>
             ),
           })}
         </p>

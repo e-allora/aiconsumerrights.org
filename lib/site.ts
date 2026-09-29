@@ -10,9 +10,11 @@ export const SITE_NAME = "AI Consumer Rights";
 export const SITE_DESCRIPTION =
   "Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.";
 
-// Where people send criticism and corrections. shipitworks.com is the domain
-// of a business Robert plans to start; the How it works page says so.
-export const CONTACT_EMAIL = "feedback@shipitworks.com";
+// Where people send criticism and corrections, and where legal and language
+// reviewers write. Both are on the site's own domain, kept apart from any
+// business of Robert's.
+export const CONTACT_EMAIL = "feedback@aiconsumerrights.org";
+export const REVIEW_EMAIL = "reviewers@aiconsumerrights.org";
 export const REPO_URL = "https://github.com/e-allora/aiconsumerrights.org";
 export const MISSION_URL = `${REPO_URL}/blob/main/docs/MISSION.md`;
 
