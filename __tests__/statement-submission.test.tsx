@@ -100,6 +100,16 @@ describe("StatementSubmission", () => {
     expect(screen.getByRole("status")).toHaveTextContent("");
   });
 
+  it("keeps the text and says to try tomorrow when the day's box is full", async () => {
+    const user = userEvent.setup();
+    mockSubmit.mockResolvedValue("busy");
+    render(<StatementSubmission />);
+    await user.type(box(), "Reasons should be plain.");
+    await user.click(screen.getByRole("button", { name: "Submit for review" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("Please try again tomorrow.");
+    expect(box()).toHaveValue("Reasons should be plain.");
+  });
+
   it("sends once, even if the button is pressed again while sending", async () => {
     const user = userEvent.setup();
     let finish: (r: "sent") => void = () => {};

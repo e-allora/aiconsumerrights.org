@@ -58,6 +58,20 @@ export type Submission = {
   createdAt: string;
 };
 
+/**
+ * Daily limits, counted over the last 24 hours, so a script can't run up
+ * the AI bill or bury the review queue. Past the first, suggestions are
+ * saved unchecked; past the second, the form pauses until the count drops.
+ */
+export const DAILY_LIMITS = { aiChecks: 100, submissions: 200 } as const;
+
+export async function submissionsToday(): Promise<number> {
+  const rows = (await getSql()`
+    SELECT count(*)::int AS n FROM submissions
+    WHERE created_at > now() - interval '24 hours'`) as { n: number }[];
+  return Number(rows[0]?.n ?? 0);
+}
+
 export async function saveSubmission({ text, locale }: SubmissionInput, check: Precheck | null) {
   await getSql()`
     INSERT INTO submissions (text, locale, ai_check)

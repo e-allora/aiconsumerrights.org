@@ -4,15 +4,19 @@ import { NextRequest } from "next/server";
 import { POST } from "@/app/api/forum/submit/route";
 import { GET as getSuggestions } from "@/app/api/forum/suggestions/route";
 import { precheck } from "@/lib/forum/precheck";
-import { cleanText, hasContactInfo, parseSubmission, recheckSubmission } from "@/lib/forum/submissions";
+import { DAILY_LIMITS, cleanText, hasContactInfo, parseSubmission, recheckSubmission } from "@/lib/forum/submissions";
 
 const queries: { text: string; values: unknown[] }[] = [];
 let dbRows: unknown[] = [];
 let dbError: Error | null = null;
+// Suggestions saved in the last 24 hours, as the daily-limit count sees it.
+let today = 0;
 jest.mock("@/lib/forum/db", () => ({
   getSql: () => async (strings: TemplateStringsArray, ...values: unknown[]) => {
     if (dbError) throw dbError;
-    queries.push({ text: strings.join("?").replace(/\s+/g, " ").trim(), values });
+    const text = strings.join("?").replace(/\s+/g, " ").trim();
+    if (text.startsWith("SELECT count(*)")) return [{ n: today }];
+    queries.push({ text, values });
     return dbRows;
   },
 }));
@@ -36,6 +40,7 @@ beforeEach(() => {
   queries.length = 0;
   dbRows = [];
   dbError = null;
+  today = 0;
   mockPrecheck.mockReset().mockResolvedValue(CHECK);
   jest.spyOn(console, "error").mockImplementation(() => {});
 });
@@ -139,6 +144,23 @@ describe("POST /api/forum/submit", () => {
     expect((await submit({ text: "ok", locale: "en" }, { origin: "https://example.com" })).status).toBe(403);
     expect((await submit("{nope")).status).toBe(400);
     expect((await submit({ text: "x".repeat(141), locale: "en" })).status).toBe(400);
+    expect(queries).toHaveLength(0);
+  });
+
+  it("saves without the AI check once the day's checks are used up", async () => {
+    today = DAILY_LIMITS.aiChecks;
+    const res = await submit({ text: "Reasons should be plain.", locale: "en" });
+    expect(res.status).toBe(200);
+    expect(mockPrecheck).not.toHaveBeenCalled();
+    expect(queries[0].values).toEqual(["Reasons should be plain.", "en", null]);
+  });
+
+  it("pauses with 429 and stores nothing once the day's suggestions are used up", async () => {
+    today = DAILY_LIMITS.submissions;
+    const res = await submit({ text: "Reasons should be plain.", locale: "en" });
+    expect(res.status).toBe(429);
+    expect(await res.json()).toEqual({ ok: false, error: "busy" });
+    expect(mockPrecheck).not.toHaveBeenCalled();
     expect(queries).toHaveLength(0);
   });
 

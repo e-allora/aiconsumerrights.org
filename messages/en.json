@@ -403,6 +403,7 @@
       "empty": "Please write a statement first.",
       "sent": "Thank you. Your statement is waiting for review.",
       "contact": "Please remove links, email addresses, social media handles, and phone numbers, then try again.",
+      "busy": "The suggestion box is full for today. Please try again tomorrow. Your text is still in the box.",
       "failed": "Your statement could not be sent. Check your connection and try again. Your text is still in the box."
     },
     "consensus": {
@@ -529,6 +530,7 @@
       "language": "Suggestions only appear in the language they were written in.",
       "results": "Results appear only after {minVotes} or more votes per language, so early on there are none.",
       "ai": "The AI check can be wrong. A person makes every decision.",
+      "limits": "To keep costs low, the AI checks at most {checks} suggestions a day. After that, a person still reads each one, without the AI check. After {max} suggestions in a day, the suggestion box pauses until the next day.",
       "twice": "Voting without accounts can't fully stop someone from voting twice, for example by using a second browser."
     },
     "correctionsHeading": "Corrections",

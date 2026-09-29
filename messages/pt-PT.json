@@ -403,6 +403,7 @@
       "empty": "Escreva primeiro uma frase, por favor.",
       "sent": "Obrigado. A sua frase está à espera de revisão.",
       "contact": "Retire as ligações, os endereços de e-mail, os nomes de utilizador de redes sociais e os números de telefone, e tente de novo.",
+      "busy": "A caixa de sugestões está cheia por hoje. Tente de novo amanhã. O seu texto continua na caixa.",
       "failed": "Não foi possível enviar a sua frase. Verifique a ligação e tente de novo. O seu texto continua na caixa."
     },
     "consensus": {
@@ -529,6 +530,7 @@
       "language": "As sugestões só aparecem no idioma em que foram escritas.",
       "results": "Os resultados só aparecem com {minVotes} ou mais votos por idioma, por isso ao início não há nenhum.",
       "ai": "A verificação com IA pode errar. Todas as decisões são tomadas por uma pessoa.",
+      "limits": "Para manter os custos baixos, a IA verifica no máximo {checks} sugestões por dia. Depois disso, uma pessoa continua a ler cada uma, sem a verificação com IA. Após {max} sugestões num dia, a caixa de sugestões fica em pausa até ao dia seguinte.",
       "twice": "Votar sem conta não impede totalmente que alguém vote duas vezes, por exemplo usando outro navegador."
     },
     "correctionsHeading": "Correções",

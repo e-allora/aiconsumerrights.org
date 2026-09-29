@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { CorrectionsLog } from "@/components/ui/PublicLog";
 import { RULES } from "@/lib/forum/consensus";
+import { DAILY_LIMITS } from "@/lib/forum/submissions";
 import { VOTER_COOKIE_DAYS } from "@/lib/forum/votes";
 import type { Locale } from "@/lib/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
@@ -26,7 +27,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 
 const SERVICES = ["vercel", "neon", "openrouter", "models", "github"] as const;
 const KEEP = ["votes", "suggestions", "never"] as const;
-const UNFINISHED = ["review", "translations", "language", "results", "ai", "twice"] as const;
+const UNFINISHED = ["review", "translations", "language", "results", "ai", "limits", "twice"] as const;
 
 const bold = (c: React.ReactNode) => <strong>{c}</strong>;
 const linkClass = "font-semibold text-link underline underline-offset-4";
@@ -87,7 +88,11 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
 
       <section aria-labelledby="unfinished" className="flex flex-col gap-4">
         <h2 id="unfinished">{t("unfinishedHeading")}</h2>
-        {list(UNFINISHED, "unfinished", { minVotes: RULES.minVotes })}
+        {list(UNFINISHED, "unfinished", {
+          minVotes: RULES.minVotes,
+          checks: DAILY_LIMITS.aiChecks,
+          max: DAILY_LIMITS.submissions,
+        })}
       </section>
 
       <section aria-labelledby="corrections" className="flex flex-col gap-4">

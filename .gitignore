@@ -59,3 +59,18 @@ next-env.d.ts
 
 # Robert's reading notes and excerpts, never published
 /Reading-excerpts*.md
+
+# Robert's notes at the repo root (drafts, outreach, reading logs), never
+# published. Only the project's own root docs are tracked.
+/*.md
+!/README.md
+!/CLAUDE.md
+/*.png
+/reachout3
+/reading2
+/reading-excerpts
+
+# local AI-tool skills, not part of the site
+/.agents/
+/.claude/
+/skills-lock.json

@@ -10,7 +10,9 @@
 //      this site's stricter touch rule). Inline links in sentences are exempt.
 //   3. Focus appearance: every Tab stop shows a visible outline or ring.
 //   4. Reduced motion: transitions and animations are switched off.
-//   5. No console errors, page errors, or hydration errors.
+//   5. No console errors, page errors, or hydration errors. A script or
+//      style the Content-Security-Policy blocks shows up here too.
+//   6. The security headers from next.config.mjs are sent.
 //
 // Exits 1 on any failure. Set CHROME_PATH to use a different browser.
 
@@ -101,7 +103,11 @@ async function audit(browser, route, theme, vpName) {
       localStorage.setItem("theme", t);
     } catch {}
   }, theme);
-  await page.goto(BASE + route, { waitUntil: "networkidle0" });
+  const response = await page.goto(BASE + route, { waitUntil: "networkidle0" });
+  // 6. security headers
+  for (const h of ["content-security-policy", "x-frame-options", "x-content-type-options", "referrer-policy", "permissions-policy"]) {
+    if (!response?.headers()[h]) fail(where, `missing header ${h}`);
+  }
   // Let hydration and any entry animation finish.
   await new Promise((r) => setTimeout(r, 600));
 

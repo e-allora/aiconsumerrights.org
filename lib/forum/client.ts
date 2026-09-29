@@ -25,7 +25,7 @@ export async function clearVotes(): Promise<boolean> {
   }
 }
 
-export type SubmitResult = "sent" | "contact" | "failed";
+export type SubmitResult = "sent" | "contact" | "busy" | "failed";
 
 /** Sends a suggestion for review. "contact" means it had a link, email, handle, or phone number. */
 export async function submitStatement(text: string, locale: string): Promise<SubmitResult> {
@@ -36,7 +36,8 @@ export async function submitStatement(text: string, locale: string): Promise<Sub
       body: JSON.stringify({ text, locale }),
     });
     if (res.ok) return "sent";
-    return res.status === 422 ? "contact" : "failed";
+    if (res.status === 422) return "contact";
+    return res.status === 429 ? "busy" : "failed";
   } catch {
     return "failed";
   }

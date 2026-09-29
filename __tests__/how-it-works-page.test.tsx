@@ -4,6 +4,7 @@ import HowItWorksPage from "@/app/[locale]/how-it-works/page";
 import AboutPage from "@/app/[locale]/about/page";
 import { AttributionFooter } from "@/components/ui/AttributionFooter";
 import { RULES } from "@/lib/forum/consensus";
+import { DAILY_LIMITS } from "@/lib/forum/submissions";
 import { VOTER_COOKIE_DAYS } from "@/lib/forum/votes";
 import { corrections } from "@/lib/public-log";
 import { PUBLISHED_ROUTES } from "@/lib/site";
@@ -42,12 +43,16 @@ describe("How this site works page", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     expect(section("What we keep, and for how long")).toHaveTextContent(`The browser code lasts ${VOTER_COOKIE_DAYS} days.`);
     expect(section("What isn't finished or perfect")).toHaveTextContent(`after ${RULES.minVotes} or more votes per language`);
+    expect(section("What isn't finished or perfect")).toHaveTextContent(
+      `the AI checks at most ${DAILY_LIMITS.aiChecks} suggestions a day`
+    );
+    expect(section("What isn't finished or perfect")).toHaveTextContent(`After ${DAILY_LIMITS.submissions} suggestions in a day`);
   });
 
   it("lists what isn't finished, including the weaknesses", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     const items = within(section("What isn't finished or perfect")).getAllByRole("listitem");
-    expect(items).toHaveLength(6);
+    expect(items).toHaveLength(7);
     expect(items[1]).toHaveTextContent("Native speakers haven't checked all of them yet.");
     expect(items.at(-1)).toHaveTextContent("can't fully stop someone from voting twice");
   });

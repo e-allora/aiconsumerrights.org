@@ -403,6 +403,7 @@
       "empty": "Bitte schreiben Sie zuerst eine Aussage.",
       "sent": "Danke. Ihre Aussage wartet auf die Prüfung.",
       "contact": "Bitte entfernen Sie Links, E-Mail-Adressen, Social-Media-Namen und Telefonnummern und versuchen Sie es dann noch einmal.",
+      "busy": "Der Vorschlagskasten ist für heute voll. Bitte versuchen Sie es morgen noch einmal. Ihr Text steht noch im Feld.",
       "failed": "Ihre Aussage konnte nicht gesendet werden. Prüfen Sie Ihre Verbindung und versuchen Sie es noch einmal. Ihr Text steht noch im Feld."
     },
     "consensus": {
@@ -529,6 +530,7 @@
       "language": "Vorschläge erscheinen nur in der Sprache, in der sie geschrieben wurden.",
       "results": "Ergebnisse erscheinen erst ab {minVotes} oder mehr Stimmen pro Sprache, am Anfang gibt es also keine.",
       "ai": "Die Prüfung durch die KI kann sich irren. Jede Entscheidung trifft ein Mensch.",
+      "limits": "Um die Kosten niedrig zu halten, prüft die KI höchstens {checks} Vorschläge pro Tag. Danach liest weiterhin ein Mensch jeden Vorschlag, nur ohne KI-Prüfung. Nach {max} Vorschlägen an einem Tag pausiert der Vorschlagskasten bis zum nächsten Tag.",
       "twice": "Abstimmen ohne Konto kann nicht ganz verhindern, dass jemand zweimal abstimmt, zum Beispiel mit einem zweiten Browser."
     },
     "correctionsHeading": "Korrekturen",

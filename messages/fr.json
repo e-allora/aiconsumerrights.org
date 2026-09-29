@@ -403,6 +403,7 @@
       "empty": "Écrivez d'abord une affirmation.",
       "sent": "Merci. Votre affirmation attend d'être relue.",
       "contact": "Retirez les liens, adresses e-mail, pseudos de réseaux sociaux et numéros de téléphone, puis réessayez.",
+      "busy": "La boîte à suggestions est pleine pour aujourd'hui. Réessayez demain. Votre texte est toujours dans la zone.",
       "failed": "Votre affirmation n'a pas pu être envoyée. Vérifiez votre connexion et réessayez. Votre texte est toujours dans la zone."
     },
     "consensus": {
@@ -529,6 +530,7 @@
       "language": "Les propositions n'apparaissent que dans la langue où elles ont été écrites.",
       "results": "Les résultats n'apparaissent qu'à partir de {minVotes} votes ou plus par langue, donc au début il n'y en a pas.",
       "ai": "La vérification par l'IA peut se tromper. Une personne prend chaque décision.",
+      "limits": "Pour limiter les coûts, l'IA vérifie au plus {checks} suggestions par jour. Ensuite, une personne lit toujours chacune d'elles, sans la vérification par l'IA. Au-delà de {max} suggestions dans une journée, la boîte à suggestions est en pause jusqu'au lendemain.",
       "twice": "Voter sans compte ne peut pas empêcher complètement quelqu'un de voter deux fois, par exemple avec un deuxième navigateur."
     },
     "correctionsHeading": "Corrections",
