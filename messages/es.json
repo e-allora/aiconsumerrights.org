@@ -289,7 +289,6 @@
     "pending": "<b>Aún sin revisión de una persona experta en derecho.</b> Robert Sweetman está comprobando estas páginas con sus fuentes, pero ningún abogado, clínica jurídica ni organización de consumidores las ha revisado, y ninguna persona nativa ha revisado las traducciones. Si puedes ayudar a revisarlas, <contact>ponte en contacto</contact>.",
     "comingHeading": "Próximamente",
     "coming": {
-      "insurance": "Una decisión de seguro te fue desfavorable",
       "chatbot": "Un chatbot dio información errónea o te negaron un reembolso",
       "account": "Bloquearon una cuenta o retiraron una publicación",
       "deepfake": "Alguien usó una voz o un video falsos para engañarte"
@@ -608,6 +607,94 @@
         "plain": {
           "subject": "Consulta sobre mi solicitud de alquiler{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hola:\n\nEl {decisionDate} supe que no aceptaron mi solicitud de alquiler. Les agradecería conocer los motivos principales y si influyó una verificación, una puntuación o un sistema informático.\n\nTambién les ruego que me digan qué información sobre mí usaron, para que pueda comprobar que es correcta. Les agradecería que una persona revisara de nuevo mi solicitud.\n\nGracias por su tiempo,\n{name}"
+        }
+      }
+    },
+    "insurance": {
+      "metaTitle": "Una decisión de seguro te fue desfavorable",
+      "metaDescription": "Qué hacer cuando te negaron un seguro, subió su precio, cubre menos o rechazaron un siniestro: tus derechos, una carta para preguntar por qué y adónde acudir.",
+      "title": "Una decisión de seguro te fue desfavorable",
+      "summary": "Te negaron un seguro, subió de precio, cubre menos o rechazaron un siniestro.",
+      "lead": "Una aseguradora te rechazó, subió tu precio, redujo tu cobertura o rechazó un siniestro. A menudo influyen software y datos. Puedes preguntar qué se usó, revisarlo por si hay errores y pedir que una persona lo vuelva a mirar.",
+      "happened": {
+        "pricing": "Las aseguradoras usan datos para decidir si te aseguran y cuánto cobrarte. Cada vez más, esto lo hace un software.",
+        "reports": "Algunas aseguradoras usan información de informes de crédito y otros informes del consumidor.",
+        "claims": "Un software también puede marcar siniestros para revisarlos o rechazarlos. Los errores en los datos pueden llevar a un resultado equivocado."
+      },
+      "company": {
+        "answer": "<b>Responde pronto, aunque sea para decir que la recibiste.</b> Quien tiene un siniestro rechazado suele estar pasando un mal momento.",
+        "reasons": "<b>Explica los factores principales con palabras sencillas.</b> Si se usó un informe del consumidor, di qué empresa lo proporcionó. En EE. UU. es obligatorio.",
+        "person": "<b>Deja que una persona revise las decisiones impugnadas,</b> sobre todo los siniestros rechazados.",
+        "data": "<b>Revisa los datos.</b> Si algo estaba mal o desactualizado, corrígelo en su origen y dile a la persona qué cambió.",
+        "patterns": "<b>Revisa tus modelos de vez en cuando.</b> Si clientes parecidos obtienen peores resultados una y otra vez, conviene mirarlo más de cerca."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Si un informe de crédito u otro informe del consumidor llevó a un rechazo, a un precio más alto o a menos cobertura,</b> la aseguradora debe decírtelo, nombrar la empresa que lo proporcionó y decirte que puedes obtener una copia gratuita en 60 días e impugnar cualquier error.",
+          "2": "<b>La empresa que hizo el informe debe revisar una impugnación gratis,</b> normalmente en 30 días.",
+          "3": "<b>Cada estado regula los seguros.</b> El departamento de seguros de tu estado puede investigar quejas, como siniestros rechazados o retrasados y cancelaciones injustas, gratis. Intenta primero con la aseguradora."
+        },
+        "noReply": "Si la aseguradora no lo resuelve, <naic>busca el departamento de seguros de tu estado y reclama gratis</naic>. Si un informe del consumidor tenía errores, también puedes <cfpb>reclamar ante la CFPB</cfpb>."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Puedes pedir copias de tus datos.</b> Las organizaciones suelen tener un mes para responder.",
+          "2": "<b>Si un ordenador tomó él solo una decisión importante sobre ti,</b> sin intervención humana real, la aseguradora debe permitirte obtener información sobre ella, dar tu punto de vista, pedir que intervenga una persona e impugnarla.",
+          "3": "<b>El Financial Ombudsman es gratuito y también atiende quejas sobre seguros.</b> Reclama primero a la aseguradora. La mayoría tiene hasta 8 semanas. Tras su respuesta final, tienes 6 meses para acudir al ombudsman."
+        },
+        "noReply": "Si no recibes respuesta, o no estás de acuerdo con ella, puedes llevar la queja al <fos>Financial Ombudsman Service</fos> gratis. Sobre el uso de tus datos, puedes reclamar ante la <ico>Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Puedes pedir tus datos y cómo se tomó la decisión.</b> Si fue automatizada, deben darte información significativa sobre la lógica aplicada y lo que supuso para ti.",
+          "2": "<b>Si un ordenador tomó la decisión él solo,</b> normalmente puedes pedir que una persona la revise, dar tu punto de vista e impugnarla.",
+          "3": "<b>La IA usada para evaluar riesgos y fijar precios en seguros de vida y de salud es de alto riesgo según la Ley de IA de la UE.</b> Esas normas empiezan el 2 de diciembre de 2027. Hasta entonces, se aplican los derechos de protección de datos de esta página.",
+          "4": "<b>Deben responder en un mes, gratis.</b> En casos complejos pueden tardar dos meses más, pero deben avisarte dentro del primer mes."
+        },
+        "noReply": "Si no recibes respuesta en un mes, envía un recordatorio. Después puedes reclamar gratis ante la autoridad de protección de datos de tu país. <edpb>Encuentra la tuya en la lista de autoridades de protección de datos de la UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Puedes pedir la revisión de una decisión tomada solo por un ordenador,</b> incluidas las basadas en tu perfil de consumo o de crédito.",
+          "2": "<b>Puedes pedir los criterios y pasos usados.</b> Los secretos comerciales pueden limitar los detalles.",
+          "3": "<b>Puedes ver y corregir tus datos.</b> Una declaración clara y completa de tus datos debe llegar en un plazo de 15 días desde tu solicitud.",
+          "4": "<b>La ley no dice que la revisión deba hacerla una persona.</b> Esa norma se eliminó en 2019, así que pide una persona de todos modos."
+        },
+        "noReply": "Si no recibes respuesta, puedes presentar una petición gratuita ante la <anpd>autoridad nacional de protección de datos (ANPD)</anpd>, o una queja en <consumidor>Consumidor.gov.br</consumidor> o ante tu <procon>Procon</procon> local."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La ley de protección de datos de la India te da derecho a un resumen de tus datos y a corregirlos, pero estos derechos empiezan en mayo de 2027.</b>",
+          "2": "<b>Las quejas sobre seguros ya tienen su propia vía gratuita.</b> Registra tu queja en Bima Bharosa. Si no se resuelve en 15 días, o no estás de acuerdo, puedes acudir al Insurance Ombudsman."
+        },
+        "noReply": "Si la aseguradora no lo resuelve, <bima>registra una queja en Bima Bharosa</bima>, gratis. Después, el Insurance Ombudsman puede ayudarte."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Este sitio aún no cubre las leyes de tu país.</b> Aun así, vale la pena enviar una solicitud por escrito: pide las cosas con claridad y te deja un registro."
+        },
+        "noReply": "Si no recibes respuesta, busca un supervisor de seguros, un defensor del asegurado o una autoridad de protección de datos en tu país."
+      },
+      "letters": {
+        "us": {
+          "subject": "Consulta sobre su decisión sobre mi seguro{hasReference, select, yes { (póliza {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} recibí su decisión sobre mi seguro. Si influyó un informe de crédito u otro informe del consumidor, les ruego que me indiquen qué empresa lo proporcionó, para obtener mi copia gratuita y revisar si tiene errores, como prevé la Fair Credit Reporting Act.\n\nTambién les agradecería conocer los motivos principales de la decisión y si se usó una puntuación o un sistema automatizado.\n\nSi algún dato mío era erróneo, puedo corregirlo, y les agradecería que una persona revisara la decisión.\n\nGracias por su tiempo,\n{name}"
+        },
+        "uk": {
+          "subject": "Solicitud conforme a los artículos 15 y 22C del UK GDPR sobre mi seguro{hasReference, select, yes { (póliza {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} recibí su decisión sobre mi seguro. Conforme al artículo 15 del UK GDPR, les pido una copia de los datos personales que tienen sobre mí, su origen y si la decisión se tomó por medios automatizados.\n\nSi la decisión se basó únicamente en un tratamiento automatizado, sin intervención humana real, solicito, conforme al artículo 22C, información sobre ella. Quiero presentar mis alegaciones, que intervenga una persona e impugnar la decisión.\n\nLes ruego que respondan en el plazo de un mes.\n\nAtentamente,\n{name}"
+        },
+        "eu": {
+          "subject": "Solicitud conforme a los artículos 15 y 22 del RGPD sobre mi seguro{hasReference, select, yes { (póliza {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} recibí su decisión sobre mi seguro. Conforme al artículo 15 del RGPD, les pido que me envíen:\n- una copia de los datos personales que tienen sobre mí y su origen;\n- si la decisión fue automatizada y, en ese caso, información significativa sobre la lógica aplicada y las consecuencias para mí.\n\nSi la decisión se basó únicamente en un tratamiento automatizado, solicito, conforme al artículo 22, apartado 3, que una persona la revise. Quiero expresar mi punto de vista e impugnar la decisión.\n\nLes ruego que respondan en el plazo de un mes, como exige el artículo 12, apartado 3.\n\nAtentamente,\n{name}"
+        },
+        "br": {
+          "subject": "Solicitud conforme a los artículos 18, 19 y 20 de la LGPD sobre mi seguro{hasReference, select, yes { (póliza {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} recibí su decisión sobre mi seguro. Conforme a los artículos 18 y 19 de la LGPD (Ley n.º 13.709/2018), les pido que confirmen si tratan mis datos personales y que me envíen, en un plazo de 15 días, una declaración clara y completa de ellos, con su origen, los criterios usados y la finalidad.\n\nConforme al artículo 20, solicito la revisión de esta decisión e información clara sobre los criterios y procedimientos usados para tomarla. Quisiera que la revisión la hiciera una persona.\n\nAtentamente,\n{name}"
+        },
+        "plain": {
+          "subject": "Consulta sobre su decisión sobre mi seguro{hasReference, select, yes { (póliza {reference})} other {}}",
+          "body": "Hola:\n\nEl {decisionDate} recibí su decisión sobre mi seguro. Les agradecería conocer los motivos principales y si influyó una puntuación o un sistema informático.\n\nTambién les ruego que me digan qué información sobre mí usaron, para que pueda comprobar que es correcta. Les agradecería que una persona revisara la decisión.\n\nGracias por su tiempo,\n{name}"
         }
       }
     }

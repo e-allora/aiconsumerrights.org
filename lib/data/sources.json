@@ -1604,6 +1604,40 @@
           "status": "confirmed",
           "note": "Read on 29 September 2026: file within one year of the last date of the alleged discrimination; online, by phone, e-mail, or mail; no fees when the government brings a case.",
           "summary": "How to report housing discrimination to HUD, and the one-year deadline."
+        },
+        {
+          "id": "fcra-1681a",
+          "title": "15 U.S. Code § 1681a: Definitions; rules of construction",
+          "publisher": "Legal Information Institute, Cornell Law School",
+          "type": "Law (US)",
+          "jurisdiction": "United States (Fair Credit Reporting Act)",
+          "url": "https://www.law.cornell.edu/uscode/text/15/1681a",
+          "status": "confirmed",
+          "primary": true,
+          "note": "Read on 29 September 2026: subsection (k)(1)(B)(i). Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
+          "summary": "An \"adverse action\" includes refusing or cancelling insurance, charging more for it, or cutting or worsening its coverage, so the credit-report notice rules apply to insurers too."
+        },
+        {
+          "id": "naic-complaint",
+          "title": "How to File a Complaint",
+          "publisher": "National Association of Insurance Commissioners (NAIC)",
+          "type": "Complaint route (US)",
+          "jurisdiction": "United States (state insurance departments)",
+          "url": "https://content.naic.org/consumer/how-to-file-complaint",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026: try the insurer first; state insurance departments investigate complaints for free; links to every state's department.",
+          "summary": "How to take an insurance complaint to your state's department of insurance, for free, after trying the insurer first."
+        },
+        {
+          "id": "in-bima-bharosa",
+          "title": "Bima Bharosa: our process",
+          "publisher": "Insurance Regulatory and Development Authority of India (IRDAI)",
+          "type": "Complaint route (India)",
+          "jurisdiction": "India",
+          "url": "https://bimabharosa.irdai.gov.in/Home/OurProcess",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026: complaints are attended to within 14 days; if unresolved beyond 15 days or the answer is unsatisfactory, you may go to the Insurance Ombudsman; no payment is asked at any stage.",
+          "summary": "India's free insurance complaint portal, with a path to the Insurance Ombudsman if the insurer doesn't resolve the complaint."
         }
       ]
     }

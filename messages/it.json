@@ -289,7 +289,6 @@
     "pending": "<b>Non ancora revisionate da un esperto legale.</b> Robert Sweetman sta verificando queste pagine con le loro fonti, ma nessun avvocato, clinica legale o associazione dei consumatori le ha ancora revisionate, e nessun madrelingua ha controllato le traduzioni. Se puoi aiutare a revisionarle, <contact>scrivici</contact>.",
     "comingHeading": "In arrivo",
     "coming": {
-      "insurance": "Una decisione assicurativa ti ha penalizzato",
       "chatbot": "Un chatbot ha dato informazioni sbagliate o ti è stato negato un rimborso",
       "account": "Un account è stato bloccato o un post è stato rimosso",
       "deepfake": "Qualcuno ha usato una voce o un video falsi per ingannarti"
@@ -608,6 +607,94 @@
         "plain": {
           "subject": "Domanda sulla mia richiesta di affitto{hasReference, select, yes { (rif. {reference})} other {}}",
           "body": "Buongiorno,\n\nil {decisionDate} ho saputo che la mia richiesta di affitto non è stata accettata. Gradirei conoscere i motivi principali e sapere se ha contato un controllo, un punteggio o un sistema informatico.\n\nVi chiedo anche quali informazioni su di me avete usato, così da poter verificare che siano corrette. Gradirei che una persona riesaminasse la mia richiesta.\n\nGrazie per il vostro tempo,\n{name}"
+        }
+      }
+    },
+    "insurance": {
+      "metaTitle": "Una decisione assicurativa ti ha penalizzato",
+      "metaDescription": "Che cosa fare quando un'assicurazione è stata rifiutata, è costata di più, copre meno o un sinistro è stato respinto: i tuoi diritti, una lettera per chiedere perché e a chi rivolgerti.",
+      "title": "Una decisione assicurativa ti ha penalizzato",
+      "summary": "Un'assicurazione è stata rifiutata, è rincarata, copre meno o un sinistro è stato respinto.",
+      "lead": "Un assicuratore ha rifiutato la tua richiesta, alzato il prezzo, ridotto la copertura o respinto un sinistro. Spesso contano software e dati. Puoi chiedere che cosa è stato usato, verificare se ci sono errori e chiedere che una persona riesamini la decisione.",
+      "happened": {
+        "pricing": "Gli assicuratori usano i dati per decidere se assicurarti e quanto farti pagare. Sempre più spesso lo fa un software.",
+        "reports": "Alcuni assicuratori usano informazioni tratte da rapporti di credito e altri rapporti sul consumatore.",
+        "claims": "Un software può anche segnalare sinistri da controllare o respingere. Errori nei dati possono portare a un risultato sbagliato."
+      },
+      "company": {
+        "answer": "<b>Rispondi presto, anche solo per dire che è arrivata.</b> Chi ha un sinistro respinto spesso sta vivendo un momento difficile.",
+        "reasons": "<b>Spiega i fattori principali con parole semplici.</b> Se è stato usato un rapporto sul consumatore, indica quale società l'ha fornito. Negli Stati Uniti è obbligatorio.",
+        "person": "<b>Lascia che una persona riesamini le decisioni contestate,</b> soprattutto i sinistri respinti.",
+        "data": "<b>Controlla i dati.</b> Se qualcosa era sbagliato o non aggiornato, correggilo alla fonte e di' alla persona che cosa è cambiato.",
+        "patterns": "<b>Controlla i tuoi modelli ogni tanto.</b> Se clienti simili continuano ad avere esiti peggiori, conviene guardare più da vicino."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Se un rapporto di credito o un altro rapporto sul consumatore ha portato a un rifiuto, a un prezzo più alto o a una copertura minore,</b> l'assicuratore deve dirtelo, indicare la società che l'ha fornito e dirti che puoi averne una copia gratuita entro 60 giorni e contestare ogni errore.",
+          "2": "<b>La società che ha fatto il rapporto deve verificare una contestazione gratis,</b> di solito entro 30 giorni.",
+          "3": "<b>Ogni Stato regola le assicurazioni.</b> Il dipartimento delle assicurazioni del tuo Stato può esaminare gratuitamente i reclami, per esempio su sinistri respinti o in ritardo e disdette ingiuste. Prova prima con l'assicuratore."
+        },
+        "noReply": "Se l'assicuratore non risolve, <naic>trova il dipartimento delle assicurazioni del tuo Stato e presenta un reclamo gratuito</naic>. Se un rapporto sul consumatore era sbagliato, puoi anche <cfpb>presentare un reclamo alla CFPB</cfpb>."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Puoi chiedere copia dei tuoi dati.</b> Di solito le organizzazioni hanno un mese per rispondere.",
+          "2": "<b>Se una decisione importante su di te l'ha presa solo un computer,</b> senza un reale intervento umano, l'assicuratore deve permetterti di avere informazioni, esprimere la tua opinione, chiedere l'intervento di una persona e contestarla.",
+          "3": "<b>Il Financial Ombudsman è gratuito e si occupa anche di assicurazioni.</b> Reclama prima con l'assicuratore. Quasi tutti hanno fino a 8 settimane. Dopo la risposta finale, hai 6 mesi per rivolgerti all'ombudsman."
+        },
+        "noReply": "Se non ricevi risposta, o non sei d'accordo, puoi portare gratuitamente il reclamo al <fos>Financial Ombudsman Service</fos>. Per l'uso dei tuoi dati, puoi presentare un reclamo <ico>all'Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Puoi chiedere i tuoi dati e come è stata presa la decisione.</b> Se era automatizzata, devono darti informazioni significative sulla logica utilizzata e su che cosa ha comportato per te.",
+          "2": "<b>Se ha deciso solo un computer,</b> di solito puoi chiedere che una persona riesamini la decisione, esprimere la tua opinione e contestarla.",
+          "3": "<b>L'IA usata per valutare i rischi e fissare i prezzi delle assicurazioni sulla vita e sulla salute è ad alto rischio secondo il regolamento UE sull'IA.</b> Queste regole partono il 2 dicembre 2027. Fino ad allora valgono i diritti sulla protezione dei dati di questa pagina.",
+          "4": "<b>Devono rispondere entro un mese, gratis.</b> Nei casi complessi possono prendersi altri due mesi, ma devono avvisarti entro il primo mese."
+        },
+        "noReply": "Se non ricevi risposta entro un mese, invia un sollecito. Poi puoi presentare un reclamo gratuito all'autorità per la protezione dei dati del tuo Paese. <edpb>Trova la tua nell'elenco delle autorità per la protezione dei dati dell'UE</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Puoi chiedere il riesame di una decisione presa solo da un computer,</b> comprese quelle basate sul tuo profilo di consumatore o di credito.",
+          "2": "<b>Puoi chiedere i criteri e le procedure usati.</b> Il segreto commerciale può limitare i dettagli.",
+          "3": "<b>Puoi vedere e correggere i tuoi dati.</b> Una dichiarazione chiara e completa dei tuoi dati è dovuta entro 15 giorni dalla richiesta.",
+          "4": "<b>La legge non dice che il riesame debba farlo una persona.</b> Quella regola è stata tolta nel 2019, quindi chiedi comunque una persona."
+        },
+        "noReply": "Se non ricevi risposta, puoi presentare gratuitamente una <anpd>petizione all'autorità nazionale per la protezione dei dati (ANPD)</anpd>, oppure un reclamo su <consumidor>Consumidor.gov.br</consumidor> o al <procon>Procon</procon> locale."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>La legge indiana sulla protezione dei dati ti dà diritto a un riepilogo dei tuoi dati e a correggerli, ma questi diritti partono da maggio 2027.</b>",
+          "2": "<b>I reclami assicurativi hanno già una loro via gratuita.</b> Registra il reclamo su Bima Bharosa. Se non viene risolto entro 15 giorni, o la risposta non ti convince, puoi rivolgerti all'Insurance Ombudsman."
+        },
+        "noReply": "Se l'assicuratore non risolve, <bima>registra un reclamo su Bima Bharosa</bima>, gratis. Dopo, l'Insurance Ombudsman può aiutarti."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Questo sito non copre ancora le leggi del tuo Paese.</b> Vale comunque la pena inviare una richiesta scritta: chiede le cose con chiarezza e ti lascia una traccia."
+        },
+        "noReply": "Se non ricevi risposta, cerca un'autorità di vigilanza sulle assicurazioni, un ombudsman assicurativo o un'autorità per la protezione dei dati nel tuo Paese."
+      },
+      "letters": {
+        "us": {
+          "subject": "Domanda sulla vostra decisione sulla mia assicurazione{hasReference, select, yes { (polizza {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho ricevuto la vostra decisione sulla mia assicurazione. Se un rapporto di credito o un altro rapporto sul consumatore ha avuto un ruolo, vi chiedo di indicarmi quale società l'ha fornito, così da ottenere la mia copia gratuita e verificare eventuali errori, come prevede il Fair Credit Reporting Act.\n\nGradirei anche conoscere i motivi principali della decisione e sapere se è stato usato un punteggio o un sistema automatico.\n\nSe qualche mio dato fosse sbagliato, posso correggerlo, e gradirei che una persona riesaminasse la decisione.\n\nGrazie per il vostro tempo,\n{name}"
+        },
+        "uk": {
+          "subject": "Richiesta ai sensi degli articoli 15 e 22C dello UK GDPR sulla mia assicurazione{hasReference, select, yes { (polizza {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho ricevuto la vostra decisione sulla mia assicurazione. Ai sensi dell'articolo 15 dello UK GDPR, vi chiedo una copia dei dati personali che avete su di me, la loro origine e se la decisione è stata presa con mezzi automatizzati.\n\nSe la decisione si è basata unicamente su un trattamento automatizzato, senza un reale intervento umano, chiedo, ai sensi dell'articolo 22C, informazioni al riguardo. Desidero esprimere la mia posizione, ottenere l'intervento di una persona e contestare la decisione.\n\nVi chiedo di rispondere entro un mese.\n\nCordiali saluti,\n{name}"
+        },
+        "eu": {
+          "subject": "Richiesta ai sensi degli articoli 15 e 22 del GDPR sulla mia assicurazione{hasReference, select, yes { (polizza {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho ricevuto la vostra decisione sulla mia assicurazione. Ai sensi dell'articolo 15 del GDPR (Regolamento UE 2016/679), vi chiedo di inviarmi:\n- una copia dei dati personali che avete su di me e la loro origine;\n- se la decisione è stata automatizzata e, in tal caso, informazioni significative sulla logica utilizzata e sulle conseguenze per me.\n\nSe la decisione si è basata unicamente su un trattamento automatizzato, chiedo, ai sensi dell'articolo 22, paragrafo 3, che una persona la riesamini. Desidero esprimere la mia opinione e contestare la decisione.\n\nVi chiedo di rispondere entro un mese, come prevede l'articolo 12, paragrafo 3.\n\nCordiali saluti,\n{name}"
+        },
+        "br": {
+          "subject": "Richiesta ai sensi degli articoli 18, 19 e 20 della LGPD sulla mia assicurazione{hasReference, select, yes { (polizza {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho ricevuto la vostra decisione sulla mia assicurazione. Ai sensi degli articoli 18 e 19 della LGPD (Legge n. 13.709/2018), vi chiedo di confermare se trattate i miei dati personali e di inviarmi, entro 15 giorni, una dichiarazione chiara e completa, con l'origine dei dati, i criteri usati e la finalità.\n\nAi sensi dell'articolo 20, chiedo il riesame di questa decisione e informazioni chiare sui criteri e sulle procedure usati. Vorrei che il riesame fosse fatto da una persona.\n\nCordiali saluti,\n{name}"
+        },
+        "plain": {
+          "subject": "Domanda sulla vostra decisione sulla mia assicurazione{hasReference, select, yes { (polizza {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho ricevuto la vostra decisione sulla mia assicurazione. Gradirei conoscere i motivi principali e sapere se ha contato un punteggio o un sistema informatico.\n\nVi chiedo anche quali informazioni su di me avete usato, così da poter verificare che siano corrette. Gradirei che una persona riesaminasse la decisione.\n\nGrazie per il vostro tempo,\n{name}"
         }
       }
     }

@@ -187,10 +187,31 @@ describe("/help/housing", () => {
     expect(screen.getByText(/so I can get my free copy and check it for errors/)).toBeInTheDocument();
   });
 
-  it("lists insurance as still to come", () => {
+  it("is linked from /help", () => {
     render(<HelpPage params={{ locale: "en" }} />);
     expect(screen.getByRole("link", { name: /A rental application was turned down/ })).toHaveAttribute("href", "/en/help/housing");
-    expect(screen.getByText("An insurance decision went against you")).toBeInTheDocument();
+  });
+});
+
+describe("/help/insurance", () => {
+  it("covers credit-based insurance decisions and the free state insurance departments", async () => {
+    const user = userEvent.setup();
+    render(<SituationPage params={{ locale: "en", situation: "insurance" }} />);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("An insurance decision went against you");
+    await user.click(screen.getByRole("radio", { name: "United States" }));
+    expect(screen.getByText(/led to a refusal, a higher price, or less cover/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /find your state insurance department/ })).toHaveAttribute("href", getSource("naic-complaint").url);
+  });
+
+  it("gives EU visitors the AI Act's life and health insurance rule and its start date", () => {
+    render(<SituationPage params={{ locale: "it", situation: "insurance" }} />, { locale: "it" });
+    expect(screen.getByText(/assicurazioni sulla vita e sulla salute è ad alto rischio/)).toBeInTheDocument();
+    expect(screen.getByText(/2 dicembre 2027/)).toBeInTheDocument();
+  });
+
+  it("sends Indian visitors to Bima Bharosa and the Insurance Ombudsman", () => {
+    render(<SituationPage params={{ locale: "hi", situation: "insurance" }} />, { locale: "hi" });
+    expect(screen.getByRole("link", { name: /बीमा भरोसा पर मुफ़्त शिकायत दर्ज करें/ })).toHaveAttribute("href", getSource("in-bima-bharosa").url);
   });
 });
 

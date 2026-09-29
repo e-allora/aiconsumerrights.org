@@ -199,9 +199,54 @@ export const SITUATIONS: Situation[] = [
       },
     },
   },
+  {
+    id: "insurance",
+    happened: ["pricing", "reports", "claims"],
+    company: [
+      { key: "answer" },
+      { key: "reasons", cites: ["fcra-1681m"] },
+      { key: "person" },
+      { key: "data" },
+      { key: "patterns" },
+    ],
+    regions: {
+      us: {
+        rights: [["fcra-1681a", "fcra-1681m"], ["fcra-1681i"], ["naic-complaint"]],
+        letter: "us",
+        complain: { naic: "naic-complaint", cfpb: "cfpb-complaint" },
+      },
+      uk: {
+        rights: [["uk-ico-sar"], ["uk-duaa-s80"], ["uk-fos-complain"]],
+        letter: "uk",
+        complain: { fos: "uk-fos-complain", ico: "uk-ico-complaint" },
+      },
+      // Annex III 5(c) of the AI Act lists AI for pricing life and health
+      // insurance as high-risk; the Digital Omnibus moved the start to 2 Dec 2027.
+      eu: {
+        rights: [["gdpr"], ["gdpr"], ["eu-ai-act", "eu-digital-omnibus-2026"], ["gdpr"]],
+        letter: "eu",
+        complain: { edpb: "edpb-members" },
+      },
+      br: {
+        rights: [["lgpd-article-20"], ["lgpd-article-20"], ["anpd-lgpd-en"], ["iba-mariotto-2024"]],
+        letter: "br",
+        complain: { anpd: "br-anpd-peticao-denuncia", consumidor: "br-consumidor-gov", procon: "br-sndc-procon" },
+      },
+      in: {
+        rights: [["in-dpdp-act-2023", "in-dpdp-commencement-2025"], ["in-bima-bharosa"]],
+        letter: "plain",
+        complain: { bima: "in-bima-bharosa" },
+      },
+      other: {
+        rights: [[]],
+        letter: "plain",
+        complain: {},
+      },
+    },
+  },
 ];
 
 /** Situations planned but not written yet, shown as "coming next" on /help. */
-export const COMING = ["insurance", "chatbot", "account", "deepfake"] as const;
+export const COMING = ["chatbot", "account", "deepfake"] as const;
 
 export const getSituation = (id: string): Situation | undefined => SITUATIONS.find((s) => s.id === id);

@@ -289,7 +289,6 @@
     "pending": "<b>Not reviewed by a legal expert yet.</b> Robert Sweetman is checking these pages against their sources, but no lawyer, legal clinic, or consumer organisation has reviewed them, and native speakers haven't checked the translations. If you can help review them, <contact>please get in touch</contact>.",
     "comingHeading": "Coming next",
     "coming": {
-      "insurance": "An insurance decision went against you",
       "chatbot": "A chatbot gave wrong information, or a refund was refused",
       "account": "An account was blocked or a post was removed",
       "deepfake": "Someone used a fake voice or video to trick you"
@@ -608,6 +607,94 @@
         "plain": {
           "subject": "Question about my rental application{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hello,\n\nOn {decisionDate}, I learned that my rental application was not accepted. I would be grateful to know the main reasons, and whether a screening check, score, or computer system played a part.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would appreciate it if a person could look at my application again.\n\nThank you for your time,\n{name}"
+        }
+      }
+    },
+    "insurance": {
+      "metaTitle": "An insurance decision went against you",
+      "metaDescription": "What to do when insurance was refused, cost more, covered less, or a claim was turned down: your rights, a letter asking why, and where to turn.",
+      "title": "An insurance decision went against you",
+      "summary": "Insurance was refused, got more expensive, covered less, or a claim was turned down.",
+      "lead": "An insurer refused you, raised your price, cut your cover, or turned down a claim. Software and data often play a part. You can ask what was used, check it for mistakes, and ask for a person to look again.",
+      "happened": {
+        "pricing": "Insurers use data to decide whether to cover you and what to charge. More and more of this is done by software.",
+        "reports": "Some insurers use information from credit reports and other consumer reports.",
+        "claims": "Software may also flag claims for checks or refusal. Mistakes in the data can lead to the wrong result."
+      },
+      "company": {
+        "answer": "<b>Reply soon, even just to say it arrived.</b> People dealing with a refused claim are often under strain.",
+        "reasons": "<b>Explain the main factors in plain words.</b> If a consumer report was used, say which company supplied it. In the US, that is required.",
+        "person": "<b>Let a person review contested decisions,</b> especially refused claims.",
+        "data": "<b>Check the data.</b> If something was wrong or out of date, fix it where it came from, and tell the person what changed.",
+        "patterns": "<b>Check your models now and then.</b> If similar customers keep getting worse outcomes, a closer look can help."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>If a credit report or other consumer report led to a refusal, a higher price, or less cover,</b> the insurer must tell you, name the company that supplied it, and tell you that you can get a free copy within 60 days and dispute anything wrong.",
+          "2": "<b>The reporting company must check a dispute for free,</b> usually within 30 days.",
+          "3": "<b>Each state regulates insurance.</b> Your state insurance department can look into complaints, such as refused or delayed claims and unfair cancellations, for free. Try the insurer first."
+        },
+        "noReply": "If the insurer doesn't sort it out, <naic>find your state insurance department and complain for free</naic>. If a consumer report was wrong, you can also <cfpb>complain to the CFPB</cfpb>."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>You can ask for copies of your data.</b> Organisations usually have one month to answer.",
+          "2": "<b>If a computer alone made a significant decision about you,</b> with no meaningful human involvement, the insurer must let you get information about it, give your side, ask for a person to step in, and challenge it.",
+          "3": "<b>The Financial Ombudsman is free, and handles insurance complaints too.</b> Complain to the insurer first. Most have up to 8 weeks. After their final answer, you have 6 months to go to the ombudsman."
+        },
+        "noReply": "If you get no answer, or you disagree with it, you can take the complaint to the <fos>Financial Ombudsman Service</fos> for free. For how your data was used, you can complain to the <ico>Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>You can ask for your data and how the decision was made.</b> If it was automated, they must give you meaningful information about the logic involved, and what it meant for you.",
+          "2": "<b>If a computer alone made the decision,</b> you can usually ask for a person to review it, give your side, and challenge it.",
+          "3": "<b>AI used to assess risk and set prices for life and health insurance counts as high-risk under the EU AI Act.</b> Those rules start on 2 December 2027. Until then, the data protection rights here apply.",
+          "4": "<b>They must answer within one month, for free.</b> For hard cases they can take two more months, but they must tell you within the first month."
+        },
+        "noReply": "If you get no answer within one month, send a reminder. Then you can complain for free to the data protection authority in your country. <edpb>Find yours on the list of EU data protection authorities</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>You can ask for a review of a decision made only by a computer,</b> including decisions based on your consumer or credit profile.",
+          "2": "<b>You can ask for the criteria and steps used.</b> Trade secrets can limit the details.",
+          "3": "<b>You can see and correct your data.</b> A clear, full statement of your data is due within 15 days of your request.",
+          "4": "<b>The law doesn't say a person must do the review.</b> That rule was removed in 2019, so ask for a person anyway."
+        },
+        "noReply": "If you get no answer, you can file a free petition with the <anpd>national data protection authority (ANPD)</anpd>, or a complaint on <consumidor>Consumidor.gov.br</consumidor> or with your local <procon>Procon</procon>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>India's data protection law gives you the right to a summary of your data and to correct it, but these rights start in May 2027.</b>",
+          "2": "<b>Insurance complaints already have their own free route.</b> Register your complaint on Bima Bharosa. If it isn't resolved within 15 days, or you're not satisfied, you can go to the Insurance Ombudsman."
+        },
+        "noReply": "If the insurer doesn't sort it out, <bima>register a complaint on Bima Bharosa</bima>, for free. After that, the Insurance Ombudsman can help."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>This site doesn't cover your country's laws yet.</b> A written request is still worth sending: it asks clearly, and it gives you a record."
+        },
+        "noReply": "If you get no answer, look for an insurance regulator, an insurance ombudsman, or a data protection authority in your country."
+      },
+      "letters": {
+        "us": {
+          "subject": "Question about your decision on my insurance{hasReference, select, yes { (policy {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I received your decision about my insurance. If a credit report or other consumer report played any part, please tell me which company supplied it, so I can get my free copy and check it for errors, as the Fair Credit Reporting Act provides.\n\nI would also be grateful to know the main reasons for the decision, and whether a score or automated system was used.\n\nIf any information about me was wrong, I am ready to correct it, and I would appreciate it if a person could review the decision.\n\nThank you for your time,\n{name}"
+        },
+        "uk": {
+          "subject": "Request under UK GDPR Articles 15 and 22C about my insurance{hasReference, select, yes { (policy {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I received your decision about my insurance. Under Article 15 of the UK GDPR, please send me a copy of the personal data you hold about me, tell me where it came from, and tell me whether the decision was made by automated means.\n\nIf the decision was based solely on automated processing, with no meaningful human involvement, I ask under Article 22C for information about it. I want to make representations, to have a person step in, and to contest the decision.\n\nPlease reply within one month.\n\nKind regards,\n{name}"
+        },
+        "eu": {
+          "subject": "Request under GDPR Articles 15 and 22 about my insurance{hasReference, select, yes { (policy {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I received your decision about my insurance. Under Article 15 of the GDPR, please send me:\n- a copy of the personal data you hold about me, and where it came from;\n- whether the decision was automated and, if so, meaningful information about the logic involved and what it means for me.\n\nIf the decision was based solely on automated processing, I ask under Article 22(3) for a person to review it. I want to give my point of view and to contest the decision.\n\nPlease reply within one month, as Article 12(3) requires.\n\nKind regards,\n{name}"
+        },
+        "br": {
+          "subject": "Request under Articles 18, 19 and 20 of the LGPD about my insurance{hasReference, select, yes { (policy {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I received your decision about my insurance. Under Articles 18 and 19 of the LGPD (Law No. 13,709/2018), please confirm whether you process my personal data, and send me a clear and complete statement of it, with its origin, the criteria used, and the purpose, within 15 days.\n\nUnder Article 20, I ask for a review of this decision, and for clear information on the criteria and procedures used to make it. I would like a person to carry out the review.\n\nKind regards,\n{name}"
+        },
+        "plain": {
+          "subject": "Question about your decision on my insurance{hasReference, select, yes { (policy {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I received your decision about my insurance. I would be grateful to know the main reasons, and whether a score or computer system played a part.\n\nPlease also tell me what information about me you used, so I can check that it is correct. I would appreciate it if a person could review the decision.\n\nThank you for your time,\n{name}"
         }
       }
     }

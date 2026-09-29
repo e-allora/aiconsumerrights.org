@@ -289,7 +289,6 @@
     "pending": "<b>Noch nicht juristisch geprüft.</b> Robert Sweetman prüft diese Seiten anhand ihrer Quellen, aber noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation hat sie geprüft, und Muttersprachler haben die Übersetzungen noch nicht kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
     "comingHeading": "Demnächst",
     "coming": {
-      "insurance": "Eine Versicherungsentscheidung fiel gegen Sie aus",
       "chatbot": "Ein Chatbot gab falsche Auskünfte, oder eine Erstattung wurde abgelehnt",
       "account": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
       "deepfake": "Jemand hat eine gefälschte Stimme oder ein gefälschtes Video benutzt, um Sie zu täuschen"
@@ -608,6 +607,94 @@
         "plain": {
           "subject": "Frage zu meiner Mietbewerbung{hasReference, select, yes { (Az. {reference})} other {}}",
           "body": "Guten Tag,\n\nam {decisionDate} habe ich erfahren, dass meine Mietbewerbung nicht angenommen wurde. Ich wäre dankbar, die wichtigsten Gründe zu erfahren und ob eine Prüfung, ein Score oder ein Computersystem eine Rolle gespielt hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich wäre dankbar, wenn ein Mensch meine Bewerbung noch einmal ansehen könnte.\n\nDanke für Ihre Zeit\n{name}"
+        }
+      }
+    },
+    "insurance": {
+      "metaTitle": "Eine Versicherungsentscheidung fiel gegen Sie aus",
+      "metaDescription": "Was Sie tun können, wenn eine Versicherung abgelehnt wurde, teurer wurde, weniger abdeckt oder ein Schaden nicht bezahlt wurde: Ihre Rechte, ein Brief mit der Frage nach dem Warum, und Stellen, an die Sie sich wenden können.",
+      "title": "Eine Versicherungsentscheidung fiel gegen Sie aus",
+      "summary": "Eine Versicherung wurde abgelehnt, teurer, deckt weniger ab, oder ein Schaden wurde abgelehnt.",
+      "lead": "Ein Versicherer hat Sie abgelehnt, den Preis erhöht, den Schutz gekürzt oder einen Schaden nicht übernommen. Software und Daten spielen dabei oft mit. Sie können fragen, was genutzt wurde, es auf Fehler prüfen und darum bitten, dass ein Mensch noch einmal hinschaut.",
+      "happened": {
+        "pricing": "Versicherer nutzen Daten, um zu entscheiden, ob sie Sie versichern und was es kostet. Immer öfter übernimmt das eine Software.",
+        "reports": "Manche Versicherer nutzen Angaben aus Bonitäts- und anderen Verbraucherberichten.",
+        "claims": "Software kann auch Schadensfälle zur Prüfung oder Ablehnung markieren. Fehler in den Daten können zu einem falschen Ergebnis führen."
+      },
+      "company": {
+        "answer": "<b>Antworten Sie bald, und sei es nur, um den Eingang zu bestätigen.</b> Menschen mit einem abgelehnten Schaden sind oft in einer schweren Lage.",
+        "reasons": "<b>Erklären Sie die wichtigsten Faktoren in einfachen Worten.</b> Wenn ein Verbraucherbericht genutzt wurde, nennen Sie die Firma, die ihn geliefert hat. In den USA ist das Pflicht.",
+        "person": "<b>Lassen Sie einen Menschen strittige Entscheidungen prüfen,</b> besonders abgelehnte Schäden.",
+        "data": "<b>Prüfen Sie die Daten.</b> Wenn etwas falsch oder veraltet war, berichtigen Sie es an der Quelle und sagen Sie der Person, was sich geändert hat.",
+        "patterns": "<b>Prüfen Sie Ihre Modelle ab und zu.</b> Wenn ähnliche Kunden immer wieder schlechter abschneiden, lohnt ein genauerer Blick."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Wenn ein Bonitäts- oder anderer Verbraucherbericht zu einer Ablehnung, einem höheren Preis oder weniger Schutz geführt hat,</b> muss der Versicherer Ihnen das sagen, die Firma nennen, die den Bericht geliefert hat, und Ihnen sagen, dass Sie innerhalb von 60 Tagen eine kostenlose Kopie bekommen und Fehler beanstanden können.",
+          "2": "<b>Die Firma, die den Bericht erstellt hat, muss eine Beanstandung kostenlos prüfen,</b> in der Regel innerhalb von 30 Tagen.",
+          "3": "<b>Jeder Bundesstaat regelt die Versicherungen selbst.</b> Die Versicherungsaufsicht Ihres Bundesstaats kann Beschwerden kostenlos prüfen, etwa über abgelehnte oder verzögerte Schäden und ungerechte Kündigungen. Versuchen Sie es zuerst beim Versicherer."
+        },
+        "noReply": "Wenn der Versicherer das nicht klärt, <naic>finden Sie die Versicherungsaufsicht Ihres Bundesstaats und beschweren Sie sich kostenlos</naic>. Wenn ein Verbraucherbericht falsch war, können Sie sich auch <cfpb>bei der CFPB beschweren</cfpb>."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Sie können Kopien Ihrer Daten verlangen.</b> Organisationen haben in der Regel einen Monat Zeit für die Antwort.",
+          "2": "<b>Wenn allein ein Computer eine wichtige Entscheidung über Sie getroffen hat,</b> ohne echte menschliche Beteiligung, muss der Versicherer Ihnen Informationen dazu geben, Sie Ihren Standpunkt darlegen lassen, einen Menschen eingreifen lassen und Ihnen die Anfechtung ermöglichen.",
+          "3": "<b>Der Financial Ombudsman ist kostenlos und auch für Versicherungen zuständig.</b> Beschweren Sie sich zuerst beim Versicherer. Die meisten haben bis zu 8 Wochen Zeit. Nach der abschließenden Antwort haben Sie 6 Monate, um sich an den Ombudsman zu wenden."
+        },
+        "noReply": "Wenn keine Antwort kommt oder Sie ihr nicht zustimmen, können Sie die Beschwerde kostenlos beim <fos>Financial Ombudsman Service</fos> einreichen. Zur Nutzung Ihrer Daten können Sie sich beim <ico>Information Commissioner's Office (ICO)</ico> beschweren."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Sie können Ihre Daten und die Art der Entscheidung erfragen.</b> War sie automatisiert, muss man Ihnen aussagekräftige Informationen über die involvierte Logik geben und was sie für Sie bedeutete.",
+          "2": "<b>Wenn allein ein Computer entschieden hat,</b> können Sie meist verlangen, dass ein Mensch die Entscheidung prüft, Ihren Standpunkt darlegen und sie anfechten.",
+          "3": "<b>KI, die Risiken bewertet und Preise für Lebens- und Krankenversicherungen festlegt, gilt nach der KI-Verordnung der EU als hochriskant.</b> Diese Regeln gelten ab dem 2. Dezember 2027. Bis dahin gelten die Datenschutzrechte auf dieser Seite.",
+          "4": "<b>Man muss Ihnen innerhalb eines Monats antworten, kostenlos.</b> In schwierigen Fällen darf es zwei Monate länger dauern, aber man muss Ihnen das im ersten Monat mitteilen."
+        },
+        "noReply": "Wenn nach einem Monat keine Antwort kommt, schicken Sie eine Erinnerung. Danach können Sie sich kostenlos bei der Datenschutzbehörde in Ihrem Land beschweren. <edpb>Finden Sie Ihre in der Liste der Datenschutzbehörden der EU</edpb>."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Sie können verlangen, dass eine allein vom Computer getroffene Entscheidung überprüft wird,</b> auch Entscheidungen auf Grundlage Ihres Verbraucher- oder Kreditprofils.",
+          "2": "<b>Sie können die verwendeten Kriterien und Verfahren erfragen.</b> Geschäftsgeheimnisse können die Einzelheiten begrenzen.",
+          "3": "<b>Sie können Ihre Daten einsehen und berichtigen.</b> Eine klare, vollständige Aufstellung Ihrer Daten ist innerhalb von 15 Tagen nach Ihrer Anfrage fällig.",
+          "4": "<b>Das Gesetz schreibt nicht vor, dass ein Mensch die Überprüfung macht.</b> Diese Regel wurde 2019 gestrichen; bitten Sie trotzdem um einen Menschen."
+        },
+        "noReply": "Wenn keine Antwort kommt, können Sie kostenlos eine Eingabe bei der <anpd>nationalen Datenschutzbehörde (ANPD)</anpd> machen oder sich bei <consumidor>Consumidor.gov.br</consumidor> oder beim örtlichen <procon>Procon</procon> beschweren."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Indiens Datenschutzgesetz gibt Ihnen das Recht auf eine Übersicht Ihrer Daten und auf Berichtigung, aber diese Rechte gelten erst ab Mai 2027.</b>",
+          "2": "<b>Für Versicherungsbeschwerden gibt es schon einen eigenen, kostenlosen Weg.</b> Registrieren Sie Ihre Beschwerde bei Bima Bharosa. Wenn sie nicht innerhalb von 15 Tagen gelöst wird oder die Antwort Sie nicht überzeugt, können Sie sich an den Insurance Ombudsman wenden."
+        },
+        "noReply": "Wenn der Versicherer das nicht klärt, <bima>registrieren Sie eine Beschwerde bei Bima Bharosa</bima>, kostenlos. Danach kann der Insurance Ombudsman helfen."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Diese Website deckt die Gesetze Ihres Landes noch nicht ab.</b> Eine schriftliche Anfrage lohnt sich trotzdem: Sie fragt klar nach und ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, suchen Sie eine Versicherungsaufsicht, eine Schlichtungsstelle für Versicherungen oder eine Datenschutzbehörde in Ihrem Land."
+      },
+      "letters": {
+        "us": {
+          "subject": "Frage zu Ihrer Entscheidung über meine Versicherung{hasReference, select, yes { (Police {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Ihre Entscheidung über meine Versicherung erhalten. Falls ein Bonitäts- oder anderer Verbraucherbericht eine Rolle gespielt hat, teilen Sie mir bitte mit, welche Firma ihn geliefert hat, damit ich meine kostenlose Kopie anfordern und auf Fehler prüfen kann, wie es der Fair Credit Reporting Act vorsieht.\n\nIch wäre auch dankbar, die wichtigsten Gründe für die Entscheidung zu erfahren und ob ein Score oder ein automatisiertes System genutzt wurde.\n\nFalls Angaben über mich falsch waren, berichtige ich sie gern, und ich wäre dankbar, wenn ein Mensch die Entscheidung prüfen könnte.\n\nDanke für Ihre Zeit\n{name}"
+        },
+        "uk": {
+          "subject": "Anfrage nach Art. 15 und Art. 22C UK GDPR zu meiner Versicherung{hasReference, select, yes { (Police {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Ihre Entscheidung über meine Versicherung erhalten. Nach Art. 15 UK GDPR bitte ich um eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, um ihre Herkunft und um die Angabe, ob die Entscheidung automatisiert getroffen wurde.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung ohne echte menschliche Beteiligung beruhte, bitte ich nach Art. 22C UK GDPR um Informationen dazu. Ich möchte Stellung nehmen, einen Menschen eingreifen lassen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "eu": {
+          "subject": "Anfrage nach Art. 15 und Art. 22 DSGVO zu meiner Versicherung{hasReference, select, yes { (Police {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Ihre Entscheidung über meine Versicherung erhalten. Nach Art. 15 DSGVO bitte ich Sie um:\n- eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, und ihre Herkunft;\n- die Angabe, ob die Entscheidung automatisiert getroffen wurde, und in diesem Fall aussagekräftige Informationen über die involvierte Logik und die Folgen für mich.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung beruhte, verlange ich nach Art. 22 Abs. 3 DSGVO, dass ein Mensch sie überprüft. Ich möchte meinen Standpunkt darlegen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats, wie es Art. 12 Abs. 3 DSGVO vorsieht.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "br": {
+          "subject": "Anfrage nach Art. 18, 19 und 20 LGPD zu meiner Versicherung{hasReference, select, yes { (Police {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Ihre Entscheidung über meine Versicherung erhalten. Nach Art. 18 und 19 LGPD (Gesetz Nr. 13.709/2018) bitte ich Sie zu bestätigen, ob Sie meine personenbezogenen Daten verarbeiten, und mir innerhalb von 15 Tagen eine klare und vollständige Aufstellung zu schicken, mit Herkunft der Daten, verwendeten Kriterien und Zweck.\n\nNach Art. 20 LGPD bitte ich um Überprüfung dieser Entscheidung und um klare Informationen über die verwendeten Kriterien und Verfahren. Ich möchte, dass ein Mensch die Überprüfung vornimmt.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "plain": {
+          "subject": "Frage zu Ihrer Entscheidung über meine Versicherung{hasReference, select, yes { (Police {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich Ihre Entscheidung über meine Versicherung erhalten. Ich wäre dankbar, die wichtigsten Gründe zu erfahren und ob ein Score oder ein Computersystem eine Rolle gespielt hat.\n\nBitte teilen Sie mir auch mit, welche Angaben über mich Sie verwendet haben, damit ich prüfen kann, ob sie stimmen. Ich wäre dankbar, wenn ein Mensch die Entscheidung prüfen könnte.\n\nDanke für Ihre Zeit\n{name}"
         }
       }
     }
