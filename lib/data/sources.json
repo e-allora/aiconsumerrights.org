@@ -1744,6 +1744,63 @@
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
           "summary": "Californians can ask large businesses what personal information they collect and how they use it, free, up to twice a year. Businesses must answer within 45 days (up to 90 with notice) and can't treat people worse for asking."
+        },
+        {
+          "id": "ftc-take-it-down",
+          "title": "What will the FTC's enforcement of the TAKE IT DOWN Act mean for you?",
+          "publisher": "Federal Trade Commission (FTC), Consumer Advice",
+          "date": "2026-05-19",
+          "type": "Regulator guidance (US)",
+          "jurisdiction": "United States (TAKE IT DOWN Act)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/what-will-ftcs-enforcement-take-it-down-act-mean-you",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026.",
+          "summary": "Since 19 May 2026, platforms must offer a way to request removal of intimate images shared without consent, including AI-made deepfakes, and remove them and known identical copies within 48 hours. People can tell the FTC at TakeItDown.ftc.gov if a platform doesn't comply."
+        },
+        {
+          "id": "fbi-ic3",
+          "title": "Internet Crime Complaint Center (IC3)",
+          "publisher": "Federal Bureau of Investigation (FBI)",
+          "type": "Complaint route (US)",
+          "jurisdiction": "United States",
+          "url": "https://www.ic3.gov/",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026: filing is free; the IC3 never contacts people for money.",
+          "summary": "The FBI's central place to report internet crime, including scams, for free. Reports may be passed to law enforcement."
+        },
+        {
+          "id": "uk-psr-app",
+          "title": "Our new APP fraud reimbursement protections",
+          "publisher": "Payment Systems Regulator (PSR)",
+          "type": "Regulator (UK)",
+          "jurisdiction": "United Kingdom",
+          "url": "https://www.psr.org.uk/information-for-consumers/our-new-app-fraud-reimbursement-protections/",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026.",
+          "summary": "Since 7 October 2024, people tricked into sending money by UK bank transfer (Faster Payments or CHAPS) are usually reimbursed, up to £85,000, if they claim within 13 months; banks may apply a £100 excess. The exceptions for complicity or gross negligence don't apply to vulnerable people."
+        },
+        {
+          "id": "br-bcb-med",
+          "title": "Guia de implementação dos procedimentos de devolução no Pix, com ênfase no Mecanismo Especial de Devolução",
+          "publisher": "Banco Central do Brasil",
+          "type": "Regulator guidance (Brazil)",
+          "jurisdiction": "Brazil",
+          "url": "https://www.bcb.gov.br/content/estabilidadefinanceira/pix/Guia_MED.pdf",
+          "status": "confirmed",
+          "lang": "pt-BR",
+          "note": "Read on 29 September 2026 (version 4.3): contest in the bank's app within 80 days of the Pix; allowed even if the payer authorised it with a password or biometrics; recovery depends on funds still being in the receiving account.",
+          "summary": "How people tricked into sending a Pix can contest it through their bank to try to get the money back, within 80 days, even when they authorised the payment themselves."
+        },
+        {
+          "id": "in-cybercrime-portal",
+          "title": "National Cyber Crime Reporting Portal",
+          "publisher": "Ministry of Home Affairs, Indian Cyber Crime Coordination Centre (I4C)",
+          "type": "Complaint route (India)",
+          "jurisdiction": "India",
+          "url": "https://cybercrime.gov.in/",
+          "status": "confirmed",
+          "note": "Read on 29 September 2026: helpline 1930 for financial cyber crime; complaints about women- and children-related crimes can be made anonymously.",
+          "summary": "India's official portal for reporting cyber crime, with the 1930 helpline for money lost to online scams."
         }
       ]
     }

@@ -288,11 +288,10 @@
     "lead": "Scegli che cosa è successo. Avrai passi chiari, una lettera da compilare e a chi rivolgerti se nessuno risponde.",
     "pending": "<b>Non ancora revisionate da un esperto legale.</b> Robert Sweetman sta verificando queste pagine con le loro fonti, ma nessun avvocato, clinica legale o associazione dei consumatori le ha ancora revisionate, e nessun madrelingua ha controllato le traduzioni. Se puoi aiutare a revisionarle, <contact>scrivici</contact>.",
     "comingHeading": "In arrivo",
-    "coming": {
-      "deepfake": "Qualcuno ha usato una voce o un video falsi per ingannarti"
-    },
+    "coming": {},
     "comingLead": "Queste guide sono ancora in preparazione. <forum>Dicci nel forum</forum> quale ti serve di più.",
     "backToHelp": "Tutte le situazioni",
+    "firstHeading": "Fai subito questo",
     "happenedHeading": "Che cosa è successo, probabilmente",
     "whereHeading": "I tuoi diritti dove vivi",
     "rightsHeading": "I tuoi diritti",
@@ -867,6 +866,102 @@
         "in": {
           "subject": "Reclamo per la rimozione del mio contenuto o la limitazione del mio account{hasReference, select, yes { (account {reference})} other {}}",
           "body": "Al responsabile dei reclami (Grievance Officer),\n\nil {decisionDate} avete [rimosso un mio post / limitato o sospeso il mio account]. Credo che si tratti di un errore.\n\nVi chiedo di confermare la ricezione di questo reclamo entro 24 ore e di risolverlo entro 7 giorni, come prevede la regola 3(2) delle Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Vi chiedo di indicarmi i motivi del provvedimento e di ripristinare il mio contenuto o il mio account se è stato rimosso per errore.\n\nSe siete un intermediario di social media significativo, la regola 4(8) vi obbliga anche a darmi i motivi e una possibilità equa di contestare il provvedimento.\n\nCordiali saluti,\n{name}"
+        }
+      }
+    },
+    "deepfake": {
+      "metaTitle": "Una voce o un video falsi sono stati usati per ingannarti, o qualcuno ha creato un falso di te",
+      "metaDescription": "Che cosa fare subito se una voce o un video creati con l'IA ti hanno spinto a pagare, o se qualcuno ha creato un'immagine o un video falsi di te: i tuoi diritti, una lettera e dove segnalarlo.",
+      "title": "Una voce o un video falsi sono stati usati per ingannarti, o qualcuno ha creato un falso di te",
+      "summary": "Una voce o un video creati con l'IA ti hanno ingannato, o qualcuno ha creato un falso di te.",
+      "lead": "Qualcuno ha usato una voce, un video o un'immagine creati con l'IA per ingannarti, spesso per farti mandare soldi. Oppure qualcuno ha creato un'immagine o un video falsi di te. Agire in fretta aiuta, e niente di tutto questo è colpa tua.",
+      "first": {
+        "money": "<b>Se hai mandato soldi o dato dati bancari, chiama subito la tua banca,</b> al numero sulla carta o sul sito della banca stessa. Prima lo sanno, più è probabile fermare o recuperare il pagamento.",
+        "stop": "<b>Non mandare altri soldi e smetti di rispondere.</b> Chi mette in atto questi raggiri spesso torna con una nuova storia.",
+        "check": "<b>Se una chiamata o un video sembrava arrivare da qualcuno che conosci, riaggancia e richiama</b> al numero che hai già di quella persona.",
+        "save": "<b>Conserva tutto:</b> messaggi, numeri, messaggi vocali, video, link e dati del pagamento. Poi fai denuncia alla polizia."
+      },
+      "happened": {
+        "clone": "Pochi secondi della voce di qualcuno, o poche foto, possono bastare all'IA per creare un'imitazione convincente.",
+        "pressure": "Questi raggiri spesso creano panico: un parente nei guai, un capo che chiede un pagamento urgente, o un volto famoso che promuove un investimento.",
+        "you": "Possono anche essere creati falsi di te, comprese immagini intime. Non è mai colpa tua, e puoi chiedere che vengano rimossi."
+      },
+      "company": {
+        "fast": "<b>Rendi facile segnalare un raggiro o un falso, di giorno e di notte,</b> e intervieni in fretta. I minuti contano.",
+        "believe": "<b>Parti dalla fiducia.</b> Chi è stato ingannato spesso si sente in imbarazzo. Una prima risposta gentile aiuta a raccontarti tutto ciò che ti serve.",
+        "label": "<b>Indica con chiarezza i contenuti creati con l'IA.</b> Nell'UE i deepfake devono essere dichiarati.",
+        "remove": "<b>Rimuovi in fretta i falsi di persone reali quando lo chiedono,</b> e impedisci che le copie ritornino. Negli Stati Uniti le immagini intime devono essere rimosse entro 48 ore.",
+        "share": "<b>Condividi con i clienti i segnali d'allarme,</b> senza colpevolizzare chi ci è cascato."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Se qualcuno ha condiviso un'immagine intima di te, reale o creata con l'IA, senza il tuo consenso,</b> le piattaforme devono rimuoverla, insieme alle copie note, entro 48 ore dalla tua richiesta. Vale dal 19 maggio 2026.",
+          "2": "<b>Puoi segnalare raggiri, comprese voci e video falsi, all'Internet Crime Complaint Center dell'FBI,</b> gratuitamente.",
+          "3": "<b>Se la banca debba rimborsarti dipende da come hai pagato e da che cosa è successo.</b> Chiama subito e chiedi che ti confermino per iscritto che cosa faranno."
+        },
+        "noReply": "Se una piattaforma non rimuove un'immagine intima entro 48 ore, <tida>avvisa la FTC</tida>. Segnala il raggiro <ic3>all'Internet Crime Complaint Center dell'FBI</ic3> e alla polizia locale."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Se un raggiro ti ha portato a mandare soldi con un bonifico nel Regno Unito,</b> di solito la banca deve rimborsarti, fino a 85.000 £. Fai domanda entro 13 mesi dal pagamento. Le banche possono trattenere fino a 100 £.",
+          "2": "<b>Le eccezioni principali sono aver partecipato al raggiro o una grave negligenza,</b> e non valgono per le persone vulnerabili. La maggior parte dei rimborsi arriva entro 5 giorni lavorativi dalla domanda."
+        },
+        "noReply": "Se la banca dice di no o non risponde, puoi portare il caso gratuitamente al <fos>Financial Ombudsman Service</fos>. Fai denuncia anche alla polizia."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>I deepfake devono essere dichiarati.</b> Chi usa l'IA per creare o modificare immagini, audio o video fino a farne un deepfake deve dirlo. Vale dal 2 agosto 2026.",
+          "2": "<b>Puoi chiedere la cancellazione dei tuoi dati personali quando sono usati in modo illecito,</b> e questo può riguardare anche un falso creato con le tue foto, la tua voce o i tuoi video. Devono rispondere entro un mese.",
+          "3": "<b>Se una piattaforma respinge la tua richiesta,</b> puoi chiedere un riesame tramite il suo sistema di reclamo."
+        },
+        "noReply": "Se non lo rimuovono, presenta un reclamo gratuito alla tua autorità per la protezione dei dati: <edpb>trovala nell'elenco delle autorità per la protezione dei dati dell'UE</edpb>. Se hai mandato soldi, chiama subito la banca e fai denuncia alla polizia."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Se un raggiro ti ha portato a mandare un Pix, contestalo nell'app della tua banca entro 80 giorni.</b> Funziona anche se hai autorizzato il pagamento con password o impronta digitale.",
+          "2": "<b>Agisci in fretta:</b> recuperare i soldi dipende dal fatto che si trovino ancora nei conti in cui sono finiti.",
+          "3": "<b>Puoi chiedere la cancellazione dei dati su di te usati in modo illecito,</b> e questo può riguardare anche un falso di te."
+        },
+        "noReply": "Se la banca non risolve, puoi presentare un reclamo su <consumidor>Consumidor.gov.br</consumidor> o al <procon>Procon</procon> locale. Fai denuncia anche alla polizia."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Se hai perso soldi, chiama il 1930 o fai subito una segnalazione sul portale nazionale dei reati informatici.</b>",
+          "2": "<b>Le piattaforme devono intervenire entro due ore dal tuo reclamo</b> su contenuti che si fingono te, comprese immagini alterate con l'IA, o che mostrano tue immagini intime.",
+          "3": "<b>Se la piattaforma non interviene,</b> puoi ricorrere al Grievance Appellate Committee entro 30 giorni."
+        },
+        "noReply": "<portal>Segnalalo sul portale nazionale dei reati informatici</portal>, oppure chiama il <tel>1930</tel>. Se una piattaforma non rimuove il contenuto, <gac>ricorri al Grievance Appellate Committee</gac>."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Questo sito non copre ancora le leggi del tuo Paese.</b> Se hai mandato soldi, chiama subito la banca. Fai denuncia alla polizia e chiedi per iscritto alla piattaforma di rimuovere ogni falso di te."
+        },
+        "noReply": "Se non ricevi risposta, cerca la polizia postale o l'unità per i reati informatici del tuo Paese, un'autorità per la protezione dei dati o un'autorità per i consumatori."
+      },
+      "letters": {
+        "us": {
+          "subject": "Richiesta di rimozione di contenuti falsi o intimi che mi riguardano{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho trovato [link o descrizione del contenuto] sul vostro servizio. Mi mostra in [un'immagine / un video / un audio] falso creato o modificato con l'IA, e non ho dato il mio consenso.\n\nVi chiedo di rimuoverlo insieme a ogni copia. Se si tratta di un'immagine intima, il TAKE IT DOWN Act vi obbliga a rimuoverla, insieme alle copie identiche note, entro 48 ore da questa richiesta. Confermo in buona fede che è stata condivisa senza il mio consenso.\n\nVi chiedo di confermarmi per iscritto quando sarà stato rimosso.\n\nGrazie,\n{name}"
+        },
+        "uk": {
+          "subject": "Richiesta di rimborso per un raggiro con pagamento autorizzato (APP){hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho inviato [importo] con bonifico a [nome e conto], dopo essere caduto o caduta in un raggiro basato su [una voce / un video / un messaggio falsi]. Lo segnalo come raggiro con pagamento autorizzato (authorised push payment scam).\n\nVi chiedo di trattare questa lettera come la mia richiesta di rimborso secondo le regole di rimborso del Payment Systems Regulator. Confermate di averla ricevuta e comunicatemi l'esito per iscritto.\n\nCordiali saluti,\n{name}"
+        },
+        "eu": {
+          "subject": "Richiesta di cancellazione di contenuti falsi che mi riguardano (articolo 17 del GDPR){hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho trovato [link o descrizione del contenuto] sul vostro servizio. Mi mostra in [un'immagine / un video / un audio] falso creato o modificato con l'IA, senza il mio consenso.\n\nAi sensi dell'articolo 17 del GDPR, vi chiedo di cancellare questo contenuto e ogni copia senza ingiustificato ritardo, perché usa i miei dati personali in modo illecito. Vi chiedo anche di indicarmi, se potete, chi lo ha caricato.\n\nVi chiedo di rispondere entro un mese, come prevede l'articolo 12, paragrafo 3.\n\nCordiali saluti,\n{name}"
+        },
+        "br": {
+          "subject": "Contestazione di un Pix fatto a causa di un raggiro (MED){hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho inviato un Pix di [importo] a [nome o chiave Pix], dopo essere caduto o caduta in un raggiro basato su [una voce / un video / un messaggio falsi]. Contesto questa transazione come raggiro.\n\nVi chiedo di attivare il Mecanismo Especial de Devolução (MED) per questa transazione e di cercare di recuperare i soldi. Inviatemi il numero di protocollo e comunicatemi l'esito per iscritto.\n\nCordiali saluti,\n{name}"
+        },
+        "in": {
+          "subject": "Reclamo per contenuti falsi o intimi che mi riguardano{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Al responsabile dei reclami (Grievance Officer),\n\nil {decisionDate} ho trovato [link o descrizione del contenuto] sul vostro servizio. Si finge me in [un'immagine / un video / un audio] falso creato o modificato con l'IA, e non ho dato il mio consenso.\n\nAi sensi della regola 3(2)(b) delle Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, vi chiedo di rimuoverlo o bloccarne l'accesso entro due ore da questo reclamo.\n\nVi chiedo di confermarmi per iscritto quando sarà stato rimosso.\n\nCordiali saluti,\n{name}"
+        },
+        "plain": {
+          "subject": "Richiesta di rimozione di contenuti falsi che mi riguardano{hasReference, select, yes { (rif. {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} ho trovato [link o descrizione del contenuto] sul vostro servizio. Mi mostra in [un'immagine / un video / un audio] falso creato o modificato con l'IA, e non ho dato il mio consenso.\n\nVi chiedo di rimuoverlo insieme a ogni copia il prima possibile, e di confermarmi per iscritto quando lo avrete fatto.\n\nGrazie,\n{name}"
         }
       }
     }

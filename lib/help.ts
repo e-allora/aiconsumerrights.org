@@ -57,6 +57,8 @@ export type Situation = {
   id: string;
   /** Keys under Help.<id>.happened: what probably happened, in order. */
   happened: readonly string[];
+  /** Urgent steps shown first, before anything else: keys under Help.<id>.first. */
+  first?: readonly string[];
   /**
    * "If this letter reaches you at work": how a company team can answer
    * well. Keys under Help.<id>.company, with citations where a tip rests on
@@ -335,9 +337,56 @@ export const SITUATIONS: Situation[] = [
       },
     },
   },
+  {
+    id: "deepfake",
+    first: ["money", "stop", "check", "save"],
+    happened: ["clone", "pressure", "you"],
+    company: [
+      { key: "fast" },
+      { key: "believe" },
+      { key: "label", cites: ["eu-ai-act-art50"] },
+      { key: "remove", cites: ["ftc-take-it-down"] },
+      { key: "share" },
+    ],
+    regions: {
+      us: {
+        rights: [["ftc-take-it-down"], ["fbi-ic3"], []],
+        letter: "us",
+        complain: { tida: "ftc-take-it-down", ic3: "fbi-ic3" },
+      },
+      // The UK letter is a reimbursement claim to the bank, not to a platform.
+      uk: {
+        rights: [["uk-psr-app"], ["uk-psr-app"]],
+        letter: "uk",
+        complain: { fos: "uk-fos-complain" },
+      },
+      eu: {
+        rights: [["eu-ai-act-art50"], ["gdpr"], ["eu-dsa-user-rights"]],
+        letter: "eu",
+        complain: { edpb: "edpb-members" },
+      },
+      // The Brazil letter contests a Pix through the bank (MED).
+      br: {
+        rights: [["br-bcb-med"], ["br-bcb-med"], ["anpd-lgpd-en"]],
+        letter: "br",
+        complain: { consumidor: "br-consumidor-gov", procon: "br-sndc-procon" },
+      },
+      in: {
+        rights: [["in-cybercrime-portal"], ["in-it-rules-2021-consolidated"], ["in-it-rules-2021-consolidated", "in-gac-portal"]],
+        letter: "in",
+        complain: { portal: "in-cybercrime-portal", gac: "in-gac-portal" },
+        phone: "1930",
+      },
+      other: {
+        rights: [[]],
+        letter: "plain",
+        complain: {},
+      },
+    },
+  },
 ];
 
 /** Situations planned but not written yet, shown as "coming next" on /help. */
-export const COMING = ["deepfake"] as const;
+export const COMING: readonly string[] = [];
 
 export const getSituation = (id: string): Situation | undefined => SITUATIONS.find((s) => s.id === id);

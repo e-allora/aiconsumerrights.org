@@ -288,11 +288,10 @@
     "lead": "Pick what happened. You'll get plain steps, a letter you can fill in, and where to turn if nobody answers.",
     "pending": "<b>Not reviewed by a legal expert yet.</b> Robert Sweetman is checking these pages against their sources, but no lawyer, legal clinic, or consumer organisation has reviewed them, and native speakers haven't checked the translations. If you can help review them, <contact>please get in touch</contact>.",
     "comingHeading": "Coming next",
-    "coming": {
-      "deepfake": "Someone used a fake voice or video to trick you"
-    },
+    "coming": {},
     "comingLead": "These guides are still being written. <forum>Tell us in the forum</forum> what you need most.",
     "backToHelp": "All situations",
+    "firstHeading": "Do this first",
     "happenedHeading": "What probably happened",
     "whereHeading": "Your rights where you live",
     "rightsHeading": "Your rights",
@@ -867,6 +866,102 @@
         "in": {
           "subject": "Grievance about the removal of my content or the restriction of my account{hasReference, select, yes { (account {reference})} other {}}",
           "body": "To the Grievance Officer,\n\nOn {decisionDate}, you [removed my post / restricted or suspended my account]. I believe this was a mistake.\n\nPlease acknowledge this grievance within 24 hours and resolve it within 7 days, as rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 requires. Please tell me the grounds for the action, and restore my content or account if it was removed in error.\n\nIf you are a significant social media intermediary, rule 4(8) also requires you to give me the reasons and a fair chance to dispute the action.\n\nKind regards,\n{name}"
+        }
+      }
+    },
+    "deepfake": {
+      "metaTitle": "A fake voice or video was used to trick you, or a fake was made of you",
+      "metaDescription": "What to do first if an AI-made voice or video tricked you into paying, or someone made a fake image or video of you: your rights, a letter, and where to report it.",
+      "title": "A fake voice or video was used to trick you, or a fake was made of you",
+      "summary": "An AI-made voice or video tricked you, or someone made a fake of you.",
+      "lead": "Someone used an AI-made voice, video, or image to trick you, often into sending money. Or someone made a fake image or video of you. Acting fast helps, and none of this is your fault.",
+      "first": {
+        "money": "<b>If you sent money or gave bank details, call your bank now,</b> using the number on your card or the bank's own website. The sooner they know, the better the chance of stopping or recovering the payment.",
+        "stop": "<b>Don't send more money, and stop replying.</b> People running these tricks often come back with a new story.",
+        "check": "<b>If a call or video seemed to come from someone you know, hang up and call them back</b> on the number you already have for them.",
+        "save": "<b>Save everything:</b> messages, numbers, voice notes, videos, links, and payment details. Then report it to the police."
+      },
+      "happened": {
+        "clone": "A few seconds of someone's voice, or a few photos, can be enough for AI to make a convincing fake.",
+        "pressure": "These tricks often create panic: a relative in trouble, a boss asking for an urgent payment, or a famous face promoting an investment.",
+        "you": "Fakes can also be made of you, including intimate images. That is never your fault, and you can ask for them to be taken down."
+      },
+      "company": {
+        "fast": "<b>Make it quick to report a scam or a fake, day or night,</b> and act on reports fast. Minutes matter.",
+        "believe": "<b>Start from belief.</b> People who were tricked often feel ashamed. A kind first response helps them tell you everything you need.",
+        "label": "<b>Label AI-made content clearly.</b> In the EU, deepfakes must be disclosed.",
+        "remove": "<b>Remove fakes of real people quickly when they ask,</b> and stop copies from coming back. In the US, intimate images must come down within 48 hours.",
+        "share": "<b>Share warning signs with customers,</b> without blaming the people who were caught out."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>If someone shared an intimate image of you, real or AI-made, without your consent,</b> platforms must remove it, and known copies, within 48 hours of your request. This has applied since 19 May 2026.",
+          "2": "<b>You can report scams, including fake voices and videos, to the FBI's Internet Crime Complaint Center,</b> for free.",
+          "3": "<b>Whether your bank must refund you depends on how you paid and what happened.</b> Call right away, and ask them to confirm in writing what they will do."
+        },
+        "noReply": "If a platform doesn't remove an intimate image within 48 hours, <tida>tell the FTC</tida>. Report the scam to the <ic3>FBI's Internet Crime Complaint Center</ic3> and to your local police."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>If you were tricked into sending money by UK bank transfer,</b> your bank must usually refund you, up to £85,000. Claim within 13 months of the payment. Banks may take off up to £100.",
+          "2": "<b>The main exceptions are taking part in the scam or gross negligence,</b> and they don't apply to people who were vulnerable. Most refunds come within 5 business days of the claim."
+        },
+        "noReply": "If your bank says no or doesn't answer, you can take it to the <fos>Financial Ombudsman Service</fos> for free. Report the scam to the police too."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Deepfakes must be labelled.</b> Anyone who uses AI to make or change images, audio, or video into a deepfake must disclose it. This has applied since 2 August 2026.",
+          "2": "<b>You can ask for your personal data to be erased when it's used unlawfully,</b> which can include a fake made of you from your photos, voice, or videos. They must answer within one month.",
+          "3": "<b>If a platform turns down your request,</b> you can ask for a review through its complaint system."
+        },
+        "noReply": "If they don't remove it, complain for free to your data protection authority: <edpb>find yours on the list of EU data protection authorities</edpb>. If you sent money, call your bank at once and report it to the police."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>If you were tricked into sending a Pix, contest it in your bank's app within 80 days.</b> This works even if you authorised the payment with your password or fingerprint.",
+          "2": "<b>Act fast:</b> getting the money back depends on it still being found in the accounts it went to.",
+          "3": "<b>You can ask for data about you that's used unlawfully to be erased,</b> which can include a fake of you."
+        },
+        "noReply": "If your bank doesn't sort it out, you can complain on <consumidor>Consumidor.gov.br</consumidor> or with your local <procon>Procon</procon>. Report the scam to the police too."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>If you lost money, call 1930 or report it on the national cybercrime portal straight away.</b>",
+          "2": "<b>Platforms must act within two hours of your complaint</b> on content that impersonates you, including AI-morphed images, or that shows intimate images of you.",
+          "3": "<b>If the platform doesn't act,</b> you can appeal to the Grievance Appellate Committee within 30 days."
+        },
+        "noReply": "<portal>Report it on the national cybercrime portal</portal>, or call <tel>1930</tel>. If a platform doesn't remove the content, <gac>appeal to the Grievance Appellate Committee</gac>."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>This site doesn't cover your country's laws yet.</b> If you sent money, call your bank at once. Report the scam to the police, and ask the platform in writing to remove any fake of you."
+        },
+        "noReply": "If you get no answer, look for your country's police cybercrime unit, a data protection authority, or a consumer protection authority."
+      },
+      "letters": {
+        "us": {
+          "subject": "Request to remove fake or intimate content of me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I found [link or description of the content] on your service. It shows me in a fake [image / video / audio] made or changed with AI, and I did not consent to it.\n\nPlease remove it and any copies. If it is an intimate image, the TAKE IT DOWN Act requires you to remove it, and known identical copies, within 48 hours of this request. I confirm in good faith that it was shared without my consent.\n\nPlease confirm in writing when it has been removed.\n\nThank you,\n{name}"
+        },
+        "uk": {
+          "subject": "Claim for reimbursement of an authorised push payment scam{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I sent [amount] by bank transfer to [name and account], after being tricked by [a fake voice / video / message]. I am reporting this as an authorised push payment scam.\n\nPlease treat this as my claim for reimbursement under the Payment Systems Regulator's reimbursement rules. Please confirm that you have received it and tell me the outcome in writing.\n\nKind regards,\n{name}"
+        },
+        "eu": {
+          "subject": "Request to erase fake content of me (GDPR Article 17){hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I found [link or description of the content] on your service. It shows me in a fake [image / video / audio] made or changed with AI, without my consent.\n\nUnder Article 17 of the GDPR, I ask you to erase this content and any copies without undue delay, because it uses my personal data unlawfully. Please also tell me who uploaded it, if you can.\n\nPlease reply within one month, as Article 12(3) requires.\n\nKind regards,\n{name}"
+        },
+        "br": {
+          "subject": "Contesting a Pix made because of a scam (MED){hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I sent a Pix of [amount] to [name or Pix key], after being tricked by [a fake voice / video / message]. I am contesting this transaction as a scam.\n\nPlease open the Special Return Mechanism (MED) for this transaction and try to recover the money. Please send me the protocol number and tell me the outcome in writing.\n\nKind regards,\n{name}"
+        },
+        "in": {
+          "subject": "Complaint about fake or intimate content of me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "To the Grievance Officer,\n\nOn {decisionDate}, I found [link or description of the content] on your service. It impersonates me in a fake [image / video / audio] made or changed with AI, and I did not consent to it.\n\nUnder rule 3(2)(b) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, please remove or disable access to it within two hours of this complaint.\n\nPlease confirm in writing when it has been removed.\n\nKind regards,\n{name}"
+        },
+        "plain": {
+          "subject": "Request to remove fake content of me{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, I found [link or description of the content] on your service. It shows me in a fake [image / video / audio] made or changed with AI, and I did not consent to it.\n\nPlease remove it and any copies as soon as possible, and confirm in writing when it has been removed.\n\nThank you,\n{name}"
         }
       }
     }

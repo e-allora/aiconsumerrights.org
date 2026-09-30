@@ -126,6 +126,17 @@ export default function SituationPage({ params: { locale, situation: id } }: Pro
         <p className="text-base text-muted-foreground">{tc("legalNotice")}</p>
       </header>
 
+      {situation.first && (
+        <section aria-labelledby="first" className="flex flex-col gap-4 rounded-md border-l-4 border-secondary bg-muted/70 p-6">
+          <h2 id="first">{t("firstHeading")}</h2>
+          <ol className="flex list-decimal flex-col gap-3 pl-6">
+            {situation.first.map((key) => (
+              <li key={key}>{t.rich(`${situation.id}.first.${key}`, { b: bold })}</li>
+            ))}
+          </ol>
+        </section>
+      )}
+
       <section aria-labelledby="happened" className="flex flex-col gap-4">
         <h2 id="happened">{t("happenedHeading")}</h2>
         <ul className="flex list-disc flex-col gap-3 pl-6">

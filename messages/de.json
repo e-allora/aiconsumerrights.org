@@ -288,11 +288,10 @@
     "lead": "Wählen Sie, was passiert ist. Sie erhalten klare Schritte, einen Brief zum Ausfüllen und Stellen, an die Sie sich wenden können, wenn niemand antwortet.",
     "pending": "<b>Noch nicht juristisch geprüft.</b> Robert Sweetman prüft diese Seiten anhand ihrer Quellen, aber noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation hat sie geprüft, und Muttersprachler haben die Übersetzungen noch nicht kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
     "comingHeading": "Demnächst",
-    "coming": {
-      "deepfake": "Jemand hat eine gefälschte Stimme oder ein gefälschtes Video benutzt, um Sie zu täuschen"
-    },
+    "coming": {},
     "comingLead": "Diese Anleitungen entstehen gerade. <forum>Sagen Sie uns im Forum</forum>, welche Sie am dringendsten brauchen.",
     "backToHelp": "Alle Situationen",
+    "firstHeading": "Tun Sie das zuerst",
     "happenedHeading": "Was wahrscheinlich passiert ist",
     "whereHeading": "Ihre Rechte dort, wo Sie leben",
     "rightsHeading": "Ihre Rechte",
@@ -867,6 +866,102 @@
         "in": {
           "subject": "Beschwerde über die Entfernung meiner Inhalte oder die Einschränkung meines Kontos{hasReference, select, yes { (Konto {reference})} other {}}",
           "body": "An die Beschwerdestelle (Grievance Officer),\n\nam {decisionDate} haben Sie [meinen Beitrag entfernt / mein Konto eingeschränkt oder gesperrt]. Ich halte das für einen Irrtum.\n\nBitte bestätigen Sie diese Beschwerde innerhalb von 24 Stunden und erledigen Sie sie innerhalb von 7 Tagen, wie es Regel 3(2) der Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 verlangt. Bitte nennen Sie mir die Gründe für die Maßnahme und stellen Sie meine Inhalte oder mein Konto wieder her, falls sie irrtümlich entfernt wurden.\n\nFalls Sie ein bedeutender Vermittler sozialer Medien sind, verpflichtet Sie Regel 4(8) außerdem, mir die Gründe zu nennen und mir eine faire Möglichkeit zu geben, der Maßnahme zu widersprechen.\n\nMit freundlichen Grüßen\n{name}"
+        }
+      }
+    },
+    "deepfake": {
+      "metaTitle": "Eine gefälschte Stimme oder ein gefälschtes Video wurde benutzt, um Sie zu täuschen, oder es gibt eine Fälschung von Ihnen",
+      "metaDescription": "Was Sie zuerst tun sollten, wenn eine mit KI erzeugte Stimme oder ein Video Sie zu einer Zahlung gebracht hat, oder wenn jemand ein gefälschtes Bild oder Video von Ihnen erstellt hat: Ihre Rechte, ein Brief und wo Sie es melden.",
+      "title": "Eine gefälschte Stimme oder ein gefälschtes Video wurde benutzt, um Sie zu täuschen, oder es gibt eine Fälschung von Ihnen",
+      "summary": "Eine mit KI erzeugte Stimme oder ein Video hat Sie getäuscht, oder jemand hat eine Fälschung von Ihnen erstellt.",
+      "lead": "Jemand hat eine mit KI erzeugte Stimme, ein Video oder ein Bild benutzt, um Sie zu täuschen, oft um an Geld zu kommen. Oder jemand hat ein gefälschtes Bild oder Video von Ihnen erstellt. Schnelles Handeln hilft, und nichts davon ist Ihre Schuld.",
+      "first": {
+        "money": "<b>Wenn Sie Geld überwiesen oder Bankdaten weitergegeben haben, rufen Sie sofort Ihre Bank an,</b> unter der Nummer auf Ihrer Karte oder auf der Website der Bank. Je früher sie es weiß, desto eher lässt sich die Zahlung stoppen oder zurückholen.",
+        "stop": "<b>Überweisen Sie kein weiteres Geld und antworten Sie nicht mehr.</b> Wer hinter solchen Maschen steckt, kommt oft mit einer neuen Geschichte zurück.",
+        "check": "<b>Wenn ein Anruf oder Video von jemandem zu kommen schien, den Sie kennen, legen Sie auf und rufen Sie zurück,</b> unter der Nummer, die Sie schon von dieser Person haben.",
+        "save": "<b>Heben Sie alles auf:</b> Nachrichten, Nummern, Sprachnachrichten, Videos, Links und Zahlungsdaten. Erstatten Sie dann Anzeige bei der Polizei."
+      },
+      "happened": {
+        "clone": "Ein paar Sekunden einer Stimme oder ein paar Fotos können einer KI genügen, um eine überzeugende Fälschung zu erstellen.",
+        "pressure": "Solche Maschen erzeugen oft Panik: ein Angehöriger in Not, eine Vorgesetzte oder ein Vorgesetzter, die eine dringende Zahlung verlangen, oder ein bekanntes Gesicht, das für eine Geldanlage wirbt.",
+        "you": "Es können auch Fälschungen von Ihnen erstellt werden, auch intime Bilder. Das ist nie Ihre Schuld, und Sie können verlangen, dass sie entfernt werden."
+      },
+      "company": {
+        "fast": "<b>Machen Sie es leicht, eine Masche oder Fälschung zu melden, Tag und Nacht,</b> und handeln Sie schnell. Minuten zählen.",
+        "believe": "<b>Gehen Sie von Vertrauen aus.</b> Wer getäuscht wurde, schämt sich oft. Eine freundliche erste Antwort hilft, alles zu erzählen, was Sie wissen müssen.",
+        "label": "<b>Kennzeichnen Sie KI-erzeugte Inhalte deutlich.</b> In der EU müssen Deepfakes offengelegt werden.",
+        "remove": "<b>Entfernen Sie Fälschungen echter Menschen schnell, wenn diese es verlangen,</b> und verhindern Sie, dass Kopien zurückkommen. In den USA müssen intime Bilder innerhalb von 48 Stunden entfernt werden.",
+        "share": "<b>Teilen Sie Warnsignale mit Ihren Kundinnen und Kunden,</b> ohne denen die Schuld zu geben, die hereingefallen sind."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Wenn jemand ein intimes Bild von Ihnen, echt oder mit KI erzeugt, ohne Ihre Einwilligung geteilt hat,</b> müssen Plattformen es und bekannte Kopien innerhalb von 48 Stunden nach Ihrer Anfrage entfernen. Das gilt seit dem 19. Mai 2026.",
+          "2": "<b>Sie können Maschen, auch mit gefälschten Stimmen und Videos, kostenlos beim Internet Crime Complaint Center des FBI melden.</b>",
+          "3": "<b>Ob Ihre Bank Ihnen das Geld erstatten muss, hängt davon ab, wie Sie bezahlt haben und was passiert ist.</b> Rufen Sie sofort an und bitten Sie um eine schriftliche Bestätigung, was die Bank tun wird."
+        },
+        "noReply": "Wenn eine Plattform ein intimes Bild nicht innerhalb von 48 Stunden entfernt, <tida>melden Sie das der FTC</tida>. Melden Sie die Masche beim <ic3>Internet Crime Complaint Center des FBI</ic3> und bei der örtlichen Polizei."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Wenn eine Masche Sie dazu gebracht hat, Geld per Überweisung im Vereinigten Königreich zu senden,</b> muss Ihre Bank es in der Regel erstatten, bis zu 85.000 £. Stellen Sie den Antrag innerhalb von 13 Monaten nach der Zahlung. Banken dürfen bis zu 100 £ abziehen.",
+          "2": "<b>Die wichtigsten Ausnahmen sind Mitwirkung an der Masche oder grobe Fahrlässigkeit,</b> und sie gelten nicht für schutzbedürftige Menschen. Die meisten Erstattungen kommen innerhalb von 5 Werktagen nach dem Antrag."
+        },
+        "noReply": "Wenn Ihre Bank ablehnt oder nicht antwortet, können Sie den Fall kostenlos beim <fos>Financial Ombudsman Service</fos> einreichen. Erstatten Sie auch Anzeige bei der Polizei."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Deepfakes müssen gekennzeichnet sein.</b> Wer mit KI Bilder, Ton oder Video zu einem Deepfake erzeugt oder verändert, muss das offenlegen. Das gilt seit dem 2. August 2026.",
+          "2": "<b>Sie können verlangen, dass Ihre personenbezogenen Daten gelöscht werden, wenn sie unrechtmäßig verarbeitet werden,</b> und das kann auch eine Fälschung aus Ihren Fotos, Ihrer Stimme oder Ihren Videos betreffen. Man muss Ihnen innerhalb eines Monats antworten.",
+          "3": "<b>Wenn eine Plattform Ihre Anfrage ablehnt,</b> können Sie über ihr Beschwerdesystem eine Überprüfung verlangen."
+        },
+        "noReply": "Wenn der Inhalt nicht entfernt wird, beschweren Sie sich kostenlos bei Ihrer Datenschutzbehörde: <edpb>Finden Sie Ihre in der Liste der Datenschutzbehörden der EU</edpb>. Wenn Sie Geld überwiesen haben, rufen Sie sofort Ihre Bank an und erstatten Sie Anzeige."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Wenn eine Masche Sie zu einer Pix-Zahlung gebracht hat, fechten Sie sie innerhalb von 80 Tagen in der App Ihrer Bank an.</b> Das geht auch, wenn Sie die Zahlung mit Passwort oder Fingerabdruck freigegeben haben.",
+          "2": "<b>Handeln Sie schnell:</b> Ob das Geld zurückkommt, hängt davon ab, ob es auf den Empfängerkonten noch gefunden wird.",
+          "3": "<b>Sie können verlangen, dass unrechtmäßig genutzte Daten über Sie gelöscht werden,</b> und das kann auch eine Fälschung von Ihnen betreffen."
+        },
+        "noReply": "Wenn Ihre Bank das nicht klärt, können Sie sich bei <consumidor>Consumidor.gov.br</consumidor> oder beim örtlichen <procon>Procon</procon> beschweren. Erstatten Sie auch Anzeige bei der Polizei."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Wenn Sie Geld verloren haben, rufen Sie sofort die 1930 an oder melden Sie es auf dem nationalen Portal für Cyberkriminalität.</b>",
+          "2": "<b>Plattformen müssen innerhalb von zwei Stunden nach Ihrer Beschwerde handeln,</b> wenn Inhalte sich als Sie ausgeben, auch mit KI veränderte Bilder, oder intime Bilder von Ihnen zeigen.",
+          "3": "<b>Wenn die Plattform nicht handelt,</b> können Sie innerhalb von 30 Tagen beim Grievance Appellate Committee Einspruch einlegen."
+        },
+        "noReply": "<portal>Melden Sie es auf dem nationalen Portal für Cyberkriminalität</portal> oder rufen Sie die <tel>1930</tel> an. Wenn eine Plattform den Inhalt nicht entfernt, <gac>legen Sie Einspruch beim Grievance Appellate Committee ein</gac>."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Diese Website deckt die Gesetze Ihres Landes noch nicht ab.</b> Wenn Sie Geld überwiesen haben, rufen Sie sofort Ihre Bank an. Erstatten Sie Anzeige und bitten Sie die Plattform schriftlich, jede Fälschung von Ihnen zu entfernen."
+        },
+        "noReply": "Wenn keine Antwort kommt, wenden Sie sich an die Stelle für Cyberkriminalität der Polizei, eine Datenschutzbehörde oder eine Verbraucherschutzbehörde in Ihrem Land."
+      },
+      "letters": {
+        "us": {
+          "subject": "Bitte um Entfernung gefälschter oder intimer Inhalte über mich{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich [Link oder Beschreibung des Inhalts] in Ihrem Dienst gefunden. Er zeigt mich in [einem Bild / einem Video / einer Tonaufnahme], das mit KI gefälscht oder verändert wurde, und ich habe nicht eingewilligt.\n\nBitte entfernen Sie den Inhalt und alle Kopien. Wenn es sich um ein intimes Bild handelt, verpflichtet Sie der TAKE IT DOWN Act, es und bekannte identische Kopien innerhalb von 48 Stunden nach dieser Anfrage zu entfernen. Ich bestätige in gutem Glauben, dass es ohne meine Einwilligung geteilt wurde.\n\nBitte bestätigen Sie mir schriftlich, wenn es entfernt wurde.\n\nVielen Dank\n{name}"
+        },
+        "uk": {
+          "subject": "Antrag auf Erstattung einer Zahlung nach einer Täuschung (APP){hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich [Betrag] per Überweisung an [Name und Konto] gesendet, nachdem ich durch [eine gefälschte Stimme / ein gefälschtes Video / eine gefälschte Nachricht] getäuscht wurde. Ich melde dies als authorised push payment scam.\n\nBitte behandeln Sie dieses Schreiben als meinen Antrag auf Erstattung nach den Erstattungsregeln des Payment Systems Regulator. Bitte bestätigen Sie den Eingang und teilen Sie mir das Ergebnis schriftlich mit.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "eu": {
+          "subject": "Antrag auf Löschung gefälschter Inhalte über mich (Art. 17 DSGVO){hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich [Link oder Beschreibung des Inhalts] in Ihrem Dienst gefunden. Er zeigt mich in [einem Bild / einem Video / einer Tonaufnahme], das ohne meine Einwilligung mit KI gefälscht oder verändert wurde.\n\nNach Art. 17 DSGVO verlange ich, dass Sie diesen Inhalt und alle Kopien unverzüglich löschen, da er meine personenbezogenen Daten unrechtmäßig verwendet. Bitte teilen Sie mir, wenn möglich, auch mit, wer ihn hochgeladen hat.\n\nBitte antworten Sie innerhalb eines Monats, wie es Art. 12 Abs. 3 DSGVO vorsieht.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "br": {
+          "subject": "Anfechtung einer Pix-Zahlung nach einer Täuschung (MED){hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich einen Pix über [Betrag] an [Name oder Pix-Schlüssel] gesendet, nachdem ich durch [eine gefälschte Stimme / ein gefälschtes Video / eine gefälschte Nachricht] getäuscht wurde. Ich fechte diese Transaktion an.\n\nBitte eröffnen Sie für diese Transaktion den Mecanismo Especial de Devolução (MED) und versuchen Sie, das Geld zurückzuholen. Bitte schicken Sie mir die Vorgangsnummer und teilen Sie mir das Ergebnis schriftlich mit.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "in": {
+          "subject": "Beschwerde über gefälschte oder intime Inhalte über mich{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "An die Beschwerdestelle (Grievance Officer),\n\nam {decisionDate} habe ich [Link oder Beschreibung des Inhalts] in Ihrem Dienst gefunden. Er gibt sich in [einem Bild / einem Video / einer Tonaufnahme], das mit KI gefälscht oder verändert wurde, als ich aus, und ich habe nicht eingewilligt.\n\nNach Regel 3(2)(b) der Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 bitte ich Sie, den Inhalt innerhalb von zwei Stunden nach dieser Beschwerde zu entfernen oder zu sperren.\n\nBitte bestätigen Sie mir schriftlich, wenn er entfernt wurde.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "plain": {
+          "subject": "Bitte um Entfernung gefälschter Inhalte über mich{hasReference, select, yes { (Az. {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} habe ich [Link oder Beschreibung des Inhalts] in Ihrem Dienst gefunden. Er zeigt mich in [einem Bild / einem Video / einer Tonaufnahme], das mit KI gefälscht oder verändert wurde, und ich habe nicht eingewilligt.\n\nBitte entfernen Sie den Inhalt und alle Kopien so bald wie möglich und bestätigen Sie mir das schriftlich.\n\nVielen Dank\n{name}"
         }
       }
     }

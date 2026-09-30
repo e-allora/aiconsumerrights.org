@@ -11,7 +11,9 @@ import { REVIEW_EMAIL } from "@/lib/site";
 
 type Props = { params: { locale: Locale } };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params: { locale },
+}: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Help" });
   const c = await getTranslations({ locale, namespace: "Common" });
   return pageMetadata({
@@ -32,9 +34,14 @@ export default function HelpPage({ params: { locale } }: Props) {
   const t = useTranslations("Help");
   const tc = useTranslations("Common");
   return (
-    <main id="main" className="mx-auto flex max-w-3xl flex-col gap-14 px-4 py-12 sm:py-16">
+    <main
+      id="main"
+      className="mx-auto flex max-w-3xl flex-col gap-14 px-4 py-12 sm:py-16"
+    >
       <header className="flex flex-col gap-5">
-        <p className="font-display text-lg font-bold text-link">{t("eyebrow")}</p>
+        <p className="font-display text-lg font-bold text-link">
+          {t("eyebrow")}
+        </p>
         <h1>{t("title")}</h1>
         <p className="text-xl">{t("lead")}</p>
         <p className="rounded-md border-l-4 border-primary bg-muted/70 p-4 text-base">
@@ -58,7 +65,9 @@ export default function HelpPage({ params: { locale } }: Props) {
               className="depth-card depth-card-interactive tap-target flex items-center justify-between gap-4 p-6 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <span className="flex flex-col gap-1">
-                <span className="font-display text-xl font-bold">{t(`${id}.title`)}</span>
+                <span className="font-display text-xl font-bold">
+                  {t(`${id}.title`)}
+                </span>
                 <span className="text-base">{t(`${id}.summary`)}</span>
               </span>
               <ArrowRight aria-hidden="true" className="size-6 shrink-0" />
@@ -67,23 +76,25 @@ export default function HelpPage({ params: { locale } }: Props) {
         ))}
       </ul>
 
-      <section aria-labelledby="coming" className="flex flex-col gap-4">
-        <h2 id="coming">{t("comingHeading")}</h2>
-        <ul className="flex list-disc flex-col gap-2 pl-6">
-          {COMING.map((id) => (
-            <li key={id}>{t(`coming.${id}`)}</li>
-          ))}
-        </ul>
-        <p>
-          {t.rich("comingLead", {
-            forum: (c) => (
-              <Link href="/forum" className={linkClass}>
-                {c}
-              </Link>
-            ),
-          })}
-        </p>
-      </section>
+      {COMING.length > 0 && (
+        <section aria-labelledby="coming" className="flex flex-col gap-4">
+          <h2 id="coming">{t("comingHeading")}</h2>
+          <ul className="flex list-disc flex-col gap-2 pl-6">
+            {COMING.map((id) => (
+              <li key={id}>{t(`coming.${id}`)}</li>
+            ))}
+          </ul>
+          <p>
+            {t.rich("comingLead", {
+              forum: (c) => (
+                <Link href="/forum" className={linkClass}>
+                  {c}
+                </Link>
+              ),
+            })}
+          </p>
+        </section>
+      )}
     </main>
   );
 }

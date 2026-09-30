@@ -71,12 +71,14 @@ describe("lib/help", () => {
 });
 
 describe("/help", () => {
-  it("links each situation and lists the guides still being written", () => {
+  it("links every situation, and lists guides still being written only when there are some", () => {
     render(<HelpPage params={{ locale: "en" }} />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("What happened to you?");
     expect(screen.getByRole("link", { name: /A loan or credit was refused/ })).toHaveAttribute("href", "/en/help/credit");
-    const coming = screen.getByRole("region", { name: "Coming next" });
-    expect(within(coming).getAllByRole("listitem")).toHaveLength(COMING.length);
+    for (const { id } of SITUATIONS) expect(document.querySelector(`a[href="/en/help/${id}"]`)).not.toBeNull();
+    const coming = screen.queryByRole("region", { name: "Coming next" });
+    if (COMING.length) expect(within(coming!).getAllByRole("listitem")).toHaveLength(COMING.length);
+    else expect(coming).toBeNull();
     expect(screen.getByText(/still checking these pages|checking these pages against their sources/)).toBeInTheDocument();
     // The shortcomings come first, with a way for reviewers to offer help.
     expect(screen.getByText("Not reviewed by a legal expert yet.")).toBeInTheDocument();
@@ -264,6 +266,33 @@ describe("/help/account", () => {
     render(<SituationPage params={{ locale: "en", situation: "account" }} />);
     await user.click(screen.getByRole("radio", { name: "United States" }));
     expect(screen.getByText(/No federal law makes platforms explain/)).toBeInTheDocument();
+  });
+});
+
+describe("/help/deepfake", () => {
+  it("puts the urgent steps first, before anything else", () => {
+    render(<SituationPage params={{ locale: "en", situation: "deepfake" }} />);
+    const h2s = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
+    expect(h2s[0]).toBe("Do this first");
+    const first = screen.getByRole("region", { name: "Do this first" });
+    expect(within(first).getAllByRole("listitem")).toHaveLength(4);
+    expect(within(first).getByText(/call your bank now/)).toBeInTheDocument();
+  });
+
+  it("gives UK visitors the bank reimbursement rules and a claim letter", async () => {
+    const user = userEvent.setup();
+    render(<SituationPage params={{ locale: "en", situation: "deepfake" }} />);
+    await user.click(screen.getByRole("radio", { name: "United Kingdom" }));
+    expect(screen.getByText(/up to £85,000\. Claim within 13 months/)).toBeInTheDocument();
+    expect(screen.getByText(/Payment Systems Regulator's reimbursement rules/)).toBeInTheDocument();
+  });
+
+  it("gives Brazilian visitors the Pix contest within 80 days, and Indian visitors the two-hour rule and 1930", () => {
+    render(<SituationPage params={{ locale: "pt-BR", situation: "deepfake" }} />, { locale: "pt-BR" });
+    expect(screen.getByText(/conteste no app do seu banco em até 80 dias/)).toBeInTheDocument();
+    render(<SituationPage params={{ locale: "hi", situation: "deepfake" }} />, { locale: "hi" });
+    expect(screen.getAllByRole("link", { name: "1930" })[0]).toHaveAttribute("href", "tel:1930");
+    expect(screen.getByText(/दो घंटे के अंदर प्लेटफ़ॉर्म को कार्रवाई करनी होगी/)).toBeInTheDocument();
   });
 });
 

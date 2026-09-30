@@ -288,11 +288,10 @@
     "lead": "Choisissez ce qui s'est passé. Vous aurez des étapes claires, une lettre à compléter et à qui vous adresser si personne ne répond.",
     "pending": "<b>Pas encore relues par un expert juridique.</b> Robert Sweetman vérifie ces pages à partir de leurs sources, mais aucun avocat, aucune clinique juridique ni aucune association de consommateurs ne les a encore relues, et aucune personne de langue maternelle n'a vérifié les traductions. Si vous pouvez aider à les relire, <contact>contactez-nous</contact>.",
     "comingHeading": "Bientôt",
-    "coming": {
-      "deepfake": "Quelqu'un a utilisé une fausse voix ou une fausse vidéo pour vous tromper"
-    },
+    "coming": {},
     "comingLead": "Ces guides sont encore en cours d'écriture. <forum>Dites-nous sur le forum</forum> celui dont vous avez le plus besoin.",
     "backToHelp": "Toutes les situations",
+    "firstHeading": "À faire en premier",
     "happenedHeading": "Ce qui s'est probablement passé",
     "whereHeading": "Vos droits là où vous vivez",
     "rightsHeading": "Vos droits",
@@ -867,6 +866,102 @@
         "in": {
           "subject": "Réclamation concernant la suppression de mon contenu ou la restriction de mon compte{hasReference, select, yes { (compte {reference})} other {}}",
           "body": "À l'attention du responsable des réclamations (Grievance Officer),\n\nLe {decisionDate}, vous avez [supprimé ma publication / limité ou suspendu mon compte]. Je pense qu'il s'agit d'une erreur.\n\nMerci d'accuser réception de cette réclamation dans les 24 heures et de la régler dans les 7 jours, comme l'exige la règle 3(2) des Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Merci de m'indiquer les motifs de la mesure et de rétablir mon contenu ou mon compte s'il a été supprimé par erreur.\n\nSi vous êtes un intermédiaire de réseau social significatif, la règle 4(8) vous oblige aussi à me donner les motifs et une vraie possibilité de contester la mesure.\n\nCordialement,\n{name}"
+        }
+      }
+    },
+    "deepfake": {
+      "metaTitle": "Une fausse voix ou une fausse vidéo a servi à vous tromper, ou un faux de vous a été créé",
+      "metaDescription": "Que faire en premier si une voix ou une vidéo créée par IA a mené à un paiement, ou si quelqu'un a créé une fausse image ou vidéo de vous : vos droits, une lettre, et où le signaler.",
+      "title": "Une fausse voix ou une fausse vidéo a servi à vous tromper, ou un faux de vous a été créé",
+      "summary": "Une voix ou une vidéo créée par IA a servi à vous tromper, ou quelqu'un a créé un faux de vous.",
+      "lead": "Quelqu'un a utilisé une voix, une vidéo ou une image créée par IA pour vous tromper, souvent pour obtenir de l'argent. Ou quelqu'un a créé une fausse image ou vidéo de vous. Agir vite aide, et rien de tout cela n'est de votre faute.",
+      "first": {
+        "money": "<b>Si vous avez envoyé de l'argent ou donné vos coordonnées bancaires, appelez votre banque tout de suite,</b> au numéro inscrit sur votre carte ou sur le site de la banque. Plus elle le sait tôt, plus les chances de bloquer ou de récupérer le paiement sont grandes.",
+        "stop": "<b>N'envoyez plus d'argent et cessez de répondre.</b> Les auteurs de ces escroqueries reviennent souvent avec une nouvelle histoire.",
+        "check": "<b>Si un appel ou une vidéo semblait venir d'un proche, raccrochez et rappelez-le</b> au numéro que vous avez déjà.",
+        "save": "<b>Gardez tout</b> : messages, numéros, messages vocaux, vidéos, liens et détails du paiement. Puis portez plainte auprès de la police."
+      },
+      "happened": {
+        "clone": "Quelques secondes de la voix de quelqu'un, ou quelques photos, peuvent suffire à l'IA pour créer une imitation convaincante.",
+        "pressure": "Ces escroqueries créent souvent la panique : un proche en difficulté, un supérieur qui demande un paiement urgent, ou un visage connu qui vante un placement.",
+        "you": "On peut aussi créer des faux de vous, y compris des images intimes. Ce n'est jamais de votre faute, et vous pouvez demander leur retrait."
+      },
+      "company": {
+        "fast": "<b>Rendez facile le signalement d'une escroquerie ou d'un faux, de jour comme de nuit,</b> et agissez vite. Chaque minute compte.",
+        "believe": "<b>Partez de la confiance.</b> Les personnes trompées se sentent souvent gênées. Une première réponse bienveillante les aide à vous dire tout ce dont vous avez besoin.",
+        "label": "<b>Signalez clairement les contenus créés par IA.</b> Dans l'UE, les hypertrucages (deepfakes) doivent être déclarés.",
+        "remove": "<b>Retirez vite les faux de personnes réelles quand elles le demandent,</b> et empêchez les copies de revenir. Aux États-Unis, les images intimes doivent être retirées dans les 48 heures.",
+        "share": "<b>Partagez les signaux d'alerte avec vos clients,</b> sans blâmer les personnes qui se sont fait avoir."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Si quelqu'un a partagé une image intime de vous, réelle ou créée par IA, sans votre consentement,</b> les plateformes doivent la retirer, ainsi que les copies connues, dans les 48 heures suivant votre demande. C'est le cas depuis le 19 mai 2026.",
+          "2": "<b>Vous pouvez signaler les escroqueries, y compris les fausses voix et vidéos, à l'Internet Crime Complaint Center du FBI,</b> gratuitement.",
+          "3": "<b>Le remboursement par votre banque dépend de votre moyen de paiement et de ce qui s'est passé.</b> Appelez tout de suite et demandez-lui de confirmer par écrit ce qu'elle va faire."
+        },
+        "noReply": "Si une plateforme ne retire pas une image intime dans les 48 heures, <tida>prévenez la FTC</tida>. Signalez l'escroquerie <ic3>à l'Internet Crime Complaint Center du FBI</ic3> et à la police locale."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Si une escroquerie a mené à l'envoi d'argent par virement bancaire au Royaume-Uni,</b> votre banque doit en général vous rembourser, jusqu'à 85 000 £. Faites la demande dans les 13 mois suivant le paiement. Les banques peuvent retenir jusqu'à 100 £.",
+          "2": "<b>Les principales exceptions sont la participation à l'escroquerie ou une négligence grave,</b> et elles ne s'appliquent pas aux personnes vulnérables. La plupart des remboursements arrivent dans les 5 jours ouvrables suivant la demande."
+        },
+        "noReply": "Si votre banque refuse ou ne répond pas, vous pouvez saisir gratuitement le <fos>Financial Ombudsman Service</fos>. Portez aussi plainte auprès de la police."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Les hypertrucages (deepfakes) doivent être signalés.</b> Quiconque utilise l'IA pour créer ou modifier des images, du son ou de la vidéo jusqu'à en faire un hypertrucage doit l'indiquer. C'est le cas depuis le 2 août 2026.",
+          "2": "<b>Vous pouvez demander l'effacement de vos données personnelles quand elles sont utilisées de façon illicite,</b> ce qui peut inclure un faux créé à partir de vos photos, de votre voix ou de vos vidéos. On doit vous répondre dans un délai d'un mois.",
+          "3": "<b>Si une plateforme refuse votre demande,</b> vous pouvez demander un réexamen par son système de réclamation."
+        },
+        "noReply": "S'ils ne le retirent pas, portez plainte gratuitement auprès de votre autorité de protection des données : <edpb>trouvez la vôtre dans la liste des autorités de protection des données de l'UE</edpb>. Si vous avez envoyé de l'argent, appelez tout de suite votre banque et portez plainte auprès de la police."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Si une escroquerie a mené à l'envoi d'un Pix, contestez-le dans l'application de votre banque dans les 80 jours.</b> C'est possible même si vous avez autorisé le paiement avec votre mot de passe ou votre empreinte.",
+          "2": "<b>Agissez vite</b> : récupérer l'argent dépend de sa présence sur les comptes où il est arrivé.",
+          "3": "<b>Vous pouvez demander l'effacement des données vous concernant utilisées de façon illicite,</b> ce qui peut inclure un faux de vous."
+        },
+        "noReply": "Si votre banque ne règle pas le problème, vous pouvez déposer une réclamation sur <consumidor>Consumidor.gov.br</consumidor> ou auprès de votre <procon>Procon</procon> local. Portez aussi plainte auprès de la police."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Si vous avez perdu de l'argent, appelez le 1930 ou faites un signalement sur le portail national de la cybercriminalité sans attendre.</b>",
+          "2": "<b>Les plateformes doivent agir dans les deux heures suivant votre plainte</b> contre un contenu qui usurpe votre identité, y compris des images modifiées par IA, ou qui montre des images intimes de vous.",
+          "3": "<b>Si la plateforme n'agit pas,</b> vous pouvez faire appel devant le Grievance Appellate Committee dans les 30 jours."
+        },
+        "noReply": "<portal>Signalez-le sur le portail national de la cybercriminalité</portal>, ou appelez le <tel>1930</tel>. Si une plateforme ne retire pas le contenu, <gac>faites appel devant le Grievance Appellate Committee</gac>."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Ce site ne couvre pas encore les lois de votre pays.</b> Si vous avez envoyé de l'argent, appelez tout de suite votre banque. Portez plainte auprès de la police, et demandez par écrit à la plateforme de retirer tout faux de vous."
+        },
+        "noReply": "Sans réponse, cherchez l'unité de lutte contre la cybercriminalité de la police, une autorité de protection des données ou une autorité de protection des consommateurs dans votre pays."
+      },
+      "letters": {
+        "us": {
+          "subject": "Demande de retrait d'un contenu faux ou intime me concernant{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai trouvé [lien ou description du contenu] sur votre service. Il me montre dans [une image / une vidéo / un audio] faux, créé ou modifié par IA, et je n'y ai pas consenti.\n\nMerci de le retirer, ainsi que toute copie. S'il s'agit d'une image intime, le TAKE IT DOWN Act vous oblige à la retirer, ainsi que les copies identiques connues, dans les 48 heures suivant cette demande. Je confirme de bonne foi qu'elle a été partagée sans mon consentement.\n\nMerci de me confirmer par écrit son retrait.\n\nCordialement,\n{name}"
+        },
+        "uk": {
+          "subject": "Demande de remboursement pour une escroquerie au paiement autorisé (APP){hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai envoyé [montant] par virement bancaire à [nom et compte], à la suite d'une escroquerie utilisant [une fausse voix / une fausse vidéo / un faux message]. Je la signale comme une escroquerie au paiement autorisé (authorised push payment scam).\n\nMerci de traiter cette lettre comme ma demande de remboursement au titre des règles de remboursement du Payment Systems Regulator. Merci d'en accuser réception et de m'informer du résultat par écrit.\n\nCordialement,\n{name}"
+        },
+        "eu": {
+          "subject": "Demande d'effacement d'un contenu faux me concernant (article 17 du RGPD){hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai trouvé [lien ou description du contenu] sur votre service. Il me montre dans [une image / une vidéo / un audio] faux, créé ou modifié par IA, sans mon consentement.\n\nAu titre de l'article 17 du RGPD, je vous demande d'effacer ce contenu et toute copie dans les meilleurs délais, car il utilise mes données personnelles de façon illicite. Merci aussi de m'indiquer, si possible, qui l'a mis en ligne.\n\nMerci de me répondre dans un délai d'un mois, comme l'exige l'article 12, paragraphe 3.\n\nCordialement,\n{name}"
+        },
+        "br": {
+          "subject": "Contestation d'un Pix fait à la suite d'une escroquerie (MED){hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai envoyé un Pix de [montant] à [nom ou clé Pix], à la suite d'une escroquerie utilisant [une fausse voix / une fausse vidéo / un faux message]. Je conteste cette transaction.\n\nMerci d'ouvrir le Mecanismo Especial de Devolução (MED) pour cette transaction et d'essayer de récupérer l'argent. Merci de m'envoyer le numéro de protocole et de m'informer du résultat par écrit.\n\nCordialement,\n{name}"
+        },
+        "in": {
+          "subject": "Plainte concernant un contenu faux ou intime me concernant{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "À l'attention du responsable des réclamations (Grievance Officer),\n\nLe {decisionDate}, j'ai trouvé [lien ou description du contenu] sur votre service. Il usurpe mon identité dans [une image / une vidéo / un audio] faux, créé ou modifié par IA, et je n'y ai pas consenti.\n\nAu titre de la règle 3(2)(b) des Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, merci de le retirer ou d'en bloquer l'accès dans les deux heures suivant cette plainte.\n\nMerci de me confirmer par écrit son retrait.\n\nCordialement,\n{name}"
+        },
+        "plain": {
+          "subject": "Demande de retrait d'un contenu faux me concernant{hasReference, select, yes { (réf. {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, j'ai trouvé [lien ou description du contenu] sur votre service. Il me montre dans [une image / une vidéo / un audio] faux, créé ou modifié par IA, et je n'y ai pas consenti.\n\nMerci de le retirer, ainsi que toute copie, dès que possible, et de me confirmer par écrit que c'est fait.\n\nCordialement,\n{name}"
         }
       }
     }

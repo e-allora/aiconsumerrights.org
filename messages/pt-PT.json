@@ -288,11 +288,10 @@
     "lead": "Escolha o que aconteceu. Terá passos claros, uma carta que pode preencher e a quem recorrer se ninguém responder.",
     "pending": "<b>Ainda sem revisão de um especialista jurídico.</b> Robert Sweetman está a verificar estas páginas com as suas fontes, mas nenhum advogado, clínica jurídica ou organização de consumidores as reviu, e nenhum falante nativo reviu as traduções. Se puder ajudar a revê-las, <contact>entre em contacto</contact>.",
     "comingHeading": "Em breve",
-    "coming": {
-      "deepfake": "Alguém usou uma voz ou um vídeo falsos para o enganar"
-    },
+    "coming": {},
     "comingLead": "Estes guias ainda estão a ser escritos. <forum>Diga-nos no fórum</forum> de qual precisa mais.",
     "backToHelp": "Todas as situações",
+    "firstHeading": "Faça isto primeiro",
     "happenedHeading": "O que provavelmente aconteceu",
     "whereHeading": "Os seus direitos onde vive",
     "rightsHeading": "Os seus direitos",
@@ -867,6 +866,102 @@
         "in": {
           "subject": "Reclamação sobre a remoção do meu conteúdo ou a restrição da minha conta{hasReference, select, yes { (conta {reference})} other {}}",
           "body": "Ao responsável por reclamações (Grievance Officer),\n\nEm {decisionDate}, [removeram a minha publicação / limitaram ou suspenderam a minha conta]. Creio que foi um erro.\n\nPeço que confirmem a receção desta reclamação em 24 horas e a resolvam em 7 dias, como exige a regra 3(2) das Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Peço que me indiquem os fundamentos da medida e que reponham o meu conteúdo ou a minha conta se foi removido por erro.\n\nSe forem um intermediário de redes sociais significativo, a regra 4(8) também vos obriga a dar-me os motivos e uma oportunidade justa de contestar a medida.\n\nCom os melhores cumprimentos,\n{name}"
+        }
+      }
+    },
+    "deepfake": {
+      "metaTitle": "Usaram uma voz ou um vídeo falsos num esquema contra si, ou fizeram uma montagem falsa de si",
+      "metaDescription": "O que fazer primeiro se uma voz ou um vídeo feitos com IA levaram a um pagamento, ou se alguém fez uma imagem ou um vídeo falsos de si: os seus direitos, uma carta e onde denunciar.",
+      "title": "Usaram uma voz ou um vídeo falsos num esquema contra si, ou fizeram uma montagem falsa de si",
+      "summary": "Uma voz ou um vídeo feitos com IA foram usados num esquema contra si, ou alguém fez uma montagem falsa de si.",
+      "lead": "Alguém usou uma voz, um vídeo ou uma imagem feitos com IA num esquema, muitas vezes para conseguir dinheiro. Ou alguém fez uma imagem ou um vídeo falsos de si. Agir depressa ajuda, e nada disto é culpa sua.",
+      "first": {
+        "money": "<b>Se enviou dinheiro ou deu dados bancários, ligue já para o seu banco,</b> para o número do cartão ou do site do próprio banco. Quanto mais cedo souberem, maior a hipótese de travar ou recuperar o pagamento.",
+        "stop": "<b>Não envie mais dinheiro e deixe de responder.</b> Quem faz estes esquemas volta muitas vezes com outra história.",
+        "check": "<b>Se uma chamada ou um vídeo parecia vir de alguém que conhece, desligue e volte a ligar</b> para o número que já tem dessa pessoa.",
+        "save": "<b>Guarde tudo:</b> mensagens, números, mensagens de voz, vídeos, links e dados do pagamento. Depois apresente queixa à polícia."
+      },
+      "happened": {
+        "clone": "Alguns segundos da voz de alguém, ou umas poucas fotos, podem bastar para a IA fazer uma imitação convincente.",
+        "pressure": "Estes esquemas criam muitas vezes pânico: um familiar em apuros, um chefe a pedir um pagamento urgente, ou uma cara famosa a promover um investimento.",
+        "you": "Também podem fazer montagens falsas de si, incluindo imagens íntimas. A culpa nunca é sua, e pode pedir que sejam retiradas."
+      },
+      "company": {
+        "fast": "<b>Facilite a denúncia de um esquema ou de uma montagem falsa, de dia ou de noite,</b> e aja depressa. Os minutos contam.",
+        "believe": "<b>Parta da confiança.</b> Quem foi enganado sente muitas vezes constrangimento. Uma primeira resposta simpática ajuda a pessoa a contar tudo o que precisa de saber.",
+        "label": "<b>Identifique com clareza o conteúdo feito com IA.</b> Na UE, os deepfakes têm de ser assinalados.",
+        "remove": "<b>Retire depressa as montagens de pessoas reais quando o pedirem,</b> e impeça que as cópias voltem. Nos EUA, as imagens íntimas têm de ser retiradas em 48 horas.",
+        "share": "<b>Partilhe sinais de alerta com os clientes,</b> sem culpar quem foi apanhado."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Se alguém partilhou uma imagem íntima sua, real ou feita com IA, sem o seu consentimento,</b> as plataformas têm de a retirar, juntamente com as cópias conhecidas, no prazo de 48 horas após o seu pedido. Isto aplica-se desde 19 de maio de 2026.",
+          "2": "<b>Pode denunciar esquemas, incluindo vozes e vídeos falsos, ao Internet Crime Complaint Center do FBI,</b> gratuitamente.",
+          "3": "<b>Se o banco tem de fazer o reembolso depende de como pagou e do que aconteceu.</b> Ligue de imediato e peça que confirmem por escrito o que vão fazer."
+        },
+        "noReply": "Se uma plataforma não retirar uma imagem íntima em 48 horas, <tida>informe a FTC</tida>. Denuncie o esquema ao <ic3>Internet Crime Complaint Center do FBI</ic3> e à polícia local."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Se um esquema levou ao envio de dinheiro por transferência bancária no Reino Unido,</b> em regra o banco tem de o devolver, até 85 000 £. Reclame no prazo de 13 meses após o pagamento. Os bancos podem descontar até 100 £.",
+          "2": "<b>As principais exceções são participar no esquema ou negligência grave,</b> e não se aplicam a pessoas em situação vulnerável. A maioria dos reembolsos chega em 5 dias úteis após a reclamação."
+        },
+        "noReply": "Se o banco disser que não ou não responder, pode levar o caso gratuitamente ao <fos>Financial Ombudsman Service</fos>. Apresente também queixa à polícia."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Os deepfakes têm de estar assinalados.</b> Quem usa IA para criar ou alterar imagens, áudio ou vídeo até se tornarem um deepfake tem de o indicar. Isto aplica-se desde 2 de agosto de 2026.",
+          "2": "<b>Pode pedir o apagamento dos seus dados pessoais quando são usados de forma ilícita,</b> o que pode incluir uma montagem falsa feita com as suas fotos, voz ou vídeos. Têm de responder no prazo de um mês.",
+          "3": "<b>Se uma plataforma recusar o seu pedido,</b> pode pedir uma revisão através do sistema de reclamações."
+        },
+        "noReply": "Se não o retirarem, apresente queixa gratuitamente à autoridade de proteção de dados: <edpb>encontre a sua na lista de autoridades de proteção de dados da UE</edpb>. Se enviou dinheiro, ligue já para o banco e apresente queixa à polícia."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Se um esquema levou ao envio de um Pix, conteste-o na app do seu banco no prazo de 80 dias.</b> Funciona mesmo que tenha autorizado o pagamento com a sua senha ou impressão digital.",
+          "2": "<b>Aja depressa:</b> recuperar o dinheiro depende de ele ainda ser encontrado nas contas para onde foi.",
+          "3": "<b>Pode pedir o apagamento de dados sobre si usados de forma ilícita,</b> o que pode incluir uma montagem falsa de si."
+        },
+        "noReply": "Se o banco não resolver, pode reclamar no <consumidor>Consumidor.gov.br</consumidor> ou no <procon>Procon</procon> local. Apresente também queixa à polícia."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Se perdeu dinheiro, ligue para o 1930 ou denuncie de imediato no portal nacional de cibercrime.</b>",
+          "2": "<b>As plataformas têm de agir no prazo de duas horas após a sua queixa</b> contra conteúdo que se faça passar por si, incluindo imagens alteradas com IA, ou que mostre imagens íntimas suas.",
+          "3": "<b>Se a plataforma não agir,</b> pode recorrer ao Grievance Appellate Committee no prazo de 30 dias."
+        },
+        "noReply": "<portal>Denuncie no portal nacional de cibercrime</portal>, ou ligue para o <tel>1930</tel>. Se uma plataforma não retirar o conteúdo, <gac>recorra ao Grievance Appellate Committee</gac>."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Este site ainda não cobre as leis do seu país.</b> Se enviou dinheiro, ligue já para o banco. Apresente queixa à polícia e peça por escrito à plataforma que retire qualquer montagem falsa de si."
+        },
+        "noReply": "Se não tiver resposta, procure a unidade de cibercrime da polícia, uma autoridade de proteção de dados ou uma autoridade de defesa do consumidor no seu país."
+      },
+      "letters": {
+        "us": {
+          "subject": "Pedido de remoção de conteúdo falso ou íntimo sobre mim{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, encontrei [link ou descrição do conteúdo] no vosso serviço. Mostra-me [numa imagem / num vídeo / num áudio] falso criado ou alterado com IA, e não dei o meu consentimento.\n\nPeço que o retirem, juntamente com quaisquer cópias. Se for uma imagem íntima, a TAKE IT DOWN Act obriga-vos a retirá-la, com as cópias idênticas conhecidas, no prazo de 48 horas após este pedido. Confirmo de boa-fé que foi partilhada sem o meu consentimento.\n\nPeço que me confirmem por escrito quando tiver sido retirado.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "uk": {
+          "subject": "Pedido de reembolso por um esquema de pagamento autorizado (APP){hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, enviei [valor] por transferência bancária para [nome e conta], depois de ter sido enganado ou enganada por [uma voz / um vídeo / uma mensagem falsos]. Comunico este caso como um esquema de pagamento autorizado (authorised push payment scam).\n\nPeço que tratem esta carta como o meu pedido de reembolso ao abrigo das regras de reembolso do Payment Systems Regulator. Confirmem que a receberam e informem-me do resultado por escrito.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "eu": {
+          "subject": "Pedido de apagamento de conteúdo falso sobre mim (artigo 17.º do RGPD){hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, encontrei [link ou descrição do conteúdo] no vosso serviço. Mostra-me [numa imagem / num vídeo / num áudio] falso criado ou alterado com IA, sem o meu consentimento.\n\nAo abrigo do artigo 17.º do RGPD, peço que apaguem este conteúdo e quaisquer cópias sem demora injustificada, porque usa os meus dados pessoais de forma ilícita. Peço também que me digam, se puderem, quem o carregou.\n\nPeço que respondam no prazo de um mês, como exige o artigo 12.º, n.º 3.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "br": {
+          "subject": "Contestação de um Pix feito por causa de um esquema (MED){hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, enviei um Pix de [valor] para [nome ou chave Pix], depois de ter sido enganado ou enganada por [uma voz / um vídeo / uma mensagem falsos]. Contesto esta transação como um esquema.\n\nPeço que abram o Mecanismo Especial de Devolução (MED) para esta transação e tentem recuperar o dinheiro. Enviem-me o número de protocolo e informem-me do resultado por escrito.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "in": {
+          "subject": "Queixa sobre conteúdo falso ou íntimo sobre mim{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Ao responsável por reclamações (Grievance Officer),\n\nEm {decisionDate}, encontrei [link ou descrição do conteúdo] no vosso serviço. Faz-se passar por mim [numa imagem / num vídeo / num áudio] falso criado ou alterado com IA, e não dei o meu consentimento.\n\nAo abrigo da regra 3(2)(b) das Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, peço que o retirem ou bloqueiem o acesso no prazo de duas horas após esta queixa.\n\nPeço que me confirmem por escrito quando tiver sido retirado.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "plain": {
+          "subject": "Pedido de remoção de conteúdo falso sobre mim{hasReference, select, yes { (ref. {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, encontrei [link ou descrição do conteúdo] no vosso serviço. Mostra-me [numa imagem / num vídeo / num áudio] falso criado ou alterado com IA, e não dei o meu consentimento.\n\nPeço que o retirem, juntamente com quaisquer cópias, o mais depressa possível, e que me confirmem por escrito quando o tiverem feito.\n\nCom os melhores cumprimentos,\n{name}"
         }
       }
     }

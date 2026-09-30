@@ -32,7 +32,7 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 
 ### 🆘 Help: "What happened to you?"
 
-- 🧭 **Situation guides:** a refused loan or credit, a job application screened out, a rental application turned down, an insurance decision, a chatbot or refund problem, and a blocked account or removed post. Deepfake scams are next.
+- 🧭 **Situation guides:** a refused loan or credit, a job application screened out, a rental application turned down, an insurance decision, a chatbot or refund problem, a blocked account or removed post, and a fake voice or video used to trick someone (with urgent first steps).
 - 🌍 **Rights where you live:** the US, the UK, the EU, Brazil, India, or somewhere else, with every right linked to a numbered source.
 - ✉️ **A letter you fill in:** copy it, print it, or open it in your own email app. Nothing you type leaves your device.
 - 🤝 **A note for the company that gets the letter,** on how to answer well. Nobody is blamed.
