@@ -2,7 +2,7 @@
 
 **Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.**
 
-🌐 **Live preview:** [aiconsumerrights-org-chi.vercel.app](https://aiconsumerrights-org-chi.vercel.app) · 🗣️ English, Español, Português (PT), Português (BR), Italiano, Français, Deutsch, and हिन्दी · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
+🌐 **Live:** [aiconsumerrights.org](https://aiconsumerrights.org) · 🗣️ English, Español, Português (PT), Português (BR), Italiano, Français, Deutsch, and हिन्दी · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
 
 ![The guide page, "AI you can question", on a warm cream background](docs/screenshots/guide-light.png)
 
@@ -10,7 +10,7 @@
 
 ## 🎯 Mission
 
-This project makes AI consumer rights easy to understand and easy to talk about. It brings together US and EU perspectives, and invites everyone into the conversation: people who use AI, educators, regulators, and the teams that build it.
+This project makes AI consumer rights easy to understand and easy to talk about. It brings together perspectives from the US, the UK, the EU, Brazil, India, and beyond, and invites everyone into the conversation: people who use AI, educators, regulators, and the teams that build it.
 
 ### 💛 Blameless and non-generalizing, always
 
@@ -25,15 +25,23 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 | 🔁 | **Traceability** | Every forum question leads to a visible outcome, recorded in a "We asked, you said, we did" card. |
 | 🤖 | **Bot and spam resistance** | Voting uses single, stand-alone statements (Agree, Disagree, Pass). There are no reply threads. |
 | ♿ | **Zero-barrier access** | No account needed to vote. Pages aim for a grade 6 to 8 reading level and are tested against WCAG 2.2 AA. |
-| 🌉 | **Common ground first** | Results show a statement only when every opinion group agrees. |
+| 🌉 | **Common ground first** | Votes are grouped by the language people vote in, and a statement counts as broad agreement only when every language group supports it. |
 | ⚡ | **Sturdy by design** | Static pages, kept separate from interactive features, so the content loads fast and keeps working. |
 
 ## ✨ What's inside
 
+### 🆘 Help: "What happened to you?"
+
+- 🧭 **Five situation guides:** a refused loan or credit, a job application screened out, a rental application turned down, an insurance decision, and a chatbot or refund problem. Blocked accounts and deepfake scams are next.
+- 🌍 **Rights where you live:** the US, the UK, the EU, Brazil, India, or somewhere else, with every right linked to a numbered source.
+- ✉️ **A letter you fill in:** copy it, print it, or open it in your own email app. Nothing you type leaves your device.
+- 🤝 **A note for the company that gets the letter,** on how to answer well. Nobody is blamed.
+- 🚧 **Shortcomings stated up front:** no lawyer, legal clinic, or consumer organisation has reviewed the pages yet, and native speakers haven't checked the translations. Reviewers can write to reviewers@aiconsumerrights.org.
+
 ### 📖 The guide: "AI you can question"
 
 - 🔍 **Spot the AI in your day:** chatbots, recommendation algorithms, and automated screening, in plain words.
-- ⚖️ **US, EU, Brazil, and Italy rules, side by side:** each claim is labeled (Law, Guidance, Research) and linked to a numbered source.
+- ⚖️ **US and EU rules, side by side with one more country you pick (Brazil, France, Germany, India, or Italy):** each claim is labeled (Law, Guidance, Research) and linked to a numbered source.
 - 🪜 **Algorithm Decision Explorer:** three calm steps (ask in writing, ask for a person, talk it through), with sample wording you can copy.
 
 ![The three-step Algorithm Decision Explorer](docs/screenshots/explorer.png)
@@ -46,7 +54,7 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 
 ![The forum voting card with Agree, Disagree, and Pass buttons](docs/screenshots/forum.png)
 
-> 🧪 **The forum is in preview.** Votes and statements stay in your browser, and nothing is sent anywhere yet. The consensus card shows clearly labeled example data until real votes exist.
+> 🗳️ **How the forum works:** votes are counted in a database in Frankfurt, Germany, stored with a scrambled browser code and no name, email, or IP address. Suggested statements get an automated first check and then wait for a person to review them. The [How this site works](https://aiconsumerrights.org/en/how-it-works) page lists every service, what each one sees, and what isn't finished.
 
 ### 🔎 Provenance on every page
 
@@ -56,7 +64,7 @@ Every page ends with a **"How this site was made"** footer that lists:
 - 📚 **The primary sources:** UNESCO, Pew Research, the Stanford AI Index, W3C WCAG 2.2, the FTC, the CFPB, and the EU AI Act.
 - 🧑‍⚖️ **Human review status:** the footer says plainly when review is still pending.
 
-The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.app/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
+The full registry lives at [`/sources`](https://aiconsumerrights.org/en/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
 
 #### 🔐 Check a source yourself
 
@@ -69,7 +77,7 @@ The full registry lives at [`/sources`](https://aiconsumerrights-org-chi.vercel.
 
 ### 🗣️ English, Spanish, Portuguese (Portugal and Brazil), Italian, French, German, and Hindi
 
-- 🌎 Every page exists at `/en/...`, `/es/...`, `/pt/...` (Portugal), `/pt-BR/...` (Brazil), and `/it/...` (Italy). A visit to `/` opens the language your browser asks for.
+- 🌎 Every page exists at `/en/...`, `/es/...`, `/pt/...` (Portugal), `/pt-BR/...` (Brazil), `/it/...`, `/fr/...`, `/de/...`, and `/hi/...`. A visit to `/` opens the language your browser asks for.
 - 🔁 The language menu in the header, or in the mobile menu, keeps you on the same page: `/en/forum` becomes `/es/forum`.
 - 📝 Spanish, European Portuguese, Brazilian Portuguese, Italian, French, German, and Hindi text is written at a grade 6 to 8 reading level and keeps the same warm, blameless tone. Every key, placeholder, and citation matches the English, and tests fail if any key is missing.
 - ⏸️ The PAUSE Strategy spells PAUSE in English, French, and German, and PAUSA in Spanish, Portuguese, and Italian. Hindi keeps PAUSE and pairs each English keyword with its Hindi meaning, since Devanagari cannot spell it.
@@ -97,7 +105,7 @@ Next.js 14 (App Router) · next-intl · TypeScript · Tailwind CSS · shadcn/ui 
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000 (opens /en or /es)
+npm run dev          # http://localhost:3000 (opens the language your browser asks for)
 ```
 
 | Command | What it does |
@@ -114,31 +122,32 @@ npm run dev          # http://localhost:3000 (opens /en or /es)
 ## 🗂️ Project layout
 
 ```
-app/[locale]/         Pages: /, /guide, /forum, /sources, /about, in /en, /es, /pt, /pt-BR, and /it
+app/[locale]/         Pages: /, /help, /help/[situation], /guide, /forum, /sources, /about, /how-it-works, in all eight languages
 app/                  Sitemap, robots, and the share image
-messages/             en.json, es.json, pt-PT.json, pt-BR.json, and it.json, every string on the site
+messages/             en, es, pt-PT, pt-BR, it, fr, de, and hi: every string on the site
 i18n.ts, middleware.ts  Loads messages per request; adds the locale and detects the browser language
 components/ui/        Design-system primitives: Button, Card, ThemeToggle, LanguageSwitcher, SiteNav, AttributionFooter
-components/guide/     AlgorithmExplorer
+components/guide/     AlgorithmExplorer, CompareTable, PAUSEStrategy
+components/help/      RegionPicker, LetterBuilder
 components/forum/     VotingEngine, StatementSubmission, ConsensusCluster
-lib/                  Site config, SEO helpers, source registry, forum statements
+lib/                  Site config, SEO helpers, source registry, help situations, forum database and statements
 lib/data/sources.json The transparency registry every citation resolves to
 scripts/              Real-browser accessibility audit and screenshot tools
-__tests__/            272 unit, integration, accessibility, i18n, and SEO tests
+__tests__/            Unit, integration, accessibility, i18n, and SEO tests
 ```
 
 ## ✅ Quality bar
 
 Every phase ships only when all of these pass:
 
-- 🧪 **Jest:** 482 tests, including axe on every page in all eight languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
+- 🧪 **Jest:** 526 tests, including axe on every page in all eight languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
 - 🔤 **TypeScript and lint:** zero errors, zero warnings.
 - 🏗️ **Production build:** zero warnings.
-- ♿ **Real-browser audit:** zero WCAG A/AA violations across 194 page states in all eight languages, with a built-in canary that proves the checks work.
+- ♿ **Real-browser audit:** zero WCAG A/AA violations across 386 page states in all eight languages, with a built-in canary that proves the checks work.
 
 ## 🤖 AI assistance disclosure
 
-This project was researched and drafted with help from AI models. The code and page text were written with **Claude (Anthropic)** in Claude Code. Research drafts also came from **GPT (OpenAI)** and **Gemini (Google)**, plus other models through OpenRouter whose names the chat exports do not record. A person reviews every page before launch, and the site's footer shows where that review stands.
+This project was researched and drafted with help from AI models. The code and page text were written with **Claude (Anthropic)** in Claude Code. Research drafts also came from **GPT (OpenAI)** and **Gemini (Google)**, plus other models through OpenRouter whose names the chat exports do not record. Robert is still checking the pages against their sources, and no lawyer, legal clinic, or consumer organisation has reviewed them yet. Every page says so, and the footer shows where review stands.
 
 ## 🌱 Contributing
 
@@ -150,7 +159,7 @@ Ideas and fixes are welcome. Please follow the same principles the forum uses:
 4. 🔍 Be open about AI use, cite your sources, and say what you don't know.
 5. 🪜 Lift while you climb.
 
-Every change needs passing tests, a clean build, and a clean `npm run audit:a11y` run.
+Every change needs passing tests, a clean build, and a clean `npm run audit:a11y` run. Criticism with a reason is welcome at feedback@aiconsumerrights.org.
 
 ## 📜 License
 

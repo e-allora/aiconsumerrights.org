@@ -114,8 +114,8 @@ describe("AlgorithmExplorer", () => {
     await user.click(tabs()[2]);
     await user.click(screen.getByRole("button", { name: "No, where else can I turn?" }));
     const links = screen.getAllByRole("link", { name: /opens in a new tab/ });
-    // US (2), Brazil (3), France (2), Germany (3), India (2), Italy (2).
-    expect(links).toHaveLength(14);
+    // US (2), EU list (1), Brazil (3), France (2), Germany (3), India (2), Italy (2).
+    expect(links).toHaveLength(15);
     for (const a of links) {
       expect(a).toHaveAttribute("target", "_blank");
       expect(a).toHaveAttribute("rel", "noopener noreferrer");

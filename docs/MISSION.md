@@ -8,7 +8,7 @@ or [open an issue](https://github.com/e-allora/aiconsumerrights.org/issues).
 
 AI now helps make decisions about people: loans, jobs, prices, what we see.
 Most people aren't told how, or what they can do about it. This site explains
-your rights in plain words, in five languages, and gives people a calm place
+your rights in plain words, in eight languages, and gives people a calm place
 to say what should change, across the US, Europe, Brazil, and beyond.
 
 ## How we work

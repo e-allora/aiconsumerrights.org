@@ -218,7 +218,7 @@
       "agencyUS": "United States:",
       "agencyUSCredit": "For credit, loans, and banking:",
       "agencyEU": "European Union:",
-      "agencyEUText": "your national consumer authority or data-protection authority.",
+      "agencyEUText": "your national consumer authority or data-protection authority. <edpb>Find your data protection authority on the EU list</edpb>.",
       "agencyElsewhere": "Elsewhere:",
       "agencyElsewhereText": "your national consumer agency.",
       "steps": {

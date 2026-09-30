@@ -218,7 +218,7 @@
       "agencyUS": "Estados Unidos:",
       "agencyUSCredit": "Para crédito, empréstimos e bancos:",
       "agencyEU": "União Europeia:",
-      "agencyEUText": "a autoridade nacional de defesa do consumidor ou de proteção de dados do seu país.",
+      "agencyEUText": "a autoridade nacional de defesa do consumidor ou de proteção de dados do seu país. <edpb>Encontre sua autoridade de proteção de dados na lista da UE</edpb>.",
       "agencyElsewhere": "Em outros lugares:",
       "agencyElsewhereText": "o órgão de defesa do consumidor do seu país. No Brasil, o Procon do seu estado.",
       "steps": {

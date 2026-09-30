@@ -218,7 +218,7 @@
       "agencyUS": "Vereinigte Staaten:",
       "agencyUSCredit": "Für Kredite, Darlehen und Bankgeschäfte:",
       "agencyEU": "Europäische Union:",
-      "agencyEUText": "die nationale Verbraucherschutz- oder Datenschutzbehörde Ihres Landes.",
+      "agencyEUText": "die nationale Verbraucherschutz- oder Datenschutzbehörde Ihres Landes. <edpb>Finden Sie Ihre Datenschutzbehörde in der Liste der EU</edpb>.",
       "agencyElsewhere": "Anderswo:",
       "agencyElsewhereText": "die nationale Verbraucherschutzstelle Ihres Landes.",
       "steps": {

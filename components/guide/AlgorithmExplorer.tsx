@@ -246,7 +246,10 @@ export function AlgorithmExplorer() {
                 {t("agencyUSCredit")} <SourceLink source={getSource("cfpb-complaint")} />.
               </li>
               <li>
-                <strong>{t("agencyEU")}</strong> {t("agencyEUText")}
+                <strong>{t("agencyEU")}</strong>{" "}
+                {t.rich("agencyEUText", {
+                  edpb: (c) => <HelpLink source={getSource("edpb-members")}>{c}</HelpLink>,
+                })}
               </li>
               {COUNTRIES.filter((c) => c !== home).map(helpItem)}
               <li>
