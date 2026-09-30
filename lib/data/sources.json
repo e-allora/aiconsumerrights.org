@@ -951,7 +951,7 @@
           "url": "https://www.gazzettaufficiale.it/eli/gu/2025/09/25/223/sg/pdf",
           "status": "confirmed",
           "primary": true,
-          "note": "Full text of Articles 1 to 28 read from the official issue.",
+          "note": "Full text of Articles 1 to 28 read from the official issue. Robert read all 28 articles through an unofficial English translation made with AI help (Claude); the Italian text in the Gazzetta Ufficiale remains the authoritative version.",
           "summary": "Italy's national AI law. Art. 4: children under 14 need a parent's consent to use AI. Art. 7: in health care, patients have the right to be told when AI is used, and the decision always stays with the doctor. Art. 11: employers must inform workers. Art. 13: professionals must explain their AI systems to clients in clear, simple language. Art. 14: in public administration, the person stays solely responsible. Art. 20: AgID and ACN are the national AI authorities; the Garante keeps its powers.",
           "lang": "it",
           "copies": [
@@ -964,7 +964,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928023039/https://www.gazzettaufficiale.it/eli/gu/2025/09/25/223/sg/pdf",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-09-29"
         },
         {
           "id": "it-law-132-normattiva",
@@ -986,7 +987,9 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928023107/https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2025-09-23%3B132",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-09-29",
+          "note": "Robert read this record through an unofficial English translation made with AI help (Claude)."
         },
         {
           "id": "garante-en",
