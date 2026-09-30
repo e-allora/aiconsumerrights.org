@@ -32,7 +32,7 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 
 ### 🆘 Help: "What happened to you?"
 
-- 🧭 **Five situation guides:** a refused loan or credit, a job application screened out, a rental application turned down, an insurance decision, and a chatbot or refund problem. Blocked accounts and deepfake scams are next.
+- 🧭 **Situation guides:** a refused loan or credit, a job application screened out, a rental application turned down, an insurance decision, a chatbot or refund problem, and a blocked account or removed post. Deepfake scams are next.
 - 🌍 **Rights where you live:** the US, the UK, the EU, Brazil, India, or somewhere else, with every right linked to a numbered source.
 - ✉️ **A letter you fill in:** copy it, print it, or open it in your own email app. Nothing you type leaves your device.
 - 🤝 **A note for the company that gets the letter,** on how to answer well. Nobody is blamed.
@@ -140,10 +140,10 @@ __tests__/            Unit, integration, accessibility, i18n, and SEO tests
 
 Every phase ships only when all of these pass:
 
-- 🧪 **Jest:** 526 tests, including axe on every page in all eight languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
+- 🧪 **Jest:** more than 500 tests, including axe on every page in all eight languages, matching keys across message files, and tone checks that fail on blame words, "we" on the guide, or named companies.
 - 🔤 **TypeScript and lint:** zero errors, zero warnings.
 - 🏗️ **Production build:** zero warnings.
-- ♿ **Real-browser audit:** zero WCAG A/AA violations across 386 page states in all eight languages, with a built-in canary that proves the checks work.
+- ♿ **Real-browser audit:** zero WCAG A/AA violations on every route in all eight languages, in both themes and on desktop and touch screens, with a built-in canary that proves the checks work.
 
 ## 🤖 AI assistance disclosure
 
