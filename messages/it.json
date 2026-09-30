@@ -289,7 +289,6 @@
     "pending": "<b>Non ancora revisionate da un esperto legale.</b> Robert Sweetman sta verificando queste pagine con le loro fonti, ma nessun avvocato, clinica legale o associazione dei consumatori le ha ancora revisionate, e nessun madrelingua ha controllato le traduzioni. Se puoi aiutare a revisionarle, <contact>scrivici</contact>.",
     "comingHeading": "In arrivo",
     "coming": {
-      "account": "Un account è stato bloccato o un post è stato rimosso",
       "deepfake": "Qualcuno ha usato una voce o un video falsi per ingannarti"
     },
     "comingLead": "Queste guide sono ancora in preparazione. <forum>Dicci nel forum</forum> quale ti serve di più.",
@@ -781,6 +780,93 @@
         "plain": {
           "subject": "Richiesta di rimediare a quanto detto dal vostro assistente in chat{hasReference, select, yes { (rif. {reference})} other {}}",
           "body": "Buongiorno,\n\nil {decisionDate} vi ho contattato per [descrivi brevemente il problema]. Il vostro assistente in chat mi ha detto [che cosa ha detto], ma [che cosa è successo davvero].\n\nVi chiedo di rimediare, rispettando quanto mi ha detto il vostro assistente in chat oppure rimborsandomi. Vi chiedo anche di poter parlare con una persona in grado di risolvere la questione. Vi chiedo inoltre una copia della mia chat.\n\nResto in attesa di una vostra risposta scritta.\n\nCordiali saluti,\n{name}"
+        }
+      }
+    },
+    "account": {
+      "metaTitle": "Un account è stato bloccato o un post è stato rimosso",
+      "metaDescription": "Che cosa fare quando una piattaforma ha rimosso un tuo post o bloccato il tuo account: i tuoi diritti, una lettera per chiedere motivi e riesame, e a chi rivolgerti.",
+      "title": "Un account è stato bloccato o un post è stato rimosso",
+      "summary": "Una piattaforma ha tolto un tuo post, o ha limitato o bloccato il tuo account.",
+      "lead": "Una piattaforma ha rimosso qualcosa che avevi pubblicato, o ha limitato, sospeso o bloccato il tuo account. Puoi chiedere perché, chiedere che una persona riesamini la decisione e chiedere una copia dei tuoi dati.",
+      "happened": {
+        "rules": "Le piattaforme rimuovono post e bloccano account che secondo loro violano le loro regole o la legge.",
+        "automated": "Gran parte di questo lavoro lo fa prima un software, a volte prima che una persona guardi.",
+        "mistakes": "Gli errori capitano: un post letto fuori contesto, un account violato o una segnalazione sbagliata."
+      },
+      "company": {
+        "answer": "<b>Spiega che cosa è successo e perché, con parole semplici,</b> e quale regola è stata applicata. Nell'UE è obbligatorio.",
+        "person": "<b>Lascia che una persona esamini i ricorsi,</b> soprattutto per gli account da cui le persone dipendono per lavorare o per restare in contatto con la famiglia.",
+        "path": "<b>Rendi il ricorso facile da trovare</b> e di' quanto tempo richiede di solito.",
+        "data": "<b>Permetti di scaricare i dati,</b> anche mentre un account è sospeso.",
+        "patterns": "<b>Tieni traccia delle decisioni annullate.</b> Mostrano dove regole o strumenti vanno corretti."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Nessuna legge federale obbliga le piattaforme a spiegare perché hanno rimosso un post o bloccato un account.</b> Usa il ricorso della piattaforma stessa e chiedi per iscritto.",
+          "2": "<b>Se vivi in California,</b> puoi chiedere alle grandi aziende quali informazioni personali hanno su di te e come le usano, gratis, fino a due volte l'anno. Devono rispondere entro 45 giorni.",
+          "3": "<b>Se hai pagato per qualcosa che non puoi più usare,</b> chiedi un rimborso per iscritto e conserva le ricevute."
+        },
+        "noReply": "Continua a usare il ricorso della piattaforma e conserva una copia di tutto. Se vivi in California e un'azienda non risponde a una richiesta sulla privacy, la <ccpa>pagina del Procuratore generale sui tuoi diritti di privacy</ccpa> spiega che cosa puoi fare."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Puoi chiedere copia dei tuoi dati,</b> compreso ciò che la piattaforma ha registrato sulla decisione. Di solito le organizzazioni hanno un mese per rispondere.",
+          "2": "<b>Se una decisione importante su di te l'ha presa solo un computer,</b> senza un reale intervento umano, la piattaforma deve permetterti di avere informazioni, esprimere la tua opinione, chiedere l'intervento di una persona e contestarla."
+        },
+        "noReply": "Continua a usare il ricorso della piattaforma. Se non ti danno i tuoi dati, puoi presentare un reclamo <ico>all'Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Le piattaforme devono spiegare le loro decisioni di moderazione</b> alle persone coinvolte, per esempio perché hanno rimosso un post o sospeso un account.",
+          "2": "<b>Puoi chiedere un riesame tramite il sistema di reclamo della piattaforma stessa.</b>",
+          "3": "<b>Puoi anche rivolgerti a un organismo certificato di risoluzione delle controversie.</b> Per te è gratuito o costa poco, e se la piattaforma perde paga tutte le spese. La sua decisione non è vincolante, ma le piattaforme devono partecipare in buona fede.",
+          "4": "<b>Puoi chiedere i tuoi dati,</b> compreso ciò che è stato registrato sulla decisione. Devono rispondere entro un mese, gratis."
+        },
+        "noReply": "Se il riesame della piattaforma non risolve, <ods>trova un organismo certificato di risoluzione delle controversie</ods>. Puoi anche presentare un reclamo al coordinatore dei servizi digitali del tuo Paese, e puoi sempre rivolgerti a un giudice."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Puoi chiedere il riesame di una decisione presa solo da un computer</b> che incide sui tuoi interessi, e informazioni chiare sui criteri usati. Il segreto commerciale può limitare i dettagli.",
+          "2": "<b>Puoi vedere e correggere i tuoi dati.</b> Una dichiarazione chiara e completa dei tuoi dati è dovuta entro 15 giorni dalla richiesta.",
+          "3": "<b>La legge non dice che il riesame debba farlo una persona.</b> Quella regola è stata tolta nel 2019, quindi chiedi comunque una persona."
+        },
+        "noReply": "Se non ricevi risposta, puoi presentare gratuitamente una <anpd>petizione all'autorità nazionale per la protezione dei dati (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>I grandi social network devono avvisarti prima di rimuovere un tuo contenuto,</b> spiegando i motivi, e darti una possibilità equa di contestare e chiederne il ripristino.",
+          "2": "<b>Le piattaforme devono avere un responsabile dei reclami</b> che confermi la ricezione del reclamo entro 24 ore e lo risolva entro 7 giorni.",
+          "3": "<b>Se la risposta non ti soddisfa,</b> puoi ricorrere al Grievance Appellate Committee entro 30 giorni dalla risposta del responsabile dei reclami. Il comitato cerca di decidere entro 30 giorni."
+        },
+        "noReply": "Se il responsabile dei reclami non risolve, <gac>presenta ricorso online al Grievance Appellate Committee</gac>, entro 30 giorni."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Questo sito non copre ancora le leggi del tuo Paese.</b> Vale comunque la pena inviare una richiesta scritta: chiede le cose con chiarezza e ti lascia una traccia."
+        },
+        "noReply": "Se non ricevi risposta, continua a usare il ricorso della piattaforma e cerca un'autorità per la protezione dei dati nel tuo Paese."
+      },
+      "letters": {
+        "plain": {
+          "subject": "Richiesta di riesame della decisione sul mio account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete [rimosso un mio post / limitato o sospeso il mio account]. Credo che si tratti di un errore.\n\nVi chiedo di indicarmi quale regola avete applicato e perché, e se la decisione è stata presa da un sistema automatizzato. Chiedo che una persona riesamini la decisione e, se era sbagliata, che ripristiniate il mio post o il mio account.\n\nVi chiedo inoltre una copia dei dati personali che avete su di me relativi a questa decisione.\n\nResto in attesa di una vostra risposta scritta.\n\nCordiali saluti,\n{name}"
+        },
+        "uk": {
+          "subject": "Richiesta ai sensi degli articoli 15 e 22C dello UK GDPR sul mio account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete [rimosso un mio post / limitato o sospeso il mio account]. Credo che si tratti di un errore e chiedo che una persona lo riesamini.\n\nAi sensi dell'articolo 15 dello UK GDPR, vi chiedo una copia dei dati personali che avete su di me, compreso ciò che avete registrato su questa decisione, e di indicarmi se è stata presa con mezzi automatizzati.\n\nSe la decisione si è basata unicamente su un trattamento automatizzato, senza un reale intervento umano, chiedo, ai sensi dell'articolo 22C, informazioni al riguardo. Desidero esprimere la mia posizione, ottenere l'intervento di una persona e contestare la decisione.\n\nVi chiedo di rispondere entro un mese.\n\nCordiali saluti,\n{name}"
+        },
+        "eu": {
+          "subject": "Richiesta di riesame della decisione sul mio account (regolamento sui servizi digitali e GDPR){hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete [rimosso un mio post / limitato o sospeso il mio account]. Credo che si tratti di un errore.\n\nAi sensi dell'articolo 17 del regolamento sui servizi digitali, vi chiedo una motivazione chiara, compresa la regola applicata e l'eventuale uso di strumenti automatizzati. Ai sensi dell'articolo 20, chiedo che questa decisione sia riesaminata tramite il vostro sistema interno di gestione dei reclami, e vorrei che una persona partecipasse al riesame.\n\nAi sensi dell'articolo 15 del GDPR, vi chiedo anche una copia dei dati personali che avete su di me relativi a questa decisione, entro il mese previsto dall'articolo 12, paragrafo 3.\n\nCordiali saluti,\n{name}"
+        },
+        "br": {
+          "subject": "Richiesta ai sensi degli articoli 18, 19 e 20 della LGPD sul mio account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Buongiorno,\n\nil {decisionDate} avete [rimosso un mio post / limitato o sospeso il mio account]. Credo che si tratti di un errore.\n\nAi sensi dell'articolo 20 della LGPD (Legge n. 13.709/2018), chiedo il riesame di questa decisione e informazioni chiare sui criteri e sulle procedure usati. Vorrei che il riesame fosse fatto da una persona.\n\nAi sensi degli articoli 18 e 19, vi chiedo anche una dichiarazione chiara e completa dei dati personali che avete su di me, con la loro origine e i criteri usati, entro 15 giorni.\n\nCordiali saluti,\n{name}"
+        },
+        "in": {
+          "subject": "Reclamo per la rimozione del mio contenuto o la limitazione del mio account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Al responsabile dei reclami (Grievance Officer),\n\nil {decisionDate} avete [rimosso un mio post / limitato o sospeso il mio account]. Credo che si tratti di un errore.\n\nVi chiedo di confermare la ricezione di questo reclamo entro 24 ore e di risolverlo entro 7 giorni, come prevede la regola 3(2) delle Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Vi chiedo di indicarmi i motivi del provvedimento e di ripristinare il mio contenuto o il mio account se è stato rimosso per errore.\n\nSe siete un intermediario di social media significativo, la regola 4(8) vi obbliga anche a darmi i motivi e una possibilità equa di contestare il provvedimento.\n\nCordiali saluti,\n{name}"
         }
       }
     }

@@ -244,6 +244,29 @@ describe("/help/chatbot", () => {
   });
 });
 
+describe("/help/account", () => {
+  it("gives EU visitors the Digital Services Act routes: reasons, review, and dispute settlement", () => {
+    render(<SituationPage params={{ locale: "de", situation: "account" }} />, { locale: "de" });
+    expect(screen.getByText(/Plattformen müssen ihre Moderationsentscheidungen/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /finden Sie eine zertifizierte Streitbeilegungsstelle/ })).toHaveAttribute("href", getSource("eu-dsa-ods").url);
+    expect(screen.getByText(/Nach Art\. 17 des Gesetzes über digitale Dienste/)).toBeInTheDocument();
+  });
+
+  it("gives Indian visitors notice before removal, a 7-day grievance answer, and the appeal committee", () => {
+    render(<SituationPage params={{ locale: "hi", situation: "account" }} />, { locale: "hi" });
+    expect(screen.getByText(/जो आपकी शिकायत 24 घंटे में स्वीकार करे और 7 दिनों में हल करे/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /शिकायत अपील समिति में ऑनलाइन अपील करें/ })).toHaveAttribute("href", getSource("in-gac-portal").url);
+    expect(screen.getByText(/नियम 3\(2\) के अनुसार/)).toBeInTheDocument();
+  });
+
+  it("tells US visitors plainly that federal law doesn't require an explanation", async () => {
+    const user = userEvent.setup();
+    render(<SituationPage params={{ locale: "en", situation: "account" }} />);
+    await user.click(screen.getByRole("radio", { name: "United States" }));
+    expect(screen.getByText(/No federal law makes platforms explain/)).toBeInTheDocument();
+  });
+});
+
 describe("LetterBuilder", () => {
   const letter = () => document.querySelector(".letter-print")!.textContent!;
 

@@ -289,7 +289,6 @@
     "pending": "<b>Noch nicht juristisch geprüft.</b> Robert Sweetman prüft diese Seiten anhand ihrer Quellen, aber noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation hat sie geprüft, und Muttersprachler haben die Übersetzungen noch nicht kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
     "comingHeading": "Demnächst",
     "coming": {
-      "account": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
       "deepfake": "Jemand hat eine gefälschte Stimme oder ein gefälschtes Video benutzt, um Sie zu täuschen"
     },
     "comingLead": "Diese Anleitungen entstehen gerade. <forum>Sagen Sie uns im Forum</forum>, welche Sie am dringendsten brauchen.",
@@ -781,6 +780,93 @@
         "plain": {
           "subject": "Bitte um Korrektur einer Auskunft Ihres Chat-Assistenten{hasReference, select, yes { (Az. {reference})} other {}}",
           "body": "Guten Tag,\n\nam {decisionDate} habe ich Sie wegen [kurze Beschreibung des Problems] kontaktiert. Ihr Chat-Assistent hat mir gesagt: [was er gesagt hat]. Tatsächlich [was wirklich passiert ist].\n\nBitte bringen Sie das in Ordnung, indem Sie sich an die Auskunft Ihres Chat-Assistenten halten oder mir den Betrag erstatten. Bitte ermöglichen Sie mir außerdem ein Gespräch mit einem Menschen, der das klären kann. Bitte schicken Sie mir auch eine Kopie meines Chats.\n\nIch freue mich auf Ihre schriftliche Antwort.\n\nMit freundlichen Grüßen\n{name}"
+        }
+      }
+    },
+    "account": {
+      "metaTitle": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
+      "metaDescription": "Was Sie tun können, wenn eine Plattform Ihren Beitrag entfernt oder Ihr Konto gesperrt hat: Ihre Rechte, ein Brief mit der Bitte um Gründe und Überprüfung, und Stellen, an die Sie sich wenden können.",
+      "title": "Ein Konto wurde gesperrt oder ein Beitrag entfernt",
+      "summary": "Eine Plattform hat Ihren Beitrag entfernt oder Ihr Konto eingeschränkt oder gesperrt.",
+      "lead": "Eine Plattform hat etwas entfernt, das Sie gepostet haben, oder Ihr Konto eingeschränkt, vorübergehend gesperrt oder blockiert. Sie können nach dem Grund fragen, eine Überprüfung durch einen Menschen verlangen und eine Kopie Ihrer Daten anfordern.",
+      "happened": {
+        "rules": "Plattformen entfernen Beiträge und sperren Konten, die aus ihrer Sicht gegen ihre Regeln oder das Gesetz verstoßen.",
+        "automated": "Vieles davon erledigt zuerst eine Software, manchmal bevor ein Mensch hinsieht.",
+        "mistakes": "Fehler kommen vor: ein Beitrag, der aus dem Zusammenhang gerissen wurde, ein gehacktes Konto oder eine irrtümliche Meldung."
+      },
+      "company": {
+        "answer": "<b>Sagen Sie in einfachen Worten, was passiert ist und warum,</b> und welche Regel angewendet wurde. In der EU ist das Pflicht.",
+        "person": "<b>Lassen Sie Einsprüche von einem Menschen prüfen,</b> besonders bei Konten, auf die Menschen für ihre Arbeit oder den Kontakt zur Familie angewiesen sind.",
+        "path": "<b>Machen Sie den Einspruch leicht auffindbar</b> und sagen Sie, wie lange er meist dauert.",
+        "data": "<b>Lassen Sie Menschen ihre Daten herunterladen,</b> auch während ein Konto gesperrt ist.",
+        "patterns": "<b>Halten Sie aufgehobene Entscheidungen fest.</b> Sie zeigen, wo Regeln oder Werkzeuge nachjustiert werden müssen."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Kein Bundesgesetz verpflichtet Plattformen zu erklären, warum sie einen Beitrag entfernt oder ein Konto gesperrt haben.</b> Nutzen Sie den Einspruch der Plattform und fragen Sie schriftlich nach.",
+          "2": "<b>Wenn Sie in Kalifornien leben,</b> können Sie große Unternehmen fragen, welche persönlichen Informationen sie über Sie haben und wie sie diese nutzen, kostenlos, bis zu zweimal im Jahr. Sie müssen innerhalb von 45 Tagen antworten.",
+          "3": "<b>Wenn Sie für etwas bezahlt haben, das Sie nicht mehr nutzen können,</b> bitten Sie schriftlich um eine Erstattung und heben Sie Ihre Belege auf."
+        },
+        "noReply": "Nutzen Sie weiter den Einspruch der Plattform und heben Sie eine Kopie von allem auf. Wenn Sie in Kalifornien leben und ein Unternehmen eine Datenschutzanfrage nicht beantwortet, erklärt die <ccpa>Seite des Generalstaatsanwalts zu Ihren Datenschutzrechten</ccpa>, was Sie tun können."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Sie können Kopien Ihrer Daten verlangen,</b> auch dazu, was die Plattform über die Entscheidung festgehalten hat. Organisationen haben in der Regel einen Monat Zeit für die Antwort.",
+          "2": "<b>Wenn allein ein Computer eine wichtige Entscheidung über Sie getroffen hat,</b> ohne echte menschliche Beteiligung, muss die Plattform Ihnen Informationen dazu geben, Sie Ihren Standpunkt darlegen lassen, einen Menschen eingreifen lassen und Ihnen die Anfechtung ermöglichen."
+        },
+        "noReply": "Nutzen Sie weiter den Einspruch der Plattform. Wenn man Ihnen Ihre Daten nicht gibt, können Sie sich beim <ico>Information Commissioner's Office (ICO)</ico> beschweren."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Plattformen müssen ihre Moderationsentscheidungen</b> den Betroffenen erklären, etwa warum ein Beitrag entfernt oder ein Konto gesperrt wurde.",
+          "2": "<b>Sie können über das Beschwerdesystem der Plattform eine Überprüfung verlangen.</b>",
+          "3": "<b>Sie können sich auch an eine zertifizierte Streitbeilegungsstelle wenden.</b> Für Sie ist das kostenlos oder günstig, und wenn die Plattform unterliegt, trägt sie alle Gebühren. Die Entscheidung ist nicht bindend, aber Plattformen müssen sich in gutem Glauben beteiligen.",
+          "4": "<b>Sie können Ihre Daten verlangen,</b> auch was über die Entscheidung festgehalten wurde. Man muss Ihnen innerhalb eines Monats antworten, kostenlos."
+        },
+        "noReply": "Wenn die Überprüfung durch die Plattform die Sache nicht klärt, <ods>finden Sie eine zertifizierte Streitbeilegungsstelle</ods>. Sie können sich auch beim Koordinator für digitale Dienste Ihres Landes beschweren und jederzeit vor Gericht gehen."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Sie können verlangen, dass eine allein vom Computer getroffene Entscheidung überprüft wird,</b> die Ihre Interessen betrifft, und klare Informationen über die verwendeten Kriterien. Geschäftsgeheimnisse können die Einzelheiten begrenzen.",
+          "2": "<b>Sie können Ihre Daten einsehen und berichtigen.</b> Eine klare, vollständige Aufstellung Ihrer Daten ist innerhalb von 15 Tagen nach Ihrer Anfrage fällig.",
+          "3": "<b>Das Gesetz schreibt nicht vor, dass ein Mensch die Überprüfung macht.</b> Diese Regel wurde 2019 gestrichen; bitten Sie trotzdem um einen Menschen."
+        },
+        "noReply": "Wenn keine Antwort kommt, können Sie kostenlos eine Eingabe bei der <anpd>nationalen Datenschutzbehörde (ANPD)</anpd> machen."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Große soziale Netzwerke müssen Sie informieren, bevor sie Ihre Inhalte entfernen,</b> mit den Gründen, und Ihnen eine faire Möglichkeit geben, zu widersprechen und die Wiederherstellung zu verlangen.",
+          "2": "<b>Plattformen müssen eine Beschwerdestelle haben,</b> die Ihre Beschwerde innerhalb von 24 Stunden bestätigt und innerhalb von 7 Tagen erledigt.",
+          "3": "<b>Wenn die Antwort Sie nicht zufriedenstellt,</b> können Sie innerhalb von 30 Tagen nach der Antwort der Beschwerdestelle beim Grievance Appellate Committee Einspruch einlegen. Der Ausschuss bemüht sich, innerhalb von 30 Tagen zu entscheiden."
+        },
+        "noReply": "Wenn die Beschwerdestelle das nicht klärt, <gac>legen Sie online Einspruch beim Grievance Appellate Committee ein</gac>, innerhalb von 30 Tagen."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Diese Website deckt die Gesetze Ihres Landes noch nicht ab.</b> Eine schriftliche Anfrage lohnt sich trotzdem: Sie fragt klar nach und ist ein Nachweis."
+        },
+        "noReply": "Wenn keine Antwort kommt, nutzen Sie weiter den Einspruch der Plattform und suchen Sie eine Datenschutzbehörde in Ihrem Land."
+      },
+      "letters": {
+        "plain": {
+          "subject": "Bitte um Überprüfung der Entscheidung zu meinem Konto{hasReference, select, yes { (Konto {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie [meinen Beitrag entfernt / mein Konto eingeschränkt oder gesperrt]. Ich halte das für einen Irrtum.\n\nBitte teilen Sie mir mit, welche Regel Sie angewendet haben und warum, und ob die Entscheidung von einem automatisierten System getroffen wurde. Ich bitte darum, dass ein Mensch die Entscheidung überprüft und meinen Beitrag oder mein Konto wiederherstellt, falls sie falsch war.\n\nBitte schicken Sie mir außerdem eine Kopie der personenbezogenen Daten, die Sie im Zusammenhang mit dieser Entscheidung über mich verarbeiten.\n\nIch freue mich auf Ihre schriftliche Antwort.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "uk": {
+          "subject": "Anfrage nach Art. 15 und Art. 22C UK GDPR zu meinem Konto{hasReference, select, yes { (Konto {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie [meinen Beitrag entfernt / mein Konto eingeschränkt oder gesperrt]. Ich halte das für einen Irrtum und bitte darum, dass ein Mensch die Entscheidung überprüft.\n\nNach Art. 15 UK GDPR bitte ich um eine Kopie der personenbezogenen Daten, die Sie über mich verarbeiten, einschließlich dessen, was Sie zu dieser Entscheidung festgehalten haben, und um die Angabe, ob sie automatisiert getroffen wurde.\n\nFalls die Entscheidung ausschließlich auf einer automatisierten Verarbeitung ohne echte menschliche Beteiligung beruhte, bitte ich nach Art. 22C UK GDPR um Informationen dazu. Ich möchte Stellung nehmen, einen Menschen eingreifen lassen und die Entscheidung anfechten.\n\nBitte antworten Sie innerhalb eines Monats.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "eu": {
+          "subject": "Bitte um Überprüfung der Entscheidung zu meinem Konto (Gesetz über digitale Dienste und DSGVO){hasReference, select, yes { (Konto {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie [meinen Beitrag entfernt / mein Konto eingeschränkt oder gesperrt]. Ich halte das für einen Irrtum.\n\nNach Art. 17 des Gesetzes über digitale Dienste bitte ich um eine klare Begründung, einschließlich der angewendeten Regel und der Angabe, ob automatisierte Mittel eingesetzt wurden. Nach Art. 20 bitte ich darum, diese Entscheidung über Ihr internes Beschwerdemanagementsystem zu überprüfen, und möchte, dass ein Mensch an der Überprüfung beteiligt ist.\n\nNach Art. 15 DSGVO bitte ich außerdem um eine Kopie der personenbezogenen Daten, die Sie im Zusammenhang mit dieser Entscheidung über mich verarbeiten, innerhalb der Monatsfrist nach Art. 12 Abs. 3 DSGVO.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "br": {
+          "subject": "Anfrage nach Art. 18, 19 und 20 LGPD zu meinem Konto{hasReference, select, yes { (Konto {reference})} other {}}",
+          "body": "Guten Tag,\n\nam {decisionDate} haben Sie [meinen Beitrag entfernt / mein Konto eingeschränkt oder gesperrt]. Ich halte das für einen Irrtum.\n\nNach Art. 20 LGPD (Gesetz Nr. 13.709/2018) bitte ich um Überprüfung dieser Entscheidung und um klare Informationen über die verwendeten Kriterien und Verfahren. Ich möchte, dass ein Mensch die Überprüfung vornimmt.\n\nNach Art. 18 und 19 bitte ich außerdem um eine klare und vollständige Aufstellung der personenbezogenen Daten, die Sie über mich verarbeiten, mit ihrer Herkunft und den verwendeten Kriterien, innerhalb von 15 Tagen.\n\nMit freundlichen Grüßen\n{name}"
+        },
+        "in": {
+          "subject": "Beschwerde über die Entfernung meiner Inhalte oder die Einschränkung meines Kontos{hasReference, select, yes { (Konto {reference})} other {}}",
+          "body": "An die Beschwerdestelle (Grievance Officer),\n\nam {decisionDate} haben Sie [meinen Beitrag entfernt / mein Konto eingeschränkt oder gesperrt]. Ich halte das für einen Irrtum.\n\nBitte bestätigen Sie diese Beschwerde innerhalb von 24 Stunden und erledigen Sie sie innerhalb von 7 Tagen, wie es Regel 3(2) der Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 verlangt. Bitte nennen Sie mir die Gründe für die Maßnahme und stellen Sie meine Inhalte oder mein Konto wieder her, falls sie irrtümlich entfernt wurden.\n\nFalls Sie ein bedeutender Vermittler sozialer Medien sind, verpflichtet Sie Regel 4(8) außerdem, mir die Gründe zu nennen und mir eine faire Möglichkeit zu geben, der Maßnahme zu widersprechen.\n\nMit freundlichen Grüßen\n{name}"
         }
       }
     }

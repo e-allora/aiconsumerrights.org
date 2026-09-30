@@ -289,7 +289,6 @@
     "pending": "<b>Ainda sem revisão de um especialista jurídico.</b> Robert Sweetman está a verificar estas páginas com as suas fontes, mas nenhum advogado, clínica jurídica ou organização de consumidores as reviu, e nenhum falante nativo reviu as traduções. Se puder ajudar a revê-las, <contact>entre em contacto</contact>.",
     "comingHeading": "Em breve",
     "coming": {
-      "account": "Uma conta foi bloqueada ou uma publicação foi removida",
       "deepfake": "Alguém usou uma voz ou um vídeo falsos para o enganar"
     },
     "comingLead": "Estes guias ainda estão a ser escritos. <forum>Diga-nos no fórum</forum> de qual precisa mais.",
@@ -781,6 +780,93 @@
         "plain": {
           "subject": "Pedido para corrigir o que o vosso assistente de chat me disse{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Bom dia,\n\nEm {decisionDate}, contactei-vos sobre [descreva brevemente o problema]. O vosso assistente de chat disse-me [o que disse], mas [o que aconteceu na realidade].\n\nPeço que corrijam a situação, cumprindo o que o vosso assistente de chat me disse ou reembolsando-me. Peço também para falar com uma pessoa que possa resolver isto. Peço ainda uma cópia da minha conversa.\n\nAguardo a vossa resposta por escrito.\n\nCom os melhores cumprimentos,\n{name}"
+        }
+      }
+    },
+    "account": {
+      "metaTitle": "Uma conta foi bloqueada ou uma publicação foi removida",
+      "metaDescription": "O que fazer quando uma plataforma removeu a sua publicação ou bloqueou a sua conta: os seus direitos, uma carta a pedir os motivos e uma revisão, e a quem recorrer.",
+      "title": "Uma conta foi bloqueada ou uma publicação foi removida",
+      "summary": "Uma plataforma retirou a sua publicação, ou limitou ou bloqueou a sua conta.",
+      "lead": "Uma plataforma removeu algo que publicou, ou limitou, suspendeu ou bloqueou a sua conta. Pode perguntar porquê, pedir que uma pessoa reveja a decisão e pedir uma cópia dos seus dados.",
+      "happened": {
+        "rules": "As plataformas removem publicações e bloqueiam contas que consideram violar as suas regras ou a lei.",
+        "automated": "Grande parte disto é feita primeiro por software, por vezes antes de uma pessoa olhar.",
+        "mistakes": "Há erros: uma publicação lida fora de contexto, uma conta pirateada ou uma denúncia equivocada."
+      },
+      "company": {
+        "answer": "<b>Explique o que aconteceu e porquê, em palavras simples,</b> e que regra foi aplicada. Na UE, isso é obrigatório.",
+        "person": "<b>Deixe uma pessoa rever os recursos,</b> sobretudo em contas de que as pessoas dependem para trabalhar ou manter contacto com a família.",
+        "path": "<b>Torne o recurso fácil de encontrar</b> e diga quanto tempo costuma demorar.",
+        "data": "<b>Permita descarregar os dados,</b> mesmo enquanto uma conta está suspensa.",
+        "patterns": "<b>Acompanhe as decisões revertidas.</b> Mostram onde é preciso ajustar regras ou ferramentas."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Nenhuma lei federal obriga as plataformas a explicar porque removeram uma publicação ou bloquearam uma conta.</b> Use o recurso da própria plataforma e peça por escrito.",
+          "2": "<b>Se vive na Califórnia,</b> pode perguntar às grandes empresas que informação pessoal têm sobre si e como a usam, gratuitamente, até duas vezes por ano. Têm de responder em 45 dias.",
+          "3": "<b>Se pagou por algo que já não pode usar,</b> peça um reembolso por escrito e guarde os recibos."
+        },
+        "noReply": "Continue a usar o recurso da plataforma e guarde uma cópia de tudo. Se vive na Califórnia e uma empresa não responder a um pedido de privacidade, a <ccpa>página do Procurador-Geral sobre os seus direitos de privacidade</ccpa> explica o que pode fazer."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Pode pedir cópias dos seus dados,</b> incluindo o que a plataforma registou sobre a decisão. As organizações têm normalmente um mês para responder.",
+          "2": "<b>Se foi só um computador a tomar uma decisão importante sobre si,</b> sem intervenção humana real, a plataforma tem de lhe permitir obter informações, dar a sua opinião, pedir que intervenha uma pessoa e contestá-la."
+        },
+        "noReply": "Continue a usar o recurso da própria plataforma. Se não lhe derem os seus dados, pode apresentar queixa à <ico>Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>As plataformas têm de explicar as suas decisões de moderação</b> às pessoas afetadas, como a razão de removerem uma publicação ou suspenderem uma conta.",
+          "2": "<b>Pode pedir uma revisão através do sistema de reclamações da própria plataforma.</b>",
+          "3": "<b>Também pode recorrer a um organismo certificado de resolução de litígios.</b> É gratuito ou barato para si e, se a plataforma perder, paga todas as taxas. A decisão não é vinculativa, mas as plataformas têm de participar de boa-fé.",
+          "4": "<b>Pode pedir os seus dados,</b> incluindo o que foi registado sobre a decisão. Têm de responder no prazo de um mês, gratuitamente."
+        },
+        "noReply": "Se a revisão da plataforma não resolver, <ods>encontre um organismo certificado de resolução de litígios</ods>. Também pode apresentar queixa ao coordenador dos serviços digitais do seu país, e pode sempre recorrer aos tribunais."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Pode pedir a revisão de uma decisão tomada só por um computador</b> que afete os seus interesses, e informação clara sobre os critérios usados. Os segredos comercial e industrial podem limitar os pormenores.",
+          "2": "<b>Pode ver e corrigir os seus dados.</b> Uma declaração clara e completa dos seus dados tem de chegar no prazo de 15 dias após o pedido.",
+          "3": "<b>A lei não diz que a revisão tem de ser feita por uma pessoa.</b> Essa regra foi retirada em 2019, por isso peça uma pessoa na mesma."
+        },
+        "noReply": "Se não tiver resposta, pode apresentar uma petição gratuita à <anpd>Agência Nacional de Proteção de Dados (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>As grandes redes sociais têm de avisar antes de removerem o seu conteúdo,</b> com os motivos, e dar-lhe uma oportunidade justa de contestar e pedir que seja reposto.",
+          "2": "<b>As plataformas têm de ter um responsável por reclamações</b> que confirme a receção da sua queixa em 24 horas e a resolva em 7 dias.",
+          "3": "<b>Se não ficar resolvido,</b> pode recorrer ao Grievance Appellate Committee no prazo de 30 dias após a resposta do responsável por reclamações. O comité procura decidir em 30 dias."
+        },
+        "noReply": "Se o responsável por reclamações não resolver, <gac>recorra online ao Grievance Appellate Committee</gac>, no prazo de 30 dias."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Este site ainda não cobre as leis do seu país.</b> Mesmo assim, vale a pena enviar um pedido por escrito: pede as coisas com clareza e deixa-lhe um registo."
+        },
+        "noReply": "Se não tiver resposta, continue a usar o recurso da plataforma e procure uma autoridade de proteção de dados no seu país."
+      },
+      "letters": {
+        "plain": {
+          "subject": "Pedido de revisão da decisão sobre a minha conta{hasReference, select, yes { (conta {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, [removeram a minha publicação / limitaram ou suspenderam a minha conta]. Creio que foi um erro.\n\nPeço que me indiquem que regra aplicaram e porquê, e se a decisão foi tomada por um sistema automatizado. Peço que uma pessoa reveja a decisão e, se estiver errada, que reponham a minha publicação ou a minha conta.\n\nPeço também uma cópia dos dados pessoais que têm sobre mim relacionados com esta decisão.\n\nAguardo a vossa resposta por escrito.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "uk": {
+          "subject": "Pedido ao abrigo dos artigos 15.º e 22.º-C do UK GDPR sobre a minha conta{hasReference, select, yes { (conta {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, [removeram a minha publicação / limitaram ou suspenderam a minha conta]. Creio que foi um erro e peço que uma pessoa o reveja.\n\nAo abrigo do artigo 15.º do UK GDPR, peço uma cópia dos dados pessoais que têm sobre mim, incluindo o que registaram sobre esta decisão, e que me indiquem se foi tomada por meios automatizados.\n\nSe a decisão se baseou exclusivamente no tratamento automatizado, sem intervenção humana real, peço, ao abrigo do artigo 22.º-C, informações sobre ela. Quero apresentar a minha posição, que intervenha uma pessoa e contestar a decisão.\n\nPeço que respondam no prazo de um mês.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "eu": {
+          "subject": "Pedido de revisão da decisão sobre a minha conta (Regulamento dos Serviços Digitais e RGPD){hasReference, select, yes { (conta {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, [removeram a minha publicação / limitaram ou suspenderam a minha conta]. Creio que foi um erro.\n\nAo abrigo do artigo 17.º do Regulamento dos Serviços Digitais, peço uma exposição clara dos motivos, incluindo a regra aplicada e se foram usados meios automatizados. Ao abrigo do artigo 20.º, peço que esta decisão seja revista através do vosso sistema interno de reclamações, e gostaria que uma pessoa participasse na revisão.\n\nAo abrigo do artigo 15.º do RGPD, peço também uma cópia dos dados pessoais que têm sobre mim relacionados com esta decisão, no prazo de um mês exigido pelo artigo 12.º, n.º 3.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "br": {
+          "subject": "Pedido ao abrigo dos artigos 18, 19 e 20 da LGPD sobre a minha conta{hasReference, select, yes { (conta {reference})} other {}}",
+          "body": "Bom dia,\n\nEm {decisionDate}, [removeram a minha publicação / limitaram ou suspenderam a minha conta]. Creio que foi um erro.\n\nCom base no artigo 20 da LGPD (Lei n.º 13.709/2018), peço a revisão desta decisão e informações claras sobre os critérios e procedimentos usados. Gostaria que a revisão fosse feita por uma pessoa.\n\nCom base nos artigos 18 e 19, peço também uma declaração clara e completa dos dados pessoais que têm sobre mim, com a sua origem e os critérios usados, no prazo de 15 dias.\n\nCom os melhores cumprimentos,\n{name}"
+        },
+        "in": {
+          "subject": "Reclamação sobre a remoção do meu conteúdo ou a restrição da minha conta{hasReference, select, yes { (conta {reference})} other {}}",
+          "body": "Ao responsável por reclamações (Grievance Officer),\n\nEm {decisionDate}, [removeram a minha publicação / limitaram ou suspenderam a minha conta]. Creio que foi um erro.\n\nPeço que confirmem a receção desta reclamação em 24 horas e a resolvam em 7 dias, como exige a regra 3(2) das Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Peço que me indiquem os fundamentos da medida e que reponham o meu conteúdo ou a minha conta se foi removido por erro.\n\nSe forem um intermediário de redes sociais significativo, a regra 4(8) também vos obriga a dar-me os motivos e uma oportunidade justa de contestar a medida.\n\nCom os melhores cumprimentos,\n{name}"
         }
       }
     }

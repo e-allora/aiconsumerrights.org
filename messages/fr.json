@@ -289,7 +289,6 @@
     "pending": "<b>Pas encore relues par un expert juridique.</b> Robert Sweetman vérifie ces pages à partir de leurs sources, mais aucun avocat, aucune clinique juridique ni aucune association de consommateurs ne les a encore relues, et aucune personne de langue maternelle n'a vérifié les traductions. Si vous pouvez aider à les relire, <contact>contactez-nous</contact>.",
     "comingHeading": "Bientôt",
     "coming": {
-      "account": "Un compte a été bloqué ou une publication a été retirée",
       "deepfake": "Quelqu'un a utilisé une fausse voix ou une fausse vidéo pour vous tromper"
     },
     "comingLead": "Ces guides sont encore en cours d'écriture. <forum>Dites-nous sur le forum</forum> celui dont vous avez le plus besoin.",
@@ -781,6 +780,93 @@
         "plain": {
           "subject": "Demande de correction de ce que m'a dit votre assistant de conversation{hasReference, select, yes { (réf. {reference})} other {}}",
           "body": "Bonjour,\n\nLe {decisionDate}, je vous ai contactés au sujet de [décrivez brièvement le problème]. Votre assistant de conversation m'a dit [ce qu'il a dit], mais [ce qui s'est réellement passé].\n\nMerci de corriger la situation, en respectant ce que m'a dit votre assistant de conversation ou en me remboursant. Merci aussi de me permettre de parler à une personne qui peut régler ce problème. Merci enfin de m'envoyer une copie de ma conversation.\n\nJ'attends votre réponse écrite.\n\nCordialement,\n{name}"
+        }
+      }
+    },
+    "account": {
+      "metaTitle": "Un compte a été bloqué ou une publication supprimée",
+      "metaDescription": "Que faire quand une plateforme a supprimé votre publication ou bloqué votre compte : vos droits, une lettre pour demander les raisons et un réexamen, et à qui vous adresser.",
+      "title": "Un compte a été bloqué ou une publication supprimée",
+      "summary": "Une plateforme a retiré votre publication, ou limité ou bloqué votre compte.",
+      "lead": "Une plateforme a supprimé quelque chose que vous aviez publié, ou limité, suspendu ou bloqué votre compte. Vous pouvez demander pourquoi, demander qu'une personne réexamine la décision, et demander une copie de vos données.",
+      "happened": {
+        "rules": "Les plateformes suppriment des publications et bloquent des comptes qu'elles jugent contraires à leurs règles ou à la loi.",
+        "automated": "Une grande partie de ce travail est d'abord faite par un logiciel, parfois avant qu'une personne ne regarde.",
+        "mistakes": "Les erreurs arrivent : une publication lue hors contexte, un compte piraté ou un signalement erroné."
+      },
+      "company": {
+        "answer": "<b>Expliquez ce qui s'est passé et pourquoi, avec des mots simples,</b> et quelle règle a été appliquée. Dans l'UE, c'est obligatoire.",
+        "person": "<b>Laissez une personne examiner les recours,</b> surtout pour les comptes dont les gens dépendent pour travailler ou garder le contact avec leur famille.",
+        "path": "<b>Rendez le recours facile à trouver,</b> et indiquez combien de temps il prend en général.",
+        "data": "<b>Permettez de télécharger ses données,</b> même quand un compte est suspendu.",
+        "patterns": "<b>Suivez les décisions annulées.</b> Elles montrent où les règles ou les outils doivent être ajustés."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>Aucune loi fédérale n'oblige les plateformes à expliquer pourquoi elles ont supprimé une publication ou bloqué un compte.</b> Utilisez le recours de la plateforme et faites votre demande par écrit.",
+          "2": "<b>Si vous vivez en Californie,</b> vous pouvez demander aux grandes entreprises quelles informations personnelles elles détiennent sur vous et comment elles les utilisent, gratuitement, jusqu'à deux fois par an. Elles doivent répondre dans les 45 jours.",
+          "3": "<b>Si vous avez payé pour quelque chose que vous ne pouvez plus utiliser,</b> demandez un remboursement par écrit et gardez vos reçus."
+        },
+        "noReply": "Continuez d'utiliser le recours de la plateforme et gardez une copie de tout. Si vous vivez en Californie et qu'une entreprise ne répond pas à une demande sur vos données, la <ccpa>page du procureur général sur vos droits en matière de vie privée</ccpa> explique ce que vous pouvez faire."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>Vous pouvez demander une copie de vos données,</b> y compris ce que la plateforme a enregistré sur la décision. Les organisations ont en général un mois pour répondre.",
+          "2": "<b>Si un ordinateur a pris seul une décision importante vous concernant,</b> sans réelle intervention humaine, la plateforme doit vous permettre d'obtenir des informations, de donner votre point de vue, de demander l'intervention d'une personne et de contester la décision."
+        },
+        "noReply": "Continuez d'utiliser le recours de la plateforme. Si on ne vous donne pas vos données, vous pouvez porter plainte <ico>auprès de l'Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Les plateformes doivent expliquer leurs décisions de modération</b> aux personnes concernées, par exemple pourquoi une publication a été supprimée ou un compte suspendu.",
+          "2": "<b>Vous pouvez demander un réexamen par le système de réclamation de la plateforme elle-même.</b>",
+          "3": "<b>Vous pouvez aussi saisir un organisme certifié de règlement des litiges.</b> C'est gratuit ou peu coûteux pour vous, et si la plateforme perd, elle paie tous les frais. Sa décision n'est pas contraignante, mais les plateformes doivent participer de bonne foi.",
+          "4": "<b>Vous pouvez demander vos données,</b> y compris ce qui a été enregistré sur la décision. On doit vous répondre dans un délai d'un mois, gratuitement."
+        },
+        "noReply": "Si le réexamen de la plateforme ne règle pas la question, <ods>trouvez un organisme certifié de règlement des litiges</ods>. Vous pouvez aussi porter plainte auprès du coordinateur pour les services numériques de votre pays, et vous pouvez toujours saisir la justice."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>Vous pouvez demander le réexamen d'une décision prise uniquement par un ordinateur</b> qui touche vos intérêts, et des informations claires sur les critères utilisés. Le secret des affaires peut limiter les détails.",
+          "2": "<b>Vous pouvez consulter et corriger vos données.</b> Une déclaration claire et complète de vos données est due dans les 15 jours suivant votre demande.",
+          "3": "<b>La loi ne dit pas que le réexamen doit être fait par une personne.</b> Cette règle a été supprimée en 2019, alors demandez quand même une personne."
+        },
+        "noReply": "Sans réponse, vous pouvez déposer gratuitement une <anpd>requête auprès de l'autorité nationale de protection des données (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Les grands réseaux sociaux doivent vous prévenir avant de supprimer votre contenu,</b> en donnant les raisons, et vous laisser une vraie possibilité de contester et de demander son rétablissement.",
+          "2": "<b>Les plateformes doivent avoir un responsable des réclamations</b> qui accuse réception de votre plainte dans les 24 heures et la règle dans les 7 jours.",
+          "3": "<b>Si la réponse ne vous satisfait pas,</b> vous pouvez faire appel devant le Grievance Appellate Committee dans les 30 jours suivant la réponse du responsable des réclamations. Le comité s'efforce de décider dans les 30 jours."
+        },
+        "noReply": "Si le responsable des réclamations ne règle pas le problème, <gac>faites appel en ligne devant le Grievance Appellate Committee</gac>, dans les 30 jours."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>Ce site ne couvre pas encore les lois de votre pays.</b> Une demande écrite vaut quand même la peine : elle pose clairement la question et vous laisse une trace."
+        },
+        "noReply": "Sans réponse, continuez d'utiliser le recours de la plateforme et cherchez une autorité de protection des données dans votre pays."
+      },
+      "letters": {
+        "plain": {
+          "subject": "Demande de réexamen de la décision concernant mon compte{hasReference, select, yes { (compte {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez [supprimé ma publication / limité ou suspendu mon compte]. Je pense qu'il s'agit d'une erreur.\n\nMerci de m'indiquer quelle règle vous avez appliquée et pourquoi, et si la décision a été prise par un système automatisé. Je demande qu'une personne réexamine la décision et, si elle était erronée, que vous rétablissiez ma publication ou mon compte.\n\nMerci aussi de m'envoyer une copie des données personnelles que vous détenez sur moi en lien avec cette décision.\n\nJ'attends votre réponse écrite.\n\nCordialement,\n{name}"
+        },
+        "uk": {
+          "subject": "Demande au titre des articles 15 et 22C du UK GDPR concernant mon compte{hasReference, select, yes { (compte {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez [supprimé ma publication / limité ou suspendu mon compte]. Je pense qu'il s'agit d'une erreur et je demande qu'une personne la réexamine.\n\nAu titre de l'article 15 du UK GDPR, merci de m'envoyer une copie des données personnelles que vous détenez sur moi, y compris ce que vous avez enregistré sur cette décision, et de m'indiquer si elle a été prise par des moyens automatisés.\n\nSi la décision a été fondée exclusivement sur un traitement automatisé, sans réelle intervention humaine, je demande, au titre de l'article 22C, des informations à son sujet. Je souhaite présenter mes observations, obtenir l'intervention d'une personne et contester la décision.\n\nMerci de me répondre dans un délai d'un mois.\n\nCordialement,\n{name}"
+        },
+        "eu": {
+          "subject": "Demande de réexamen de la décision concernant mon compte (règlement sur les services numériques et RGPD){hasReference, select, yes { (compte {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez [supprimé ma publication / limité ou suspendu mon compte]. Je pense qu'il s'agit d'une erreur.\n\nAu titre de l'article 17 du règlement sur les services numériques, merci de me fournir un exposé clair des motifs, y compris la règle appliquée et l'éventuel recours à des moyens automatisés. Au titre de l'article 20, je demande que cette décision soit réexaminée par votre système interne de traitement des réclamations, et je souhaite qu'une personne participe à ce réexamen.\n\nAu titre de l'article 15 du RGPD, merci aussi de m'envoyer une copie des données personnelles que vous détenez sur moi en lien avec cette décision, dans le délai d'un mois prévu par l'article 12, paragraphe 3.\n\nCordialement,\n{name}"
+        },
+        "br": {
+          "subject": "Demande au titre des articles 18, 19 et 20 de la LGPD concernant mon compte{hasReference, select, yes { (compte {reference})} other {}}",
+          "body": "Bonjour,\n\nLe {decisionDate}, vous avez [supprimé ma publication / limité ou suspendu mon compte]. Je pense qu'il s'agit d'une erreur.\n\nAu titre de l'article 20 de la LGPD (loi n° 13.709/2018), je demande le réexamen de cette décision et des informations claires sur les critères et procédures utilisés. Je souhaite que le réexamen soit fait par une personne.\n\nAu titre des articles 18 et 19, merci aussi de m'envoyer une déclaration claire et complète des données personnelles que vous détenez sur moi, avec leur origine et les critères utilisés, dans un délai de 15 jours.\n\nCordialement,\n{name}"
+        },
+        "in": {
+          "subject": "Réclamation concernant la suppression de mon contenu ou la restriction de mon compte{hasReference, select, yes { (compte {reference})} other {}}",
+          "body": "À l'attention du responsable des réclamations (Grievance Officer),\n\nLe {decisionDate}, vous avez [supprimé ma publication / limité ou suspendu mon compte]. Je pense qu'il s'agit d'une erreur.\n\nMerci d'accuser réception de cette réclamation dans les 24 heures et de la régler dans les 7 jours, comme l'exige la règle 3(2) des Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021. Merci de m'indiquer les motifs de la mesure et de rétablir mon contenu ou mon compte s'il a été supprimé par erreur.\n\nSi vous êtes un intermédiaire de réseau social significatif, la règle 4(8) vous oblige aussi à me donner les motifs et une vraie possibilité de contester la mesure.\n\nCordialement,\n{name}"
         }
       }
     }

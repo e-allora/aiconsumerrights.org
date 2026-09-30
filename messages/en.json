@@ -289,7 +289,6 @@
     "pending": "<b>Not reviewed by a legal expert yet.</b> Robert Sweetman is checking these pages against their sources, but no lawyer, legal clinic, or consumer organisation has reviewed them, and native speakers haven't checked the translations. If you can help review them, <contact>please get in touch</contact>.",
     "comingHeading": "Coming next",
     "coming": {
-      "account": "An account was blocked or a post was removed",
       "deepfake": "Someone used a fake voice or video to trick you"
     },
     "comingLead": "These guides are still being written. <forum>Tell us in the forum</forum> what you need most.",
@@ -781,6 +780,93 @@
         "plain": {
           "subject": "Please put right what your chat assistant told me{hasReference, select, yes { (ref. {reference})} other {}}",
           "body": "Hello,\n\nOn {decisionDate}, I contacted you about [briefly describe the problem]. Your chat assistant told me [what it said], but [what actually happened].\n\nPlease put this right, either by honouring what your chat assistant told me or by giving me a refund. Please also let me speak with a person who can resolve this, and send me a copy of my chat.\n\nI look forward to your reply in writing.\n\nKind regards,\n{name}"
+        }
+      }
+    },
+    "account": {
+      "metaTitle": "An account was blocked or a post was removed",
+      "metaDescription": "What to do when a platform removed your post or blocked your account: your rights, a letter asking for reasons and a review, and where to turn.",
+      "title": "An account was blocked or a post was removed",
+      "summary": "A platform took down your post, or restricted or blocked your account.",
+      "lead": "A platform removed something you posted, or limited, suspended, or blocked your account. You can ask why, ask for a person to review it, and ask for a copy of your data.",
+      "happened": {
+        "rules": "Platforms remove posts and block accounts that they think break their rules or the law.",
+        "automated": "Much of this is done by software first, sometimes before any person looks at it.",
+        "mistakes": "Mistakes happen: a post read out of context, a hacked account, or a mistaken report."
+      },
+      "company": {
+        "answer": "<b>Tell people what happened and why, in plain words,</b> and which rule was involved. In the EU, that's required.",
+        "person": "<b>Let a person review appeals,</b> especially for accounts people rely on for work or to stay in touch with family.",
+        "path": "<b>Make the appeal easy to find,</b> and say how long it usually takes.",
+        "data": "<b>Let people download their data,</b> even while an account is suspended.",
+        "patterns": "<b>Keep track of reversed decisions.</b> They show where rules or tools need adjusting."
+      },
+      "us": {
+        "rights": {
+          "1": "<b>No federal law makes platforms explain why they removed a post or blocked an account.</b> Use the platform's own appeal, and ask in writing.",
+          "2": "<b>If you live in California,</b> you can ask large businesses what personal information they hold about you and how they use it, free, up to twice a year. They must answer within 45 days.",
+          "3": "<b>If you paid for something you can no longer use,</b> ask for a refund in writing and keep your receipts."
+        },
+        "noReply": "Keep using the platform's appeal, and keep a copy of everything. If you're in California and a business doesn't answer a privacy request, the <ccpa>Attorney General's page on your privacy rights</ccpa> explains what you can do."
+      },
+      "uk": {
+        "rights": {
+          "1": "<b>You can ask for copies of your data,</b> including what the platform recorded about the decision. Organisations usually have one month to answer.",
+          "2": "<b>If a computer alone made a significant decision about you,</b> with no meaningful human involvement, the platform must let you get information about it, give your side, ask for a person to step in, and challenge it."
+        },
+        "noReply": "Keep using the platform's own appeal. If they won't give you your data, you can complain to the <ico>Information Commissioner's Office (ICO)</ico>."
+      },
+      "eu": {
+        "rights": {
+          "1": "<b>Platforms must explain their moderation decisions</b> to the people affected, such as why a post was removed or an account suspended.",
+          "2": "<b>You can ask for a review through the platform's own complaint system.</b>",
+          "3": "<b>You can also go to a certified dispute settlement body.</b> It's free or low-cost for you, and if the platform loses, it pays all the fees. Its decision isn't binding, but platforms must take part in good faith.",
+          "4": "<b>You can ask for your data,</b> including what was recorded about the decision. They must answer within one month, for free."
+        },
+        "noReply": "If the platform's review doesn't settle it, <ods>find a certified dispute settlement body</ods>. You can also complain to your country's Digital Services Coordinator, and you can always go to court."
+      },
+      "br": {
+        "rights": {
+          "1": "<b>You can ask for a review of a decision made only by a computer</b> that affects your interests, and for clear information on the criteria used. Trade secrets can limit the details.",
+          "2": "<b>You can see and correct your data.</b> A clear, full statement of your data is due within 15 days of your request.",
+          "3": "<b>The law doesn't say a person must do the review.</b> That rule was removed in 2019, so ask for a person anyway."
+        },
+        "noReply": "If you get no answer, you can file a free petition with the <anpd>national data protection authority (ANPD)</anpd>."
+      },
+      "in": {
+        "rights": {
+          "1": "<b>Large social media platforms must tell you before removing your content,</b> with the reasons, and give you a fair chance to dispute it and ask for it back.",
+          "2": "<b>Platforms must have a grievance officer</b> who acknowledges your complaint within 24 hours and resolves it within 7 days.",
+          "3": "<b>If you're not satisfied,</b> you can appeal to the Grievance Appellate Committee within 30 days of the grievance officer's reply. It aims to decide within 30 days."
+        },
+        "noReply": "If the grievance officer doesn't resolve it, <gac>appeal to the Grievance Appellate Committee online</gac>, within 30 days."
+      },
+      "other": {
+        "rights": {
+          "1": "<b>This site doesn't cover your country's laws yet.</b> A written request is still worth sending: it asks clearly, and it gives you a record."
+        },
+        "noReply": "If you get no answer, keep using the platform's appeal, and look for a data protection authority in your country."
+      },
+      "letters": {
+        "plain": {
+          "subject": "Request to review the decision on my account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you [removed my post / restricted or suspended my account]. I believe this was a mistake.\n\nPlease tell me which rule you applied and why, and whether the decision was made by an automated system. I ask for a person to review the decision and, if it was wrong, to restore my post or account.\n\nPlease also send me a copy of the personal data you hold about me that relates to this decision.\n\nI look forward to your reply in writing.\n\nKind regards,\n{name}"
+        },
+        "uk": {
+          "subject": "Request under UK GDPR Articles 15 and 22C about my account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you [removed my post / restricted or suspended my account]. I believe this was a mistake, and I ask for a person to review it.\n\nUnder Article 15 of the UK GDPR, please send me a copy of the personal data you hold about me, including what you recorded about this decision, and tell me whether it was made by automated means.\n\nIf the decision was based solely on automated processing, with no meaningful human involvement, I ask under Article 22C for information about it. I want to make representations, to have a person step in, and to contest the decision.\n\nPlease reply within one month.\n\nKind regards,\n{name}"
+        },
+        "eu": {
+          "subject": "Request to review the decision on my account (Digital Services Act and GDPR){hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you [removed my post / restricted or suspended my account]. I believe this was a mistake.\n\nUnder Article 17 of the Digital Services Act, please give me a clear statement of the reasons, including the rule you applied and whether automated means were used. Under Article 20, I ask for this decision to be reviewed through your internal complaint system, and I would like a person to be involved in the review.\n\nUnder Article 15 of the GDPR, please also send me a copy of the personal data you hold about me that relates to this decision, within one month as Article 12(3) requires.\n\nKind regards,\n{name}"
+        },
+        "br": {
+          "subject": "Request under Articles 18, 19 and 20 of the LGPD about my account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "Hello,\n\nOn {decisionDate}, you [removed my post / restricted or suspended my account]. I believe this was a mistake.\n\nUnder Article 20 of the LGPD (Law No. 13,709/2018), I ask for a review of this decision, and for clear information on the criteria and procedures used to make it. I would like a person to carry out the review.\n\nUnder Articles 18 and 19, please also send me a clear and complete statement of the personal data you hold about me, with its origin and the criteria used, within 15 days.\n\nKind regards,\n{name}"
+        },
+        "in": {
+          "subject": "Grievance about the removal of my content or the restriction of my account{hasReference, select, yes { (account {reference})} other {}}",
+          "body": "To the Grievance Officer,\n\nOn {decisionDate}, you [removed my post / restricted or suspended my account]. I believe this was a mistake.\n\nPlease acknowledge this grievance within 24 hours and resolve it within 7 days, as rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 requires. Please tell me the grounds for the action, and restore my content or account if it was removed in error.\n\nIf you are a significant social media intermediary, rule 4(8) also requires you to give me the reasons and a fair chance to dispute the action.\n\nKind regards,\n{name}"
         }
       }
     }

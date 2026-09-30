@@ -26,7 +26,7 @@ const require = createRequire(import.meta.url);
 const AXE = require.resolve("axe-core/axe.min.js");
 const PORT = Number(process.env.AUDIT_PORT ?? 3217);
 const BASE = `http://localhost:${PORT}`;
-const PAGES = ["", "/help", "/help/credit", "/help/job", "/help/housing", "/help/insurance", "/help/chatbot", "/guide", "/forum", "/sources", "/about", "/how-it-works"];
+const PAGES = ["", "/help", "/help/credit", "/help/job", "/help/housing", "/help/insurance", "/help/chatbot", "/help/account", "/guide", "/forum", "/sources", "/about", "/how-it-works"];
 const LOCALES = ["en", "es", "pt", "pt-BR", "it", "fr", "de", "hi"];
 const ROUTES = LOCALES.flatMap((locale) => PAGES.map((p) => `/${locale}${p}`));
 const CHROME =

@@ -41,7 +41,7 @@ export const EU_AUTHORITY: Partial<Record<Locale, string>> = {
 };
 
 /** Which letter a region uses. Regions without their own law get a plain request. */
-export type LetterKind = "us" | "uk" | "eu" | "br" | "plain";
+export type LetterKind = "us" | "uk" | "eu" | "br" | "in" | "plain";
 
 export type RegionHelp = {
   /** One citation list per right, in order: Help.<situation>.<region>.rights.<n>. */
@@ -288,9 +288,56 @@ export const SITUATIONS: Situation[] = [
       },
     },
   },
+  {
+    id: "account",
+    happened: ["rules", "automated", "mistakes"],
+    company: [
+      { key: "answer", cites: ["eu-dsa-user-rights"] },
+      { key: "person" },
+      { key: "path" },
+      { key: "data" },
+      { key: "patterns" },
+    ],
+    regions: {
+      us: {
+        rights: [[], ["ca-ccpa"], []],
+        letter: "plain",
+        complain: { ccpa: "ca-ccpa" },
+      },
+      uk: {
+        rights: [["uk-ico-sar"], ["uk-duaa-s80"]],
+        letter: "uk",
+        complain: { ico: "uk-ico-complaint" },
+      },
+      // The Digital Services Act: reasons (Art. 17), internal complaints
+      // (Art. 20), certified dispute settlement bodies (Art. 21).
+      eu: {
+        rights: [["eu-dsa-user-rights"], ["eu-dsa-user-rights"], ["eu-dsa-ods"], ["gdpr"]],
+        letter: "eu",
+        complain: { ods: "eu-dsa-ods" },
+      },
+      br: {
+        rights: [["lgpd-article-20"], ["anpd-lgpd-en"], ["iba-mariotto-2024"]],
+        letter: "br",
+        complain: { anpd: "br-anpd-peticao-denuncia" },
+      },
+      // IT Rules 2021: rule 4(8) notice before removal; rule 3(2) grievance
+      // officer; rule 3A appeal to the Grievance Appellate Committee.
+      in: {
+        rights: [["in-it-rules-2021-consolidated"], ["in-it-rules-2021-consolidated"], ["in-it-rules-2021-consolidated", "in-gac-portal"]],
+        letter: "in",
+        complain: { gac: "in-gac-portal" },
+      },
+      other: {
+        rights: [[]],
+        letter: "plain",
+        complain: {},
+      },
+    },
+  },
 ];
 
 /** Situations planned but not written yet, shown as "coming next" on /help. */
-export const COMING = ["account", "deepfake"] as const;
+export const COMING = ["deepfake"] as const;
 
 export const getSituation = (id: string): Situation | undefined => SITUATIONS.find((s) => s.id === id);

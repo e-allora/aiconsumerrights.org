@@ -32,6 +32,7 @@ export const PUBLISHED_ROUTES: PublishedRoute[] = [
   { path: "/help/housing", changeFrequency: "monthly", priority: 0.8 },
   { path: "/help/insurance", changeFrequency: "monthly", priority: 0.8 },
   { path: "/help/chatbot", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/help/account", changeFrequency: "monthly", priority: 0.8 },
   { path: "/guide", changeFrequency: "monthly", priority: 0.9 },
   { path: "/forum", changeFrequency: "weekly", priority: 0.8 },
   { path: "/sources", changeFrequency: "monthly", priority: 0.5 },
