@@ -1086,7 +1086,7 @@
     },
     "submission": {
       "label": "Schlagen Sie eine Aussage vor, über die andere abstimmen können",
-      "disclosure": "<b>Ein Mensch liest jede Aussage, bevor sie gezeigt wird.</b> Zuerst prüft ein KI-Modell, ob sie Namen oder Kontaktdaten enthält: Mistral Small, oder Gemini von Google als Ersatz, beide auf Servern in der EU. Es läuft über OpenRouter und ist so eingestellt, dass Ihr Text nicht gespeichert wird. Freigegebene Aussagen werden Menschen gezeigt, die dieselbe Sprache nutzen. Aussagen, die eine Person, ein Unternehmen oder eine Gruppe herausgreifen, werden nicht veröffentlicht. Bitte lassen Sie persönliche Angaben weg. Ihre Beiträge werden auf einen respektvollen Umgangston geprüft. Wir kritisieren Ideen, nicht Menschen.",
+      "disclosure": "<b>Ein Mensch liest jede Aussage, bevor sie gezeigt wird.</b> Zuerst prüft ein KI-Modell, ob sie Namen oder Kontaktdaten enthält: Mistral Small, oder Gemini von Google als Ersatz, beide auf Servern in der EU. Es läuft über OpenRouter und ist so eingestellt, dass nur Dienste genutzt werden, die zusagen, Ihren Text nicht zu speichern. Freigegebene Aussagen werden Menschen gezeigt, die dieselbe Sprache nutzen. Aussagen, die eine Person, ein Unternehmen oder eine Gruppe herausgreifen, werden nicht veröffentlicht. Bitte lassen Sie persönliche Angaben weg. Ihre Beiträge werden auf einen respektvollen Umgangston geprüft. Wir kritisieren Ideen, nicht Menschen.",
       "placeholder": "z. B. „Kundenportale sollten immer mit einem Tippen einen Menschen als Ansprechpartner anbieten.“",
       "remaining": "Noch {remaining} von {max} Zeichen",
       "submit": "Zur Prüfung senden",
@@ -1204,7 +1204,7 @@
     "services": {
       "vercel": "<b>Vercel</b> betreibt die Website und ihre Firewall. Vercel sieht jeden Besuch, auch IP-Adressen, in kurzlebigen Protokollen.",
       "neon": "<b>Neon</b> ist die Datenbank, in Frankfurt. Sie enthält die Stimmen, gespeichert mit einem unkenntlich gemachten Browser-Code, und die vorgeschlagenen Aussagen.",
-      "openrouter": "<b>OpenRouter</b> leitet jede vorgeschlagene Aussage an ein KI-Modell weiter. OpenRouter speichert Nutzungsdaten (Zeit, Modell, Kosten), aber nicht Ihren Text, und nutzt nur Dienste, die ihn auch nicht speichern.",
+      "openrouter": "<b>OpenRouter</b> leitet jede vorgeschlagene Aussage an ein KI-Modell weiter. Wir haben es so eingestellt, dass es nur Dienste nutzt, die zusagen, Ihren Text weder zu speichern noch damit zu trainieren. Diese Zusage können wir verlangen, aber nicht überprüfen. Was OpenRouter selbst speichert, regelt seine eigene Datenschutzerklärung.",
       "models": "<b>Mistral Small</b>, mit <b>Gemini von Google</b> als Ersatz, liest jeden Vorschlag auf Servern in der EU, um Namen und Kontaktdaten zu markieren. Es markiert nur; ein Mensch entscheidet.",
       "github": "<b>GitHub</b> speichert den öffentlichen Code. <b>Proton</b> kümmert sich um E-Mails."
     },

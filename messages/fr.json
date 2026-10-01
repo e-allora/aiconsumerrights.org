@@ -1086,7 +1086,7 @@
     },
     "submission": {
       "label": "Proposez une affirmation sur laquelle les autres pourront voter",
-      "disclosure": "<b>Une personne lit chaque affirmation avant qu'elle ne soit affichée.</b> D'abord, un modèle d'IA vérifie qu'elle ne contient ni noms ni coordonnées : Mistral Small, ou Gemini de Google en secours, tous deux sur des serveurs dans l'UE. Il passe par OpenRouter, réglé pour ne pas garder votre texte. Les affirmations approuvées sont montrées aux personnes qui utilisent la même langue. Les affirmations qui visent une personne, une entreprise ou un groupe ne sont pas publiées. Merci de ne pas donner de détails personnels. Vos contributions sont relues selon des règles de dialogue respectueux. Nous critiquons les idées, pas les personnes.",
+      "disclosure": "<b>Une personne lit chaque affirmation avant qu'elle ne soit affichée.</b> D'abord, un modèle d'IA vérifie qu'elle ne contient ni noms ni coordonnées : Mistral Small, ou Gemini de Google en secours, tous deux sur des serveurs dans l'UE. Il passe par OpenRouter, réglé pour n'utiliser que des services qui s'engagent à ne pas garder votre texte. Les affirmations approuvées sont montrées aux personnes qui utilisent la même langue. Les affirmations qui visent une personne, une entreprise ou un groupe ne sont pas publiées. Merci de ne pas donner de détails personnels. Vos contributions sont relues selon des règles de dialogue respectueux. Nous critiquons les idées, pas les personnes.",
       "placeholder": "p. ex. « Les services clients en ligne devraient toujours permettre de demander un conseiller humain d'un seul geste. »",
       "remaining": "{remaining} caractères restants sur {max}",
       "submit": "Envoyer pour relecture",
@@ -1204,7 +1204,7 @@
     "services": {
       "vercel": "<b>Vercel</b> héberge le site et son pare-feu. Il voit chaque visite, y compris les adresses IP, dans des journaux de courte durée.",
       "neon": "<b>Neon</b> est la base de données, à Francfort, en Allemagne. Elle contient les votes, stockés avec un code de navigateur brouillé, et les affirmations proposées.",
-      "openrouter": "<b>OpenRouter</b> transmet chaque affirmation proposée à un modèle d'IA. Il garde des relevés d'utilisation (heure, modèle, coût) mais pas votre texte, et il n'utilise que des services qui ne le gardent pas non plus.",
+      "openrouter": "<b>OpenRouter</b> transmet chaque affirmation proposée à un modèle d'IA. Nous l'avons réglé pour n'utiliser que des services qui s'engagent à ne pas garder votre texte ni à s'entraîner dessus. Nous pouvons exiger cet engagement, mais pas le vérifier. Ce qu'OpenRouter garde lui-même relève de sa propre politique de confidentialité.",
       "models": "<b>Mistral Small</b>, avec <b>Gemini de Google</b> en secours, lit chaque proposition sur des serveurs dans l'UE pour repérer les noms et les coordonnées. Il ne fait que signaler ; une personne décide.",
       "github": "<b>GitHub</b> héberge le code public. <b>Proton</b> gère les e-mails."
     },

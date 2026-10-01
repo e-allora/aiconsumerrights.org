@@ -4,8 +4,8 @@
 //
 // Models, through OpenRouter: Mistral Small first; if it is busy, Google's
 // Gemini 2.5 Flash-Lite. Each is pinned to its EU endpoint, and requests
-// only go to zero-data-retention endpoints, so the text is not stored or
-// trained on.
+// only go to zero-data-retention endpoints, whose providers promise not to
+// store the text or train on it. We can ask for that promise, not inspect it.
 
 import { SITE_URL } from "@/lib/site";
 

@@ -164,3 +164,5 @@ Every change needs passing tests, a clean build, and a clean `npm run audit:a11y
 ## 📜 License
 
 [MIT](LICENSE) © 2026 Robert Sweetman
+
+The site's writing (the text in `messages/` and `content/`) is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse it with credit.
