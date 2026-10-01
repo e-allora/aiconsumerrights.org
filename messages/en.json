@@ -1086,7 +1086,7 @@
     },
     "submission": {
       "label": "Suggest a statement for others to vote on",
-      "disclosure": "<b>A person reads every statement before it is shown.</b> First, an AI model checks it for names and contact details: Mistral Small, or Google's Gemini as a backup, both on EU servers. It runs through OpenRouter, set not to keep your text. Approved statements are shown to people who use the same language. Statements that single out a person, company, or group are not published. Please leave out personal details. Your input is reviewed for civil discourse standards. We critique ideas, not people.",
+      "disclosure": "<b>A person reads every statement before it is shown.</b> First, an AI model checks it for names and contact details: Mistral Small, or Google's Gemini as a backup, both on EU servers. It runs through OpenRouter, set to use only services that promise not to keep your text. Approved statements are shown to people who use the same language. Statements that single out a person, company, or group are not published. Please leave out personal details. Your input is reviewed for civil discourse standards. We critique ideas, not people.",
       "placeholder": "e.g., 'Customer service portals should always let you request a human representative with one tap.'",
       "remaining": "{remaining} of {max} characters left",
       "submit": "Submit for review",
@@ -1204,7 +1204,7 @@
     "services": {
       "vercel": "<b>Vercel</b> hosts the site and its firewall. It sees each visit, including IP addresses, in short-term logs.",
       "neon": "<b>Neon</b> is the database, in Frankfurt, Germany. It holds votes, stored with a scrambled browser code, and suggested statements.",
-      "openrouter": "<b>OpenRouter</b> passes each suggested statement to an AI model. It keeps usage records (time, model, cost) but not your text, and it only uses services that don't keep it either.",
+      "openrouter": "<b>OpenRouter</b> passes each suggested statement to an AI model. We set it to use only services that promise not to keep your text or train on it. We can ask for that promise but can't inspect it. What OpenRouter itself keeps is covered by its own privacy policy.",
       "models": "<b>Mistral Small</b>, with <b>Google's Gemini</b> as a backup, reads each suggestion on EU servers to flag names and contact details. It only flags; a person decides.",
       "github": "<b>GitHub</b> stores the public code. <b>Proton</b> handles email."
     },

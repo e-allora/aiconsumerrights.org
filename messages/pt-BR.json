@@ -1086,7 +1086,7 @@
     },
     "submission": {
       "label": "Sugira uma frase para outras pessoas votarem",
-      "disclosure": "<b>Uma pessoa lê cada frase antes de ela aparecer.</b> Primeiro, um modelo de IA verifica se ela tem nomes ou dados de contato: o Mistral Small ou, como reserva, o Gemini do Google, ambos em servidores na UE. Ele funciona pelo OpenRouter, configurado para não guardar o seu texto. As frases aprovadas aparecem para quem usa o mesmo idioma. Não publicamos frases que apontem para uma pessoa, uma empresa ou um grupo. Por favor, não inclua dados pessoais. Suas contribuições são revisadas segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
+      "disclosure": "<b>Uma pessoa lê cada frase antes de ela aparecer.</b> Primeiro, um modelo de IA verifica se ela tem nomes ou dados de contato: o Mistral Small ou, como reserva, o Gemini do Google, ambos em servidores na UE. Ele funciona pelo OpenRouter, configurado para usar só serviços que prometem não guardar o seu texto. As frases aprovadas aparecem para quem usa o mesmo idioma. Não publicamos frases que apontem para uma pessoa, uma empresa ou um grupo. Por favor, não inclua dados pessoais. Suas contribuições são revisadas segundo normas de diálogo respeitoso. Criticamos as ideias, não as pessoas.",
       "placeholder": "ex.: “Os portais de atendimento ao cliente deveriam sempre permitir pedir um atendente humano com um só toque.”",
       "remaining": "Faltam {remaining} de {max} caracteres",
       "submit": "Enviar para revisão",
@@ -1204,7 +1204,7 @@
     "services": {
       "vercel": "A <b>Vercel</b> hospeda o site e o firewall dele. Ela vê cada visita, incluindo endereços IP, em registros de curta duração.",
       "neon": "A <b>Neon</b> é o banco de dados, em Frankfurt, na Alemanha. Ela guarda os votos, com um código do navegador codificado, e as frases sugeridas.",
-      "openrouter": "O <b>OpenRouter</b> envia cada frase sugerida para um modelo de IA. Ele guarda registros de uso (horário, modelo, custo), mas não o seu texto, e só usa serviços que também não guardam.",
+      "openrouter": "O <b>OpenRouter</b> envia cada frase sugerida para um modelo de IA. Nós o configuramos para usar só serviços que prometem não guardar o seu texto nem treinar com ele. Podemos pedir essa promessa, mas não verificá-la. O que o próprio OpenRouter guarda segue a política de privacidade dele.",
       "models": "O <b>Mistral Small</b>, com o <b>Gemini do Google</b> como reserva, lê cada sugestão em servidores na UE para apontar nomes e dados de contato. Ele só aponta; quem decide é uma pessoa.",
       "github": "O <b>GitHub</b> guarda o código público. O <b>Proton</b> cuida do e-mail."
     },

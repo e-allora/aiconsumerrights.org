@@ -36,7 +36,7 @@ describe("How this site works page", () => {
       expect(text).toContain(name);
     }
     expect(text).toContain("including IP addresses");
-    expect(text).toContain("keeps usage records (time, model, cost) but not your text");
+    expect(text).toContain("promise not to keep your text or train on it");
   });
 
   it("quotes the real numbers from the code, not copies that can drift", () => {

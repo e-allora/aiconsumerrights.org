@@ -1086,7 +1086,7 @@
     },
     "submission": {
       "label": "Proponi una frase da far votare agli altri",
-      "disclosure": "<b>Una persona legge ogni frase prima che venga mostrata.</b> Innanzitutto, un modello di IA controlla se contiene nomi o dati di contatto: Mistral Small o, in alternativa, Gemini di Google, entrambi su server nell'UE. Funziona tramite OpenRouter, impostato per non conservare il tuo testo. Le frasi approvate vengono mostrate a chi usa la stessa lingua. Non pubblichiamo frasi che prendono di mira una persona, un'azienda o un gruppo. Per favore, non inserire dati personali. I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
+      "disclosure": "<b>Una persona legge ogni frase prima che venga mostrata.</b> Innanzitutto, un modello di IA controlla se contiene nomi o dati di contatto: Mistral Small o, in alternativa, Gemini di Google, entrambi su server nell'UE. Funziona tramite OpenRouter, impostato per usare solo servizi che promettono di non conservare il tuo testo. Le frasi approvate vengono mostrate a chi usa la stessa lingua. Non pubblichiamo frasi che prendono di mira una persona, un'azienda o un gruppo. Per favore, non inserire dati personali. I tuoi contributi vengono controllati secondo regole di dialogo rispettoso. Critichiamo le idee, non le persone.",
       "placeholder": "Per esempio: «I portali di assistenza clienti dovrebbero sempre permetterti di chiedere un operatore umano con un solo tocco.»",
       "remaining": "Restano {remaining} di {max} caratteri",
       "submit": "Invia per la revisione",
@@ -1204,7 +1204,7 @@
     "services": {
       "vercel": "<b>Vercel</b> ospita il sito e il suo firewall. Vede ogni visita, compresi gli indirizzi IP, in registri di breve durata.",
       "neon": "<b>Neon</b> è il database, a Francoforte, in Germania. Conserva i voti, con un codice del browser codificato, e le frasi proposte.",
-      "openrouter": "<b>OpenRouter</b> invia ogni frase proposta a un modello di IA. Conserva i dati di utilizzo (ora, modello, costo) ma non il tuo testo, e usa solo servizi che a loro volta non lo conservano.",
+      "openrouter": "<b>OpenRouter</b> invia ogni frase proposta a un modello di IA. Lo abbiamo impostato per usare solo servizi che promettono di non conservare il tuo testo né di usarlo per l'addestramento. Possiamo chiedere questa promessa, ma non verificarla. Ciò che OpenRouter conserva dipende dalla sua informativa sulla privacy.",
       "models": "<b>Mistral Small</b>, con <b>Gemini di Google</b> come riserva, legge ogni proposta su server nell'UE per segnalare nomi e dati di contatto. Segnala soltanto; decide una persona.",
       "github": "<b>GitHub</b> conserva il codice pubblico. <b>Proton</b> gestisce la posta."
     },
