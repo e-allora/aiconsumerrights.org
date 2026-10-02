@@ -7,10 +7,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LetterBuilder } from "@/components/help/LetterBuilder";
 import { RegionPicker } from "@/components/help/RegionPicker";
 import { Cite } from "@/components/ui/Cite";
+import { ReviewNotes } from "@/components/ui/PublicLog";
 import { HelpLink, PhoneLink } from "@/components/ui/HelpLink";
 import { EU_AUTHORITY, REGIONS, SITUATIONS, getSituation, homeRegion, type Region, type Situation } from "@/lib/help";
 import { Link } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/routing";
+import { reviews, reviewsFor } from "@/lib/public-log";
 import { pageMetadata } from "@/lib/seo";
 import { REVIEW_EMAIL } from "@/lib/site";
 import { getSource } from "@/lib/sources";
@@ -52,6 +54,7 @@ function RegionPanel({ situation, region, locale }: { situation: Situation; regi
   const home = region === "eu" ? EU_AUTHORITY[locale] : undefined;
   return (
     <div className="flex flex-col gap-10">
+      <ReviewNotes entries={reviewsFor(situation.id, region)} />
       <section aria-labelledby={`rights-${region}`} className="flex flex-col gap-4">
         <h3 id={`rights-${region}`}>{t("rightsHeading")}</h3>
         <ul className="flex list-disc flex-col gap-3 pl-6">
@@ -114,7 +117,7 @@ export default function SituationPage({ params: { locale, situation: id } }: Pro
         <h1>{k("title")}</h1>
         <p className="text-xl">{k("lead")}</p>
         <p className="rounded-md border-l-4 border-primary bg-muted/70 p-4 text-base">
-          {t.rich("pending", {
+          {t.rich(reviews.some((r) => r.guide === situation.id) ? "pendingPartly" : "pending", {
             b: (c) => <strong>{c}</strong>,
             contact: (c) => (
               <a href={`mailto:${REVIEW_EMAIL}`} className={linkClass}>

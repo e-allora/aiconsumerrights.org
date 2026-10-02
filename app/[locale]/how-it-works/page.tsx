@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { CorrectionsLog } from "@/components/ui/PublicLog";
+import { CorrectionsLog, ReviewList } from "@/components/ui/PublicLog";
 import { RULES } from "@/lib/forum/consensus";
 import { DAILY_LIMITS } from "@/lib/forum/submissions";
 import { VOTER_COOKIE_DAYS } from "@/lib/forum/votes";
@@ -28,6 +28,8 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 const SERVICES = ["vercel", "neon", "openrouter", "models", "github", "dns", "fonts", "archive"] as const;
 const KEEP = ["votes", "suggestions", "letters", "never"] as const;
 const UNFINISHED = ["review", "legal", "translations", "language", "results", "ai", "limits", "twice"] as const;
+// How a review of one page works.
+const REVIEW = ["ask", "fix", "credit", "reuse", "limit", "once"] as const;
 
 const bold = (c: React.ReactNode) => <strong>{c}</strong>;
 const linkClass = "font-semibold text-link underline underline-offset-4";
@@ -95,6 +97,14 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
         })}
       </section>
 
+      <section aria-labelledby="review" className="flex flex-col gap-4">
+        <h2 id="review" className="scroll-mt-24">{t("review.heading")}</h2>
+        <p>{t.rich("reviewers", { b: bold, email: REVIEW_EMAIL, mail: external(`mailto:${REVIEW_EMAIL}`) })}</p>
+        {list(REVIEW, "review")}
+        <h3 id="reviewed-by">{t("review.listHeading")}</h3>
+        <ReviewList />
+      </section>
+
       <section aria-labelledby="corrections" className="flex flex-col gap-4">
         <h2 id="corrections">{t("correctionsHeading")}</h2>
         <p>{t.rich("correctionsLead", { b: bold })}</p>
@@ -111,7 +121,6 @@ export default function HowItWorksPage({ params: { locale } }: Props) {
             issues: external(`${REPO_URL}/issues`),
           })}
         </p>
-        <p>{t.rich("reviewers", { b: bold, email: REVIEW_EMAIL, mail: external(`mailto:${REVIEW_EMAIL}`) })}</p>
       </section>
     </main>
   );

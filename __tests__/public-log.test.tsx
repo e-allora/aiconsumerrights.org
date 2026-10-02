@@ -1,9 +1,19 @@
 import { render, screen, within } from "@/test-utils";
 
-import { CorrectionsLog, WeDidList } from "@/components/ui/PublicLog";
+import { CorrectionsLog, ReviewList, ReviewNotes, WeDidList } from "@/components/ui/PublicLog";
 import { STATEMENTS } from "@/lib/forum/statements";
+import { REGIONS, SITUATIONS } from "@/lib/help";
 import { routing } from "@/lib/i18n/routing";
-import { corrections, pick, weDid, type Correction, type WeDidEntry } from "@/lib/public-log";
+import {
+  corrections,
+  pick,
+  reviews,
+  reviewsFor,
+  weDid,
+  type Correction,
+  type Review,
+  type WeDidEntry,
+} from "@/lib/public-log";
 import { PUBLISHED_ROUTES, REPO_URL } from "@/lib/site";
 import { MESSAGES } from "@/test-utils";
 
@@ -141,5 +151,115 @@ describe("WeDidList", () => {
       "href",
       `${REPO_URL}/commit/abc1234`
     );
+  });
+});
+
+// A reviewer's name is only ever published with their written yes, so these
+// checks guard the shape of each entry and what the site says around it.
+describe("content/reviews.json", () => {
+  it("has unique ids, real past dates, and real guides, regions and languages", () => {
+    expect(new Set(reviews.map((r) => r.id)).size).toBe(reviews.length);
+    const today = new Date().toISOString().slice(0, 10);
+    const guides = SITUATIONS.map((x) => x.id);
+    for (const r of reviews) {
+      expect(r.date).toMatch(ISO_DAY);
+      expect(r.date <= today).toBe(true);
+      expect(guides).toContain(r.guide);
+      expect(REGIONS as readonly string[]).toContain(r.region);
+      expect(locales).toContain(r.language);
+      expect(r.scope.en.trim()).not.toBe("");
+    }
+  });
+
+  it("credits each reviewer in one of the three ways they can choose", () => {
+    for (const r of reviews) {
+      expect(["name", "organisation", "anonymous"]).toContain(r.credit.as);
+      if (r.credit.as === "name") expect(r.credit.name.trim()).not.toBe("");
+      if (r.credit.as === "organisation") expect(r.credit.organisation.trim()).not.toBe("");
+      if (r.credit.as === "anonymous") expect(r.credit.description.en.trim()).not.toBe("");
+      if (r.credit.as !== "anonymous" && r.credit.url) expect(r.credit.url).toMatch(/^https:\/\//);
+    }
+  });
+});
+
+const review = (over: Partial<Review> = {}): Review => ({
+  id: "r1",
+  date: "2026-10-20",
+  guide: "credit",
+  region: "us",
+  language: "en",
+  scope: { en: "The US rights and the letter." },
+  credit: { as: "name", name: "Ada Example", organisation: "Example Law Clinic", url: "https://example.org" },
+  ...over,
+});
+
+describe("reviewsFor", () => {
+  it("returns only the reviews of that guide and that region", () => {
+    const all = [review(), review({ id: "r2", region: "uk" }), review({ id: "r3", guide: "job" })];
+    expect(reviewsFor("credit", "us", all).map((r) => r.id)).toEqual(["r1"]);
+    expect(reviewsFor("housing", "us", all)).toEqual([]);
+  });
+});
+
+describe("ReviewNotes", () => {
+  it("renders nothing when that part has no review", () => {
+    const { container } = render(<ReviewNotes entries={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it("says when, who, what and in which language, and that a review covers only that part", () => {
+    render(<ReviewNotes entries={[review()]} />);
+    const note = screen.getByRole("listitem");
+    expect(note).toHaveTextContent("Reviewed on 20 October 2026");
+    expect(note).toHaveTextContent("By: Ada Example, Example Law Clinic");
+    expect(note).toHaveTextContent("What they looked at: The US rights and the letter.");
+    expect(note).toHaveTextContent("Language of the page they read: English");
+    expect(note).toHaveTextContent("A review covers only the part named here. Any mistakes that remain are ours.");
+    expect(within(note).getByRole("link", { name: /Ada Example, Example Law Clinic/ })).toHaveAttribute(
+      "href",
+      "https://example.org"
+    );
+  });
+
+  it("shows an organisation alone when that is how it chose to be credited", () => {
+    render(<ReviewNotes entries={[review({ credit: { as: "organisation", organisation: "Example Law Clinic" } })]} />);
+    expect(screen.getByRole("listitem")).toHaveTextContent("By: Example Law Clinic");
+    expect(screen.queryByRole("link")).not.toBeInTheDocument();
+  });
+
+  it("never shows a name for an anonymous reviewer, only the description they agreed to", () => {
+    render(
+      <ReviewNotes
+        entries={[review({ credit: { as: "anonymous", description: { en: "A consumer-law clinic in the United States" } } })]}
+      />
+    );
+    expect(screen.getByRole("listitem")).toHaveTextContent("By: A consumer-law clinic in the United States");
+  });
+
+  it("uses the visitor's language for the labels and the language name", () => {
+    render(<ReviewNotes entries={[review({ language: "it" })]} />, { locale: "it" });
+    const note = screen.getByRole("listitem");
+    expect(note).toHaveTextContent("Revisionato il 20 ottobre 2026");
+    expect(note).toHaveTextContent("Lingua della pagina letta: italiano");
+  });
+});
+
+describe("ReviewList", () => {
+  it("says so plainly when no one has reviewed a page yet", () => {
+    render(<ReviewList entries={[]} />);
+    expect(screen.getByText("No one has reviewed a page yet. When someone does, it will be listed here.")).toBeInTheDocument();
+  });
+
+  it("links each review to the guide and region it covers, newest first", () => {
+    render(<ReviewList entries={[review(), review({ id: "r2", date: "2026-11-02", guide: "housing", region: "uk" })]} />);
+    const links = screen.getAllByRole("link", { name: /·/ });
+    expect(links.map((a) => a.getAttribute("href"))).toEqual(["/en/help/housing?where=uk", "/en/help/credit?where=us"]);
+    expect(links[1]).toHaveTextContent("United States");
+  });
+
+  it.each(locales)("renders the real list in %s", (locale) => {
+    render(<ReviewList />, { locale: locale as keyof typeof MESSAGES });
+    if (reviews.length === 0) expect(screen.queryAllByRole("listitem")).toHaveLength(0);
+    else expect(screen.getAllByRole("listitem")).toHaveLength(reviews.length);
   });
 });

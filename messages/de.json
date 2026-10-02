@@ -287,6 +287,7 @@
     "title": "Was ist Ihnen passiert?",
     "lead": "Wählen Sie, was passiert ist. Sie erhalten klare Schritte, einen Brief zum Ausfüllen und Stellen, an die Sie sich wenden können, wenn niemand antwortet.",
     "pending": "<b>Noch nicht juristisch geprüft.</b> Robert Sweetman prüft diese Seiten anhand ihrer Quellen, aber noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation hat sie geprüft, und Muttersprachler haben die Übersetzungen noch nicht kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
+    "pendingPartly": "<b>Teilweise geprüft.</b> Fachleute haben Teile dieser Seiten geprüft. Im Abschnitt jedes Landes steht, ob er geprüft wurde und von wem. Der Rest ist noch nicht juristisch geprüft, und Muttersprachler haben noch nicht alle Übersetzungen kontrolliert. Wenn Sie bei der Prüfung helfen können, <contact>melden Sie sich gern</contact>.",
     "comingHeading": "Demnächst",
     "coming": {},
     "comingLead": "Diese Anleitungen entstehen gerade. <forum>Sagen Sie uns im Forum</forum>, welche Sie am dringendsten brauchen.",
@@ -1224,13 +1225,23 @@
     "unfinishedHeading": "Was noch nicht fertig oder perfekt ist",
     "unfinished": {
       "review": "Die Prüfung des Ratgebers durch einen Menschen läuft noch.",
-      "legal": "<b>Die Hilfeseiten und Briefe</b> hat noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation geprüft. Wir wollen um diese Prüfung bitten und Prüfende nur mit ihrer Erlaubnis nennen.",
+      "legal": "<b>Die Hilfeseiten und Briefe</b> hat noch keine Anwältin, kein Anwalt, keine Rechtsklinik und keine Verbraucherorganisation geprüft. Wie eine Prüfung abläuft, steht im Abschnitt „Eine Seite prüfen“ auf dieser Seite. Wir nennen Prüfende nur mit ihrer Erlaubnis.",
       "translations": "Die Übersetzungen wurden mit Hilfe von KI erstellt. Muttersprachlerinnen und Muttersprachler haben noch nicht alle geprüft.",
       "language": "Vorschläge erscheinen nur in der Sprache, in der sie geschrieben wurden.",
       "results": "Ergebnisse erscheinen erst ab {minVotes} oder mehr Stimmen pro Sprache, am Anfang gibt es also keine.",
       "ai": "Die Prüfung durch die KI kann sich irren. Jede Entscheidung trifft ein Mensch.",
       "limits": "Um die Kosten niedrig zu halten, prüft die KI höchstens {checks} Vorschläge pro Tag. Danach liest weiterhin ein Mensch jeden Vorschlag, nur ohne KI-Prüfung. Nach {max} Vorschlägen an einem Tag pausiert der Vorschlagskasten bis zum nächsten Tag.",
       "twice": "Abstimmen ohne Konto kann nicht verhindern, dass jemand mehrfach abstimmt, zum Beispiel mit einem zweiten Browser oder einem Skript. Die Ergebnisse sind deshalb ein grobes Signal, keine Zählung von Personen."
+    },
+    "review": {
+      "heading": "Eine Seite prüfen",
+      "ask": "<b>Worum wir bitten.</b> Etwa 15 Minuten für eine Seite, für ein Land, in Ihrem eigenen Fachgebiet. Sagen Sie uns, was falsch, veraltet oder irreführend ist.",
+      "fix": "<b>Was danach passiert.</b> Wir korrigieren, was Sie finden, und führen es unter Korrekturen auf dieser Seite auf.",
+      "credit": "<b>Wie Sie genannt werden.</b> Sie entscheiden: mit Namen, als Organisation, anonym oder gar nicht. Nichts wird ohne Ihr Ja zum genauen Wortlaut veröffentlicht.",
+      "reuse": "<b>Was Sie weiterverwenden können.</b> Die Ratgeber und Briefe stehen unter CC BY 4.0. Sie können sie mit Ihren eigenen Klientinnen und Klienten nutzen, mit Quellenangabe.",
+      "limit": "<b>Was eine Prüfung bedeutet.</b> Sie betrifft nur den Teil, der geprüft wurde. Sie ist keine Billigung der übrigen Website.",
+      "once": "<b>Wir fragen jede Organisation nur einmal.</b> Wenn die Antwort Nein lautet oder keine Antwort kommt, schreiben wir nicht noch einmal.",
+      "listHeading": "Wer was geprüft hat"
     },
     "correctionsHeading": "Korrekturen",
     "correctionsLead": "<b>Wenn auf dieser Website etwas falsch ist, korrigieren wir es und führen es hier auf</b>, das Neueste zuerst. Jeder Eintrag sagt, was falsch war und was sich geändert hat. Die Person, die es gemeldet hat, nennen wir nur, wenn sie das möchte.",
@@ -1246,6 +1257,12 @@
     "flaggedBy": "Gemeldet von {name}. Danke.",
     "commit": "Die genaue Änderung auf GitHub ansehen",
     "englishOnly": "Vorerst nur auf Englisch.",
-    "noCorrections": "Noch keine Korrekturen. Wenn Sie einen Fehler finden, sagen Sie es uns bitte."
+    "noCorrections": "Noch keine Korrekturen. Wenn Sie einen Fehler finden, sagen Sie es uns bitte.",
+    "reviewedOn": "Geprüft am {date}",
+    "reviewBy": "Von:",
+    "reviewScope": "Was geprüft wurde:",
+    "reviewLanguage": "Sprache der gelesenen Seite:",
+    "reviewLimit": "Eine Prüfung betrifft nur den hier genannten Teil. Verbleibende Fehler sind unsere.",
+    "noReviews": "Noch hat niemand eine Seite geprüft. Sobald jemand es tut, steht es hier."
   }
 }

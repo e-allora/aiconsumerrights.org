@@ -287,6 +287,7 @@
     "title": "O que aconteceu com você?",
     "lead": "Escolha o que aconteceu. Você vai receber passos claros, uma carta que pode preencher e a quem recorrer se ninguém responder.",
     "pending": "<b>Ainda sem revisão de um especialista jurídico.</b> Robert Sweetman está verificando estas páginas com as fontes, mas nenhum advogado, clínica jurídica ou organização de consumidores as revisou, e nenhum falante nativo revisou as traduções. Se você puder ajudar a revisá-las, <contact>entre em contato</contact>.",
+    "pendingPartly": "<b>Revisadas em parte.</b> Pessoas que trabalham na área revisaram partes destas páginas. A seção de cada país informa se ela foi revisada e por quem. O restante ainda não foi revisado por um especialista jurídico, e nem todas as traduções foram revisadas por falantes nativos. Se você puder ajudar a revisá-las, <contact>entre em contato</contact>.",
     "comingHeading": "Em breve",
     "coming": {},
     "comingLead": "Estes guias ainda estão sendo escritos. <forum>Conte no fórum</forum> de qual você mais precisa.",
@@ -1224,13 +1225,23 @@
     "unfinishedHeading": "O que não está pronto ou não é perfeito",
     "unfinished": {
       "review": "A revisão humana do guia ainda está em andamento.",
-      "legal": "<b>As páginas de ajuda e as cartas</b> ainda não foram revisadas por um advogado, clínica jurídica ou organização de consumidores. Pretendemos pedir essa revisão e só citar quem revisar com a autorização da pessoa.",
+      "legal": "<b>As páginas de ajuda e as cartas</b> ainda não foram revisadas por um advogado, clínica jurídica ou organização de consumidores. A seção \"Revisar uma página\", nesta página, explica como funciona uma revisão. Só citamos quem revisa com a autorização da pessoa.",
       "translations": "As traduções foram feitas com ajuda de IA. Falantes nativos ainda não revisaram todas elas.",
       "language": "As sugestões só aparecem no idioma em que foram escritas.",
       "results": "Os resultados só aparecem com {minVotes} ou mais votos por idioma, então no começo não há nenhum.",
       "ai": "A verificação com IA pode errar. Toda decisão é tomada por uma pessoa.",
       "limits": "Para manter os custos baixos, a IA verifica no máximo {checks} sugestões por dia. Depois disso, uma pessoa continua lendo cada uma, sem a verificação com IA. Depois de {max} sugestões em um dia, a caixa de sugestões fica em pausa até o dia seguinte.",
       "twice": "Votar sem conta não impede que alguém vote mais de uma vez, por exemplo com outro navegador ou com um programa automático. Por isso, os resultados são um sinal aproximado, não uma contagem de pessoas."
+    },
+    "review": {
+      "heading": "Revisar uma página",
+      "ask": "<b>O que pedimos.</b> Cerca de 15 minutos para uma página, de um país, na sua própria área. Diga o que está errado, desatualizado ou confuso.",
+      "fix": "<b>O que acontece depois.</b> Corrigimos o que você encontrar e registramos em Correções, nesta página.",
+      "credit": "<b>Como você é reconhecido.</b> A escolha é sua: pelo nome, como organização, de forma anônima ou de nenhuma forma. Nada é publicado sem o seu sim às palavras exatas.",
+      "reuse": "<b>O que você pode reutilizar.</b> Os guias e as cartas têm licença CC BY 4.0. Você pode usá-los com seus próprios clientes, citando a fonte.",
+      "limit": "<b>O que significa uma revisão.</b> Ela cobre apenas a parte que a pessoa revisou. Não é uma aprovação do restante do site.",
+      "once": "<b>Perguntamos a cada organização uma única vez.</b> Se a resposta for não, ou se não houver resposta, não escrevemos de novo.",
+      "listHeading": "Quem revisou o quê"
     },
     "correctionsHeading": "Correções",
     "correctionsLead": "<b>Quando algo neste site está errado, corrigimos e anotamos aqui</b>, do mais recente para o mais antigo. Cada item diz o que estava errado e o que mudou. Só citamos quem apontou o erro se a pessoa pedir.",
@@ -1246,6 +1257,12 @@
     "flaggedBy": "Apontado por {name}. Obrigado.",
     "commit": "Ver a mudança exata no GitHub",
     "englishOnly": "Por enquanto, só em inglês.",
-    "noCorrections": "Ainda não há correções. Se você encontrar um erro, nos avise."
+    "noCorrections": "Ainda não há correções. Se você encontrar um erro, nos avise.",
+    "reviewedOn": "Revisado em {date}",
+    "reviewBy": "Por:",
+    "reviewScope": "O que foi revisado:",
+    "reviewLanguage": "Idioma da página que foi lida:",
+    "reviewLimit": "Uma revisão cobre apenas a parte indicada aqui. Os erros que restarem são nossos.",
+    "noReviews": "Ninguém revisou uma página ainda. Quando alguém revisar, vai aparecer aqui."
   }
 }

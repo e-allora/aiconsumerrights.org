@@ -6,6 +6,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/routing";
 import { COMING, SITUATIONS } from "@/lib/help";
+import { reviews } from "@/lib/public-log";
 import { pageMetadata } from "@/lib/seo";
 import { REVIEW_EMAIL } from "@/lib/site";
 
@@ -45,7 +46,7 @@ export default function HelpPage({ params: { locale } }: Props) {
         <h1>{t("title")}</h1>
         <p className="text-xl">{t("lead")}</p>
         <p className="rounded-md border-l-4 border-primary bg-muted/70 p-4 text-base">
-          {t.rich("pending", {
+          {t.rich(reviews.length > 0 ? "pendingPartly" : "pending", {
             b: (c) => <strong>{c}</strong>,
             contact: (c) => (
               <a href={`mailto:${REVIEW_EMAIL}`} className={linkClass}>

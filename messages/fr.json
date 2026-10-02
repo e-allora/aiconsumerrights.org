@@ -287,6 +287,7 @@
     "title": "Que vous est-il arrivé ?",
     "lead": "Choisissez ce qui s'est passé. Vous aurez des étapes claires, une lettre à compléter et à qui vous adresser si personne ne répond.",
     "pending": "<b>Pas encore relues par un expert juridique.</b> Robert Sweetman vérifie ces pages à partir de leurs sources, mais aucun avocat, aucune clinique juridique ni aucune association de consommateurs ne les a encore relues, et aucune personne de langue maternelle n'a vérifié les traductions. Si vous pouvez aider à les relire, <contact>contactez-nous</contact>.",
+    "pendingPartly": "<b>Relues en partie.</b> Des personnes qui travaillent dans ce domaine ont relu des parties de ces pages. La section de chaque pays indique si elle a été relue, et par qui. Le reste n'a pas encore été relu par un expert juridique, et toutes les traductions n'ont pas été vérifiées par des personnes de langue maternelle. Si vous pouvez aider à les relire, <contact>contactez-nous</contact>.",
     "comingHeading": "Bientôt",
     "coming": {},
     "comingLead": "Ces guides sont encore en cours d'écriture. <forum>Dites-nous sur le forum</forum> celui dont vous avez le plus besoin.",
@@ -1224,13 +1225,23 @@
     "unfinishedHeading": "Ce qui n'est pas terminé ou parfait",
     "unfinished": {
       "review": "La relecture humaine du guide est encore en cours.",
-      "legal": "<b>Les pages d'aide et les lettres</b> n'ont pas encore été relues par un avocat, une clinique juridique ou une association de consommateurs. Nous comptons demander cette relecture, et ne nommer les relecteurs qu'avec leur accord.",
+      "legal": "<b>Les pages d'aide et les lettres</b> n'ont pas encore été relues par un avocat, une clinique juridique ou une association de consommateurs. La section « Relire une page », sur cette page, explique comment se passe une relecture. Nous ne nommons les relecteurs qu'avec leur accord.",
       "translations": "Les traductions ont été faites avec l'aide de l'IA. Des locuteurs natifs ne les ont pas encore toutes vérifiées.",
       "language": "Les propositions n'apparaissent que dans la langue où elles ont été écrites.",
       "results": "Les résultats n'apparaissent qu'à partir de {minVotes} votes ou plus par langue, donc au début il n'y en a pas.",
       "ai": "La vérification par l'IA peut se tromper. Une personne prend chaque décision.",
       "limits": "Pour limiter les coûts, l'IA vérifie au plus {checks} suggestions par jour. Ensuite, une personne lit toujours chacune d'elles, sans la vérification par l'IA. Au-delà de {max} suggestions dans une journée, la boîte à suggestions est en pause jusqu'au lendemain.",
       "twice": "Voter sans compte ne peut pas empêcher quelqu'un de voter plus d'une fois, par exemple avec un deuxième navigateur ou un programme automatique. Les résultats sont donc un signal approximatif, pas un décompte de personnes."
+    },
+    "review": {
+      "heading": "Relire une page",
+      "ask": "<b>Ce que nous demandons.</b> Environ 15 minutes pour une page, pour un pays, dans votre propre domaine. Dites-nous ce qui est faux, dépassé ou trompeur.",
+      "fix": "<b>Ce qui se passe ensuite.</b> Nous corrigeons ce que vous trouvez et nous l'inscrivons dans les Corrections, sur cette page.",
+      "credit": "<b>Comment vous êtes cité.</b> Vous choisissez : par votre nom, comme organisation, de façon anonyme ou pas du tout. Rien n'est publié sans votre accord sur les mots exacts.",
+      "reuse": "<b>Ce que vous pouvez réutiliser.</b> Les guides et les lettres sont sous licence CC BY 4.0. Vous pouvez les utiliser avec vos propres clients, en citant la source.",
+      "limit": "<b>Ce que signifie une relecture.</b> Elle ne couvre que la partie relue. Ce n'est pas une approbation du reste du site.",
+      "once": "<b>Nous ne sollicitons chaque organisation qu'une seule fois.</b> Si la réponse est non, ou s'il n'y a pas de réponse, nous n'écrivons pas de nouveau.",
+      "listHeading": "Qui a relu quoi"
     },
     "correctionsHeading": "Corrections",
     "correctionsLead": "<b>Quand quelque chose est faux sur ce site, nous le corrigeons et nous l'indiquons ici</b>, du plus récent au plus ancien. Chaque entrée dit ce qui était faux et ce qui a changé. Nous ne nommons la personne qui l'a signalé que si elle le demande.",
@@ -1246,6 +1257,12 @@
     "flaggedBy": "Signalé par {name}. Merci.",
     "commit": "Voir la modification exacte sur GitHub",
     "englishOnly": "Seulement en anglais pour l'instant.",
-    "noCorrections": "Aucune correction pour l'instant. Si vous trouvez une erreur, dites-le-nous."
+    "noCorrections": "Aucune correction pour l'instant. Si vous trouvez une erreur, dites-le-nous.",
+    "reviewedOn": "Relu le {date}",
+    "reviewBy": "Par :",
+    "reviewScope": "Ce qui a été relu :",
+    "reviewLanguage": "Langue de la page lue :",
+    "reviewLimit": "Une relecture ne couvre que la partie indiquée ici. Les erreurs qui restent sont les nôtres.",
+    "noReviews": "Personne n'a encore relu une page. Quand quelqu'un le fera, ce sera indiqué ici."
   }
 }

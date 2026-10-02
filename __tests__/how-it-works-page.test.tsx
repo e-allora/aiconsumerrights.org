@@ -58,6 +58,22 @@ describe("How this site works page", () => {
     expect(items.at(-1)).toHaveTextContent("can't stop someone from voting more than once, for example with a second browser or a script");
   });
 
+  it("explains how a review of one page works, and lists who has reviewed what", () => {
+    render(<HowItWorksPage params={{ locale: "en" }} />);
+    const review = section("Reviewing a page");
+    expect(review).toHaveAttribute("aria-labelledby", "review");
+    expect(review).toHaveTextContent("About 15 minutes on one page, for one country, in your own field.");
+    expect(review).toHaveTextContent("by name, as an organisation, anonymously, or not at all");
+    expect(review).toHaveTextContent("It is not approval of the rest of the site.");
+    expect(review).toHaveTextContent("a no needs no explanation");
+    expect(review).toHaveTextContent("We ask each organisation only once.");
+    expect(within(review).getByRole("link", { name: "reviewers@aiconsumerrights.org" })).toHaveAttribute(
+      "href",
+      "mailto:reviewers@aiconsumerrights.org"
+    );
+    expect(within(review).getByRole("heading", { level: 3, name: "Who has reviewed what" })).toBeInTheDocument();
+  });
+
   it("lists every fixed error from the corrections log, before the contact box", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     const log = section("Corrections");
@@ -67,7 +83,7 @@ describe("How this site works page", () => {
     expect(log.compareDocumentPosition(contact) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
-  it("asks for criticism with a reason, gives the email, and invites reviewers", () => {
+  it("asks for criticism with a reason and gives the email; reviewers have their own section", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     const contact = section("Tell us what's wrong");
     expect(contact).toHaveTextContent("Criticism is welcome when it comes with a reason.");
@@ -75,16 +91,13 @@ describe("How this site works page", () => {
       "href",
       "mailto:feedback@aiconsumerrights.org"
     );
-    expect(within(contact).getByRole("link", { name: "reviewers@aiconsumerrights.org" })).toHaveAttribute(
-      "href",
-      "mailto:reviewers@aiconsumerrights.org"
-    );
     expect(within(contact).getByRole("link", { name: "open an issue on GitHub" })).toHaveAttribute(
       "href",
       "https://github.com/e-allora/aiconsumerrights.org/issues"
     );
-    expect(contact).toHaveTextContent("a no needs no explanation");
     expect(contact).not.toHaveTextContent("shipitworks");
+    // The reviewer invitation lives in "Reviewing a page", so the address appears once.
+    expect(screen.getAllByRole("link", { name: "reviewers@aiconsumerrights.org" })).toHaveLength(1);
   });
 
   it.each(["es", "pt-PT", "pt-BR", "it", "fr", "de", "hi"] as const)("renders in %s with the same numbers and links", (locale) => {

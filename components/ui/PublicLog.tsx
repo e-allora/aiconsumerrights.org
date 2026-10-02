@@ -1,7 +1,16 @@
 import { useLocale, useTranslations } from "next-intl";
 
 import { Link } from "@/lib/i18n/navigation";
-import { corrections, pick, weDid, type Correction, type LocalizedText, type WeDidEntry } from "@/lib/public-log";
+import {
+  corrections,
+  pick,
+  reviews,
+  weDid,
+  type Correction,
+  type LocalizedText,
+  type Review,
+  type WeDidEntry,
+} from "@/lib/public-log";
 import { REPO_URL } from "@/lib/site";
 import { formatDate } from "@/lib/dates";
 
@@ -124,5 +133,107 @@ export function WeDidList({ entries = weDid }: { entries?: WeDidEntry[] }) {
         );
       })}
     </ul>
+  );
+}
+
+/** Who reviewed, shown the way they chose: by name, as an organisation, or described without a name. */
+function Reviewer({ credit }: { credit: Review["credit"] }) {
+  const localized = useLocalized();
+  const tc = useTranslations("Common");
+  if (credit.as === "anonymous") {
+    const description = localized(credit.description);
+    return <span lang={description.lang}>{description.text}</span>;
+  }
+  const label = credit.as === "name" ? [credit.name, credit.organisation].filter(Boolean).join(", ") : credit.organisation;
+  if (!credit.url) return <>{label}</>;
+  return (
+    <a
+      href={credit.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${label} ${tc("opensInNewTab")}`}
+      className={linkClass}
+    >
+      {label}
+    </a>
+  );
+}
+
+/** One review: when, who, what they looked at, and in which language they read the page. */
+function ReviewFacts({ review }: { review: Review }) {
+  const t = useTranslations("PublicLog");
+  const locale = useLocale();
+  const localized = useLocalized();
+  const scope = localized(review.scope);
+  const language = new Intl.DisplayNames([locale], { type: "language" }).of(review.language) ?? review.language;
+  return (
+    <>
+      <p className="font-display font-bold">
+        <time dateTime={review.date}>{t("reviewedOn", { date: formatDate(review.date, locale) })}</time>
+      </p>
+      <dl className="flex flex-col gap-1 text-base">
+        <div className="flex flex-wrap gap-x-2">
+          <dt className="font-bold">{t("reviewBy")} </dt>
+          <dd>
+            <Reviewer credit={review.credit} />
+          </dd>
+        </div>
+        <div className="flex flex-wrap gap-x-2">
+          <dt className="font-bold">{t("reviewScope")} </dt>
+          <dd lang={scope.lang}>{scope.text}</dd>
+        </div>
+        <div className="flex flex-wrap gap-x-2">
+          <dt className="font-bold">{t("reviewLanguage")} </dt>
+          <dd>{language}</dd>
+        </div>
+      </dl>
+    </>
+  );
+}
+
+/**
+ * The reviews of one part of a help page, shown at the top of that part.
+ * Renders nothing when there are none. Every note ends by saying that a
+ * review covers only the part named, so it never reads as approval of more.
+ */
+export function ReviewNotes({ entries }: { entries: Review[] }) {
+  const t = useTranslations("PublicLog");
+  if (entries.length === 0) return null;
+  return (
+    <ul className="flex flex-col gap-4" data-testid="review-notes">
+      {entries.map((r) => (
+        <li key={r.id} className="flex flex-col gap-2 rounded-md border-l-4 border-primary bg-muted/70 p-4">
+          <ReviewFacts review={r} />
+          <p className="text-sm text-muted-foreground">{t("reviewLimit")}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/**
+ * Every review on the site, newest first, for How this site works. Entries
+ * come only from content/reviews.json, which Robert writes by hand after the
+ * reviewer has agreed to the exact words.
+ */
+export function ReviewList({ entries = reviews }: { entries?: Review[] }) {
+  const t = useTranslations("PublicLog");
+  const help = useTranslations("Help");
+  if (entries.length === 0) return <p>{t("noReviews")}</p>;
+  const sorted = [...entries].sort((a, b) => b.date.localeCompare(a.date));
+  return (
+    <div className="flex flex-col gap-4">
+      <ol className="flex flex-col gap-6">
+        {sorted.map((r) => (
+          <li key={r.id} className="depth-card flex flex-col gap-2 p-5 sm:p-6">
+            <Link href={`/help/${r.guide}?where=${r.region}`} className={standaloneLink}>
+              {help(`${r.guide}.title`)} · {help(`regions.${r.region}`)}
+            </Link>
+            <ReviewFacts review={r} />
+          </li>
+        ))}
+      </ol>
+      <p className="text-sm text-muted-foreground">{t("reviewLimit")}</p>
+    </div>
   );
 }

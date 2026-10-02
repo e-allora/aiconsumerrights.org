@@ -287,6 +287,7 @@
     "title": "What happened to you?",
     "lead": "Pick what happened. You'll get plain steps, a letter you can fill in, and where to turn if nobody answers.",
     "pending": "<b>Not reviewed by a legal expert yet.</b> Robert Sweetman is checking these pages against their sources, but no lawyer, legal clinic, or consumer organisation has reviewed them, and native speakers haven't checked the translations. If you can help review them, <contact>please get in touch</contact>.",
+    "pendingPartly": "<b>Partly reviewed.</b> People who work in the field have reviewed parts of these pages. Each country's section says whether it was reviewed, and by whom. The rest has not been reviewed by a legal expert yet, and native speakers haven't checked all the translations. If you can help review them, <contact>please get in touch</contact>.",
     "comingHeading": "Coming next",
     "coming": {},
     "comingLead": "These guides are still being written. <forum>Tell us in the forum</forum> what you need most.",
@@ -1224,13 +1225,23 @@
     "unfinishedHeading": "What isn't finished or perfect",
     "unfinished": {
       "review": "Human review of the guide is still in progress.",
-      "legal": "<b>The help pages and letters</b> haven't been reviewed by a lawyer, legal clinic, or consumer organisation yet. We plan to ask for that review, and to name reviewers only with their permission.",
+      "legal": "<b>The help pages and letters</b> haven't been reviewed by a lawyer, legal clinic, or consumer organisation yet. How a review works is set out under “Reviewing a page” on this page. Reviewers are named only with their permission.",
       "translations": "The translations were made with AI help. Native speakers haven't checked all of them yet.",
       "language": "Suggestions only appear in the language they were written in.",
       "results": "Results appear only after {minVotes} or more votes per language, so early on there are none.",
       "ai": "The AI check can be wrong. A person makes every decision.",
       "limits": "To keep costs low, the AI checks at most {checks} suggestions a day. After that, a person still reads each one, without the AI check. After {max} suggestions in a day, the suggestion box pauses until the next day.",
       "twice": "Voting without accounts can't stop someone from voting more than once, for example with a second browser or a script. So the results are a rough signal, not a count of people."
+    },
+    "review": {
+      "heading": "Reviewing a page",
+      "ask": "<b>What we ask.</b> About 15 minutes on one page, for one country, in your own field. Tell us what is wrong, out of date, or misleading.",
+      "fix": "<b>What happens next.</b> We fix what you find and list it under Corrections, on this page.",
+      "credit": "<b>How you are credited.</b> You choose: by name, as an organisation, anonymously, or not at all. Nothing is published without your yes to the exact words.",
+      "reuse": "<b>What you can reuse.</b> The guides and letters are CC BY 4.0. You can use them with your own clients, with credit.",
+      "limit": "<b>What a review means.</b> It covers only the part the reviewer looked at. It is not approval of the rest of the site.",
+      "once": "<b>We ask each organisation only once.</b> If the answer is no, or there is no answer, we don't write again.",
+      "listHeading": "Who has reviewed what"
     },
     "correctionsHeading": "Corrections",
     "correctionsLead": "<b>When something on this site is wrong, we fix it and list it here</b>, newest first. Each entry says what was wrong and what changed. We name the person who flagged it only if they ask.",
@@ -1246,6 +1257,12 @@
     "flaggedBy": "Flagged by {name}. Thank you.",
     "commit": "See the exact change on GitHub",
     "englishOnly": "Only in English for now.",
-    "noCorrections": "No corrections yet. If you find a mistake, please tell us."
+    "noCorrections": "No corrections yet. If you find a mistake, please tell us.",
+    "reviewedOn": "Reviewed on {date}",
+    "reviewBy": "By:",
+    "reviewScope": "What they looked at:",
+    "reviewLanguage": "Language of the page they read:",
+    "reviewLimit": "A review covers only the part named here. Any mistakes that remain are ours.",
+    "noReviews": "No one has reviewed a page yet. When someone does, it will be listed here."
   }
 }
