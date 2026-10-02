@@ -4,9 +4,10 @@ import registry from "@/lib/data/sources.json";
 export { formatDate } from "@/lib/dates";
 
 /**
- * "confirmed": an AI opened the link and it matched. "person": the page blocks
- * automated readers, so Robert opened and read it himself. "unopened": no one
- * has opened it yet. "no-link": no public link is recorded.
+ * "confirmed": an AI opened the link and it matched. "person": no AI opened
+ * it (many official sites block automated readers), so Robert opened it in a
+ * browser; readBy says whether he has also read it. "unopened": no one has
+ * opened it yet. "no-link": no public link is recorded.
  */
 export type SourceStatus = "confirmed" | "person" | "unopened" | "no-link";
 

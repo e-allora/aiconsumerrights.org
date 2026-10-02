@@ -52,8 +52,15 @@ describe("lib/data/sources.json", () => {
   it("never calls a source unopened once a person has read it", () => {
     for (const s of all) {
       if (s.readBy) expect({ id: s.id, status: s.status }).not.toEqual({ id: s.id, status: "unopened" });
-      if (s.status === "person") expect({ id: s.id, readBy: s.readBy }).toEqual({ id: s.id, readBy: expect.any(String) });
     }
+  });
+
+  it("says in a note what happened whenever a person, not an AI, opened the link", () => {
+    for (const s of all.filter((x) => x.status === "person")) {
+      expect({ id: s.id, note: (s.note ?? "").trim() }).not.toEqual({ id: s.id, note: "" });
+    }
+    // Opening is not reading: the registry text must keep the two apart.
+    expect(en.Attribution.registryAbout).toMatch(/Whether he has read it is shown on its own line\./);
   });
 
   it("only says every link is archived when every link is", () => {

@@ -1,5 +1,5 @@
 {
-  "about": "Every source this site draws on, with how each link was checked. confirmed: an AI model (Claude, or research agents it directed) opened the link and the content matched. That is not the same as a person reading it; sources Robert has read himself carry a readBy date. person: the page blocks automated readers, so Robert opened it in a browser and read it himself. unopened: the link comes from an official index or search, but no one has opened it yet. no-link: listed as background reading, with no public link recorded yet. checkedOn is the first day sources were checked and lastCheckedOn the latest.",
+  "about": "Every source this site draws on, with how each link was checked. confirmed: an AI model (Claude, or research agents it directed) opened the link and the content matched. That is not the same as a person reading it; sources Robert has read himself carry a readBy date. person: no AI model opened the page, often because the site blocks automated readers, so Robert opened it in a browser; whether he has read it is recorded separately in readBy. unopened: the link comes from an official index or search, but no one has opened it yet. no-link: listed as background reading, with no public link recorded yet. checkedOn is the first day sources were checked and lastCheckedOn the latest.",
   "checkedOn": "2026-09-23",
   "lastCheckedOn": "2026-10-02",
   "review": {
@@ -125,8 +125,8 @@
           "date": "2026-07-08",
           "type": "Law (EU)",
           "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng",
-          "status": "unopened",
-          "note": "EUR-Lex blocks automated readers. In force 27 July 2026 per several law-firm summaries.",
+          "status": "person",
+          "note": "EUR-Lex blocks automated readers. Robert opened the page on 2 October 2026 and saved the official PDF and the EU Publications Office record. That record gives 27 July 2026 as the date of entry into force. An AI model read page 42 of Robert's saved PDF: Article 1 sets the high-risk start dates at 2 December 2027 for Annex III systems and 2 August 2028 for Annex I systems.",
           "primary": true,
           "copies": [
             {
@@ -241,7 +241,8 @@
           "date": "2025-12-11",
           "type": "Executive order (US)",
           "url": "https://www.federalregister.gov/documents/2025/12/16/2025-23092/ensuring-a-national-policy-framework-for-artificial-intelligence",
-          "status": "unopened",
+          "status": "person",
+          "note": "The Federal Register site blocks automated readers. Robert opened the page on 2 October 2026 and saved the official PDF (Federal Register, Vol. 90, No. 239, 16 December 2025, 3 pages). An AI model read that copy: the order sets a policy of a national framework for AI (section 2) and orders an evaluation of State AI laws (section 4).",
           "archived": {
             "url": "https://web.archive.org/web/20260928021037/https://unblock.federalregister.gov/",
             "date": "2026-09-28"
@@ -253,7 +254,8 @@
           "publisher": "National Conference of State Legislatures (NCSL)",
           "type": "Legislation tracker",
           "url": "https://www.ncsl.org/financial-services/artificial-intelligence-legislation-database",
-          "status": "unopened",
+          "status": "person",
+          "note": "NCSL blocks automated readers. Robert opened the database on 2 October 2026 (it says it was updated on 1 September 2026) and searched all states. His saved results list enacted and pending state bills, including laws on chatbots and on notifying people.",
           "archived": {
             "url": "https://web.archive.org/web/20260928021124/https://www.ncsl.org/financial-services/artificial-intelligence-legislation-database",
             "date": "2026-09-28"
@@ -265,7 +267,8 @@
           "publisher": "Federal Trade Commission (FTC)",
           "type": "Complaint portal (US)",
           "url": "https://reportfraud.ftc.gov/",
-          "status": "unopened",
+          "status": "person",
+          "note": "Robert opened the page on 2 October 2026. It is the FTC's fraud reporting site, as this entry says.",
           "archived": {
             "url": "https://web.archive.org/web/20260927070603/https://reportfraud.ftc.gov/",
             "date": "2026-09-27"
@@ -511,8 +514,8 @@
           "publisher": "Figma",
           "type": "Design benchmark",
           "url": "https://www.figma.com/resource-library/web-design-trends/",
-          "status": "unopened",
-          "note": "A saved copy was summarized; the live page was not opened.",
+          "status": "person",
+          "note": "An AI model summarized a saved copy. Robert opened the live page on 2 October 2026. It is the report this entry describes.",
           "archived": {
             "url": "https://web.archive.org/web/20260928021530/https://www.figma.com/resource-library/web-design-trends/",
             "date": "2026-09-28"
