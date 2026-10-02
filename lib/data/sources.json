@@ -700,6 +700,7 @@
           "jurisdiction": "Brazil (bill, not law)",
           "url": "https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara",
           "status": "confirmed",
+          "note": "Robert read the whole article: the first part in his saved copy, and the rest, from \"Emendas\" on, through an unofficial English translation made with AI help (Claude). The Portuguese text at Agência Senado remains the authoritative version.",
           "summary": "The Senate passed AI bill PL 2338/2023 on 10 December 2024 and sent it to the Chamber of Deputies. The Senate text includes rights to prior information that you are interacting with AI, to an explanation, to contest decisions, and to human review, and sorts AI systems by risk level.",
           "lang": "pt-BR",
           "copies": [
@@ -712,7 +713,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928021833/https://www12.senado.leg.br/noticias/materias/2024/12/10/senado-aprova-regulamentacao-da-inteligencia-artificial-texto-vai-a-camara",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "pl2338-camara-status",
