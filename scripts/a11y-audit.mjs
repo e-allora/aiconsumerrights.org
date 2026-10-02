@@ -104,6 +104,12 @@ async function audit(browser, route, theme, vpName) {
     } catch {}
   }, theme);
   const response = await page.goto(BASE + route, { waitUntil: "networkidle0" });
+  // The "page not found" page is meant to answer 404. The browser logs that
+  // status once as a console error, the only error this page may have.
+  const expects404 = route.endsWith("/missing");
+  if (expects404 && response?.status() !== 404) fail(where, `expected status 404, got ${response?.status()}`);
+  // A real page answers 200, or 304 when the browser already holds a fresh copy.
+  if (!expects404 && !(response && response.status() < 400)) fail(where, `page answered ${response?.status()}`);
   // 6. security headers
   for (const h of [
     "content-security-policy",
@@ -183,7 +189,14 @@ async function audit(browser, route, theme, vpName) {
   await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "no-preference" }]);
 
   // 5. console and hydration errors
-  for (const e of errors) fail(where, `console: ${e.slice(0, 160)}`);
+  let own404 = expects404 ? 1 : 0;
+  for (const e of errors) {
+    if (own404 && /status of 404/.test(e)) {
+      own404 -= 1;
+      continue;
+    }
+    fail(where, `console: ${e.slice(0, 160)}`);
+  }
 
   await page.close();
   return { where, axe: axe.length, small: small.length };
