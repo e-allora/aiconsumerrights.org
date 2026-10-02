@@ -1231,7 +1231,7 @@
       "results": "Os resultados só aparecem com {minVotes} ou mais votos por idioma, então no começo não há nenhum.",
       "ai": "A verificação com IA pode errar. Toda decisão é tomada por uma pessoa.",
       "limits": "Para manter os custos baixos, a IA verifica no máximo {checks} sugestões por dia. Depois disso, uma pessoa continua lendo cada uma, sem a verificação com IA. Depois de {max} sugestões em um dia, a caixa de sugestões fica em pausa até o dia seguinte.",
-      "twice": "Votar sem conta não impede que alguém vote mais de uma vez, por exemplo com outro navegador ou com um programa automático. Por isso, os resultados são um sinal aproximado, não uma contagem de pessoas."
+      "twice": "Votar sem conta não impede que alguém vote mais de uma vez, por exemplo com outro navegador ou com um programa automático. Um limite de velocidade para os votos vindos da mesma conexão desacelera os programas automáticos, mas não consegue impedi-los. Por isso, os resultados são um sinal aproximado, não uma contagem de pessoas."
     },
     "review": {
       "heading": "Revisar uma página",

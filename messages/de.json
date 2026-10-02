@@ -1231,7 +1231,7 @@
       "results": "Ergebnisse erscheinen erst ab {minVotes} oder mehr Stimmen pro Sprache, am Anfang gibt es also keine.",
       "ai": "Die Prüfung durch die KI kann sich irren. Jede Entscheidung trifft ein Mensch.",
       "limits": "Um die Kosten niedrig zu halten, prüft die KI höchstens {checks} Vorschläge pro Tag. Danach liest weiterhin ein Mensch jeden Vorschlag, nur ohne KI-Prüfung. Nach {max} Vorschlägen an einem Tag pausiert der Vorschlagskasten bis zum nächsten Tag.",
-      "twice": "Abstimmen ohne Konto kann nicht verhindern, dass jemand mehrfach abstimmt, zum Beispiel mit einem zweiten Browser oder einem Skript. Die Ergebnisse sind deshalb ein grobes Signal, keine Zählung von Personen."
+      "twice": "Abstimmen ohne Konto kann nicht verhindern, dass jemand mehrfach abstimmt, zum Beispiel mit einem zweiten Browser oder einem Skript. Ein Tempolimit für Stimmen von derselben Verbindung bremst Skripte, kann sie aber nicht aufhalten. Die Ergebnisse sind deshalb ein grobes Signal, keine Zählung von Personen."
     },
     "review": {
       "heading": "Eine Seite prüfen",

@@ -1231,7 +1231,7 @@
       "results": "I risultati compaiono solo con {minVotes} voti o più per lingua, quindi all'inizio non ce ne sono.",
       "ai": "Il controllo con l'IA può sbagliare. Ogni decisione la prende una persona.",
       "limits": "Per contenere i costi, l'IA controlla al massimo {checks} suggerimenti al giorno. Dopo, una persona continua a leggerli tutti, senza il controllo dell'IA. Dopo {max} suggerimenti in un giorno, la casella si ferma fino al giorno dopo.",
-      "twice": "Votare senza account non impedisce a qualcuno di votare più di una volta, per esempio con un altro browser o con un programma automatico. Per questo i risultati sono un segnale approssimativo, non un conteggio di persone."
+      "twice": "Votare senza account non impedisce a qualcuno di votare più di una volta, per esempio con un altro browser o con un programma automatico. Un limite di velocità per i voti dalla stessa connessione rallenta i programmi automatici, ma non può fermarli. Per questo i risultati sono un segnale approssimativo, non un conteggio di persone."
     },
     "review": {
       "heading": "Revisionare una pagina",

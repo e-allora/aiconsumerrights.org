@@ -1231,7 +1231,7 @@
       "results": "Los resultados solo aparecen cuando hay {minVotes} votos o más por idioma, así que al principio no hay ninguno.",
       "ai": "La revisión con IA puede equivocarse. Cada decisión la toma una persona.",
       "limits": "Para mantener bajos los costos, la IA revisa como máximo {checks} sugerencias al día. Después, una persona sigue leyendo cada una, sin la revisión con IA. Tras {max} sugerencias en un día, el buzón se pausa hasta el día siguiente.",
-      "twice": "Votar sin cuenta no impide que alguien vote más de una vez, por ejemplo con otro navegador o con un programa automático. Por eso los resultados son una señal aproximada, no un recuento de personas."
+      "twice": "Votar sin cuenta no impide que alguien vote más de una vez, por ejemplo con otro navegador o con un programa automático. Un límite de velocidad para los votos desde una misma conexión frena a los programas automáticos, pero no puede detenerlos. Por eso los resultados son una señal aproximada, no un recuento de personas."
     },
     "review": {
       "heading": "Revisar una página",

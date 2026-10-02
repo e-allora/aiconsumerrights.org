@@ -1231,7 +1231,7 @@
       "results": "Results appear only after {minVotes} or more votes per language, so early on there are none.",
       "ai": "The AI check can be wrong. A person makes every decision.",
       "limits": "To keep costs low, the AI checks at most {checks} suggestions a day. After that, a person still reads each one, without the AI check. After {max} suggestions in a day, the suggestion box pauses until the next day.",
-      "twice": "Voting without accounts can't stop someone from voting more than once, for example with a second browser or a script. So the results are a rough signal, not a count of people."
+      "twice": "Voting without accounts can't stop someone from voting more than once, for example with a second browser or a script. A speed limit on votes from one connection slows scripts down, but it can't stop them. So the results are a rough signal, not a count of people."
     },
     "review": {
       "heading": "Reviewing a page",

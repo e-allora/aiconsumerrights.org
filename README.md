@@ -23,7 +23,7 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 | | Safeguard | How the site does it |
 |---|---|---|
 | 🔁 | **Traceability** | The forum's "We asked, you said, we did" card records what changed because of votes. It stays empty until there is a real outcome to show. Fixed mistakes are listed in a public corrections log. |
-| 🤖 | **Bot and spam resistance** | Voting uses single, stand-alone statements (Agree, Disagree, Pass). There are no reply threads, and a person reads every suggestion before it is shown. Voting needs no account, so repeat votes can't be fully prevented; the site says so, and treats results as a rough signal. |
+| 🤖 | **Bot and spam resistance** | Voting uses single, stand-alone statements (Agree, Disagree, Pass). There are no reply threads, and a person reads every suggestion before it is shown. Voting needs no account, so repeat votes can't be fully prevented; a speed limit per connection slows scripts down, and the site says plainly that results are a rough signal. |
 | ♿ | **Zero-barrier access** | No account needed to vote. Pages aim for a grade 6 to 8 reading level and are tested against WCAG 2.2 AA. |
 | 🌉 | **Common ground first** | Votes are grouped by the language people vote in, and a statement counts as broad agreement only when every language group supports it. |
 | ⚡ | **Sturdy by design** | Static pages, kept separate from interactive features, so the content loads fast and keeps working. |
