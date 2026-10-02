@@ -358,6 +358,7 @@
           "type": "Survey data",
           "url": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/",
           "status": "confirmed",
+          "note": "Robert read the table of contents and the overview (pages 3 to 6) in his saved copy. He has not read the rest of the 83-page report.",
           "primary": true,
           "copies": [
             {
@@ -369,7 +370,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928021254/https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "stanford-ai-index-2026",
@@ -379,6 +381,7 @@
           "type": "Benchmark report",
           "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
           "status": "confirmed",
+          "note": "Robert read the overview of the Research and Development chapter and the Public Opinion chapter (pages 360 to 388) in his saved copy. He has not read the rest of the 425-page report.",
           "primary": true,
           "copies": [
             {
@@ -390,7 +393,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928011612/https://hai.stanford.edu/ai-index/2026-ai-index-report",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "pew-ai-in-lives",
