@@ -124,6 +124,7 @@ export function VotingEngine({
     const saved = load<Votes>(STORAGE_KEY, {});
     if (Object.keys(saved).length) {
       votesRef.current = saved;
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- saved votes live in the browser, readable only after mount
       setVotes(saved);
       setCurrent(Math.max(firstOpen(saved, 0, statements), 0));
     }

@@ -1,3 +1,4 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Handshake } from "lucide-react";
@@ -17,12 +18,13 @@ import { pageMetadata } from "@/lib/seo";
 import { REVIEW_EMAIL } from "@/lib/site";
 import { getSource } from "@/lib/sources";
 
-type Props = { params: { locale: Locale; situation: string } };
+type Props = { params: Promise<{ locale: Locale; situation: string }> };
 
 export const dynamicParams = false;
 export const generateStaticParams = () => SITUATIONS.map(({ id }) => ({ situation: id }));
 
-export async function generateMetadata({ params: { locale, situation } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, situation } = await params;
   if (!getSituation(situation)) return {};
   const t = await getTranslations({ locale, namespace: `Help.${situation}` });
   const c = await getTranslations({ locale, namespace: "Common" });
@@ -96,7 +98,8 @@ function RegionPanel({ situation, region, locale }: { situation: Situation; regi
  * A "What happened to you?" guide: what probably happened, rights where the
  * visitor lives, a letter to fill in, and where to turn if nobody answers.
  */
-export default function SituationPage({ params: { locale, situation: id } }: Props) {
+export default function SituationPage({ params }: Props) {
+  const { locale, situation: id } = use(params);
   setRequestLocale(locale);
   const situation = getSituation(id);
   if (!situation) notFound();

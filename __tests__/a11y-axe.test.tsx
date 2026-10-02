@@ -1,4 +1,4 @@
-import { render, screen } from "@/test-utils";
+import { render, screen, ready } from "@/test-utils";
 import { axe } from "jest-axe";
 
 import AboutPage from "@/app/[locale]/about/page";
@@ -42,7 +42,7 @@ describe("axe: zero WCAG A/AA violations", () => {
       <ThemeProvider attribute="class" defaultTheme="light">
         <a href="#main">Skip to main content</a>
         <SiteNav />
-        <Page params={{ locale }} />
+        <Page params={ready({ locale })} />
         <AttributionFooter />
       </ThemeProvider>,
       { locale }

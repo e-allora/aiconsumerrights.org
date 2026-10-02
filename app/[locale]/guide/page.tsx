@@ -1,3 +1,4 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -13,9 +14,10 @@ import { pageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 import { formatDate, sources } from "@/lib/sources";
 
-type Props = { params: { locale: Locale } };
+type Props = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Guide" });
   const c = await getTranslations({ locale, namespace: "Common" });
   return pageMetadata({
@@ -41,7 +43,8 @@ const STAKEHOLDERS = ["people", "educators", "regulators", "builders"] as const;
 
 const bold = (c: React.ReactNode) => <strong>{c}</strong>;
 
-export default function GuidePage({ params: { locale } }: Props) {
+export default function GuidePage({ params }: Props) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("Guide");
   const tc = useTranslations("Common");

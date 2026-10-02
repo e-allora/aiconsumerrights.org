@@ -38,6 +38,7 @@ export function LetterBuilder({ situation, kind }: { situation: string; kind: Le
   // Today's date is filled in on the visitor's device, not when the page was built.
   const [today, setToday] = React.useState("");
   const [status, setStatus] = React.useState("");
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- the visitor's own date is only known after mount
   React.useEffect(() => setToday(formatDate(localToday(), locale)), [locale]);
 
   const value = (k: Field) => fields[k].trim() || t(`blank.${k}`);

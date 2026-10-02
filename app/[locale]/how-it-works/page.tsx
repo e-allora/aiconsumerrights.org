@@ -1,3 +1,4 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -10,9 +11,10 @@ import type { Locale } from "@/lib/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { CONTACT_EMAIL, MISSION_URL, REPO_URL, REVIEW_EMAIL } from "@/lib/site";
 
-type Props = { params: { locale: Locale } };
+type Props = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HowItWorks" });
   const c = await getTranslations({ locale, namespace: "Common" });
   return pageMetadata({
@@ -49,7 +51,8 @@ function external(href: string) {
  * that has been fixed. Numbers come
  * from the code, so the page can't drift from what the site does.
  */
-export default function HowItWorksPage({ params: { locale } }: Props) {
+export default function HowItWorksPage({ params }: Props) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("HowItWorks");
   const list = (keys: readonly string[], ns: string, values: Record<string, number> = {}) => (

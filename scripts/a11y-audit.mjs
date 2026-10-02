@@ -26,7 +26,7 @@ const require = createRequire(import.meta.url);
 const AXE = require.resolve("axe-core/axe.min.js");
 const PORT = Number(process.env.AUDIT_PORT ?? 3217);
 const BASE = `http://localhost:${PORT}`;
-const PAGES = ["", "/help", "/help/credit", "/help/job", "/help/housing", "/help/insurance", "/help/chatbot", "/help/account", "/help/deepfake", "/guide", "/forum", "/sources", "/about", "/how-it-works"];
+const PAGES = ["", "/help", "/help/credit", "/help/job", "/help/housing", "/help/insurance", "/help/chatbot", "/help/account", "/help/deepfake", "/guide", "/forum", "/sources", "/about", "/how-it-works", "/missing"];
 const LOCALES = ["en", "es", "pt", "pt-BR", "it", "fr", "de", "hi"];
 const ROUTES = LOCALES.flatMap((locale) => PAGES.map((p) => `/${locale}${p}`));
 const CHROME =
@@ -105,7 +105,15 @@ async function audit(browser, route, theme, vpName) {
   }, theme);
   const response = await page.goto(BASE + route, { waitUntil: "networkidle0" });
   // 6. security headers
-  for (const h of ["content-security-policy", "x-frame-options", "x-content-type-options", "referrer-policy", "permissions-policy"]) {
+  for (const h of [
+    "content-security-policy",
+    "x-frame-options",
+    "x-content-type-options",
+    "referrer-policy",
+    "permissions-policy",
+    "cross-origin-opener-policy",
+    "strict-transport-security",
+  ]) {
     if (!response?.headers()[h]) fail(where, `missing header ${h}`);
   }
   // Let hydration and any entry animation finish.

@@ -13,7 +13,6 @@ const preview = process.env.VERCEL_ENV === "preview" ? " https://vercel.live" : 
  * the theme switcher write small inline scripts; a nonce would remove that
  * but would make every page render per request instead of from the cache.
  * The rest still stops framing, plugins, and forms posting elsewhere.
- * Vercel already sends Strict-Transport-Security.
  */
 const csp = [
   "default-src 'self'",
@@ -36,10 +35,18 @@ export const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" },
+  // Keeps other sites' windows from reaching into this one.
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  // Browsers use HTTPS for this domain and its subdomains (www) for two years.
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
 ];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // The project root is this folder, whatever lockfiles sit in folders above it.
+  turbopack: { root: import.meta.dirname },
+  // CLAUDE.md is written by hand. Without this, "next dev" adds its own block to it.
+  agentRules: false,
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

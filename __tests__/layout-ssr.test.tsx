@@ -2,12 +2,13 @@
  * @jest-environment node
  */
 // Server render, as Next does it: no document, no window.
+import { ready } from "@/test-utils";
 import { renderToStaticMarkup } from "react-dom/server";
 
 import LocaleLayout from "@/app/[locale]/layout";
 
 async function renderLayout(locale: string) {
-  const tree = await LocaleLayout({ children: <main id="main" />, params: { locale } });
+  const tree = await LocaleLayout({ children: <main id="main" />, params: ready({ locale }) });
   return renderToStaticMarkup(tree);
 }
 

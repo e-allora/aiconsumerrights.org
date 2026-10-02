@@ -1,4 +1,7 @@
 // Shown for URLs outside any locale. It has no locale, so it speaks both.
+// The links are plain anchors on purpose: this page renders its own <html>,
+// so entering a locale should be a full page load.
+/* eslint-disable @next/next/no-html-link-for-pages */
 export default function NotFound() {
   return (
     <html lang="en">

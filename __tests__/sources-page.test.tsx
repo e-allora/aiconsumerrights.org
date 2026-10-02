@@ -1,11 +1,11 @@
 import SourcesPage from "@/app/[locale]/sources/page";
 import { SourceCategoryList, SourceLink } from "@/components/ui/SourceList";
 import { getSource, sources } from "@/lib/sources";
-import { MESSAGES, render, screen, within } from "@/test-utils";
+import { MESSAGES, render, screen, within, ready } from "@/test-utils";
 
 describe.each(["en", "es", "pt-PT", "pt-BR", "it", "fr", "de", "hi"] as const)("Sources page in %s", (locale) => {
   it("lists every category, including Latin American and global frameworks", () => {
-    render(<SourcesPage params={{ locale }} />, { locale });
+    render(<SourcesPage params={ready({ locale })} />, { locale });
     for (const c of sources.categories) {
       const title = (MESSAGES[locale].Attribution.categories as Record<string, string>)[c.id];
       expect(screen.getByRole("heading", { level: 2, name: title })).toBeInTheDocument();
@@ -15,7 +15,7 @@ describe.each(["en", "es", "pt-PT", "pt-BR", "it", "fr", "de", "hi"] as const)("
 
 describe("Sources page detail", () => {
   it("shows each LGPD source with its summary and jurisdiction, anchored for citations", () => {
-    render(<SourcesPage params={{ locale: "en" }} />);
+    render(<SourcesPage params={ready({ locale: "en" })} />);
     const lgpd = sources.categories.find((c) => c.id === "latam-global")!.sources;
     for (const s of lgpd) {
       const item = document.getElementById(s.id)!;
@@ -26,7 +26,7 @@ describe("Sources page detail", () => {
   });
 
   it("opens the verified LGPD links safely in a new tab", () => {
-    render(<SourcesPage params={{ locale: "en" }} />);
+    render(<SourcesPage params={ready({ locale: "en" })} />);
     const [anpd, archivedCopy] = within(document.getElementById("anpd-lgpd-en")!).getAllByRole("link");
     expect(archivedCopy).toHaveAttribute("href", expect.stringMatching(/^https:\/\/web\.archive\.org\/web\//));
     expect(archivedCopy).toHaveAccessibleName(/^Archived copy from .+: Brazilian Data Protection Law/);

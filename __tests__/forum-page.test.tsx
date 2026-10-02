@@ -1,4 +1,4 @@
-import { render, screen, within } from "@/test-utils";
+import { render, screen, within, ready } from "@/test-utils";
 
 import ForumPage from "@/app/[locale]/forum/page";
 import { ConsensusCluster } from "@/components/forum/ConsensusCluster";
@@ -20,7 +20,7 @@ beforeEach(() => {
 
 // Renders the page and waits for its results card to finish loading.
 async function renderPage() {
-  render(<ForumPage params={{ locale: "en" }} />);
+  render(<ForumPage params={ready({ locale: "en" })} />);
   await screen.findByTestId("progress");
 }
 

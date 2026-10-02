@@ -3,16 +3,16 @@
  */
 import { NextRequest } from "next/server";
 
-import middleware, { config } from "@/middleware";
+import proxy, { config } from "@/proxy";
 
 const visit = (path: string, acceptLanguage?: string) =>
-  middleware(
+  proxy(
     new NextRequest(`https://aiconsumerrights.org${path}`, {
       headers: acceptLanguage ? { "accept-language": acceptLanguage } : {},
     })
   );
 
-describe("locale middleware", () => {
+describe("locale proxy", () => {
   it("sends a Spanish-language browser from / to /es", async () => {
     const res = await visit("/", "es-MX,es;q=0.9,en;q=0.5");
     expect(res.headers.get("location")).toBe("https://aiconsumerrights.org/es");
@@ -80,4 +80,27 @@ describe("locale middleware", () => {
     }
     for (const path of ["/", "/forum", "/es/guide"]) expect(matcher.test(path)).toBe(true);
   });
+});
+
+describe("addresses that match no page", () => {
+  it.each([
+    ["/en/does-not-exist", "/en/missing"],
+    ["/fr/nope/deeper", "/fr/missing"],
+    ["/pt/zzz", "/pt-PT/missing"],
+    ["/hi/help/zzz", "/hi/missing"],
+    ["/en/missing", "/en/missing"],
+  ])("serves %s the ready-made page in its language, with status 404", async (path, target) => {
+    const res = await visit(path);
+    expect(res.status).toBe(404);
+    expect(res.headers.get("x-middleware-rewrite")).toBe(`https://aiconsumerrights.org${target}`);
+  });
+
+  it.each(["/en", "/en/guide", "/pt/help/credit", "/hi/how-it-works", "/de/help/deepfake/"])(
+    "leaves the real page %s alone",
+    async (path) => {
+      const res = await visit(path);
+      expect(res.status).toBe(200);
+      expect(res.headers.get("x-middleware-rewrite") ?? "").not.toMatch(/\/missing$/);
+    }
+  );
 });

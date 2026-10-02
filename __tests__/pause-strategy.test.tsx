@@ -3,7 +3,7 @@ import { axe } from "jest-axe";
 
 import HomePage from "@/app/[locale]/page";
 import { PAUSE_STEPS, PAUSEStrategy } from "@/components/guide/PAUSEStrategy";
-import { MESSAGES, render, screen, within } from "@/test-utils";
+import { MESSAGES, render, screen, within, ready } from "@/test-utils";
 
 const tabs = () => screen.getAllByRole("tab");
 const panel = () => screen.getByRole("tabpanel");
@@ -14,7 +14,7 @@ describe.each(["en", "es", "pt-PT", "pt-BR", "it", "fr", "de", "hi"] as const)("
 
   it("renders the title, subtitle, and five letter tabs on the main page", () => {
     // The test provider throws on any missing or broken key.
-    render(<HomePage params={{ locale }} />, { locale });
+    render(<HomePage params={ready({ locale })} />, { locale });
     const section = screen.getByRole("region", { name: m.title });
     expect(within(section).getByText(m.subtitle)).toBeInTheDocument();
     const list = within(section).getByRole("tablist", { name: m.tablistLabel });

@@ -1,3 +1,4 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -10,11 +11,10 @@ import { reviews } from "@/lib/public-log";
 import { pageMetadata } from "@/lib/seo";
 import { REVIEW_EMAIL } from "@/lib/site";
 
-type Props = { params: { locale: Locale } };
+type Props = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({
-  params: { locale },
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Help" });
   const c = await getTranslations({ locale, namespace: "Common" });
   return pageMetadata({
@@ -30,7 +30,8 @@ export async function generateMetadata({
 const linkClass = "font-semibold text-link underline underline-offset-4";
 
 /** "What happened to you?": one card per situation, and the ones still being written. */
-export default function HelpPage({ params: { locale } }: Props) {
+export default function HelpPage({ params }: Props) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("Help");
   const tc = useTranslations("Common");

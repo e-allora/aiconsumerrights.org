@@ -99,7 +99,7 @@ The full registry lives at [`/sources`](https://aiconsumerrights.org/en/sources)
 
 ## 🧰 Tech stack
 
-Next.js 14 (App Router) · next-intl · TypeScript · Tailwind CSS · shadcn/ui · Radix UI · next-themes · Neon Postgres (forum votes and suggestions) · Jest + React Testing Library · jest-axe · axe-core + Puppeteer
+Next.js 16 (App Router) · next-intl · TypeScript · Tailwind CSS · shadcn/ui · Radix UI · next-themes · Neon Postgres (forum votes and suggestions) · Jest + React Testing Library · jest-axe · axe-core + Puppeteer
 
 ## 🚀 Getting started
 
@@ -123,7 +123,7 @@ The pages work with no setup. The forum's votes, suggestions, and review page ne
 |---|---|
 | `npm test` | Runs the Jest and React Testing Library suite, including axe checks on every page |
 | `npx tsc --noEmit` | Type-checks the project |
-| `npm run lint` | Runs Next.js lint |
+| `npm run lint` | Runs ESLint |
 | `npm run build` | Makes the production build |
 | `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all eight languages, in light and dark, on desktop and mobile |
 | `npm run screenshots` | Regenerates the images in `docs/screenshots` |
@@ -137,7 +137,7 @@ The pages work with no setup. The forum's votes, suggestions, and review page ne
 app/[locale]/         Pages: /, /help, /help/[situation], /guide, /forum, /sources, /about, /how-it-works, in all eight languages
 app/                  Sitemap, robots, and the share image
 messages/             en, es, pt-PT, pt-BR, it, fr, de, and hi: every string on the site
-i18n.ts, middleware.ts  Loads messages per request; adds the locale and detects the browser language
+i18n.ts, proxy.ts       Loads messages per request; adds the locale and detects the browser language
 components/ui/        Design-system primitives: Button, Card, ThemeToggle, LanguageSwitcher, SiteNav, AttributionFooter
 components/guide/     AlgorithmExplorer, CompareTable, PAUSEStrategy
 components/help/      RegionPicker, LetterBuilder

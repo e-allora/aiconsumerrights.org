@@ -1,3 +1,4 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -7,9 +8,10 @@ import type { Locale } from "@/lib/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { formatDate, sources } from "@/lib/sources";
 
-type Props = { params: { locale: Locale } };
+type Props = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Sources" });
   const c = await getTranslations({ locale, namespace: "Common" });
   return pageMetadata({
@@ -22,7 +24,8 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   });
 }
 
-export default function SourcesPage({ params: { locale } }: Props) {
+export default function SourcesPage({ params }: Props) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("Sources");
   const ta = useTranslations("Attribution");

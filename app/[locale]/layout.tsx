@@ -36,7 +36,7 @@ const devanagari = Noto_Sans_Devanagari({
   preload: false,
 });
 
-type Props = { children: React.ReactNode; params: { locale: string } };
+type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
 
 // Prerender every locale; any other first segment is a 404.
 export const dynamicParams = false;
@@ -44,7 +44,8 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Common" });
   const name = t("siteName");
   const description = t("siteDescription");
@@ -83,7 +84,8 @@ export const viewport: Viewport = {
   ],
 };
 
-export default async function LocaleLayout({ children, params: { locale } }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
   if (!isLocale(locale)) notFound();
   // Lets server components read the locale during static rendering.
   setRequestLocale(locale);

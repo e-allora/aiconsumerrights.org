@@ -38,6 +38,7 @@ export function SiteNav() {
   const [open, setOpen] = React.useState(false);
 
   // Close the drawer after a route change.
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- the route is the outside state the drawer follows
   React.useEffect(() => setOpen(false), [pathname]);
 
   return (

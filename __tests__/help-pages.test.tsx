@@ -7,7 +7,7 @@ import { COMING, EU_AUTHORITY, REGIONS, SITUATIONS, homeRegion } from "@/lib/hel
 import { routing } from "@/lib/i18n/routing";
 import { PUBLISHED_ROUTES } from "@/lib/site";
 import { getSource } from "@/lib/sources";
-import { MESSAGES, render, screen, within } from "@/test-utils";
+import { MESSAGES, render, screen, within, ready } from "@/test-utils";
 
 jest.mock("next/navigation", () => ({
   notFound: () => {
@@ -72,7 +72,7 @@ describe("lib/help", () => {
 
 describe("/help", () => {
   it("links every situation, and lists guides still being written only when there are some", () => {
-    render(<HelpPage params={{ locale: "en" }} />);
+    render(<HelpPage params={ready({ locale: "en" })} />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("What happened to you?");
     expect(screen.getByRole("link", { name: /A loan or credit was refused/ })).toHaveAttribute("href", "/en/help/credit");
     for (const { id } of SITUATIONS) expect(document.querySelector(`a[href="/en/help/${id}"]`)).not.toBeNull();
@@ -89,7 +89,7 @@ describe("/help", () => {
 
 describe("/help/credit", () => {
   it("asks English speakers where they live before showing rights or a letter", () => {
-    render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "credit" })} />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("A loan or credit was refused");
     expect(screen.getByText(/Pick where you live/)).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "Your rights" })).not.toBeInTheDocument();
@@ -97,7 +97,7 @@ describe("/help/credit", () => {
 
   it("shows US rights, cited, and a Regulation B letter once the visitor picks the US", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "credit" })} />);
     await user.click(screen.getByRole("radio", { name: "United States" }));
     expect(window.location.search).toBe("?where=us");
     const rights = screen.getByRole("region", { name: "Your rights" });
@@ -112,7 +112,7 @@ describe("/help/credit", () => {
 
   it("gives the UK its own rules since leaving the EU, with the Financial Ombudsman and the ICO", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "credit" })} />);
     await user.click(screen.getByRole("radio", { name: "United Kingdom" }));
     expect(screen.getByText(/have applied since 5 February 2026/)).toBeInTheDocument();
     expect(screen.getByText(/I ask under Article 22C/)).toBeInTheDocument();
@@ -121,7 +121,7 @@ describe("/help/credit", () => {
   });
 
   it("opens Italian visitors on the EU, with a GDPR letter and the Garante", () => {
-    render(<SituationPage params={{ locale: "it", situation: "credit" }} />, { locale: "it" });
+    render(<SituationPage params={ready({ locale: "it", situation: "credit" })} />, { locale: "it" });
     expect(screen.getByRole("radio", { name: "Unione europea" })).toBeChecked();
     expect(screen.getByText(/articolo 15 del GDPR/)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Garante per la protezione dei dati personali/ })).toHaveAttribute(
@@ -131,7 +131,7 @@ describe("/help/credit", () => {
   });
 
   it("opens Hindi visitors on India, saying the data rights start in May 2027, with the 1915 helpline", () => {
-    render(<SituationPage params={{ locale: "hi", situation: "credit" }} />, { locale: "hi" });
+    render(<SituationPage params={ready({ locale: "hi", situation: "credit" })} />, { locale: "hi" });
     expect(screen.getByRole("radio", { name: "भारत" })).toBeChecked();
     expect(screen.getByText(/मई 2027/)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "1915" })).toHaveAttribute("href", "tel:1915");
@@ -139,13 +139,13 @@ describe("/help/credit", () => {
 
   it("follows a shared ?where= link", () => {
     window.history.replaceState(null, "", "/en/help/credit?where=br");
-    render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "credit" })} />);
     expect(screen.getByRole("radio", { name: "Brazil" })).toBeChecked();
     expect(screen.getByText(/Articles 18 and 19 of the LGPD/)).toBeInTheDocument();
   });
 
   it("invites the company team that gets the letter, without blame", () => {
-    render(<SituationPage params={{ locale: "en", situation: "credit" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "credit" })} />);
     const company = screen.getByRole("region", { name: "If this letter reaches you at work" });
     expect(within(company).getAllByRole("listitem")).toHaveLength(SITUATIONS[0].company.length);
     expect(within(company).getByText(/Reply soon/)).toBeInTheDocument();
@@ -154,14 +154,14 @@ describe("/help/credit", () => {
   });
 
   it("is a 404 for a situation that doesn't exist", () => {
-    expect(() => render(<SituationPage params={{ locale: "en", situation: "nope" }} />)).toThrow("NEXT_NOT_FOUND");
+    expect(() => render(<SituationPage params={ready({ locale: "en", situation: "nope" })} />)).toThrow("NEXT_NOT_FOUND");
   });
 });
 
 describe("/help/job", () => {
   it("covers background checks, accommodations, and the EEOC deadline, and says plainly what US law doesn't give", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "job" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "job" })} />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("A job application was screened out");
     await user.click(screen.getByRole("radio", { name: "United States" }));
     expect(screen.getByText(/No federal law gives you a general right to know why/)).toBeInTheDocument();
@@ -171,7 +171,7 @@ describe("/help/job", () => {
   });
 
   it("names e-recruiting as one of the GDPR's own examples for EU visitors", () => {
-    render(<SituationPage params={{ locale: "de", situation: "job" }} />, { locale: "de" });
+    render(<SituationPage params={ready({ locale: "de", situation: "job" })} />, { locale: "de" });
     expect(screen.getByText(/eines der Beispiele, die die DSGVO selbst nennt/)).toBeInTheDocument();
     expect(screen.getByText(/2\. Dezember 2027/)).toBeInTheDocument();
   });
@@ -180,7 +180,7 @@ describe("/help/job", () => {
 describe("/help/housing", () => {
   it("treats tenant screening reports as consumer reports and gives HUD's one-year deadline", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "housing" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "housing" })} />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("A rental application was turned down");
     await user.click(screen.getByRole("radio", { name: "United States" }));
     expect(screen.getByText(/Tenant screening reports count as consumer reports/)).toBeInTheDocument();
@@ -190,7 +190,7 @@ describe("/help/housing", () => {
   });
 
   it("is linked from /help", () => {
-    render(<HelpPage params={{ locale: "en" }} />);
+    render(<HelpPage params={ready({ locale: "en" })} />);
     expect(screen.getByRole("link", { name: /A rental application was turned down/ })).toHaveAttribute("href", "/en/help/housing");
   });
 });
@@ -198,7 +198,7 @@ describe("/help/housing", () => {
 describe("/help/insurance", () => {
   it("covers credit-based insurance decisions and the free state insurance departments", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "insurance" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "insurance" })} />);
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("An insurance decision went against you");
     await user.click(screen.getByRole("radio", { name: "United States" }));
     expect(screen.getByText(/led to a refusal, a higher price, or less cover/)).toBeInTheDocument();
@@ -206,13 +206,13 @@ describe("/help/insurance", () => {
   });
 
   it("gives EU visitors the AI Act's life and health insurance rule and its start date", () => {
-    render(<SituationPage params={{ locale: "it", situation: "insurance" }} />, { locale: "it" });
+    render(<SituationPage params={ready({ locale: "it", situation: "insurance" })} />, { locale: "it" });
     expect(screen.getByText(/assicurazioni sulla vita e sulla salute è ad alto rischio/)).toBeInTheDocument();
     expect(screen.getByText(/2 dicembre 2027/)).toBeInTheDocument();
   });
 
   it("sends Indian visitors to Bima Bharosa and the Insurance Ombudsman", () => {
-    render(<SituationPage params={{ locale: "hi", situation: "insurance" }} />, { locale: "hi" });
+    render(<SituationPage params={ready({ locale: "hi", situation: "insurance" })} />, { locale: "hi" });
     expect(screen.getByRole("link", { name: /बीमा भरोसा पर मुफ़्त शिकायत दर्ज करें/ })).toHaveAttribute("href", getSource("in-bima-bharosa").url);
   });
 });
@@ -220,7 +220,7 @@ describe("/help/insurance", () => {
 describe("/help/chatbot", () => {
   it("tells US visitors there is no AI exemption and how to dispute a card charge", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "chatbot" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "chatbot" })} />);
     await user.click(screen.getByRole("radio", { name: "United States" }));
     expect(screen.getByText(/no AI exemption from the laws on the books/)).toBeInTheDocument();
     expect(screen.getByText(/within 60 days of the statement/)).toBeInTheDocument();
@@ -228,34 +228,34 @@ describe("/help/chatbot", () => {
   });
 
   it("gives EU visitors the AI disclosure rule, the 14-day right to cancel, and a copy of their chat", () => {
-    render(<SituationPage params={{ locale: "fr", situation: "chatbot" }} />, { locale: "fr" });
+    render(<SituationPage params={ready({ locale: "fr", situation: "chatbot" })} />, { locale: "fr" });
     expect(screen.getByText(/depuis le 2 août 2026/)).toBeInTheDocument();
     expect(screen.getByText(/dans les 14 jours/)).toBeInTheDocument();
     expect(screen.getByText(/une copie de ma conversation/)).toBeInTheDocument();
   });
 
   it("gives Brazilian visitors the 7-day right to withdraw and the customer service rules", () => {
-    render(<SituationPage params={{ locale: "pt-BR", situation: "chatbot" }} />, { locale: "pt-BR" });
+    render(<SituationPage params={ready({ locale: "pt-BR", situation: "chatbot" })} />, { locale: "pt-BR" });
     expect(screen.getByText(/desistir de compras feitas online ou por telefone em até 7 dias/)).toBeInTheDocument();
     expect(screen.getByText(/atendimento humano pelo menos 8 horas por dia/)).toBeInTheDocument();
   });
 
   it("asks everyone to screenshot their chats", () => {
-    render(<SituationPage params={{ locale: "en", situation: "chatbot" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "chatbot" })} />);
     expect(screen.getByText(/Take screenshots of chats/)).toBeInTheDocument();
   });
 });
 
 describe("/help/account", () => {
   it("gives EU visitors the Digital Services Act routes: reasons, review, and dispute settlement", () => {
-    render(<SituationPage params={{ locale: "de", situation: "account" }} />, { locale: "de" });
+    render(<SituationPage params={ready({ locale: "de", situation: "account" })} />, { locale: "de" });
     expect(screen.getByText(/Plattformen müssen ihre Moderationsentscheidungen/)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /finden Sie eine zertifizierte Streitbeilegungsstelle/ })).toHaveAttribute("href", getSource("eu-dsa-ods").url);
     expect(screen.getByText(/Nach Art\. 17 des Gesetzes über digitale Dienste/)).toBeInTheDocument();
   });
 
   it("gives Indian visitors notice before removal, a 7-day grievance answer, and the appeal committee", () => {
-    render(<SituationPage params={{ locale: "hi", situation: "account" }} />, { locale: "hi" });
+    render(<SituationPage params={ready({ locale: "hi", situation: "account" })} />, { locale: "hi" });
     expect(screen.getByText(/जो आपकी शिकायत 24 घंटे में स्वीकार करे और 7 दिनों में हल करे/)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /शिकायत अपील समिति में ऑनलाइन अपील करें/ })).toHaveAttribute("href", getSource("in-gac-portal").url);
     expect(screen.getByText(/नियम 3\(2\) के अनुसार/)).toBeInTheDocument();
@@ -263,7 +263,7 @@ describe("/help/account", () => {
 
   it("tells US visitors plainly that federal law doesn't require an explanation", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "account" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "account" })} />);
     await user.click(screen.getByRole("radio", { name: "United States" }));
     expect(screen.getByText(/No federal law makes platforms explain/)).toBeInTheDocument();
   });
@@ -271,7 +271,7 @@ describe("/help/account", () => {
 
 describe("/help/deepfake", () => {
   it("puts the urgent steps first, before anything else", () => {
-    render(<SituationPage params={{ locale: "en", situation: "deepfake" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "deepfake" })} />);
     const h2s = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
     expect(h2s[0]).toBe("Do this first");
     const first = screen.getByRole("region", { name: "Do this first" });
@@ -281,16 +281,16 @@ describe("/help/deepfake", () => {
 
   it("gives UK visitors the bank reimbursement rules and a claim letter", async () => {
     const user = userEvent.setup();
-    render(<SituationPage params={{ locale: "en", situation: "deepfake" }} />);
+    render(<SituationPage params={ready({ locale: "en", situation: "deepfake" })} />);
     await user.click(screen.getByRole("radio", { name: "United Kingdom" }));
     expect(screen.getByText(/up to £85,000\. Claim within 13 months/)).toBeInTheDocument();
     expect(screen.getByText(/Payment Systems Regulator's reimbursement rules/)).toBeInTheDocument();
   });
 
   it("gives Brazilian visitors the Pix contest within 80 days, and Indian visitors the two-hour rule and 1930", () => {
-    render(<SituationPage params={{ locale: "pt-BR", situation: "deepfake" }} />, { locale: "pt-BR" });
+    render(<SituationPage params={ready({ locale: "pt-BR", situation: "deepfake" })} />, { locale: "pt-BR" });
     expect(screen.getByText(/conteste no app do seu banco em até 80 dias/)).toBeInTheDocument();
-    render(<SituationPage params={{ locale: "hi", situation: "deepfake" }} />, { locale: "hi" });
+    render(<SituationPage params={ready({ locale: "hi", situation: "deepfake" })} />, { locale: "hi" });
     expect(screen.getAllByRole("link", { name: "1930" })[0]).toHaveAttribute("href", "tel:1930");
     expect(screen.getByText(/दो घंटे के अंदर प्लेटफ़ॉर्म को कार्रवाई करनी होगी/)).toBeInTheDocument();
   });

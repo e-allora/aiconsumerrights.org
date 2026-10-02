@@ -1,6 +1,6 @@
 // Password check for the private review page (/admin). The browser asks for
 // the password with its own login box (HTTP Basic auth, over HTTPS). Runs in
-// middleware as well as on the server, so it uses no Node-only APIs.
+// proxy as well as on the server, so it uses no Node-only APIs.
 
 export const ADMIN_REALM = 'Basic realm="Forum review", charset="UTF-8"';
 

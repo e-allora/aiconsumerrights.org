@@ -23,6 +23,7 @@ export function RegionPicker({
 
   React.useEffect(() => {
     const where = new URLSearchParams(window.location.search).get("where");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- the address is only readable after mount
     if (isRegion(where)) setRegion(where);
   }, []);
 

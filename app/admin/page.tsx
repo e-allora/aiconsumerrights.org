@@ -100,8 +100,8 @@ function Item({ item }: { item: Submission }) {
 }
 
 export default async function AdminPage() {
-  // Middleware asks for the password first; this checks again.
-  if (!isAdmin(headers().get("authorization"))) notFound();
+  // The proxy asks for the password first; this checks again.
+  if (!isAdmin((await headers()).get("authorization"))) notFound();
   const items = await listSubmissions();
   const pending = items.filter((i) => i.status === "pending");
   const approved = items.filter((i) => i.status === "approved");

@@ -2,7 +2,7 @@
 import { NextRequest } from "next/server";
 
 import { isAdmin } from "@/lib/admin-auth";
-import middleware from "@/middleware";
+import proxy from "@/proxy";
 
 const PASSWORD = "correct horse battery staple";
 const basic = (user: string, pass: string) =>
@@ -36,9 +36,9 @@ describe("isAdmin", () => {
   });
 });
 
-describe("middleware on /admin", () => {
+describe("proxy on /admin", () => {
   const visit = (path: string, authorization?: string) =>
-    middleware(
+    proxy(
       new NextRequest(`https://aiconsumerrights.org${path}`, {
         headers: authorization ? { authorization } : {},
       })

@@ -40,3 +40,12 @@ export function render(ui: React.ReactElement, { locale = "en", ...options }: Re
 
 export * from "@testing-library/react";
 export { render as default };
+
+/**
+ * Page params as Next.js passes them: a promise. React's use() reads this one
+ * without suspending, because it is already marked as fulfilled, so a page
+ * renders in one pass in a test just as it does once Next has resolved it.
+ */
+export function ready<T>(value: T): Promise<T> {
+  return Object.assign(Promise.resolve(value), { status: "fulfilled" as const, value });
+}

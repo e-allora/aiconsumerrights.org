@@ -1,3 +1,4 @@
+import { use } from "react";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
@@ -8,7 +9,8 @@ import type { Locale } from "@/lib/i18n/routing";
 
 // The main page: a short welcome, links to help, the guide and the forum, and the
 // PAUSE Strategy, an everyday habit people can use with any AI tool.
-export default function HomePage({ params: { locale } }: { params: { locale: Locale } }) {
+export default function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("Home");
   return (

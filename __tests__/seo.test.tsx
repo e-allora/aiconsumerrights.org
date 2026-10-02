@@ -12,11 +12,11 @@ import { generateMetadata as sourcesMeta } from "@/app/[locale]/sources/page";
 import { LOCALE_TAGS, localizedPath, routing, type Locale } from "@/lib/i18n/routing";
 import { SITE_URL } from "@/lib/site";
 import { sources } from "@/lib/sources";
-import { IntlWrapper } from "@/test-utils";
+import { IntlWrapper, ready } from "@/test-utils";
 
 jest.mock("next/og", () => ({ ImageResponse: jest.fn() }));
 
-const params = (locale: Locale) => ({ params: { locale } });
+const params = (locale: Locale) => ({ params: ready({ locale }) });
 
 function jsonLd(html: string) {
   return Array.from(html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)).map((m) =>
@@ -124,7 +124,7 @@ describe("JSON-LD structured data", () => {
     ["de", "de"],
     ["hi", "hi"],
   ] as const)("declares the WebSite in the %s layout with its language (%s)", async (locale, lang) => {
-    const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: { locale } }));
+    const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: ready({ locale }) }));
     const [site] = jsonLd(html);
     expect(site).toMatchObject({
       "@context": "https://schema.org",
@@ -140,7 +140,7 @@ describe("JSON-LD structured data", () => {
       (globalThis as unknown as { __requestLocale: string }).__requestLocale = locale;
       const html = renderToStaticMarkup(
         <IntlWrapper locale={locale}>
-          <GuidePage params={{ locale }} />
+          <GuidePage params={ready({ locale })} />
         </IntlWrapper>
       );
       const [article] = jsonLd(html);
@@ -149,7 +149,7 @@ describe("JSON-LD structured data", () => {
   });
 
   it("escapes '<' so data cannot close the script tag", async () => {
-    const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: { locale: "en" } }));
+    const html = renderToStaticMarkup(await LocaleLayout({ children: <main />, params: ready({ locale: "en" }) }));
     const script = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)![1];
     expect(script).not.toContain("<");
   });

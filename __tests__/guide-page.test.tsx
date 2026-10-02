@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from "@/test-utils";
+import { fireEvent, render, screen, within, ready } from "@/test-utils";
 
 import GuidePage from "@/app/[locale]/guide/page";
 import { COMPARE_COUNTRIES, COMPARISON } from "@/components/guide/CompareTable";
@@ -7,7 +7,7 @@ import { MESSAGES } from "@/test-utils";
 import { getSource } from "@/lib/sources";
 
 describe("Guide page", () => {
-  beforeEach(() => render(<GuidePage params={{ locale: "en" }} />));
+  beforeEach(() => render(<GuidePage params={ready({ locale: "en" })} />));
 
   it("has one h1 and front-loaded, action-first section headings", () => {
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1);
@@ -195,7 +195,7 @@ describe("Guide comparison picker", () => {
     ["hi", "भारत"],
     ["es", "Brasil"],
   ] as const)("opens in %s on %s", (locale, country) => {
-    render(<GuidePage params={{ locale }} />, { locale });
+    render(<GuidePage params={ready({ locale })} />, { locale });
     expect(screen.getByRole("radio", { name: country })).toBeChecked();
     expect(screen.getAllByRole("columnheader").at(-1)).toHaveTextContent(country);
   });

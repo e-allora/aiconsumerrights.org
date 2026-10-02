@@ -1,3 +1,4 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -11,9 +12,10 @@ import type { Locale } from "@/lib/i18n/routing";
 import { STATEMENTS, TRACKS } from "@/lib/forum/statements";
 import { pageMetadata } from "@/lib/seo";
 
-type Props = { params: { locale: Locale } };
+type Props = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Forum" });
   const c = await getTranslations({ locale, namespace: "Common" });
   return pageMetadata({
@@ -30,7 +32,8 @@ const PRINCIPLES = ["critique", "goodFaith", "positivity", "ethics", "lift"] as 
 const LOOP = ["asked", "said", "did"] as const;
 const bold = (c: React.ReactNode) => <strong>{c}</strong>;
 
-export default function ForumPage({ params: { locale } }: Props) {
+export default function ForumPage({ params }: Props) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("Forum");
 

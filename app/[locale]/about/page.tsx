@@ -1,3 +1,4 @@
+import { use } from "react";
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -8,9 +9,10 @@ import { LOCALE_TAGS, localizedPath, type Locale } from "@/lib/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
-type Props = { params: { locale: Locale } };
+type Props = { params: Promise<{ locale: Locale }> };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "About" });
   const c = await getTranslations({ locale, namespace: "Common" });
   return pageMetadata({
@@ -27,7 +29,8 @@ const SAFEGUARDS = ["trace", "isolated", "access", "common", "sturdy"] as const;
 const bold = (c: React.ReactNode) => <strong>{c}</strong>;
 const linkClass = "font-semibold text-link underline underline-offset-4";
 
-export default function AboutPage({ params: { locale } }: Props) {
+export default function AboutPage({ params }: Props) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("About");
   const tc = useTranslations("Common");

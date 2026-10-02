@@ -19,6 +19,7 @@ export function ThemeToggle({ className }: { className?: string }) {
   const t = useTranslations("Common");
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- runs once after mount; the theme is unknown on the server
   React.useEffect(() => setMounted(true), []);
 
   // The theme is unknown until the client mounts. Render the same-size
