@@ -2,7 +2,7 @@
 
 **Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.**
 
-🌐 **Live:** [aiconsumerrights.org](https://aiconsumerrights.org) · 🗣️ English, Español, Português (PT), Português (BR), Italiano, Français, Deutsch, and हिन्दी · 📜 [MIT License](LICENSE) · ♿ Tested against WCAG 2.2 AA
+🌐 **Live:** [aiconsumerrights.org](https://aiconsumerrights.org) · 🗣️ English, Español, Português (PT), Português (BR), Italiano, Français, Deutsch, and हिन्दी · 📜 Code: [MIT](LICENSE) · Writing: [CC BY 4.0](LICENSE-CONTENT) · ♿ Tested against WCAG 2.2 AA
 
 ![The guide page, "AI you can question", on a warm cream background](docs/screenshots/guide-light.png)
 
@@ -22,8 +22,8 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 
 | | Safeguard | How the site does it |
 |---|---|---|
-| 🔁 | **Traceability** | Every forum question leads to a visible outcome, recorded in a "We asked, you said, we did" card. |
-| 🤖 | **Bot and spam resistance** | Voting uses single, stand-alone statements (Agree, Disagree, Pass). There are no reply threads. |
+| 🔁 | **Traceability** | The forum's "We asked, you said, we did" card records what changed because of votes. It stays empty until there is a real outcome to show. Fixed mistakes are listed in a public corrections log. |
+| 🤖 | **Bot and spam resistance** | Voting uses single, stand-alone statements (Agree, Disagree, Pass). There are no reply threads, and a person reads every suggestion before it is shown. Voting needs no account, so repeat votes can't be fully prevented; the site says so, and treats results as a rough signal. |
 | ♿ | **Zero-barrier access** | No account needed to vote. Pages aim for a grade 6 to 8 reading level and are tested against WCAG 2.2 AA. |
 | 🌉 | **Common ground first** | Votes are grouped by the language people vote in, and a statement counts as broad agreement only when every language group supports it. |
 | ⚡ | **Sturdy by design** | Static pages, kept separate from interactive features, so the content loads fast and keeps working. |
@@ -61,7 +61,7 @@ This project makes AI consumer rights easy to understand and easy to talk about.
 Every page ends with a **"How this site was made"** footer that lists:
 
 - 🤖 **The AI models that helped:** only those with a record of their work (GPT, Claude, Gemini, and unrecorded OpenRouter models).
-- 📚 **The primary sources:** UNESCO, Pew Research, the Stanford AI Index, W3C WCAG 2.2, the FTC, the CFPB, and the EU AI Act.
+- 📚 **The primary sources:** the laws and official pages the facts rest on, from the EU AI Act and the GDPR to national laws in the US, UK, Brazil, India, Italy, France, and Germany, plus UNESCO, Pew Research, the Stanford AI Index, and W3C WCAG 2.2.
 - 🧑‍⚖️ **Human review status:** the footer says plainly when review is still pending.
 
 The full registry lives at [`/sources`](https://aiconsumerrights.org/en/sources) and in [`lib/data/sources.json`](lib/data/sources.json). Each entry records whether its link was opened and checked.
@@ -99,14 +99,25 @@ The full registry lives at [`/sources`](https://aiconsumerrights.org/en/sources)
 
 ## 🧰 Tech stack
 
-Next.js 14 (App Router) · next-intl · TypeScript · Tailwind CSS · shadcn/ui · Radix UI · next-themes · Jest + React Testing Library · jest-axe · axe-core + Puppeteer
+Next.js 14 (App Router) · next-intl · TypeScript · Tailwind CSS · shadcn/ui · Radix UI · next-themes · Neon Postgres (forum votes and suggestions) · Jest + React Testing Library · jest-axe · axe-core + Puppeteer
 
 ## 🚀 Getting started
+
+Use Node.js 24 (see `.nvmrc`).
 
 ```bash
 npm install
 npm run dev          # http://localhost:3000 (opens the language your browser asks for)
 ```
+
+The pages work with no setup. The forum's votes, suggestions, and review page need these in `.env.local`:
+
+| Variable | What it is for |
+|---|---|
+| `DATABASE_URL` | A Postgres database for votes and suggestions. Run `npm run db:migrate` once to create the tables. |
+| `OPENROUTER_API_KEY` | The AI check that looks for names and contact details in a suggestion. Without it, suggestions are marked "not checked". |
+| `FORUM_ADMIN_PASSWORD` | The password for the review page at `/admin`, 12 characters or more. |
+| `NEXT_PUBLIC_SITE_URL` | The site's address, if it is not `https://aiconsumerrights.org`. |
 
 | Command | What it does |
 |---|---|
@@ -116,8 +127,9 @@ npm run dev          # http://localhost:3000 (opens the language your browser as
 | `npm run build` | Makes the production build |
 | `npm run audit:a11y` | Runs a real-browser WCAG 2.2 A/AA audit of the production build, on every route in all eight languages, in light and dark, on desktop and mobile |
 | `npm run screenshots` | Regenerates the images in `docs/screenshots` |
+| `npm run db:migrate` | Creates the forum tables from `db/schema.sql` |
 
-> 💡 `audit:a11y` and `screenshots` need a Chromium browser. Set `CHROME_PATH` if yours is not at Playwright's default location.
+> 💡 `audit:a11y` and `screenshots` need a Chromium browser. Set `CHROME_PATH` to its location.
 
 ## 🗂️ Project layout
 
@@ -132,7 +144,8 @@ components/help/      RegionPicker, LetterBuilder
 components/forum/     VotingEngine, StatementSubmission, ConsensusCluster
 lib/                  Site config, SEO helpers, source registry, help situations, forum database and statements
 lib/data/sources.json The transparency registry every citation resolves to
-scripts/              Real-browser accessibility audit and screenshot tools
+content/              The public logs, written by hand: corrections and "We did"
+scripts/              Real-browser accessibility audit, screenshot, and database setup tools
 __tests__/            Unit, integration, accessibility, i18n, and SEO tests
 ```
 
@@ -159,10 +172,10 @@ Ideas and fixes are welcome. Please follow the same principles the forum uses:
 4. 🔍 Be open about AI use, cite your sources, and say what you don't know.
 5. 🪜 Lift while you climb.
 
-Every change needs passing tests, a clean build, and a clean `npm run audit:a11y` run. Criticism with a reason is welcome at feedback@aiconsumerrights.org.
+Every change needs passing tests, a clean build, and a clean `npm run audit:a11y` run. Criticism with a reason is welcome at feedback@aiconsumerrights.org. See [CONTRIBUTING](.github/CONTRIBUTING.md), the [code of conduct](.github/CODE_OF_CONDUCT.md), and how to [report a security problem](.github/SECURITY.md).
 
 ## 📜 License
 
 [MIT](LICENSE) © 2026 Robert Sweetman
 
-The site's writing (the text in `messages/` and `content/`) is [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse it with credit.
+The site's writing (the text in `messages/` and `content/`) is [CC BY 4.0](LICENSE-CONTENT): reuse it with credit.

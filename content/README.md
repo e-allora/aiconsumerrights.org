@@ -24,9 +24,9 @@ Copy this into the `entries` list in `corrections.json`. Order doesn't matter; t
 ```
 
 - `date` is the day the fix went live.
-- `page` is the page's path without the language: `/`, `/guide`, `/forum`, `/sources`, `/about` or `/how-it-works`.
+- `page` is the page's path without the language: `/`, `/guide`, `/forum`, `/sources`, `/about`, `/how-it-works`, `/help`, or a help guide such as `/help/credit`.
 - Leave out `flaggedBy` unless the person asked for credit. Leave out `commit` if there isn't one.
-- English is required. Add `"es"`, `"pt-PT"`, `"pt-BR"` or `"it"` next to `"en"` when you have a translation. Until then, that language shows the English text, marked as English.
+- English is required. Add `"es"`, `"pt-PT"`, `"pt-BR"`, `"it"`, `"fr"`, `"de"` or `"hi"` next to `"en"` when you have a translation. Until then, that language shows the English text, marked as English.
 
 ## Add a "We did" entry
 

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security problem privately
+    url: https://github.com/e-allora/aiconsumerrights.org/blob/main/.github/SECURITY.md
+    about: Please email instead of opening a public issue.
+  - name: Offer to review a help page or a translation
+    url: https://aiconsumerrights.org/en/how-it-works
+    about: Lawyers, legal clinics, consumer organisations, and native speakers are welcome.
