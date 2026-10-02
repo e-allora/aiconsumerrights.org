@@ -57,6 +57,7 @@
           "type": "Global standard",
           "url": "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
           "status": "confirmed",
+          "note": "Robert read the Key Facts booklet in full, and paragraphs 35 to 43 of the Recommendation (human oversight, transparency and explainability, accountability), in his saved copies.",
           "primary": true,
           "copies": [
             {
@@ -73,7 +74,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928020626/https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "eu-ai-act",
@@ -212,6 +214,7 @@
           "type": "Guidance (US, non-binding)",
           "url": "https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
           "status": "confirmed",
+          "note": "Robert read the White House summary page in full in his saved copy. He has not read the full 73-page document.",
           "primary": true,
           "copies": [
             {
@@ -228,7 +231,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260914154421/https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
             "date": "2026-09-14"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "eo-14365-2025",

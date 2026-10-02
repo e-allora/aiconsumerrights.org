@@ -90,7 +90,8 @@ describe("Archived copies and Robert's fingerprints", () => {
     const base = sources.categories[0];
     const copy = { sha256: "a".repeat(64), pages: 12, kind: "original" as const };
     const archived = { url: "https://web.archive.org/web/20260928020626/https://example.org/", date: "2026-09-28" };
-    const unread = { ...base.sources[0], archived, copies: [copy] };
+    // The test sets readBy itself, so it doesn't depend on which real sources Robert has read.
+    const unread = { ...base.sources[0], archived, copies: [copy], readBy: undefined };
     const read = { ...base.sources[1], archived, copies: [copy], readBy: "2026-09-29" };
     render(<SourceCategoryList category={{ ...base, sources: [unread, read] }} anchors />);
     const links = screen.getAllByRole("link", { name: /^Archived copy from 28 September 2026: / });

@@ -7,8 +7,8 @@
 1. Anti-Open-Washing (Traceability): Every interaction links to a visible outcome ("We Asked, You Said, We Did"). 
 2. Bot & Spam Resistance: Forum architecture relies on isolated statement voting (Agree/Disagree/Pass) with no direct reply loops. 
 3. Zero-Barrier Accessibility: Grade 6–8 reading level, no mandatory account registration for voting, and WCAG 2.2 Level AA compliance. 
-4. Non-Adversarial Consensus: ML-driven clustering highlights broad agreement across diverse groups rather than amplifying outrage. 
-5. Technical Resilience: Serverless edge architecture that decouples static content from interactive API endpoints. 
+4. Non-Adversarial Consensus: Results show where language groups agree (every counted group at 60% or more) rather than amplifying outrage. 
+5. Technical Resilience: Static pages, kept separate from the serverless API endpoints the forum uses. 
 ## Design Architecture (Figma 2026 Trends & Accessibility) - 3D & Immersive Elements: Lightweight CSS/SVG 3D depth cards. 
 - Experimental Navigation: Non-linear drawer navigation with persistent mobile thumb-zone bar. 
 - Color Palette: Warm neutral base (#FBF7EE cream), charcoal text (#12232E), teal/coral accents (#00A896 / #FF6B6B). 
@@ -20,7 +20,7 @@
 /ui ──► Base design system primitives 
 /guide ──► Algorithm Explorer & Decision Tree components 
 /forum ──► Pol.is Voting Engine & Consensus Cards 
-/lib ──► Helper functions & Vercel AI SDK streams 
-/public ──► Static assets, icons, sitemap/robots 
+/lib ──► Helper functions, the source registry, and forum logic 
+/content ──► Public logs written by hand: corrections, We did, reviews 
 ## Build Protocol - Incremental, Phase-by-Phase Development. 
 - Every section MUST have unit tests that pass before moving to the next section.
