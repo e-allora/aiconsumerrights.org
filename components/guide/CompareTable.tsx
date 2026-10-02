@@ -81,7 +81,7 @@ export const COMPARISON: readonly Row[] = [
  * visitor picks one more country, so the table never grows past four
  * columns. Phones get the same content as one card per question.
  */
-export function CompareTable({ checked }: { checked: string }) {
+export function CompareTable({ checked }: { checked: { from: string; to: string } }) {
   const t = useTranslations("Guide.compare");
   // Languages without a country of their own open on the first one.
   const [country, setCountry] = useState<Country>(homeCountry(useLocale()) ?? COMPARE_COUNTRIES[0]);
@@ -115,7 +115,7 @@ export function CompareTable({ checked }: { checked: string }) {
 
       <div className="depth-card hidden overflow-x-auto md:block">
         <table className="w-full min-w-[44rem] border-collapse text-left text-base">
-          <caption className="sr-only">{t("caption", { country: name(country), date: checked })}</caption>
+          <caption className="sr-only">{t("caption", { country: name(country), ...checked })}</caption>
           <thead>
             <tr className="border-b-2 border-border/15">
               <th scope="col" className="p-4 font-display">{t("colQuestion")}</th>

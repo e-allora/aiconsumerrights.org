@@ -2,6 +2,106 @@
   "about": "Errors on this site that were found and fixed, newest first. Robert writes every entry by hand. See content/README.md.",
   "entries": [
     {
+      "id": "2026-10-02-archive-and-dates",
+      "date": "2026-10-02",
+      "page": "/sources",
+      "wrong": {
+        "en": "The source list said every link had a copy saved at the Internet Archive. 38 of the 99 linked sources had none. It also gave a single check date, 23 September 2026, though sources were added and checked until 29 September. And it labelled the GDPR and the EU AI Act \"Link not yet opened\" next to \"Read by Robert Sweetman\".",
+        "es": "La lista de fuentes decía que cada enlace tenía una copia guardada en el Internet Archive. 38 de las 99 fuentes con enlace no la tenían. También daba una sola fecha de revisión, el 23 de septiembre de 2026, aunque se añadieron y revisaron fuentes hasta el 29 de septiembre. Y marcaba el RGPD y la Ley de IA de la UE como «Enlace aún sin abrir» junto a «Leído por Robert Sweetman».",
+        "pt-PT": "A lista de fontes dizia que cada ligação tinha uma cópia guardada no Internet Archive. 38 das 99 fontes com ligação não a tinham. Também indicava uma única data de verificação, 23 de setembro de 2026, embora tenham sido acrescentadas e verificadas fontes até 29 de setembro. E assinalava o RGPD e o Regulamento da IA da UE como «Ligação ainda não aberta» ao lado de «Lido por Robert Sweetman».",
+        "pt-BR": "A lista de fontes dizia que cada link tinha uma cópia salva no Internet Archive. 38 das 99 fontes com link não tinham. Ela também mostrava uma única data de verificação, 23 de setembro de 2026, embora fontes tenham sido adicionadas e verificadas até 29 de setembro. E marcava a GDPR e o Regulamento de IA da UE como \"Link ainda não aberto\" ao lado de \"Lido por Robert Sweetman\".",
+        "it": "L'elenco delle fonti diceva che ogni link aveva una copia salvata sull'Internet Archive. 38 delle 99 fonti con link non l'avevano. Indicava anche una sola data di controllo, il 23 settembre 2026, anche se alcune fonti sono state aggiunte e controllate fino al 29 settembre. E segnava il GDPR e l'AI Act come «Link non ancora aperto» accanto a «Letto da Robert Sweetman».",
+        "fr": "La liste des sources disait que chaque lien avait une copie enregistrée sur l'Internet Archive. 38 des 99 sources avec lien n'en avaient pas. Elle donnait aussi une seule date de vérification, le 23 septembre 2026, alors que des sources ont été ajoutées et vérifiées jusqu'au 29 septembre. Et elle indiquait « Lien pas encore ouvert » pour le RGPD et le règlement européen sur l'IA, à côté de « Lu par Robert Sweetman ».",
+        "de": "Die Quellenliste sagte, zu jedem Link gebe es eine Kopie im Internet Archive. Bei 38 der 99 verlinkten Quellen gab es keine. Sie nannte außerdem nur ein Prüfdatum, den 23. September 2026, obwohl bis zum 29. September Quellen hinzugefügt und geprüft wurden. Und bei der DSGVO und der KI-Verordnung der EU stand „Link noch nicht geöffnet“ neben „Gelesen von Robert Sweetman“.",
+        "hi": "स्रोतों की सूची में लिखा था कि हर लिंक की एक कॉपी Internet Archive में सहेजी गई है। लिंक वाले 99 स्रोतों में से 38 की कोई कॉपी नहीं थी। सूची में जाँच की एक ही तारीख, 23 सितंबर 2026, दी गई थी, जबकि 29 सितंबर तक स्रोत जोड़े और जाँचे गए। और GDPR और यूरोपीय संघ के एआई कानून पर \"लिंक अभी खोला नहीं गया\" लिखा था, जबकि साथ ही लिखा था कि रॉबर्ट स्वीटमैन ने उन्हें पढ़ा है।"
+      },
+      "changed": {
+        "en": "32 more sources now link to a saved copy; 6 pages could not be saved, and their entries show no copy. The text now says each entry links to its archived copy when there is one. The list shows the first and the latest check dates. The two EU laws now say a person opened them, because their website blocks automated readers. A test keeps these statements in step with the data.",
+        "es": "Otras 32 fuentes ahora enlazan una copia guardada; 6 páginas no se pudieron guardar, y sus entradas no muestran copia. El texto ahora dice que cada entrada enlaza su copia archivada cuando existe. La lista muestra la primera y la última fecha de revisión. Las dos leyes de la UE ahora indican que las abrió una persona, porque su sitio web bloquea a los lectores automáticos. Una prueba mantiene estas frases al día con los datos.",
+        "pt-PT": "Mais 32 fontes têm agora uma ligação para uma cópia guardada; 6 páginas não puderam ser guardadas, e as suas entradas não mostram cópia. O texto diz agora que cada entrada tem uma ligação para a cópia arquivada quando ela existe. A lista mostra a primeira e a última data de verificação. As duas leis da UE indicam agora que foram abertas por uma pessoa, porque o seu site bloqueia leitores automáticos. Um teste mantém estas frases de acordo com os dados.",
+        "pt-BR": "Mais 32 fontes agora trazem o link para uma cópia salva; 6 páginas não puderam ser salvas, e as entradas delas não mostram cópia. O texto agora diz que cada entrada traz o link para a cópia arquivada quando ela existe. A lista mostra a primeira e a última data de verificação. As duas leis da UE agora indicam que foram abertas por uma pessoa, porque o site delas bloqueia leitores automáticos. Um teste mantém essas frases de acordo com os dados.",
+        "it": "Altre 32 fonti ora collegano una copia salvata; 6 pagine non si sono potute salvare, e le loro voci non mostrano una copia. Il testo ora dice che ogni voce collega la copia archiviata quando esiste. L'elenco mostra la prima e l'ultima data di controllo. Le due leggi europee ora indicano che le ha aperte una persona, perché il loro sito blocca i lettori automatici. Un test tiene queste frasi allineate ai dati.",
+        "fr": "32 sources de plus renvoient maintenant à une copie enregistrée ; 6 pages n'ont pas pu être enregistrées, et leurs entrées n'affichent pas de copie. Le texte dit maintenant que chaque entrée renvoie à sa copie archivée quand elle existe. La liste affiche la première et la dernière date de vérification. Les deux lois européennes indiquent maintenant qu'une personne les a ouvertes, parce que leur site bloque les lecteurs automatiques. Un test garde ces phrases en accord avec les données.",
+        "de": "32 weitere Quellen verlinken jetzt eine gespeicherte Kopie; 6 Seiten ließen sich nicht speichern, und ihre Einträge zeigen keine Kopie. Der Text sagt jetzt, dass jeder Eintrag seine archivierte Kopie verlinkt, wenn es eine gibt. Die Liste zeigt das erste und das letzte Prüfdatum. Bei den beiden EU-Gesetzen steht jetzt, dass ein Mensch sie geöffnet hat, weil ihre Website automatische Leser sperrt. Ein Test hält diese Aussagen mit den Daten im Einklang.",
+        "hi": "32 और स्रोतों में अब सहेजी हुई कॉपी का लिंक है; 6 पेज सहेजे नहीं जा सके, और उनकी प्रविष्टियों में कोई कॉपी नहीं दिखती। अब लिखा है कि जहाँ सहेजी हुई कॉपी है, वहाँ प्रविष्टि में उसका लिंक है। सूची अब जाँच की पहली और सबसे हाल की तारीख दिखाती है। यूरोपीय संघ के दोनों कानूनों पर अब लिखा है कि उन्हें एक इंसान ने खोला, क्योंकि उनकी वेबसाइट स्वचालित रीडर को रोकती है। एक टेस्ट इन बातों को डेटा के साथ मिलाए रखता है।"
+      }
+    },
+    {
+      "id": "2026-10-02-deepfake-rules",
+      "date": "2026-10-02",
+      "page": "/help/deepfake",
+      "wrong": {
+        "en": "The EU part said anyone who uses AI to make a deepfake must disclose it. That was broader than the law. The US part said platforms must remove \"known copies\".",
+        "es": "La parte de la UE decía que quien use IA para crear un deepfake debe indicarlo. Eso era más amplio que la ley. La parte de EE. UU. decía que las plataformas deben retirar las «copias conocidas».",
+        "pt-PT": "A parte da UE dizia que quem usa IA para criar um deepfake tem de o indicar. Isso era mais amplo do que a lei. A parte dos EUA dizia que as plataformas têm de retirar as «cópias conhecidas».",
+        "pt-BR": "A parte da UE dizia que quem usa IA para criar um deepfake precisa informar isso. Isso era mais amplo do que a lei. A parte dos EUA dizia que as plataformas precisam remover as \"cópias conhecidas\".",
+        "it": "La parte sull'UE diceva che chi usa l'IA per creare un deepfake deve dirlo. Era più ampio della legge. La parte sugli USA diceva che le piattaforme devono rimuovere le «copie note».",
+        "fr": "La partie sur l'UE disait que quiconque utilise l'IA pour créer un hypertrucage doit l'indiquer. C'était plus large que la loi. La partie sur les États-Unis disait que les plateformes doivent retirer les « copies connues ».",
+        "de": "Der EU-Teil sagte, wer mit KI einen Deepfake erzeugt, müsse das offenlegen. Das ging weiter als das Gesetz. Der US-Teil sagte, Plattformen müssten „bekannte Kopien“ entfernen.",
+        "hi": "यूरोपीय संघ वाले हिस्से में लिखा था कि जो भी एआई से डीपफ़ेक बनाए, उसे यह बताना होगा। यह कानून से ज़्यादा व्यापक था। अमेरिका वाले हिस्से में लिखा था कि प्लेटफ़ॉर्म को \"ज्ञात कॉपियाँ\" हटानी होंगी।"
+      },
+      "changed": {
+        "en": "The EU part now says who the rule covers: companies, public bodies, and people using AI in their work. Purely personal use and police work allowed by law are left out, and art and satire have a lighter rule. The US part now says \"known identical copies\", as the law does.",
+        "es": "La parte de la UE ahora dice a quién cubre la regla: empresas, organismos públicos y personas que usan IA en su trabajo. Quedan fuera el uso puramente personal y el trabajo policial permitido por ley, y el arte y la sátira tienen una regla más ligera. La parte de EE. UU. ahora dice «copias idénticas conocidas», como la ley.",
+        "pt-PT": "A parte da UE diz agora a quem a regra se aplica: empresas, organismos públicos e pessoas que usam IA no seu trabalho. Ficam de fora o uso puramente pessoal e o trabalho policial permitido por lei, e a arte e a sátira têm uma regra mais leve. A parte dos EUA diz agora «cópias idênticas conhecidas», como a lei.",
+        "pt-BR": "A parte da UE agora diz a quem a regra se aplica: empresas, órgãos públicos e pessoas que usam IA no trabalho. Ficam de fora o uso puramente pessoal e o trabalho policial permitido por lei, e a arte e a sátira têm uma regra mais leve. A parte dos EUA agora diz \"cópias idênticas conhecidas\", como a lei.",
+        "it": "La parte sull'UE ora dice a chi si applica la regola: aziende, enti pubblici e persone che usano l'IA nel proprio lavoro. Restano fuori l'uso puramente personale e il lavoro di polizia consentito dalla legge, e per l'arte e la satira c'è una regola più leggera. La parte sugli USA ora dice «copie identiche note», come la legge.",
+        "fr": "La partie sur l'UE dit maintenant à qui la règle s'applique : les entreprises, les organismes publics et les personnes qui utilisent l'IA dans leur travail. L'usage purement personnel et le travail de police autorisé par la loi en sont exclus, et l'art et la satire ont une règle plus légère. La partie sur les États-Unis dit maintenant « copies identiques connues », comme la loi.",
+        "de": "Der EU-Teil sagt jetzt, für wen die Regel gilt: Unternehmen, Behörden und Personen, die KI bei der Arbeit nutzen. Rein private Nutzung und gesetzlich erlaubte Polizeiarbeit sind ausgenommen; für Kunst und Satire gilt eine leichtere Regel. Der US-Teil sagt jetzt „bekannte identische Kopien“, wie das Gesetz.",
+        "hi": "यूरोपीय संघ वाला हिस्सा अब बताता है कि नियम किन पर लागू है: कंपनियाँ, सरकारी संस्थाएँ, और वे लोग जो अपने काम में एआई इस्तेमाल करते हैं। पूरी तरह निजी इस्तेमाल और कानून से मंज़ूर पुलिस का काम इसमें शामिल नहीं है, और कला और व्यंग्य के लिए नियम हल्का है। अमेरिका वाले हिस्से में अब \"ज्ञात हूबहू कॉपियाँ\" लिखा है, जैसा कानून में है।"
+      }
+    },
+    {
+      "id": "2026-10-02-guide-wording",
+      "date": "2026-10-02",
+      "page": "/guide",
+      "wrong": {
+        "en": "Two lines said that when a machine alone makes a serious decision, you can ask for a person to review it, with no conditions. The law has exceptions. The India column also described a draft rule as still open for comment, though comments closed in May 2026.",
+        "es": "Dos frases decían que, cuando solo una máquina toma una decisión importante, puedes pedir que una persona la revise, sin condiciones. La ley tiene excepciones. La columna de la India también describía un proyecto de norma como si siguiera abierto a comentarios, aunque el plazo cerró en mayo de 2026.",
+        "pt-PT": "Duas frases diziam que, quando só uma máquina toma uma decisão importante, pode pedir que uma pessoa a reveja, sem condições. A lei tem exceções. A coluna da Índia também descrevia uma proposta de regra como ainda aberta a comentários, embora o prazo tenha terminado em maio de 2026.",
+        "pt-BR": "Duas frases diziam que, quando só uma máquina toma uma decisão importante, você pode pedir que uma pessoa revise, sem condições. A lei tem exceções. A coluna da Índia também descrevia uma proposta de regra como ainda aberta a comentários, embora o prazo tenha terminado em maio de 2026.",
+        "it": "Due frasi dicevano che, quando solo una macchina prende una decisione importante, puoi chiedere che una persona la riveda, senza condizioni. La legge prevede eccezioni. La colonna dell'India descriveva anche una bozza di regola come ancora aperta ai commenti, anche se i commenti si sono chiusi a maggio 2026.",
+        "fr": "Deux phrases disaient que, quand une machine seule prend une décision importante, vous pouvez demander qu'une personne la réexamine, sans conditions. La loi prévoit des exceptions. La colonne de l'Inde décrivait aussi un projet de règle comme encore ouvert aux commentaires, alors que les commentaires ont été clos en mai 2026.",
+        "de": "Zwei Sätze sagten ohne Einschränkung: Wenn eine Maschine allein eine wichtige Entscheidung trifft, können Sie verlangen, dass ein Mensch sie prüft. Das Gesetz kennt Ausnahmen. Die Indien-Spalte beschrieb außerdem einen Entwurf, als könne man noch Stellung nehmen, obwohl die Frist im Mai 2026 endete.",
+        "hi": "दो वाक्यों में बिना किसी शर्त के लिखा था कि जब कोई मशीन अकेले कोई गंभीर फ़ैसला करे, तो आप कह सकते हैं कि कोई इंसान उसे दोबारा देखे। कानून में अपवाद हैं। भारत वाले कॉलम में एक मसौदा नियम को ऐसे बताया गया था जैसे उस पर अब भी राय माँगी जा रही हो, जबकि राय देने का समय मई 2026 में खत्म हो गया।"
+      },
+      "changed": {
+        "en": "Both lines now say you can \"usually\" ask, as the help pages already did. The India column now says comments closed in May 2026 and that no final version was found as of 27 September 2026.",
+        "es": "Las dos frases ahora dicen que «normalmente» puedes pedirlo, como ya decían las páginas de ayuda. La columna de la India ahora dice que el plazo de comentarios cerró en mayo de 2026 y que, al 27 de septiembre de 2026, no se encontró una versión final.",
+        "pt-PT": "As duas frases dizem agora que «normalmente» pode pedir, como as páginas de ajuda já diziam. A coluna da Índia diz agora que o prazo para comentários terminou em maio de 2026 e que, a 27 de setembro de 2026, não foi encontrada uma versão final.",
+        "pt-BR": "As duas frases agora dizem que você \"normalmente\" pode pedir, como as páginas de ajuda já diziam. A coluna da Índia agora diz que o prazo para comentários terminou em maio de 2026 e que, em 27 de setembro de 2026, não foi encontrada uma versão final.",
+        "it": "Le due frasi ora dicono che «di solito» puoi chiederlo, come già dicevano le pagine di aiuto. La colonna dell'India ora dice che i commenti si sono chiusi a maggio 2026 e che, al 27 settembre 2026, non risulta una versione definitiva.",
+        "fr": "Les deux phrases disent maintenant que vous pouvez « généralement » le demander, comme les pages d'aide le disaient déjà. La colonne de l'Inde dit maintenant que les commentaires ont été clos en mai 2026 et qu'au 27 septembre 2026, aucune version définitive n'a été trouvée.",
+        "de": "Beide Sätze sagen jetzt, dass Sie das „in der Regel“ verlangen können, wie es die Hilfeseiten schon taten. Die Indien-Spalte sagt jetzt, dass Stellungnahmen bis Mai 2026 möglich waren und dass Stand 27. September 2026 keine endgültige Fassung gefunden wurde.",
+        "hi": "दोनों वाक्यों में अब \"आम तौर पर\" लिखा है, जैसा मदद वाले पेजों में पहले से था। भारत वाले कॉलम में अब लिखा है कि मई 2026 तक राय माँगी गई थी, और 27 सितंबर 2026 तक नियम का कोई अंतिम रूप नहीं मिला।"
+      }
+    },
+    {
+      "id": "2026-10-02-votes-and-review",
+      "date": "2026-10-02",
+      "page": "/how-it-works",
+      "wrong": {
+        "en": "This page said voting without accounts can't fully stop someone from voting twice, \"for example by using a second browser\". That understated it: a script could cast many votes. Separately, the footer and the About page said a person reviews each page \"before launch\", though the site was already live.",
+        "es": "Esta página decía que votar sin cuenta no impide del todo que alguien vote dos veces, «por ejemplo usando otro navegador». Se quedaba corta: un programa automático podría emitir muchos votos. Además, el pie de página y la página «Acerca de» decían que una persona revisa cada página «antes del lanzamiento», aunque el sitio ya estaba publicado.",
+        "pt-PT": "Esta página dizia que votar sem conta não impede totalmente que alguém vote duas vezes, «por exemplo usando outro navegador». Ficava aquém: um programa automático poderia emitir muitos votos. Além disso, o rodapé e a página «Sobre» diziam que uma pessoa revê cada página «antes do lançamento», embora o site já estivesse publicado.",
+        "pt-BR": "Esta página dizia que votar sem conta não impede totalmente que alguém vote duas vezes, \"por exemplo usando outro navegador\". Era pouco: um programa automático poderia registrar muitos votos. Além disso, o rodapé e a página \"Sobre\" diziam que uma pessoa revisa cada página \"antes do lançamento\", embora o site já estivesse no ar.",
+        "it": "Questa pagina diceva che votare senza account non impedisce del tutto a qualcuno di votare due volte, «per esempio usando un altro browser». Era troppo poco: un programma automatico potrebbe esprimere molti voti. Inoltre, il piè di pagina e la pagina «Chi siamo» dicevano che una persona controlla ogni pagina «prima del lancio», anche se il sito era già online.",
+        "fr": "Cette page disait que voter sans compte ne peut pas empêcher complètement quelqu'un de voter deux fois, « par exemple avec un deuxième navigateur ». C'était en dessous de la réalité : un programme automatique pourrait émettre beaucoup de votes. Par ailleurs, le pied de page et la page « À propos » disaient qu'une personne relit chaque page « avant sa publication », alors que le site était déjà en ligne.",
+        "de": "Diese Seite sagte, Abstimmen ohne Konto könne nicht ganz verhindern, dass jemand zweimal abstimmt, „zum Beispiel mit einem zweiten Browser“. Das war zu wenig gesagt: Ein Skript könnte viele Stimmen abgeben. Außerdem stand in der Fußzeile und auf der Seite „Hintergrund“, ein Mensch prüfe jede Seite „vor der Veröffentlichung“, obwohl die Website schon online war.",
+        "hi": "इस पेज पर लिखा था कि बिना अकाउंट वोटिंग किसी को दो बार वोट करने से पूरी तरह नहीं रोक सकती, \"जैसे दूसरे ब्राउज़र से\"। यह बात अधूरी थी: कोई स्क्रिप्ट बहुत सारे वोट डाल सकती है। साथ ही, हर पेज के नीचे और \"परिचय\" पेज पर लिखा था कि एक इंसान हर पेज \"छपने से पहले\" जाँचता है, जबकि साइट पहले से चालू थी।"
+      },
+      "changed": {
+        "en": "The page now says a script could vote many times, and that results are a rough signal, not a count of people. The footer and the About page now say the review is still under way.",
+        "es": "La página ahora dice que un programa automático podría votar muchas veces y que los resultados son una señal aproximada, no un recuento de personas. El pie de página y la página «Acerca de» ahora dicen que la revisión sigue en curso.",
+        "pt-PT": "A página diz agora que um programa automático poderia votar muitas vezes e que os resultados são um sinal aproximado, não uma contagem de pessoas. O rodapé e a página «Sobre» dizem agora que a revisão ainda está em curso.",
+        "pt-BR": "A página agora diz que um programa automático poderia votar muitas vezes e que os resultados são um sinal aproximado, não uma contagem de pessoas. O rodapé e a página \"Sobre\" agora dizem que a revisão ainda está em andamento.",
+        "it": "La pagina ora dice che un programma automatico potrebbe votare molte volte e che i risultati sono un segnale approssimativo, non un conteggio di persone. Il piè di pagina e la pagina «Chi siamo» ora dicono che il controllo è ancora in corso.",
+        "fr": "La page dit maintenant qu'un programme automatique pourrait voter de nombreuses fois et que les résultats sont un signal approximatif, pas un décompte de personnes. Le pied de page et la page « À propos » disent maintenant que la relecture est toujours en cours.",
+        "de": "Die Seite sagt jetzt, dass ein Skript viele Male abstimmen könnte und dass die Ergebnisse ein grobes Signal sind, keine Zählung von Personen. Fußzeile und Seite „Hintergrund“ sagen jetzt, dass die Prüfung noch läuft.",
+        "hi": "पेज पर अब लिखा है कि कोई स्क्रिप्ट कई बार वोट कर सकती है, और नतीजे एक मोटा संकेत हैं, लोगों की गिनती नहीं। हर पेज के नीचे और \"परिचय\" पेज पर अब लिखा है कि जाँच अभी चल रही है।"
+      }
+    },
+    {
       "id": "2026-09-27-anpd-name",
       "date": "2026-09-27",
       "page": "/guide",
@@ -36,14 +136,20 @@
         "es": "La nota bajo el cuadro de sugerencias dejó de nombrar las herramientas de IA que leen cada sugerencia. Quitamos los nombres por error, pensando que se aplicaba nuestra regla de no señalar a empresas.",
         "pt-PT": "A nota por baixo da caixa de sugestões deixou de indicar as ferramentas de IA que leem cada sugestão. Retirámos os nomes por engano, pensando que a nossa regra de não apontar empresas se aplicava.",
         "pt-BR": "A nota abaixo da caixa de sugestões deixou de citar as ferramentas de IA que leem cada sugestão. Tiramos os nomes por engano, achando que nossa regra de não apontar empresas se aplicava.",
-        "it": "La nota sotto il riquadro dei suggerimenti aveva smesso di nominare gli strumenti di IA che leggono ogni suggerimento. Avevamo tolto i nomi per errore, pensando che valesse la nostra regola di non additare le aziende."
+        "it": "La nota sotto il riquadro dei suggerimenti aveva smesso di nominare gli strumenti di IA che leggono ogni suggerimento. Avevamo tolto i nomi per errore, pensando che valesse la nostra regola di non additare le aziende.",
+        "fr": "La note sous la boîte à suggestions avait cessé de nommer les outils d'IA qui lisent chaque suggestion. Nous avions retiré les noms par erreur, en pensant que notre règle contre le fait de désigner des entreprises s'appliquait.",
+        "de": "Der Hinweis unter dem Vorschlagsfeld nannte die KI-Werkzeuge nicht mehr, die jeden Vorschlag lesen. Wir hatten die Namen versehentlich entfernt, weil wir dachten, unsere Regel gegen das Herausgreifen einzelner Unternehmen gelte hier.",
+        "hi": "सुझाव बॉक्स के नीचे के नोट में उन एआई टूल के नाम नहीं रहे थे जो हर सुझाव पढ़ते हैं। हमने नाम गलती से हटा दिए थे, यह सोचकर कि कंपनियों को अलग से निशाना न बनाने का हमारा नियम यहाँ लागू होता है।"
       },
       "changed": {
         "en": "The note names them again: Mistral Small, with Google's Gemini as a backup, on EU servers, through OpenRouter. That rule is about what the site says about others. It never hides the tools the site itself uses.",
         "es": "La nota vuelve a nombrarlas: Mistral Small, con Gemini de Google como respaldo, en servidores de la UE, a través de OpenRouter. Esa regla trata de lo que el sitio dice sobre otros. Nunca oculta las herramientas que usa el propio sitio.",
         "pt-PT": "A nota volta a indicá-las: Mistral Small, com o Gemini da Google como alternativa, em servidores da UE, através do OpenRouter. Essa regra é sobre o que o site diz sobre os outros. Nunca esconde as ferramentas que o próprio site usa.",
         "pt-BR": "A nota volta a citá-las: Mistral Small, com o Gemini do Google como reserva, em servidores da UE, por meio do OpenRouter. Essa regra trata do que o site diz sobre os outros. Ela nunca esconde as ferramentas que o próprio site usa.",
-        "it": "La nota li nomina di nuovo: Mistral Small, con Gemini di Google come riserva, su server nell'UE, tramite OpenRouter. Quella regola riguarda ciò che il sito dice degli altri. Non nasconde mai gli strumenti che il sito stesso usa."
+        "it": "La nota li nomina di nuovo: Mistral Small, con Gemini di Google come riserva, su server nell'UE, tramite OpenRouter. Quella regola riguarda ciò che il sito dice degli altri. Non nasconde mai gli strumenti che il sito stesso usa.",
+        "fr": "La note les nomme de nouveau : Mistral Small, avec Gemini de Google en secours, sur des serveurs de l'UE, via OpenRouter. Cette règle concerne ce que le site dit des autres. Elle ne cache jamais les outils que le site utilise lui-même.",
+        "de": "Der Hinweis nennt sie wieder: Mistral Small, mit Googles Gemini als Reserve, auf EU-Servern, über OpenRouter. Die Regel betrifft, was die Website über andere sagt. Sie verbirgt nie die Werkzeuge, die die Website selbst nutzt.",
+        "hi": "नोट में अब फिर उनके नाम हैं: Mistral Small, और बैकअप के तौर पर Google का Gemini, यूरोपीय संघ के सर्वर पर, OpenRouter के ज़रिए। वह नियम इस बारे में है कि साइट दूसरों के बारे में क्या कहती है। वह साइट के अपने टूल कभी नहीं छिपाता।"
       }
     },
     {
@@ -56,14 +162,20 @@
         "es": "Los resultados del foro podían quedarse fijos en la primera respuesta que dio el servidor, así que los votos nuevos podían no aparecer.",
         "pt-PT": "Os resultados do fórum podiam ficar presos na primeira resposta que o servidor deu, e os votos novos podiam não aparecer.",
         "pt-BR": "Os resultados do fórum podiam ficar travados na primeira resposta que o servidor deu, e os votos novos podiam não aparecer.",
-        "it": "I risultati del forum potevano restare bloccati sulla prima risposta data dal server, quindi i nuovi voti potevano non comparire."
+        "it": "I risultati del forum potevano restare bloccati sulla prima risposta data dal server, quindi i nuovi voti potevano non comparire.",
+        "fr": "Les résultats du forum pouvaient rester bloqués sur la première réponse donnée par le serveur, si bien que les nouveaux votes pouvaient ne pas apparaître dans les résultats.",
+        "de": "Die Forum-Ergebnisse konnten bei der ersten Antwort hängen bleiben, die der Server je gegeben hatte. Neue Stimmen erschienen dann womöglich nicht in den Ergebnissen.",
+        "hi": "फ़ोरम के नतीजे सर्वर के सबसे पहले जवाब पर अटक सकते थे, इसलिए नए वोट नतीजों में शायद न दिखते।"
       },
       "changed": {
         "en": "The site now asks the database for fresh numbers every time. A test checks this, so the problem can't quietly come back.",
         "es": "Ahora el sitio pide datos nuevos a la base de datos cada vez. Una prueba lo comprueba, así que el error no puede volver sin que nadie lo note.",
         "pt-PT": "Agora o site pede sempre números atualizados à base de dados. Um teste verifica isto, para que o erro não volte sem ninguém reparar.",
         "pt-BR": "Agora o site pede números atualizados ao banco de dados toda vez. Um teste verifica isso, para que o erro não volte sem ninguém perceber.",
-        "it": "Ora il sito chiede ogni volta dati aggiornati al database. Un test lo verifica, così l'errore non può tornare senza che nessuno se ne accorga."
+        "it": "Ora il sito chiede ogni volta dati aggiornati al database. Un test lo verifica, così l'errore non può tornare senza che nessuno se ne accorga.",
+        "fr": "Le site demande maintenant des chiffres à jour à la base de données à chaque fois. Un test le vérifie, pour que le problème ne puisse pas revenir sans qu'on le voie.",
+        "de": "Die Website fragt die Datenbank jetzt jedes Mal nach frischen Zahlen. Ein Test prüft das, damit das Problem nicht unbemerkt zurückkommt.",
+        "hi": "साइट अब हर बार डेटाबेस से ताज़ा आँकड़े माँगती है। एक टेस्ट इसकी जाँच करता है, ताकि यह समस्या चुपचाप वापस न आ सके।"
       }
     },
     {
@@ -76,14 +188,20 @@
         "es": "El nombre del sitio en italiano decía «nell'IA», que se lee como «dentro de la IA». El foro se llamaba «Foro», que en italiano puede significar un agujero o un tribunal. Dos pasos de PAUSA tenían errores de gramática.",
         "pt-PT": "O nome do site em italiano dizia «nell'IA», que se lê como «dentro da IA». O fórum chamava-se «Foro», que em italiano pode significar um buraco ou um tribunal. Dois passos da PAUSA tinham erros de gramática.",
         "pt-BR": "O nome do site em italiano dizia \"nell'IA\", que se lê como \"dentro da IA\". O fórum se chamava \"Foro\", que em italiano pode significar um buraco ou um tribunal. Dois passos da PAUSA tinham erros de gramática.",
-        "it": "Il nome del sito diceva «nell'IA», che si legge come «dentro l'IA». Il forum si chiamava «Foro», che in italiano può voler dire un buco o un tribunale. Due passi di PAUSA avevano errori di grammatica."
+        "it": "Il nome del sito diceva «nell'IA», che si legge come «dentro l'IA». Il forum si chiamava «Foro», che in italiano può voler dire un buco o un tribunale. Due passi di PAUSA avevano errori di grammatica.",
+        "fr": "Le nom italien du site disait « nell'IA », ce qui se lit « à l'intérieur de l'IA ». Le forum s'appelait « Foro », qui en italien peut vouloir dire un trou ou un tribunal. Deux étapes de PAUSA contenaient des fautes de grammaire.",
+        "de": "Der italienische Name der Website lautete „nell'IA“, was sich wie „in der KI“ liest. Das Forum hieß „Foro“, was auf Italienisch auch ein Loch oder ein Gericht bedeuten kann. Zwei PAUSA-Schritte enthielten Grammatikfehler.",
+        "hi": "साइट के इतालवी नाम में \"nell'IA\" लिखा था, जिसका मतलब \"एआई के अंदर\" जैसा निकलता है। फ़ोरम का नाम \"Foro\" था, जिसका इतालवी में मतलब छेद या अदालत भी हो सकता है। PAUSA के दो चरणों में व्याकरण की गलतियाँ थीं।"
       },
       "changed": {
         "en": "The site name is now \"Diritti dei consumatori di fronte all'IA\", the forum is the \"Forum Voce e Visione\", and the two PAUSA steps were rewritten in proper Italian.",
         "es": "El nombre ahora es «Diritti dei consumatori di fronte all'IA», el foro es el «Forum Voce e Visione» y los dos pasos de PAUSA se reescribieron en un italiano correcto.",
         "pt-PT": "O nome é agora «Diritti dei consumatori di fronte all'IA», o fórum é o «Forum Voce e Visione» e os dois passos da PAUSA foram reescritos em italiano correto.",
         "pt-BR": "O nome agora é \"Diritti dei consumatori di fronte all'IA\", o fórum é o \"Forum Voce e Visione\" e os dois passos da PAUSA foram reescritos em italiano correto.",
-        "it": "Ora il nome è «Diritti dei consumatori di fronte all'IA», il forum è il «Forum Voce e Visione» e i due passi di PAUSA sono stati riscritti in un italiano corretto."
+        "it": "Ora il nome è «Diritti dei consumatori di fronte all'IA», il forum è il «Forum Voce e Visione» e i due passi di PAUSA sono stati riscritti in un italiano corretto.",
+        "fr": "Le nom du site est maintenant « Diritti dei consumatori di fronte all'IA », le forum est le « Forum Voce e Visione », et les deux étapes de PAUSA ont été réécrites dans un italien correct.",
+        "de": "Die Website heißt jetzt „Diritti dei consumatori di fronte all'IA“, das Forum „Forum Voce e Visione“, und die beiden PAUSA-Schritte wurden in korrektem Italienisch neu geschrieben.",
+        "hi": "साइट का नाम अब \"Diritti dei consumatori di fronte all'IA\" है, फ़ोरम का नाम \"Forum Voce e Visione\" है, और PAUSA के दोनों चरण सही इतालवी में दोबारा लिखे गए।"
       }
     }
   ]

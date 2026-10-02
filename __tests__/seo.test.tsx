@@ -9,8 +9,9 @@ import GuidePage, { generateMetadata as guideMeta } from "@/app/[locale]/guide/p
 import LocaleLayout, { generateMetadata as rootMeta } from "@/app/[locale]/layout";
 import { size as ogSize } from "@/app/opengraph-image";
 import { generateMetadata as sourcesMeta } from "@/app/[locale]/sources/page";
-import { localizedPath, type Locale } from "@/lib/i18n/routing";
+import { LOCALE_TAGS, localizedPath, routing, type Locale } from "@/lib/i18n/routing";
 import { SITE_URL } from "@/lib/site";
+import { sources } from "@/lib/sources";
 import { IntlWrapper } from "@/test-utils";
 
 jest.mock("next/og", () => ({ ImageResponse: jest.fn() }));
@@ -134,7 +135,8 @@ describe("JSON-LD structured data", () => {
   });
 
   it("marks the guide as an Article with its fact-check date, in each language", () => {
-    for (const [locale, lang] of [["en", "en"], ["es", "es"], ["pt-PT", "pt-PT"], ["pt-BR", "pt-BR"], ["it", "it"]] as const) {
+    for (const locale of routing.locales) {
+      const lang = LOCALE_TAGS[locale].lang;
       (globalThis as unknown as { __requestLocale: string }).__requestLocale = locale;
       const html = renderToStaticMarkup(
         <IntlWrapper locale={locale}>
@@ -142,7 +144,7 @@ describe("JSON-LD structured data", () => {
         </IntlWrapper>
       );
       const [article] = jsonLd(html);
-      expect(article).toMatchObject({ "@type": "Article", dateModified: "2026-09-23", inLanguage: lang });
+      expect(article).toMatchObject({ "@type": "Article", dateModified: sources.lastCheckedOn, inLanguage: lang });
     }
   });
 

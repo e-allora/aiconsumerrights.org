@@ -3,7 +3,7 @@
     "siteName": "Verbraucherrechte gegenüber KI",
     "siteDescription": "Hilfe in einfacher Sprache zu Ihren Rechten, wenn KI über Sie entscheidet, entstanden im offenen und respektvollen Dialog.",
     "skipToContent": "Zum Hauptinhalt springen",
-    "factsChecked": "Fakten geprüft am {date}.",
+    "factsChecked": "Fakten geprüft zwischen dem {from} und dem {to}.",
     "legalNotice": "Allgemeine Informationen, keine Rechtsberatung. Gesetze sind je nach Ort verschieden. Wenn es um viel Geld, Gesundheit, Wohnen oder Ihren rechtlichen Status geht, sprechen Sie mit einer Anwältin oder einem Anwalt, einer Rechtsberatungsstelle oder Ihrer Verbraucherzentrale.",
     "opensInNewTab": "(öffnet in einem neuen Tab)",
     "sourceMarker": "Quelle {number}: {title}",
@@ -58,7 +58,7 @@
     "metaDescription": "Hilfe in einfacher Sprache zu Chatbots, Empfehlungen und automatischer Auswahl, mit den Regeln der USA und der EU im Vergleich und drei ruhigen Schritten.",
     "eyebrow": "Der Ratgeber",
     "title": "KI, die Sie hinterfragen können",
-    "lead": "<b>KI hilft heute bei vielen Entscheidungen im Alltag. Sie können fragen, wie sie funktioniert, einen Menschen verlangen und darüber sprechen.</b> Diese Seite zeigt Ihnen, wie das geht, mit den Regeln der USA und der EU im Vergleich.",
+    "lead": "<b>KI hilft heute bei vielen Entscheidungen im Alltag. Sie können fragen, wie sie funktioniert, einen Menschen verlangen und darüber sprechen.</b> Diese Seite zeigt Ihnen, wie das geht, mit den Regeln der USA, der EU und eines Landes Ihrer Wahl im Vergleich.",
     "touchpoints": {
       "heading": "Erkennen Sie die KI in Ihrem Alltag",
       "lead": "<b>Drei Arten von KI berühren das Leben der meisten Menschen.</b> Jede lässt sich leichter hinterfragen, wenn man ihren Namen kennt.",
@@ -88,14 +88,14 @@
         "rule1Label": "Gesetz (USA, Kredit).",
         "rule1": "Ein Kreditgeber, der Sie ablehnt, muss die konkreten Hauptgründe nennen.",
         "rule2Label": "Gesetz (EU).",
-        "rule2": "Wenn eine Maschine allein eine wichtige Entscheidung über Sie trifft, können Sie verlangen, dass ein Mensch sie prüft."
+        "rule2": "Wenn eine Maschine allein eine wichtige Entscheidung über Sie trifft, können Sie in der Regel verlangen, dass ein Mensch sie prüft."
       }
     },
     "compare": {
       "heading": "Vergleichen Sie die Regeln der USA, der EU und anderer Länder",
       "lead": "<b>Alle wollen KI, der die Menschen vertrauen können.</b> Sie gehen verschiedene Wege. Die USA wenden vor allem bestehende Gesetze an, Bereich für Bereich und Bundesstaat für Bundesstaat. Die EU hat ein großes KI-Gesetz beschlossen und verbindet es mit ihrem Datenschutzrecht. Wählen Sie ein Land, um es mit beiden zu vergleichen.",
       "pickLabel": "Vergleichen mit",
-      "caption": "Regeln im Vergleich: USA, EU und {country}, Stand {date}",
+      "caption": "Regeln im Vergleich: USA, EU und {country}, geprüft zwischen dem {from} und dem {to}",
       "colQuestion": "Ihre Frage",
       "colUS": "Vereinigte Staaten",
       "colEU": "Europäische Union",
@@ -170,7 +170,7 @@
           "it": "Das Gesetz Nr. 132/2025, Italiens nationales KI-Gesetz, gilt seit dem 10. Oktober 2025. Es wirkt zusammen mit der KI-Verordnung der EU. Kinder unter 14 Jahren brauchen die Zustimmung eines Elternteils, um KI zu nutzen.",
           "fr": "Ein Gesetzentwurf, den der Senat am 18. Februar 2026 beschlossen hat, würde die CNIL zur wichtigsten KI-Behörde Frankreichs machen und ihr Beschwerden zu KI übertragen. Stand 27. September 2026 wartet er auf eine Abstimmung in der Nationalversammlung.",
           "de": "Das deutsche KI-Aufsichtsgesetz (KI-MIG) gilt seit dem 29. Juli 2026. Ab dem 20. November 2026 dürfen Kredit-Scores weder Ihre Adresse, Ihr Alter, Ihr Geschlecht, Ihren Namen, soziale Netzwerke, Kontobewegungen noch sensible Daten wie Gesundheitsdaten nutzen, und sie dürfen nicht über Minderjährige erstellt werden.",
-          "in": "Die wichtigsten Datenrechte gelten ab Mai 2027. Ein Entwurf, zu dem man bis Mai 2026 Stellung nehmen konnte, würde KI-Kennzeichnungen während eines ganzen Videos sichtbar halten. Die KI-Leitlinien der Regierung (November 2025) sind nicht verbindlich und sagen, dass ein eigenes KI-Gesetz noch nicht nötig ist."
+          "in": "Die wichtigsten Datenrechte gelten ab Mai 2027. Ein Entwurf würde KI-Kennzeichnungen während eines ganzen Videos sichtbar halten. Stellungnahmen waren bis Mai 2026 möglich; Stand 27. September 2026 wurde keine endgültige Fassung gefunden. Die KI-Leitlinien der Regierung (November 2025) sind nicht verbindlich und sagen, dass ein eigenes KI-Gesetz noch nicht nötig ist."
         }
       }
     },
@@ -240,7 +240,7 @@
           "why": "Ein Mensch kann Einzelheiten berücksichtigen, die eine Software vielleicht übersieht, etwa eine neue Veränderung in Ihrer Lage oder einen Fehler in Ihren Unterlagen.",
           "sample": "Danke für Ihre Antwort. Ich möchte, dass ein Mensch diese Entscheidung prüft. Hier sind Informationen, die helfen können: [Einzelheiten]. Bitte sagen Sie mir, was Sie sonst noch von mir brauchen.",
           "rule1Label": "Gesetz (EU)",
-          "rule1": "Wenn eine Maschine allein eine Entscheidung mit rechtlicher oder ähnlich erheblicher Wirkung für Sie trifft, können Sie verlangen, dass ein Mensch eingreift. (DSGVO, Artikel 22)",
+          "rule1": "Wenn eine Maschine allein eine Entscheidung mit rechtlicher oder ähnlich erheblicher Wirkung für Sie trifft, können Sie in der Regel verlangen, dass ein Mensch eingreift. (DSGVO, Artikel 22)",
           "rule2Label": "Empfehlung (USA)",
           "rule2": "Der Blueprint for an AI Bill of Rights von 2022 empfiehlt einen Weg, einen Menschen zu erreichen. Er ist kein Gesetz und wurde archiviert."
         },
@@ -895,7 +895,7 @@
       },
       "us": {
         "rights": {
-          "1": "<b>Wenn jemand ein intimes Bild von Ihnen, echt oder mit KI erzeugt, ohne Ihre Einwilligung geteilt hat,</b> müssen Plattformen es und bekannte Kopien innerhalb von 48 Stunden nach Ihrer Anfrage entfernen. Das gilt seit dem 19. Mai 2026.",
+          "1": "<b>Wenn jemand ein intimes Bild von Ihnen, echt oder mit KI erzeugt, ohne Ihre Einwilligung geteilt hat,</b> müssen Plattformen es und bekannte identische Kopien innerhalb von 48 Stunden nach Ihrer Anfrage entfernen. Das gilt seit dem 19. Mai 2026.",
           "2": "<b>Sie können Maschen, auch mit gefälschten Stimmen und Videos, kostenlos beim Internet Crime Complaint Center des FBI melden.</b>",
           "3": "<b>Ob Ihre Bank Ihnen das Geld erstatten muss, hängt davon ab, wie Sie bezahlt haben und was passiert ist.</b> Rufen Sie sofort an und bitten Sie um eine schriftliche Bestätigung, was die Bank tun wird."
         },
@@ -910,7 +910,7 @@
       },
       "eu": {
         "rights": {
-          "1": "<b>Deepfakes müssen gekennzeichnet sein.</b> Wer mit KI Bilder, Ton oder Video zu einem Deepfake erzeugt oder verändert, muss das offenlegen. Das gilt seit dem 2. August 2026.",
+          "1": "<b>Deepfakes müssen gekennzeichnet sein.</b> Ein Unternehmen, eine Behörde oder eine Person, die bei der Arbeit mit KI Bilder, Ton oder Video zu einem Deepfake erzeugt oder verändert, muss offenlegen, dass es KI-gemacht ist. Das gilt nicht für rein private Nutzung und nicht für gesetzlich erlaubte Polizeiarbeit; für Kunst und Satire gilt eine leichtere Regel. Das gilt seit dem 2. August 2026.",
           "2": "<b>Sie können verlangen, dass Ihre personenbezogenen Daten gelöscht werden, wenn sie unrechtmäßig verarbeitet werden,</b> und das kann auch eine Fälschung aus Ihren Fotos, Ihrer Stimme oder Ihren Videos betreffen. Man muss Ihnen innerhalb eines Monats antworten.",
           "3": "<b>Wenn eine Plattform Ihre Anfrage ablehnt,</b> können Sie über ihr Beschwerdesystem eine Überprüfung verlangen."
         },
@@ -1112,7 +1112,7 @@
     "metaTitle": "Hintergrund",
     "metaDescription": "Warum es diese Website gibt, wie sie den Dialog fair und offen hält und wer ihre Seiten prüft.",
     "title": "Über diese Website",
-    "lead": "<b>Diese Website erklärt Ihre Rechte, wenn KI über Sie entscheidet, in einfacher Sprache und ohne Schuldzuweisung.</b> Sie vergleicht die Ansätze der USA und der EU und lädt alle zum Gespräch ein.",
+    "lead": "<b>Diese Website erklärt Ihre Rechte, wenn KI über Sie entscheidet, in einfacher Sprache und ohne Schuldzuweisung.</b> Sie vergleicht die Ansätze der USA, der EU und weiterer Länder und lädt alle zum Gespräch ein.",
     "missionHeading": "Die Aufgabe verstehen",
     "mission": "<b>Verbraucherrechte gegenüber KI leicht verständlich machen, und leicht besprechbar.</b> Menschen, die KI nutzen, Lehrkräfte, Aufsichtsbehörden und Teams, die KI entwickeln, sind alle betroffen. Diese Website geht davon aus, dass alle in gutem Glauben handeln und ihr Bestes tun mit dem, was sie wissen. Sie kritisiert Ideen und Systeme, nie Menschen.",
     "safeguardsHeading": "Die fünf Schutzregeln",
@@ -1130,7 +1130,7 @@
       "sturdyText": "Der Ratgeber und die anderen Seiten sind einfache statische Seiten, getrennt von allem Interaktiven. So laden sie schnell und funktionieren zuverlässig."
     },
     "whoHeading": "Wer dahintersteht",
-    "who": "<b>Robert Sweetman betreibt diese Website.</b> KI-Modelle haben beim Recherchieren und Schreiben geholfen. Ein Mensch prüft jede Seite vor der Veröffentlichung. Die Fußzeile jeder Seite nennt, welche Modelle geholfen haben, welche Quellen die Fakten stützen und wie weit die Prüfung ist.",
+    "who": "<b>Robert Sweetman betreibt diese Website.</b> KI-Modelle haben beim Recherchieren und Schreiben geholfen. Ein Mensch prüft noch jede Seite. Die Fußzeile jeder Seite nennt, welche Modelle geholfen haben, welche Quellen die Fakten stützen und wie weit die Prüfung ist.",
     "whoLink": "Alle Quellen ansehen und wie sie geprüft wurden",
     "joinHeading": "Reden Sie mit",
     "joinLead": "Ihre Sicht hilft zu entscheiden, wie es weitergeht.",
@@ -1145,14 +1145,17 @@
     "reviewHeading": "Ein Mensch prüft jede Seite",
     "reviewLabel": "Prüfung durch einen Menschen",
     "reviewDone": "Geprüft von {reviewer} am {date}.",
-    "reviewPending": "Noch nicht abgeschlossen. {reviewer} prüft jede Seite vor der Veröffentlichung.",
+    "reviewPending": "Noch nicht abgeschlossen. {reviewer} prüft noch jede Seite.",
+    "ownerName": "Robert Sweetman",
     "translationThanks": "Meine Großeltern, Giuffrido und Isolina DiCenso, verließen Italien für ein neues Land und lernten eine neue Sprache. Ihr Weg hat diese Übersetzungen inspiriert. In Liebe und Dankbarkeit an sie und an meine Eltern, Joanne Sweetman und Robert Sweetman Sr.",
     "checkedLabel": "Quellen geprüft",
+    "checkedRange": "{from} bis {to}",
     "seeAll": "Alle {total} Quellen in {groups} Gruppen ansehen",
     "openRegistry": "Das vollständige Quellenverzeichnis öffnen",
-    "registryAbout": "Alle Quellen, auf die sich diese Website stützt, und wie jeder Link geprüft wurde. „Link von KI geöffnet und bestätigt“ heißt: Ein KI-Modell (Claude oder Recherche-Agenten, die es gesteuert hat) hat den Link am Prüfdatum geöffnet, und der Inhalt stimmte mit dem überein, was diese Website sagt. Das ist nicht dasselbe, wie wenn ein Mensch die Quelle liest. Robert liest jede Quelle selbst; bei jeder, die er gelesen hat, steht das mit Datum. „Link noch nicht geöffnet“ heißt: Der Link stammt aus einem offiziellen Verzeichnis oder einer Suche, wurde aber noch von niemandem geöffnet. „Noch kein öffentlicher Link“ heißt: als Hintergrundlektüre aufgeführt, ohne erfassten öffentlichen Link. Zu jedem Link gibt es außerdem eine Kopie im Internet Archive, damit alle die Seite so sehen können, wie sie bei der Prüfung war. Bei Quellen, die Robert gelesen hat, steht der Fingerabdruck seiner eigenen Kopie, damit alle mit derselben Datei prüfen können, ob sie übereinstimmt.",
+    "registryAbout": "Alle Quellen, auf die sich diese Website stützt, und wie jeder Link geprüft wurde. „Link von KI geöffnet und bestätigt“ heißt: Ein KI-Modell (Claude oder Recherche-Agenten, die es gesteuert hat) hat den Link geöffnet, und der Inhalt stimmte mit dem überein, was diese Website sagt. Das ist nicht dasselbe, wie wenn ein Mensch die Quelle liest. Robert liest jede Quelle selbst; bei jeder, die er gelesen hat, steht das mit Datum. „Link von einem Menschen geöffnet, nicht von KI“ heißt: Die Seite sperrt automatische Leser, deshalb hat Robert sie im Browser geöffnet und selbst gelesen. „Link noch nicht geöffnet“ heißt: Der Link stammt aus einem offiziellen Verzeichnis oder einer Suche, wurde aber noch von niemandem geöffnet. „Noch kein öffentlicher Link“ heißt: als Hintergrundlektüre aufgeführt, ohne erfassten öffentlichen Link. Wenn im Internet Archive eine Kopie der Seite gespeichert ist, verlinkt der Eintrag sie, damit alle die Seite so sehen können, wie sie an diesem Tag war. Bei Quellen, die Robert gelesen hat, steht der Fingerabdruck seiner eigenen Kopie, damit alle mit derselben Datei prüfen können, ob sie übereinstimmt.",
     "status": {
       "confirmed": "Link von KI geöffnet und bestätigt",
+      "person": "Link von einem Menschen geöffnet, nicht von KI",
       "unopened": "Link noch nicht geöffnet",
       "no-link": "Noch kein öffentlicher Link"
     },
@@ -1187,7 +1190,7 @@
     "metaTitle": "Quellen",
     "metaDescription": "Alle Quellen, auf die sich diese Website stützt, nach Thema geordnet, mit dem Stand der Prüfung jedes Links und dem Datum.",
     "title": "Quellen",
-    "lead": "<b>Alle {total} Quellen in {groups} Gruppen, geprüft am {date}.</b> Die Nummern entsprechen den kleinen Quellenhinweisen auf jeder Seite."
+    "lead": "<b>Alle {total} Quellen in {groups} Gruppen, geprüft zwischen dem {from} und dem {to}.</b> Die Nummern entsprechen den kleinen Quellenhinweisen auf jeder Seite."
   },
   "HowItWorks": {
     "metaTitle": "So funktioniert diese Website",
@@ -1206,7 +1209,10 @@
       "neon": "<b>Neon</b> ist die Datenbank, in Frankfurt. Sie enthält die Stimmen, gespeichert mit einem unkenntlich gemachten Browser-Code, und die vorgeschlagenen Aussagen.",
       "openrouter": "<b>OpenRouter</b> leitet jede vorgeschlagene Aussage an ein KI-Modell weiter. Wir haben es so eingestellt, dass es nur Dienste nutzt, die zusagen, Ihren Text weder zu speichern noch damit zu trainieren. Diese Zusage können wir verlangen, aber nicht überprüfen. Was OpenRouter selbst speichert, regelt seine eigene Datenschutzerklärung.",
       "models": "<b>Mistral Small</b>, mit <b>Gemini von Google</b> als Ersatz, liest jeden Vorschlag auf Servern in der EU, um Namen und Kontaktdaten zu markieren. Es markiert nur; ein Mensch entscheidet.",
-      "github": "<b>GitHub</b> speichert den öffentlichen Code. <b>Proton</b> kümmert sich um E-Mails."
+      "github": "<b>GitHub</b> speichert den öffentlichen Code. <b>Proton</b> kümmert sich um E-Mails.",
+      "dns": "<b>Cloudflare</b> betreibt das DNS der Website, das Adressbuch, das Ihren Browser zu dieser Website führt. Cloudflare beantwortet diese Anfrage und sieht nicht, welche Seiten Sie öffnen.",
+      "fonts": "<b>Die Schriftarten</b> stammen von Google Fonts. Sie werden beim Bau der Website kopiert und von dieser Website ausgeliefert, sodass Ihr Browser dafür nie Google kontaktiert.",
+      "archive": "<b>Das Internet Archive</b> bewahrt Kopien unserer Quellen auf. Wir bitten es, öffentliche Seiten zu speichern. Es erfährt nichts über Sie, außer Sie öffnen einen seiner Links."
     },
     "keepHeading": "Was wir speichern, und wie lange",
     "keep": {
@@ -1224,7 +1230,7 @@
       "results": "Ergebnisse erscheinen erst ab {minVotes} oder mehr Stimmen pro Sprache, am Anfang gibt es also keine.",
       "ai": "Die Prüfung durch die KI kann sich irren. Jede Entscheidung trifft ein Mensch.",
       "limits": "Um die Kosten niedrig zu halten, prüft die KI höchstens {checks} Vorschläge pro Tag. Danach liest weiterhin ein Mensch jeden Vorschlag, nur ohne KI-Prüfung. Nach {max} Vorschlägen an einem Tag pausiert der Vorschlagskasten bis zum nächsten Tag.",
-      "twice": "Abstimmen ohne Konto kann nicht ganz verhindern, dass jemand zweimal abstimmt, zum Beispiel mit einem zweiten Browser."
+      "twice": "Abstimmen ohne Konto kann nicht verhindern, dass jemand mehrfach abstimmt, zum Beispiel mit einem zweiten Browser oder einem Skript. Die Ergebnisse sind deshalb ein grobes Signal, keine Zählung von Personen."
     },
     "correctionsHeading": "Korrekturen",
     "correctionsLead": "<b>Wenn auf dieser Website etwas falsch ist, korrigieren wir es und führen es hier auf</b>, das Neueste zuerst. Jeder Eintrag sagt, was falsch war und was sich geändert hat. Die Person, die es gemeldet hat, nennen wir nur, wenn sie das möchte.",

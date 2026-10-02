@@ -46,7 +46,10 @@ export default function GuidePage({ params: { locale } }: Props) {
   const t = useTranslations("Guide");
   const tc = useTranslations("Common");
   const activeLocale = useLocale();
-  const checked = formatDate(sources.checkedOn, activeLocale);
+  const checked = {
+    from: formatDate(sources.checkedOn, activeLocale),
+    to: formatDate(sources.lastCheckedOn, activeLocale),
+  };
 
   return (
     <main id="main" className="mx-auto flex max-w-5xl flex-col gap-20 px-4 py-12 sm:py-16">
@@ -58,7 +61,7 @@ export default function GuidePage({ params: { locale } }: Props) {
           description: t("metaDescription"),
           url: `${SITE_URL}${localizedPath(activeLocale as Locale, "/guide")}`,
           inLanguage: LOCALE_TAGS[activeLocale as Locale].lang,
-          dateModified: sources.checkedOn,
+          dateModified: sources.lastCheckedOn,
           publisher: { "@type": "Organization", name: tc("siteName"), url: SITE_URL },
           about: ["Consumer rights", "Automated decision-making", "EU AI Act", "Human review"],
         }}
@@ -68,7 +71,7 @@ export default function GuidePage({ params: { locale } }: Props) {
         <h1>{t("title")}</h1>
         <p className="text-xl">{t.rich("lead", { b: bold })}</p>
         <p className="text-base text-muted-foreground">
-          {tc("factsChecked", { date: checked })} {tc("legalNotice")}
+          {tc("factsChecked", checked)} {tc("legalNotice")}
         </p>
       </header>
 

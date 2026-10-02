@@ -32,7 +32,7 @@ describe("How this site works page", () => {
     render(<HowItWorksPage params={{ locale: "en" }} />);
     const items = within(section("Services we use, and what each one sees")).getAllByRole("listitem");
     const text = items.map((li) => li.textContent).join(" ");
-    for (const name of ["Vercel", "Neon", "OpenRouter", "Mistral Small", "Google's Gemini", "GitHub", "Proton"]) {
+    for (const name of ["Vercel", "Neon", "OpenRouter", "Mistral Small", "Google's Gemini", "GitHub", "Proton", "Cloudflare", "The fonts", "The Internet Archive"]) {
       expect(text).toContain(name);
     }
     expect(text).toContain("including IP addresses");
@@ -55,7 +55,7 @@ describe("How this site works page", () => {
     expect(items).toHaveLength(8);
     expect(items[1]).toHaveTextContent("haven't been reviewed by a lawyer, legal clinic, or consumer organisation yet");
     expect(items[2]).toHaveTextContent("Native speakers haven't checked all of them yet.");
-    expect(items.at(-1)).toHaveTextContent("can't fully stop someone from voting twice");
+    expect(items.at(-1)).toHaveTextContent("can't stop someone from voting more than once, for example with a second browser or a script");
   });
 
   it("lists every fixed error from the corrections log, before the contact box", () => {

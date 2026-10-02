@@ -3,7 +3,12 @@ import registry from "@/lib/data/sources.json";
 
 export { formatDate } from "@/lib/dates";
 
-export type SourceStatus = "confirmed" | "unopened" | "no-link";
+/**
+ * "confirmed": an AI opened the link and it matched. "person": the page blocks
+ * automated readers, so Robert opened and read it himself. "unopened": no one
+ * has opened it yet. "no-link": no public link is recorded.
+ */
+export type SourceStatus = "confirmed" | "person" | "unopened" | "no-link";
 
 export type Source = {
   id: string;
@@ -46,13 +51,21 @@ export type ModelCredit = {
 
 export type Registry = {
   about: string;
+  /** The first and the latest day sources were checked (YYYY-MM-DD). */
   checkedOn: string;
+  lastCheckedOn: string;
   review: { reviewer: string; status: "pending" | "reviewed"; reviewedOn: string | null };
   models: ModelCredit[];
   categories: SourceCategory[];
 };
 
 export const sources = registry as Registry;
+
+/**
+ * The site owner's name as the registry stores it. Pages show the localized
+ * spelling (Attribution.ownerName), so Hindi readers see it in Devanagari.
+ */
+export const OWNER_NAME = "Robert Sweetman";
 
 const byId = new Map(
   sources.categories.flatMap((c) => c.sources.map((s) => [s.id, s] as const))

@@ -1,7 +1,7 @@
 import { ExternalLink as ExternalIcon } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
-import { formatDate, sourceNumber, sources, type Source, type SourceCategory } from "@/lib/sources";
+import { OWNER_NAME, formatDate, sourceNumber, sources, type Source, type SourceCategory } from "@/lib/sources";
 import { cn } from "@/lib/utils";
 
 // Source titles stay in their original language, marked with lang so screen
@@ -43,6 +43,7 @@ function SourceMeta({ source, detailed }: { source: Source; detailed: boolean })
   const ta = useTranslations("Attribution");
   const tc = useTranslations("Common");
   const locale = useLocale();
+  const reader = sources.review.reviewer === OWNER_NAME ? ta("ownerName") : sources.review.reviewer;
   const bits = [source.author, source.publisher, source.date, source.type, source.jurisdiction].filter(Boolean);
   return (
     <p className="text-base text-muted-foreground">
@@ -77,7 +78,7 @@ function SourceMeta({ source, detailed }: { source: Source; detailed: boolean })
       )}
       {source.readBy && (
         <span className="block text-sm font-semibold text-foreground">
-          {ta("readBy", { name: sources.review.reviewer, date: formatDate(source.readBy, locale) })}
+          {ta("readBy", { name: reader, date: formatDate(source.readBy, locale) })}
         </span>
       )}
       {source.readBy &&

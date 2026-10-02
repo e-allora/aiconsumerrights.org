@@ -1,6 +1,7 @@
 {
-  "about": "Every source this site draws on, with how each link was checked. 'confirmed': an AI model (Claude, or research agents it directed) opened the link on the checked date and the content matched. That is not the same as a person reading it; sources Robert has read himself carry a readBy date. 'unopened': the link comes from an official index or search, but no one has opened it yet. 'no-link': listed as background reading, with no public link recorded yet.",
+  "about": "Every source this site draws on, with how each link was checked. confirmed: an AI model (Claude, or research agents it directed) opened the link and the content matched. That is not the same as a person reading it; sources Robert has read himself carry a readBy date. person: the page blocks automated readers, so Robert opened it in a browser and read it himself. unopened: the link comes from an official index or search, but no one has opened it yet. no-link: listed as background reading, with no public link recorded yet. checkedOn is the first day sources were checked and lastCheckedOn the latest.",
   "checkedOn": "2026-09-23",
+  "lastCheckedOn": "2026-10-02",
   "review": {
     "reviewer": "Robert Sweetman",
     "status": "pending",
@@ -81,7 +82,7 @@
           "date": "2024-06-13",
           "type": "Law (EU)",
           "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
-          "status": "unopened",
+          "status": "person",
           "note": "EUR-Lex blocks automated readers. Opens in a browser. Robert read Articles 50, 86 and 113, the parts this site cites, in his saved copy.",
           "primary": true,
           "copies": [
@@ -144,7 +145,7 @@
           "date": "2016-04-27",
           "type": "Law (EU)",
           "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
-          "status": "unopened",
+          "status": "person",
           "note": "EUR-Lex blocks automated readers. Standard legal citation. Robert read Articles 12, 15 and 22, the parts this site cites, in his saved copy.",
           "primary": true,
           "copies": [
@@ -272,7 +273,9 @@
           "publisher": "Consumer Financial Protection Bureau (CFPB)",
           "type": "Complaint portal (US)",
           "url": "https://www.consumerfinance.gov/complaint/",
-          "status": "unopened",
+          "status": "confirmed",
+          "note": "Read on 2 October 2026: complaints can be sent online or by phone at (855) 411-2372; most companies respond within 15 days.",
+          "summary": "Where to complain about a credit card, a loan, or a credit report, online or by phone.",
           "archived": {
             "url": "https://web.archive.org/web/20260928021228/https://www.consumerfinance.gov/complaint/",
             "date": "2026-09-28"
@@ -583,12 +586,13 @@
         {
           "id": "anpd-lgpd-en",
           "title": "Brazilian Data Protection Law (LGPD), Law No. 13,709 of August 14, 2018, as amended by Law No. 13,853/2019 (English translation)",
-          "publisher": "Autoridade Nacional de Proteção de Dados (ANPD), Government of Brazil",
+          "publisher": "Agência Nacional de Proteção de Dados (ANPD), Government of Brazil",
           "date": "2024-11-06",
           "type": "Law (Brazil), official English translation",
           "jurisdiction": "Brazil (LGPD)",
           "url": "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/outros-documentos-e-publicacoes-institucionais/lgpd-en-lei-no-13-709-capa.pdf",
           "status": "confirmed",
+          "note": "Robert read Chapter III, Articles 17 to 22, which include the parts this site cites, in his saved copy.",
           "primary": true,
           "summary": "Article 20 gives the data subject the right to request a review of decisions made solely by automated processing, and clear information on the criteria and procedures used, within trade and industrial secrecy. Article 19 requires a complete answer to a data request within 15 days.",
           "copies": [
@@ -601,7 +605,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928021554/https://www.gov.br/anpd/pt-br/centrais-de-conteudo/outros-documentos-e-publicacoes-institucionais/lgpd-en-lei-no-13-709-capa.pdf",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "lgpd-article-20",
@@ -628,6 +633,7 @@
           "jurisdiction": "Brazil / International",
           "url": "https://www.ibanet.org/Brazilian-legal-framework-on-automated-decision-making",
           "status": "confirmed",
+          "note": "Robert read the full article in his saved copy.",
           "summary": "Compares GDPR Article 22 and LGPD Article 20, including the amendment that removed the requirement that a person carry out the review.",
           "copies": [
             {
@@ -639,7 +645,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928021653/https://www.ibanet.org/Brazilian-legal-framework-on-automated-decision-making",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "lawsofbrazil-2026",
@@ -704,7 +711,7 @@
           "jurisdiction": "Brazil (bill, not law)",
           "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262",
           "status": "confirmed",
-          "note": "Status read on 23 September 2026. Check again before relying on it.",
+          "note": "Status read on 23 September 2026. Check again before relying on it. Robert read the record through his browser's English translation; the Portuguese page remains the authoritative version.",
           "summary": "As of 23 September 2026, PL 2338/2023 is waiting for the rapporteur's report in the Chamber's Special Committee on Artificial Intelligence. The full Chamber has not voted on it.",
           "lang": "pt-BR",
           "copies": [
@@ -717,7 +724,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928021921/https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2487262",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "in-dpdp-act-2023",
@@ -730,7 +738,11 @@
           "status": "confirmed",
           "primary": true,
           "note": "Gazette PDF read; a full-text search found no right to an explanation of, or human review of, an automated decision.",
-          "summary": "India's data protection law. It gives rights to a summary of your data, correction, erasure, grievance redress, and naming someone to act for you, and it sets up the Data Protection Board."
+          "summary": "India's data protection law. It gives rights to a summary of your data, correction, erasure, grievance redress, and naming someone to act for you, and it sets up the Data Protection Board.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260910041321/https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+            "date": "2026-09-10"
+          }
         },
         {
           "id": "in-dpdp-commencement-2025",
@@ -999,6 +1011,7 @@
           "jurisdiction": "Italy",
           "url": "https://www.garanteprivacy.it/web/garante-privacy-en",
           "status": "confirmed",
+          "note": "Robert read the page in his saved copy.",
           "summary": "Italy's independent administrative authority for monitoring the application of the GDPR.",
           "copies": [
             {
@@ -1010,7 +1023,8 @@
           "archived": {
             "url": "https://web.archive.org/web/20260928023141/https://www.garanteprivacy.it/web/garante-privacy-en",
             "date": "2026-09-28"
-          }
+          },
+          "readBy": "2026-10-02"
         },
         {
           "id": "garante-ai",
@@ -1438,7 +1452,11 @@
           "status": "confirmed",
           "primary": true,
           "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
-          "summary": "When a lender or insurer takes adverse action based on a credit report, it must tell you, name the credit bureau, say the bureau did not make the decision, and tell you about your right to a free copy of your report within 60 days and to dispute errors."
+          "summary": "When a lender or insurer takes adverse action based on a credit report, it must tell you, name the credit bureau, say the bureau did not make the decision, and tell you about your right to a free copy of your report within 60 days and to dispute errors.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002124243/https://www.law.cornell.edu/uscode/text/15/1681m",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "fcra-1681i",
@@ -1450,7 +1468,11 @@
           "status": "confirmed",
           "primary": true,
           "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
-          "summary": "A credit bureau must check disputed information for free within 30 days. It can take up to 15 more days if you send new information during that time."
+          "summary": "A credit bureau must check disputed information for free within 30 days. It can take up to 15 more days if you send new information during that time.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260923173411/https://www.law.cornell.edu/uscode/text/15/1681i",
+            "date": "2026-09-23"
+          }
         },
         {
           "id": "edpb-members",
@@ -1458,9 +1480,14 @@
           "publisher": "European Data Protection Board (EDPB)",
           "type": "Directory (EU)",
           "jurisdiction": "European Union and EEA",
-          "url": "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en",
+          "url": "https://www.edpb.europa.eu/about-edpb/our-members_en",
           "status": "confirmed",
-          "summary": "Contact details for every national data protection authority in the EU and EEA, where people can complain about how their data is used."
+          "note": "The page moved; its new address was opened on 2 October 2026 and matched.",
+          "summary": "Contact details for every national data protection authority in the EU and EEA, where people can complain about how their data is used.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002124403/https://www.edpb.europa.eu/about-edpb/about-edpb/members_en",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "es-aepd-reclamacion-derechos",
@@ -1484,7 +1511,11 @@
           "status": "confirmed",
           "lang": "pt-PT",
           "note": "Read on 29 September 2026: online forms, including a general form; the page does not say whether there is a fee.",
-          "summary": "How people in Portugal can submit a complaint to the data protection authority through its online forms."
+          "summary": "How people in Portugal can submit a complaint to the data protection authority through its online forms.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002124527/https://www.cnpd.pt/cidadaos/participacoes/",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "uk-duaa-s80",
@@ -1496,7 +1527,11 @@
           "status": "confirmed",
           "primary": true,
           "note": "Read on 29 September 2026. In force from 5 February 2026 (SI 2026/82). Replaces UK GDPR Article 22 with Articles 22A to 22D.",
-          "summary": "When a significant decision about you is based solely on automated processing, meaning no meaningful human involvement, the organisation must let you get information about it, make representations, obtain human intervention, and contest it."
+          "summary": "When a significant decision about you is based solely on automated processing, meaning no meaningful human involvement, the organisation must let you get information about it, make representations, obtain human intervention, and contest it.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002124607/https://www.legislation.gov.uk/ukpga/2025/18/section/80",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "uk-ico-sar",
@@ -1507,7 +1542,11 @@
           "url": "https://ico.org.uk/for-the-public/getting-copies-of-your-information-subject-access-request/",
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
-          "summary": "You can ask an organisation whether it uses your personal information and for copies of it. Organisations usually have one month to respond."
+          "summary": "You can ask an organisation whether it uses your personal information and for copies of it. Organisations usually have one month to respond.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002124716/https://ico.org.uk/for-the-public/getting-copies-of-your-information-subject-access-request/",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "uk-ico-complaint",
@@ -1515,10 +1554,14 @@
           "publisher": "Information Commissioner's Office (ICO)",
           "type": "Complaint portal (UK)",
           "jurisdiction": "United Kingdom",
-          "url": "https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/",
+          "url": "https://ico.org.uk/make-a-complaint/data-protection-complaints/check-if-you-can-complain/",
           "status": "confirmed",
-          "note": "Read on 29 September 2026. The page does not state a fee or a time limit.",
-          "summary": "How to complain to the UK's data protection regulator. It recommends raising the concern with the organisation first."
+          "note": "Read on 29 September 2026. The page does not state a fee or a time limit. The page moved; its new address was opened on 2 October 2026 and matched.",
+          "summary": "How to complain to the UK's data protection regulator. It recommends raising the concern with the organisation first.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002124758/https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "uk-fos-complain",
@@ -1526,10 +1569,14 @@
           "publisher": "Financial Ombudsman Service",
           "type": "Complaint route (UK)",
           "jurisdiction": "United Kingdom",
-          "url": "https://www.financial-ombudsman.org.uk/consumers/how-to-complain",
+          "url": "https://www.financial-ombudsman.org.uk/consumers/log-ombudsman-connect/how-to-complain",
           "status": "confirmed",
-          "note": "Read on 29 September 2026: free; complain to the business first; most businesses have up to 8 weeks; bring the complaint within 6 months of the final response.",
-          "summary": "A free service for complaints about banks, lenders and other financial businesses, after the business has had up to 8 weeks to sort it out."
+          "note": "Read on 29 September 2026: free; complain to the business first; most businesses have up to 8 weeks; bring the complaint within 6 months of the final response. The page moved; its new address was opened on 2 October 2026 and matched.",
+          "summary": "A free service for complaints about banks, lenders and other financial businesses, after the business has had up to 8 weeks to sort it out.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002124837/https://www.financial-ombudsman.org.uk/consumers/how-to-complain",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "fcra-1681b",
@@ -1541,7 +1588,11 @@
           "jurisdiction": "United States (Fair Credit Reporting Act)",
           "url": "https://www.law.cornell.edu/uscode/text/15/1681b",
           "note": "Read on 29 September 2026: subsection (b)(3)(A). Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
-          "summary": "Before an employer takes adverse action based on a background check or other consumer report, it must give the applicant a copy of the report and a written description of their rights."
+          "summary": "Before an employer takes adverse action based on a background check or other consumer report, it must give the applicant a copy of the report and a written description of their rights.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002131332/https://www.law.cornell.edu/uscode/text/15/1681b",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "ada-12112",
@@ -1553,7 +1604,11 @@
           "jurisdiction": "United States (Americans with Disabilities Act)",
           "url": "https://www.law.cornell.edu/uscode/text/42/12112",
           "note": "Read on 29 September 2026: subsection (b)(5) to (7).",
-          "summary": "Employers must make reasonable accommodations for qualified applicants with disabilities, and employment tests must measure skills, not the effects of a disability."
+          "summary": "Employers must make reasonable accommodations for qualified applicants with disabilities, and employment tests must measure skills, not the effects of a disability.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002131406/https://www.law.cornell.edu/uscode/text/42/12112",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "nyc-aedt",
@@ -1564,7 +1619,11 @@
           "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
           "status": "confirmed",
           "note": "Read on 29 September 2026. Enforced since 5 July 2023.",
-          "summary": "Employers using automated hiring tools in New York City need a bias audit within the past year, must make information about it public, and must notify candidates 10 business days before using the tool."
+          "summary": "Employers using automated hiring tools in New York City need a bias audit within the past year, must make information about it public, and must notify candidates 10 business days before using the tool.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125019/https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "eeoc-charge",
@@ -1575,7 +1634,11 @@
           "url": "https://www.eeoc.gov/how-file-charge-employment-discrimination",
           "status": "confirmed",
           "note": "Read on 29 September 2026: 180 calendar days to file, extended to 300 where a state or local agency enforces a similar law; age claims differ.",
-          "summary": "How job applicants and workers can file a discrimination charge, and the deadlines for doing so."
+          "summary": "How job applicants and workers can file a discrimination charge, and the deadlines for doing so.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125058/https://www.eeoc.gov/how-file-charge-employment-discrimination",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "ftc-landlords",
@@ -1586,7 +1649,11 @@
           "url": "https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-landlords-need-know",
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
-          "summary": "Tenant background check reports are consumer reports. A landlord who turns someone down because of one must name the company that supplied it, say that company didn't make the decision, and tell the applicant about their right to a free copy within 60 days and to dispute errors."
+          "summary": "Tenant background check reports are consumer reports. A landlord who turns someone down because of one must name the company that supplied it, say that company didn't make the decision, and tell the applicant about their right to a free copy within 60 days and to dispute errors.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125143/https://www.ftc.gov/business-guidance/resources/using-consumer-reports-what-landlords-need-know",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "hud-fha-overview",
@@ -1597,7 +1664,11 @@
           "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
-          "summary": "The Fair Housing Act bans housing discrimination because of race, color, national origin, religion, sex, familial status, or disability."
+          "summary": "The Fair Housing Act bans housing discrimination because of race, color, national origin, religion, sex, familial status, or disability.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125224/https://www.hud.gov/helping-americans/fair-housing-act-overview",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "hud-fheo-intake",
@@ -1608,7 +1679,11 @@
           "url": "https://www.hud.gov/stat/fheo/intake-investigation",
           "status": "confirmed",
           "note": "Read on 29 September 2026: file within one year of the last date of the alleged discrimination; online, by phone, e-mail, or mail; no fees when the government brings a case.",
-          "summary": "How to report housing discrimination to HUD, and the one-year deadline."
+          "summary": "How to report housing discrimination to HUD, and the one-year deadline.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125306/https://www.hud.gov/stat/fheo/intake-investigation",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "fcra-1681a",
@@ -1620,7 +1695,11 @@
           "status": "confirmed",
           "primary": true,
           "note": "Read on 29 September 2026: subsection (k)(1)(B)(i). Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
-          "summary": "An \"adverse action\" includes refusing or cancelling insurance, charging more for it, or cutting or worsening its coverage, so the credit-report notice rules apply to insurers too."
+          "summary": "An \"adverse action\" includes refusing or cancelling insurance, charging more for it, or cutting or worsening its coverage, so the credit-report notice rules apply to insurers too.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260818155532/https://www.law.cornell.edu/uscode/text/15/1681a",
+            "date": "2026-08-18"
+          }
         },
         {
           "id": "naic-complaint",
@@ -1642,7 +1721,11 @@
           "url": "https://bimabharosa.irdai.gov.in/Home/OurProcess",
           "status": "confirmed",
           "note": "Read on 29 September 2026: complaints are attended to within 14 days; if unresolved beyond 15 days or the answer is unsatisfactory, you may go to the Insurance Ombudsman; no payment is asked at any stage.",
-          "summary": "India's free insurance complaint portal, with a path to the Insurance Ombudsman if the insurer doesn't resolve the complaint."
+          "summary": "India's free insurance complaint portal, with a path to the Insurance Ombudsman if the insurer doesn't resolve the complaint.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125501/https://bimabharosa.irdai.gov.in/Home/OurProcess",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "fcba-1666",
@@ -1654,7 +1737,11 @@
           "status": "confirmed",
           "primary": true,
           "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
-          "summary": "You can dispute a credit card billing error in writing within 60 days of the statement, including for goods or services not delivered as agreed. The card company must acknowledge within 30 days and resolve it within two billing cycles, and no later than 90 days."
+          "summary": "You can dispute a credit card billing error in writing within 60 days of the statement, including for goods or services not delivered as agreed. The card company must acknowledge within 30 days and resolve it within two billing cycles, and no later than 90 days.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260921220603/https://www.law.cornell.edu/uscode/text/15/1666",
+            "date": "2026-09-21"
+          }
         },
         {
           "id": "eu-your-europe-returns",
@@ -1665,7 +1752,11 @@
           "url": "https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
-          "summary": "You can cancel most online and other distance purchases within 14 days without giving a reason; the period extends to 12 months if the seller didn't tell you about this right. Some things, such as tickets, perishable goods, and custom-made items, are excluded."
+          "summary": "You can cancel most online and other distance purchases within 14 days without giving a reason; the period extends to 12 months if the seller didn't tell you about this right. Some things, such as tickets, perishable goods, and custom-made items, are excluded.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125806/https://europa.eu/youreurope/citizens/consumers/shopping/returns/index_en.htm",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "uk-ca-cooling-off",
@@ -1676,7 +1767,11 @@
           "url": "https://www.citizensadvice.org.uk/consumer/changed-your-mind/changing-your-mind-about-something-youve-bought/",
           "status": "confirmed",
           "note": "Read on 29 September 2026. Citizens Advice is an independent charity, not a regulator.",
-          "summary": "Things bought without seeing them in person usually come with a 14-day cooling-off period, starting the day after delivery, and nothing needs to be wrong with them. The seller must refund within 14 days of getting the item back or proof it was posted."
+          "summary": "Things bought without seeing them in person usually come with a 14-day cooling-off period, starting the day after delivery, and nothing needs to be wrong with them. The seller must refund within 14 days of getting the item back or proof it was posted.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125845/https://www.citizensadvice.org.uk/consumer/changed-your-mind/changing-your-mind-about-something-youve-bought/",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "uk-ca-card-refunds",
@@ -1687,7 +1782,11 @@
           "url": "https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/getting-your-money-back-if-you-paid-by-card-or-paypal/",
           "status": "confirmed",
           "note": "Read on 29 September 2026. Citizens Advice is an independent charity, not a regulator.",
-          "summary": "Credit card purchases of more than £100 and up to £30,000 per item can be claimed back from the card company under section 75; otherwise, ask for a chargeback. If refused, the Financial Ombudsman can look at the case."
+          "summary": "Credit card purchases of more than £100 and up to £30,000 per item can be claimed back from the card company under section 75; otherwise, ask for a chargeback. If refused, the Financial Ombudsman can look at the case.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002125924/https://www.citizensadvice.org.uk/consumer/somethings-gone-wrong-with-a-purchase/getting-your-money-back-if-you-paid-by-card-or-paypal/",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "br-cdc-art49",
@@ -1700,7 +1799,11 @@
           "primary": true,
           "lang": "pt-BR",
           "note": "Read on 29 September 2026.",
-          "summary": "For purchases made outside a shop, such as online or by phone, the consumer can withdraw within 7 days of signing or receiving the product, and everything paid must be returned at once."
+          "summary": "For purchases made outside a shop, such as online or by phone, the consumer can withdraw within 7 days of signing or receiving the product, and everything paid must be returned at once.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260928235146/https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+            "date": "2026-09-28"
+          }
         },
         {
           "id": "br-decreto-11034",
@@ -1713,7 +1816,11 @@
           "primary": true,
           "lang": "pt-BR",
           "note": "Read on 29 September 2026: applies to services regulated by the federal government (art. 1); phone service with a human for at least 8 hours a day, and complaint and cancellation in the first menu (art. 5); answers within 7 calendar days (art. 13).",
-          "summary": "Customer service rules for federally regulated services: a phone line with a human available at least eight hours a day, complaint and cancellation options in the first menu, and answers within seven days."
+          "summary": "Customer service rules for federally regulated services: a phone line with a human available at least eight hours a day, complaint and cancellation options in the first menu, and answers within seven days.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260917210733/https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11034.htm",
+            "date": "2026-09-17"
+          }
         },
         {
           "id": "eu-dsa-user-rights",
@@ -1724,7 +1831,11 @@
           "url": "https://digital-strategy.ec.europa.eu/en/factpages/user-rights-under-digital-services-act",
           "status": "confirmed",
           "note": "Read on 29 September 2026 (page last updated 17 July 2026).",
-          "summary": "Platforms must explain their content moderation decisions to affected users (Article 17); users can ask for a review through the platform's internal complaint system (Article 20), go to a certified dispute settlement body (Article 21), complain to their national Digital Services Coordinator (Article 53), and always go to court."
+          "summary": "Platforms must explain their content moderation decisions to affected users (Article 17); users can ask for a review through the platform's internal complaint system (Article 20), go to a certified dispute settlement body (Article 21), complain to their national Digital Services Coordinator (Article 53), and always go to court.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002130156/https://digital-strategy.ec.europa.eu/en/factpages/user-rights-under-digital-services-act",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "eu-dsa-ods",
@@ -1735,7 +1846,11 @@
           "url": "https://digital-strategy.ec.europa.eu/en/policies/dsa-out-court-dispute-settlement",
           "status": "confirmed",
           "note": "Read on 29 September 2026: ten certified bodies listed.",
-          "summary": "Certified bodies that settle disputes over platform moderation decisions. They are free or low-cost for users, the platform pays all fees if it loses, and their decisions aren't binding, but platforms must engage in good faith."
+          "summary": "Certified bodies that settle disputes over platform moderation decisions. They are free or low-cost for users, the platform pays all fees if it loses, and their decisions aren't binding, but platforms must engage in good faith.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002130332/https://digital-strategy.ec.europa.eu/en/policies/dsa-out-court-dispute-settlement",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "ca-ccpa",
@@ -1746,7 +1861,11 @@
           "url": "https://oag.ca.gov/privacy/ccpa",
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
-          "summary": "Californians can ask large businesses what personal information they collect and how they use it, free, up to twice a year. Businesses must answer within 45 days (up to 90 with notice) and can't treat people worse for asking."
+          "summary": "Californians can ask large businesses what personal information they collect and how they use it, free, up to twice a year. Businesses must answer within 45 days (up to 90 with notice) and can't treat people worse for asking.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002130433/https://oag.ca.gov/privacy/ccpa",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "ftc-take-it-down",
@@ -1758,7 +1877,11 @@
           "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/what-will-ftcs-enforcement-take-it-down-act-mean-you",
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
-          "summary": "Since 19 May 2026, platforms must offer a way to request removal of intimate images shared without consent, including AI-made deepfakes, and remove them and known identical copies within 48 hours. People can tell the FTC at TakeItDown.ftc.gov if a platform doesn't comply."
+          "summary": "Since 19 May 2026, platforms must offer a way to request removal of intimate images shared without consent, including AI-made deepfakes, and remove them and known identical copies within 48 hours. People can tell the FTC at TakeItDown.ftc.gov if a platform doesn't comply.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002130525/https://consumer.ftc.gov/consumer-alerts/2026/05/what-will-ftcs-enforcement-take-it-down-act-mean-you",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "fbi-ic3",
@@ -1769,7 +1892,11 @@
           "url": "https://www.ic3.gov/",
           "status": "confirmed",
           "note": "Read on 29 September 2026: filing is free; the IC3 never contacts people for money.",
-          "summary": "The FBI's central place to report internet crime, including scams, for free. Reports may be passed to law enforcement."
+          "summary": "The FBI's central place to report internet crime, including scams, for free. Reports may be passed to law enforcement.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260930071045/https://www.ic3.gov/",
+            "date": "2026-09-30"
+          }
         },
         {
           "id": "uk-psr-app",
@@ -1780,7 +1907,11 @@
           "url": "https://www.psr.org.uk/information-for-consumers/our-new-app-fraud-reimbursement-protections/",
           "status": "confirmed",
           "note": "Read on 29 September 2026.",
-          "summary": "Since 7 October 2024, people tricked into sending money by UK bank transfer (Faster Payments or CHAPS) are usually reimbursed, up to £85,000, if they claim within 13 months; banks may apply a £100 excess. The exceptions for complicity or gross negligence don't apply to vulnerable people."
+          "summary": "Since 7 October 2024, people tricked into sending money by UK bank transfer (Faster Payments or CHAPS) are usually reimbursed, up to £85,000, if they claim within 13 months; banks may apply a £100 excess. The exceptions for complicity or gross negligence don't apply to vulnerable people.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002130647/https://www.psr.org.uk/information-for-consumers/our-new-app-fraud-reimbursement-protections/",
+            "date": "2026-10-02"
+          }
         },
         {
           "id": "br-bcb-med",
@@ -1792,7 +1923,11 @@
           "status": "confirmed",
           "lang": "pt-BR",
           "note": "Read on 29 September 2026 (version 4.3): contest in the bank's app within 80 days of the Pix; allowed even if the payer authorised it with a password or biometrics; recovery depends on funds still being in the receiving account.",
-          "summary": "How people tricked into sending a Pix can contest it through their bank to try to get the money back, within 80 days, even when they authorised the payment themselves."
+          "summary": "How people tricked into sending a Pix can contest it through their bank to try to get the money back, within 80 days, even when they authorised the payment themselves.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260911100443/https://www.bcb.gov.br/content/estabilidadefinanceira/pix/Guia_MED.pdf",
+            "date": "2026-09-11"
+          }
         },
         {
           "id": "in-cybercrime-portal",
@@ -1803,7 +1938,28 @@
           "url": "https://cybercrime.gov.in/",
           "status": "confirmed",
           "note": "Read on 29 September 2026: helpline 1930 for financial cyber crime; complaints about women- and children-related crimes can be made anonymously.",
-          "summary": "India's official portal for reporting cyber crime, with the 1930 helpline for money lost to online scams."
+          "summary": "India's official portal for reporting cyber crime, with the 1930 helpline for money lost to online scams.",
+          "archived": {
+            "url": "https://web.archive.org/web/20261002130809/https://cybercrime.gov.in/",
+            "date": "2026-10-02"
+          }
+        },
+        {
+          "id": "br-decreto-7962",
+          "title": "Decreto nº 7.962, de 15 de março de 2013 (contratação no comércio eletrônico)",
+          "publisher": "Presidência da República (Planalto)",
+          "type": "Law (Brazil)",
+          "jurisdiction": "Brazil",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm",
+          "status": "confirmed",
+          "primary": true,
+          "lang": "pt-BR",
+          "note": "Read on 2 October 2026: applies the consumer code to online contracts, including respect for the right of withdrawal (art. 1, III); the consumer can withdraw through the same tool used to buy, and the supplier must confirm receipt at once and tell the card company so the charge is not billed or is reversed (art. 5).",
+          "summary": "Brazil's rules for buying online. They apply the consumer code's right of withdrawal to online purchases and say how to use it.",
+          "archived": {
+            "url": "https://web.archive.org/web/20260903131730/https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm",
+            "date": "2026-09-03"
+          }
         }
       ]
     }

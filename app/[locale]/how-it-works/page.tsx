@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   });
 }
 
-const SERVICES = ["vercel", "neon", "openrouter", "models", "github"] as const;
+const SERVICES = ["vercel", "neon", "openrouter", "models", "github", "dns", "fonts", "archive"] as const;
 const KEEP = ["votes", "suggestions", "letters", "never"] as const;
 const UNFINISHED = ["review", "legal", "translations", "language", "results", "ai", "limits", "twice"] as const;
 

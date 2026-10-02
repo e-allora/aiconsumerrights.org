@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { SourceCategoryList, SourceLink } from "@/components/ui/SourceList";
 import { Link } from "@/lib/i18n/navigation";
-import { formatDate, sources, type Registry } from "@/lib/sources";
+import { OWNER_NAME, formatDate, sources, type Registry } from "@/lib/sources";
 
 /**
  * Content provenance for every page: which AI models helped, which primary
@@ -20,6 +20,7 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
   const primary = registry.categories.flatMap((c) => c.sources.filter((s) => s.primary));
   const total = registry.categories.reduce((n, c) => n + c.sources.length, 0);
   const { review } = registry;
+  const reviewer = review.reviewer === OWNER_NAME ? t("ownerName") : review.reviewer;
   const modelName = (id: string, fallback: string) =>
     t.has(`modelNames.${id}`) ? t(`modelNames.${id}`) : fallback;
   const maker = (m: string) => (m === "Various" ? t("variousMakers") : m);
@@ -86,10 +87,10 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
                 <dd data-testid="review-status">
                   {review.status === "reviewed" && review.reviewedOn
                     ? t("reviewDone", {
-                        reviewer: review.reviewer,
+                        reviewer,
                         date: formatDate(review.reviewedOn, locale),
                       })
-                    : t("reviewPending", { reviewer: review.reviewer })}
+                    : t("reviewPending", { reviewer })}
                 </dd>
                 <dd data-testid="translation-thanks" className="mt-2 italic">
                   {t("translationThanks")}
@@ -97,7 +98,12 @@ export function AttributionFooter({ registry = sources }: { registry?: Registry 
               </div>
               <div>
                 <dt className="font-bold">{t("checkedLabel")}</dt>
-                <dd>{formatDate(registry.checkedOn, locale)}</dd>
+                <dd>
+                  {t("checkedRange", {
+                    from: formatDate(registry.checkedOn, locale),
+                    to: formatDate(registry.lastCheckedOn, locale),
+                  })}
+                </dd>
               </div>
             </dl>
           </section>

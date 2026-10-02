@@ -3,7 +3,7 @@
     "siteName": "AI Consumer Rights",
     "siteDescription": "Plain-language help with your rights when AI makes decisions about you, built through open, respectful dialogue.",
     "skipToContent": "Skip to main content",
-    "factsChecked": "Facts checked on {date}.",
+    "factsChecked": "Facts checked between {from} and {to}.",
     "legalNotice": "General information, not legal advice. Laws differ by place. For anything involving significant money, health, housing, or legal status, talk to a lawyer, a legal-aid office, or your consumer agency.",
     "opensInNewTab": "(opens in a new tab)",
     "sourceMarker": "Source {number}: {title}",
@@ -58,7 +58,7 @@
     "metaDescription": "Plain-language help with chatbots, recommendations, and automated screening, with US and EU rules side by side and three calm steps to take.",
     "eyebrow": "The guide",
     "title": "AI you can question",
-    "lead": "<b>AI now helps make many everyday decisions. You can ask how it works, ask for a person, and talk it through.</b> This page shows you how, with the rules in the US and the EU side by side.",
+    "lead": "<b>AI now helps make many everyday decisions. You can ask how it works, ask for a person, and talk it through.</b> This page shows you how, with the rules in the US, the EU, and a country you pick side by side.",
     "touchpoints": {
       "heading": "Spot the AI in your day",
       "lead": "<b>Three kinds of AI touch most people's lives.</b> Each one is easier to question once you know its name.",
@@ -88,14 +88,14 @@
         "rule1Label": "Law (US, credit).",
         "rule1": "A lender that turns you down must give the specific main reasons.",
         "rule2Label": "Law (EU).",
-        "rule2": "When a machine alone makes a serious decision about you, you can ask for a person to review it."
+        "rule2": "When a machine alone makes a serious decision about you, you can usually ask for a person to review it."
       }
     },
     "compare": {
       "heading": "Compare the rules in the US, the EU, and other countries",
       "lead": "<b>They all want AI that people can trust.</b> They take different routes. The US mostly applies existing laws, one sector and one state at a time. The EU passed one broad AI law and pairs it with its privacy law. Pick a country to compare it with both.",
       "pickLabel": "Compare with",
-      "caption": "Rules compared: US, EU, and {country}, as of {date}",
+      "caption": "Rules compared: US, EU, and {country}, checked between {from} and {to}",
       "colQuestion": "Your question",
       "colUS": "United States",
       "colEU": "European Union",
@@ -170,7 +170,7 @@
           "it": "Law No. 132/2025, Italy's national AI law, has been in force since 10 October 2025. It works alongside the EU AI Act. Children under 14 need a parent's consent to use AI.",
           "fr": "A bill passed by the Senate on 18 February 2026 would make the CNIL France's main AI authority and let it handle AI complaints. As of 27 September 2026, it waits for a vote in the National Assembly.",
           "de": "Germany's AI supervision law (KI-MIG) has been in force since 29 July 2026. From 20 November 2026, credit scores may not use your address, age, gender, name, social media, bank account payments, or sensitive data such as health, and may not be made about children.",
-          "in": "The main data rights start in May 2027. A draft rule, open for comment until May 2026, would keep AI labels visible for the whole length of a video. The government's AI guidelines (November 2025) are not binding and say no separate AI law is needed yet."
+          "in": "The main data rights start in May 2027. A draft rule would keep AI labels visible for the whole length of a video. Comments on it closed in May 2026, and no final version was found as of 27 September 2026. The government's AI guidelines (November 2025) are not binding and say no separate AI law is needed yet."
         }
       }
     },
@@ -240,7 +240,7 @@
           "why": "A person can weigh details that software may miss, such as a recent change in your situation or an error in your records.",
           "sample": "Thank you for your reply. I would like a person to review this decision. Here is information that may help: [details]. Please let me know what else you need from me.",
           "rule1Label": "Law (EU)",
-          "rule1": "When a machine alone makes a decision with a legal or similarly serious effect on you, you can ask for a person to step in. (GDPR, Article 22)",
+          "rule1": "When a machine alone makes a decision with a legal or similarly serious effect on you, you can usually ask for a person to step in. (GDPR, Article 22)",
           "rule2Label": "Guidance (US)",
           "rule2": "The 2022 Blueprint for an AI Bill of Rights recommends a way to reach a person. It is not law, and it has been archived."
         },
@@ -895,7 +895,7 @@
       },
       "us": {
         "rights": {
-          "1": "<b>If someone shared an intimate image of you, real or AI-made, without your consent,</b> platforms must remove it, and known copies, within 48 hours of your request. This has applied since 19 May 2026.",
+          "1": "<b>If someone shared an intimate image of you, real or AI-made, without your consent,</b> platforms must remove it, and known identical copies, within 48 hours of your request. This has applied since 19 May 2026.",
           "2": "<b>You can report scams, including fake voices and videos, to the FBI's Internet Crime Complaint Center,</b> for free.",
           "3": "<b>Whether your bank must refund you depends on how you paid and what happened.</b> Call right away, and ask them to confirm in writing what they will do."
         },
@@ -910,7 +910,7 @@
       },
       "eu": {
         "rights": {
-          "1": "<b>Deepfakes must be labelled.</b> Anyone who uses AI to make or change images, audio, or video into a deepfake must disclose it. This has applied since 2 August 2026.",
+          "1": "<b>Deepfakes must be labelled.</b> A company, public body, or person who uses AI in their work to make or change images, audio, or video into a deepfake must say it is AI-made. This doesn't cover purely personal use or police work allowed by law, and art and satire have a lighter rule. This has applied since 2 August 2026.",
           "2": "<b>You can ask for your personal data to be erased when it's used unlawfully,</b> which can include a fake made of you from your photos, voice, or videos. They must answer within one month.",
           "3": "<b>If a platform turns down your request,</b> you can ask for a review through its complaint system."
         },
@@ -1112,7 +1112,7 @@
     "metaTitle": "About",
     "metaDescription": "Why this site exists, how it keeps dialogue fair and open, and who reviews its pages.",
     "title": "About this site",
-    "lead": "<b>This site explains your rights when AI makes decisions about you, in plain language and without blame.</b> It compares approaches in the US and the EU, and it invites everyone into the conversation.",
+    "lead": "<b>This site explains your rights when AI makes decisions about you, in plain language and without blame.</b> It compares approaches in the US, the EU, and other countries, and it invites everyone into the conversation.",
     "missionHeading": "Understand the mission",
     "mission": "<b>Make AI consumer rights easy to understand, and easy to talk about.</b> People who use AI, educators, regulators, and teams that build AI all have a stake. This site starts from the view that each of them is acting in good faith and doing their best with what they know. It critiques ideas and systems, never people.",
     "safeguardsHeading": "See the five safeguards",
@@ -1130,7 +1130,7 @@
       "sturdyText": "The guide and other pages are plain static pages, kept separate from anything interactive, so they load quickly and keep working."
     },
     "whoHeading": "Know who is behind it",
-    "who": "<b>Robert Sweetman runs this site.</b> AI models helped research and draft it. A person reviews every page before launch. The footer on each page lists which models helped, which sources back the facts, and where review stands.",
+    "who": "<b>Robert Sweetman runs this site.</b> AI models helped research and draft it. A person is still reviewing every page. The footer on each page lists which models helped, which sources back the facts, and where review stands.",
     "whoLink": "See every source and how it was checked",
     "joinHeading": "Add your voice",
     "joinLead": "Your view helps shape what comes next.",
@@ -1145,14 +1145,17 @@
     "reviewHeading": "A person reviews every page",
     "reviewLabel": "Human review",
     "reviewDone": "Reviewed by {reviewer} on {date}.",
-    "reviewPending": "Not yet complete. {reviewer} reviews each page before launch.",
+    "reviewPending": "Not yet complete. {reviewer} is still reviewing each page.",
+    "ownerName": "Robert Sweetman",
     "translationThanks": "My grandparents, Giuffrido and Isolina DiCenso, left Italy for a new country and learned a new language. Their journey inspired these translations. With love and thanks to them and to my parents, Joanne Sweetman and Robert Sweetman Sr.",
     "checkedLabel": "Sources checked",
+    "checkedRange": "{from} to {to}",
     "seeAll": "See all {total} sources in {groups} groups",
     "openRegistry": "Open the full source registry",
-    "registryAbout": "Every source this site draws on, with how each link was checked. “Link opened by AI and matched” means an AI model (Claude, or research agents it directed) opened the link on the checked date and the content matched what this site says. That is not the same as a person reading it. Robert is reading every source himself; each one he has read says so, with the date. “Link not yet opened” means the link comes from an official index or search, but no one has opened it yet. “No public link yet” means it is listed as background reading, with no public link recorded. Every link also has a copy saved at the Internet Archive, so anyone can see the page as it was when it was checked. Sources Robert has read show the fingerprint of his own copy, so anyone with the same file can confirm it matches.",
+    "registryAbout": "Every source this site draws on, with how each link was checked. “Link opened by AI and matched” means an AI model (Claude, or research agents it directed) opened the link, and the content matched what this site says. That is not the same as a person reading it. Robert is reading every source himself; each one he has read says so, with the date. “Link opened by a person, not by AI” means the page blocks automated readers, so Robert opened it in a browser and read it himself. “Link not yet opened” means the link comes from an official index or search, but no one has opened it yet. “No public link yet” means it is listed as background reading, with no public link recorded. Where a copy of the page is saved at the Internet Archive, the entry links to it, so anyone can see the page as it was on that date. Sources Robert has read show the fingerprint of his own copy, so anyone with the same file can confirm it matches.",
     "status": {
       "confirmed": "Link opened by AI and matched",
+      "person": "Link opened by a person, not by AI",
       "unopened": "Link not yet opened",
       "no-link": "No public link yet"
     },
@@ -1187,7 +1190,7 @@
     "metaTitle": "Sources",
     "metaDescription": "Every source this site draws on, grouped by topic, with how well each link has been checked and when.",
     "title": "Sources",
-    "lead": "<b>All {total} sources in {groups} groups, checked on {date}.</b> Numbers match the small source markers on every page."
+    "lead": "<b>All {total} sources in {groups} groups, checked between {from} and {to}.</b> Numbers match the small source markers on every page."
   },
   "HowItWorks": {
     "metaTitle": "How this site works",
@@ -1206,7 +1209,10 @@
       "neon": "<b>Neon</b> is the database, in Frankfurt, Germany. It holds votes, stored with a scrambled browser code, and suggested statements.",
       "openrouter": "<b>OpenRouter</b> passes each suggested statement to an AI model. We set it to use only services that promise not to keep your text or train on it. We can ask for that promise but can't inspect it. What OpenRouter itself keeps is covered by its own privacy policy.",
       "models": "<b>Mistral Small</b>, with <b>Google's Gemini</b> as a backup, reads each suggestion on EU servers to flag names and contact details. It only flags; a person decides.",
-      "github": "<b>GitHub</b> stores the public code. <b>Proton</b> handles email."
+      "github": "<b>GitHub</b> stores the public code. <b>Proton</b> handles email.",
+      "dns": "<b>Cloudflare</b> runs the site's DNS, the address book that points your browser to this site. It answers that lookup and doesn't see the pages you open.",
+      "fonts": "<b>The fonts</b> come from Google Fonts. They are copied when the site is built and served from this site, so your browser never contacts Google for them.",
+      "archive": "<b>The Internet Archive</b> keeps saved copies of our sources. We ask it to save public pages. It learns nothing about you unless you open one of its links."
     },
     "keepHeading": "What we keep, and for how long",
     "keep": {
@@ -1224,7 +1230,7 @@
       "results": "Results appear only after {minVotes} or more votes per language, so early on there are none.",
       "ai": "The AI check can be wrong. A person makes every decision.",
       "limits": "To keep costs low, the AI checks at most {checks} suggestions a day. After that, a person still reads each one, without the AI check. After {max} suggestions in a day, the suggestion box pauses until the next day.",
-      "twice": "Voting without accounts can't fully stop someone from voting twice, for example by using a second browser."
+      "twice": "Voting without accounts can't stop someone from voting more than once, for example with a second browser or a script. So the results are a rough signal, not a count of people."
     },
     "correctionsHeading": "Corrections",
     "correctionsLead": "<b>When something on this site is wrong, we fix it and list it here</b>, newest first. Each entry says what was wrong and what changed. We name the person who flagged it only if they ask.",

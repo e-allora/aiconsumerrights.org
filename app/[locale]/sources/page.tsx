@@ -36,7 +36,8 @@ export default function SourcesPage({ params: { locale } }: Props) {
           {t.rich("lead", {
             total,
             groups: sources.categories.length,
-            date: formatDate(sources.checkedOn, locale),
+            from: formatDate(sources.checkedOn, locale),
+            to: formatDate(sources.lastCheckedOn, locale),
             b: (c) => <strong>{c}</strong>,
           })}
         </p>

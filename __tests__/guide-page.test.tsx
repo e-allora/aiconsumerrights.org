@@ -57,7 +57,7 @@ describe("Guide page", () => {
       .map((a) => a.getAttribute("href")!.replace("/en/sources#", ""));
 
   it("always shows the US and the EU, plus one country the visitor picks", () => {
-    const table = screen.getByRole("table", { name: "Rules compared: US, EU, and Brazil, as of 23 September 2026" });
+    const table = screen.getByRole("table", { name: "Rules compared: US, EU, and Brazil, checked between 23 September 2026 and 2 October 2026" });
     const cols = within(table).getAllByRole("columnheader").map((c) => c.textContent);
     expect(cols).toEqual(["Your question", "United States", "European Union", "Brazil"]);
     expect(within(table).getAllByRole("rowheader")).toHaveLength(5);

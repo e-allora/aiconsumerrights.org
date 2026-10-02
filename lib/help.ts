@@ -273,7 +273,8 @@ export const SITUATIONS: Situation[] = [
         complain: { edpb: "edpb-members" },
       },
       br: {
-        rights: [["br-cdc-art49"], ["br-decreto-11034"], ["anpd-lgpd-en"]],
+        // The 1990 code says "outside the shop"; the 2013 e-commerce decree applies it to online purchases.
+        rights: [["br-cdc-art49", "br-decreto-7962"], ["br-decreto-11034"], ["anpd-lgpd-en"]],
         letter: "br",
         complain: { consumidor: "br-consumidor-gov", procon: "br-sndc-procon" },
       },
@@ -361,7 +362,8 @@ export const SITUATIONS: Situation[] = [
         complain: { fos: "uk-fos-complain" },
       },
       eu: {
-        rights: [["eu-ai-act-art50"], ["gdpr"], ["eu-dsa-user-rights"]],
+        // Article 3(4) of the Act defines who must label, and leaves out purely personal use.
+        rights: [["eu-ai-act-art50", "eu-ai-act"], ["gdpr"], ["eu-dsa-user-rights"]],
         letter: "eu",
         complain: { edpb: "edpb-members" },
       },

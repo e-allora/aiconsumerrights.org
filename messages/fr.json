@@ -3,7 +3,7 @@
     "siteName": "Droits des consommateurs face à l'IA",
     "siteDescription": "Une aide en langage simple sur vos droits quand l'IA prend des décisions à votre sujet, construite par un dialogue ouvert et respectueux.",
     "skipToContent": "Aller au contenu principal",
-    "factsChecked": "Faits vérifiés le {date}.",
+    "factsChecked": "Faits vérifiés entre le {from} et le {to}.",
     "legalNotice": "Informations générales, pas un conseil juridique. Les lois varient selon les pays. Pour toute question importante d'argent, de santé, de logement ou de statut juridique, parlez à un avocat, à un service d'aide juridique ou à votre organisme de protection des consommateurs.",
     "opensInNewTab": "(s'ouvre dans un nouvel onglet)",
     "sourceMarker": "Source {number} : {title}",
@@ -58,7 +58,7 @@
     "metaDescription": "Une aide en langage simple face aux chatbots, aux recommandations et au tri automatisé, avec les règles des États-Unis et de l'UE côte à côte et trois étapes calmes à suivre.",
     "eyebrow": "Le guide",
     "title": "Une IA que vous pouvez questionner",
-    "lead": "<b>L'IA aide désormais à prendre beaucoup de décisions du quotidien. Vous pouvez demander comment elle fonctionne, demander à parler à une personne et en discuter.</b> Cette page vous montre comment, avec les règles des États-Unis et de l'UE côte à côte.",
+    "lead": "<b>L'IA aide désormais à prendre beaucoup de décisions du quotidien. Vous pouvez demander comment elle fonctionne, demander à parler à une personne et en discuter.</b> Cette page vous montre comment, avec les règles des États-Unis, de l'UE et d'un pays de votre choix côte à côte.",
     "touchpoints": {
       "heading": "Repérez l'IA dans votre journée",
       "lead": "<b>Trois types d'IA touchent la vie de la plupart des gens.</b> Chacun est plus facile à questionner quand on connaît son nom.",
@@ -88,14 +88,14 @@
         "rule1Label": "Loi (États-Unis, crédit).",
         "rule1": "Un prêteur qui vous refuse un crédit doit donner les principales raisons précises.",
         "rule2Label": "Loi (UE).",
-        "rule2": "Quand une machine seule prend une décision importante à votre sujet, vous pouvez demander qu'une personne la réexamine."
+        "rule2": "Quand une machine seule prend une décision importante à votre sujet, vous pouvez généralement demander qu'une personne la réexamine."
       }
     },
     "compare": {
       "heading": "Comparez les règles des États-Unis, de l'UE et d'autres pays",
       "lead": "<b>Tous veulent une IA en laquelle les gens peuvent avoir confiance.</b> Ils prennent des chemins différents. Les États-Unis appliquent surtout des lois qui existent déjà, un secteur et un État à la fois. L'UE a adopté une grande loi sur l'IA et l'associe à sa loi sur la vie privée. Choisissez un pays pour le comparer aux deux.",
       "pickLabel": "Comparer avec",
-      "caption": "Règles comparées : États-Unis, UE et {country}, au {date}",
+      "caption": "Règles comparées : États-Unis, UE et {country}, vérifiées entre le {from} et le {to}",
       "colQuestion": "Votre question",
       "colUS": "États-Unis",
       "colEU": "Union européenne",
@@ -170,7 +170,7 @@
           "it": "La loi n° 132/2025, la loi nationale italienne sur l'IA, est en vigueur depuis le 10 octobre 2025. Elle s'applique avec le règlement européen sur l'IA. Les enfants de moins de 14 ans ont besoin de l'accord d'un parent pour utiliser l'IA.",
           "fr": "Un projet de loi adopté par le Sénat le 18 février 2026 ferait de la CNIL la principale autorité française de l'IA et lui confierait les plaintes liées à l'IA. Au 27 septembre 2026, il attend un vote à l'Assemblée nationale.",
           "de": "La loi allemande de contrôle de l'IA (KI-MIG) est en vigueur depuis le 29 juillet 2026. À partir du 20 novembre 2026, les scores de crédit ne pourront plus utiliser votre adresse, votre âge, votre genre, votre nom, vos réseaux sociaux, les mouvements de votre compte bancaire ni des données sensibles comme la santé, ni concerner des mineurs.",
-          "in": "Les principaux droits sur les données commencent en mai 2027. Un projet de règle, ouvert aux commentaires jusqu'en mai 2026, garderait les étiquettes d'IA visibles pendant toute une vidéo. Les lignes directrices du gouvernement sur l'IA (novembre 2025) ne sont pas contraignantes et disent qu'une loi à part sur l'IA n'est pas encore nécessaire."
+          "in": "Les principaux droits sur les données commencent en mai 2027. Un projet de règle garderait les étiquettes d'IA visibles pendant toute une vidéo. Les commentaires ont été clos en mai 2026 et, au 27 septembre 2026, aucune version définitive n'a été trouvée. Les lignes directrices du gouvernement sur l'IA (novembre 2025) ne sont pas contraignantes et disent qu'une loi à part sur l'IA n'est pas encore nécessaire."
         }
       }
     },
@@ -240,7 +240,7 @@
           "why": "Une personne peut tenir compte de détails qu'un logiciel peut manquer, comme un changement récent dans votre situation ou une erreur dans votre dossier.",
           "sample": "Merci pour votre réponse. Je voudrais qu'une personne réexamine cette décision. Voici des informations qui peuvent aider : [détails]. Dites-moi ce dont vous avez encore besoin de ma part.",
           "rule1Label": "Loi (UE)",
-          "rule1": "Quand une machine seule prend une décision qui a sur vous un effet juridique ou un effet aussi important, vous pouvez demander l'intervention d'une personne. (RGPD, article 22)",
+          "rule1": "Quand une machine seule prend une décision qui a sur vous un effet juridique ou un effet aussi important, vous pouvez généralement demander l'intervention d'une personne. (RGPD, article 22)",
           "rule2Label": "Recommandation (États-Unis)",
           "rule2": "Le Blueprint for an AI Bill of Rights de 2022 recommande un moyen de joindre une personne. Ce n'est pas une loi, et il a été archivé."
         },
@@ -895,7 +895,7 @@
       },
       "us": {
         "rights": {
-          "1": "<b>Si quelqu'un a partagé une image intime de vous, réelle ou créée par IA, sans votre consentement,</b> les plateformes doivent la retirer, ainsi que les copies connues, dans les 48 heures suivant votre demande. C'est le cas depuis le 19 mai 2026.",
+          "1": "<b>Si quelqu'un a partagé une image intime de vous, réelle ou créée par IA, sans votre consentement,</b> les plateformes doivent la retirer, ainsi que les copies identiques connues, dans les 48 heures suivant votre demande. C'est le cas depuis le 19 mai 2026.",
           "2": "<b>Vous pouvez signaler les escroqueries, y compris les fausses voix et vidéos, à l'Internet Crime Complaint Center du FBI,</b> gratuitement.",
           "3": "<b>Le remboursement par votre banque dépend de votre moyen de paiement et de ce qui s'est passé.</b> Appelez tout de suite et demandez-lui de confirmer par écrit ce qu'elle va faire."
         },
@@ -910,7 +910,7 @@
       },
       "eu": {
         "rights": {
-          "1": "<b>Les hypertrucages (deepfakes) doivent être signalés.</b> Quiconque utilise l'IA pour créer ou modifier des images, du son ou de la vidéo jusqu'à en faire un hypertrucage doit l'indiquer. C'est le cas depuis le 2 août 2026.",
+          "1": "<b>Les hypertrucages (deepfakes) doivent être signalés.</b> Une entreprise, un organisme public ou une personne qui utilise l'IA dans son travail pour créer ou modifier des images, du son ou de la vidéo jusqu'à en faire un hypertrucage doit indiquer que c'est fait par IA. Cela ne couvre pas l'usage purement personnel ni le travail de police autorisé par la loi, et l'art et la satire ont une règle plus légère. C'est le cas depuis le 2 août 2026.",
           "2": "<b>Vous pouvez demander l'effacement de vos données personnelles quand elles sont utilisées de façon illicite,</b> ce qui peut inclure un faux créé à partir de vos photos, de votre voix ou de vos vidéos. On doit vous répondre dans un délai d'un mois.",
           "3": "<b>Si une plateforme refuse votre demande,</b> vous pouvez demander un réexamen par son système de réclamation."
         },
@@ -1112,7 +1112,7 @@
     "metaTitle": "À propos",
     "metaDescription": "Pourquoi ce site existe, comment il garde un dialogue juste et ouvert, et qui relit ses pages.",
     "title": "À propos de ce site",
-    "lead": "<b>Ce site explique vos droits quand l'IA prend des décisions à votre sujet, en langage simple et sans accuser personne.</b> Il compare les approches des États-Unis et de l'UE, et il invite tout le monde à la conversation.",
+    "lead": "<b>Ce site explique vos droits quand l'IA prend des décisions à votre sujet, en langage simple et sans accuser personne.</b> Il compare les approches des États-Unis, de l'UE et d'autres pays, et il invite tout le monde à la conversation.",
     "missionHeading": "Comprendre la mission",
     "mission": "<b>Rendre les droits des consommateurs face à l'IA faciles à comprendre, et faciles à discuter.</b> Les personnes qui utilisent l'IA, les enseignants, les régulateurs et les équipes qui créent l'IA ont tous un intérêt en jeu. Ce site part du principe que chacun agit de bonne foi et fait de son mieux avec ce qu'il sait. Il critique les idées et les systèmes, jamais les personnes.",
     "safeguardsHeading": "Découvrir les cinq garde-fous",
@@ -1130,7 +1130,7 @@
       "sturdyText": "Le guide et les autres pages sont de simples pages statiques, séparées de tout ce qui est interactif, pour qu'elles se chargent vite et continuent de fonctionner."
     },
     "whoHeading": "Savoir qui est derrière",
-    "who": "<b>Robert Sweetman gère ce site.</b> Des modèles d'IA ont aidé à le rechercher et à le rédiger. Une personne relit chaque page avant sa publication. Le pied de chaque page indique quels modèles ont aidé, quelles sources appuient les faits et où en est la relecture.",
+    "who": "<b>Robert Sweetman gère ce site.</b> Des modèles d'IA ont aidé à le rechercher et à le rédiger. Une personne relit encore chaque page. Le pied de chaque page indique quels modèles ont aidé, quelles sources appuient les faits et où en est la relecture.",
     "whoLink": "Voir toutes les sources et comment elles ont été vérifiées",
     "joinHeading": "Donnez votre avis",
     "joinLead": "Votre point de vue aide à décider de la suite.",
@@ -1145,14 +1145,17 @@
     "reviewHeading": "Une personne relit chaque page",
     "reviewLabel": "Relecture humaine",
     "reviewDone": "Relu par {reviewer} le {date}.",
-    "reviewPending": "Pas encore terminée. {reviewer} relit chaque page avant sa publication.",
+    "reviewPending": "Pas encore terminée. {reviewer} relit encore chaque page.",
+    "ownerName": "Robert Sweetman",
     "translationThanks": "Mes grands-parents, Giuffrido et Isolina DiCenso, ont quitté l'Italie pour un nouveau pays et ont appris une nouvelle langue. Leur parcours a inspiré ces traductions. Avec amour et reconnaissance, pour eux et pour mes parents, Joanne Sweetman et Robert Sweetman Sr.",
     "checkedLabel": "Sources vérifiées",
+    "checkedRange": "du {from} au {to}",
     "seeAll": "Voir les {total} sources, réparties en {groups} groupes",
     "openRegistry": "Ouvrir le registre complet des sources",
-    "registryAbout": "Toutes les sources sur lesquelles s'appuie ce site, avec la façon dont chaque lien a été vérifié. « Lien ouvert par une IA et conforme » veut dire qu'un modèle d'IA (Claude, ou des agents de recherche qu'il a dirigés) a ouvert le lien à la date de vérification et que le contenu correspondait à ce que dit ce site. Ce n'est pas la même chose qu'une lecture par une personne. Robert lit lui-même chaque source ; chacune qu'il a lue l'indique, avec la date. « Lien pas encore ouvert » veut dire que le lien vient d'un index officiel ou d'une recherche, mais que personne ne l'a encore ouvert. « Pas encore de lien public » veut dire qu'elle est listée comme lecture de fond, sans lien public enregistré. Chaque lien a aussi une copie enregistrée sur l'Internet Archive, pour que chacun puisse voir la page telle qu'elle était lors de la vérification. Les sources que Robert a lues montrent l'empreinte de sa propre copie, pour que toute personne ayant le même fichier puisse vérifier qu'il correspond.",
+    "registryAbout": "Toutes les sources sur lesquelles s'appuie ce site, avec la façon dont chaque lien a été vérifié. « Lien ouvert par une IA et conforme » veut dire qu'un modèle d'IA (Claude, ou des agents de recherche qu'il a dirigés) a ouvert le lien et que le contenu correspondait à ce que dit ce site. Ce n'est pas la même chose qu'une lecture par une personne. Robert lit lui-même chaque source ; chacune qu'il a lue l'indique, avec la date. « Lien ouvert par une personne, pas par une IA » veut dire que la page bloque les lecteurs automatiques ; Robert l'a donc ouverte dans un navigateur et l'a lue lui-même. « Lien pas encore ouvert » veut dire que le lien vient d'un index officiel ou d'une recherche, mais que personne ne l'a encore ouvert. « Pas encore de lien public » veut dire qu'elle est listée comme lecture de fond, sans lien public enregistré. Quand une copie de la page est enregistrée sur l'Internet Archive, l'entrée y renvoie, pour que chacun puisse voir la page telle qu'elle était à cette date. Les sources que Robert a lues montrent l'empreinte de sa propre copie, pour que toute personne ayant le même fichier puisse vérifier qu'il correspond.",
     "status": {
       "confirmed": "Lien ouvert par une IA et conforme",
+      "person": "Lien ouvert par une personne, pas par une IA",
       "unopened": "Lien pas encore ouvert",
       "no-link": "Pas encore de lien public"
     },
@@ -1187,7 +1190,7 @@
     "metaTitle": "Sources",
     "metaDescription": "Toutes les sources sur lesquelles s'appuie ce site, classées par thème, avec le degré de vérification de chaque lien et sa date.",
     "title": "Sources",
-    "lead": "<b>Les {total} sources, en {groups} groupes, vérifiées le {date}.</b> Les numéros correspondent aux petits renvois de sources sur chaque page."
+    "lead": "<b>Les {total} sources, en {groups} groupes, vérifiées entre le {from} et le {to}.</b> Les numéros correspondent aux petits renvois de sources sur chaque page."
   },
   "HowItWorks": {
     "metaTitle": "Comment fonctionne ce site",
@@ -1206,7 +1209,10 @@
       "neon": "<b>Neon</b> est la base de données, à Francfort, en Allemagne. Elle contient les votes, stockés avec un code de navigateur brouillé, et les affirmations proposées.",
       "openrouter": "<b>OpenRouter</b> transmet chaque affirmation proposée à un modèle d'IA. Nous l'avons réglé pour n'utiliser que des services qui s'engagent à ne pas garder votre texte ni à s'entraîner dessus. Nous pouvons exiger cet engagement, mais pas le vérifier. Ce qu'OpenRouter garde lui-même relève de sa propre politique de confidentialité.",
       "models": "<b>Mistral Small</b>, avec <b>Gemini de Google</b> en secours, lit chaque proposition sur des serveurs dans l'UE pour repérer les noms et les coordonnées. Il ne fait que signaler ; une personne décide.",
-      "github": "<b>GitHub</b> héberge le code public. <b>Proton</b> gère les e-mails."
+      "github": "<b>GitHub</b> héberge le code public. <b>Proton</b> gère les e-mails.",
+      "dns": "<b>Cloudflare</b> gère le DNS du site, le carnet d'adresses qui mène votre navigateur jusqu'à ce site. Il répond à cette demande et ne voit pas les pages que vous ouvrez.",
+      "fonts": "<b>Les polices de caractères</b> viennent de Google Fonts. Elles sont copiées quand le site est construit et servies depuis ce site : votre navigateur ne contacte donc jamais Google pour les obtenir.",
+      "archive": "<b>L'Internet Archive</b> conserve des copies de nos sources. Nous lui demandons d'enregistrer des pages publiques. Il n'apprend rien sur vous, sauf si vous ouvrez l'un de ses liens."
     },
     "keepHeading": "Ce que nous gardons, et combien de temps",
     "keep": {
@@ -1224,7 +1230,7 @@
       "results": "Les résultats n'apparaissent qu'à partir de {minVotes} votes ou plus par langue, donc au début il n'y en a pas.",
       "ai": "La vérification par l'IA peut se tromper. Une personne prend chaque décision.",
       "limits": "Pour limiter les coûts, l'IA vérifie au plus {checks} suggestions par jour. Ensuite, une personne lit toujours chacune d'elles, sans la vérification par l'IA. Au-delà de {max} suggestions dans une journée, la boîte à suggestions est en pause jusqu'au lendemain.",
-      "twice": "Voter sans compte ne peut pas empêcher complètement quelqu'un de voter deux fois, par exemple avec un deuxième navigateur."
+      "twice": "Voter sans compte ne peut pas empêcher quelqu'un de voter plus d'une fois, par exemple avec un deuxième navigateur ou un programme automatique. Les résultats sont donc un signal approximatif, pas un décompte de personnes."
     },
     "correctionsHeading": "Corrections",
     "correctionsLead": "<b>Quand quelque chose est faux sur ce site, nous le corrigeons et nous l'indiquons ici</b>, du plus récent au plus ancien. Chaque entrée dit ce qui était faux et ce qui a changé. Nous ne nommons la personne qui l'a signalé que si elle le demande.",

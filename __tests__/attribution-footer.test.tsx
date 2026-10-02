@@ -66,9 +66,11 @@ describe("AttributionFooter", () => {
   it("states honestly that human review is pending", () => {
     render(<AttributionFooter />);
     expect(screen.getByTestId("review-status")).toHaveTextContent(
-      "Not yet complete. Robert Sweetman reviews each page before launch."
+      "Not yet complete. Robert Sweetman is still reviewing each page."
     );
-    expect(screen.getByText("23 September 2026")).toBeInTheDocument();
+    // The site is live, so nothing may say review happens "before launch".
+    expect(screen.getByRole("contentinfo")).not.toHaveTextContent(/before launch/i);
+    expect(screen.getByText("23 September 2026 to 2 October 2026")).toBeInTheDocument();
   });
 
   it("thanks the family who inspired the translations", () => {
