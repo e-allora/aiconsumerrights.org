@@ -281,12 +281,20 @@
           "type": "Complaint portal (US)",
           "url": "https://www.consumerfinance.gov/complaint/",
           "status": "confirmed",
-          "note": "Read on 2 October 2026: complaints can be sent online or by phone at (855) 411-2372; most companies respond within 15 days.",
+          "note": "Read on 2 October 2026: complaints can be sent online or by phone at (855) 411-2372; most companies respond within 15 days. Robert read the page in his browser and saved a printed copy.",
           "summary": "Where to complain about a credit card, a loan, or a credit report, online or by phone.",
           "archived": {
             "url": "https://web.archive.org/web/20260928021228/https://www.consumerfinance.gov/complaint/",
             "date": "2026-09-28"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "04bb752f5fd2114cd861c3b5e88fa18c9b69448aadf223f48c347637816881dc",
+              "pages": 5,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "unesco-ai-competency-students",
@@ -936,13 +944,21 @@
           "jurisdiction": "Brazil",
           "url": "https://www.consumidor.gov.br/pages/conteudo/publico/1",
           "status": "confirmed",
+          "note": "Read on 27 September 2026: a free public online service run by Senacon where consumers complain directly to participating companies, which have up to 10 days to reply. Only registered companies can be named, and there is no direct penalty in an individual case. Robert read the page through his browser's English translation and saved it that way; the Portuguese page remains the authoritative version.",
           "lang": "pt-BR",
-          "note": "Read on 27 September 2026: a free public online service run by Senacon where consumers complain directly to participating companies, which have up to 10 days to reply. Only registered companies can be named, and there is no direct penalty in an individual case.",
           "summary": "Brazil's free government website for sending a complaint straight to a participating company.",
           "archived": {
             "url": "https://web.archive.org/web/20260928022932/https://www.consumidor.gov.br/pages/conteudo/publico/1",
             "date": "2026-09-28"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "b40ec7cbe1f5403c4db4ee42737c2644dd2f6f90f2b61b5354d83948538f5e64",
+              "pages": 6,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "br-sndc-procon",
@@ -952,13 +968,21 @@
           "jurisdiction": "Brazil",
           "url": "https://www.consumidor.gov.br/pages/conteudo/publico/6",
           "status": "confirmed",
+          "note": "Read on 27 September 2026. Robert read the page through his browser's English translation and saved it that way; the Portuguese page remains the authoritative version.",
           "lang": "pt-BR",
-          "note": "Read on 27 September 2026.",
           "summary": "Explains that Procons are state and city consumer offices that help consumers directly with problems with a business.",
           "archived": {
             "url": "https://web.archive.org/web/20260928023004/https://www.consumidor.gov.br/pages/conteudo/publico/6",
             "date": "2026-09-28"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "f252f19e0562fcaae0b140a51e17d620f3be84e6f864c8eb1d1c345ff2ebca0a",
+              "pages": 1,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         }
       ]
     },
@@ -1362,12 +1386,25 @@
           "jurisdiction": "European Union",
           "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2023-12/cp230186en.pdf",
           "status": "confirmed",
-          "note": "The official press release was read; the full judgment could not be opened by automated readers.",
+          "note": "The official press release was read; the full judgment could not be opened by automated readers. Robert read both pages of the press release in his saved copy, a browser print of the court's PDF; the court's own file is listed as the original.",
           "summary": "The EU Court of Justice held that producing a credit score can be an automated decision under GDPR Article 22 when a lender gives the score a deciding role in granting credit.",
           "archived": {
             "url": "https://web.archive.org/web/20260928024401/https://curia.europa.eu/site/upload/docs/application/pdf/2023-12/cp230186en.pdf",
             "date": "2026-09-28"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "bb53a29314689945210e0fd0b15e78e26f6fa8c0da16e6d846b9702e0eefec6d",
+              "pages": 2,
+              "kind": "print"
+            },
+            {
+              "sha256": "162ac6eb7d9757bb12865dbf4ffec687cf930b276ff58af7e4514e3a7624ac0e",
+              "pages": 2,
+              "kind": "original"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "de-bnetza-ki-beschwerde",
@@ -1425,13 +1462,21 @@
           "jurisdiction": "Italy",
           "url": "https://www.garanteprivacy.it/diritti/come-agire-per-tutelare-i-tuoi-dati-personali/reclamo",
           "status": "confirmed",
+          "note": "Read on 27 September 2026, with the companion page on exercising your rights, which says the complaint is free and advises asking the company first (reply due within one month). Robert read the complaint page through his browser's English translation and saved it that way; the Italian page remains the authoritative version. He has not read the companion page.",
           "lang": "it",
-          "note": "Read on 27 September 2026, with the companion page on exercising your rights, which says the complaint is free and advises asking the company first (reply due within one month).",
           "summary": "How anyone in Italy can make a free, signed complaint to the data protection authority, usually after first asking the company to respect their data rights.",
           "archived": {
             "url": "https://web.archive.org/web/20260928024635/https://www.garanteprivacy.it/diritti/come-agire-per-tutelare-i-tuoi-dati-personali/reclamo",
             "date": "2026-09-28"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "0fcfaa4b8f635bb0dd3eaa51b34285208ba21c08d4afda14e7bb7e1d9b4a502f",
+              "pages": 3,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "it-agcm-segnalazione",
@@ -1463,13 +1508,21 @@
           "jurisdiction": "United States (Fair Credit Reporting Act)",
           "url": "https://www.law.cornell.edu/uscode/text/15/1681m",
           "status": "confirmed",
+          "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov. Robert read subsection (a), the part this site cites, in his saved copy.",
           "primary": true,
-          "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
           "summary": "When a lender or insurer takes adverse action based on a credit report, it must tell you, name the credit bureau, say the bureau did not make the decision, and tell you about your right to a free copy of your report within 60 days and to dispute errors.",
           "archived": {
             "url": "https://web.archive.org/web/20261002124243/https://www.law.cornell.edu/uscode/text/15/1681m",
             "date": "2026-10-02"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "41f93f491daf4220e1a7d96f531c5bf89e7ac58bce0286dc598924dcee3dfc42",
+              "pages": 13,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "fcra-1681i",
@@ -1479,13 +1532,21 @@
           "jurisdiction": "United States (Fair Credit Reporting Act)",
           "url": "https://www.law.cornell.edu/uscode/text/15/1681i",
           "status": "confirmed",
+          "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov. Robert read subsection (a)(1), parts (A) and (B), the parts this site cites, in his saved copy.",
           "primary": true,
-          "note": "Read on 29 September 2026. Cornell's LII publishes the U.S. Code; the official text is at uscode.house.gov.",
           "summary": "A credit bureau must check disputed information for free within 30 days. It can take up to 15 more days if you send new information during that time.",
           "archived": {
             "url": "https://web.archive.org/web/20260923173411/https://www.law.cornell.edu/uscode/text/15/1681i",
             "date": "2026-09-23"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "618fd435ef9ca153ae450649c9d95d8dfd6f831199ab44aef647ba40b1cb3cee",
+              "pages": 11,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "edpb-members",
@@ -1495,12 +1556,20 @@
           "jurisdiction": "European Union and EEA",
           "url": "https://www.edpb.europa.eu/about-edpb/our-members_en",
           "status": "confirmed",
-          "note": "The page moved; its new address was opened on 2 October 2026 and matched.",
+          "note": "The page moved; its new address was opened on 2 October 2026 and matched. Robert opened each member's entry one at a time on 2 October 2026 and took 36 screenshots, combined into one PDF for the fingerprint.",
           "summary": "Contact details for every national data protection authority in the EU and EEA, where people can complain about how their data is used.",
           "archived": {
             "url": "https://web.archive.org/web/20261002124403/https://www.edpb.europa.eu/about-edpb/about-edpb/members_en",
             "date": "2026-10-02"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "d2e0c806d15b56881db05a1561216032fc5d63981ef9d3397ee888ad491371cd",
+              "pages": 36,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "es-aepd-reclamacion-derechos",
@@ -1538,13 +1607,21 @@
           "jurisdiction": "United Kingdom (UK GDPR)",
           "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/80",
           "status": "confirmed",
+          "note": "Read on 29 September 2026. In force from 5 February 2026 (SI 2026/82). Replaces UK GDPR Article 22 with Articles 22A to 22D. Robert read Articles 22A and 22C, the parts this site cites, in his saved copy.",
           "primary": true,
-          "note": "Read on 29 September 2026. In force from 5 February 2026 (SI 2026/82). Replaces UK GDPR Article 22 with Articles 22A to 22D.",
           "summary": "When a significant decision about you is based solely on automated processing, meaning no meaningful human involvement, the organisation must let you get information about it, make representations, obtain human intervention, and contest it.",
           "archived": {
             "url": "https://web.archive.org/web/20261002124607/https://www.legislation.gov.uk/ukpga/2025/18/section/80",
             "date": "2026-10-02"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "3e99c47e1afd79d3c0263c209662ebd6a748118b74d3cc97fb8aade73cbfa628",
+              "pages": 5,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "uk-ico-sar",
@@ -1554,12 +1631,20 @@
           "jurisdiction": "United Kingdom",
           "url": "https://ico.org.uk/for-the-public/getting-copies-of-your-information-subject-access-request/",
           "status": "confirmed",
-          "note": "Read on 29 September 2026.",
+          "note": "Read on 29 September 2026. Robert read the whole page in his saved copy. The page says the guidance is under review after the Data (Use and Access) Act; its last update is dated 17 April 2024.",
           "summary": "You can ask an organisation whether it uses your personal information and for copies of it. Organisations usually have one month to respond.",
           "archived": {
             "url": "https://web.archive.org/web/20261002124716/https://ico.org.uk/for-the-public/getting-copies-of-your-information-subject-access-request/",
             "date": "2026-10-02"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "b9b8e3d8c5e77e8288c4f72983f96038e8e46e92cf1a018472c0025307946051",
+              "pages": 3,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "uk-ico-complaint",
@@ -1569,12 +1654,20 @@
           "jurisdiction": "United Kingdom",
           "url": "https://ico.org.uk/make-a-complaint/data-protection-complaints/check-if-you-can-complain/",
           "status": "confirmed",
-          "note": "Read on 29 September 2026. The page does not state a fee or a time limit. The page moved; its new address was opened on 2 October 2026 and matched.",
+          "note": "Read on 29 September 2026. The page does not state a fee or a time limit. The page moved; its new address was opened on 2 October 2026 and matched. Robert read the page in his saved copy.",
           "summary": "How to complain to the UK's data protection regulator. It recommends raising the concern with the organisation first.",
           "archived": {
             "url": "https://web.archive.org/web/20261002124758/https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/",
             "date": "2026-10-02"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "69d08a206a85346bb10bb0269aecd264731609e71dfa4dba1038e0e80ec76d53",
+              "pages": 1,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "uk-fos-complain",
@@ -1809,14 +1902,22 @@
           "jurisdiction": "Brazil",
           "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
           "status": "confirmed",
+          "note": "Read on 29 September 2026. Robert read article 49 through his browser's English translation and saved the code that way; the Portuguese text at Planalto remains the authoritative version.",
           "primary": true,
           "lang": "pt-BR",
-          "note": "Read on 29 September 2026.",
           "summary": "For purchases made outside a shop, such as online or by phone, the consumer can withdraw within 7 days of signing or receiving the product, and everything paid must be returned at once.",
           "archived": {
             "url": "https://web.archive.org/web/20260928235146/https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
             "date": "2026-09-28"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "96f47d56343f779e2d7259c90e94693e65bd106b975267a20f598b0ead88cc14",
+              "pages": 24,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "br-decreto-11034",
@@ -1826,14 +1927,22 @@
           "jurisdiction": "Brazil",
           "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11034.htm",
           "status": "confirmed",
+          "note": "Read on 29 September 2026: applies to services regulated by the federal government (art. 1); phone service with a human for at least 8 hours a day, and complaint and cancellation in the first menu (art. 5); answers within 7 calendar days (art. 13). Robert read articles 1, 5, 12 and 13 through his browser's English translation and saved the decree that way; the Portuguese text at Planalto remains the authoritative version.",
           "primary": true,
           "lang": "pt-BR",
-          "note": "Read on 29 September 2026: applies to services regulated by the federal government (art. 1); phone service with a human for at least 8 hours a day, and complaint and cancellation in the first menu (art. 5); answers within 7 calendar days (art. 13).",
           "summary": "Customer service rules for federally regulated services: a phone line with a human available at least eight hours a day, complaint and cancellation options in the first menu, and answers within seven days.",
           "archived": {
             "url": "https://web.archive.org/web/20260917210733/https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D11034.htm",
             "date": "2026-09-17"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "722e73937521492bef7611b6e7ce6e5b52badb9b4bbe0baa619dc0527432e796",
+              "pages": 5,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         },
         {
           "id": "eu-dsa-user-rights",
@@ -1965,14 +2074,22 @@
           "jurisdiction": "Brazil",
           "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm",
           "status": "confirmed",
+          "note": "Read on 2 October 2026: applies the consumer code to online contracts, including respect for the right of withdrawal (art. 1, III); the consumer can withdraw through the same tool used to buy, and the supplier must confirm receipt at once and tell the card company so the charge is not billed or is reversed (art. 5). Robert read articles 1 and 5 through his browser's English translation and saved the decree that way; the Portuguese text at Planalto remains the authoritative version.",
           "primary": true,
           "lang": "pt-BR",
-          "note": "Read on 2 October 2026: applies the consumer code to online contracts, including respect for the right of withdrawal (art. 1, III); the consumer can withdraw through the same tool used to buy, and the supplier must confirm receipt at once and tell the card company so the charge is not billed or is reversed (art. 5).",
           "summary": "Brazil's rules for buying online. They apply the consumer code's right of withdrawal to online purchases and say how to use it.",
           "archived": {
             "url": "https://web.archive.org/web/20260903131730/https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm",
             "date": "2026-09-03"
-          }
+          },
+          "copies": [
+            {
+              "sha256": "7518d0c6faa0e9618047ae1d1b04e3917c6930bcf4668874a898652deaa3fd44",
+              "pages": 3,
+              "kind": "print"
+            }
+          ],
+          "readBy": "2026-10-02"
         }
       ]
     }
